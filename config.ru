@@ -1,6 +1,6 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-require 'slack-market-game'
+require 'slack-market'
 
 if ENV['RACK_ENV'] == 'development'
   puts 'Loading NewRelic in developer mode ...'
@@ -10,14 +10,14 @@ end
 
 NewRelic::Agent.manual_start
 
-SlackMarketGame::App.instance.prepare!
+SlackMarket::App.instance.prepare!
 
 Thread.abort_on_exception = true
 
 Thread.new do
   begin
     EM.run do
-      SlackMarketGame::Service.start_from_database!
+      SlackMarket::Service.start_from_database!
     end
   rescue Exception => e
     STDERR.puts "#{e.class}: #{e}"

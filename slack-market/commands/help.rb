@@ -1,9 +1,9 @@
-module SlackMarketGame
+module SlackMarket
   module Commands
     class Help < SlackRubyBot::Commands::Base
       HELP = <<-EOS
 ```
-I am your friendly slack-market-game, here to help.
+I am your friendly slack-market, here to help.
 
 Market
 ------
@@ -18,7 +18,7 @@ help               - get this helpful message
 ```
 EOS
       def self.call(client, data, _match)
-        client.say(channel: data.channel, text: [HELP, SlackMarketGame::INFO].join("\n"))
+        client.say(channel: data.channel, text: [HELP, SlackMarket::INFO].join("\n"))
         client.say(channel: data.channel, gif: 'help')
         logger.info "HELP: #{client.team}, user=#{data.user}"
       end

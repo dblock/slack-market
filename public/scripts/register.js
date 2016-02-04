@@ -1,14 +1,14 @@
-var SlackMarketGame = {};
+var SlackMarket = {};
 
 $(document).ready(function() {
 
-  SlackMarketGame.message = function(text) {
+  SlackMarket.message = function(text) {
     $('#messages').fadeOut('slow', function() {
       $('#messages').fadeIn('slow').html(text)
     });
   };
 
-  SlackMarketGame.error = function(xhr) {
+  SlackMarket.error = function(xhr) {
     try {
       var message;
       if (xhr.responseText) {
@@ -23,17 +23,17 @@ $(document).ready(function() {
         }
       }
 
-      SlackMarketGame.message(message || xhr.statusText || xhr.responseText || 'Unexpected Error');
+      SlackMarket.message(message || xhr.statusText || xhr.responseText || 'Unexpected Error');
 
     } catch(err) {
-      SlackMarketGame.message(err.message);
+      SlackMarket.message(err.message);
     }
   };
 
   // Slack OAuth
   var code = $.url('?code')
   if (code) {
-    SlackMarketGame.message('Working, please wait ...');
+    SlackMarket.message('Working, please wait ...');
     $('#register').hide();
     $.ajax({
       type: "POST",
@@ -42,9 +42,9 @@ $(document).ready(function() {
         code: code
       },
       success: function(data) {
-        SlackMarketGame.message('Team successfully registered!<br><br>DM <b>@bot</b> or create a <b>#channel</b> and invite <b>@bot</b> to it.');
+        SlackMarket.message('Team successfully registered!<br><br>DM <b>@bot</b> or create a <b>#channel</b> and invite <b>@bot</b> to it.');
       },
-      error: SlackMarketGame.error
+      error: SlackMarket.error
     });
   }
 });

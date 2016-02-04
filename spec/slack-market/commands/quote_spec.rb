@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe SlackMarketGame::Commands::Quote, vcr: { cassette_name: 'quote' } do
+describe SlackMarket::Commands::Quote, vcr: { cassette_name: 'quote' } do
   let(:team) { Fabricate(:team) }
-  let(:app) { SlackMarketGame::Server.new(team: team) }
+  let(:app) { SlackMarket::Server.new(team: team) }
   let(:client) { app.send(:client) }
   context 'quote' do
     it 'returns a qote' do

@@ -1,4 +1,4 @@
-module SlackMarketGame
+module SlackMarket
   class Service
     LOCK = Mutex.new
     @services = {}
@@ -8,7 +8,7 @@ module SlackMarketGame
         fail 'Token already known.' if @services.key?(team.token)
         EM.next_tick do
           logger.info "Starting team #{team}."
-          server = SlackMarketGame::Server.new(team: team)
+          server = SlackMarket::Server.new(team: team)
           LOCK.synchronize do
             @services[team.token] = server
           end

@@ -1,3 +1,3 @@
-module SlackMarketGame
+module SlackMarket
   VERSION = '0.2.0'
 end

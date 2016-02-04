@@ -63,7 +63,7 @@ describe Api::Endpoints::TeamsEndpoint do
         ENV.delete('SLACK_CLIENT_SECRET')
       end
       it 'creates a team' do
-        expect(SlackMarketGame::Service).to receive(:start!)
+        expect(SlackMarket::Service).to receive(:start!)
         expect do
           team = client.teams._post(code: 'code')
           expect(team.team_id).to eq 'team_id'

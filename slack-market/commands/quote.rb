@@ -1,4 +1,4 @@
-module SlackMarketGame
+module SlackMarket
   module Commands
     class Quote < SlackRubyBot::Commands::Base
       def self.call(client, data, match)

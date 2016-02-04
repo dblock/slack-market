@@ -1,4 +1,4 @@
-module SlackMarketGame
+module SlackMarket
   class App
     def prepare!
       silence_loggers!
@@ -13,7 +13,7 @@ module SlackMarketGame
     end
 
     def self.instance
-      @instance ||= SlackMarketGame::App.new
+      @instance ||= SlackMarket::App.new
     end
 
     private

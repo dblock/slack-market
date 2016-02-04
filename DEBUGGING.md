@@ -2,7 +2,7 @@
 
 ### Locally
 
-You can debug your instance of slack-market-game with a built-in `script/console`.
+You can debug your instance of slack-market with a built-in `script/console`.
 
 ### Silence Mongoid Logger
 

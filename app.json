@@ -1,7 +1,7 @@
 {
-	"name": "Slack Market Game",
-	"description": "A Slack bot server.",
-	"respository": "https://github.com/dblock/slack-market-game",
+	"name": "Slack Market",
+	"description": "A Slack bot for stock markets.",
+	"respository": "https://github.com/dblock/slack-market",
 	"keywords": ["slack", "bots", "stock market"],
 	"addons": [
 		"mongolab"

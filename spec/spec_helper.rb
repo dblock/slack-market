@@ -7,7 +7,7 @@ require 'hyperclient'
 ENV['RACK_ENV'] = 'test'
 
 require 'slack-ruby-bot/rspec'
-require 'slack-bot-server'
+require 'slack-market-game'
 
 Dir[File.join(File.dirname(__FILE__), 'support', '**/*.rb')].each do |file|
   require file

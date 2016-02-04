@@ -1,4 +1,4 @@
-module SlackBotServer
+module SlackMarketGame
   class App
     def prepare!
       silence_loggers!
@@ -13,7 +13,7 @@ module SlackBotServer
     end
 
     def self.instance
-      @instance ||= SlackBotServer::App.new
+      @instance ||= SlackMarketGame::App.new
     end
 
     private

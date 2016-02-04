@@ -57,7 +57,7 @@ module Api
             )
           end
 
-          SlackBotServer::Service.start!(team)
+          SlackMarketGame::Service.start!(team)
           present team, with: Api::Presenters::TeamPresenter
         end
       end

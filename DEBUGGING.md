@@ -2,7 +2,7 @@
 
 ### Locally
 
-You can debug your instance of slack-bot-server with a built-in `script/console`.
+You can debug your instance of slack-market-game with a built-in `script/console`.
 
 ### Silence Mongoid Logger
 
@@ -18,7 +18,7 @@ Mongo::Logger.logger.level = Logger::INFO
 ```
 heroku run script/console --app=...
 
-Running `scrupt/console` attached to terminal... up, run.7593
+Running `script/console` attached to terminal... up, run.7593
 
 2.2.1 > Team.count
 => 3

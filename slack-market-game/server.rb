@@ -1,4 +1,4 @@
-module SlackBotServer
+module SlackMarketGame
   class Server < SlackRubyBot::Server
     attr_accessor :team
 
@@ -15,7 +15,7 @@ module SlackBotServer
       # it would keep retrying without checking for account_inactive or such, we want to restart via service which will disable an inactive team
       EM.next_tick do
         logger.info "#{team.name}: socket closed, restarting ..."
-        SlackBotServer::Service.restart! team, self, wait
+        SlackMarketGame::Service.restart! team, self, wait
         client.team = team
       end
     end

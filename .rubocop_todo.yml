@@ -10,7 +10,7 @@
 Lint/RescueException:
   Exclude:
     - 'config.ru'
-    - 'slack-bot-server/app.rb'
+    - 'slack-market-game/app.rb'
 
 # Offense count: 6
 Metrics/AbcSize:
@@ -43,4 +43,4 @@ Style/Documentation:
 # Configuration parameters: Exclude.
 Style/FileName:
   Exclude:
-    - 'slack-bot-server.rb'
+    - 'slack-market-game.rb'

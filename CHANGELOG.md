@@ -1,3 +1,3 @@
 ### Changelog
 
-* 1/10/2016: Backported changes from slack-metabot and slack-shellbot - [@dblock](https://github.com/dblock).
+* 2/4/2016: Initial public release - [@dblock](https://github.com/dblock).

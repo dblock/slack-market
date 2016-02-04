@@ -1,7 +1,7 @@
 development:
   clients:
     default:
-      database: bot-server_development
+      database: slack_market_game_development
       hosts:
         - 127.0.0.1:27017
   options:
@@ -11,7 +11,7 @@ development:
 test:
   clients:
     default:
-      database: bot-server_test
+      database: slack_market_game_test
       hosts:
         - 127.0.0.1:27017
   options:

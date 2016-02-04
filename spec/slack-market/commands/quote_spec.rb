@@ -12,13 +12,14 @@ describe SlackMarket::Commands::Quote, vcr: { cassette_name: 'quote' } do
         attachments: [
           {
             fallback: 'Microsoft Corporation (MSFT): $51.91',
+            title_link: 'http://finance.yahoo.com/q?s=MSFT',
             title: 'Microsoft Corporation (MSFT)',
             text: '$51.91 (-0.48%)',
             color: '#FF0000'
           }
         ]
       )
-      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "#{SlackRubyBot.config.user} quote msft"))
+      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's MSFT?"))
     end
   end
 end

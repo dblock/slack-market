@@ -1,3 +1,14 @@
+GIT
+  remote: git://github.com/dblock/slack-ruby-bot.git
+  revision: 2d9c206aa52f62c22d176b3addba37b02b91b469
+  specs:
+    slack-ruby-bot (0.6.3)
+      activesupport
+      faye-websocket
+      giphy (~> 2.0.2)
+      hashie
+      slack-ruby-client (>= 0.6.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -239,12 +250,6 @@ GEM
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     sixarm_ruby_unaccent (1.1.1)
-    slack-ruby-bot (0.6.2)
-      activesupport
-      faye-websocket
-      giphy (~> 2.0.2)
-      hashie
-      slack-ruby-client (>= 0.6.0)
     slack-ruby-client (0.6.0)
       faraday
       faraday_middleware
@@ -308,7 +313,7 @@ DEPENDENCIES
   rspec
   rubocop (= 0.35.1)
   selenium-webdriver
-  slack-ruby-bot (~> 0.6.0)
+  slack-ruby-bot!
   vcr
   webmock
   yahoo-finance

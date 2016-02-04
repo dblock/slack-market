@@ -12,7 +12,7 @@ module Api
           requires :id, type: String, desc: 'Team ID.'
         end
         get ':id' do
-          team = Team.find(params[:id]) || error!('Not Found', 404)
+          team = Team.where(_id: params[:id], api: true).first || error!('Not Found', 404)
           present team, with: Api::Presenters::TeamPresenter
         end
 
@@ -23,7 +23,7 @@ module Api
         end
         sort Team::SORT_ORDERS
         get do
-          teams = Team.all
+          teams = Team.api
           teams = teams.active if params[:active]
           teams = paginate_and_sort_by_cursor(teams, default_sort_order: '-_id')
           present teams, with: Api::Presenters::TeamsPresenter

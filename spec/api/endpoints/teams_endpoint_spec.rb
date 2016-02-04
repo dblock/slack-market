@@ -3,40 +3,7 @@ require 'spec_helper'
 describe Api::Endpoints::TeamsEndpoint do
   include Api::Test::EndpointTest
 
-  it_behaves_like 'a cursor api', Team
-
   context 'team' do
-    let(:existing_team) { Fabricate(:team) }
-    it 'returns a team' do
-      team = client.team(id: existing_team.id)
-      expect(team.id).to eq existing_team.id.to_s
-      expect(team._links.self._url).to eq "http://example.org/api/teams/#{existing_team.id}"
-    end
-  end
-
-  context 'teams' do
-    context 'active/inactive' do
-      let!(:active_team) { Fabricate(:team, active: true) }
-      let!(:inactive_team) { Fabricate(:team, active: false) }
-      it 'returns all teams' do
-        teams = client.teams
-        expect(teams.count).to eq 2
-      end
-      it 'returns active teams' do
-        teams = client.teams(active: true)
-        expect(teams.count).to eq 1
-        expect(teams.to_a.first.team_id).to eq active_team.team_id
-      end
-    end
-  end
-
-  context 'team' do
-    let(:existing_team) { Fabricate(:team) }
-    it 'returns a team' do
-      team = client.team(id: existing_team.id)
-      expect(team.id).to eq existing_team.id.to_s
-    end
-
     it 'requires code' do
       expect { client.teams._post }.to raise_error Faraday::ClientError do |e|
         json = JSON.parse(e.response[:body])

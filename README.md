@@ -9,6 +9,8 @@ A stock market bot for Slack.
 
 [![Add to Slack](https://platform.slack-edge.com/img/add_to_slack@2x.png)](http://market.playplay.io)
 
+![](public/img/market.gif)
+
 ### Copyright & License
 
 Copyright [Daniel Doubrovkine](http://code.dblock.org), 2016

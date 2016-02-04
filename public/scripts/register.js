@@ -42,7 +42,7 @@ $(document).ready(function() {
         code: code
       },
       success: function(data) {
-        SlackMarket.message('Team successfully registered!<br><br>DM <b>@bot</b> or create a <b>#channel</b> and invite <b>@bot</b> to it.');
+        SlackMarket.message('Team successfully registered!<br><br>DM <b>@market</b> or create a <b>#channel</b> and invite <b>@market</b> to it.');
       },
       error: SlackMarket.error
     });

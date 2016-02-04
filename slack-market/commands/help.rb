@@ -3,12 +3,12 @@ module SlackMarket
     class Help < SlackRubyBot::Commands::Base
       HELP = <<-EOS
 ```
-I am your friendly slack-market, here to help.
+I am your friendly market bot, providing Yahoo Finance data.
 
 Market
 ------
 
-quote [ticker]     - get the current price for a stock
+Try _What is the price of MSFT?_ or _Tell me about YHOO and AAPL, please._
 
 General
 -------

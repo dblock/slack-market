@@ -5,7 +5,9 @@ Slack Market Game
 [![Dependency Status](https://gemnasium.com/dblock/slack-market.svg)](https://gemnasium.com/dblock/slack-market)
 [![Code Climate](https://codeclimate.com/github/dblock/slack-market.svg)](https://codeclimate.com/github/dblock/slack-market)
 
-A stock market game to play with your coworkers.
+A stock market bot for Slack.
+
+[![Add to Slack](https://platform.slack-edge.com/img/add_to_slack@2x.png)](http://market.playplay.io)
 
 ### Copyright & License
 

@@ -5,6 +5,11 @@ module SlackMarketGame
 ```
 I am your friendly slack-market-game, here to help.
 
+Market
+------
+
+quote [ticker]     - get the current price for a stock
+
 General
 -------
 

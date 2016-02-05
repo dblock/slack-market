@@ -21,6 +21,22 @@ describe SlackMarket::Commands::Quote do
       )
       app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's MSFT?"))
     end
+    it 'returns a quote for $MSFT' do
+      expect(client.web_client).to receive(:chat_postMessage).with(
+        channel: 'channel',
+        as_user: true,
+        attachments: [
+          {
+            fallback: 'Microsoft Corporation (MSFT): $51.91',
+            title_link: 'http://finance.yahoo.com/q?s=MSFT',
+            title: 'Microsoft Corporation (MSFT)',
+            text: '$51.91 (-0.48%)',
+            color: '#FF0000'
+          }
+        ]
+      )
+      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's $MSFT?"))
+    end
     it 'returns a quote for MSFT and YHOO', vcr: { cassette_name: 'msft_yahoo_invalid' } do
       expect(client.web_client).to receive(:chat_postMessage).with(
         channel: 'channel',
@@ -53,6 +69,46 @@ describe SlackMarket::Commands::Quote do
     it 'does not trigger with a channel ID' do
       expect(client.web_client).to_not receive(:chat_postMessage)
       app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: 'I created <#C04KB5X4D>!'))
+    end
+    it 'does not trigger with a I have' do
+      expect(client.web_client).to_not receive(:chat_postMessage)
+      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: 'I have'))
+    end
+    it 'does not trigger with a have I done' do
+      expect(client.web_client).to_not receive(:chat_postMessage)
+      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: 'have I done'))
+    end
+    it 'returns a quote for a single-character $stock', vcr: { cassette_name: 'f' } do
+      expect(client.web_client).to receive(:chat_postMessage).with(
+        channel: 'channel',
+        as_user: true,
+        attachments: [
+          {
+            fallback: 'Ford Motor Company Common Stock (F): $11.45',
+            title_link: 'http://finance.yahoo.com/q?s=F',
+            title: 'Ford Motor Company Common Stock (F)',
+            text: '$11.45 (0.69%)',
+            color: '#00FF00'
+          }
+        ]
+      )
+      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's $F?"))
+    end
+    it 'returns a quote for a single-character stock$', vcr: { cassette_name: 'f' } do
+      expect(client.web_client).to receive(:chat_postMessage).with(
+        channel: 'channel',
+        as_user: true,
+        attachments: [
+          {
+            fallback: 'Ford Motor Company Common Stock (F): $11.45',
+            title_link: 'http://finance.yahoo.com/q?s=F',
+            title: 'Ford Motor Company Common Stock (F)',
+            text: '$11.45 (0.69%)',
+            color: '#00FF00'
+          }
+        ]
+      )
+      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's F$?"))
     end
   end
 end

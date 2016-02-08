@@ -4,8 +4,8 @@ describe SlackMarket::Commands::Quote do
   let(:team) { Fabricate(:team) }
   let(:app) { SlackMarket::Server.new(team: team) }
   let(:client) { app.send(:client) }
-  context 'quote', vcr: { cassette_name: 'msft' } do
-    it 'returns a quote for MSFT' do
+  context 'quote' do
+    it 'returns a quote for MSFT', vcr: { cassette_name: 'msft' } do
       expect(client.web_client).to receive(:chat_postMessage).with(
         channel: 'channel',
         as_user: true,
@@ -21,7 +21,7 @@ describe SlackMarket::Commands::Quote do
       )
       app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's MSFT?"))
     end
-    it 'returns a quote for $MSFT' do
+    it 'returns a quote for $MSFT', vcr: { cassette_name: 'msft' } do
       expect(client.web_client).to receive(:chat_postMessage).with(
         channel: 'channel',
         as_user: true,
@@ -109,6 +109,31 @@ describe SlackMarket::Commands::Quote do
         ]
       )
       app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's F$?"))
+    end
+    context 'with dollars on' do
+      before do
+        team.update_attributes!(dollars: true)
+      end
+      it 'does not trigger with MSFT' do
+        expect(client.web_client).to_not receive(:chat_postMessage)
+        app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: 'How is MSFT?'))
+      end
+      it 'returns a quote for $MSFT', vcr: { cassette_name: 'msft' } do
+        expect(client.web_client).to receive(:chat_postMessage).with(
+          channel: 'channel',
+          as_user: true,
+          attachments: [
+            {
+              fallback: 'Microsoft Corporation (MSFT): $51.91',
+              title_link: 'http://finance.yahoo.com/q?s=MSFT',
+              title: 'Microsoft Corporation (MSFT)',
+              text: '$51.91 (-0.48%)',
+              color: '#FF0000'
+            }
+          ]
+        )
+        app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's $MSFT?"))
+      end
     end
   end
 end

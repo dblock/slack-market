@@ -18,6 +18,7 @@ gem 'rack-rewrite'
 gem 'rack-server-pages'
 gem 'yahoo-finance'
 gem 'money'
+gem 'wannabe_bool'
 
 group :development, :test do
   gem 'rake', '~> 10.4'

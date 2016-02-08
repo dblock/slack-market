@@ -270,6 +270,7 @@ GEM
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
       equalizer (~> 0.0, >= 0.0.9)
+    wannabe_bool (0.5.0)
     webmock (1.22.6)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -315,6 +316,7 @@ DEPENDENCIES
   selenium-webdriver
   slack-ruby-bot!
   vcr
+  wannabe_bool
   webmock
   yahoo-finance
 

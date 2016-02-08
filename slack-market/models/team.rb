@@ -10,6 +10,7 @@ class Team
   field :token, type: String
   field :active, type: Boolean, default: true
   field :api, type: Boolean, default: false
+  field :dollars, type: Boolean, default: false
 
   scope :active, -> { where(active: true) }
   scope :api, -> { where(api: true) }

@@ -4,16 +4,17 @@ module SlackMarket
       HELP = <<-EOS
 ```
 I am your friendly market bot, providing Yahoo Finance data.
-
-Market
-------
-
-Try _What is the price of MSFT?_ or _Tell me about YHOO and AAPL, please._
+Try "What is the price of MSFT?" or "Tell me about YHOO, AAPL and $I, please."
 
 General
 -------
 
-help               - get this helpful message
+help                - get this helpful message
+
+Settings
+--------
+
+set dollars on|off  - respond to $QUOTE, but not $QUOTE
 
 ```
 EOS

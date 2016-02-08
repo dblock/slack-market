@@ -21,6 +21,12 @@ Mention a stock ticker and get a quote. Single-character stocks should include a
 
 ![](public/img/market.gif)
 
+### Settings
+
+#### set dollars on|off
+
+Set to `on` to respond to `$MSFT`, but not `MSFT`.
+
 ### Copyright & License
 
 Copyright [Daniel Doubrovkine](http://code.dblock.org), 2016

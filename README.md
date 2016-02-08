@@ -27,6 +27,8 @@ Mention a stock ticker and get a quote. Single-character stocks should include a
 
 Set to `on` to respond to `$MSFT`, but not `MSFT`.
 
+![](public/img/dollars.gif)
+
 ### Copyright & License
 
 Copyright [Daniel Doubrovkine](http://code.dblock.org), 2016

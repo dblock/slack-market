@@ -26,7 +26,7 @@ describe SlackMarket::Commands::Set do
       expect(message: "#{SlackRubyBot.config.user} set dollars on").to respond_with_slack_message(
         "Dollar signs for team #{team.name} are on!"
       )
-      expect(client.team.dollars).to be true
+      expect(client.owner.dollars).to be true
       expect(team.reload.dollars).to be true
     end
     it 'disables dollars' do
@@ -34,7 +34,7 @@ describe SlackMarket::Commands::Set do
       expect(message: "#{SlackRubyBot.config.user} set dollars off").to respond_with_slack_message(
         "Dollar signs for team #{team.name} are off."
       )
-      expect(client.team.dollars).to be false
+      expect(client.owner.dollars).to be false
       expect(team.reload.dollars).to be false
     end
   end

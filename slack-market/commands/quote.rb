@@ -3,11 +3,11 @@ module SlackMarket
     class Quote < SlackRubyBot::Commands::Base
       scan(/\b[A-Z]{2,}\b|\$[A-Z]{1,}\b|\b[A-Z]{1,}\$/) do |client, data, stocks|
         stocks = stocks.flatten
-        stocks = stocks.select { |s| s[0] == '$' } if client.team.dollars?
+        stocks = stocks.select { |s| s[0] == '$' } if client.owner.dollars?
         stocks = stocks.map { |s| s.tr('$', '') }
         YahooFinance::Client.new.quotes(stocks, [:name, :symbol, :last_trade_price, :change, :change_in_percent]).each do |quote|
           next if quote.name == 'N/A'
-          logger.info "#{client.team}, user=#{data.user} - #{quote.name} (#{quote.symbol}): $#{quote.last_trade_price}"
+          logger.info "#{client.owner}, user=#{data.user} - #{quote.name} (#{quote.symbol}): $#{quote.last_trade_price}"
           client.web_client.chat_postMessage(
             channel: data.channel,
             as_user: true,

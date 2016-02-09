@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/dblock/slack-ruby-bot.git
-  revision: 2d9c206aa52f62c22d176b3addba37b02b91b469
+  revision: 7f54f00cbcd17ff4fba0a3c95de332f9e81ec4cd
   specs:
-    slack-ruby-bot (0.6.3)
+    slack-ruby-bot (0.7.0)
       activesupport
       faye-websocket
       giphy (~> 2.0.2)

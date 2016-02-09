@@ -46,7 +46,6 @@ module SlackMarket
       end
 
       def restart!(team, server, wait = 1)
-        server.auth!
         server.start_async
       rescue StandardError => e
         case e.message

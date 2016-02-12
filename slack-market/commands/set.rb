@@ -2,7 +2,7 @@ module SlackMarket
   module Commands
     class Set < SlackRubyBot::Commands::Base
       def self.call(client, data, match)
-        if !match.names.include?('expression')
+        if !match['expression']
           client.say(channel: data.channel, text: 'Missing setting, eg. _set dollars on_.', gif: 'help')
           logger.info "SET: #{client.owner} - failed, missing setting"
         else

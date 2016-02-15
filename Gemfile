@@ -20,7 +20,6 @@ gem 'rack-server-pages'
 gem 'yahoo-finance'
 gem 'money'
 gem 'wannabe_bool'
-gem 'gctools', require: 'gctools/oobgc'
 
 group :development, :test do
   gem 'rake', '~> 10.4'

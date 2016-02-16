@@ -15,7 +15,8 @@ describe SlackMarket::Commands::Quote do
             title_link: 'http://finance.yahoo.com/q?s=MSFT',
             title: 'Microsoft Corporation (MSFT)',
             text: '$51.91 (-0.48%)',
-            color: '#FF0000'
+            color: '#FF0000',
+            image_url: 'http://chart.finance.yahoo.com/z?s=MSFT&z=l'
           }
         ]
       )
@@ -31,7 +32,8 @@ describe SlackMarket::Commands::Quote do
             title_link: 'http://finance.yahoo.com/q?s=MSFT',
             title: 'Microsoft Corporation (MSFT)',
             text: '$51.91 (-0.48%)',
-            color: '#FF0000'
+            color: '#FF0000',
+            image_url: 'http://chart.finance.yahoo.com/z?s=MSFT&z=l'
           }
         ]
       )
@@ -47,20 +49,16 @@ describe SlackMarket::Commands::Quote do
             title_link: 'http://finance.yahoo.com/q?s=MSFT',
             title: 'Microsoft Corporation (MSFT)',
             text: '$50.16 (-3.54%)',
-            color: '#FF0000'
-          }
-        ]
-      )
-      expect(client.web_client).to receive(:chat_postMessage).with(
-        channel: 'channel',
-        as_user: true,
-        attachments: [
+            color: '#FF0000',
+            image_url: 'http://chart.finance.yahoo.com/z?s=MSFT&z=l'
+          },
           {
             fallback: 'Yahoo! Inc. (YHOO): $27.97',
             title_link: 'http://finance.yahoo.com/q?s=YHOO',
             title: 'Yahoo! Inc. (YHOO)',
             text: '$27.97 (-4.05%)',
-            color: '#FF0000'
+            color: '#FF0000',
+            image_url: 'http://chart.finance.yahoo.com/z?s=YHOO&z=l'
           }
         ]
       )
@@ -88,7 +86,8 @@ describe SlackMarket::Commands::Quote do
             title_link: 'http://finance.yahoo.com/q?s=F',
             title: 'Ford Motor Company Common Stock (F)',
             text: '$11.45 (0.69%)',
-            color: '#00FF00'
+            color: '#00FF00',
+            image_url: 'http://chart.finance.yahoo.com/z?s=F&z=l'
           }
         ]
       )
@@ -104,7 +103,8 @@ describe SlackMarket::Commands::Quote do
             title_link: 'http://finance.yahoo.com/q?s=F',
             title: 'Ford Motor Company Common Stock (F)',
             text: '$11.45 (0.69%)',
-            color: '#00FF00'
+            color: '#00FF00',
+            image_url: 'http://chart.finance.yahoo.com/z?s=F&z=l'
           }
         ]
       )
@@ -128,11 +128,33 @@ describe SlackMarket::Commands::Quote do
               title_link: 'http://finance.yahoo.com/q?s=MSFT',
               title: 'Microsoft Corporation (MSFT)',
               text: '$51.91 (-0.48%)',
-              color: '#FF0000'
+              color: '#FF0000',
+              image_url: 'http://chart.finance.yahoo.com/z?s=MSFT&z=l'
             }
           ]
         )
         app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's $MSFT?"))
+      end
+    end
+    context 'with charts off' do
+      before do
+        team.update_attributes!(charts: false)
+      end
+      it 'returns a quote for MSFT without a chart', vcr: { cassette_name: 'msft' } do
+        expect(client.web_client).to receive(:chat_postMessage).with(
+          channel: 'channel',
+          as_user: true,
+          attachments: [
+            {
+              fallback: 'Microsoft Corporation (MSFT): $51.91',
+              title_link: 'http://finance.yahoo.com/q?s=MSFT',
+              title: 'Microsoft Corporation (MSFT)',
+              text: '$51.91 (-0.48%)',
+              color: '#FF0000'
+            }
+          ]
+        )
+        app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: 'MSFT'))
       end
     end
   end

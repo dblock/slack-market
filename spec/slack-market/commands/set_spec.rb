@@ -38,4 +38,33 @@ describe SlackMarket::Commands::Set do
       expect(team.reload.dollars).to be false
     end
   end
+  context 'charts' do
+    it 'shows current value of charts off' do
+      team.update_attributes!(charts: false)
+      expect(message: "#{SlackRubyBot.config.user} set charts").to respond_with_slack_message(
+        "Charts for team #{team.name} are off."
+      )
+    end
+    it 'shows current value of charts on' do
+      expect(message: "#{SlackRubyBot.config.user} set charts").to respond_with_slack_message(
+        "Charts for team #{team.name} are on!"
+      )
+    end
+    it 'enables charts' do
+      team.update_attributes!(charts: false)
+      expect(message: "#{SlackRubyBot.config.user} set charts on").to respond_with_slack_message(
+        "Charts for team #{team.name} are on!"
+      )
+      expect(client.owner.charts).to be true
+      expect(team.reload.charts).to be true
+    end
+    it 'disables charts' do
+      team.update_attributes!(charts: true)
+      expect(message: "#{SlackRubyBot.config.user} set charts off").to respond_with_slack_message(
+        "Charts for team #{team.name} are off."
+      )
+      expect(client.owner.charts).to be false
+      expect(team.reload.charts).to be false
+    end
+  end
 end

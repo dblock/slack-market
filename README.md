@@ -29,6 +29,12 @@ Set to `on` to respond to `$MSFT`, but not `MSFT`.
 
 ![](public/img/dollars.gif)
 
+#### set charts on|off
+
+Set to `off` to turn off charts.
+
+![](public/img/charts.gif)
+
 ### Copyright & License
 
 Copyright [Daniel Doubrovkine](http://code.dblock.org), 2016

@@ -52,7 +52,7 @@ module SlackMarket
         case e.message
         when 'account_inactive', 'invalid_auth' then
           logger.error "#{team.name}: #{e.message}, team will be deactivated."
-          team.deactivate!
+          deactivate!(team)
         else
           logger.error "#{team.name}: #{e.message}, restarting in #{wait} second(s)."
           sleep(wait)
@@ -60,6 +60,15 @@ module SlackMarket
             restart! team, server, [wait * 2, 60].min
           end
         end
+      end
+
+      def deactivate!(team)
+        team.deactivate!
+      rescue Mongoid::Errors::Validations => e
+        message = e.document.errors.full_messages.uniq.join(', ') + '.'
+        logger.error "#{team.name}: #{e.message} (#{message}), ignored."
+      rescue StandardError => e
+        logger.error "#{team.name}: #{e.class}, #{e.message}, ignored."
       end
     end
   end

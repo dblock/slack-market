@@ -4,3 +4,7 @@ module SlackRubyBot
     attr_accessor :owner
   end
 end
+
+Slack::RealTime::Client.configure do |config|
+  config.store_class = Slack::RealTime::Stores::Starter
+end

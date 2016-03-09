@@ -1,42 +1,36 @@
 module SlackMarket
   class Service
+    include SlackRubyBot::Loggable
+
     LOCK = Mutex.new
     @services = {}
 
     class << self
       def start!(team)
         fail 'Token already known.' if @services.key?(team.token)
-        EM.next_tick do
-          logger.info "Starting team #{team}."
-          server = SlackMarket::Server.new(team: team)
-          LOCK.synchronize do
-            @services[team.token] = server
-          end
-          EM.defer do
-            restart!(team, server)
-          end
+        logger.info "Starting team #{team}."
+        server = SlackMarket::Server.new(team: team)
+        LOCK.synchronize do
+          @services[team.token] = server
+        end
+        EM.defer do
+          restart!(team, server)
         end
       rescue StandardError => e
         logger.error e
       end
 
       def stop!(team)
-        LOCK.synchronize do
-          fail 'Token unknown.' unless @services.key?(team.token)
-          EM.next_tick do
+        EM.defer do
+          LOCK.synchronize do
+            fail 'Token unknown.' unless @services.key?(team.token)
+            logger.info "Stopping team #{team}."
             @services[team.token].stop!
             @services.delete(team.token)
           end
         end
       rescue StandardError => e
         logger.error e
-      end
-
-      def logger
-        @logger ||= begin
-          $stdout.sync = true
-          Logger.new(STDOUT)
-        end
       end
 
       def start_from_database!
@@ -64,11 +58,20 @@ module SlackMarket
 
       def deactivate!(team)
         team.deactivate!
+        LOCK.synchronize do
+          @services.delete(team.token)
+        end
       rescue Mongoid::Errors::Validations => e
         message = e.document.errors.full_messages.uniq.join(', ') + '.'
         logger.error "#{team.name}: #{e.message} (#{message}), ignored."
       rescue StandardError => e
         logger.error "#{team.name}: #{e.class}, #{e.message}, ignored."
+      end
+
+      def reset!
+        @services.values.to_a.each do |team|
+          stop!(team)
+        end
       end
     end
   end

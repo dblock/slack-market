@@ -13,7 +13,7 @@ module SlackMarket
         LOCK.synchronize do
           @services[team.token] = server
         end
-        EM.defer do
+        EM.next_tick do
           restart!(team, server)
         end
       rescue StandardError => e

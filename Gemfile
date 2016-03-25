@@ -38,7 +38,7 @@ group :test do
   gem 'vcr'
   gem 'fabrication'
   gem 'faker'
-  gem 'database_cleaner'
+  gem 'database_cleaner', github: 'DatabaseCleaner/database_cleaner'
   gem 'hyperclient'
   gem 'capybara'
   gem 'selenium-webdriver'

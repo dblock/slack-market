@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=ROG.VX
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 27 Apr 2016 21:00:20 GMT
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private, no-cache, no-store
+      Content-Length:
+      - '47'
+      Content-Type:
+      - application/octet-stream
+      Age:
+      - '0'
+      Via:
+      - http/1.1 media-router-api4.prod.media.bf1.yahoo.com (ApacheTrafficServer [cMsSf
+        ]), http/1.1 r10.ycpi.dcb.yahoo.net (ApacheTrafficServer [cMsSf ])
+      Server:
+      - ATS
+      Connection:
+      - keep-alive
+      Y-Trace:
+      - BAEAQAAAAAB9mEoCXnnxNQAAAAAAAAAAF8lLSmSCOHsAAAAAAAAAAAAFMX2ynqF8AAUxfbKfHkd6GL4pAAAAAA--
+    body:
+      encoding: UTF-8
+      string: |
+        "ROCHE HLDG DR","ROG.VX",248.50,+1.30,"+0.53%"
+    http_version: 
+  recorded_at: Wed, 27 Apr 2016 21:00:21 GMT
+recorded_with: VCR 3.0.1

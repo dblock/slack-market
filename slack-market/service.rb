@@ -13,7 +13,7 @@ module SlackMarket
         LOCK.synchronize do
           @services[team.token] = server
         end
-        EM.next_tick do
+        EM.defer do
           restart!(team, server)
         end
       rescue StandardError => e
@@ -35,6 +35,7 @@ module SlackMarket
 
       def start_from_database!
         Team.active.each do |team|
+          sleep 0.25
           start!(team)
         end
       end

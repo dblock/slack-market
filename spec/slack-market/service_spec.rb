@@ -6,8 +6,7 @@ describe SlackMarket::Service do
   let(:services) { SlackMarket::Service.instance_variable_get(:@services) }
   before do
     allow(SlackMarket::Server).to receive(:new).with(team: team).and_return(server)
-    allow(EM).to receive(:next_tick).and_yield
-    allow(EM).to receive(:defer).and_yield
+    allow(Celluloid).to receive(:defer).and_yield
     allow(server).to receive(:stop!)
   end
   after do

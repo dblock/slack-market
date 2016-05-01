@@ -13,7 +13,7 @@ module SlackMarket
         LOCK.synchronize do
           @services[team.token] = server
         end
-        EM.defer do
+        Celluloid.defer do
           restart!(team, server)
         end
       rescue StandardError => e
@@ -21,7 +21,7 @@ module SlackMarket
       end
 
       def stop!(team)
-        EM.defer do
+        Celluloid.defer do
           LOCK.synchronize do
             fail 'Token unknown.' unless @services.key?(team.token)
             logger.info "Stopping team #{team}."
@@ -50,7 +50,7 @@ module SlackMarket
         else
           logger.error "#{team.name}: #{e.message}, restarting in #{wait} second(s)."
           sleep(wait)
-          EM.next_tick do
+          Celluloid.defer do
             restart! team, server, [wait * 2, 60].min
           end
         end

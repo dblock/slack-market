@@ -4,6 +4,7 @@ describe SlackMarket::Commands::Quote do
   let(:team) { Fabricate(:team) }
   let(:app) { SlackMarket::Server.new(team: team) }
   let(:client) { app.send(:client) }
+  let(:message_command) { SlackRubyBot::Hooks::Message.new }
   context 'quote' do
     it 'returns a quote for MSFT', vcr: { cassette_name: 'msft', allow_playback_repeats: true } do
       expect(client.web_client).to receive(:chat_postMessage).with(
@@ -20,8 +21,8 @@ describe SlackMarket::Commands::Quote do
           }
         ]
       ).twice
-      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: 'MSFT'))
-      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's MSFT?"))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'MSFT'))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's MSFT?"))
     end
     it 'returns a quote for $MSFT', vcr: { cassette_name: 'msft', allow_playback_repeats: true } do
       expect(client.web_client).to receive(:chat_postMessage).with(
@@ -38,8 +39,8 @@ describe SlackMarket::Commands::Quote do
           }
         ]
       ).twice
-      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: '$MSFT?'))
-      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's $MSFT?"))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$MSFT?'))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $MSFT?"))
     end
     it 'returns a quote for ROG.VX', vcr: { cassette_name: 'rog.vx', allow_playback_repeats: true } do
       expect(client.web_client).to receive(:chat_postMessage).with(
@@ -56,8 +57,8 @@ describe SlackMarket::Commands::Quote do
           }
         ]
       ).twice
-      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: 'ROG.VX'))
-      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's ROG.VX?"))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'ROG.VX'))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's ROG.VX?"))
     end
     it 'returns a quote for $ROG.VX', vcr: { cassette_name: 'rog.vx', allow_playback_repeats: true } do
       expect(client.web_client).to receive(:chat_postMessage).with(
@@ -74,8 +75,8 @@ describe SlackMarket::Commands::Quote do
           }
         ]
       ).twice
-      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: '$ROG.VX?'))
-      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's $ROG.VX?"))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$ROG.VX?'))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $ROG.VX?"))
     end
     it 'returns a quote for MSFT and YHOO', vcr: { cassette_name: 'msft_yahoo_invalid' } do
       expect(client.web_client).to receive(:chat_postMessage).with(
@@ -100,19 +101,19 @@ describe SlackMarket::Commands::Quote do
           }
         ]
       )
-      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's MSFT or YHOO and INVALID?"))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's MSFT or YHOO and INVALID?"))
     end
     it 'does not trigger with a channel ID' do
       expect(client.web_client).to_not receive(:chat_postMessage)
-      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: 'I created <#C04KB5X4D>!'))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'I created <#C04KB5X4D>!'))
     end
     it 'does not trigger with a I have' do
       expect(client.web_client).to_not receive(:chat_postMessage)
-      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: 'I have'))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'I have'))
     end
     it 'does not trigger with a have I done' do
       expect(client.web_client).to_not receive(:chat_postMessage)
-      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: 'have I done'))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'have I done'))
     end
     it 'returns a quote for a single-character $stock', vcr: { cassette_name: 'f' } do
       expect(client.web_client).to receive(:chat_postMessage).with(
@@ -129,7 +130,7 @@ describe SlackMarket::Commands::Quote do
           }
         ]
       )
-      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's $F?"))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $F?"))
     end
     it 'returns a quote for a single-character stock$', vcr: { cassette_name: 'f' } do
       expect(client.web_client).to receive(:chat_postMessage).with(
@@ -146,7 +147,7 @@ describe SlackMarket::Commands::Quote do
           }
         ]
       )
-      app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's F$?"))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's F$?"))
     end
     context 'with dollars on' do
       before do
@@ -154,7 +155,7 @@ describe SlackMarket::Commands::Quote do
       end
       it 'does not trigger with MSFT' do
         expect(client.web_client).to_not receive(:chat_postMessage)
-        app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: 'How is MSFT?'))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'How is MSFT?'))
       end
       it 'returns a quote for $MSFT', vcr: { cassette_name: 'msft' } do
         expect(client.web_client).to receive(:chat_postMessage).with(
@@ -171,7 +172,7 @@ describe SlackMarket::Commands::Quote do
             }
           ]
         )
-        app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: "How's $MSFT?"))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $MSFT?"))
       end
     end
     context 'with charts off' do
@@ -192,7 +193,7 @@ describe SlackMarket::Commands::Quote do
             }
           ]
         )
-        app.send(:message, client, Hashie::Mash.new(channel: 'channel', text: 'MSFT'))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'MSFT'))
       end
     end
   end

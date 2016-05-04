@@ -59,7 +59,7 @@ module Api
             )
           end
 
-          SlackMarket::Service.start!(team)
+          SlackMarket::Service.instance.start!(team)
           present team, with: Api::Presenters::TeamPresenter
         end
       end

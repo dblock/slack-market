@@ -1,5 +1,6 @@
 ### Changelog
 
+* 5/24/2016: Fix: don't repeat the same quote twice in a message - [@dblock](https://github.com/dblock).
 * 4/27/2016: [#9](https://github.com/dblock/slack-market/issues/9): Fix: parse stock symbols with periods - [@dblock](https://github.com/dblock).
 * 2/8/2016: [#3](https://github.com/dblock/slack-market/issues/3): Added `set dollars on|off`, respond to $MSFT but not MSFT - [@dblock](https://github.com/dblock).
 * 2/5/2016: Respond to single character stocks with a $ sign, eg. `$F` - [@dblock](https://github.com/dblock).

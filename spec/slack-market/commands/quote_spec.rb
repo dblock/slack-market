@@ -24,6 +24,10 @@ describe SlackMarket::Commands::Quote do
       message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'MSFT'))
       message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's MSFT?"))
     end
+    it 'does not repeat stocks', vcr: { cassette_name: 'msft', allow_playback_repeats: true } do
+      expect(client.web_client).to receive(:chat_postMessage).once
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'MSFT MSFT'))
+    end
     it 'returns a quote for $MSFT', vcr: { cassette_name: 'msft', allow_playback_repeats: true } do
       expect(client.web_client).to receive(:chat_postMessage).with(
         channel: 'channel',

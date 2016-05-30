@@ -1,20 +1,23 @@
 require 'spec_helper'
 
-describe Stock do
+describe Market do
   describe '#qualify' do
     it 'empty array' do
-      expect(Stock.qualify([])).to eq []
+      expect(Market.qualify([])).to eq []
     end
     it 'flattens array' do
-      expect(Stock.qualify([[]])).to eq []
+      expect(Market.qualify([[]])).to eq []
     end
     it 'produces unique results' do
-      expect(Stock.qualify(%w(MSFT MSFT))).to eq ['MSFT']
-      expect(Stock.qualify(['MSFT', '$MSFT'])).to eq ['MSFT']
+      expect(Market.qualify(%w(MSFT MSFT))).to eq ['MSFT']
+      expect(Market.qualify(['MSFT', '$MSFT'])).to eq ['MSFT']
     end
     it 'supports dollar option' do
-      expect(Stock.qualify(['ABCD', '$MSFT'], false)).to eq %w(ABCD MSFT)
-      expect(Stock.qualify(['ABCD', '$MSFT'], true)).to eq ['MSFT']
+      expect(Market.qualify(['ABCD', '$MSFT'], false)).to eq %w(ABCD MSFT)
+      expect(Market.qualify(['ABCD', '$MSFT'], true)).to eq ['MSFT']
+    end
+    it 'upcases' do
+      expect(Market.qualify(%w(MSFT msft))).to eq ['MSFT']
     end
   end
   describe '#quotes' do
@@ -23,7 +26,7 @@ describe Stock do
         Hashie::Mash.new(name: 'N/A'),
         Hashie::Mash.new(name: 'MSFT')
       ])
-      quotes = Stock.quotes(%w(FOO MSFT))
+      quotes = Market.quotes(%w(FOO MSFT))
       expect(quotes.size).to eq 1
       expect(quotes[0].name).to eq 'MSFT'
     end

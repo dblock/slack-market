@@ -1,10 +1,10 @@
-class Stock
+class Market
   class << self
     # given an array of stocks, parse, mark as unique, remove $ signs, etc.
     def qualify(stocks, dollars = false)
       stocks = stocks.flatten
       stocks.select! { |s| s[0] == '$' } if dollars
-      stocks.map! { |s| s.tr('$', '') }
+      stocks.map! { |s| s.tr('$', '').upcase }
       stocks.uniq!
       stocks
     end

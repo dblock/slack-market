@@ -1,2 +1,5 @@
-require 'slack-market/models/stock'
+require 'slack-market/models/error'
+require 'slack-market/models/market'
+require 'slack-market/models/position'
 require 'slack-market/models/team'
+require 'slack-market/models/user'

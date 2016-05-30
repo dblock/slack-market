@@ -11,6 +11,14 @@ General
 
 help                - get this helpful message
 
+Buy and Sell
+------------
+
+bought [symbol]     - you bought a ticker
+sold [symbol]       - you sold a ticket
+positions           - display your current positions
+positions [user]    - display someone else's current positions
+
 Settings
 --------
 

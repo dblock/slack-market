@@ -21,6 +21,22 @@ Mention a stock ticker and get a quote. Single-character stocks should include a
 
 ![](public/img/market.gif)
 
+### Bought and Sold
+
+Record when you buy and sell stock.
+
+#### bought [symbol]
+
+Announce that you bought a symbol.
+
+#### sold [symbol]
+
+Announce that you sold a symbol.
+
+#### positions [user]
+
+Display current positions. Optionally specify a user to display someone else's current positions.
+
 ### Settings
 
 #### set dollars on|off

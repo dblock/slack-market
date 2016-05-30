@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=MSFT%20YHOO
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 05 Feb 2016 22:44:54 GMT
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private, no-cache, no-store
+      Content-Length:
+      - '120'
+      Content-Type:
+      - application/octet-stream
+      Vary:
+      - X-Media-YTS-Echo-Mode
+      Age:
+      - '0'
+      Via:
+      - http/1.1 media-router-api9.prod.media.bf1.yahoo.com (ApacheTrafficServer [cMsSf
+        ]), http/1.1 r11.ycpi.nyc.yahoo.net (ApacheTrafficServer [cMsSf ])
+      Server:
+      - ATS
+      Connection:
+      - keep-alive
+      Y-Trace:
+      - BAEAQAAAAADeGpaNbazpmAAAAAAAAAAABsVr_IX6x6QAAAAAAAAAAAAFKw2Zkr0MAAUrDZmS9w2GUmoIAAAAAA--
+    body:
+      encoding: UTF-8
+      string: |
+        "Microsoft Corporation","MSFT",50.16,-1.84,"-3.54%"
+        "Yahoo! Inc.","YHOO",27.97,-1.18,"-4.05%"
+    http_version:
+  recorded_at: Fri, 05 Feb 2016 22:44:54 GMT
+recorded_with: VCR 3.0.1

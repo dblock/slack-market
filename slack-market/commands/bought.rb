@@ -15,7 +15,8 @@ module SlackMarket
               user: user,
               purchased_at: Time.now.utc,
               purchased_price_cents: quote.last_trade_price.to_f * 100,
-              symbol: quote.symbol
+              symbol: quote.symbol,
+              name: quote.name
             )
             client.say channel: data.channel, text: "#{user.slack_mention} bought #{quote.name} (#{quote.symbol}) at ~$#{quote.last_trade_price}"
           end

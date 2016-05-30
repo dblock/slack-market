@@ -34,6 +34,6 @@ class User
   end
 
   def to_s
-    "#{user_name}"
+    user_name
   end
 end

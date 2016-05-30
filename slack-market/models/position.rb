@@ -20,4 +20,25 @@ class Position
   def to_s
     "#{user}: #{symbol}, purchased_price_cents=~#{purchased_price_cents}, purchased=#{purchased_at}, sold_price_cents=#{sold_price_cents}, sold=#{sold_at}"
   end
+
+  def percent_from(last_trade_price)
+    return unless last_trade_price
+    100 - (purchased_price_cents * 100 / last_trade_price.to_f).to_i
+  end
+
+  def display(last_trade_price)
+    pc = percent_from(last_trade_price)
+    [
+      "*#{symbol}*",
+      if pc.nil?
+        nil
+      elsif pc == 0
+        ':blue_book:'
+      elsif pc > 0
+        "+#{pc}% :green_book:"
+      elsif pc < 0
+        "#{pc}% :closed_book:"
+      end
+    ].compact.join(' ')
+  end
 end

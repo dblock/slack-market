@@ -18,6 +18,7 @@ describe SlackMarket::Commands::Bought do
       end.to change(Position, :count).by(1)
       position = Position.last
       expect(position.symbol).to eq 'MSFT'
+      expect(position.name).to eq 'Microsoft Corporation'
       expect(position.purchased_price_cents).to eq 5191
       expect(position.purchased_at).to_not be nil
     end

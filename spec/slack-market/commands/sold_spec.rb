@@ -14,7 +14,7 @@ describe SlackMarket::Commands::Sold do
       let!(:position) { Fabricate(:position, purchased_price_cents: 1234, user: user, name: 'Microsoft Corporation', symbol: 'MSFT') }
       it 'records a sell', vcr: { cassette_name: 'msft' } do
         expect(message: "#{SlackRubyBot.config.user} sold MSFT", user: user.user_id).to respond_with_slack_message(
-          "#{user.slack_mention} sold Microsoft Corporation (MSFT) at ~$51.91"
+          "#{user.slack_mention} sold Microsoft Corporation at ~$51.91, *MSFT* +77% :green_book:"
         )
         position.reload
         expect(position.purchased_price_cents).to eq 1234

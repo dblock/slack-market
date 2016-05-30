@@ -14,10 +14,10 @@ help                - get this helpful message
 Buy and Sell
 ------------
 
-bought [symbol]     - you bought a ticker
-sold [symbol]       - you sold a ticket
-positions           - display your current positions
-positions [user]    - display someone else's current positions
+bought [symbol]     - you bought a stock
+sold [symbol]       - you sold a stock
+positions           - display your current open positions
+positions [user]    - display someone else's current open positions
 
 Settings
 --------

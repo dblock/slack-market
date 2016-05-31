@@ -1,8 +1,18 @@
 GIT
   remote: git://github.com/DatabaseCleaner/database_cleaner.git
-  revision: f15d7610a801e40d1570b56e869e563cdcff198a
+  revision: f052d64d3be9351a98a99e932a59be528ccc561c
   specs:
     database_cleaner (1.5.3)
+
+GIT
+  remote: git://github.com/dblock/slack-ruby-bot.git
+  revision: fe27b4c1e478af22cf6ac64b2b9c8741bfdb01c7
+  specs:
+    slack-ruby-bot (0.8.1)
+      activesupport
+      giphy (~> 2.0.2)
+      hashie
+      slack-ruby-client (>= 0.6.0)
 
 GEM
   remote: http://rubygems.org/
@@ -79,7 +89,7 @@ GEM
     equalizer (0.0.11)
     erubis (2.7.0)
     excon (0.49.0)
-    fabrication (2.15.0)
+    fabrication (2.15.2)
     faker (1.6.3)
       i18n (~> 0.5)
     faraday (0.9.2)
@@ -96,7 +106,7 @@ GEM
       faraday_middleware (~> 0.9.1)
       oj (~> 2.0)
     ffi (1.9.10)
-    foreman (0.81.0)
+    foreman (0.82.0)
       thor (~> 0.19.1)
     futuroscope (0.1.11)
     giphy (2.0.2)
@@ -104,7 +114,7 @@ GEM
       faraday_middleware (~> 0.9)
       faraday_middleware-parse_oj (~> 0.3)
       launchy (~> 2.4)
-    gli (2.13.4)
+    gli (2.14.0)
     grape (0.14.0)
       activesupport
       builder
@@ -126,7 +136,7 @@ GEM
       grape-entity (< 0.5.0)
     hashdiff (0.3.0)
     hashie (3.4.4)
-    heroku (3.43.2)
+    heroku (3.43.3)
       heroku-api (= 0.4.2)
       launchy (= 2.4.3)
       multi_json (= 1.11.2)
@@ -160,7 +170,7 @@ GEM
       nokogiri (>= 1.5.9)
     mime-types (1.25.1)
     mini_portile2 (2.0.0)
-    minitest (5.8.4)
+    minitest (5.9.0)
     money (6.7.1)
       i18n (>= 0.6.4, <= 0.7.0)
       sixarm_ruby_unaccent (>= 1.1.1, < 2)
@@ -174,7 +184,7 @@ GEM
       mongo (~> 2.1)
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
-    mongoid-compatibility (0.3.1)
+    mongoid-compatibility (0.4.0)
       activesupport
       mongoid (>= 2.0)
     mongoid-scroll (0.3.4)
@@ -200,7 +210,7 @@ GEM
     nio4r (1.2.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
-    oj (2.15.0)
+    oj (2.15.1)
     origin (2.2.0)
     parser (2.3.1.0)
       ast (~> 2.2)
@@ -266,12 +276,7 @@ GEM
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     sixarm_ruby_unaccent (1.1.1)
-    slack-ruby-bot (0.8.0)
-      activesupport
-      giphy (~> 2.0.2)
-      hashie
-      slack-ruby-client (>= 0.6.0)
-    slack-ruby-client (0.7.3)
+    slack-ruby-client (0.7.4)
       activesupport
       faraday
       faraday_middleware
@@ -291,19 +296,19 @@ GEM
       kgio (~> 2.6)
       raindrops (~> 0.7)
     uri_template (0.7.0)
-    vcr (3.0.1)
+    vcr (3.0.3)
     virtus (1.0.5)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
       equalizer (~> 0.0, >= 0.0.9)
     wannabe_bool (0.5.0)
-    webmock (2.0.1)
+    webmock (2.0.3)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
     websocket (1.2.3)
-    websocket-driver (0.6.3)
+    websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
     xpath (2.0.0)
@@ -342,8 +347,7 @@ DEPENDENCIES
   rspec
   rubocop (= 0.35.1)
   selenium-webdriver
-  slack-ruby-bot (~> 0.8.0)
-  slack-ruby-client (~> 0.7.3)
+  slack-ruby-bot!
   unicorn
   vcr
   wannabe_bool

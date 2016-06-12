@@ -4,16 +4,6 @@ GIT
   specs:
     database_cleaner (1.5.3)
 
-GIT
-  remote: git://github.com/dblock/slack-ruby-bot.git
-  revision: fe27b4c1e478af22cf6ac64b2b9c8741bfdb01c7
-  specs:
-    slack-ruby-bot (0.8.1)
-      activesupport
-      giphy (~> 2.0.2)
-      hashie
-      slack-ruby-client (>= 0.6.0)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -115,7 +105,7 @@ GEM
       faraday_middleware-parse_oj (~> 0.3)
       launchy (~> 2.4)
     gli (2.14.0)
-    grape (0.14.0)
+    grape (0.15.0)
       activesupport
       builder
       hashie (>= 2.1.0)
@@ -203,9 +193,6 @@ GEM
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
     netrc (0.10.3)
-    newrelic-slack-ruby-bot (0.1.0)
-      newrelic_rpm
-      slack-ruby-bot
     newrelic_rpm (3.15.2.317)
     nio4r (1.2.1)
     nokogiri (1.6.7.2)
@@ -276,6 +263,25 @@ GEM
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     sixarm_ruby_unaccent (1.1.1)
+    slack-ruby-bot (0.8.0)
+      activesupport
+      giphy (~> 2.0.2)
+      hashie
+      slack-ruby-client (>= 0.6.0)
+    slack-ruby-bot-server (0.1.1)
+      celluloid-io
+      foreman
+      grape (~> 0.15.0)
+      grape-roar
+      grape-swagger (~> 0.10.0)
+      kaminari (~> 0.16.1)
+      mongoid (~> 5.0.0)
+      mongoid-scroll
+      rack-cors
+      rack-rewrite
+      rack-server-pages
+      slack-ruby-bot (~> 0.8.0)
+      unicorn
     slack-ruby-client (0.7.4)
       activesupport
       faraday
@@ -320,26 +326,16 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  celluloid-io
   database_cleaner!
   fabrication
   faker
   foreman
-  grape (~> 0.14.0)
-  grape-roar
-  grape-swagger (~> 0.10.0)
   heroku
   hyperclient
-  kaminari (~> 0.16.1)
   money
   money_helper
-  mongoid (~> 5.0.0)
-  mongoid-scroll
   mongoid-shell
-  newrelic-slack-ruby-bot
   newrelic_rpm
-  rack-cors
-  rack-rewrite
   rack-robotz
   rack-server-pages
   rack-test
@@ -347,8 +343,7 @@ DEPENDENCIES
   rspec
   rubocop (= 0.35.1)
   selenium-webdriver
-  slack-ruby-bot!
-  unicorn
+  slack-ruby-bot-server
   vcr
   wannabe_bool
   webmock

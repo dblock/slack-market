@@ -1,5 +1,11 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
+ENV['RACK_ENV'] ||= 'development'
+
+require 'bundler/setup'
+Bundler.require :default, ENV['RACK_ENV']
+
+require 'slack-ruby-bot-server'
 require 'slack-market'
 
 if ENV['RACK_ENV'] == 'development'

@@ -1,7 +1,7 @@
 module SlackMarket
   module Commands
     class Quote < SlackRubyBot::Commands::Base
-      scan(/[\b\$]?[A-Z]{1,}\.[A-Z]+\b|[\b\$]?[A-Z]{2,}\b|\$[A-Z]{1,}\b|\b[A-Z]{1,}\$/) do |client, data, stocks|
+      scan(/[\b\$]?[A-Z]{1,}[\.\-][A-Z]+\b|[\b\$]?[A-Z]{2,}\b|\$[A-Z]{1,}\b|\b[A-Z]{1,}\$/) do |client, data, stocks|
         stocks = Market.qualify(stocks, client.owner.dollars?)
         quotes = Market.quotes(stocks)
         next unless quotes.any?

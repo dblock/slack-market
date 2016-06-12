@@ -60,25 +60,9 @@ describe SlackMarket::Commands::Quote do
             image_url: 'http://chart.finance.yahoo.com/z?s=ROG.VX&z=l'
           }
         ]
-      ).twice
+      ).exactly(4).times
       message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'ROG.VX'))
       message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's ROG.VX?"))
-    end
-    it 'returns a quote for $ROG.VX', vcr: { cassette_name: 'rog.vx', allow_playback_repeats: true } do
-      expect(client.web_client).to receive(:chat_postMessage).with(
-        channel: 'channel',
-        as_user: true,
-        attachments: [
-          {
-            fallback: 'ROCHE HLDG DR (ROG.VX): $248.50',
-            title_link: 'http://finance.yahoo.com/q?s=ROG.VX',
-            title: 'ROCHE HLDG DR (ROG.VX)',
-            text: '$248.50 (+0.53%)',
-            color: '#00FF00',
-            image_url: 'http://chart.finance.yahoo.com/z?s=ROG.VX&z=l'
-          }
-        ]
-      ).twice
       message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$ROG.VX?'))
       message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $ROG.VX?"))
     end
@@ -199,6 +183,26 @@ describe SlackMarket::Commands::Quote do
         )
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'MSFT'))
       end
+    end
+    it 'returns a quote for $CMO-PE', vcr: { cassette_name: 'cmo-pe', allow_playback_repeats: true } do
+      expect(client.web_client).to receive(:chat_postMessage).with(
+        channel: 'channel',
+        as_user: true,
+        attachments: [
+          {
+            fallback: 'Capstead Mortgage Corporation P (CMO-PE): $24.765',
+            title_link: 'http://finance.yahoo.com/q?s=CMO-PE',
+            title: 'Capstead Mortgage Corporation P (CMO-PE)',
+            text: '$24.765 (+0.081%)',
+            color: '#00FF00',
+            image_url: 'http://chart.finance.yahoo.com/z?s=CMO-PE&z=l'
+          }
+        ]
+      ).exactly(4).times
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'CMO-PE?'))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's CMO-PE?"))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$CMO-PE?'))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $CMO-PE?"))
     end
   end
 end

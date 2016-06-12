@@ -1,5 +1,6 @@
 ### Changelog
 
+* 6/12/2016: [#21](https://github.com/dblock/slack-market/issues/21): Fix: doesn't work for tickers with dashes, eg. `CMO-PE` - [@dblock](https://github.com/dblock).
 * 5/30/2016: [#4](https://github.com/dblock/slack-market/issues/4): Added `bought`, `sold` and `positions` commands - [@dblock](https://github.com/dblock).
 * 5/24/2016: Fix: don't repeat the same quote twice in a message - [@dblock](https://github.com/dblock).
 * 4/27/2016: [#9](https://github.com/dblock/slack-market/issues/9): Fix: parse stock symbols with periods - [@dblock](https://github.com/dblock).

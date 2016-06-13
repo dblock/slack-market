@@ -10,6 +10,7 @@ gem 'yahoo-finance'
 gem 'money'
 gem 'wannabe_bool'
 gem 'money_helper'
+gem 'stripe'
 
 group :development, :test do
   gem 'rake', '~> 10.4'

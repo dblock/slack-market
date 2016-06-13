@@ -1,8 +1,7 @@
 <html>
  <head>
   <title>Stock Market Quotes in Slack</title>
-  <script src="/scripts/jquery-1.7.1.min.js"></script>
-  <script src="/scripts/url.min.js"></script>
+  <%= partial 'public/partials/_head.html.erb' %>
   <script src="/scripts/register.js"></script>
   <script src="/scripts/stats.js"></script>
 </head>
@@ -21,11 +20,7 @@
   <p>
     <img src='img/market.gif'>
   </p>
-  <p>
-    <small>
-      made by <a href="https://twitter.com/dblockdotorg" target="_blank">@dblockdotorg</a>, <a href="https://github.com/dblock/slack-market" target="_blank">fork me on github</a>, <a href="privacy.html">privacy policy</a>, <a href="help.html">help</a>, hosted on <a href="https://m.do.co/c/5b26011f9a9b">DigitalOcean</a>
-    </small>
-  </p>
+  <%= partial 'public/partials/_footer.html.erb' %>
  </body>
 </html>
 

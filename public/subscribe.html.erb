@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>Stock Market Quotes in Slack: Subscribe</title>
+    <%= partial 'public/partials/_head.html.erb' %>
+    <script src='https://checkout.stripe.com/checkout.js'></script>
+    <link rel='stylesheet' href='https://checkout.stripe.com/v3/checkout/button.css'></link>
+  </head>
+  <body style='text-align: center'>
+    <p style='margin: 50px;'>
+      <a href='/'><img src='img/icon.png' width='120px'></a>
+    </p>
+    <p>
+      <h3>Stock Market Quotes in Slack: Subscribe</h3>
+    </p>
+    <p id='messages' />
+    <p id='subscribe'>
+      <button id='subscribeButton' class='stripe-button-el'>
+          <span style='display: block; min-height: 30px;'>Pay with Card</span>
+      </button>
+      <script>
+        $(document).ready(function() {
+
+          <% team = Team.where(team_id: request['team_id']).first %>
+
+          var team = {
+            id: '<%= team && team.team_id %>',
+            name: '<%= team && team.name %>',
+            premium: <%= !!(team && team.premium) %>,
+          }
+
+          if (team.premium) {
+            SlackMarket.message('Team <b>' + team.name + '</b> already has a premium subscription, thank you for your support.');
+            $('#subscribeButton').remove();
+          } else if (team.id && team.name) {
+            SlackMarket.message('Upgrade team <b>' + team.name + '</b> to premum for only $9.99 a year!');
+          } else {
+            $('#subscribeButton').remove();
+            SlackMarket.message('Missing or invalid team ID.');
+          }
+
+          var handler = StripeCheckout.configure({
+            key: '<%= ENV['STRIPE_API_PUBLISHABLE_KEY'] %>',
+            image: '/img/icon.png',
+            locale: 'auto',
+            token: function(token) {
+              $.ajax({
+                type: 'POST',
+                url: '/api/subscriptions',
+                data: {
+                  stripe_email: token.email,
+                  stripe_token: token.id,
+                  stripe_token_type: token.type,
+                  team_id: team.id
+                },
+                success: function(data) {
+                  SlackMarket.message('Team <b>' + team.name + '</b> successfully upgraded to premum.<br><br>Thank you for your support!');
+                  $('#subscribeButton').remove();
+                },
+                error: SlackMarket.error
+              });
+            }
+          });
+
+          $('#subscribeButton').on('click', function(e) {
+            handler.open({
+              name: 'Slack Market Premium',
+              description: '1 Year Subscription',
+              amount: 999
+            });
+            e.preventDefault();
+          });
+
+          $(window).on('popstate', function() {
+            handler.close();
+          });
+        });
+      </script>
+    </p>
+    <%= partial 'public/partials/_footer.html.erb' %>
+  </body>
+</html>

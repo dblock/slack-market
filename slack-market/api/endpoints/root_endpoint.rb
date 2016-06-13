@@ -13,6 +13,7 @@ module Api
 
       mount Api::Endpoints::StatusEndpoint
       mount Api::Endpoints::TeamsEndpoint
+      mount Api::Endpoints::SubscriptionsEndpoint
 
       add_swagger_documentation
     end

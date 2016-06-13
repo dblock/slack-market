@@ -22,7 +22,7 @@ positions [user]    - display someone else's current open positions
 Settings
 --------
 
-set dollars on|off  - respond to $QUOTE, but not $QUOTE
+set dollars on|off  - respond to $QUOTE, but not QUOTE
 set charts on|off   - display charts below quotes
 
 ```

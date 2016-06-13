@@ -4,6 +4,7 @@ module SlackMarket
       command 'sold' do |client, data, match|
         if !client.owner.reload.premium
           client.say channel: data.channel, text: client.owner.premium_text
+          logger.info "#{client.owner}, user=#{data.user} - SOLD, premium feature required"
         else
           user = ::User.find_create_or_update_by_slack_id!(client, data.user)
           expression = match['expression'] if match['expression']

@@ -4,6 +4,7 @@ module SlackMarket
       command 'positions' do |client, data, match|
         if !client.owner.reload.premium
           client.say channel: data.channel, text: client.owner.premium_text
+          logger.info "#{client.owner}, user=#{data.user} - POSITIONS, premium feature required"
         else
           expression = match['expression'] if match['expression']
           user = ::User.find_by_slack_mention!(client.owner, expression) if expression

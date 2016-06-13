@@ -24,13 +24,18 @@ describe 'Subscribe', js: true, type: :feature do
     let!(:team) { Fabricate(:team) }
     before do
       ENV['STRIPE_API_PUBLISHABLE_KEY'] = 'pk_test_804U1vUeVeTxBl8znwriXskf'
-      visit "/subscribe?team_id=#{team.team_id}"
     end
     after do
       ENV.delete 'STRIPE_API_PUBLISHABLE_KEY'
     end
+    it 'upgrades to premium with a coupon' do
+      visit "/subscribe?team_id=#{team.team_id}&coupon=slack-market-coupon"
+      expect(find('#messages')).to have_text("Upgrade team #{team.name} to premium for only $4.99 a year!")
+      find('#subscribe', visible: true)
+    end
     it 'upgrades to premium' do
-      expect(find('#messages')).to have_text("Upgrade team #{team.name} to premum for only $9.99 a year!")
+      visit "/subscribe?team_id=#{team.team_id}"
+      expect(find('#messages')).to have_text("Upgrade team #{team.name} to premium for only $9.99 a year!")
       find('#subscribe', visible: true)
 
       expect(Stripe::Customer).to receive(:create).and_return('id' => 'customer_id')
@@ -47,7 +52,7 @@ describe 'Subscribe', js: true, type: :feature do
 
       sleep 5
 
-      expect(find('#messages')).to have_text("Team #{team.name} successfully upgraded to premum. Thank you for your support!")
+      expect(find('#messages')).to have_text("Team #{team.name} successfully upgraded to premium. Thank you for your support!")
       find('#subscribe', visible: false)
 
       team.reload

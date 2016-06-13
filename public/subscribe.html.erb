@@ -28,11 +28,15 @@
             premium: <%= !!(team && team.premium) %>,
           }
 
+          var coupon = $.url('?coupon')
+
           if (team.premium) {
             SlackMarket.message('Team <b>' + team.name + '</b> already has a premium subscription, thank you for your support.');
             $('#subscribeButton').remove();
+          } else if (team.id && team.name && coupon) {
+            SlackMarket.message('Upgrade team <b>' + team.name + '</b> to premium for only $4.99 a year!');
           } else if (team.id && team.name) {
-            SlackMarket.message('Upgrade team <b>' + team.name + '</b> to premum for only $9.99 a year!');
+            SlackMarket.message('Upgrade team <b>' + team.name + '</b> to premium for only $9.99 a year!');
           } else {
             $('#subscribeButton').remove();
             SlackMarket.message('Missing or invalid team ID.');
@@ -50,10 +54,11 @@
                   stripe_email: token.email,
                   stripe_token: token.id,
                   stripe_token_type: token.type,
-                  team_id: team.id
+                  team_id: team.id,
+                  stripe_coupon: coupon
                 },
                 success: function(data) {
-                  SlackMarket.message('Team <b>' + team.name + '</b> successfully upgraded to premum.<br><br>Thank you for your support!');
+                  SlackMarket.message('Team <b>' + team.name + '</b> successfully upgraded to premium.<br><br>Thank you for your support!');
                   $('#subscribeButton').remove();
                 },
                 error: SlackMarket.error
@@ -62,10 +67,12 @@
           });
 
           $('#subscribeButton').on('click', function(e) {
+            var amount = 999;
+            if (coupon) { amount = 499 };
             handler.open({
               name: 'Slack Market Premium',
               description: '1 Year Subscription',
-              amount: 999
+              amount: amount
             });
             e.preventDefault();
           });

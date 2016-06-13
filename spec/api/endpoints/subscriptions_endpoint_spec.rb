@@ -48,6 +48,7 @@ describe Api::Endpoints::SubscriptionsEndpoint do
           source: 'token',
           plan: 'slack-market-yearly',
           email: 'foo@bar.com',
+          coupon: nil,
           metadata: {
             id: team._id,
             team_id: team.team_id,

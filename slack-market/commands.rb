@@ -1,3 +1,4 @@
+require 'slack-market/commands/mixins'
 require 'slack-market/commands/help'
 require 'slack-market/commands/positions'
 require 'slack-market/commands/bought'

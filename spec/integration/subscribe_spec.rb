@@ -30,7 +30,7 @@ describe 'Subscribe', js: true, type: :feature do
     end
     it 'upgrades to premium' do
       visit "/upgrade?team_id=#{team.team_id}"
-      expect(find('#messages')).to have_text("Upgrade team #{team.name} to premium for only $9.99 a year!")
+      expect(find('#messages')).to have_text("Upgrade team #{team.name} to premium for $9.99 a year.")
       find('#subscribe', visible: true)
 
       expect(Stripe::Customer).to receive(:create).and_return('id' => 'customer_id')

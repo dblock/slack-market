@@ -41,7 +41,7 @@
             SlackMarket.message('Team <b>' + team.name + '</b> already has a premium subscription, thank you for your support.');
             $('#subscribeButton').remove();
           } else if (team.id && team.name) {
-            SlackMarket.message('Upgrade team <b>' + team.name + '</b> to premium for only $9.99 a year!');
+            SlackMarket.message('Upgrade team <b>' + team.name + '</b> to premium for $9.99 a year.');
           } else {
             $('#subscribeButton').remove();
             SlackMarket.message('Missing or invalid team ID.');

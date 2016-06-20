@@ -7,7 +7,6 @@ describe SlackMarket::Commands::Bought do
   let(:client) { app.send(:client) }
   let(:message_command) { SlackRubyBot::Hooks::Message.new }
   before do
-    allow(Stripe).to receive(:api_key).and_return('key')
     allow(User).to receive(:find_create_or_update_by_slack_id!).and_return(user)
   end
   context 'bought' do

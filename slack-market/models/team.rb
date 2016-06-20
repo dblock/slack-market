@@ -9,6 +9,10 @@ class Team
   scope :api, -> { where(api: true) }
 
   def premium_text
-    "This is a premium feature. Upgrade your team for $9.99 a year at https://market.playplay.io/upgrade?team_id=#{team_id}."
+    "This is a premium feature. #{upgrade_text}"
+  end
+
+  def upgrade_text
+    "Upgrade your team for $9.99 a year at https://market.playplay.io/upgrade?team_id=#{team_id}."
   end
 end

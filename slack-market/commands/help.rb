@@ -28,7 +28,11 @@ set charts on|off   - display charts below quotes
 ```
 EOS
       def self.call(client, data, _match)
-        client.say(channel: data.channel, text: [HELP, SlackMarket::INFO].join("\n"))
+        client.say(channel: data.channel, text: [
+          HELP,
+          SlackMarket::INFO,
+          client.owner.reload.premium? ? nil : client.owner.upgrade_text
+        ].compact.join("\n"))
         client.say(channel: data.channel, gif: 'help')
         logger.info "HELP: #{client.owner}, user=#{data.user}"
       end

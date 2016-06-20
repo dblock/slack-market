@@ -6,9 +6,6 @@ describe SlackMarket::Commands::Positions do
   let(:client) { app.send(:client) }
   let(:user) { Fabricate(:user) }
   let(:message_command) { SlackRubyBot::Hooks::Message.new }
-  before do
-    allow(Stripe).to receive(:api_key).and_return('key')
-  end
   context 'positions' do
     it 'is a premium feature' do
       expect(message: "#{SlackRubyBot.config.user} positions", user: user.user_id).to respond_with_slack_message(team.premium_text)
@@ -29,7 +26,6 @@ describe SlackMarket::Commands::Positions do
       end
       context 'with positions' do
         before do
-          allow(Stripe).to receive(:api_key).and_return('key')
           allow(User).to receive(:find_create_or_update_by_slack_id!).and_return(user)
         end
         context 'msft', vcr: { cassette_name: 'msft' } do

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'Subscribe', js: true, type: :feature do
   context 'without team_id' do
     before do
-      visit '/subscribe'
+      visit '/upgrade'
     end
     it 'requires a team' do
       expect(find('#messages')).to have_text('Missing or invalid team ID.')
@@ -13,7 +13,7 @@ describe 'Subscribe', js: true, type: :feature do
   context 'for a premium team' do
     let!(:team) { Fabricate(:team, premium: true) }
     before do
-      visit "/subscribe?team_id=#{team.team_id}"
+      visit "/upgrade?team_id=#{team.team_id}"
     end
     it 'displays an error' do
       expect(find('#messages')).to have_text("Team #{team.name} already has a premium subscription, thank you for your support.")
@@ -28,13 +28,8 @@ describe 'Subscribe', js: true, type: :feature do
     after do
       ENV.delete 'STRIPE_API_PUBLISHABLE_KEY'
     end
-    it 'upgrades to premium with a coupon' do
-      visit "/subscribe?team_id=#{team.team_id}&coupon=slack-market-coupon"
-      expect(find('#messages')).to have_text("Upgrade team #{team.name} to premium for only $4.99 a year!")
-      find('#subscribe', visible: true)
-    end
     it 'upgrades to premium' do
-      visit "/subscribe?team_id=#{team.team_id}"
+      visit "/upgrade?team_id=#{team.team_id}"
       expect(find('#messages')).to have_text("Upgrade team #{team.name} to premium for only $9.99 a year!")
       find('#subscribe', visible: true)
 

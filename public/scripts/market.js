@@ -1,9 +1,5 @@
 var SlackMarket = {};
 
-function escapeHtml(text) {
-  return $('<div/>').text(text).html();
-};
-
 $(document).ready(function() {
 
   SlackMarket.message = function(text) {

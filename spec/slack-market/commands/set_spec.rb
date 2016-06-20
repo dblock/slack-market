@@ -14,9 +14,7 @@ describe SlackMarket::Commands::Set do
   end
   context 'dollars' do
     it 'is a premium feature' do
-      expect(message: "#{SlackRubyBot.config.user} set dollars").to respond_with_slack_message(
-        "This is a premium feature. Subscribe your team for $9.99 a year at https://market.playplay.io/subscribe?team_id=#{team.team_id}."
-      )
+      expect(message: "#{SlackRubyBot.config.user} set dollars").to respond_with_slack_message(team.premium_text)
     end
     context 'premium team' do
       before do
@@ -53,9 +51,7 @@ describe SlackMarket::Commands::Set do
   end
   context 'charts' do
     it 'is a premium feature' do
-      expect(message: "#{SlackRubyBot.config.user} set charts").to respond_with_slack_message(
-        "This is a premium feature. Subscribe your team for $9.99 a year at https://market.playplay.io/subscribe?team_id=#{team.team_id}."
-      )
+      expect(message: "#{SlackRubyBot.config.user} set charts").to respond_with_slack_message(team.premium_text)
     end
     context 'premium team' do
       before do

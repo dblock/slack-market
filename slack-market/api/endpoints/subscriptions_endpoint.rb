@@ -9,7 +9,6 @@ module Api
           requires :stripe_token, type: String
           requires :stripe_token_type, type: String
           requires :stripe_email, type: String
-          optional :stripe_coupon, type: String
           requires :team_id, type: String
         end
         post do
@@ -21,7 +20,6 @@ module Api
             source: params[:stripe_token],
             plan: 'slack-market-yearly',
             email: params[:stripe_email],
-            coupon: params[:stripe_coupon],
             metadata: {
               id: team._id,
               team_id: team.team_id,

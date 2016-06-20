@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Stock Market Quotes in Slack: Subscribe</title>
+    <title>Stock Market Quotes in Slack: Upgrade</title>
     <%= partial 'public/partials/_head.html.erb' %>
     <script src='https://checkout.stripe.com/checkout.js'></script>
     <link rel='stylesheet' href='https://checkout.stripe.com/v3/checkout/button.css'></link>
@@ -10,13 +10,16 @@
       <a href='/'><img src='img/icon.png' width='120px'></a>
     </p>
     <p>
-      <h3>Stock Market Quotes in Slack: Subscribe</h3>
+      <h3>Stock Market Quotes in Slack: Upgrade</h3>
     </p>
     <p id='messages' />
     <p id='subscribe'>
       <button id='subscribeButton' class='stripe-button-el'>
-          <span style='display: block; min-height: 30px;'>Pay with Card</span>
+          <span style='display: block; min-height: 30px;'>Pay $9.99 with Card</span>
       </button>
+      <p>
+        <img src='/img/stripe.png' width='119' height='26'></img>
+      </p>
       <script>
         $(document).ready(function() {
 
@@ -28,13 +31,9 @@
             premium: <%= !!(team && team.premium) %>,
           }
 
-          var coupon = $.url('?coupon')
-
           if (team.premium) {
             SlackMarket.message('Team <b>' + team.name + '</b> already has a premium subscription, thank you for your support.');
             $('#subscribeButton').remove();
-          } else if (team.id && team.name && coupon) {
-            SlackMarket.message('Upgrade team <b>' + team.name + '</b> to premium for only $4.99 a year!');
           } else if (team.id && team.name) {
             SlackMarket.message('Upgrade team <b>' + team.name + '</b> to premium for only $9.99 a year!');
           } else {
@@ -54,8 +53,7 @@
                   stripe_email: token.email,
                   stripe_token: token.id,
                   stripe_token_type: token.type,
-                  team_id: team.id,
-                  stripe_coupon: coupon
+                  team_id: team.id
                 },
                 success: function(data) {
                   SlackMarket.message('Team <b>' + team.name + '</b> successfully upgraded to premium.<br><br>Thank you for your support!');
@@ -68,7 +66,6 @@
 
           $('#subscribeButton').on('click', function(e) {
             var amount = 999;
-            if (coupon) { amount = 499 };
             handler.open({
               name: 'Slack Market Premium',
               description: '1 Year Subscription',

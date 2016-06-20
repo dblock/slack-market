@@ -11,9 +11,7 @@ describe SlackMarket::Commands::Positions do
   end
   context 'positions' do
     it 'is a premium feature' do
-      expect(message: "#{SlackRubyBot.config.user} positions", user: user.user_id).to respond_with_slack_message(
-        "This is a premium feature. Subscribe your team for $9.99 a year at https://market.playplay.io/subscribe?team_id=#{team.team_id}."
-      )
+      expect(message: "#{SlackRubyBot.config.user} positions", user: user.user_id).to respond_with_slack_message(team.premium_text)
     end
     context 'premium team' do
       before do

@@ -21,13 +21,21 @@ describe SlackMarket::Commands::Sold do
         let!(:position) { Fabricate(:position, purchased_price_cents: 1234, user: user, name: 'Microsoft Corporation', symbol: 'MSFT') }
         it 'records a sell', vcr: { cassette_name: 'msft' } do
           expect(message: "#{SlackRubyBot.config.user} sold MSFT", user: user.user_id).to respond_with_slack_message(
-            "#{user.slack_mention} sold Microsoft Corporation at ~$51.91, *MSFT* +77% :green_book:"
+            "#{user.slack_mention} sold Microsoft Corporation at ~$51.91, *MSFT* +76.23% :green_book:"
           )
           position.reload
           expect(position.purchased_price_cents).to eq 1234
           expect(position.purchased_at).to_not be nil
           expect(position.sold_price_cents).to eq 5191
           expect(position.sold_at).to_not be nil
+        end
+      end
+      context 'with an owned position without changes' do
+        let!(:position) { Fabricate(:position, purchased_price_cents: 5235, user: user, name: 'Microsoft Corporation', symbol: 'MSFT') }
+        it 'records a sell without change', vcr: { cassette_name: 'msft_float' } do
+          expect(message: "#{SlackRubyBot.config.user} sold MSFT", user: user.user_id).to respond_with_slack_message(
+            "#{user.slack_mention} sold Microsoft Corporation at ~$52.3503, *MSFT* :blue_book:"
+          )
         end
       end
       it 'does not sell an unowned position', vcr: { cassette_name: 'msft' } do

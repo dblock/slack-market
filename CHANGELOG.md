@@ -1,5 +1,6 @@
 ### Changelog
 
+* 6/20/2016: [#22](https://github.com/dblock/slack-market/issues/22): Fix: robots.txt - [@dblock](https://github.com/dblock).
 * 6/12/2016: Advanced features such as `set dollars off` and `set charts off`, `bought`, `sold` and `positions` now require a premium $9.99 subscription - [@dblock](https://github.com/dblock).
 * 6/12/2016: [#21](https://github.com/dblock/slack-market/issues/21): Fix: doesn't work for tickers with dashes, eg. `CMO-PE` - [@dblock](https://github.com/dblock).
 * 5/30/2016: [#4](https://github.com/dblock/slack-market/issues/4): Added `bought`, `sold` and `positions` commands - [@dblock](https://github.com/dblock).

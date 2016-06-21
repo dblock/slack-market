@@ -1,5 +1,6 @@
 ### Changelog
 
+* 6/21/2016: [#24](https://github.com/dblock/slack-market/issues/24): Added support for FX rates - [@dblock](https://github.com/dblock).
 * 6/20/2016: [#18](https://github.com/dblock/slack-market/issues/18): Fix: bought/sold rounding errors - [@dblock](https://github.com/dblock).
 * 6/20/2016: [#22](https://github.com/dblock/slack-market/issues/22): Fix: robots.txt - [@dblock](https://github.com/dblock).
 * 6/12/2016: Advanced features such as `set dollars off` and `set charts off`, `bought`, `sold` and `positions` now require a premium $9.99 subscription - [@dblock](https://github.com/dblock).

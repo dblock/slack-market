@@ -205,4 +205,26 @@ describe SlackMarket::Commands::Quote do
       message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $CMO-PE?"))
     end
   end
+  context 'FX rates' do
+    it 'returns a quote for $GBPUSD=X', vcr: { cassette_name: 'gbp-usd', allow_playback_repeats: true } do
+      expect(client.web_client).to receive(:chat_postMessage).with(
+        channel: 'channel',
+        as_user: true,
+        attachments: [
+          {
+            fallback: 'GBP/USD (GBPUSD=X): $1.4667',
+            title_link: 'http://finance.yahoo.com/q?s=GBPUSD=X',
+            title: 'GBP/USD (GBPUSD=X)',
+            text: '$1.4667 (-0.0647%)',
+            color: '#FF0000',
+            image_url: 'http://chart.finance.yahoo.com/z?s=GBPUSD=X&z=l'
+          }
+        ]
+      ).exactly(4).times
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'GBPUSD=X?'))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's GBPUSD=X?"))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$GBPUSD=X?'))
+      message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $GBPUSD=X?"))
+    end
+  end
 end

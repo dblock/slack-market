@@ -17,15 +17,41 @@ class Market
     end
 
     # returns a stock formatted as a Slack message
-    def to_slack_attachment(quote, charts = false)
+    # the actions property contains formatted slack buttons
+    def to_slack_attachment(quote, charts = false, button = false)
       attachment = {
         fallback: "#{quote.name} (#{quote.symbol}): $#{quote.last_trade_price}",
         title_link: "http://finance.yahoo.com/q?s=#{quote.symbol}",
         title: "#{quote.name} (#{quote.symbol})",
         text: "$#{quote.last_trade_price} (#{quote.change_in_percent})",
-        color: quote.change.to_f > 0 ? '#00FF00' : '#FF0000'
+        color: quote.change.to_f > 0 ? '#00FF00' : '#FF0000',
+        callback_id: "#{quote.name}",
+        actions: [
+          {
+            name: '1d',
+            text: '1d',
+            type: 'button',
+            value: "#{quote.symbol}- 1d"
+          },
+          {
+            name: '1m',
+            text: '1m',
+            type: 'button',
+            value: "#{quote.symbol}- 1m"
+          },
+          {
+            name: '1y',
+            text: '1y',
+            type: 'button',
+            value: "#{quote.symbol}- 1y"
+          }
+        ]
       }
-      attachment[:image_url] = "http://chart.finance.yahoo.com/z?s=#{quote.symbol}&z=l" if charts
+      if charts && !button
+        attachment[:image_url] = "http://chart.finance.yahoo.com/z?s=#{quote.symbol}&z=l"
+      elsif charts && button
+        attachment[:image_url] = "http://chart.finance.yahoo.com/z?s=#{quote.symbol}&t=#{button}&z=l"
+      end
       attachment
     end
   end

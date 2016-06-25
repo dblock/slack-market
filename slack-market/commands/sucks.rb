@@ -20,6 +20,12 @@ module SlackMarket
             title: 'Dow Jones Industrial Average (^DJI)',
             color: quote.change.to_f > 0 ? '#00FF00' : '#FF0000',
             image_url: 'http://chart.finance.yahoo.com/z?s=%5EDJI&z=l'
+            # actions: [{
+            #   name: 'Month',
+            #   text: 'Month',
+            #   type: 'button',
+            #   value: 'month'
+            # }]
           }]) if quote
       end
     end

@@ -37,7 +37,7 @@ Announce that you sold a symbol.
 
 Display current positions. Optionally specify a user to display someone else's current positions.
 
-####Chart Buttons
+####Interactive Chart Buttons
 Update message to render charts for a stock's value over the course of one day, one month and one year.
 
 ### Settings

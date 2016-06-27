@@ -17,6 +17,27 @@ describe SlackMarket::Commands::Quote do
             title: 'Microsoft Corporation (MSFT)',
             text: '$51.91 (-0.48%)',
             color: '#FF0000',
+            callback_id: 'Microsoft Corporation',
+            actions: [
+              {
+                # name: '1d',
+                text: '1d',
+                type: 'button',
+                value: 'MSFT- 1d'
+              },
+              {
+                name: '1m',
+                text: '1m',
+                type: 'button',
+                value: 'MSFT- 1m'
+              },
+              {
+                name: '1y',
+                text: '1y',
+                type: 'button',
+                value: 'MSFT- 1y'
+              }
+            ],
             image_url: 'http://chart.finance.yahoo.com/z?s=MSFT&z=l'
           }
         ]
@@ -39,6 +60,27 @@ describe SlackMarket::Commands::Quote do
             title: 'Microsoft Corporation (MSFT)',
             text: '$51.91 (-0.48%)',
             color: '#FF0000',
+            callback_id: 'Microsoft Corporation',
+            actions: [
+              {
+                # name: '1d',
+                text: '1d',
+                type: 'button',
+                value: 'MSFT- 1d'
+              },
+              {
+                name: '1m',
+                text: '1m',
+                type: 'button',
+                value: 'MSFT- 1m'
+              },
+              {
+                name: '1y',
+                text: '1y',
+                type: 'button',
+                value: 'MSFT- 1y'
+              }
+            ],
             image_url: 'http://chart.finance.yahoo.com/z?s=MSFT&z=l'
           }
         ]
@@ -57,6 +99,27 @@ describe SlackMarket::Commands::Quote do
             title: 'ROCHE HLDG DR (ROG.VX)',
             text: '$248.50 (+0.53%)',
             color: '#00FF00',
+            callback_id: 'ROCHE HLDG DR',
+            actions: [
+              {
+                # name: '1d',
+                text: '1d',
+                type: 'button',
+                value: 'ROG.VX- 1d'
+              },
+              {
+                name: '1m',
+                text: '1m',
+                type: 'button',
+                value: 'ROG.VX- 1m'
+              },
+              {
+                name: '1y',
+                text: '1y',
+                type: 'button',
+                value: 'ROG.VX- 1y'
+              }
+            ],
             image_url: 'http://chart.finance.yahoo.com/z?s=ROG.VX&z=l'
           }
         ]
@@ -77,6 +140,27 @@ describe SlackMarket::Commands::Quote do
             title: 'Microsoft Corporation (MSFT)',
             text: '$50.16 (-3.54%)',
             color: '#FF0000',
+            callback_id: 'Microsoft Corporation',
+            actions: [
+              {
+                # name: '1d',
+                text: '1d',
+                type: 'button',
+                value: 'MSFT- 1d'
+              },
+              {
+                name: '1m',
+                text: '1m',
+                type: 'button',
+                value: 'MSFT- 1m'
+              },
+              {
+                name: '1y',
+                text: '1y',
+                type: 'button',
+                value: 'MSFT- 1y'
+              }
+            ],
             image_url: 'http://chart.finance.yahoo.com/z?s=MSFT&z=l'
           },
           {
@@ -85,6 +169,27 @@ describe SlackMarket::Commands::Quote do
             title: 'Yahoo! Inc. (YHOO)',
             text: '$27.97 (-4.05%)',
             color: '#FF0000',
+            callback_id: 'Yahoo! Inc.',
+            actions: [
+              {
+                # name: '1d',
+                text: '1d',
+                type: 'button',
+                value: 'YHOO- 1d'
+              },
+              {
+                name: '1m',
+                text: '1m',
+                type: 'button',
+                value: 'YHOO- 1m'
+              },
+              {
+                name: '1y',
+                text: '1y',
+                type: 'button',
+                value: 'YHOO- 1y'
+              }
+            ],
             image_url: 'http://chart.finance.yahoo.com/z?s=YHOO&z=l'
           }
         ]
@@ -114,6 +219,27 @@ describe SlackMarket::Commands::Quote do
             title: 'Ford Motor Company Common Stock (F)',
             text: '$11.45 (0.69%)',
             color: '#00FF00',
+            callback_id: 'Ford Motor Company Common Stock',
+            actions: [
+              {
+                # name: '1d',
+                text: '1d',
+                type: 'button',
+                value: 'F- 1d'
+              },
+              {
+                name: '1m',
+                text: '1m',
+                type: 'button',
+                value: 'F- 1m'
+              },
+              {
+                name: '1y',
+                text: '1y',
+                type: 'button',
+                value: 'F- 1y'
+              }
+            ],
             image_url: 'http://chart.finance.yahoo.com/z?s=F&z=l'
           }
         ]
@@ -131,6 +257,27 @@ describe SlackMarket::Commands::Quote do
             title: 'Ford Motor Company Common Stock (F)',
             text: '$11.45 (0.69%)',
             color: '#00FF00',
+            callback_id: 'Ford Motor Company Common Stock',
+            actions: [
+              {
+                # name: '1d',
+                text: '1d',
+                type: 'button',
+                value: 'F- 1d'
+              },
+              {
+                name: '1m',
+                text: '1m',
+                type: 'button',
+                value: 'F- 1m'
+              },
+              {
+                name: '1y',
+                text: '1y',
+                type: 'button',
+                value: 'F- 1y'
+              }
+            ],
             image_url: 'http://chart.finance.yahoo.com/z?s=F&z=l'
           }
         ]
@@ -156,6 +303,27 @@ describe SlackMarket::Commands::Quote do
               title: 'Microsoft Corporation (MSFT)',
               text: '$51.91 (-0.48%)',
               color: '#FF0000',
+              callback_id: 'Microsoft Corporation',
+              actions: [
+                {
+                  # name: '1d',
+                  text: '1d',
+                  type: 'button',
+                  value: 'MSFT- 1d'
+                },
+                {
+                  name: '1m',
+                  text: '1m',
+                  type: 'button',
+                  value: 'MSFT- 1m'
+                },
+                {
+                  name: '1y',
+                  text: '1y',
+                  type: 'button',
+                  value: 'MSFT- 1y'
+                }
+              ],
               image_url: 'http://chart.finance.yahoo.com/z?s=MSFT&z=l'
             }
           ]
@@ -195,6 +363,27 @@ describe SlackMarket::Commands::Quote do
             title: 'Capstead Mortgage Corporation P (CMO-PE)',
             text: '$24.765 (+0.081%)',
             color: '#00FF00',
+            callback_id: 'Capstead Mortgage Corporation P',
+            actions: [
+              {
+                # name: '1d',
+                text: '1d',
+                type: 'button',
+                value: 'CMO-PE- 1d'
+              },
+              {
+                name: '1m',
+                text: '1m',
+                type: 'button',
+                value: 'CMO-PE- 1m'
+              },
+              {
+                name: '1y',
+                text: '1y',
+                type: 'button',
+                value: 'CMO-PE- 1y'
+              }
+            ],
             image_url: 'http://chart.finance.yahoo.com/z?s=CMO-PE&z=l'
           }
         ]
@@ -217,6 +406,27 @@ describe SlackMarket::Commands::Quote do
             title: 'GBP/USD (GBPUSD=X)',
             text: '$1.4667 (-0.0647%)',
             color: '#FF0000',
+            callback_id: 'GBP/USD',
+            actions: [
+              {
+                # name: '1d',
+                text: '1d',
+                type: 'button',
+                value: 'GBPUSD=X- 1d'
+              },
+              {
+                name: '1m',
+                text: '1m',
+                type: 'button',
+                value: 'GBPUSD=X- 1m'
+              },
+              {
+                name: '1y',
+                text: '1y',
+                type: 'button',
+                value: 'GBPUSD=X- 1y'
+              }
+            ],
             image_url: 'http://chart.finance.yahoo.com/z?s=GBPUSD=X&z=l'
           }
         ]

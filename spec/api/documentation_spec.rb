@@ -9,7 +9,7 @@ describe Api do
       JSON.parse(last_response.body)
     end
     it 'documents root level apis' do
-      expect(subject['paths'].keys).to eq ['/api/status', '/api/teams/{id}', '/api/teams', '/api/subscriptions']
+      expect(subject['paths'].keys).to eq ['/api/status', '/api/graph', '/api/teams/{id}', '/api/teams', '/api/subscriptions']
     end
   end
 

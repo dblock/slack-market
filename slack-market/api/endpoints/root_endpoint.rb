@@ -12,7 +12,7 @@ module Api
       end
 
       mount Api::Endpoints::StatusEndpoint
-      mount Api::Endpoints::GraphEndpoint
+      mount Api::Endpoints::SlackEndpoint
       mount Api::Endpoints::TeamsEndpoint
       mount Api::Endpoints::SubscriptionsEndpoint
 

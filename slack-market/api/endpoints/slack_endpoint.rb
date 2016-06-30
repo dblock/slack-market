@@ -6,6 +6,11 @@ module Api
 
       namespace :graph do
         desc 'Select graph.'
+
+        params do
+          requires :payload, type: String
+        end
+
         post do
           # slack interactive messages send a payload.
           # the code below formats that object into a slack message
@@ -17,12 +22,10 @@ module Api
           channel = payload['channel']['id']
           token = payload['token']
           ts = payload['original_message']['ts']
-
+          chart = true
           quotes = Market.quotes([stock_symbol])
 
-          charts = true
-
-          slack_attachment = Market.to_slack_attachment(quotes[0], charts, button_name)
+          slack_attachment = Market.to_slack_attachment(quotes[0], chart, button_name)
           # verifying message token
           if token == ENV['SLACK_VERIFICATION_TOKEN']
             # formatted Slack message response
@@ -35,7 +38,7 @@ module Api
               attachments: [slack_attachment]
             }
           else
-            fail 'Message token is not actually coming from Slack.'
+            error! 'Message token is not coming from Slack.', 401 unless token == ENV['SLACK_VERIFICATION_TOKEN']
           end
         end
       end

@@ -39,16 +39,15 @@ class Market
           value: "#{quote.symbol}- 1y"
         }]
 
-      root_yahoo_url = "http://chart.finance.yahoo.com/z?s=#{quote.symbol}&z=l"
-
       if charts && !button
-        slack_attachment[:image_url] = root_yahoo_url
+        slack_attachment[:image_url] = "http://chart.finance.yahoo.com/z?s=#{quote.symbol}&z=l"
         slack_attachment[:actions] = actions
+        slack_attachment[:callback_id] = "#{quote.name}"
       elsif charts && button
-        slack_attachment[:image_url] = "#{root_yahoo_url}&t=#{button}&z=l"
+        slack_attachment[:image_url] = "http://chart.finance.yahoo.com/z?s=#{quote.symbol}&z=l&t=#{button}&z=l"
         slack_attachment[:actions] = actions
+        slack_attachment[:callback_id] = "#{quote.name}"
       end
-      slack_attachment[:callback_id] = "#{quote.name}"
     end
 
     # returns a stock formatted as a Slack message

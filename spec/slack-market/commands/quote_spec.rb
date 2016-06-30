@@ -20,7 +20,7 @@ describe SlackMarket::Commands::Quote do
             callback_id: 'Microsoft Corporation',
             actions: [
               {
-                # name: '1d',
+                name: '1d',
                 text: '1d',
                 type: 'button',
                 value: 'MSFT- 1d'
@@ -63,7 +63,7 @@ describe SlackMarket::Commands::Quote do
             callback_id: 'Microsoft Corporation',
             actions: [
               {
-                # name: '1d',
+                name: '1d',
                 text: '1d',
                 type: 'button',
                 value: 'MSFT- 1d'
@@ -102,7 +102,7 @@ describe SlackMarket::Commands::Quote do
             callback_id: 'ROCHE HLDG DR',
             actions: [
               {
-                # name: '1d',
+                name: '1d',
                 text: '1d',
                 type: 'button',
                 value: 'ROG.VX- 1d'
@@ -143,7 +143,7 @@ describe SlackMarket::Commands::Quote do
             callback_id: 'Microsoft Corporation',
             actions: [
               {
-                # name: '1d',
+                name: '1d',
                 text: '1d',
                 type: 'button',
                 value: 'MSFT- 1d'
@@ -172,7 +172,7 @@ describe SlackMarket::Commands::Quote do
             callback_id: 'Yahoo! Inc.',
             actions: [
               {
-                # name: '1d',
+                name: '1d',
                 text: '1d',
                 type: 'button',
                 value: 'YHOO- 1d'
@@ -222,7 +222,7 @@ describe SlackMarket::Commands::Quote do
             callback_id: 'Ford Motor Company Common Stock',
             actions: [
               {
-                # name: '1d',
+                name: '1d',
                 text: '1d',
                 type: 'button',
                 value: 'F- 1d'
@@ -260,7 +260,7 @@ describe SlackMarket::Commands::Quote do
             callback_id: 'Ford Motor Company Common Stock',
             actions: [
               {
-                # name: '1d',
+                name: '1d',
                 text: '1d',
                 type: 'button',
                 value: 'F- 1d'
@@ -306,7 +306,7 @@ describe SlackMarket::Commands::Quote do
               callback_id: 'Microsoft Corporation',
               actions: [
                 {
-                  # name: '1d',
+                  name: '1d',
                   text: '1d',
                   type: 'button',
                   value: 'MSFT- 1d'
@@ -366,7 +366,7 @@ describe SlackMarket::Commands::Quote do
             callback_id: 'Capstead Mortgage Corporation P',
             actions: [
               {
-                # name: '1d',
+                name: '1d',
                 text: '1d',
                 type: 'button',
                 value: 'CMO-PE- 1d'
@@ -409,7 +409,7 @@ describe SlackMarket::Commands::Quote do
             callback_id: 'GBP/USD',
             actions: [
               {
-                # name: '1d',
+                name: '1d',
                 text: '1d',
                 type: 'button',
                 value: 'GBPUSD=X- 1d'

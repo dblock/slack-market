@@ -8,6 +8,10 @@ Bundler.require :default, ENV['RACK_ENV']
 require 'slack-ruby-bot-server'
 require 'slack-market'
 
+SlackRubyBotServer.configure do |config|
+  config.server_class = SlackMarket::Server
+end
+
 if ENV['RACK_ENV'] == 'development'
   puts 'Loading NewRelic in developer mode ...'
   require 'new_relic/rack/developer_mode'

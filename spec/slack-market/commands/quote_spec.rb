@@ -100,9 +100,10 @@ describe SlackMarket::Commands::Quote do
               image_url: 'http://chart.finance.yahoo.com/z?s=MSFT&z=l'
             }
           ]
-        ).twice
+        ).exactly(3).times
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$MSFT?'))
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $MSFT?"))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $msft?"))
       end
       it 'returns a quote for ROG.VX', vcr: { cassette_name: 'rog.vx', allow_playback_repeats: true } do
         expect(client.web_client).to receive(:chat_postMessage).with(
@@ -139,11 +140,13 @@ describe SlackMarket::Commands::Quote do
               image_url: 'http://chart.finance.yahoo.com/z?s=ROG.VX&z=l'
             }
           ]
-        ).exactly(4).times
+        ).exactly(6).times
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'ROG.VX'))
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's ROG.VX?"))
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$ROG.VX?'))
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $ROG.VX?"))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$rog.vx?'))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $rog.VX?"))
       end
       it 'returns a quote for MSFT and YHOO', vcr: { cassette_name: 'msft_yahoo_invalid' } do
         expect(client.web_client).to receive(:chat_postMessage).with(
@@ -224,7 +227,7 @@ describe SlackMarket::Commands::Quote do
         expect(client.web_client).to_not receive(:chat_postMessage)
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'have I done'))
       end
-      it 'returns a quote for a single-character $stock', vcr: { cassette_name: 'f' } do
+      it 'returns a quote for a single-character $stock', vcr: { cassette_name: 'f', allow_playback_repeats: true } do
         expect(client.web_client).to receive(:chat_postMessage).with(
           channel: 'channel',
           as_user: true,
@@ -259,8 +262,11 @@ describe SlackMarket::Commands::Quote do
               image_url: 'http://chart.finance.yahoo.com/z?s=F&z=l'
             }
           ]
-        )
+        ).exactly(4).times
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $F?"))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $f?"))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$f'))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$F'))
       end
       it 'returns a quote for a single-character stock$', vcr: { cassette_name: 'f' } do
         expect(client.web_client).to receive(:chat_postMessage).with(
@@ -403,11 +409,13 @@ describe SlackMarket::Commands::Quote do
               image_url: 'http://chart.finance.yahoo.com/z?s=CMO-PE&z=l'
             }
           ]
-        ).exactly(4).times
+        ).exactly(6).times
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'CMO-PE?'))
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's CMO-PE?"))
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$CMO-PE?'))
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $CMO-PE?"))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$cmo-pe?'))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $cmo-pe?"))
       end
       context 'FX rates' do
         it 'returns a quote for $GBPUSD=X', vcr: { cassette_name: 'gbp-usd', allow_playback_repeats: true } do
@@ -445,11 +453,14 @@ describe SlackMarket::Commands::Quote do
                 image_url: 'http://chart.finance.yahoo.com/z?s=GBPUSD=X&z=l'
               }
             ]
-          ).exactly(4).times
+          ).exactly(7).times
           message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'GBPUSD=X?'))
+          message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'GBPUSD=X'))
           message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's GBPUSD=X?"))
           message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$GBPUSD=X?'))
           message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $GBPUSD=X?"))
+          message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$GBPuSD=x?'))
+          message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $GBPusd=X?"))
         end
       end
     end

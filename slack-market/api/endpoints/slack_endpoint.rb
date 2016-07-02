@@ -1,7 +1,7 @@
 require 'pp'
 module Api
   module Endpoints
-    class SlackEndpoint < Grape::API
+    class GraphEndpoint < Grape::API
       format :json
 
       namespace :graph do
@@ -12,6 +12,7 @@ module Api
         end
 
         post do
+          p params.class
           # slack interactive messages send a payload.
           # the code below formats that object into a slack message
           # response to the channel
@@ -25,7 +26,7 @@ module Api
           chart = true
           quotes = Market.quotes([stock_symbol])
 
-          slack_attachment = Market.to_slack_attachment(quotes[0], chart, button_name)
+          slack_attachment = Market.to_slack_attachment(quotes[0], charts: chart, button: button_name)
           # verifying message token
           if token == ENV['SLACK_VERIFICATION_TOKEN']
             # formatted Slack message response

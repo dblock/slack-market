@@ -51,7 +51,7 @@ class Market
     end
 
     # returns a stock formatted as a Slack message
-    def to_slack_attachment(quote, charts = false, button = nil)
+    def to_slack_attachment(quote, opts = { charts: false, button: nil })
       attachment = {
         fallback: "#{quote.name} (#{quote.symbol}): $#{quote.last_trade_price}",
         title_link: "http://finance.yahoo.com/q?s=#{quote.symbol}",
@@ -60,7 +60,7 @@ class Market
         color: quote.change.to_f > 0 ? '#00FF00' : '#FF0000'
       }
 
-      render_chart(charts, attachment, button, quote)
+      render_chart(opts[:charts], attachment, opts[:button], quote)
 
       attachment
     end

@@ -41,6 +41,8 @@ Display current positions. Optionally specify a user to display someone else's c
 
 Update a message to render charts for a stock's value over the course of one day, one month and one year.
 
+![](public/img/interactive-chart.gif)
+
 ### Settings
 
 #### set dollars on|off

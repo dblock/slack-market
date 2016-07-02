@@ -4,15 +4,28 @@ class Team
   field :charts, type: Boolean, default: true
 
   field :stripe_customer_id, type: String
-  field :premium, type: Boolean, default: false
+  field :subscribed, type: Boolean, default: false
+  field :subscribed_at, type: DateTime
 
   scope :api, -> { where(api: true) }
 
-  def premium_text
-    "This is a premium feature. #{upgrade_text}"
+  def subscription_expired?
+    return false if subscribed?
+    (created_at + 1.week) < Time.now
   end
 
-  def upgrade_text
-    "Upgrade your team for $9.99 a year at https://market.playplay.io/upgrade?team_id=#{team_id}."
+  def subscribe_text
+    [trial_expired_text, subscribe_team_text].compact.join(' ')
+  end
+
+  private
+
+  def trial_expired_text
+    return unless subscription_expired?
+    'Your trial subscription has expired.'
+  end
+
+  def subscribe_team_text
+    "Subscribe your team for $1.99 a month at https://market.playplay.io/subscribe?team_id=#{team_id}."
   end
 end

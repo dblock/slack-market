@@ -1,9 +1,9 @@
 module SlackMarket
   module Commands
     class Sold < SlackRubyBot::Commands::Base
-      include SlackMarket::Commands::Mixins::Premium
+      include SlackMarket::Commands::Mixins::Subscribe
 
-      premium_command 'sold' do |client, data, match|
+      subscribe_command 'sold' do |client, data, match|
         user = ::User.find_create_or_update_by_slack_id!(client, data.user)
         expression = match['expression'] if match['expression']
         stocks = Market.qualify(expression.split, client.owner.dollars?) if expression

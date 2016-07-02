@@ -1,1 +1,1 @@
-require 'slack-market/commands/mixins/premium'
+require 'slack-market/commands/mixins/subscribe'

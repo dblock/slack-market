@@ -31,7 +31,7 @@ EOS
         client.say(channel: data.channel, text: [
           HELP,
           SlackMarket::INFO,
-          client.owner.reload.premium? ? nil : client.owner.upgrade_text
+          client.owner.reload.subscribed? ? nil : client.owner.subscribe_text
         ].compact.join("\n"))
         client.say(channel: data.channel, gif: 'help')
         logger.info "HELP: #{client.owner}, user=#{data.user}"

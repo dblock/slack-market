@@ -3,20 +3,20 @@ require 'spec_helper'
 describe 'Subscribe', js: true, type: :feature do
   context 'without team_id' do
     before do
-      visit '/upgrade'
+      visit '/subscribe'
     end
     it 'requires a team' do
       expect(find('#messages')).to have_text('Missing or invalid team ID.')
       find('#subscribe', visible: false)
     end
   end
-  context 'for a premium team' do
-    let!(:team) { Fabricate(:team, premium: true) }
+  context 'for a subscribed team' do
+    let!(:team) { Fabricate(:team, subscribed: true) }
     before do
-      visit "/upgrade?team_id=#{team.team_id}"
+      visit "/subscribe?team_id=#{team.team_id}"
     end
     it 'displays an error' do
-      expect(find('#messages')).to have_text("Team #{team.name} already has a premium subscription, thank you for your support.")
+      expect(find('#messages')).to have_text("Team #{team.name} is already subscribed, thank you for your support.")
       find('#subscribe', visible: false)
     end
   end
@@ -28,9 +28,9 @@ describe 'Subscribe', js: true, type: :feature do
     after do
       ENV.delete 'STRIPE_API_PUBLISHABLE_KEY'
     end
-    it 'upgrades to premium' do
-      visit "/upgrade?team_id=#{team.team_id}"
-      expect(find('#messages')).to have_text("Upgrade team #{team.name} to premium for $9.99 a year.")
+    it 'subscribes team' do
+      visit "/subscribe?team_id=#{team.team_id}"
+      expect(find('#messages')).to have_text("Subscribe team #{team.name} for $1.99 a month.")
       find('#subscribe', visible: true)
 
       expect(Stripe::Customer).to receive(:create).and_return('id' => 'customer_id')
@@ -47,11 +47,11 @@ describe 'Subscribe', js: true, type: :feature do
 
       sleep 5
 
-      expect(find('#messages')).to have_text("Team #{team.name} successfully upgraded to premium. Thank you for your support!")
       find('#subscribe', visible: false)
+      expect(find('#messages')).to have_text("Team #{team.name} successfully subscribed. Thank you for your support!")
 
       team.reload
-      expect(team.premium).to be true
+      expect(team.subscribed).to be true
       expect(team.stripe_customer_id).to eq 'customer_id'
     end
   end

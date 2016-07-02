@@ -11,8 +11,8 @@ describe Api::Endpoints::SubscriptionsEndpoint do
         expect(json['type']).to eq 'param_error'
       end
     end
-    context 'premium team' do
-      let!(:team) { Fabricate(:team, premium: true, stripe_customer_id: 'customer_id') }
+    context 'subscribed team' do
+      let!(:team) { Fabricate(:team, subscribed: true, stripe_customer_id: 'customer_id') }
       it 'fails to create a subscription' do
         expect do
           client.subscriptions._post(
@@ -22,11 +22,11 @@ describe Api::Endpoints::SubscriptionsEndpoint do
             stripe_email: 'foo@bar.com')
         end.to raise_error Faraday::ClientError do |e|
           json = JSON.parse(e.response[:body])
-          expect(json['error']).to eq 'Already a Premium Subscription'
+          expect(json['error']).to eq 'Already Subscribed'
         end
       end
     end
-    context 'non-premium team with a customer_id' do
+    context 'non-subscribed team with a customer_id' do
       let!(:team) { Fabricate(:team, stripe_customer_id: 'customer_id') }
       it 'fails to create a subscription' do
         expect do
@@ -46,7 +46,7 @@ describe Api::Endpoints::SubscriptionsEndpoint do
       it 'creates a subscription' do
         expect(Stripe::Customer).to receive(:create).with(
           source: 'token',
-          plan: 'slack-market-yearly',
+          plan: 'slack-market-monthly',
           email: 'foo@bar.com',
           metadata: {
             id: team._id,
@@ -62,7 +62,8 @@ describe Api::Endpoints::SubscriptionsEndpoint do
           stripe_email: 'foo@bar.com'
         )
         team.reload
-        expect(team.premium).to be true
+        expect(team.subscribed).to be true
+        expect(team.subscribed_at).to_not be nil
         expect(team.stripe_customer_id).to eq 'customer_id'
       end
     end

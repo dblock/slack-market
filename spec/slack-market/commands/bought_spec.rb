@@ -10,12 +10,12 @@ describe SlackMarket::Commands::Bought do
     allow(User).to receive(:find_create_or_update_by_slack_id!).and_return(user)
   end
   context 'bought' do
-    it 'is a premium feature' do
-      expect(message: "#{SlackRubyBot.config.user} bought MSFT", user: user.user_id).to respond_with_slack_message(team.premium_text)
+    it 'requires a subscription' do
+      expect(message: "#{SlackRubyBot.config.user} bought MSFT", user: user.user_id).to respond_with_slack_message(team.subscribe_text)
     end
-    context 'premium team' do
+    context 'subscribed team' do
       before do
-        team.update_attributes!(premium: true)
+        team.update_attributes!(subscribed: true)
       end
       it 'records a buy', vcr: { cassette_name: 'msft' } do
         expect do

@@ -10,12 +10,12 @@ describe SlackMarket::Commands::Sold do
     allow(User).to receive(:find_create_or_update_by_slack_id!).and_return(user)
   end
   context 'sold' do
-    it 'is a premium feature' do
-      expect(message: "#{SlackRubyBot.config.user} sold MSFT", user: user.user_id).to respond_with_slack_message(team.premium_text)
+    it 'requires a subscription' do
+      expect(message: "#{SlackRubyBot.config.user} sold MSFT", user: user.user_id).to respond_with_slack_message(team.subscribe_text)
     end
-    context 'premium team' do
+    context 'subscribed team' do
       before do
-        team.update_attributes!(premium: true)
+        team.update_attributes!(subscribed: true)
       end
       context 'with an owned position' do
         let!(:position) { Fabricate(:position, purchased_price_cents: 1234, user: user, name: 'Microsoft Corporation', symbol: 'MSFT') }

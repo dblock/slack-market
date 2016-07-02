@@ -1,4 +1,6 @@
 ### Changelog
+
+* 7/2/2016: Require a 1.99$ subscription after 7 days - [@dblock](https://github.com/dblock).
 * 7/2/2016: [#1](https://github.com/dblock/slack-market/issues/1): Display other types of graphs  - [@ddruker](https://github.com/ddruker).
 * 6/21/2016: [#24](https://github.com/dblock/slack-market/issues/24): Added support for FX rates - [@dblock](https://github.com/dblock).
 * 6/20/2016: [#18](https://github.com/dblock/slack-market/issues/18): Fix: bought/sold rounding errors - [@dblock](https://github.com/dblock).

@@ -1,9 +1,9 @@
 module SlackMarket
   module Commands
     class Positions < SlackRubyBot::Commands::Base
-      include SlackMarket::Commands::Mixins::Premium
+      include SlackMarket::Commands::Mixins::Subscribe
 
-      premium_command 'positions' do |client, data, match|
+      subscribe_command 'positions' do |client, data, match|
         expression = match['expression'] if match['expression']
         user = ::User.find_by_slack_mention!(client.owner, expression) if expression
         user ||= ::User.find_create_or_update_by_slack_id!(client, data.user)

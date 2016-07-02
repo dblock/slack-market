@@ -10,7 +10,7 @@
       <a href='/'><img src='img/icon.png' width='120px'></a>
     </p>
     <p>
-      <h3>Stock Market Quotes in Slack: Upgrade</h3>
+      <h3>Stock Market Quotes in Slack: Subscribe</h3>
       <div>
         require $ in $STOCK to match<br>
         record buys, sells and track team positions<br>
@@ -21,7 +21,7 @@
     <p id='messages' />
     <p id='subscribe'>
       <button id='subscribeButton' class='stripe-button-el'>
-          <span style='display: block; min-height: 30px;'>Pay $9.99 with Card</span>
+          <span style='display: block; min-height: 30px;'>Pay $1.99 with Card</span>
       </button>
       <p>
         <img src='/img/stripe.png' width='119' height='26'></img>
@@ -34,14 +34,14 @@
           var team = {
             id: '<%= team && team.team_id %>',
             name: '<%= team && team.name %>',
-            premium: <%= !!(team && team.premium) %>,
+            subscribed: <%= !!(team && team.subscribed) %>,
           }
 
-          if (team.premium) {
-            SlackMarket.message('Team <b>' + team.name + '</b> already has a premium subscription, thank you for your support.');
+          if (team.subscribed) {
+            SlackMarket.message('Team <b>' + team.name + '</b> is already subscribed, thank you for your support.');
             $('#subscribeButton').remove();
           } else if (team.id && team.name) {
-            SlackMarket.message('Upgrade team <b>' + team.name + '</b> to premium for $9.99 a year.');
+            SlackMarket.message('Subscribe team <b>' + team.name + '</b> for $1.99 a month.');
           } else {
             $('#subscribeButton').remove();
             SlackMarket.message('Missing or invalid team ID.');
@@ -62,7 +62,7 @@
                   team_id: team.id
                 },
                 success: function(data) {
-                  SlackMarket.message('Team <b>' + team.name + '</b> successfully upgraded to premium.<br><br>Thank you for your support!');
+                  SlackMarket.message('Team <b>' + team.name + '</b> successfully subscribed.<br><br>Thank you for your support!');
                   $('#subscribeButton').remove();
                 },
                 error: SlackMarket.error
@@ -71,10 +71,10 @@
           });
 
           $('#subscribeButton').on('click', function(e) {
-            var amount = 999;
+            var amount = 199;
             handler.open({
-              name: 'Slack Market Premium',
-              description: '1 Year Subscription',
+              name: 'Slack Market',
+              description: 'Monthly Subscription',
               amount: amount
             });
             e.preventDefault();

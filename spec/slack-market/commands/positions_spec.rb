@@ -7,12 +7,12 @@ describe SlackMarket::Commands::Positions do
   let(:user) { Fabricate(:user) }
   let(:message_command) { SlackRubyBot::Hooks::Message.new }
   context 'positions' do
-    it 'is a premium feature' do
-      expect(message: "#{SlackRubyBot.config.user} positions", user: user.user_id).to respond_with_slack_message(team.premium_text)
+    it 'requires a subscription' do
+      expect(message: "#{SlackRubyBot.config.user} positions", user: user.user_id).to respond_with_slack_message(team.subscribe_text)
     end
-    context 'premium team' do
+    context 'subscribed team' do
       before do
-        team.update_attributes!(premium: true)
+        team.update_attributes!(subscribed: true)
       end
       it 'creates a user record', vcr: { cassette_name: 'user_info' } do
         expect do

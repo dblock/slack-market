@@ -12,7 +12,7 @@ describe Api::Endpoints::GraphEndpoint do
         'original_message': {
           'ts': '1467321295.000010'
         }
-      }.to_json.as_json
+      }.to_json
       expect(last_response.status).to eq 201
     end
     it 'returns an error with a non-matching verification token', vcr: { cassette_name: 'msft' } do
@@ -23,7 +23,7 @@ describe Api::Endpoints::GraphEndpoint do
         'original_message': {
           'ts': '1467321295.000010'
         }
-      }.to_json.as_json
+      }.to_json
       expect(last_response.status).to eq 401
     end
   end

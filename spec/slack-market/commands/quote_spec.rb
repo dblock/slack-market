@@ -6,9 +6,9 @@ describe SlackMarket::Commands::Quote do
   let(:client) { app.send(:client) }
   let(:message_command) { SlackRubyBot::Hooks::Message.new }
   context 'quote' do
-    it 'requires a subscription' do
+    it 'requires a subscription', vcr: { cassette_name: 'msft' } do
       expect(message: 'MSFT').to respond_with_slack_message([
-        'Not showing quotes for MSFT.',
+        'Not showing quotes for Microsoft Corporation (MSFT).',
         team.subscribe_text
       ].join(' '))
     end

@@ -14,7 +14,7 @@ module SlackMarket
 
         quotes.each do |quote|
           logger.info "#{client.owner}, user=#{data.user} - #{quote.name} (#{quote.symbol}): $#{quote.last_trade_price}"
-          message[:attachments] << Market.to_slack_attachment(quote, client.owner.charts?)
+          message[:attachments] << Market.to_slack_attachment(quote, charts: client.owner.charts?)
         end
 
         client.web_client.chat_postMessage(message)

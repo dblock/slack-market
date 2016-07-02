@@ -8,7 +8,7 @@ module SlackMarket
 
         if Stripe.api_key && client.owner.subscription_expired?
           names = quotes.map { |quote| "#{quote.name} (#{quote.symbol})" }
-          message = "Not showing quotes for #{names.join(' ')}. #{client.owner.subscribe_text}"
+          message = "Not showing quotes for #{names.or}. #{client.owner.subscribe_text}"
           client.say channel: data.channel, text: message
           logger.info "#{client.owner}, user=#{data.user}, text=#{data.text}, subscription expired"
         else

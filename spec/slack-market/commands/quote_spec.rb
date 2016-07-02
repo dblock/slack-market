@@ -12,6 +12,12 @@ describe SlackMarket::Commands::Quote do
         team.subscribe_text
       ].join(' '))
     end
+    it 'requires a subscription for MSFT and YHOO and INVALID', vcr: { cassette_name: 'msft_yahoo_invalid' } do
+      expect(message: 'MSFT and YHOO or INVALID').to respond_with_slack_message([
+        'Not showing quotes for Microsoft Corporation (MSFT) or Yahoo! Inc. (YHOO).',
+        team.subscribe_text
+      ].join(' '))
+    end
     context 'subscribed team' do
       before do
         team.update_attributes!(subscribed: true)

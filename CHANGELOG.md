@@ -1,5 +1,6 @@
 ### Changelog
 
+* 7/4/2016: [#28](https://github.com/dblock/slack-market/issues/28): Rename Slack action endpoint - [@ddruker](https://github.com/ddruker).
 * 7/2/2016: [#26](https://github.com/dblock/slack-market/issues/26): Supports lowercase ticker symbols, eg. `$aapl` - [@dblock](https://github.com/dblock).
 * 7/2/2016: Require a 1.99$ subscription after 7 days - [@dblock](https://github.com/dblock).
 * 7/2/2016: [#1](https://github.com/dblock/slack-market/issues/1): Display other types of graphs  - [@ddruker](https://github.com/ddruker).

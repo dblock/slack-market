@@ -1,28 +1,3 @@
-GIT
-  remote: git://github.com/DatabaseCleaner/database_cleaner.git
-  revision: f052d64d3be9351a98a99e932a59be528ccc561c
-  specs:
-    database_cleaner (1.5.3)
-
-GIT
-  remote: git://github.com/dblock/slack-ruby-bot-server.git
-  revision: 3bfcb307d467c54c8a21de9619c99d4f42ad91b4
-  specs:
-    slack-ruby-bot-server (0.2.1)
-      celluloid-io
-      foreman
-      grape
-      grape-roar
-      grape-swagger
-      kaminari-mongoid
-      mongoid
-      mongoid-scroll
-      rack-cors
-      rack-rewrite
-      rack-server-pages
-      slack-ruby-bot
-      unicorn
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -92,6 +67,7 @@ GEM
       descendants_tracker (~> 0.0.1)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
+    database_cleaner (1.5.3)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.2.5)
@@ -288,6 +264,20 @@ GEM
       giphy (~> 2.0.2)
       hashie
       slack-ruby-client (>= 0.6.0)
+    slack-ruby-bot-server (0.3.0)
+      celluloid-io
+      foreman
+      grape
+      grape-roar
+      grape-swagger
+      kaminari-mongoid
+      mongoid
+      mongoid-scroll
+      rack-cors
+      rack-rewrite
+      rack-server-pages
+      slack-ruby-bot
+      unicorn
     slack-ruby-client (0.7.5)
       activesupport
       faraday
@@ -334,7 +324,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  database_cleaner!
+  database_cleaner
   fabrication
   faker
   foreman
@@ -351,7 +341,7 @@ DEPENDENCIES
   rspec
   rubocop (= 0.35.1)
   selenium-webdriver
-  slack-ruby-bot-server!
+  slack-ruby-bot-server
   stripe
   vcr
   wannabe_bool

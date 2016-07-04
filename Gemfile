@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 ruby '2.3.1'
 
-gem 'slack-ruby-bot-server', github: 'dblock/slack-ruby-bot-server'
+gem 'slack-ruby-bot-server'
 gem 'newrelic_rpm'
 gem 'rack-robotz'
 gem 'rack-server-pages'
@@ -30,7 +30,7 @@ group :test do
   gem 'vcr'
   gem 'fabrication'
   gem 'faker'
-  gem 'database_cleaner', github: 'DatabaseCleaner/database_cleaner'
+  gem 'database_cleaner'
   gem 'hyperclient'
   gem 'capybara'
   gem 'selenium-webdriver'

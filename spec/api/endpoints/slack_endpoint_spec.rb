@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe Api::Endpoints::GraphEndpoint do
+describe Api::Endpoints::SlackEndpoint do
   include Api::Test::EndpointTest
 
   context 'graph' do
     it 'parses a good payload', vcr: { cassette_name: 'msft' } do
-      post '/api/graph', payload: {
+      post '/api/slack/action', payload: {
         'actions': [{ 'name' => '1m', 'value' => 'MSFT- 1m' }],
         'channel': { 'id' => '424242424', 'name' => 'directmessage' },
         'token': ENV['SLACK_VERIFICATION_TOKEN'],
@@ -16,7 +16,7 @@ describe Api::Endpoints::GraphEndpoint do
       expect(last_response.status).to eq 201
     end
     it 'returns an error with a non-matching verification token', vcr: { cassette_name: 'msft' } do
-      post '/api/graph', payload: {
+      post '/api/slack/action', payload: {
         'actions': [{ 'name' => '1m', 'value' => 'MSFT- 1m' }],
         'channel': { 'id' => '424242424', 'name' => 'directmessage' },
         'token': 'invalid-token',

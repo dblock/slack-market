@@ -1,17 +1,16 @@
-require 'pp'
 module Api
   module Endpoints
-    class GraphEndpoint < Grape::API
+    class SlackEndpoint < Grape::API
       format :json
 
-      namespace :graph do
-        desc 'Select graph.'
+      namespace :slack do
+        desc 'Respond to interactive slack buttons and actions.'
 
         params do
           requires :payload, type: String
         end
 
-        post do
+        post '/action' do
           payload = JSON.parse(params[:payload])
           button_name = payload['actions'][0]['name']
           button_value = payload['actions'][0]['value']

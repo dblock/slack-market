@@ -36,4 +36,40 @@ describe Team do
       expect(Team.find(inactive_team_a_month_ago.id)).to be nil
     end
   end
+  context '#asleep?' do
+    context 'default' do
+      let(:team) { Fabricate(:team, created_at: Time.now.utc) }
+      it 'false' do
+        expect(team.asleep?).to be false
+      end
+    end
+    context 'team created two weeks ago' do
+      let(:team) { Fabricate(:team, created_at: 2.weeks.ago) }
+      it 'is asleep' do
+        expect(team.asleep?).to be true
+      end
+      context 'subscribed' do
+        before do
+          team.update_attributes!(subscribed: true)
+        end
+        it 'is not asleep' do
+          expect(team.asleep?).to be false
+        end
+      end
+    end
+    context 'team created over two weeks ago' do
+      let(:team) { Fabricate(:team, created_at: 2.weeks.ago - 1.day) }
+      it 'is asleep' do
+        expect(team.asleep?).to be true
+      end
+      context 'subscribed' do
+        before do
+          team.update_attributes!(subscribed: true)
+        end
+        it 'is not asleep' do
+          expect(team.asleep?).to be false
+        end
+      end
+    end
+  end
 end

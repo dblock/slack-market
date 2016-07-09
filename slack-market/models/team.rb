@@ -21,8 +21,7 @@ class Team
     return unless channels.any?
     channel = channels.first
     logger.info "Sending '#{message}' to #{self} on ##{channel['name']}."
-    text = [message, gif && gif.image_url.to_s].compact.join("\n")
-    client.chat_postMessage(text: text, channel: channel['id'], as_user: true)
+    client.chat_postMessage(text: message, channel: channel['id'], as_user: true)
   end
 
   def subscription_expired?

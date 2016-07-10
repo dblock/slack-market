@@ -4,6 +4,12 @@ describe SlackMarket::App do
   subject do
     SlackMarket::App.instance
   end
+  context '#instance' do
+    it 'is an instance of the market app' do
+      expect(subject).to be_a_kind_of(SlackRubyBotServer::App)
+      expect(subject).to be_an_instance_of(SlackMarket::App)
+    end
+  end
   context '#purge_inactive_teams!' do
     it 'purges teams' do
       expect(Team).to receive(:purge!)

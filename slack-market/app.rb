@@ -1,12 +1,3 @@
-# TODO: remove after https://github.com/dblock/slack-ruby-bot-server/issues/22 is fixed
-module SlackRubyBotServer
-  class App
-    def self.instance
-      @instance ||= new
-    end
-  end
-end
-
 module SlackMarket
   class App < SlackRubyBotServer::App
     def prepare!

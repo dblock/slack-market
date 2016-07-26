@@ -19,9 +19,7 @@ describe SlackMarket::Commands::Quote do
       ].join(' '))
     end
     context 'subscribed team' do
-      before do
-        team.update_attributes!(subscribed: true)
-      end
+      let(:team) { Fabricate(:team, subscribed: true) }
       it 'returns a quote for MSFT', vcr: { cassette_name: 'msft', allow_playback_repeats: true } do
         expect(client.web_client).to receive(:chat_postMessage).with(
           channel: 'channel',

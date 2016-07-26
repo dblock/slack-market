@@ -48,13 +48,15 @@ describe Team do
       it 'is asleep' do
         expect(team.asleep?).to be true
       end
-      context 'subscribed' do
-        before do
-          team.update_attributes!(subscribed: true)
-        end
-        it 'is not asleep' do
-          expect(team.asleep?).to be false
-        end
+    end
+    context 'team created two weeks ago and subscribed' do
+      let(:team) { Fabricate(:team, created_at: 2.weeks.ago, subscribed: true) }
+      before do
+        allow(team).to receive(:inform_subscribed_changed!)
+        team.update_attributes!(subscribed: true)
+      end
+      it 'is not asleep' do
+        expect(team.asleep?).to be false
       end
     end
     context 'team created over two weeks ago' do
@@ -62,13 +64,11 @@ describe Team do
       it 'is asleep' do
         expect(team.asleep?).to be true
       end
-      context 'subscribed' do
-        before do
-          team.update_attributes!(subscribed: true)
-        end
-        it 'is not asleep' do
-          expect(team.asleep?).to be false
-        end
+    end
+    context 'team created over two weeks ago and subscribed' do
+      let(:team) { Fabricate(:team, created_at: 2.weeks.ago - 1.day, subscribed: true) }
+      it 'is not asleep' do
+        expect(team.asleep?).to be false
       end
     end
   end

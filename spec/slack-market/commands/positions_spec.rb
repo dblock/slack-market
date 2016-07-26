@@ -11,9 +11,7 @@ describe SlackMarket::Commands::Positions do
       expect(message: "#{SlackRubyBot.config.user} positions", user: user.user_id).to respond_with_slack_message(team.subscribe_text)
     end
     context 'subscribed team' do
-      before do
-        team.update_attributes!(subscribed: true)
-      end
+      let(:team) { Fabricate(:team, subscribed: true) }
       it 'creates a user record', vcr: { cassette_name: 'user_info' } do
         expect do
           expect(message: "#{SlackRubyBot.config.user} positions").to respond_with_slack_message(

@@ -14,9 +14,7 @@ describe SlackMarket::Commands::Bought do
       expect(message: "#{SlackRubyBot.config.user} bought MSFT", user: user.user_id).to respond_with_slack_message(team.subscribe_text)
     end
     context 'subscribed team' do
-      before do
-        team.update_attributes!(subscribed: true)
-      end
+      let(:team) { Fabricate(:team, subscribed: true) }
       it 'records a buy', vcr: { cassette_name: 'msft' } do
         expect do
           expect(message: "#{SlackRubyBot.config.user} bought MSFT", user: user.user_id).to respond_with_slack_message(

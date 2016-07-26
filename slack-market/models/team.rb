@@ -9,6 +9,8 @@ class Team
 
   scope :api, -> { where(api: true) }
 
+  after_update :inform_subscribed_changed!
+
   def asleep?(dt = 2.weeks)
     return false unless subscription_expired?
     time_limit = Time.now - dt
@@ -42,5 +44,15 @@ class Team
 
   def subscribe_team_text
     "Subscribe your team for $1.99 a month at https://market.playplay.io/subscribe?team_id=#{team_id}."
+  end
+
+  SUBSCRIBED_TEXT = <<-EOS
+Your team has been subscribed, enjoy all features. Thanks for supporting open-source!
+Follow https://twitter.com/playplayio for news and updates.
+EOS
+
+  def inform_subscribed_changed!
+    return unless subscribed? && subscribed_changed?
+    inform! SUBSCRIBED_TEXT
   end
 end

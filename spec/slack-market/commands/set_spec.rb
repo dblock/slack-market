@@ -9,9 +9,7 @@ describe SlackMarket::Commands::Set do
       expect(message: "#{SlackRubyBot.config.user} set dollars on").to respond_with_slack_message(team.subscribe_text)
     end
     context 'subscribed team' do
-      before do
-        team.update_attributes!(subscribed: true)
-      end
+      let(:team) { Fabricate(:team, subscribed: true) }
       it 'shows current value of dollars off' do
         expect(message: "#{SlackRubyBot.config.user} set dollars").to respond_with_slack_message(
           "Dollar signs for team #{team.name} are off."
@@ -46,9 +44,7 @@ describe SlackMarket::Commands::Set do
       expect(message: "#{SlackRubyBot.config.user} set charts on").to respond_with_slack_message(team.subscribe_text)
     end
     context 'subscribed team' do
-      before do
-        team.update_attributes!(subscribed: true)
-      end
+      let(:team) { Fabricate(:team, subscribed: true) }
       it 'shows current value of charts off' do
         team.update_attributes!(charts: false)
         expect(message: "#{SlackRubyBot.config.user} set charts").to respond_with_slack_message(

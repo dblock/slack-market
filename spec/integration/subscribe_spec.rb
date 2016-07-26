@@ -31,6 +31,9 @@ describe 'Subscribe', js: true, type: :feature do
     it 'subscribes team' do
       visit "/subscribe?team_id=#{team.team_id}"
       expect(find('#messages')).to have_text("Subscribe team #{team.name} for $1.99 a month.")
+
+      expect_any_instance_of(Team).to receive(:inform!).with(Team::SUBSCRIBED_TEXT)
+
       find('#subscribe', visible: true)
 
       expect(Stripe::Customer).to receive(:create).and_return('id' => 'customer_id')

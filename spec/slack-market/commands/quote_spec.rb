@@ -146,6 +146,91 @@ describe SlackMarket::Commands::Quote do
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$rog.vx?'))
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $rog.VX?"))
       end
+      it 'returns a quote for 0941.HK', vcr: { cassette_name: '0941.hk', allow_playback_repeats: true } do
+        expect(client.web_client).to receive(:chat_postMessage).with(
+          channel: 'channel',
+          as_user: true,
+          attachments: [
+            {
+              fallback: 'CHINA MOBILE (0941.HK): $95.65',
+              title_link: 'http://finance.yahoo.com/q?s=0941.HK',
+              title: 'CHINA MOBILE (0941.HK)',
+              text: '$95.65 (-1.95%)',
+              color: '#FF0000',
+              callback_id: 'CHINA MOBILE',
+              actions: [
+                {
+                  name: '1d',
+                  text: '1d',
+                  type: 'button',
+                  value: '0941.HK- 1d'
+                },
+                {
+                  name: '1m',
+                  text: '1m',
+                  type: 'button',
+                  value: '0941.HK- 1m'
+                },
+                {
+                  name: '1y',
+                  text: '1y',
+                  type: 'button',
+                  value: '0941.HK- 1y'
+                }
+              ],
+              image_url: 'http://chart.finance.yahoo.com/z?s=0941.HK&z=l'
+            }
+          ]
+        ).exactly(5).times
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '0941.HK'))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's 0941.HK?"))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$0941.HK?'))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $0941.HK?"))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$0941.hk?'))
+      end
+      it 'returns a quote for Z74.SI', vcr: { cassette_name: 'z74.si', allow_playback_repeats: true } do
+        expect(client.web_client).to receive(:chat_postMessage).with(
+          channel: 'channel',
+          as_user: true,
+          attachments: [
+            {
+              fallback: 'SingTel (Z74.SI): $4.18',
+              title_link: 'http://finance.yahoo.com/q?s=Z74.SI',
+              title: 'SingTel (Z74.SI)',
+              text: '$4.18 (-2.56%)',
+              color: '#FF0000',
+              callback_id: 'SingTel',
+              actions: [
+                {
+                  name: '1d',
+                  text: '1d',
+                  type: 'button',
+                  value: 'Z74.SI- 1d'
+                },
+                {
+                  name: '1m',
+                  text: '1m',
+                  type: 'button',
+                  value: 'Z74.SI- 1m'
+                },
+                {
+                  name: '1y',
+                  text: '1y',
+                  type: 'button',
+                  value: 'Z74.SI- 1y'
+                }
+              ],
+              image_url: 'http://chart.finance.yahoo.com/z?s=Z74.SI&z=l'
+            }
+          ]
+        ).exactly(6).times
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'Z74.SI'))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's Z74.SI?"))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$Z74.SI?'))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $Z74.SI?"))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$z74.si?'))
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $z74.SI?"))
+      end
       it 'returns a quote for MSFT and YHOO', vcr: { cassette_name: 'msft_yahoo_invalid' } do
         expect(client.web_client).to receive(:chat_postMessage).with(
           channel: 'channel',

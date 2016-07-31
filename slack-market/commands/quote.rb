@@ -2,8 +2,8 @@ module SlackMarket
   module Commands
     class Quote < SlackRubyBot::Commands::Base
       scan(/
-        [\b\$]?[[[:upper:]]]{1,}[\.\-\=][[[:upper:]]]+\b|
-        \$[[[:alpha:]]]{1,}[\.\-\=][[[:alpha:]]]+|
+        [\b\$]?[A-Z0-9]{1,}[\.\-\=][[[:upper:]]]+\b|
+        \$[[[:alnum:]]]{1,}[\.\-\=][[[:alpha:]]]+|
         [\b\$]?[[[:upper:]]]{2,}\b|
         \$[[[:alpha:]]]{1,}|
         \b[[[:upper:]]]{1,}\$

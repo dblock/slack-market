@@ -1,5 +1,6 @@
 ### Changelog
 
+* 7/31/2016: [#36](https://github.com/dblock/slack-market/pull/36): Support numeric and alphanumeric stock tickers, eg. `Z74.SI` or `0941.HK` - [@pauljz](https://github.com/pauljz).
 * 7/25/2016: Notify subscribing teams - [@dblock](https://github.com/dblock).
 * 7/4/2016: [#28](https://github.com/dblock/slack-market/issues/28): Rename Slack action endpoint - [@ddruker](https://github.com/ddruker).
 * 7/2/2016: [#26](https://github.com/dblock/slack-market/issues/26): Supports lowercase ticker symbols, eg. `$aapl` - [@dblock](https://github.com/dblock).

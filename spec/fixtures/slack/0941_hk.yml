@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=0941.HK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 31 Jul 2016 21:15:49 GMT
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private, no-cache, no-store
+      Content-Length:
+      - '46'
+      Content-Type:
+      - application/octet-stream
+      Age:
+      - '0'
+      Via:
+      - http/1.1 media-router-api4.prod.media.gq1.yahoo.com (ApacheTrafficServer [cMsSf
+        ]), http/1.1 r12.ycpi.sjb.yahoo.net (ApacheTrafficServer [cMsSf ])
+      Server:
+      - ATS
+      Connection:
+      - keep-alive
+      Y-Trace:
+      - BAEAQAAAAACZ6Mz53P8eWwAAAAAAAAAA7MI9MyrPriIAAAAAAAAAAAAFOPT83sMGAAU49PzfLnjitnSXAAAAAA--
+    body:
+      encoding: UTF-8
+      string: '"CHINA MOBILE","0941.HK",95.65,-1.90,"-1.95%"
+
+'
+    http_version: 
+  recorded_at: Sun, 31 Jul 2016 21:15:49 GMT
+recorded_with: VCR 3.0.3

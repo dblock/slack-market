@@ -1,5 +1,6 @@
 ### Changelog
 
+* 8/1/2016: [#37](https://github.com/dblock/slack-market/pull/37): Support stocks that Yahoo Finance fails to return a name for, e.g. `300024.SZ` - [@pauljz](https://github.com/pauljz).
 * 7/31/2016: [#36](https://github.com/dblock/slack-market/pull/36): Support numeric and alphanumeric stock tickers, eg. `Z74.SI` or `0941.HK` - [@pauljz](https://github.com/pauljz).
 * 7/25/2016: Notify subscribing teams - [@dblock](https://github.com/dblock).
 * 7/4/2016: [#28](https://github.com/dblock/slack-market/issues/28): Rename Slack action endpoint - [@ddruker](https://github.com/ddruker).

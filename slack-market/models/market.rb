@@ -12,7 +12,8 @@ class Market
     # return stock quotes
     def quotes(stocks, fields = [:name, :symbol, :last_trade_price, :change, :change_in_percent])
       YahooFinance::Client.new.quotes(stocks, fields).select do |quote|
-        quote.name != 'N/A'
+        quote.name = quote.name != 'N/A' ? quote.name : quote.symbol
+        quote.last_trade_price != 'N/A'
       end
     end
 

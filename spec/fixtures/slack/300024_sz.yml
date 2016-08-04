@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=300024.SZ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Aug 2016 01:40:57 GMT
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      Cache-Control:
+      - private, no-cache, no-store
+      Content-Length:
+      - '37'
+      Content-Type:
+      - application/octet-stream
+      Age:
+      - '0'
+      Via:
+      - http/1.1 media-router-api8.prod.media.gq1.yahoo.com (ApacheTrafficServer [cMsSf
+        ]), http/1.1 r32.ycpi.sjb.yahoo.net (ApacheTrafficServer [cMsSf ])
+      Server:
+      - ATS
+      Connection:
+      - keep-alive
+      Y-Trace:
+      - BAEAQAAAAAAujIDk00gCpQAAAAAAAAAA4W35_PgtyO8AAAAAAAAAAAAFOTUKl9NEAAU5NQqYOoIgPik2AAAAAA--
+    body:
+      encoding: UTF-8
+      string: 'N/A,"300024.SZ",23.76,-0.04,"-0.17%"
+
+'
+    http_version: 
+  recorded_at: Thu, 04 Aug 2016 01:40:56 GMT
+recorded_with: VCR 3.0.3

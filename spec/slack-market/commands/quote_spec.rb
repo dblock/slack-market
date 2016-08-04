@@ -231,6 +231,44 @@ describe SlackMarket::Commands::Quote do
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$z74.si?'))
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $z74.SI?"))
       end
+      it 'returns a quote for 300024.SZ (no name)', vcr: { cassette_name: '300024.sz', allow_playback_repeats: true } do
+        expect(client.web_client).to receive(:chat_postMessage).with(
+          channel: 'channel',
+          as_user: true,
+          attachments: [
+            {
+              fallback: '300024.SZ (300024.SZ): $23.76',
+              title_link: 'http://finance.yahoo.com/q?s=300024.SZ',
+              title: '300024.SZ (300024.SZ)',
+              text: '$23.76 (-0.17%)',
+              color: '#FF0000',
+              callback_id: '300024.SZ',
+              actions: [
+                {
+                  name: '1d',
+                  text: '1d',
+                  type: 'button',
+                  value: '300024.SZ- 1d'
+                },
+                {
+                  name: '1m',
+                  text: '1m',
+                  type: 'button',
+                  value: '300024.SZ- 1m'
+                },
+                {
+                  name: '1y',
+                  text: '1y',
+                  type: 'button',
+                  value: '300024.SZ- 1y'
+                }
+              ],
+              image_url: 'http://chart.finance.yahoo.com/z?s=300024.SZ&z=l'
+            }
+          ]
+        ).exactly(1).times
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$300024.SZ?'))
+      end
       it 'returns a quote for MSFT and YHOO', vcr: { cassette_name: 'msft_yahoo_invalid' } do
         expect(client.web_client).to receive(:chat_postMessage).with(
           channel: 'channel',

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=GBPUSD=X
+    uri: https://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=GBPUSD=X
     body:
       encoding: US-ASCII
       string: ''
@@ -45,6 +45,6 @@ http_interactions:
       encoding: UTF-8
       string: |
         "GBP/USD","GBPUSD=X",1.4667,-0.0009,"-0.0647%"
-    http_version: 
+    http_version:
   recorded_at: Tue, 21 Jun 2016 17:23:38 GMT
 recorded_with: VCR 3.0.3

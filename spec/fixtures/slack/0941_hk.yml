@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=0941.HK
+    uri: https://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=0941.HK
     body:
       encoding: US-ASCII
       string: ''
@@ -46,6 +46,6 @@ http_interactions:
       string: '"CHINA MOBILE","0941.HK",95.65,-1.90,"-1.95%"
 
 '
-    http_version: 
+    http_version:
   recorded_at: Sun, 31 Jul 2016 21:15:49 GMT
 recorded_with: VCR 3.0.3

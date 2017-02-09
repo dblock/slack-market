@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 ruby '2.3.1'
 
-gem 'slack-ruby-client', github: 'slack-ruby/slack-ruby-client'
+gem 'slack-ruby-client'
 gem 'slack-ruby-bot-server'
 gem 'newrelic_rpm'
 gem 'rack-robotz'
@@ -12,6 +12,7 @@ gem 'money'
 gem 'wannabe_bool'
 gem 'money_helper'
 gem 'stripe'
+gem 'giphy'
 
 group :development, :test do
   gem 'rake', '~> 10.4'
@@ -34,5 +35,5 @@ group :test do
   gem 'database_cleaner'
   gem 'hyperclient'
   gem 'capybara'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '~> 2.53.4'
 end

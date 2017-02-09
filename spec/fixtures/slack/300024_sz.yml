@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=300024.SZ
+    uri: https://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=300024.SZ
     body:
       encoding: US-ASCII
       string: ''
@@ -46,6 +46,6 @@ http_interactions:
       string: 'N/A,"300024.SZ",23.76,-0.04,"-0.17%"
 
 '
-    http_version: 
+    http_version:
   recorded_at: Thu, 04 Aug 2016 01:40:56 GMT
 recorded_with: VCR 3.0.3

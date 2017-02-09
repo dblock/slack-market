@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=Z74.SI
+    uri: https://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=Z74.SI
     body:
       encoding: US-ASCII
       string: ''
@@ -46,6 +46,6 @@ http_interactions:
       string: '"SingTel","Z74.SI",4.18,-0.11,"-2.56%"
 
 '
-    http_version: 
+    http_version:
   recorded_at: Sun, 31 Jul 2016 21:19:58 GMT
 recorded_with: VCR 3.0.3

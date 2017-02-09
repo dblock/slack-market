@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=CMO-PE
+    uri: https://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=CMO-PE
     body:
       encoding: US-ASCII
       string: ''
@@ -45,6 +45,6 @@ http_interactions:
       encoding: UTF-8
       string: |
         "Capstead Mortgage Corporation P","CMO-PE",24.765,+0.020,"+0.081%"
-    http_version: 
+    http_version:
   recorded_at: Sun, 12 Jun 2016 19:18:30 GMT
 recorded_with: VCR 3.0.3

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=MSFT%20YHOO
+    uri: https://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=MSFT%20YHOO
     body:
       encoding: US-ASCII
       string: ''

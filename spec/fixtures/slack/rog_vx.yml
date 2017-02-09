@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=ROG.VX
+    uri: https://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=ROG.VX
     body:
       encoding: US-ASCII
       string: ''
@@ -45,6 +45,6 @@ http_interactions:
       encoding: UTF-8
       string: |
         "ROCHE HLDG DR","ROG.VX",248.50,+1.30,"+0.53%"
-    http_version: 
+    http_version:
   recorded_at: Wed, 27 Apr 2016 21:00:21 GMT
 recorded_with: VCR 3.0.1

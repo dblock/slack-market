@@ -41,11 +41,11 @@ describe 'Subscribe', js: true, type: :feature do
       find('#subscribeButton').click
       stripe_iframe = all('iframe[name=stripe_checkout_app]').last
       Capybara.within_frame stripe_iframe do
-        page.execute_script("$('input#email').val('foo@bar.com');")
-        page.execute_script("$('input#card_number').val('4242 4242 4242 4242');")
-        page.execute_script("$('input#cc-exp').val('12/16');")
-        page.execute_script("$('input#cc-csc').val('123');")
-        page.execute_script("$('#submitButton').click();")
+        page.find_field('Email').set 'foo@bar.com'
+        page.find_field('Card number').set '4242 4242 4242 4242'
+        page.find_field('MM / YY').set '12/42'
+        page.find_field('CVC').set '123'
+        find('button[type="submit"]').click
       end
 
       sleep 5

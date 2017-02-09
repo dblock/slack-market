@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=MSFT%20YHOO%20INVALID
+    uri: https://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=MSFT%20YHOO%20INVALID
     body:
       encoding: US-ASCII
       string: ''
@@ -49,6 +49,6 @@ http_interactions:
         "Microsoft Corporation","MSFT",50.16,-1.84,"-3.54%"
         "Yahoo! Inc.","YHOO",27.97,-1.18,"-4.05%"
         N/A,"INVALID",N/A,N/A,N/A
-    http_version: 
+    http_version:
   recorded_at: Fri, 05 Feb 2016 22:44:54 GMT
 recorded_with: VCR 3.0.1

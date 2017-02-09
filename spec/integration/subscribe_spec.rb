@@ -39,7 +39,10 @@ describe 'Subscribe', js: true, type: :feature do
       expect(Stripe::Customer).to receive(:create).and_return('id' => 'customer_id')
 
       find('#subscribeButton').click
+      sleep 2
+
       stripe_iframe = all('iframe[name=stripe_checkout_app]').last
+
       Capybara.within_frame stripe_iframe do
         page.find_field('Email').set 'foo@bar.com'
         page.find_field('Card number').set '4242 4242 4242 4242'

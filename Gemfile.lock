@@ -103,7 +103,7 @@ GEM
     grape-swagger (0.26.1)
       grape (>= 0.16.2)
     hashdiff (0.3.2)
-    hashie (3.4.6)
+    hashie (3.5.1)
     heroku (3.43.16)
       heroku-api (= 0.4.2)
       launchy (= 2.4.3)
@@ -256,7 +256,7 @@ GEM
       roar (~> 1.0.4)
       slack-ruby-bot
       unicorn
-    slack-ruby-client (0.7.8)
+    slack-ruby-client (0.7.9)
       activesupport
       faraday (>= 0.9)
       faraday_middleware
@@ -309,7 +309,6 @@ DEPENDENCIES
   faker
   foreman
   giphy
-  hashie (< 3.5)
   heroku
   hyperclient
   money

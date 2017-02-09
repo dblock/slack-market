@@ -13,6 +13,7 @@ gem 'wannabe_bool'
 gem 'money_helper'
 gem 'stripe'
 gem 'giphy'
+gem 'hashie', '< 3.5'
 
 group :development, :test do
   gem 'rake', '~> 10.4'

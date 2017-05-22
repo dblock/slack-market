@@ -19,7 +19,7 @@ module SlackMarket
             title_link: 'http://finance.yahoo.com/q?s=%5EDJI',
             title: 'Dow Jones Industrial Average (^DJI)',
             color: quote.change.to_f > 0 ? '#00FF00' : '#FF0000',
-            image_url: 'http://chart.finance.yahoo.com/z?s=%5EDJI&z=l'
+            image_url: 'https://www.google.com/finance/getchart?q=DJI'
           }]) if quote
       end
     end

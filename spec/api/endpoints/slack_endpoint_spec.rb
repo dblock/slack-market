@@ -4,9 +4,9 @@ describe Api::Endpoints::SlackEndpoint do
   include Api::Test::EndpointTest
 
   context 'graph' do
-    it 'parses a good payload', vcr: { cassette_name: 'msft' } do
+    it 'parses a good payload and returns correct charts', vcr: { cassette_name: 'msft' } do
       post '/api/slack/action', payload: {
-        'actions': [{ 'name' => '1m', 'value' => 'MSFT- 1m' }],
+        'actions': [{ 'name' => '1M', 'value' => 'MSFT- 1m' }],
         'channel': { 'id' => '424242424', 'name' => 'directmessage' },
         'token': ENV['SLACK_VERIFICATION_TOKEN'],
         'original_message': {
@@ -14,6 +14,8 @@ describe Api::Endpoints::SlackEndpoint do
         }
       }.to_json
       expect(last_response.status).to eq 201
+      payload = JSON.parse(last_response.body)
+      expect(payload['attachments'][0]['image_url']).to eq 'https://www.google.com/finance/getchart?q=MSFT&p=1M&i=360'
     end
     it 'returns an error with a non-matching verification token', vcr: { cassette_name: 'msft' } do
       post '/api/slack/action', payload: {

@@ -34,25 +34,25 @@ describe SlackMarket::Commands::Quote do
               callback_id: 'Microsoft Corporation',
               actions: [
                 {
-                  name: '1d',
+                  name: '1D',
                   text: '1d',
                   type: 'button',
                   value: 'MSFT- 1d'
                 },
                 {
-                  name: '1m',
+                  name: '1M',
                   text: '1m',
                   type: 'button',
                   value: 'MSFT- 1m'
                 },
                 {
-                  name: '1y',
+                  name: '1Y',
                   text: '1y',
                   type: 'button',
                   value: 'MSFT- 1y'
                 }
               ],
-              image_url: 'http://chart.finance.yahoo.com/z?s=MSFT&z=l'
+              image_url: 'https://www.google.com/finance/getchart?q=MSFT&i=360'
             }
           ]
         ).twice
@@ -77,25 +77,25 @@ describe SlackMarket::Commands::Quote do
               callback_id: 'Microsoft Corporation',
               actions: [
                 {
-                  name: '1d',
+                  name: '1D',
                   text: '1d',
                   type: 'button',
                   value: 'MSFT- 1d'
                 },
                 {
-                  name: '1m',
+                  name: '1M',
                   text: '1m',
                   type: 'button',
                   value: 'MSFT- 1m'
                 },
                 {
-                  name: '1y',
+                  name: '1Y',
                   text: '1y',
                   type: 'button',
                   value: 'MSFT- 1y'
                 }
               ],
-              image_url: 'http://chart.finance.yahoo.com/z?s=MSFT&z=l'
+              image_url: 'https://www.google.com/finance/getchart?q=MSFT&i=360'
             }
           ]
         ).exactly(3).times
@@ -117,25 +117,25 @@ describe SlackMarket::Commands::Quote do
               callback_id: 'ROCHE HLDG DR',
               actions: [
                 {
-                  name: '1d',
+                  name: '1D',
                   text: '1d',
                   type: 'button',
                   value: 'ROG.VX- 1d'
                 },
                 {
-                  name: '1m',
+                  name: '1M',
                   text: '1m',
                   type: 'button',
                   value: 'ROG.VX- 1m'
                 },
                 {
-                  name: '1y',
+                  name: '1Y',
                   text: '1y',
                   type: 'button',
                   value: 'ROG.VX- 1y'
                 }
               ],
-              image_url: 'http://chart.finance.yahoo.com/z?s=ROG.VX&z=l'
+              image_url: 'https://www.google.com/finance/getchart?q=ROG.VX&i=360'
             }
           ]
         ).exactly(6).times
@@ -160,25 +160,25 @@ describe SlackMarket::Commands::Quote do
               callback_id: 'CHINA MOBILE',
               actions: [
                 {
-                  name: '1d',
+                  name: '1D',
                   text: '1d',
                   type: 'button',
                   value: '0941.HK- 1d'
                 },
                 {
-                  name: '1m',
+                  name: '1M',
                   text: '1m',
                   type: 'button',
                   value: '0941.HK- 1m'
                 },
                 {
-                  name: '1y',
+                  name: '1Y',
                   text: '1y',
                   type: 'button',
                   value: '0941.HK- 1y'
                 }
               ],
-              image_url: 'http://chart.finance.yahoo.com/z?s=0941.HK&z=l'
+              image_url: 'https://www.google.com/finance/getchart?q=0941.HK&i=360'
             }
           ]
         ).exactly(5).times
@@ -202,25 +202,25 @@ describe SlackMarket::Commands::Quote do
               callback_id: 'SingTel',
               actions: [
                 {
-                  name: '1d',
+                  name: '1D',
                   text: '1d',
                   type: 'button',
                   value: 'Z74.SI- 1d'
                 },
                 {
-                  name: '1m',
+                  name: '1M',
                   text: '1m',
                   type: 'button',
                   value: 'Z74.SI- 1m'
                 },
                 {
-                  name: '1y',
+                  name: '1Y',
                   text: '1y',
                   type: 'button',
                   value: 'Z74.SI- 1y'
                 }
               ],
-              image_url: 'http://chart.finance.yahoo.com/z?s=Z74.SI&z=l'
+              image_url: 'https://www.google.com/finance/getchart?q=Z74.SI&i=360'
             }
           ]
         ).exactly(6).times
@@ -245,25 +245,25 @@ describe SlackMarket::Commands::Quote do
               callback_id: '300024.SZ',
               actions: [
                 {
-                  name: '1d',
+                  name: '1D',
                   text: '1d',
                   type: 'button',
                   value: '300024.SZ- 1d'
                 },
                 {
-                  name: '1m',
+                  name: '1M',
                   text: '1m',
                   type: 'button',
                   value: '300024.SZ- 1m'
                 },
                 {
-                  name: '1y',
+                  name: '1Y',
                   text: '1y',
                   type: 'button',
                   value: '300024.SZ- 1y'
                 }
               ],
-              image_url: 'http://chart.finance.yahoo.com/z?s=300024.SZ&z=l'
+              image_url: 'https://www.google.com/finance/getchart?q=300024.SZ&i=360'
             }
           ]
         ).exactly(1).times
@@ -283,25 +283,25 @@ describe SlackMarket::Commands::Quote do
               callback_id: 'Microsoft Corporation',
               actions: [
                 {
-                  name: '1d',
+                  name: '1D',
                   text: '1d',
                   type: 'button',
                   value: 'MSFT- 1d'
                 },
                 {
-                  name: '1m',
+                  name: '1M',
                   text: '1m',
                   type: 'button',
                   value: 'MSFT- 1m'
                 },
                 {
-                  name: '1y',
+                  name: '1Y',
                   text: '1y',
                   type: 'button',
                   value: 'MSFT- 1y'
                 }
               ],
-              image_url: 'http://chart.finance.yahoo.com/z?s=MSFT&z=l'
+              image_url: 'https://www.google.com/finance/getchart?q=MSFT&i=360'
             },
             {
               fallback: 'Yahoo! Inc. (YHOO): $27.97',
@@ -312,25 +312,25 @@ describe SlackMarket::Commands::Quote do
               callback_id: 'Yahoo! Inc.',
               actions: [
                 {
-                  name: '1d',
+                  name: '1D',
                   text: '1d',
                   type: 'button',
                   value: 'YHOO- 1d'
                 },
                 {
-                  name: '1m',
+                  name: '1M',
                   text: '1m',
                   type: 'button',
                   value: 'YHOO- 1m'
                 },
                 {
-                  name: '1y',
+                  name: '1Y',
                   text: '1y',
                   type: 'button',
                   value: 'YHOO- 1y'
                 }
               ],
-              image_url: 'http://chart.finance.yahoo.com/z?s=YHOO&z=l'
+              image_url: 'https://www.google.com/finance/getchart?q=YHOO&i=360'
             }
           ]
         )
@@ -362,25 +362,25 @@ describe SlackMarket::Commands::Quote do
               callback_id: 'Ford Motor Company Common Stock',
               actions: [
                 {
-                  name: '1d',
+                  name: '1D',
                   text: '1d',
                   type: 'button',
                   value: 'F- 1d'
                 },
                 {
-                  name: '1m',
+                  name: '1M',
                   text: '1m',
                   type: 'button',
                   value: 'F- 1m'
                 },
                 {
-                  name: '1y',
+                  name: '1Y',
                   text: '1y',
                   type: 'button',
                   value: 'F- 1y'
                 }
               ],
-              image_url: 'http://chart.finance.yahoo.com/z?s=F&z=l'
+              image_url: 'https://www.google.com/finance/getchart?q=F&i=360'
             }
           ]
         ).exactly(4).times
@@ -403,25 +403,25 @@ describe SlackMarket::Commands::Quote do
               callback_id: 'Ford Motor Company Common Stock',
               actions: [
                 {
-                  name: '1d',
+                  name: '1D',
                   text: '1d',
                   type: 'button',
                   value: 'F- 1d'
                 },
                 {
-                  name: '1m',
+                  name: '1M',
                   text: '1m',
                   type: 'button',
                   value: 'F- 1m'
                 },
                 {
-                  name: '1y',
+                  name: '1Y',
                   text: '1y',
                   type: 'button',
                   value: 'F- 1y'
                 }
               ],
-              image_url: 'http://chart.finance.yahoo.com/z?s=F&z=l'
+              image_url: 'https://www.google.com/finance/getchart?q=F&i=360'
             }
           ]
         )
@@ -449,25 +449,25 @@ describe SlackMarket::Commands::Quote do
                 callback_id: 'Microsoft Corporation',
                 actions: [
                   {
-                    name: '1d',
+                    name: '1D',
                     text: '1d',
                     type: 'button',
                     value: 'MSFT- 1d'
                   },
                   {
-                    name: '1m',
+                    name: '1M',
                     text: '1m',
                     type: 'button',
                     value: 'MSFT- 1m'
                   },
                   {
-                    name: '1y',
+                    name: '1Y',
                     text: '1y',
                     type: 'button',
                     value: 'MSFT- 1y'
                   }
                 ],
-                image_url: 'http://chart.finance.yahoo.com/z?s=MSFT&z=l'
+                image_url: 'https://www.google.com/finance/getchart?q=MSFT&i=360'
               }
             ]
           )
@@ -509,25 +509,25 @@ describe SlackMarket::Commands::Quote do
               callback_id: 'Capstead Mortgage Corporation P',
               actions: [
                 {
-                  name: '1d',
+                  name: '1D',
                   text: '1d',
                   type: 'button',
                   value: 'CMO-PE- 1d'
                 },
                 {
-                  name: '1m',
+                  name: '1M',
                   text: '1m',
                   type: 'button',
                   value: 'CMO-PE- 1m'
                 },
                 {
-                  name: '1y',
+                  name: '1Y',
                   text: '1y',
                   type: 'button',
                   value: 'CMO-PE- 1y'
                 }
               ],
-              image_url: 'http://chart.finance.yahoo.com/z?s=CMO-PE&z=l'
+              image_url: 'https://www.google.com/finance/getchart?q=CMO-PE&i=360'
             }
           ]
         ).exactly(6).times
@@ -553,25 +553,25 @@ describe SlackMarket::Commands::Quote do
                 callback_id: 'GBP/USD',
                 actions: [
                   {
-                    name: '1d',
+                    name: '1D',
                     text: '1d',
                     type: 'button',
                     value: 'GBPUSD=X- 1d'
                   },
                   {
-                    name: '1m',
+                    name: '1M',
                     text: '1m',
                     type: 'button',
                     value: 'GBPUSD=X- 1m'
                   },
                   {
-                    name: '1y',
+                    name: '1Y',
                     text: '1y',
                     type: 'button',
                     value: 'GBPUSD=X- 1y'
                   }
                 ],
-                image_url: 'http://chart.finance.yahoo.com/z?s=GBPUSD=X&z=l'
+                image_url: 'https://www.google.com/finance/getchart?q=GBPUSD-X&i=360'
               }
             ]
           ).exactly(7).times

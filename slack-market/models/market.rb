@@ -22,30 +22,31 @@ class Market
       # the actions array below contains formatted slack buttons
       actions = [
         {
-          name: '1d',
+          name: '1D',
           text: '1d',
           type: 'button',
           value: "#{quote.symbol}- 1d"
         },
         {
-          name: '1m',
+          name: '1M',
           text: '1m',
           type: 'button',
           value: "#{quote.symbol}- 1m"
         },
         {
-          name: '1y',
+          name: '1Y',
           text: '1y',
           type: 'button',
           value: "#{quote.symbol}- 1y"
         }]
 
+      chart_symbol = quote.symbol.gsub('=', '-')
       if charts && !button
-        slack_attachment[:image_url] = "http://chart.finance.yahoo.com/z?s=#{quote.symbol}&z=l"
+        slack_attachment[:image_url] = "https://www.google.com/finance/getchart?q=#{chart_symbol}&i=360"
         slack_attachment[:actions] = actions
         slack_attachment[:callback_id] = "#{quote.name}"
       elsif charts && button
-        slack_attachment[:image_url] = "http://chart.finance.yahoo.com/z?s=#{quote.symbol}&z=l&t=#{button}&z=l"
+        slack_attachment[:image_url] = "https://www.google.com/finance/getchart?q=#{chart_symbol}&p=#{button}&i=360"
         slack_attachment[:actions] = actions
         slack_attachment[:callback_id] = "#{quote.name}"
       end

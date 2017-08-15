@@ -11,10 +11,10 @@ Mongoid.load! File.expand_path('../config/mongoid.yml', __FILE__), ENV['RACK_ENV
 
 require 'slack-ruby-bot'
 require 'slack-market/version'
+require 'slack-market/service'
 require 'slack-market/info'
 require 'slack-market/models'
 require 'slack-market/api'
 require 'slack-market/app'
 require 'slack-market/server'
-require 'slack-market/service'
 require 'slack-market/commands'

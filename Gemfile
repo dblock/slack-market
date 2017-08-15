@@ -12,7 +12,7 @@ gem 'rack-robotz'
 gem 'rack-server-pages'
 gem 'slack-ruby-bot-server'
 gem 'slack-ruby-client'
-gem 'stripe'
+gem 'stripe', '~> 1.58.0'
 gem 'wannabe_bool'
 gem 'yahoo-finance'
 
@@ -35,6 +35,7 @@ group :test do
   gem 'rack-test'
   gem 'rspec'
   gem 'selenium-webdriver'
+  gem 'stripe-ruby-mock', '~> 2.4.1', require: 'stripe_mock'
   gem 'vcr'
   gem 'webmock'
 end

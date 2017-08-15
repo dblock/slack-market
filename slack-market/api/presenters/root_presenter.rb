@@ -17,6 +17,10 @@ module Api
         "#{base_url(opts)}/api/subscriptions"
       end
 
+      link :credit_cards do |opts|
+        "#{base_url(opts)}/api/credit_cards"
+      end
+
       link :teams do |opts|
         {
           href: "#{base_url(opts)}/api/teams/#{link_params(Api::Helpers::PaginationParameters::ALL, :active)}",

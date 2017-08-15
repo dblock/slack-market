@@ -35,6 +35,10 @@ class Team
     [trial_expired_text, subscribe_team_text].compact.join(' ')
   end
 
+  def update_cc_text
+    "Update your credit card info at #{SlackMarket::Service.url}/update_cc?team_id=#{team_id}."
+  end
+
   private
 
   def trial_expired_text
@@ -43,7 +47,7 @@ class Team
   end
 
   def subscribe_team_text
-    "Subscribe your team for $1.99 a month at https://market.playplay.io/subscribe?team_id=#{team_id}."
+    "Subscribe your team for $1.99 a month at #{SlackMarket::Service.url}/subscribe?team_id=#{team_id}."
   end
 
   SUBSCRIBED_TEXT = <<~EOS.freeze

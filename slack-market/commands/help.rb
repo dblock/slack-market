@@ -10,6 +10,7 @@ module SlackMarket
         -------
 
         help                - get this helpful message
+        subscription        - show subscription info
 
         Buy and Sell
         ------------

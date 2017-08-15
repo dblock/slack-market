@@ -11,17 +11,25 @@ describe SlackMarket::Commands::Subscription, vcr: { cassette_name: 'user_info' 
       )
     end
   end
+  context 'team without a customer ID' do
+    let!(:team) { Fabricate(:team, subscribed: true, stripe_customer_id: nil) }
+    it 'errors' do
+      expect(message: "#{SlackRubyBot.config.user} subscription", user: 'user').to respond_with_slack_message(
+        "Not a subscriber. Subscribe your team for $1.99 a month at #{SlackMarket::Service.url}/subscribe?team_id=#{team.team_id}."
+      )
+    end
+  end
   shared_examples_for 'subscription' do
     include_context :stripe_mock
     context 'with a plan' do
       before do
-        stripe_helper.create_plan(id: 'slack-playplay-yearly', amount: 2999)
+        stripe_helper.create_plan(id: 'slack-market-yearly', amount: 2999)
       end
       context 'a customer' do
         let!(:customer) do
           Stripe::Customer.create(
             source: stripe_helper.generate_card_token,
-            plan: 'slack-playplay-yearly',
+            plan: 'slack-market-yearly',
             email: 'foo@bar.com'
           )
         end

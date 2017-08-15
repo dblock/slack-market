@@ -20,6 +20,7 @@ Thread.abort_on_exception = true
 
 Thread.new do
   SlackMarket::Service.instance.start_from_database!
+  SlackMarket::App.instance.after_start!
 end
 
 run Api::Middleware.instance

@@ -10,10 +10,10 @@ class Market
     end
 
     # return stock quotes
-    def quotes(stocks, fields = [:name, :symbol, :last_trade_price, :change, :change_in_percent])
-      YahooFinance::Client.new.quotes(stocks, fields).select do |quote|
+    def quotes(stocks, fields = %i[name symbol last_trade_price change change_in_percent])
+      YahooFinance::Client.new.quotes(stocks, fields).reject do |quote|
         quote.name = quote.name != 'N/A' ? quote.name : quote.symbol
-        quote.last_trade_price != 'N/A'
+        quote.last_trade_price == 'N/A'
       end
     end
 
@@ -38,17 +38,18 @@ class Market
           text: '1y',
           type: 'button',
           value: "#{quote.symbol}- 1y"
-        }]
+        }
+      ]
 
-      chart_symbol = quote.symbol.gsub('=', '-')
+      chart_symbol = quote.symbol.tr('=', '-')
       if charts && !button
         slack_attachment[:image_url] = "https://www.google.com/finance/getchart?q=#{chart_symbol}&i=360"
         slack_attachment[:actions] = actions
-        slack_attachment[:callback_id] = "#{quote.name}"
+        slack_attachment[:callback_id] = quote.name.to_s
       elsif charts && button
         slack_attachment[:image_url] = "https://www.google.com/finance/getchart?q=#{chart_symbol}&p=#{button}&i=360"
         slack_attachment[:actions] = actions
-        slack_attachment[:callback_id] = "#{quote.name}"
+        slack_attachment[:callback_id] = quote.name.to_s
       end
     end
 

@@ -1,31 +1,31 @@
 module SlackMarket
   module Commands
     class Help < SlackRubyBot::Commands::Base
-      HELP = <<-EOS
-```
-I am your friendly market bot, providing Yahoo Finance data.
-Try "What is the price of MSFT?" or "Tell me about YHOO, AAPL and $I, please."
+      HELP = <<~EOS.freeze
+        ```
+        I am your friendly market bot, providing Yahoo Finance data.
+        Try "What is the price of MSFT?" or "Tell me about YHOO, AAPL and $I, please."
 
-General
--------
+        General
+        -------
 
-help                - get this helpful message
+        help                - get this helpful message
 
-Buy and Sell
-------------
+        Buy and Sell
+        ------------
 
-bought [symbol]     - you bought a stock
-sold [symbol]       - you sold a stock
-positions           - display your current open positions
-positions [user]    - display someone else's current open positions
+        bought [symbol]     - you bought a stock
+        sold [symbol]       - you sold a stock
+        positions           - display your current open positions
+        positions [user]    - display someone else's current open positions
 
-Settings
---------
+        Settings
+        --------
 
-set dollars on|off  - respond to $QUOTE, but not QUOTE
-set charts on|off   - display charts below quotes
+        set dollars on|off  - respond to $QUOTE, but not QUOTE
+        set charts on|off   - display charts below quotes
 
-```
+        ```
 EOS
       def self.call(client, data, _match)
         client.say(channel: data.channel, text: [

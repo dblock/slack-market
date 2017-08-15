@@ -19,7 +19,7 @@ module SlackMarket
             client.say(channel: data.channel, text: "Dollar signs for team #{client.owner.name} are #{client.owner.dollars? ? 'on!' : 'off.'}", gif: 'dollars')
             logger.info "SET: #{client.owner} - dollar signs are #{client.owner.dollars? ? 'on' : 'off'}"
           else
-            fail "Invalid setting #{k}, you can _set dollars on|off_."
+            raise "Invalid setting #{k}, you can _set dollars on|off_."
           end
         end
       end

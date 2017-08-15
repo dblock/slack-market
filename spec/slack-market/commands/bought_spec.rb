@@ -31,8 +31,8 @@ describe SlackMarket::Commands::Bought do
         let!(:position) { Fabricate(:position, user: user, name: 'XYZ Corporation', symbol: 'XYZ') }
         it 'does not support multiple buys' do
           allow(Market).to receive(:quotes).with([position.symbol]).and_return([
-            OpenStruct.new(symbol: position.symbol, name: position.name, last_trade_price: 123)
-          ])
+                                                                                 OpenStruct.new(symbol: position.symbol, name: position.name, last_trade_price: 123)
+                                                                               ])
           expect do
             expect(message: "#{SlackRubyBot.config.user} bought #{position.symbol}", user: user.user_id).to respond_with_slack_message(
               "#{user.slack_mention} already holds XYZ Corporation (XYZ)"

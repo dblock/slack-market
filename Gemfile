@@ -2,38 +2,39 @@ source 'http://rubygems.org'
 
 ruby '2.3.1'
 
-gem 'slack-ruby-client', github: 'slack-ruby/slack-ruby-client'
-gem 'slack-ruby-bot-server'
+gem 'giphy'
+gem 'money'
+gem 'money_helper'
+gem 'mongoid', '~> 5.1.4'
+gem 'mongoid-scroll'
 gem 'newrelic_rpm'
 gem 'rack-robotz'
 gem 'rack-server-pages'
-gem 'yahoo-finance'
-gem 'money'
-gem 'wannabe_bool'
-gem 'money_helper'
+gem 'slack-ruby-bot-server'
+gem 'slack-ruby-client'
 gem 'stripe'
-gem 'giphy'
+gem 'wannabe_bool'
+gem 'yahoo-finance'
 
 group :development, :test do
-  gem 'rake', '~> 10.4'
-  gem 'rubocop', '0.35.1'
   gem 'foreman'
+  gem 'rake', '~> 10.4'
+  gem 'rubocop', '0.49.1'
 end
 
 group :development do
   gem 'mongoid-shell'
-  gem 'heroku'
 end
 
 group :test do
-  gem 'rspec'
-  gem 'rack-test'
-  gem 'webmock'
-  gem 'vcr'
+  gem 'capybara'
+  gem 'database_cleaner'
   gem 'fabrication'
   gem 'faker'
-  gem 'database_cleaner'
   gem 'hyperclient'
-  gem 'capybara'
-  gem 'selenium-webdriver', '~> 2.53.4'
+  gem 'rack-test'
+  gem 'rspec'
+  gem 'selenium-webdriver'
+  gem 'vcr'
+  gem 'webmock'
 end

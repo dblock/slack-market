@@ -46,9 +46,9 @@ class Team
     "Subscribe your team for $1.99 a month at https://market.playplay.io/subscribe?team_id=#{team_id}."
   end
 
-  SUBSCRIBED_TEXT = <<-EOS
-Your team has been subscribed, enjoy all features. Thanks for supporting open-source!
-Follow https://twitter.com/playplayio for news and updates.
+  SUBSCRIBED_TEXT = <<~EOS.freeze
+    Your team has been subscribed, enjoy all features. Thanks for supporting open-source!
+    Follow https://twitter.com/playplayio for news and updates.
 EOS
 
   def inform_subscribed_changed!

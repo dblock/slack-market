@@ -36,7 +36,7 @@ module Api
         post do
           client = Slack::Web::Client.new
 
-          fail 'Missing SLACK_CLIENT_ID or SLACK_CLIENT_SECRET.' unless ENV.key?('SLACK_CLIENT_ID') && ENV.key?('SLACK_CLIENT_SECRET')
+          raise 'Missing SLACK_CLIENT_ID or SLACK_CLIENT_SECRET.' unless ENV.key?('SLACK_CLIENT_ID') && ENV.key?('SLACK_CLIENT_SECRET')
 
           rc = client.oauth_access(
             client_id: ENV['SLACK_CLIENT_ID'],
@@ -50,7 +50,7 @@ module Api
           if team && !team.active?
             team.activate!(token)
           elsif team
-            fail "Team #{team.name} is already registered."
+            raise "Team #{team.name} is already registered."
           else
             team = Team.create!(
               token: token,

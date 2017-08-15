@@ -1,5 +1,6 @@
 ### Changelog
 
+* 8/15/2017: Teams can check on their subscription status with `subscription` and update the credit card on file - [@dblock](https://github.com/dblock).
 * 5/22/2017: [#44](https://github.com/dblock/slack-market/issues/44): Replace Yahoo charts with Google charts - [@dblock](https://github.com/dblock).
 * 8/1/2016: [#37](https://github.com/dblock/slack-market/pull/37): Support stocks that Yahoo Finance fails to return a name for, e.g. `300024.SZ` - [@pauljz](https://github.com/pauljz).
 * 7/31/2016: [#36](https://github.com/dblock/slack-market/pull/36): Support numeric and alphanumeric stock tickers, eg. `Z74.SI` or `0941.HK` - [@pauljz](https://github.com/pauljz).

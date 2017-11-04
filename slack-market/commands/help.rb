@@ -4,7 +4,7 @@ module SlackMarket
       HELP = <<~EOS.freeze
         ```
         I am your friendly market bot, providing Yahoo Finance data.
-        Try "What is the price of MSFT?" or "Tell me about YHOO, AAPL and $I, please."
+        Try "What is the price of MSFT?" or "Tell me about AABA, AAPL and $I, please."
 
         General
         -------

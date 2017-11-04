@@ -29,10 +29,10 @@ describe SlackMarket::Commands::Sold do
         end
       end
       context 'with an owned position without changes' do
-        let!(:position) { Fabricate(:position, purchased_price_cents: 5235, user: user, name: 'Microsoft Corporation', symbol: 'MSFT') }
+        let!(:position) { Fabricate(:position, purchased_price_cents: 8414, user: user, name: 'Microsoft Corporation', symbol: 'MSFT') }
         it 'records a sell without change', vcr: { cassette_name: 'msft_float' } do
           expect(message: "#{SlackRubyBot.config.user} sold MSFT", user: user.user_id).to respond_with_slack_message(
-            "#{user.slack_mention} sold Microsoft Corporation at ~$52.3503, *MSFT* :blue_book:"
+            "#{user.slack_mention} sold Microsoft Corporation at ~$84.14, *MSFT* :blue_book:"
           )
         end
       end

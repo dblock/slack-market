@@ -13,7 +13,7 @@ describe SlackMarket::Commands::Sucks do
         text: 'No <@>, market is up, you suck!',
         attachments: [
           {
-            title_link: 'http://finance.yahoo.com/q?s=%5EDJI',
+            title_link: 'http://finance.google.com/q=%5EDJI',
             title: 'Dow Jones Industrial Average (^DJI)',
             color: '#00FF00',
             image_url: 'https://www.google.com/finance/getchart?q=DJI'
@@ -29,7 +29,7 @@ describe SlackMarket::Commands::Sucks do
         text: 'Indeed <@>, market sucks!',
         attachments: [
           {
-            title_link: 'http://finance.yahoo.com/q?s=%5EDJI',
+            title_link: 'http://finance.google.com/q=%5EDJI',
             title: 'Dow Jones Industrial Average (^DJI)',
             color: '#FF0000',
             image_url: 'https://www.google.com/finance/getchart?q=DJI'

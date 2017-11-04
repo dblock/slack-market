@@ -5,10 +5,7 @@ module SlackMarket
         logger.info "#{client.owner}, user=#{data.user} - market sucks!"
 
         # DIA (Dow Jones Industrial Average ETF) closely but not quite imiates the DOW
-        quotes = YahooFinance::Client.new.quotes(['DIA'], %i[name symbol last_trade_price change change_in_percent]).reject do |quote|
-          quote.name == 'N/A'
-        end
-
+        quotes = Tickers.new(['DIA'])
         quote = quotes.first
 
         if quote
@@ -17,7 +14,7 @@ module SlackMarket
             as_user: true,
             text: quote.change.to_f > 0 ? "No <@#{data.user}>, market is up, you suck!" : "Indeed <@#{data.user}>, market sucks!",
             attachments: [{
-              title_link: 'http://finance.yahoo.com/q?s=%5EDJI',
+              title_link: 'http://finance.google.com/q=%5EDJI',
               title: 'Dow Jones Industrial Average (^DJI)',
               color: quote.change.to_f > 0 ? '#00FF00' : '#FF0000',
               image_url: 'https://www.google.com/finance/getchart?q=DJI'

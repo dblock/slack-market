@@ -1,0 +1,327 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://google.com/finance?q=INVALID
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Location:
+      - https://www.google.com/finance?q=INVALID
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      Date:
+      - Fri, 03 Nov 2017 23:39:04 GMT
+      Expires:
+      - Sun, 03 Dec 2017 23:39:04 GMT
+      Cache-Control:
+      - public, max-age=2592000
+      Server:
+      - sffe
+      Content-Length:
+      - '237'
+      X-Xss-Protection:
+      - 1; mode=block
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="41,39,38,37,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>301
+        Moved</TITLE></HEAD><BODY>\n<H1>301 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://www.google.com/finance?q=INVALID\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 23:38:55 GMT
+- request:
+    method: get
+    uri: https://www.google.com/finance?q=INVALID
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Location:
+      - https://finance.google.com/finance?q=INVALID
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=UTF-8
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      Date:
+      - Fri, 03 Nov 2017 23:39:04 GMT
+      Server:
+      - gws
+      Content-Length:
+      - '241'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - 1P_JAR=2017-11-03-23; expires=Fri, 10-Nov-2017 23:39:04 GMT; path=/; domain=.google.com
+      - NID=116=zxBmbSmeW2DrujYiJyRCwY_OIhfkgxPQXt8JU9dMfYo14cLfK5sIFDBhYg3UafW-JI3GbGyQU5YzwIAgDwRhrjx3jUof5-z2JZVBy1K7_UTlHVmbqfV914VLRdjaALgj;
+        expires=Sat, 05-May-2018 23:39:04 GMT; path=/; domain=.google.com; HttpOnly
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="41,39,38,37,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://finance.google.com/finance?q=INVALID\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 23:38:55 GMT
+- request:
+    method: get
+    uri: https://finance.google.com/finance?q=INVALID
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      Date:
+      - Fri, 03 Nov 2017 23:39:04 GMT
+      Expires:
+      - Fri, 03 Nov 2017 23:39:04 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Set-Cookie:
+      - NID=116=El1hIaUWsmtjFUsi2pQIzOcGyR8Gk20hKG3mKb3WvMbPf1XrmlqjnJ9x5U2ROOX9jyYYiPOXYXjbxFMvXmsBbL6DzPpPdz7Zm8eH_pXbQdeNzr-2tnD0QMiMdK3AqCul;Domain=.google.com;Path=/;Expires=Sat,
+        05-May-2018 23:39:04 GMT;HttpOnly
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: "<!DOCTYPE html><html><head><script>(function(){(function(){function
+        e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void
+        0==b)try{window.console.timeStamp(\"CSI/\"+a)}catch(h){}};this.tick(\"start\",null,a)}var
+        a;if(window.performance)var d=(a=window.performance.timing)&&a.responseStart;var
+        f=0<d?new e(d):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var
+        b=window.jstiming.load;0<c&&d>=c&&(b.tick(\"_wtsrt\",void 0,c),b.tick(\"wtsrt_\",\"_wtsrt\",\nd),b.tick(\"tbsd_\",\"wtsrt_\"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick(\"_tbnd\",void
+        0,window.chrome.csi().startE),b.tick(\"tbnd_\",\"_tbnd\",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick(\"_tbnd\",void
+        0,window.external.startE),b.tick(\"tbnd_\",\"_tbnd\",c))),a&&(window.jstiming.pt=a)}catch(g){}})();}).call(this);\n</script><title>INVALID
+        - Google Finance Search</title><meta name=\"Description\" content=\"Get real-time
+        stock quotes &amp; charts, financial news, currency conversions, or track
+        your portfolio with Google Finance.\"><meta name=\"robots\" content=\"noindex\"><meta
+        http-equiv=\"X-UA-Compatible\" content=\"IE=10\"><link rel=\"canonical\" href=\"https://www.google.com/finance?q=INVALID\"><link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/finance/f/finance_us-895351966.css\"><link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/_/scs/finance-static/_/ss/k=finance.a.1msu4mph4xh6k.L.X.O/d=0/rs=AGHGApGCzFIkl8UdpAPaXE1FXjt-bEHR6w\"><link
+        rel=\"icon\" type=\"image/vnd.microsoft.icon\" href=\"/finance/favicon.ico\"><style>#gbar,#guser{font-size:13px;padding-right:8px;padding-top:4px
+        !important;}#gbar{padding-left:8px;height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px
+        solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media
+        all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline
+        !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf
+        .gb4{color:#900 !important}\n</style><script></script><script async=\"\" defer=\"\"
+        src=\"//www.google.com/insights/consumersurveys/async_survey?site=xusttduenzseze54mcajwbd6sq\"></script><!--
+        Start GPT Async Tag --><script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script><script>\n
+        \   var gptadslots = [];\n    var googletag = googletag || {cmd:[]};\n  </script><script>\n
+        \ googletag.cmd.push(function() {\n    //Adslot 1 declaration\n    gptadslots.push(googletag.defineSlot('/60656358/com.gf.company',
+        [[300,250]], 'div-gpt-ad-4209476-1')\n                             .setForceSafeFrame(true)\n
+        \                            .addService(googletag.pubads()));\n    //Adslot
+        2 declaration\n    gptadslots.push(googletag.defineSlot('/60656358/com.gf.home',
+        [[300,250]], 'div-gpt-ad-4209476-2')\n                             .setForceSafeFrame(true)\n
+        \                            .addService(googletag.pubads()));\n    //Adslot
+        3 declaration\n    gptadslots.push(googletag.defineSlot('/60656358/com.gf.portfolio',
+        [[300,250]], 'div-gpt-ad-4209476-3')\n                             .setForceSafeFrame(true)\n
+        \                            .addService(googletag.pubads()));\n\n    googletag.pubads().enableSingleRequest();\n
+        \   googletag.enableServices();\n  });\n  </script><!-- End GPT Async Tag
+        --><script>\n      function _rpt() {}\n      function _tck() {}\n    </script><script>\n
+        \   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n
+        \   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n
+        \   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n
+        \   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\n
+        \   ga('create', 'UA-40765809-1', {\n      'allowLinker': true,\n      'cookiePath':
+        '/finance'\n    });\n    ga('send', 'pageview');\n    </script></head><body><div
+        class=fjfe&#45;bodywrapper><div id=fjfe&#45;real&#45;body class=g-doc><input
+        type=\"text\" name=\"hist_state\" id=\"hist_state\" style=\"display:none;\"><iframe
+        id=\"hist_frame\" name=\"hist_frame\" class=invfr tabindex=\"-1\"></iframe><iframe
+        src=\"/_/scs/finance-static/_/js/k=finance.a.en_US.Upzqnh5ra8Q.O/m=b/rt=h/d=0/rs=AGHGApEK7U1PJ67cp--3Ay1lYGnaQQb8fg\"
+        class=invfr tabindex=\"-1\"></iframe><div id=gbar><nobr><a class=gb1 href=\"https://www.google.com/webhp?tab=ew\">Search</a>
+        <a class=gb1 href=\"http://www.google.com/imghp?hl=en&tab=ei\">Images</a>
+        <a class=gb1 href=\"https://maps.google.com/maps?hl=en&tab=el\">Maps</a> <a
+        class=gb1 href=\"https://play.google.com/?hl=en&tab=e8\">Play</a> <a class=gb1
+        href=\"https://www.youtube.com/?gl=US&tab=e1\">YouTube</a> <a class=gb1 href=\"https://news.google.com/nwshp?hl=en&tab=en\">News</a>
+        <a class=gb1 href=\"https://mail.google.com/mail/?tab=em\">Gmail</a> <a class=gb1
+        href=\"https://drive.google.com/?tab=eo\">Drive</a> <a class=gb1 style=\"text-decoration:none\"
+        href=\"https://www.google.com/intl/en/options/\"><u>More</u> &raquo;</a></nobr></div><div
+        id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span
+        id=gbe></span><a  href=\"http://www.google.com/support/finance?hl=en\" class=gb4>Help</a>
+        | <a target=_top id=gb_70 href=\"https://accounts.google.com/ServiceLogin?service=finance&passive=1209600&continue=https://finance.google.com/finance?q%3DINVALID&followup=https://finance.google.com/finance?q%3DINVALID\"
+        class=gb4>Sign in</a></nobr></div><div class=gbh style=left:0></div><div class=gbh
+        style=right:0></div><div id=flash&#45;disclaimer style=\"display:none;\">Adobe
+        Flash Player is required for interactive charts.&nbsp;<a href=\"http://www.adobe.com/go/getflashplayer/\">Allow</a></div><div
+        id=fjfe&#45;click&#45;wrapper><script>\n(function() {\n  var l = window.location;\n
+        \ var q = l.search ? l.search.substr(1) : '';\n  var h = l.hash ? l.hash.substr(1)
+        : '';\n  var p = '/finance';\n  var ss = 'stockscreener';\n  var conn = window.history
+        && window.history.pushState ? '/' : '#';\n  if (l.pathname == p + '/' + ss)
+        {\n    if (h) l.href = p + conn + ss + '?' + q + '&' + h;\n  } else if (l.pathname
+        != p && h) {\n    l.href = p + l.hash;\n  }\n  if (h) {\ndocument.getElementById('fjfe-click-wrapper').style.display
+        = 'none';\n  }\n})();\n</script><div id=gf-head class=\"g-section g-tpl-75-25
+        g-split\"><div class=\"g-unit g-first\"><div class=fjfe&#45;logo><a href=\"/finance/?ei=GP78WaiTEYSOmAHGrZT4CQ\"><img
+        src=\"/finance/f/logo_material-4224265490.png\" alt=\"Google Finance\"></a></div><div
+        id=gf-search class=fjfe&#45;search><form method=\"get\" action=\"/finance\"
+        autocomplete=\"off\"><input class=fjfe&#45;searchbox&#45;input name=q type=text
+        tabindex=1 value=\"INVALID\"><span class=fjfe&#45;searchbox&#45;button&#45;wrapper><span
+        class=fjfe&#45;searchbox&#45;button&#45;wrapper2><input class=fjfe&#45;searchbox&#45;button
+        type=submit tabindex=2 value=\"Get quotes\"></span></span><input type=hidden
+        name=\"ei\" value=\"GP78WaiTEYSOmAHGrZT4CQ\"></form></div></div><div class=\"g-unit
+        fjfe-promo\"><div id=\"ad2-target\" class=\"id-ad2-target\"></div></div></div><div
+        class=elastic><div id=app class=\"g-section g-tpl-left-11p4em\"><div class=\"g-unit
+        g-first\"><div id=gf-nav><div class=fjfe&#45;nav&#45;nav><ul class=fjfe&#45;nav
+        id=navmenu><li class=fjfe&#45;nav&#45;item><a href=\"/finance?ei=GP78WaiTEYSOmAHGrZT4CQ\"><div>Markets</div></a><li
+        class=fjfe&#45;nav&#45;item><a href=\"/finance/market_news?ei=GP78WaiTEYSOmAHGrZT4CQ\"><div>News</div></a><li
+        class=fjfe&#45;nav&#45;item><a href=\"/finance/portfolio?action=view&amp;ei=GP78WaiTEYSOmAHGrZT4CQ\"><div>Portfolios</div></a><li
+        class=fjfe&#45;nav&#45;item><a href=\"/finance/stockscreener?ei=GP78WaiTEYSOmAHGrZT4CQ\"><div>Stock
+        screener</div></a><li class=fjfe&#45;nav&#45;item><a href=\"/finance/domestic_trends?ei=GP78WaiTEYSOmAHGrZT4CQ\"><div>Google
+        Domestic Trends</div></a></ul></div><div class=\"fjfe-recentquotes fjfe-recentquotes-noquote\"><h4>Recent
+        Quotes <span class=\"fjfe-recentquotes-duration\">(<a href=\"//www.google.com/history/optout?hl=en\">30
+        days</a>)</span></h4><div class=fjfe&#45;recentquotes&#45;noquote&#45;notification>You
+        have no recent quotes</div><div class=fjfe&#45;recentquotes&#45;quotes><div
+        class=\"fjfe-toggle fjfe-toggle-button\"><span class=fjfe&#45;chg&#45;toggle>chg</span>
+        | <span class=fjfe&#45;perc&#45;toggle>%</span></div><div class=fjfe&#45;table&#45;div><table
+        class=fjfe&#45;recentquotes&#45;table id=rq width=100%></table></div></div></div></div><script>var
+        _cleardot = 'data:image\\/gif;base64,R0lGODlhAQABAIAAAP\\/\\/\\/\\/\\/\\/\\/yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw\\x3d\\x3d';\n
+        \   var google = google || {};\n    google.finance = google.finance || {};\n
+        \   google.finance.gce = false ;</script><script src=\"/finance/f/sfe-opt-4109386599.js\"></script><script>\n
+        \     _regOnLoad = function(f) {\n        if (document.readyState == 'complete')
+        {\n          f && f();\n        } else {\n          // Window.attachEvent()
+        for IE8 and below compatability.\n          var addEventFunction = window.attachEvent
+        ||\n              window.addEventListener || function(ignored, f) { f(); };\n
+        \         var event = window.attachEvent ? 'onload' : 'load';\n          f
+        && addEventFunction(event, f);\n        }\n      };\n    \n      google.finance.renderRecentQuotes
+        = function() {};\n    </script></div><div class=g&#45;unit id=gf-viewc><div
+        class=fjfe&#45;content>\n<div class=\"g-section sfe-break-bottom-8\">\n<div
+        class=\"hdg top\">\n<div id=\"results-header\" class=\"g-section g-tpl-33-67
+        g-split\">\n<div class=\"g-unit g-first\">\n<h3>Finance</h3>\n</div>\n<div
+        class=\"g-unit\">\n</div>\n</div>\n</div>\n</div>\n<div style=\"margin-top:1em;margin-bottom:2em;font-size:larger\">\nYour
+        search - <b>INVALID</b> - produced no matches.\n<br><br>\nSuggestions:\n<ul>\n<li>Make
+        sure all words are spelled correctly.\n<li>Try different keywords.\n</ul>\n</div>\n</div></div></div></div></div><div
+        id=gf-foot><div id=fjfe&#45;edition&#45;links class=fjfe&#45;footer&#45;links>Google
+        Finance Beta available in: <a href=\"http://www.google.com.hk/finance?ei=GP78WaiTEYSOmAHGrZT4CQ\"
+        class=\"fjfe-edition-link\">Hong Kong</a> - <a href=\"http://www.google.ca/finance?ei=GP78WaiTEYSOmAHGrZT4CQ\"
+        class=\"fjfe-edition-link\">Canada</a> - <a href=\"http://www.google.com/finance?ei=GP78WaiTEYSOmAHGrZT4CQ\"
+        class=\"fjfe-edition-link\">U.S.</a> - <a href=\"http://www.google.com.hk/finance?hl=zh-CN&ei=GP78WaiTEYSOmAHGrZT4CQ\"
+        class=\"fjfe-edition-link\">China</a> - <a href=\"http://www.google.co.uk/finance?ei=GP78WaiTEYSOmAHGrZT4CQ\"
+        class=\"fjfe-edition-link\">U.K.</a></div><p class=fjfe&#45;footer&#45;disclaimer>Information
+        is provided \"as is\" and solely for informational purposes, not for trading
+        purposes or advice, and may be delayed.<br>To see all exchange delays, please
+        <a href=\"http://www.google.com/intl/en/googlefinance/disclaimer/?ei=GP78WaiTEYSOmAHGrZT4CQ\"
+        class=\"fjfe-secondary-link fjfe-no-sticky-params\"> see disclaimer</a>.</p><div
+        class=fjfe&#45;footer&#45;links>&copy;2017 Google - <a href=\"http://www.google.com?hl=en&ei=GP78WaiTEYSOmAHGrZT4CQ\">Google
+        Home</a> - <a href=\"http://googlefinanceblog.blogspot.com?ei=GP78WaiTEYSOmAHGrZT4CQ\">Blog</a>
+        - <a href=\"http://support.google.com/finance?hl=en&ei=GP78WaiTEYSOmAHGrZT4CQ\">Help</a>
+        - <a href=\"http://support.google.com/finance?ctx=report&hl=en&ei=GP78WaiTEYSOmAHGrZT4CQ\">Report
+        a Problem</a> - <a href=\"http://www.google.com/intl/en/policies/privacy/?ei=GP78WaiTEYSOmAHGrZT4CQ\">Privacy
+        Policy</a> - <a href=\"http://www.google.com/intl/en/policies/terms/?ei=GP78WaiTEYSOmAHGrZT4CQ\">Terms
+        of Service</a></div></div>\n<script>\nvar _chartConfigObject;\nvar _cleardot;\nvar
+        _companyName;\nvar _eventid = 'GP78WaiTEYSOmAHGrZT4CQ';\nvar _expid;\nvar
+        _external_target;\nvar _localDomain = 'www.google.com';\nvar _minZoomDays;\nvar
+        _minZoomDaysNoIntraDay;\nvar _prefs;\nvar _ticker;\nvar _urlSuffix;\nvar google
+        = google || {};\ngoogle.finance = google.finance || {};\ngoogle.finance.data
+        = {\"common\":{\"rq\":{\"ct\":\"\"},\"up\":\"chg\",\"down\":\"chr\",\"linktargetInternal\":\"\",\"hash\":\"\"},\"stickyUrlArgs\":\"\\u0026ei=GP78WaiTEYSOmAHGrZT4CQ\"};\ngoogle.finance.data.numberFormat
+        = [{'threshold':1000000, 'symbol':'M'}, {'threshold':1000000000,'symbol':'B'},
+        {'threshold':1000000000000,'symbol':'T'}] ;\n_setStickyUrlParams(\"ei=GP78WaiTEYSOmAHGrZT4CQ\");\nif
+        (_s_Store) {\n_s_Store._allowMatchAdvancedSearch = true;\nvar _fieldToDisplayNameMap
+        = {GrossMargin:\"Gross margin&nbsp;(%)\",Return1Week:\"1w return\",Return156Week:\"156w
+        return\",NextYearEPS:\"Next year EPS\",EarningsAfterTaxes:\"Earnings after
+        taxes\",RevenueGrowthRate5Years:\"5y revenue growth rate\",LTDebtToAssetsYear:\"LT
+        debt/assets (Recent&nbsp;yr)&nbsp;(%)\",DividendPerShare:\"Div per share\",MarketCap:\"Market
+        cap\",NetProfitMarginPercent:\"Net profit margin&nbsp;(%)\",Float:\"Float\",EarningsBeforeTaxes:\"Earnings
+        before taxes\",QuotePercChange:\"Quote change&nbsp;(%)\",TotalDebtToEquityYear:\"Total
+        debt/equity (Recent&nbsp;yr)&nbsp;(%)\",TotalDebtToCapitalQuarter:\"Total
+        debt/capital (Recent&nbsp;qtr)&nbsp;(%)\",LTDebtToCapitalQuarter:\"LT debt/capital
+        (Recent&nbsp;qtr)&nbsp;(%)\",EPSGrowthRate10Years:\"10y EPS growth rate\",Beta:\"Beta\",CapitalGain:\"Capital
+        gain\",ReturnOnAssetsPTM:\"Return on assets (PTM)&nbsp;(%)\",BetaDown:\"Beta
+        down from RAS\",IncomeDividend:\"Income dividend\",RevenueGrowthRate10Years:\"10y
+        revenue growth rate\",MarketCapShareBasis:\"Market cap share basis\",Return4Week:\"4w
+        return\",IAD:\"Div rate indicated annual\",Price150DayAverage:\"150d avg price\",EPSGrowthRate5Years:\"5y
+        EPS growth rate\",ReturnOnAssetsTTM:\"Return on assets (TTM)&nbsp;(%)\",TotalDebtToAssetsYear:\"Total
+        debt/assets (Recent&nbsp;yr)&nbsp;(%)\",Volume:\"Volume\",CurrentRatioYear:\"Current
+        ratio\",DividendRecentQuarter:\"Div recent quarter\",Low52Week:\"52w low\",ExpenseRatio:\"Expense
+        ratio\",Price1DayPercChange:\"1d&nbsp;price change&nbsp;(%)\",Price13WeekPercChange:\"13w&nbsp;price
+        change&nbsp;(%)\",ReturnOnEquity5Years:\"Return on equity (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",TotalDebtToCapitalYear:\"Total
+        debt/capital (Recent&nbsp;yr)&nbsp;(%)\",TotalDebtToAssetsQuarter:\"Total
+        debt/assets (Recent&nbsp;qtr)&nbsp;(%)\",NavChange:\"Nav change\",OperatingMargin:\"Operating
+        margin&nbsp;(%)\",DPSRecentYear:\"Div per share (Recent&nbsp;yr)\",ANI:\"Earnings
+        after taxes (Recent&nbsp;yr)\",High52Week:\"52w high\",AverageVolume:\"Average
+        volume\",Return13Week:\"13w return\",PriceToCashFlowPerShare:\"Price to cash
+        flow per share\",Price26WeekPercChange:\"26w&nbsp;price change&nbsp;(%)\",QuoteChange:\"Quote
+        change\",ATAXRATE:\"Tax rate (Recent&nbsp;yr)\",NetIncomeChangePerc:\"Net
+        income change&nbsp;(%)\",ReturnOnInvestment5Years:\"Return on investment (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",PE:\"P/E
+        ratio\",ReturnOnInvestmentYear:\"Return on investment (Recent&nbsp;yr)&nbsp;(%)\",Price200DayAverage:\"200d
+        avg price\",DividendNextQuarter:\"Div next quarter\",PriceYTDPercChange:\"YTD&nbsp;price
+        change&nbsp;(%)\",EBITD:\"EBITDA\",ReturnOnInvestmentTTM:\"Return on investment
+        (TTM)&nbsp;(%)\",NavChangePercent:\"Nav change&nbsp;(%)\",EBITDMargin:\"EBITDA
+        margin&nbsp;(%)\",LTDebtToEquityQuarter:\"LT debt/equity (Recent&nbsp;qtr)&nbsp;(%)\",BetaRAS:\"Beta
+        from RAS\",PriceSales:\"Price to sales\",NetAssets:\"Net assets\",ReturnOnEquityTTM:\"Return
+        on equity (TTM)&nbsp;(%)\",CashPerShareYear:\"Cash/share\",ReturnDay:\"1d
+        return\",ReturnOnAssets5Years:\"Return on assets (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",Return52Week:\"52w
+        return\",ForwardPE1Year:\"1y fwd P/E\",NetIncomeGrowthRate5Years:\"5y net
+        income growth rate\",DividendYield:\"Div yield&nbsp;(%)\",Dividend:\"Div from
+        cash flow\",BetaUp:\"Beta up from RAS\",nprice:\"Price from RAS\",LTDebtToCapitalYear:\"LT
+        debt/capital (Recent&nbsp;yr)&nbsp;(%)\",Return260Week:\"260w return\",ReturnOnEquityQuarter:\"Return
+        on equity (Recent&nbsp;qtr)&nbsp;(%)\",ACOGS:\"Cost of goods sold\",LTDebtToAssetsQuarter:\"LT
+        debt/assets (Recent&nbsp;qtr)&nbsp;(%)\",PriceToBook:\"Price to book\",LTDebtToEquityYear:\"LT
+        debt/equity (Recent&nbsp;yr)&nbsp;(%)\",ReturnYTD:\"Return YTD\",ReturnOnEquityYear:\"Return
+        on equity (Recent&nbsp;yr)&nbsp;(%)\",ReturnOnAssetsQuarter:\"Return on assets
+        (Recent&nbsp;qtr)&nbsp;(%)\",TotalDebtToEquityQuarter:\"Total debt/equity
+        (Recent&nbsp;qtr)&nbsp;(%)\",NavPrior:\"Nav prior\",AINTCOV:\"Interest coverage\",EPS:\"EPS\",ReturnOnInvestmentQuarter:\"Return
+        on investment (Recent&nbsp;qtr)&nbsp;(%)\",QuoteLast:\"Last price\",Price50DayAverage:\"50d
+        avg price\",Price4WeekPercChange:\"4w&nbsp;price change&nbsp;(%)\",ReturnOnAssetsYear:\"Return
+        on assets (Recent&nbsp;yr)&nbsp;(%)\",MarketCapRAS:\"Mkt cap from RAS\",Price52WeekPercChange:\"52w&nbsp;price
+        change&nbsp;(%)\",InstitutionalPercentHeld:\"Institutional percent held\",ShortInterestRatioPercent:\"Short
+        interest ratio&nbsp;(%)\",BookValuePerShareYear:\"Book value/share\",ReturnOnEquityPTM:\"Return
+        on equity (PTM)&nbsp;(%)\"};\n_s_Store._asStore._addStrings(_fieldToDisplayNameMap);\n}\nif
+        (_s_Store) {\n_s_Store._allowMultipleInBox = true;\n}\n_regOnLoad();\n</script></div></div><script>var
+        googlefinance = {i: [\"f.b.id\",\"\",null,0,\"\",0,null,[\"f.b.cf\",\"Upzqnh5ra8Q.en_US.\",0],[],1,[],\"GP78WaiTEYSOmAHGrZT4CQ\",\"www.google.com\",\"3moQzO2p48EWG5V46FlW-aYqyqU:1509752344397\",1]};
+        GF_domReady = 1;</script></body></html>"
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 23:38:55 GMT
+recorded_with: VCR 3.0.3

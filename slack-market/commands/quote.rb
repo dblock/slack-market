@@ -9,6 +9,7 @@ module SlackMarket
         \b[[[:upper:]]]{1,}\$
       /x) do |client, data, stocks|
         stocks = Market.qualify(stocks, client.owner.dollars?)
+        next unless stocks.any?
         quotes = Market.quotes(stocks)
         next unless quotes.any?
 

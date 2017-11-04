@@ -48,8 +48,8 @@ describe SlackMarket::Commands::Positions do
         context 'msft and yahoo', vcr: { cassette_name: 'msft_yahoo' } do
           it 'mixed' do
             Fabricate(:position, user: user, name: 'Microsoft Corporation', symbol: 'MSFT', purchased_price_cents: 28_45)
-            Fabricate(:position, user: user, name: 'Yahoo!', symbol: 'YHOO', purchased_price_cents: 38_45)
-            expect(message: "#{SlackRubyBot.config.user} positions").to respond_with_slack_message('*MSFT* +43.28% :green_book:, *YHOO* -37.47% :closed_book:')
+            Fabricate(:position, user: user, name: 'Yahoo!', symbol: 'AABA', purchased_price_cents: 138_46)
+            expect(message: "#{SlackRubyBot.config.user} positions").to respond_with_slack_message('*MSFT* +66.19% :green_book:, *AABA* -97.15% :closed_book:')
           end
         end
       end

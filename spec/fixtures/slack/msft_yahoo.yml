@@ -2,7 +2,101 @@
 http_interactions:
 - request:
     method: get
-    uri: https://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=MSFT%20YHOO
+    uri: https://google.com/finance?q=MSFT%3BYHOO
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Location:
+      - https://www.google.com/finance?q=MSFT;YHOO
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      Date:
+      - Fri, 03 Nov 2017 23:45:59 GMT
+      Expires:
+      - Sun, 03 Dec 2017 23:45:59 GMT
+      Cache-Control:
+      - public, max-age=2592000
+      Server:
+      - sffe
+      Content-Length:
+      - '239'
+      X-Xss-Protection:
+      - 1; mode=block
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="41,39,38,37,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>301
+        Moved</TITLE></HEAD><BODY>\n<H1>301 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://www.google.com/finance?q=MSFT;YHOO\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 23:45:50 GMT
+- request:
+    method: get
+    uri: https://www.google.com/finance?q=MSFT%3BYHOO
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Location:
+      - https://finance.google.com/finance?q=MSFT;YHOO
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=UTF-8
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      Date:
+      - Fri, 03 Nov 2017 23:45:59 GMT
+      Server:
+      - gws
+      Content-Length:
+      - '243'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - 1P_JAR=2017-11-03-23; expires=Sun, 03-Dec-2017 23:45:59 GMT; path=/; domain=.google.com
+      - NID=116=NBVByLaUO4PpqukKUHlomgvj-1YcbmwLqxZ8QL0s-cxkMw8tcD1984b5Ey6jpQKGlVYUgaRR5d4kx9ezKldPTfr590hxEuSmldNYZt3qG7W2l4UoXYYAw3gxTAR0agqV;
+        expires=Sat, 05-May-2018 23:45:59 GMT; path=/; domain=.google.com; HttpOnly
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="41,39,38,37,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://finance.google.com/finance?q=MSFT;YHOO\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 23:45:50 GMT
+- request:
+    method: get
+    uri: https://finance.google.com/finance?q=MSFT%3BYHOO
     body:
       encoding: US-ASCII
       string: ''
@@ -18,36 +112,814 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Fri, 05 Feb 2016 22:44:54 GMT
-      P3p:
-      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
-        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
-        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
-      Cache-Control:
-      - private, no-cache, no-store
-      Content-Length:
-      - '120'
       Content-Type:
-      - application/octet-stream
-      Vary:
-      - X-Media-YTS-Echo-Mode
-      Age:
-      - '0'
-      Via:
-      - http/1.1 media-router-api9.prod.media.bf1.yahoo.com (ApacheTrafficServer [cMsSf
-        ]), http/1.1 r11.ycpi.nyc.yahoo.net (ApacheTrafficServer [cMsSf ])
+      - text/html; charset=utf-8
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      Date:
+      - Fri, 03 Nov 2017 23:45:59 GMT
+      Expires:
+      - Fri, 03 Nov 2017 23:45:59 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
       Server:
-      - ATS
-      Connection:
-      - keep-alive
-      Y-Trace:
-      - BAEAQAAAAADeGpaNbazpmAAAAAAAAAAABsVr_IX6x6QAAAAAAAAAAAAFKw2Zkr0MAAUrDZmS9w2GUmoIAAAAAA--
+      - GSE
+      Set-Cookie:
+      - NID=116=mnY7ys92BqY93mAZXsJNqfzomePBQV9_Z5EpyCsSHUUAJmKPKdYNwq0MowoTtcOeUbPGhHtFtvbqrx2_fvlctaniEBnOsQHPAffVzdNJctGwWfqGOgfNACYdHt4YeELU;Domain=.google.com;Path=/;Expires=Sat,
+        05-May-2018 23:45:59 GMT;HttpOnly
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: "<!DOCTYPE html><html><head><script>(function(){(function(){function
+        e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void
+        0==b)try{window.console.timeStamp(\"CSI/\"+a)}catch(h){}};this.tick(\"start\",null,a)}var
+        a;if(window.performance)var d=(a=window.performance.timing)&&a.responseStart;var
+        f=0<d?new e(d):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var
+        b=window.jstiming.load;0<c&&d>=c&&(b.tick(\"_wtsrt\",void 0,c),b.tick(\"wtsrt_\",\"_wtsrt\",\nd),b.tick(\"tbsd_\",\"wtsrt_\"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick(\"_tbnd\",void
+        0,window.chrome.csi().startE),b.tick(\"tbnd_\",\"_tbnd\",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick(\"_tbnd\",void
+        0,window.external.startE),b.tick(\"tbnd_\",\"_tbnd\",c))),a&&(window.jstiming.pt=a)}catch(g){}})();}).call(this);\n</script><title>Company
+        Comparison - Google Finance</title><meta name=\"Description\" content=\"Compare
+        the latest stock quotes, news and financial metrics forMicrosoft Corporation,
+        Altaba Inc.\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=10\"><link
+        rel=\"canonical\" href=\"https://www.google.com/finance?q=MSFT;YHOO\"><link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/finance/f/finance_us-895351966.css\"><link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/_/scs/finance-static/_/ss/k=finance.a.1msu4mph4xh6k.L.X.O/d=0/rs=AGHGApGCzFIkl8UdpAPaXE1FXjt-bEHR6w\"><link
+        rel=\"icon\" type=\"image/vnd.microsoft.icon\" href=\"/finance/favicon.ico\"><style>#gbar,#guser{font-size:13px;padding-right:8px;padding-top:4px
+        !important;}#gbar{padding-left:8px;height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px
+        solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media
+        all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline
+        !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf
+        .gb4{color:#900 !important}\n</style><script></script><script async=\"\" defer=\"\"
+        src=\"//www.google.com/insights/consumersurveys/async_survey?site=xusttduenzseze54mcajwbd6sq\"></script><!--
+        Start GPT Async Tag --><script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script><script>\n
+        \   var gptadslots = [];\n    var googletag = googletag || {cmd:[]};\n  </script><script>\n
+        \ googletag.cmd.push(function() {\n    //Adslot 1 declaration\n    gptadslots.push(googletag.defineSlot('/60656358/com.gf.company',
+        [[300,250]], 'div-gpt-ad-4209476-1')\n                             .setForceSafeFrame(true)\n
+        \                            .addService(googletag.pubads()));\n    //Adslot
+        2 declaration\n    gptadslots.push(googletag.defineSlot('/60656358/com.gf.home',
+        [[300,250]], 'div-gpt-ad-4209476-2')\n                             .setForceSafeFrame(true)\n
+        \                            .addService(googletag.pubads()));\n    //Adslot
+        3 declaration\n    gptadslots.push(googletag.defineSlot('/60656358/com.gf.portfolio',
+        [[300,250]], 'div-gpt-ad-4209476-3')\n                             .setForceSafeFrame(true)\n
+        \                            .addService(googletag.pubads()));\n\n    googletag.pubads().enableSingleRequest();\n
+        \   googletag.enableServices();\n  });\n  </script><!-- End GPT Async Tag
+        --><script>\n      function _rpt() {}\n      function _tck() {}\n    </script><script>\n
+        \   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n
+        \   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n
+        \   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n
+        \   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\n
+        \   ga('create', 'UA-40765809-1', {\n      'allowLinker': true,\n      'cookiePath':
+        '/finance'\n    });\n    ga('send', 'pageview');\n    </script></head><body><div
+        class=fjfe&#45;bodywrapper><div id=fjfe&#45;real&#45;body class=g-doc><input
+        type=\"text\" name=\"hist_state\" id=\"hist_state\" style=\"display:none;\"><iframe
+        id=\"hist_frame\" name=\"hist_frame\" class=invfr tabindex=\"-1\"></iframe><iframe
+        src=\"/_/scs/finance-static/_/js/k=finance.a.en_US.Upzqnh5ra8Q.O/m=b/rt=h/d=0/rs=AGHGApEK7U1PJ67cp--3Ay1lYGnaQQb8fg\"
+        class=invfr tabindex=\"-1\"></iframe><div id=gbar><nobr><a class=gb1 href=\"https://www.google.com/webhp?tab=ew\">Search</a>
+        <a class=gb1 href=\"http://www.google.com/imghp?hl=en&tab=ei\">Images</a>
+        <a class=gb1 href=\"https://maps.google.com/maps?hl=en&tab=el\">Maps</a> <a
+        class=gb1 href=\"https://play.google.com/?hl=en&tab=e8\">Play</a> <a class=gb1
+        href=\"https://www.youtube.com/?gl=US&tab=e1\">YouTube</a> <a class=gb1 href=\"https://news.google.com/nwshp?hl=en&tab=en\">News</a>
+        <a class=gb1 href=\"https://mail.google.com/mail/?tab=em\">Gmail</a> <a class=gb1
+        href=\"https://drive.google.com/?tab=eo\">Drive</a> <a class=gb1 style=\"text-decoration:none\"
+        href=\"https://www.google.com/intl/en/options/\"><u>More</u> &raquo;</a></nobr></div><div
+        id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span
+        id=gbe></span><a  href=\"http://www.google.com/support/finance?hl=en\" class=gb4>Help</a>
+        | <a target=_top id=gb_70 href=\"https://accounts.google.com/ServiceLogin?service=finance&passive=1209600&continue=https://finance.google.com/finance?q%3DMSFT;YHOO&followup=https://finance.google.com/finance?q%3DMSFT;YHOO\"
+        class=gb4>Sign in</a></nobr></div><div class=gbh style=left:0></div><div class=gbh
+        style=right:0></div><div id=flash&#45;disclaimer style=\"display:none;\">Adobe
+        Flash Player is required for interactive charts.&nbsp;<a href=\"http://www.adobe.com/go/getflashplayer/\">Allow</a></div><div
+        id=fjfe&#45;click&#45;wrapper><script>\n(function() {\n  var l = window.location;\n
+        \ var q = l.search ? l.search.substr(1) : '';\n  var h = l.hash ? l.hash.substr(1)
+        : '';\n  var p = '/finance';\n  var ss = 'stockscreener';\n  var conn = window.history
+        && window.history.pushState ? '/' : '#';\n  if (l.pathname == p + '/' + ss)
+        {\n    if (h) l.href = p + conn + ss + '?' + q + '&' + h;\n  } else if (l.pathname
+        != p && h) {\n    l.href = p + l.hash;\n  }\n  if (h) {\ndocument.getElementById('fjfe-click-wrapper').style.display
+        = 'none';\n  }\n})();\n</script><div id=gf-head class=\"g-section g-tpl-75-25
+        g-split\"><div class=\"g-unit g-first\"><div class=fjfe&#45;logo><a href=\"/finance/?ei=t__8WanaI4PFea3xgIgD\"><img
+        src=\"/finance/f/logo_material-4224265490.png\" alt=\"Google Finance\"></a></div><div
+        id=gf-search class=fjfe&#45;search><form method=\"get\" action=\"/finance\"
+        autocomplete=\"off\"><input class=fjfe&#45;searchbox&#45;input name=q type=text
+        tabindex=1 value=\"MSFT;YHOO\"><span class=fjfe&#45;searchbox&#45;button&#45;wrapper><span
+        class=fjfe&#45;searchbox&#45;button&#45;wrapper2><input class=fjfe&#45;searchbox&#45;button
+        type=submit tabindex=2 value=\"Get quotes\"></span></span><input type=hidden
+        name=\"ei\" value=\"t__8WanaI4PFea3xgIgD\"></form></div></div><div class=\"g-unit
+        fjfe-promo\"><div id=\"ad2-target\" class=\"id-ad2-target\"></div></div></div><div
+        class=elastic><div id=app class=\"g-section g-tpl-left-11p4em\"><div class=\"g-unit
+        g-first\"><div id=gf-nav><div class=fjfe&#45;nav&#45;nav><ul class=fjfe&#45;nav
+        id=navmenu><li class=fjfe&#45;nav&#45;item><a href=\"/finance?ei=t__8WanaI4PFea3xgIgD\"><div>Markets</div></a><li
+        class=fjfe&#45;nav&#45;item><a href=\"/finance/market_news?ei=t__8WanaI4PFea3xgIgD\"><div>News</div></a><li
+        class=fjfe&#45;nav&#45;item><a href=\"/finance/portfolio?action=view&amp;ei=t__8WanaI4PFea3xgIgD\"><div>Portfolios</div></a><li
+        class=fjfe&#45;nav&#45;item><a href=\"/finance/stockscreener?ei=t__8WanaI4PFea3xgIgD\"><div>Stock
+        screener</div></a><li class=fjfe&#45;nav&#45;item><a href=\"/finance/domestic_trends?ei=t__8WanaI4PFea3xgIgD\"><div>Google
+        Domestic Trends</div></a></ul></div><div class=\"fjfe-recentquotes fjfe-recentquotes-noquote\"><h4>Recent
+        Quotes <span class=\"fjfe-recentquotes-duration\">(<a href=\"//www.google.com/history/optout?hl=en\">30
+        days</a>)</span></h4><div class=fjfe&#45;recentquotes&#45;noquote&#45;notification>You
+        have no recent quotes</div><div class=fjfe&#45;recentquotes&#45;quotes><div
+        class=\"fjfe-toggle fjfe-toggle-button\"><span class=fjfe&#45;chg&#45;toggle>chg</span>
+        | <span class=fjfe&#45;perc&#45;toggle>%</span></div><div class=fjfe&#45;table&#45;div><table
+        class=fjfe&#45;recentquotes&#45;table id=rq width=100%></table></div></div></div></div><script>var
+        _cleardot = 'data:image\\/gif;base64,R0lGODlhAQABAIAAAP\\/\\/\\/\\/\\/\\/\\/yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw\\x3d\\x3d';\n
+        \   var google = google || {};\n    google.finance = google.finance || {};\n
+        \   google.finance.gce = false ;</script><script src=\"/finance/f/sfe-opt-4109386599.js\"></script><script>\n
+        \     _regOnLoad = function(f) {\n        if (document.readyState == 'complete')
+        {\n          f && f();\n        } else {\n          // Window.attachEvent()
+        for IE8 and below compatability.\n          var addEventFunction = window.attachEvent
+        ||\n              window.addEventListener || function(ignored, f) { f(); };\n
+        \         var event = window.attachEvent ? 'onload' : 'load';\n          f
+        && addEventFunction(event, f);\n        }\n      };\n    \n      google.finance.renderRecentQuotes
+        = function() {};\n    </script></div><div class=g&#45;unit id=gf-viewc><div
+        class=fjfe&#45;content>\n<div class=g-wrap>\n<div class=\"g-section sfe-break-bottom-8\">\n<div
+        id=\"comparisonheader\" class=\"g-tpl-67-33 g-split hdg top appbar-hide\">\n<div
+        class=\"g-unit g-first\">\n<h3 class=pagetitle>Compare companies\n</h3>&nbsp;&nbsp;\n<a
+        href=\"/finance/portfolio?action=add&amp;addticker=NASDAQ%3AMSFT%2CNASDAQ%3AAABA&ei=t__8WanaI4PFea3xgIgD\"
+        class=norm>Watch these stocks</a>\n</div>\n<div class=\"g-unit norm\">Find
+        more results for<b>\n<a href=\"?noIL=1&q=MSFT%3BYHOO&ei=t__8WanaI4PFea3xgIgD\"
+        id=searchmore>MSFT;YHOO</a></b>\n</div>\n</div>\n<div id=compare-bar-wrapper\n
+        \            class=\"id-compare-bar-wrapper cc-compare-bar\">\n<div id=compare-bar
+        class=\"id-compare-bar g-section\"></div>\n</div>\n<div class=\"g-section
+        g-tpl-right-1 sfe-break-top-5\">\n<div class=\"g-unit g-first\">\n<div class=g-c>\n<div>\n<div
+        id=newstabsgroup>\n<div class=\"g-section g-tpl-25-75 g-split hdg\">\n<div
+        class=\"g-unit g-first\">\n<h3>News</h3>\n</div>\n<div class=g-unit>\n<div
+        id=news-panel-tabs class=\"id-news-tabs\" style=\"display:none;\">\n<div class=\"goog-tab
+        goog-tab-selected\">\n<a id=news_tab_title class=t>\n<b class=t><b class=t>Relevance</b></b></a>\n</div>\n<div
+        class=goog-tab>\n<a id=news_by_date_tab_title class=t>\n<b class=t><b class=t>Date</b></b></a>\n</div>\n</div>\n</div>\n</div>\n<div
+        id=tabs-clear class=\"id-tabs-clear goog-tab-bar-clear hide\"></div>\n<div
+        id=news_div_cont class=id-news_div_cont style=\"display:none;\"></div>\n<div
+        id=news_by_date_div_cont class=id-news_by_date_div_cont style=\"display:none;\"></div>\n</div>\n</div>\n</div>\n</div>\n<div
+        class=g-unit>\n<div id=top-section class=\"g-c sfe-break-right\">\n<div id=chart-section>\n<div
+        id=chart_anchor class=id-chart_anchor></div>\n<div class=id-chart-footer>\n<div
+        class=\"g-section g-tpl-67-33 g-split sfe-break-bottom-8 overflow-floatfix\">\n<div
+        class=\"g-unit g-first\"><div class=\"id-chart-footer-links hide\">\n<span
+        style=\"white-space:nowrap;\">\n<img width=\"16\" hight=\"9\" alt=\"Link to
+        chart icon.\"\n            class=\"linktochart-img SP_link\"\n            src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"
+        />\n<span class=linktochart-link>\nLink to this view</span>\n</span>\n</div></div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div
+        class=\"g-section\">\n<div class=\"hdg\">\n<div class=\"g-section g-tpl-50-50
+        g-split gf-control\">\n<div class=\"g-unit g-first\">\nShow:\n<select id=related-select
+        class=id-related-select>\n<option value=mrq >\nMost Recent Quarter\n</option>\n<option
+        value=mra selected>\nMost Recent Annual\n</option>\n</select>\n</div>\n<div
+        class=g-unit>\n<span class=\"id-related-edit-col linkbtn\">Add or remove columns</span>\n<button
+        class=id-related-save style=\"display:none\">Save changes</button>\n<button
+        class=id-related-cancel style=\"display:none\">Cancel</button>\n</div>\n</div>\n</div>\n<div
+        class=\"id-related-table gf-table-scroll-x jfk-scrollbar\"\n       style=\"padding-bottom:15px;\">\n</div>\n</div>\n</div>\n</div></div></div></div></div><div
+        id=gf-foot><div id=fjfe&#45;edition&#45;links class=fjfe&#45;footer&#45;links>Google
+        Finance Beta available in: <a href=\"http://www.google.com.hk/finance?ei=t__8WanaI4PFea3xgIgD\"
+        class=\"fjfe-edition-link\">Hong Kong</a> - <a href=\"http://www.google.ca/finance?ei=t__8WanaI4PFea3xgIgD\"
+        class=\"fjfe-edition-link\">Canada</a> - <a href=\"http://www.google.com/finance?ei=t__8WanaI4PFea3xgIgD\"
+        class=\"fjfe-edition-link\">U.S.</a> - <a href=\"http://www.google.com.hk/finance?hl=zh-CN&ei=t__8WanaI4PFea3xgIgD\"
+        class=\"fjfe-edition-link\">China</a> - <a href=\"http://www.google.co.uk/finance?ei=t__8WanaI4PFea3xgIgD\"
+        class=\"fjfe-edition-link\">U.K.</a></div><p class=fjfe&#45;footer&#45;disclaimer>Information
+        is provided \"as is\" and solely for informational purposes, not for trading
+        purposes or advice, and may be delayed.<br>To see all exchange delays, please
+        <a href=\"http://www.google.com/intl/en/googlefinance/disclaimer/?ei=t__8WanaI4PFea3xgIgD\"
+        class=\"fjfe-secondary-link fjfe-no-sticky-params\"> see disclaimer</a>.</p><div
+        class=fjfe&#45;footer&#45;links>&copy;2017 Google - <a href=\"http://www.google.com?hl=en&ei=t__8WanaI4PFea3xgIgD\">Google
+        Home</a> - <a href=\"http://googlefinanceblog.blogspot.com?ei=t__8WanaI4PFea3xgIgD\">Blog</a>
+        - <a href=\"http://support.google.com/finance?hl=en&ei=t__8WanaI4PFea3xgIgD\">Help</a>
+        - <a href=\"http://support.google.com/finance?ctx=report&hl=en&ei=t__8WanaI4PFea3xgIgD\">Report
+        a Problem</a> - <a href=\"http://www.google.com/intl/en/policies/privacy/?ei=t__8WanaI4PFea3xgIgD\">Privacy
+        Policy</a> - <a href=\"http://www.google.com/intl/en/policies/terms/?ei=t__8WanaI4PFea3xgIgD\">Terms
+        of Service</a></div></div>\n<script>\nvar _ticker = 'NASDAQ:MSFT';\nsetCompanyId(358464);\nvar
+        _slHeight = 302;\nvar _external_target = \"\";\nvar _prefs=_prefs||{};_prefs.hash=\"\";\n_prefs.cc_compare=_prefs.cc_compare||{};\n_s_Store._numToDisplay
+        = 4;\n_comparison_charts_Store._numToDisplay = 7;\nfunction initComparisonPage()
+        {\n_chartConfigObject = {};\n_minZoomDays = 1;\n_chartConfigObject.hasNews
+        = true;\n_chartConfigObject.displayName = 'MSFT';\n_chartConfigObject.minZoomDaysNormal
+        = _minZoomDays;\n_chartConfigObject.volume = false;\n_chartConfigObject.defaultZoomDays
+        = 3;\n_chartConfigObject.hasExtendedHours = 'false';\n_chartConfigObject.enableIndicator
+        = true;\n_chartConfigObject.displayNewsPins = 'true';\n_chartConfigObject.inComparisonPage
+        = true;\n_chartConfigObject.enableChartTypeButtons = false;\nvar separator
+        = '';\n_chartConfigObject.compareTo = '';\n_chartConfigObject.compareToDisplayName
+        = '';\n_chartConfigObject.compareToDiffMarketSessions = '';\nvar relatedTickers
+        = [];\nrelatedTickers.push({\nid: '358464',\nticker: 'NASDAQ:MSFT',\nname:
+        'MSFT',\ntimezone_offset: -18000,\ndifferent_market_session: false,\nchecked:
+        true\n});\n_chartConfigObject.compareTo += separator + 'NASDAQ:MSFT';\n_chartConfigObject.compareToDisplayName
+        += separator + 'MSFT';\n_chartConfigObject.compareToDiffMarketSessions +=
+        separator + '0';\nseparator = ';'\nrelatedTickers.push({\nid: '658890',\nticker:
+        'NASDAQ:AABA',\nname: 'AABA',\ntimezone_offset: -18000,\ndifferent_market_session:
+        false,\nchecked: true\n});\n_chartConfigObject.compareTo += separator + 'NASDAQ:AABA';\n_chartConfigObject.compareToDisplayName
+        += separator + 'AABA';\n_chartConfigObject.compareToDiffMarketSessions +=
+        separator + '0';\nseparator = ';'\n_emitFlashChart(\"/finance/s/n-VxNKK74DU/chart9.swf?hl=en&gl=us\",\n_ticker,
+        _chartConfigObject,\"http:\\x2F\\x2Ffinance.google.com:80\",\"chart_anchor\",
+        false, \"MSFT\\x3BYHOO\", relatedTickers);\ngoogle.finance.onComparisonLoad();\n_initAutoFocus();\n_ac_register(function
+        (input, event) {\nif (input.id == 'add_comparison_symbol') {\n_comparison_charts_Store.baseTicker
+        = _ticker;\nreturn _comparison_charts_Store;\n}\n});\n}\nvar _chartConfigObject;\nvar
+        _cleardot;\nvar _companyName;\nvar _eventid = 't__8WanaI4PFea3xgIgD';\nvar
+        _expid;\nvar _external_target;\nvar _localDomain = 'www.google.com';\nvar
+        _minZoomDays;\nvar _minZoomDaysNoIntraDay;\nvar _prefs;\nvar _ticker;\nvar
+        _urlSuffix;\nvar google = google || {};\ngoogle.finance = google.finance ||
+        {};\ngoogle.finance.data = {\"common\":{\"rq\":{\"ct\":\"\"},\"up\":\"chg\",\"down\":\"chr\",\"linktargetInternal\":\"\",\"hash\":\"\"},\"company\":{\"news\":{\"clusters\":[{\"nrel\":4,\"idx\":0,\"id\":\"52779661091540\",\"lead_story_url\":\"https://investorplace.com/2017/11/7-tech-etfs-that-will-soar-microsoft-corporation-msft-blockbuster-earnings-beat-ggsyn/\",\"a\":[{\"t\":\"7
+        Tech ETFs That Will Soar on Microsoft Corporation (MSFT) Blockbuster ...\",\"u\":\"https://investorplace.com/2017/11/7-tech-etfs-that-will-soar-microsoft-corporation-msft-blockbuster-earnings-beat-ggsyn/\",\"s\":\"Investorplace.com\",\"sp\":\"After
+        the closing bell on Thursday, Microsoft Corporation (NASDAQ:MSFT) the world\\u0026#39;s
+        largest software maker, delighted investors with stellar fiscal first-quarter
+        2018 results on strong performance in its fast-growing cloud business.\",\"d\":\"12
+        hours ago\",\"tt\":\"1509709050\",\"usg\":\"AFQjCNF4zGHzf1E4Dnk_k_CyOexg49Mwtw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://investorplace.com/2017/11/7-tech-etfs-that-will-soar-microsoft-corporation-msft-blockbuster-earnings-beat-ggsyn/\\u0026cid=52779661091540\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNGDZTcSI92HcPjd44_HiSgPeTJHsQ\"}],\"lead_story_doc_id\":\"8163846207052040325\"},{\"nrel\":214,\"idx\":1,\"id\":\"52779652066678\",\"lead_story_url\":\"https://money.usnews.com/investing/stock-market-news/articles/2017-10-27/theres-more-upside-ahead-for-microsoft-corporation-msft\",\"a\":[{\"t\":\"There\\u0026#39;s
+        More Upside Ahead For Microsoft Corporation (MSFT)\",\"u\":\"https://money.usnews.com/investing/stock-market-news/articles/2017-10-27/theres-more-upside-ahead-for-microsoft-corporation-msft\",\"s\":\"U.S.
+        News \\u0026 World Report\",\"sp\":\"Microsoft reached its goal of $20 billion
+        in annualized cloud revenue on the quarter. (Getty Images). Microsoft Corporation
+        (Nasdaq: MSFT) was to open up 4 percent Friday from the previous day\\u0026#39;s
+        close, thanks to bullish investor sentiment and an ...\",\"d\":\"Oct 27, 2017\",\"tt\":\"1509098175\",\"usg\":\"AFQjCNHpIGR8oAGoUb48BdxrQXimGN1NJQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://money.usnews.com/investing/stock-market-news/articles/2017-10-27/theres-more-upside-ahead-for-microsoft-corporation-msft\\u0026cid=52779652066678\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNFWBAyVoG6PJjUDRb7g6epOhfoCbw\"},{\"t\":\"Microsoft
+        Corporation (MSFT) Q1 2018 Earnings Top Expectations\",\"u\":\"https://investorplace.com/2017/10/microsoft-corporation/\",\"s\":\"Investorplace.com\",\"sp\":\"The
+        tech giant kicked off its fiscal 2018 with an impressive three months, including
+        earnings of 84 cents per share on an adjusted basis.\",\"d\":\"Oct 26, 2017\",\"tt\":\"1509052950\",\"usg\":\"AFQjCNEvPrYrj4gc04nUlFi6XP_SQqr08A\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://investorplace.com/2017/10/microsoft-corporation/\\u0026cid=52779652066678\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNEzkl8_FpgxTs6YNIZa-ITpNMsoCw\"},{\"t\":\"Microsoft
+        Corporation FQ1 2018 Earnings Boosts Shares\",\"u\":\"http://www.valuewalk.com/2017/10/microsoft-corporation-fq1-2018-earnings-boosts-shares/\",\"s\":\"ValueWalk\",\"sp\":\"Microsoft
+        Corporation (NASDAQ:MSFT) FQ1 2018 earnings were released after closing bell
+        tonight, and the company posted earnings of 84 cents per share, a 17% increase
+        from last year, on $24.5 billion in sales, a 12% year-over-year increase.\",\"d\":\"Oct
+        26, 2017\",\"tt\":\"1509050250\",\"usg\":\"AFQjCNGbQFdGa82KbptAtVWXI59SUZtIJw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.valuewalk.com/2017/10/microsoft-corporation-fq1-2018-earnings-boosts-shares/\\u0026cid=52779652066678\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNHmJRp0ZiHYUOH-kWqVW9KTfNcBrg\"}],\"lead_story_doc_id\":\"13608090844847642229\"},{\"nrel\":270,\"idx\":2,\"id\":\"52779657373198\",\"lead_story_url\":\"https://investorplace.com/2017/11/microsoft-corporation-msft-stock-cloud/\",\"a\":[{\"t\":\"Microsoft
+        Corporation Stock Reinvents Itself With the Cloud\",\"u\":\"https://investorplace.com/2017/11/microsoft-corporation-msft-stock-cloud/\",\"s\":\"Investorplace.com\",\"sp\":\"Just
+        when I thought that Microsoft Corporation (NASDAQ:MSFT) might become obsolete
+        - a few years ago, anyway - it launched several new initiatives.\",\"d\":\"Nov
+        1, 2017\",\"tt\":\"1509549075\",\"usg\":\"AFQjCNE8N_HyPmp3kj2QMzDrNsFveSbX-w\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://investorplace.com/2017/11/microsoft-corporation-msft-stock-cloud/\\u0026cid=52779657373198\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNGSJhYi6SozdRhzdkSSbmcPBnpLxA\"},{\"t\":\"Microsoft:
+        Still Not Overvalued At This Price\",\"u\":\"https://seekingalpha.com/article/4119145-microsoft-still-overvalued-price\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"Moreover, indications suggest that it is quite likely we
+        will see further earnings growth ahead. I continue to remain bullish on Microsoft.\",\"d\":\"Nov
+        1, 2017\",\"tt\":\"1509560550\",\"usg\":\"AFQjCNFIgKPV0RUxM1hYHuzY6G4ycRjqsw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4119145-microsoft-still-overvalued-price\\u0026cid=52779657373198\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNGGpnlRz-8Qb3WTwoQcOF8SebOeog\"}],\"lead_story_doc_id\":\"17881844415154482415\"},{\"nrel\":57,\"idx\":3,\"id\":\"52779659820075\",\"lead_story_url\":\"https://www.investorplace.com/2017/11/msft-stock-bear-case/\",\"a\":[{\"t\":\"How
+        Microsoft Corporation Stock Earnings Destroy the Bear Case\",\"u\":\"https://www.investorplace.com/2017/11/msft-stock-bear-case/\",\"s\":\"Investorplace.com\",\"sp\":\"I
+        admit it. I was wrong. I\\u0026#39;ve spent most of the year arguing against
+        Microsoft Corporation (NASDAQ:MSFT) stock, seeing the MSFT stock price as
+        pricing in growth the company simply couldn\\u0026#39;t drive.\",\"d\":\"11
+        hours ago\",\"tt\":\"1509713100\",\"usg\":\"AFQjCNHVECIpu-Dgb5aZkJ7MImhUrgkdxg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.investorplace.com/2017/11/msft-stock-bear-case/\\u0026cid=52779659820075\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNF6rCc0foOqSoojB-N6pTLAmOA2-A\"},{\"t\":\"3
+        Takeaways From Microsoft Corporation\\u0026#39;s First-Quarter Earnings Call\",\"u\":\"https://www.fool.com/investing/2017/11/01/3-takeaways-from-microsoft-corporations-first-quar.aspx\",\"s\":\"Motley
+        Fool\",\"sp\":\"Microsoft (NASDAQ:MSFT) impressed investors last week with
+        revenue for its first fiscal quarter of 2018 coming in about $1 billion higher
+        than estimates.\",\"d\":\"Nov 2, 2017\",\"tt\":\"1509580800\",\"usg\":\"AFQjCNGprHUhMdwKHn9hwkmkFHoo7opprA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.fool.com/investing/2017/11/01/3-takeaways-from-microsoft-corporations-first-quar.aspx\\u0026cid=52779659820075\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNFyTKVlwbPr0j1k4zY57t3LDsmJOg\"}],\"lead_story_doc_id\":\"8663791017464837083\"},{\"nrel\":81,\"idx\":4,\"id\":\"52779659592248\",\"lead_story_url\":\"https://stocknewsjournal.com/2017/11/03/traders-secrets-on-twenty-first-century-fox-inc-foxa-altaba-inc-aaba/\",\"a\":[{\"t\":\"Traders
+        Secrets on Twenty-First Century Fox, Inc. (FOXA), Altaba Inc. (AABA)\",\"u\":\"https://stocknewsjournal.com/2017/11/03/traders-secrets-on-twenty-first-century-fox-inc-foxa-altaba-inc-aaba/\",\"s\":\"StockNewsJournal\",\"sp\":\"Twenty-First
+        Century Fox, Inc. (NASDAQ:FOXA) plunged -0.65% with the closing price of $25.81.
+        The overall volume in the last trading session was 10.08 million shares.\",\"d\":\"7
+        hours ago\",\"tt\":\"1509724575\",\"usg\":\"AFQjCNHeuI185C1S8Fbu57dKCidMXgJB8w\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://stocknewsjournal.com/2017/11/03/traders-secrets-on-twenty-first-century-fox-inc-foxa-altaba-inc-aaba/\\u0026cid=52779659592248\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNEEuqqpAy3HEhbzmy9i-H2rWt2t0A\"}],\"lead_story_doc_id\":\"17884582937019496412\"},{\"nrel\":125,\"idx\":5,\"id\":\"52779660556107\",\"lead_story_url\":\"https://www.equities.com/news/microsoft-corporation-msft-closes-0-11-up-on-the-day-for-november-03\",\"a\":[{\"t\":\"Microsoft
+        Corporation (MSFT) Closes 0.11% Up on the Day for November 03\",\"u\":\"https://www.equities.com/news/microsoft-corporation-msft-closes-0-11-up-on-the-day-for-november-03\",\"s\":\"Equities.com\",\"sp\":\"Shares
+        of Microsoft Corporation (MSFT) ended the trading day Friday at $84.14, representing
+        a move of 0.11%, or $0.09 per share, on volume of 17.61 million shares.\",\"d\":\"2
+        hours ago\",\"tt\":\"1509744150\",\"usg\":\"AFQjCNHdBbbv0styzvCS3agkPSXvHFysTg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.equities.com/news/microsoft-corporation-msft-closes-0-11-up-on-the-day-for-november-03\\u0026cid=52779660556107\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNH4G4y6fn5tuBJFlYYrGDkCxKBqVA\"},{\"t\":\"Earnings
+        Clues on Microsoft Corporation (MSFT), Marathon Oil Corporation (MRO ...\",\"u\":\"https://stocknewsjournal.com/2017/11/03/earnings-clues-on-microsoft-corporation-msft-marathon-oil-corporation-mro-analysts-predictions/\",\"s\":\"StockNewsJournal\",\"sp\":\"Microsoft
+        Corporation (NASDAQ:MSFT) gained 1.05% with the closing price of $84.05. The
+        overall volume in the last trading session was 23.97 million shares.\",\"d\":\"6
+        hours ago\",\"tt\":\"1509727950\",\"usg\":\"AFQjCNEBEEaw_gpREkbiLPP9JgXXCEGcmg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://stocknewsjournal.com/2017/11/03/earnings-clues-on-microsoft-corporation-msft-marathon-oil-corporation-mro-analysts-predictions/\\u0026cid=52779660556107\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNGHmqmxtqqfg5_C6RTc-Xpzc7Yw_g\"},{\"t\":\"Revisit
+        the buy and-hold case for Microsoft Corporation (MSFT)\",\"u\":\"https://stocknewsgazette.com/2017/11/03/revisit-the-buy-and-hold-case-for-microsoft-corporation-msft/\",\"s\":\"StockNewsGazette\",\"sp\":\"Microsoft
+        Corporation (NASDAQ:MSFT) showed no change in yesterday\\u0026#39;s session.
+        The stock price went upward in 7 of the last 10 days and has generated 7.18%
+        during the last two weeks.\",\"d\":\"4 hours ago\",\"tt\":\"1509736050\",\"usg\":\"AFQjCNHdRcPow38OoXnai2haV44y3T3deg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://stocknewsgazette.com/2017/11/03/revisit-the-buy-and-hold-case-for-microsoft-corporation-msft/\\u0026cid=52779660556107\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNF8B0c0aYqfkpi5eea0jZBf9Bb43w\"}],\"lead_story_doc_id\":\"11476427934635234980\"},{\"nrel\":18,\"idx\":6,\"id\":\"52779629555642\",\"lead_story_url\":\"https://www.fool.com/investing/2017/10/07/why-i-love-microsoft-corporation.aspx\",\"a\":[{\"t\":\"Why
+        I Love Microsoft Corporation\",\"u\":\"https://www.fool.com/investing/2017/10/07/why-i-love-microsoft-corporation.aspx\",\"s\":\"Motley
+        Fool\",\"sp\":\"Before Satya Nadella took over as CEO, Microsoft (NASDAQ:MSFT)
+        had become a slowly dying relic trapped in the past. The company was not in
+        any danger of going out of business, but it was no longer an innovator.\",\"d\":\"Oct
+        7, 2017\",\"tt\":\"1507389750\",\"usg\":\"AFQjCNEB6fqEraB5F6G_Dut4rWCqCOlUKQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.fool.com/investing/2017/10/07/why-i-love-microsoft-corporation.aspx\\u0026cid=52779629555642\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNH9LufCMt6AWb3K4pariSOUrzibbw\"},{\"t\":\"Microsoft:
+        Azure fuels Dividend Growth\",\"u\":\"https://seekingalpha.com/article/4112236-microsoft-azure-fuels-dividend-growth\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"Microsoft\\u0026#39;s stock has been one of the best performers
+        in recent years easily outperforming the S\\u0026amp;P 500. Satya Nadella,
+        Microsoft\\u0026#39;s CEO, has reignited the company\\u0026#39;s growth engine,
+        benefiting income and growth investors alike.\",\"d\":\"Oct 7, 2017\",\"tt\":\"1507379625\",\"usg\":\"AFQjCNFIVHRnsRNsF7YCgYxcXJNvjHeGOQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4112236-microsoft-azure-fuels-dividend-growth\\u0026cid=52779629555642\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNFMc08cKC6are8lSUIH3celLAt7qA\"}],\"lead_story_doc_id\":\"5625810628276148614\"},{\"nrel\":239,\"idx\":7,\"id\":\"52779642766566\",\"lead_story_url\":\"https://investorplace.com/2017/10/microsoft-corporation-stock-bulls-should-continue-celebration/\",\"a\":[{\"t\":\"Why
+        Microsoft Corporation Stock Bulls Should Continue Their Celebration\",\"u\":\"https://investorplace.com/2017/10/microsoft-corporation-stock-bulls-should-continue-celebration/\",\"s\":\"Investorplace.com\",\"sp\":\"It\\u0026#39;s
+        still not too late to buy into a very friendly-looking trend off and on the
+        price chart of Microsoft Corporation (NASDAQ:MSFT).\",\"d\":\"Oct 20, 2017\",\"tt\":\"1508510925\",\"usg\":\"AFQjCNHAmbq5GRTQpNxVMbxyCLZvFPuWuw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://investorplace.com/2017/10/microsoft-corporation-stock-bulls-should-continue-celebration/\\u0026cid=52779642766566\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNEFU-qBO0uy2oDtWD-utVTpJvswrg\"},{\"t\":\"Microsoft
+        Corporation (MSFT) Closes 1.16% Up on the Day for October 20\",\"u\":\"https://www.equities.com/news/microsoft-corporation-msft-closes-1-16-up-on-the-day-for-october-20\",\"s\":\"Equities.com\",\"sp\":\"Shares
+        of Microsoft Corporation (MSFT) ended the trading day Friday at $78.81, representing
+        a move of 1.16%, or $0.9 per share, on volume of 22.8 million shares.\",\"d\":\"Oct
+        20, 2017\",\"tt\":\"1508535006\",\"usg\":\"AFQjCNF_gtYALxgibvtRImbl6VXy72-jQg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.equities.com/news/microsoft-corporation-msft-closes-1-16-up-on-the-day-for-october-20\\u0026cid=52779642766566\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNHqMH9rFeAzEpB7jhg_I-txFMAEZw\"},{\"t\":\"Is
+        It Time to go for Quanta Services, Inc. (PWR), Microsoft Corporation (MSFT)?\",\"u\":\"https://stocknewsjournal.com/2017/10/19/is-it-time-to-go-for-quanta-services-inc-pwr-microsoft-corporation-msft/\",\"s\":\"StockNewsJournal\",\"sp\":\"Quanta
+        Services, Inc. (NYSE:PWR) plunged -0.13% with the closing price of $37.40.
+        The overall volume in the last trading session was 1.03 million shares.\",\"d\":\"Oct
+        19, 2017\",\"tt\":\"1508436000\",\"usg\":\"AFQjCNFLZhnUQQC5DiIz3DCfwgBSEnDAfA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://stocknewsjournal.com/2017/10/19/is-it-time-to-go-for-quanta-services-inc-pwr-microsoft-corporation-msft/\\u0026cid=52779642766566\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNGdhWGoAsWVTS6tIeSw9ZsyrfpJsQ\"}],\"lead_story_doc_id\":\"9246946420817463084\"},{\"idx\":8,\"id\":\"0\",\"lead_story_url\":\"https://seekingalpha.com/news/3306413-microsoft-working-ai-chips\",\"a\":[{\"t\":\"Microsoft
+        is working on AI chips\",\"u\":\"https://seekingalpha.com/news/3306413-microsoft-working-ai-chips\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"Marking its first foray into AI chips, Microsoft (NASDAQ:MSFT)
+        is working on a prototype for its next generation HoloLens headset, allowing
+        it to do things like recognize objects in its line of sight.\",\"d\":\"Nov
+        1, 2017\",\"tt\":\"1509526125\",\"usg\":\"AFQjCNHyduYxAnNjNZ_bFylsnKES9zgioA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/news/3306413-microsoft-working-ai-chips\\u0026cid=0\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNFroV4VwP8zy_8FJ6er7Amv1QXHMA\"}],\"lead_story_doc_id\":\"9349455404937406274\"},{\"nrel\":85,\"idx\":9,\"id\":\"52779654918171\",\"lead_story_url\":\"https://seekingalpha.com/article/4118106-2-important-signals-microsofts-earnings\",\"a\":[{\"t\":\"2
+        Important Signals From Microsoft\\u0026#39;s Earnings\",\"u\":\"https://seekingalpha.com/article/4118106-2-important-signals-microsofts-earnings\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"As Microsoft (MSFT) comes out of its first quarter 2018 earnings
+        call after market close on Thursday, October 26, there are a couple of things
+        I\\u0026#39;d like to cover.\",\"d\":\"Oct 30, 2017\",\"tt\":\"1509380325\",\"usg\":\"AFQjCNE9LQr8WdVKpK5a_A3TXPd0_ueUFA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4118106-2-important-signals-microsofts-earnings\\u0026cid=52779654918171\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNFBHNwIiI_XeKKYfrDwB0r-40mmCQ\"},{\"t\":\"Microsoft
+        Corporation (NASDAQ:MSFT) Azure Is Growing Twice as Fast as Its ...\",\"u\":\"https://www.libraryforsmartinvestors.com/2017/10/microsoft-corporation-nasdaqmsft-azure-growing-twice-fast-rival-amazon-com-inc-nasdaqamzn-web-services/41372429.htm\",\"s\":\"Library
+        For Smart Investors\",\"sp\":\"Amazon.com, Inc., NASDAQ:AMZN, AWS, Microsoft
+        Corporation, By Benajmin P. Griner, Philip J. Butler (We are the original
+        owners of this file.\",\"d\":\"Oct 30, 2017\",\"tt\":\"1509365552\",\"usg\":\"AFQjCNEKIco_mDHfZ9BeqA_QOmHUxmfzKA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.libraryforsmartinvestors.com/2017/10/microsoft-corporation-nasdaqmsft-azure-growing-twice-fast-rival-amazon-com-inc-nasdaqamzn-web-services/41372429.htm\\u0026cid=52779654918171\\u0026ei=t__8WanaI4PFea3xgIgD\\u0026usg=AFQjCNF3sKwqDSSPpjDBaDZ21Jl0dDharg\"}],\"lead_story_doc_id\":\"7314834607550734181\"},{\"idx\":10,\"id\":\"-1\"}],\"results_per_page\":10,\"result_start_num\":1,\"result_end_num\":10,\"result_total_articles\":244},\"related\":{\"cols\":[0,1,4,30,34,31,32,5,2,33,3],\"rows\":[{\"id\":\"358464\",\"values\":[\"MSFT\",\"Microsoft
+        Corporation\",\"84.14\",\"+0.09\",\"chg\",\"0.11\",\"\",\"649.11B\",\"NASDAQ\",\"358464\",\"MSFT\"]},{\"id\":\"658890\",\"values\":[\"AABA\",\"Altaba
+        Inc\",\"70.23\",\"-0.28\",\"chr\",\"-0.40\",\"\",\"62.29B\",\"NASDAQ\",\"658890\",\"AABA\"]}],\"visible_cols\":[0,1,4,30,34,31,32,5]}},\"stickyUrlArgs\":\"\\u0026ei=t__8WanaI4PFea3xgIgD\",\"chart\":{\"_5d\":\"EXCHANGE%3DNASDAQ\\nMARKET_OPEN_MINUTE=570\\nMARKET_CLOSE_MINUTE=960\\nINTERVAL=120\\nCOLUMNS=DATE,CLOSE,VOLUME\\nDATA=\\nTIMEZONE_OFFSET=-240\\na1509370200,83.77,514425\\n1,83.64,474825\\n2,83.21,267091\\n3,83.32,244292\\n4,83.19,209540\\n5,83.4,273542\\n6,83.33,262006\\n7,83.39,177375\\n8,83.56,200411\\n9,83.68,191627\\n10,83.815,287231\\n11,84.07,202087\\n12,84.065,209089\\n13,84.125,210520\\n14,84.18,179139\\n15,84.1853,175582\\n16,83.97,235904\\n17,84.045,117173\\n18,84.12,139404\\n19,84.06,126088\\n20,84.06,201080\\n21,84.12,222040\\n22,84.2,278802\\n23,84.28,318082\\n24,84.3,164258\\n25,84.28,157732\\n26,84.2462,205026\\n27,84.085,194227\\n28,84.11,278700\\n29,84.19,243158\\n30,84.25,193814\\n31,84.2152,210537\\n32,84.13,240051\\n33,84.11,115516\\n34,83.96,182562\\n35,83.88,94143\\n36,83.83,123701\\n37,83.8949,64560\\n38,83.88,139400\\n39,83.83,83687\\n40,83.85,75818\\n41,83.835,82492\\n42,83.865,100250\\n43,83.92,101169\\n44,83.895,51866\\n45,83.86,107232\\n46,83.8466,50176\\n47,83.86,66085\\n48,83.7153,164767\\n49,83.755,58257\\n50,83.73,57342\\n51,83.69,106067\\n52,83.69,66273\\n53,83.77,62522\\n54,83.775,40477\\n55,83.795,86411\\n56,83.76,85548\\n57,83.8,107996\\n58,83.88,126142\\n59,83.85,91877\\n60,83.84,111804\\n61,83.91,156291\\n62,84.0199,310724\\n63,83.98,143449\\n64,83.98,115374\\n65,83.995,116957\\n66,84.1,139584\\n67,84.07,126100\\n68,84.085,112725\\n69,84.1,117593\\n70,84.1741,126211\\n71,84.101,149344\\n72,84.09,96923\\n73,84.09,99508\\n74,84.02,81947\\n75,84.015,76503\\n76,83.99,115232\\n77,83.99,75708\\n78,84,148546\\n79,83.9999,104370\\n80,83.995,63409\\n81,83.9,234974\\n82,83.885,88111\\n83,83.92,144899\\n84,83.79,154186\\n85,83.71,159552\\n86,83.61,130305\\n87,83.63,163195\\n88,83.68,131281\\n89,83.66,65458\\n90,83.695,71158\\n91,83.845,146054\\n92,83.88,51371\\n93,83.89,37751\\n94,83.89,58592\\n95,83.94,75524\\n96,83.895,71354\\n97,83.885,56383\\n98,83.8842,78580\\n99,83.85,28678\\n100,83.84,55655\\n101,83.825,45763\\n102,83.83,54459\\n103,83.84,100798\\n104,83.8372,47434\\n105,83.79,31563\\n106,83.76,131243\\n107,83.8,54569\\n108,83.83,40862\\n109,83.7846,36220\\n110,83.775,37150\\n111,83.69,96044\\n112,83.7,54232\\n113,83.6387,68181\\n114,83.655,84713\\n115,83.67,92665\\n116,83.66,50283\\n117,83.6633,48461\\n118,83.68,57725\\n119,83.6844,39626\\n120,83.6775,47977\\n121,83.66,38745\\n122,83.585,101581\\n123,83.52,87881\\n124,83.56,86928\\n125,83.6233,59937\\n126,83.57,68142\\n127,83.53,81214\\n128,83.56,57632\\n129,83.57,45872\\n130,83.56,51914\\n131,83.53,90576\\n132,83.45,120131\\n133,83.47,111342\\n134,83.43,61071\\n135,83.4299,67862\\n136,83.47,70221\\n137,83.44,61687\\n138,83.46,79291\\n139,83.4,143829\\n140,83.35,140305\\n141,83.38,113839\\n142,83.37,65204\\n143,83.52,108109\\n144,83.55,111526\\n145,83.555,48682\\n146,83.515,113735\\n147,83.62,149898\\n148,83.6,116017\\n149,83.62,95050\\n150,83.58,53762\\n151,83.56,64178\\n152,83.6,65750\\n153,83.61,41012\\n154,83.6164,31609\\n155,83.595,49888\\n156,83.6,58279\\n157,83.61,73320\\n158,83.6,30266\\n159,83.595,89176\\n160,83.62,83106\\n161,83.64,66989\\n162,83.605,55106\\n163,83.5801,64545\\n164,83.63,98383\\n165,83.655,64131\\n166,83.58,87510\\n167,83.63,85316\\n168,83.585,62824\\n169,83.58,69002\\n170,83.6341,101909\\n171,83.655,79980\\n172,83.605,98491\\n173,83.615,70363\\n174,83.59,92982\\n175,83.55,101947\\n176,83.565,65501\\n177,83.5347,78978\\n178,83.51,82250\\n179,83.58,98369\\n180,83.585,92553\\n181,83.55,95878\\n182,83.55,69562\\n183,83.54,111371\\n184,83.59,80494\\n185,83.655,90900\\n186,83.715,136876\\n187,83.73,108771\\n188,83.74,90097\\n189,83.7333,132851\\n190,83.79,215842\\n191,83.88,300753\\n192,83.9,209382\\n193,83.91,240891\\n194,83.92,386862\\n195,83.89,3113092\\n720,84.28,367226\\n721,84.06,232898\\n722,84.03,171456\\n723,83.99,270885\\n724,83.955,74047\\n725,83.89,135154\\n726,84.04,115303\\n727,84.05,183834\\n728,84.035,181131\\n729,83.99,160832\\n730,83.89,68435\\n731,83.84,110218\\n732,83.71,145048\\n733,83.595,149371\\n734,83.595,128235\\n735,83.575,98659\\n736,83.54,155981\\n737,83.65,329143\\n738,83.74,147613\\n739,83.695,209006\\n740,83.75,125624\\n741,83.79,92579\\n742,83.755,65438\\n743,83.79,82082\\n744,83.815,123028\\n745,83.84,86877\\n746,83.835,74993\\n747,83.87,207072\\n748,83.85,99886\\n749,83.81,96563\\n750,83.74,96420\\n751,83.74,157326\\n752,83.7253,60828\\n753,83.73,80341\\n754,83.6985,66322\\n755,83.71,81127\\n756,83.695,141287\\n757,83.675,67839\\n758,83.715,93777\\n759,83.69,94575\\n760,83.6825,69745\\n761,83.75,114525\\n762,83.8,72194\\n763,83.7753,89344\\n764,83.77,91407\\n765,83.755,46475\\n766,83.74,78818\\n767,83.76,151127\\n768,83.78,123989\\n769,83.775,57632\\n770,83.76,73505\\n771,83.745,72553\\n772,83.69,75749\\n773,83.655,77294\\n774,83.67,68366\\n775,83.675,63260\\n776,83.68,71074\\n777,83.63,104021\\n778,83.63,100442\\n779,83.645,51310\\n780,83.63,109683\\n781,83.63,70600\\n782,83.61,90953\\n783,83.61,106203\\n784,83.625,92054\\n785,83.64,81295\\n786,83.7,83398\\n787,83.7097,61694\\n788,83.67,75195\\n789,83.6399,55368\\n790,83.61,73334\\n791,83.63,92935\\n792,83.715,186710\\n793,83.785,99734\\n794,83.75,91317\\n795,83.76,56666\\n796,83.7,86124\\n797,83.7,36675\\n798,83.6075,189737\\n799,83.46,292838\\n800,83.525,257888\\n801,83.53,84268\\n802,83.4949,145187\\n803,83.45,75214\\n804,83.3999,159358\\n805,83.3642,72501\\n806,83.36,70222\\n807,83.335,108466\\n808,83.357,78378\\n809,83.3199,62396\\n810,83.41,102777\\n811,83.5356,131405\\n812,83.52,108055\\n813,83.49,67695\\n814,83.504,48344\\n815,83.5,47467\\n816,83.55,57682\\n817,83.51,63840\\n818,83.49,65225\\n819,83.47,52154\\n820,83.4549,61819\\n821,83.455,40487\\n822,83.44,36713\\n823,83.47,46368\\n824,83.495,43526\\n825,83.47,47130\\n826,83.5,96611\\n827,83.5289,55982\\n828,83.53,54107\\n829,83.57,66437\\n830,83.58,60614\\n831,83.5863,73054\\n832,83.5285,63699\\n833,83.5242,38443\\n834,83.515,50703\\n835,83.465,81968\\n836,83.4854,63886\\n837,83.48,55790\\n838,83.485,36151\\n839,83.42,81452\\n840,83.39,60929\\n841,83.39,70457\\n842,83.375,51933\\n843,83.405,66056\\n844,83.4,84829\\n845,83.325,84439\\n846,83.3201,77143\\n847,83.32,54274\\n848,83.2847,153423\\n849,83.275,38882\\n850,83.313,68727\\n851,83.345,58568\\n852,83.365,135844\\n853,83.34,51212\\n854,83.375,88011\\n855,83.43,83959\\n856,83.5,147807\\n857,83.545,78612\\n858,83.4901,59359\\n859,83.505,87165\\n860,83.495,79564\\n861,83.475,90039\\n862,83.47,78650\\n863,83.475,66343\\n864,83.5,67758\\n865,83.44,94730\\n866,83.43,25013\\n867,83.42,69521\\n868,83.425,59984\\n869,83.385,121792\\n870,83.38,16374\\n871,83.365,106385\\n872,83.36,118299\\n873,83.36,182697\\n874,83.4,93705\\n875,83.37,91990\\n876,83.3646,72050\\n877,83.34,158070\\n878,83.35,103292\\n879,83.345,113392\\n880,83.3486,92596\\n881,83.345,91873\\n882,83.35,66470\\n883,83.335,78993\\n884,83.3055,123860\\n885,83.305,86488\\n886,83.31,75054\\n887,83.29,168188\\n888,83.3,128489\\n889,83.295,127218\\n890,83.27,77746\\n891,83.28,103805\\n892,83.2831,144286\\n893,83.295,169155\\n894,83.23,161903\\n895,83.21,97095\\n896,83.23,96823\\n897,83.23,91450\\n898,83.25,100950\\n899,83.28,115476\\n900,83.32,171231\\n901,83.32,141032\\n902,83.33,92363\\n903,83.375,105653\\n904,83.42,88620\\n905,83.38,107340\\n906,83.34,152848\\n907,83.375,98330\\n908,83.325,148596\\n909,83.305,158359\\n910,83.19,463260\\n911,83.2,326683\\n912,83.165,311148\\n913,83.185,340456\\n914,83.16,333953\\n915,83.18,3840197\\na1509543000,83.64,321419\\n1,83.49,188100\\n2,83.68,117840\\n3,83.63,197588\\n4,83.5938,113237\\n5,83.655,124289\\n6,83.52,174383\\n7,83.53,83662\\n8,83.55,84965\\n9,83.61,57509\\n10,83.61,70934\\n11,83.56,74321\\n12,83.602,74325\\n13,83.57,80135\\n14,83.63,63390\\n15,83.675,78540\\n16,83.51,198308\\n17,83.58,107558\\n18,83.675,79680\\n19,83.64,96797\\n20,83.6575,135438\\n21,83.66,334028\\n22,83.65,132762\\n23,83.63,104190\\n24,83.64,106488\\n25,83.58,99491\\n26,83.62,169712\\n27,83.645,66551\\n28,83.68,79461\\n29,83.66,124717\\n30,83.55,115788\\n31,83.55,78872\\n32,83.49,84299\\n33,83.43,205425\\n34,83.41,78582\\n35,83.37,100780\\n36,83.34,113159\\n37,83.37,76157\\n38,83.36,87763\\n39,83.295,128642\\n40,83.2735,65904\\n41,83.285,101400\\n42,83.26,74812\\n43,83.25,45957\\n44,83.26,78523\\n45,83.18,192109\\n46,83.24,41618\\n47,83.205,126355\\n48,83.27,87256\\n49,83.2658,116283\\n50,83.26,60339\\n51,83.245,75473\\n52,83.255,59604\\n53,83.3,71114\\n54,83.295,85332\\n55,83.24,74577\\n56,83.23,58314\\n57,83.239,49270\\n58,83.21,42236\\n59,83.18,54470\\n60,83.16,64961\\n61,83.18,58672\\n62,83.1624,57482\\n63,83.11,100834\\n64,83.1,60926\\n65,83.15,85750\\n66,83.13,54304\\n67,83.09,147734\\n68,83.05,124414\\n69,83.125,83269\\n70,83.09,110136\\n71,83.07,139657\\n72,83.035,118302\\n73,82.98,171240\\n74,82.96,199804\\n75,82.96,89042\\n76,83.005,59163\\n77,83.03,85111\\n78,83.03,66317\\n79,83.06,51382\\n80,83.09,63704\\n81,83.177,33554\\n82,83.24,74542\\n83,83.25,50600\\n84,83.25,77104\\n85,83.255,52843\\n86,83.255,50702\\n87,83.22,36641\\n88,83.2675,29591\\n89,83.25,75163\\n90,83.245,43702\\n91,83.24,33794\\n92,83.26,58865\\n93,83.245,51405\\n94,83.26,30024\\n95,83.26,74120\\n96,83.24,25654\\n97,83.27,33722\\n98,83.23,92638\\n99,83.255,90673\\n100,83.2358,50374\\n101,83.24,33901\\n102,83.2559,49484\\n103,83.22,36620\\n104,83.18,74851\\n105,83.22,39262\\n106,83.19,50904\\n107,83.19,54601\\n108,83.11,52260\\n109,83.04,77954\\n110,83.05,73422\\n111,83.08,38069\\n112,83.05,128899\\n113,83.06,111721\\n114,83.11,70698\\n115,83.0353,87318\\n116,83.07,31430\\n117,83.1,43418\\n118,83.09,33118\\n119,83.115,44660\\n120,83.19,105582\\n121,83.18,44388\\n122,83.2,40585\\n123,83.17,57142\\n124,83.17,41348\\n125,83.195,53376\\n126,83.17,53208\\n127,83.17,23882\\n128,83.18,44117\\n129,83.185,65546\\n130,83.19,41620\\n131,83.1953,81168\\n132,83.17,65360\\n133,83.175,48876\\n134,83.0708,89447\\n135,83.155,54408\\n136,83.13,69766\\n137,83.16,131404\\n138,83.175,47914\\n139,83.17,85002\\n140,83.19,111192\\n141,83.18,70403\\n142,83.2,65709\\n143,83.185,99095\\n144,83.169,53914\\n145,83.13,53172\\n146,83.14,35602\\n147,83.105,64106\\n148,83.13,156657\\n149,83.1,71752\\n150,83.095,67530\\n151,83.125,61043\\n152,83.205,83516\\n153,83.2,105181\\n154,83.18,91712\\n155,83.175,67018\\n156,83.14,63689\\n157,83.1044,74234\\n158,83.0544,97836\\n159,83.055,130650\\n160,83.053,107224\\n161,83.01,59075\\n162,83.015,99644\\n163,83,136678\\n164,83.04,115697\\n165,83.07,130091\\n166,83.045,100595\\n167,83.02,113883\\n168,83.03,98906\\n169,83.025,160672\\n170,83.025,81451\\n171,83.045,76503\\n172,83.065,55624\\n173,83.1099,95292\\n174,83.115,123604\\n175,83.075,85164\\n176,83.045,124000\\n177,83.005,95601\\n178,83,125863\\n179,83.025,74015\\n180,83.055,115744\\n181,83.045,71713\\n182,83.02,123449\\n183,83.064,100321\\n184,83.07,74987\\n185,83.055,109864\\n186,83.06,84079\\n187,83.065,237230\\n188,83.165,341106\\n189,83.13,238826\\n190,83.135,157175\\n191,83.17,195551\\n192,83.1951,146711\\n193,83.165,228500\\n194,83.14,209762\\n195,83.18,2123477\\n720,83.29,288201\\n721,83.23,156609\\n722,83.235,131139\\n723,83.3,188383\\n724,83.4,131278\\n725,83.3,86775\\n726,83.22,93445\\n727,83.23,86297\\n728,83.18,155237\\n729,83.23,76111\\n730,83.395,151599\\n731,83.39,122454\\n732,83.33,81716\\n733,83.3462,291175\\n734,83.285,69378\\n735,83.27,66670\\n736,83.18,122859\\n737,83.16,248391\\n738,83.2,245074\\n739,83.25,75154\\n740,83.14,223379\\n741,83.23,146441\\n742,83.22,163821\\n743,83.47,222267\\n744,83.434,163130\\n745,83.44,113209\\n746,83.425,86515\\n747,83.46,151956\\n748,83.57,139602\\n749,83.655,159279\\n750,83.6,74284\\n751,83.62,120086\\n752,83.56,119972\\n753,83.595,178223\\n754,83.6175,104971\\n755,83.67,125903\\n756,83.79,203144\\n757,83.75,193891\\n758,83.83,89555\\n759,83.945,220558\\n760,83.93,192559\\n761,83.935,156075\\n762,83.86,141381\\n763,83.77,108934\\n764,83.82,108551\\n765,83.825,105319\\n766,83.87,97887\\n767,83.9564,112433\\n768,83.925,131877\\n769,83.96,157704\\n770,83.9799,64941\\n771,83.96,26763\\n772,83.99,65716\\n773,83.89,81920\\n774,83.79,75477\\n775,83.675,145474\\n776,83.7862,125022\\n777,83.7752,82692\\n778,83.75,62806\\n779,83.75,83899\\n780,83.73,136692\\n781,83.64,139588\\n782,83.56,120789\\n783,83.61,78052\\n784,83.49,126781\\n785,83.52,49367\\n786,83.54,98784\\n787,83.58,98073\\n788,83.55,87138\\n789,83.56,83490\\n790,83.58,59722\\n791,83.6653,49182\\n792,83.71,51168\\n793,83.73,52198\\n794,83.755,68155\\n795,83.765,57010\\n796,83.7638,43082\\n797,83.77,74118\\n798,83.88,118106\\n799,83.9,94123\\n800,83.89,96502\\n801,83.88,90973\\n802,83.89,70073\\n803,83.895,57385\\n804,83.9,98070\\n805,83.86,65833\\n806,83.83,59345\\n807,83.85,78501\\n808,83.8431,80485\\n809,83.88,82453\\n810,83.9,56360\\n811,83.85,63591\\n812,83.88,58520\\n813,83.86,54899\\n814,83.8857,52750\\n815,83.89,52359\\n816,83.9162,53553\\n817,83.885,74281\\n818,83.89,42127\\n819,83.955,58029\\n820,83.97,31347\\n821,84.0049,75833\\n822,84.09,110759\\n823,84.145,80835\\n824,84.1,53523\\n825,84.02,53889\\n826,84.105,45861\\n827,84.1051,49599\\n828,84.185,69793\\n829,84.195,49272\\n830,84.2,91310\\n831,84.3,104579\\n832,84.3385,66064\\n833,84.33,77871\\n834,84.3459,92124\\n835,84.35,57696\\n836,84.42,109142\\n837,84.37,112887\\n838,84.38,218702\\n839,84.31,85731\\n840,84.34,80605\\n841,84.36,84075\\n842,84.32,62801\\n843,84.297,88567\\n844,84.33,70565\\n845,84.33,51769\\n846,84.315,67998\\n847,84.33,61350\\n848,84.28,52889\\n849,84.21,97146\\n850,84.13,89500\\n851,84.13,47017\\n852,84.1,90925\\n853,84.03,120521\\n854,84.035,93588\\n855,84.02,56684\\n856,84.04,54880\\n857,84.08,50264\\n858,84.17,82710\\n859,84.165,60237\\n860,84.205,62812\\n861,84.215,80926\\n862,84.255,41628\\n863,84.265,106018\\n864,84.215,69135\\n865,84.255,82723\\n866,84.24,51046\\n867,84.2,75842\\n868,84.17,52659\\n869,84.2,38769\\n870,84.24,43272\\n871,84.2257,38571\\n872,84.2256,45847\\n873,84.23,26612\\n874,84.262,50420\\n875,84.285,39439\\n876,84.26,86083\\n877,84.2853,67197\\n878,84.225,48241\\n879,84.235,127544\\n880,84.205,47015\\n881,84.165,72779\\n882,84.14,92143\\n883,84.154,60639\\n884,84.155,71958\\n885,84.11,58270\\n886,84.13,100369\\n887,84.13,61171\\n888,84.1238,89757\\n889,84.135,62713\\n890,84.0507,60815\\n891,84.1,42666\\n892,84.105,75955\\n893,84.0899,82922\\n894,84.05,76934\\n895,84,109177\\n896,83.9799,79346\\n897,83.97,133028\\n898,83.995,92991\\n899,83.9994,68351\\n900,84.035,165917\\n901,84.02,131943\\n902,84.02,78519\\n903,84.075,220233\\n904,84.08,66189\\n905,84.055,99465\\n906,84.11,68403\\n907,84.175,127892\\n908,84.14,92243\\n909,84.1,169681\\n910,84.095,175923\\n911,84.035,219265\\n912,84.005,146860\\n913,84.075,354873\\n914,84.17,418339\\n915,84.05,2399756\\na1509715800,84.135,917376\\n1,83.94,166487\\n2,83.79,159580\\n3,83.645,145889\\n4,83.82,228454\\n5,83.645,160661\\n6,83.7,172476\\n7,83.67,96521\\n8,83.65,97280\\n9,83.665,60266\\n10,83.67,79556\\n11,83.63,134985\\n12,83.53,127163\\n13,83.42,149214\\n14,83.5444,107272\\n15,83.53,86915\\n16,83.585,66700\\n17,83.565,105081\\n18,83.555,69333\\n19,83.54,48004\\n20,83.48,53088\\n21,83.59,114092\\n22,83.59,152678\\n23,83.59,76283\\n24,83.49,83707\\n25,83.575,116610\\n26,83.77,91026\\n27,83.79,74703\\n28,83.8166,43417\\n29,83.76,74606\\n30,83.775,46770\\n31,83.84,79526\\n32,83.805,98038\\n33,83.83,59668\\n34,83.885,34741\\n35,83.895,34379\\n36,83.885,54920\\n37,83.94,279536\\n38,83.915,76870\\n39,83.9,52672\\n40,83.89,112978\\n41,83.8799,70063\\n42,83.8445,86486\\n43,83.8816,52737\\n44,83.92,75889\\n45,83.9701,101947\\n46,83.935,102817\\n47,83.94,60086\\n48,83.9411,55014\\n49,83.8866,25381\\n50,83.88,36514\\n51,83.88,51438\\n52,83.845,28581\\n53,83.9,95094\\n54,83.9,15406\\n55,83.89,42909\\n56,83.91,27130\\n57,83.885,51263\\n58,83.88,20834\\n59,83.91,22254\\n60,83.965,51846\\n61,84.005,103651\\n62,84.01,30298\\n63,83.99,31751\\n64,83.96,37840\\n65,83.9589,44020\\n66,83.975,71759\\n67,84,46965\\n68,84.0499,38467\\n69,84.0393,82863\\n70,84.0753,53025\\n71,84.09,22797\\n72,84.08,19824\\n73,84.125,71367\\n74,84.2262,181501\\n75,84.2701,89067\\n76,84.23,116146\\n77,84.225,91667\\n78,84.23,40338\\n79,84.22,42122\\n80,84.22,36056\\n81,84.25,53842\\n82,84.26,36589\\n83,84.3385,52410\\n84,84.3,44776\\n85,84.323,36151\\n86,84.3246,48466\\n87,84.36,77584\\n88,84.34,41495\\n89,84.33,64422\\n90,84.33,39264\\n91,84.31,47780\\n92,84.29,31646\\n93,84.335,52710\\n94,84.3953,64688\\n95,84.419,68767\\n96,84.46,70499\\n97,84.54,136552\\n98,84.45,75227\\n99,84.425,63566\\n100,84.46,60783\\n101,84.45,35516\\n102,84.45,37671\\n103,84.395,48464\\n104,84.375,50048\\n105,84.37,44250\\n106,84.38,42150\\n107,84.43,70164\\n108,84.4242,40218\\n109,84.355,32411\\n110,84.35,75383\\n111,84.345,19845\\n112,84.315,53498\\n113,84.2664,59149\\n114,84.2443,53187\\n115,84.2,105804\\n116,84.125,44389\\n117,84.1238,72809\\n118,84.135,70752\\n119,84.133,61556\\n120,84.14,26271\\n121,84.125,39474\\n122,84.08,80355\\n123,84.08,30377\\n124,84.1056,48519\\n125,84.1175,99993\\n126,84.1647,100318\\n127,84.11,61454\\n128,84.15,41566\\n129,84.21,79574\\n130,84.2001,12337\\n131,84.229,36110\\n132,84.2268,37851\\n133,84.1965,58731\\n134,84.13,31495\\n135,84.0949,58696\\n136,84.15,58267\\n137,84.09,73460\\n138,84.1001,33071\\n139,84.12,54522\\n140,84.15,37775\\n141,84.18,86451\\n142,84.17,21422\\n143,84.15,23053\\n144,84.155,22045\\n145,84.1472,27913\\n146,84.175,40047\\n147,84.1853,46100\\n148,84.2031,37227\\n149,84.2,65510\\n150,84.18,56863\\n151,84.135,49938\\n152,84.125,16503\\n153,84.145,99901\\n154,84.1349,56972\\n155,84.1101,38446\\n156,84.075,52004\\n157,84.055,86814\\n158,84.05,47874\\n159,84.1,72277\\n160,84.06,63267\\n161,84.035,49998\\n162,84.055,65207\\n163,84.035,60926\\n164,84.024,45078\\n165,84.01,87913\\n166,84.03,65244\\n167,84.065,44992\\n168,84.07,63665\\n169,84.065,27328\\n170,84.05,20047\\n171,84.03,52664\\n172,84.02,49675\\n173,84.01,76617\\n174,84.01,35958\\n175,84.0247,48267\\n176,84.07,35439\\n177,84.09,57212\\n178,84.075,33286\\n179,84.095,38795\\n180,84.075,88940\\n181,84.085,43974\\n182,84.065,49520\\n183,84.045,82069\\n184,84.01,65340\\n185,84.06,64221\\n186,84.065,27148\\n187,84.09,72800\\n188,84.125,140913\\n189,84.12,54256\\n190,84.135,116832\\n191,84.095,152518\\n192,84.07,172959\\n193,84.08,125036\\n194,84.05,260187\\n195,84.14,2004786\\n\",\"_5Y\":\"EXCHANGE%3DNASDAQ\\nMARKET_OPEN_MINUTE=570\\nMARKET_CLOSE_MINUTE=960\\nINTERVAL=604800\\nCOLUMNS=DATE,CLOSE,VOLUME,CDAYS\\nDATA=\\nTIMEZONE_OFFSET=-300\\na1352494800,28.83,232494492,5\\n1,26.5209,383940394,5\\na1353693600,27.7,228455526,4\\na1354309200,26.615,336489890,5\\n1,26.455,256621754,5\\n2,26.81,230450019,5\\n3,27.45,297458344,5\\n4,26.55,120125535,4\\n5,26.74,196482094,5\\n6,26.83,257819873,5\\n7,27.25,241503310,5\\n8,27.88,292636711,5\\n9,27.93,254997470,5\\n10,27.55,199194379,5\\n11,28.01,192276732,5\\n12,27.76,163434872,5\\n13,27.95,205033731,5\\n14,28,197922674,5\\nTIMEZONE_OFFSET=-240\\na1363377600,28.035,253627314,5\\n1,28.25,195140597,5\\na1364500800,28.605,163490157,5\\na1365192000,28.7,188924351,5\\n1,28.79,377425365,5\\n2,29.765,318681562,5\\n3,31.79,446494855,5\\n4,33.49,281482379,5\\n5,32.69,218470715,5\\n6,34.87,259278408,5\\n7,34.269,253070775,5\\n8,34.9,193939367,5\\n9,35.67,241216749,5\\n10,34.4,211489745,5\\n11,33.265,248950782,5\\n12,34.545,243396628,5\\n13,34.21,110778933,5\\n14,35.67,176519256,5\\n15,31.4,405789215,5\\n16,31.62,299530618,5\\n17,31.89,190334235,5\\n18,32.7,191242388,5\\n19,31.8,179710128,5\\n20,34.75,344960959,5\\n21,33.4,263640999,5\\n22,31.152,443912017,5\\n23,33.03,219331197,5\\n24,32.791,348769096,5\\n25,33.27,193270455,5\\n26,33.88,195220646,5\\n27,34.13,184873901,5\\n28,34.96,183148017,5\\n29,35.73,293179232,5\\n30,35.525,189049718,5\\nTIMEZONE_OFFSET=-300\\na1383944400,37.78,265880986,5\\n1,37.841,200270348,5\\n2,37.57,180830994,5\\n3,38.13,113208695,5\\n4,38.36,299814837,5\\n5,36.69,184055108,5\\n6,36.8,237421849,5\\n7,37.29,71550254,5\\n8,36.91,95574785,5\\n9,36.04,216598517,5\\n10,36.38,216795186,5\\n11,36.805,175111177,5\\n12,37.84,261804587,5\\n13,36.56,244199414,5\\n14,37.62,166637451,5\\n15,37.98,128205485,5\\n16,38.31,179189733,5\\n17,37.9,127317506,5\\nTIMEZONE_OFFSET=-240\\na1394827200,37.7,134087566,5\\n1,40.16,260142460,5\\n2,40.3,210116404,5\\n3,39.87,189712501,5\\n4,39.209,181172057,5\\na1397764800,40.01,133291027,5\\na1398456000,39.91,173147680,5\\n1,39.69,187921095,5\\n2,39.54,153093476,5\\n3,39.83,136272179,5\\n4,40.12,106482522,5\\n5,40.94,106342180,5\\n6,41.48,115711492,5\\n7,41.23,104310831,5\\n8,41.68,141424329,5\\n9,42.25,163560109,5\\na1404417600,41.8,93905905,5\\na1405108800,42.09,117561943,5\\n1,44.69,239552029,5\\n2,44.5,190527218,5\\n3,42.86,152089487,5\\n4,43.2,144437060,5\\n5,44.79,125599175,5\\n6,45.15,120385583,5\\n7,45.43,92341867,5\\n8,45.91,120083558,5\\n9,46.695,180807207,5\\n10,47.52,341973307,5\\n11,46.41,158856031,5\\n12,46.09,154785202,5\\n13,44.03,165764217,5\\n14,43.63,225166061,5\\n15,46.13,211077436,5\\n16,46.95,155628209,5\\nTIMEZONE_OFFSET=-300\\na1415394000,48.68,128149243,5\\n1,49.58,137829519,5\\n2,47.98,144887937,5\\n3,47.81,112141541,5\\n4,48.42,138158386,5\\n5,46.95,144735690,5\\n6,47.66,216676750,5\\n7,47.88,74863120,5\\n8,46.76,80290512,5\\n9,47.19,158825163,5\\n10,46.24,157088136,5\\n11,47.18,137352632,5\\n12,40.4,437786778,5\\n13,42.41,215214514,5\\n14,43.87,172847964,5\\n15,43.855,118131959,5\\n16,43.85,150315390,5\\n17,42.36,148863715,5\\nTIMEZONE_OFFSET=-240\\na1426276800,41.38,221483208,5\\n1,42.88,216925266,5\\n2,40.97,167126270,5\\na1428004800,40.29,144289679,5\\na1428696000,41.72,146532368,5\\n1,41.615,146761915,5\\n2,47.87,274379045,5\\n3,48.655,271446305,5\\n4,47.75,205178261,5\\n5,48.295,150345879,5\\n6,46.9,125890515,5\\n7,46.86,112720759,5\\n8,46.14,131521410,5\\n9,45.97,126223826,5\\n10,46.1,185524263,5\\n11,45.26,151556711,5\\na1435867200,44.4,120123050,5\\na1436558400,44.61,157146118,5\\n1,46.62,133426984,5\\n2,45.94,198833485,5\\n3,46.7,185955595,5\\n4,46.74,131020495,5\\n5,47,126616447,5\\n6,43.07,180666605,5\\n7,43.93,299922743,5\\n8,42.61,185669220,5\\n9,43.48,122942332,5\\n10,43.48,167591654,5\\n11,43.94,127786686,5\\n12,45.57,164504767,5\\n13,47.11,149490791,5\\n14,47.51,116214824,5\\n15,52.87,274089241,5\\n16,52.64,233989903,5\\nTIMEZONE_OFFSET=-300\\na1446843600,54.92,163945485,5\\n1,52.84,192376481,5\\n2,54.19,156848231,5\\n3,53.93,82263670,5\\n4,55.91,223570066,5\\n5,54.06,171286323,5\\n6,54.13,250080293,5\\na1450990800,55.67,102418400,5\\n1,55.48,99228262,5\\na1452286800,52.33,231760568,5\\n1,50.99,261327257,5\\n2,52.29,183338985,4\\n3,55.09,241089138,5\\n4,50.16,262842669,5\\n5,50.5,222468705,5\\n6,51.82,135127508,4\\n7,51.3,147886335,5\\n8,52.03,149773385,5\\n9,53.07,170463794,5\\nTIMEZONE_OFFSET=-240\\na1458331200,53.49,171763137,5\\na1458849600,54.21,85466802,5\\na1459540800,55.57,113755963,5\\n1,54.42,99754212,5\\n2,55.65,115760469,5\\n3,51.78,251124833,5\\n4,49.87,200612675,5\\n5,50.39,133396747,5\\n6,51.08,111032990,5\\n7,50.62,119929660,5\\n8,52.32,126498087,5\\n9,51.79,109186979,4\\n10,51.48,106398294,5\\n11,50.13,236451710,5\\n12,49.83,261054437,5\\n13,51.16,169949551,5\\n14,52.3,100950032,4\\n15,53.7,131513504,5\\n16,56.57,239597518,5\\n17,56.68,154126188,5\\n18,57.96,139123963,5\\n19,57.94,91968595,5\\n20,57.62,90149203,5\\n21,58.03,91629582,5\\n22,57.67,99183513,5\\n23,56.21,89031792,4\\n24,57.25,155377027,5\\n25,57.43,19955336,5\\n26,57.6,125664515,5\\n27,57.8,92303431,5\\n28,57.42,119587590,5\\n29,59.66,195345767,5\\n30,59.87,181170290,5\\n31,58.71,123412131,5\\nTIMEZONE_OFFSET=-300\\na1478898000,59.02,200822869,5\\n1,60.35,164384062,5\\na1480096800,60.53,73117824,4\\na1480712400,59.25,137812561,5\\n1,61.97,122838771,5\\n2,62.3,156392554,5\\n3,63.24,112043306,5\\n4,62.14,62247011,4\\n5,62.84,86832957,4\\n6,62.7,100883602,5\\n7,62.74,88999202,4\\n8,65.78,160798071,5\\n9,63.68,172722294,5\\n10,64,98985116,5\\n11,64.62,104828847,5\\n12,64.62,82018448,4\\n13,64.25,108727793,5\\n14,64.93,98167226,5\\nTIMEZONE_OFFSET=-240\\na1489780800,64.87,129108029,5\\n1,64.98,103804886,5\\n2,65.86,88476598,5\\n3,65.68,87058900,5\\na1492113600,64.95,71749271,5\\na1492804800,66.4,113659769,5\\n1,68.46,160723247,5\\n2,69,125666645,5\\n3,68.38,106905867,5\\n4,67.69,149197513,5\\n5,69.96,88012257,5\\n6,71.76,103883064,4\\n7,70.32,160905256,5\\n8,70,172944836,5\\n9,71.21,115784579,5\\n10,68.93,123708085,5\\n11,69.46,75337699,4\\n12,72.78,96363352,5\\n13,73.79,159733532,5\\n14,73.04,114816640,5\\n15,72.68,111716478,5\\n16,72.5,109141814,5\\n17,72.49,99167406,5\\n18,72.82,75737531,5\\n19,73.94,92334870,5\\n20,73.98,70953185,4\\n21,75.31,99998390,5\\n22,74.41,94285686,5\\n23,74.49,89506740,5\\n24,76,75967921,5\\n25,77.49,72932225,5\\n26,78.81,80463967,5\\n27,83.81,161742609,5\\n\"}};\ngoogle.finance.data.numberFormat
+        = [{'threshold':1000000, 'symbol':'M'}, {'threshold':1000000000,'symbol':'B'},
+        {'threshold':1000000000000,'symbol':'T'}] ;\n_setStickyUrlParams(\"ei=t__8WanaI4PFea3xgIgD\");\nif
+        (_s_Store) {\n_s_Store._allowMatchAdvancedSearch = true;\nvar _fieldToDisplayNameMap
+        = {GrossMargin:\"Gross margin&nbsp;(%)\",Return1Week:\"1w return\",Return156Week:\"156w
+        return\",NextYearEPS:\"Next year EPS\",EarningsAfterTaxes:\"Earnings after
+        taxes\",RevenueGrowthRate5Years:\"5y revenue growth rate\",LTDebtToAssetsYear:\"LT
+        debt/assets (Recent&nbsp;yr)&nbsp;(%)\",DividendPerShare:\"Div per share\",MarketCap:\"Market
+        cap\",NetProfitMarginPercent:\"Net profit margin&nbsp;(%)\",Float:\"Float\",EarningsBeforeTaxes:\"Earnings
+        before taxes\",QuotePercChange:\"Quote change&nbsp;(%)\",TotalDebtToEquityYear:\"Total
+        debt/equity (Recent&nbsp;yr)&nbsp;(%)\",TotalDebtToCapitalQuarter:\"Total
+        debt/capital (Recent&nbsp;qtr)&nbsp;(%)\",LTDebtToCapitalQuarter:\"LT debt/capital
+        (Recent&nbsp;qtr)&nbsp;(%)\",EPSGrowthRate10Years:\"10y EPS growth rate\",Beta:\"Beta\",CapitalGain:\"Capital
+        gain\",ReturnOnAssetsPTM:\"Return on assets (PTM)&nbsp;(%)\",BetaDown:\"Beta
+        down from RAS\",IncomeDividend:\"Income dividend\",RevenueGrowthRate10Years:\"10y
+        revenue growth rate\",MarketCapShareBasis:\"Market cap share basis\",Return4Week:\"4w
+        return\",IAD:\"Div rate indicated annual\",Price150DayAverage:\"150d avg price\",EPSGrowthRate5Years:\"5y
+        EPS growth rate\",ReturnOnAssetsTTM:\"Return on assets (TTM)&nbsp;(%)\",TotalDebtToAssetsYear:\"Total
+        debt/assets (Recent&nbsp;yr)&nbsp;(%)\",Volume:\"Volume\",CurrentRatioYear:\"Current
+        ratio\",DividendRecentQuarter:\"Div recent quarter\",Low52Week:\"52w low\",ExpenseRatio:\"Expense
+        ratio\",Price1DayPercChange:\"1d&nbsp;price change&nbsp;(%)\",Price13WeekPercChange:\"13w&nbsp;price
+        change&nbsp;(%)\",ReturnOnEquity5Years:\"Return on equity (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",TotalDebtToCapitalYear:\"Total
+        debt/capital (Recent&nbsp;yr)&nbsp;(%)\",TotalDebtToAssetsQuarter:\"Total
+        debt/assets (Recent&nbsp;qtr)&nbsp;(%)\",NavChange:\"Nav change\",OperatingMargin:\"Operating
+        margin&nbsp;(%)\",DPSRecentYear:\"Div per share (Recent&nbsp;yr)\",ANI:\"Earnings
+        after taxes (Recent&nbsp;yr)\",High52Week:\"52w high\",AverageVolume:\"Average
+        volume\",Return13Week:\"13w return\",PriceToCashFlowPerShare:\"Price to cash
+        flow per share\",Price26WeekPercChange:\"26w&nbsp;price change&nbsp;(%)\",QuoteChange:\"Quote
+        change\",ATAXRATE:\"Tax rate (Recent&nbsp;yr)\",NetIncomeChangePerc:\"Net
+        income change&nbsp;(%)\",ReturnOnInvestment5Years:\"Return on investment (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",PE:\"P/E
+        ratio\",ReturnOnInvestmentYear:\"Return on investment (Recent&nbsp;yr)&nbsp;(%)\",Price200DayAverage:\"200d
+        avg price\",DividendNextQuarter:\"Div next quarter\",PriceYTDPercChange:\"YTD&nbsp;price
+        change&nbsp;(%)\",EBITD:\"EBITDA\",ReturnOnInvestmentTTM:\"Return on investment
+        (TTM)&nbsp;(%)\",NavChangePercent:\"Nav change&nbsp;(%)\",EBITDMargin:\"EBITDA
+        margin&nbsp;(%)\",LTDebtToEquityQuarter:\"LT debt/equity (Recent&nbsp;qtr)&nbsp;(%)\",BetaRAS:\"Beta
+        from RAS\",PriceSales:\"Price to sales\",NetAssets:\"Net assets\",ReturnOnEquityTTM:\"Return
+        on equity (TTM)&nbsp;(%)\",CashPerShareYear:\"Cash/share\",ReturnDay:\"1d
+        return\",ReturnOnAssets5Years:\"Return on assets (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",Return52Week:\"52w
+        return\",ForwardPE1Year:\"1y fwd P/E\",NetIncomeGrowthRate5Years:\"5y net
+        income growth rate\",DividendYield:\"Div yield&nbsp;(%)\",Dividend:\"Div from
+        cash flow\",BetaUp:\"Beta up from RAS\",nprice:\"Price from RAS\",LTDebtToCapitalYear:\"LT
+        debt/capital (Recent&nbsp;yr)&nbsp;(%)\",Return260Week:\"260w return\",ReturnOnEquityQuarter:\"Return
+        on equity (Recent&nbsp;qtr)&nbsp;(%)\",ACOGS:\"Cost of goods sold\",LTDebtToAssetsQuarter:\"LT
+        debt/assets (Recent&nbsp;qtr)&nbsp;(%)\",PriceToBook:\"Price to book\",LTDebtToEquityYear:\"LT
+        debt/equity (Recent&nbsp;yr)&nbsp;(%)\",ReturnYTD:\"Return YTD\",ReturnOnEquityYear:\"Return
+        on equity (Recent&nbsp;yr)&nbsp;(%)\",ReturnOnAssetsQuarter:\"Return on assets
+        (Recent&nbsp;qtr)&nbsp;(%)\",TotalDebtToEquityQuarter:\"Total debt/equity
+        (Recent&nbsp;qtr)&nbsp;(%)\",NavPrior:\"Nav prior\",AINTCOV:\"Interest coverage\",EPS:\"EPS\",ReturnOnInvestmentQuarter:\"Return
+        on investment (Recent&nbsp;qtr)&nbsp;(%)\",QuoteLast:\"Last price\",Price50DayAverage:\"50d
+        avg price\",Price4WeekPercChange:\"4w&nbsp;price change&nbsp;(%)\",ReturnOnAssetsYear:\"Return
+        on assets (Recent&nbsp;yr)&nbsp;(%)\",MarketCapRAS:\"Mkt cap from RAS\",Price52WeekPercChange:\"52w&nbsp;price
+        change&nbsp;(%)\",InstitutionalPercentHeld:\"Institutional percent held\",ShortInterestRatioPercent:\"Short
+        interest ratio&nbsp;(%)\",BookValuePerShareYear:\"Book value/share\",ReturnOnEquityPTM:\"Return
+        on equity (PTM)&nbsp;(%)\"};\n_s_Store._asStore._addStrings(_fieldToDisplayNameMap);\n}\nif
+        (_s_Store) {\n_s_Store._allowMultipleInBox = true;\n}\n_regOnLoad(initComparisonPage);\ngoogle.finance.renderRecentQuotes();\n</script>\n</div></div><script>var
+        googlefinance = {i: [\"f.b.id\",\"\",null,0,\"\",0,null,[\"f.b.cf\",\"Upzqnh5ra8Q.en_US.\",0],[],1,[],\"t__8WanaI4PFea3xgIgD\",\"www.google.com\",\"lkkKnnVt-Qg96Wv5Yt3uVFn_LZE:1509752760067\",1]};
+        GF_domReady = 1;</script></body></html>"
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 23:45:51 GMT
+- request:
+    method: get
+    uri: https://google.com/finance?q=MSFT%3BAABA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Location:
+      - https://www.google.com/finance?q=MSFT;AABA
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      Date:
+      - Fri, 03 Nov 2017 23:49:49 GMT
+      Expires:
+      - Sun, 03 Dec 2017 23:49:49 GMT
+      Cache-Control:
+      - public, max-age=2592000
+      Server:
+      - sffe
+      Content-Length:
+      - '239'
+      X-Xss-Protection:
+      - 1; mode=block
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="41,39,38,37,35"
     body:
       encoding: UTF-8
-      string: |
-        "Microsoft Corporation","MSFT",50.16,-1.84,"-3.54%"
-        "Yahoo! Inc.","YHOO",27.97,-1.18,"-4.05%"
-    http_version:
-  recorded_at: Fri, 05 Feb 2016 22:44:54 GMT
-recorded_with: VCR 3.0.1
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>301
+        Moved</TITLE></HEAD><BODY>\n<H1>301 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://www.google.com/finance?q=MSFT;AABA\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 23:49:40 GMT
+- request:
+    method: get
+    uri: https://www.google.com/finance?q=MSFT%3BAABA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Location:
+      - https://finance.google.com/finance?q=MSFT;AABA
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=UTF-8
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      Date:
+      - Fri, 03 Nov 2017 23:49:49 GMT
+      Server:
+      - gws
+      Content-Length:
+      - '243'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - 1P_JAR=2017-11-03-23; expires=Fri, 10-Nov-2017 23:49:49 GMT; path=/; domain=.google.com
+      - NID=116=mEtIZlYTYDfyzmygGo_se2y1o1sr0oYrgT5l7wpFa6pFDimmDwE-G8pCzV1OJcIZ13EKE2CJYSLdoqw-BaTTbi1NGhZS-IwZAqnkzPtD-n4aWRgs-1AkOHg1Wxp8x-Zw;
+        expires=Sat, 05-May-2018 23:49:49 GMT; path=/; domain=.google.com; HttpOnly
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="41,39,38,37,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://finance.google.com/finance?q=MSFT;AABA\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 23:49:40 GMT
+- request:
+    method: get
+    uri: https://finance.google.com/finance?q=MSFT%3BAABA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      Date:
+      - Fri, 03 Nov 2017 23:49:49 GMT
+      Expires:
+      - Fri, 03 Nov 2017 23:49:49 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Set-Cookie:
+      - NID=116=4dK-3m4xh7FUqppKeiIiG2uJ_s9IqPW0MDQT6gzCwzgjhLYx1oaMJ_YxywRpozzSxOLsgfvq_zOoMcCoe3sd-Eu9vanaLIFSe-DP5h1yLqBfV-AIChH2DrezVqO5XicU;Domain=.google.com;Path=/;Expires=Sat,
+        05-May-2018 23:49:49 GMT;HttpOnly
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: "<!DOCTYPE html><html><head><script>(function(){(function(){function
+        e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void
+        0==b)try{window.console.timeStamp(\"CSI/\"+a)}catch(h){}};this.tick(\"start\",null,a)}var
+        a;if(window.performance)var d=(a=window.performance.timing)&&a.responseStart;var
+        f=0<d?new e(d):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var
+        b=window.jstiming.load;0<c&&d>=c&&(b.tick(\"_wtsrt\",void 0,c),b.tick(\"wtsrt_\",\"_wtsrt\",\nd),b.tick(\"tbsd_\",\"wtsrt_\"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick(\"_tbnd\",void
+        0,window.chrome.csi().startE),b.tick(\"tbnd_\",\"_tbnd\",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick(\"_tbnd\",void
+        0,window.external.startE),b.tick(\"tbnd_\",\"_tbnd\",c))),a&&(window.jstiming.pt=a)}catch(g){}})();}).call(this);\n</script><title>Company
+        Comparison - Google Finance</title><meta name=\"Description\" content=\"Compare
+        the latest stock quotes, news and financial metrics forMicrosoft Corporation,
+        Altaba Inc.\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=10\"><link
+        rel=\"canonical\" href=\"https://www.google.com/finance?q=MSFT;AABA\"><link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/finance/f/finance_us-895351966.css\"><link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/_/scs/finance-static/_/ss/k=finance.a.1msu4mph4xh6k.L.X.O/d=0/rs=AGHGApGCzFIkl8UdpAPaXE1FXjt-bEHR6w\"><link
+        rel=\"icon\" type=\"image/vnd.microsoft.icon\" href=\"/finance/favicon.ico\"><style>#gbar,#guser{font-size:13px;padding-right:8px;padding-top:4px
+        !important;}#gbar{padding-left:8px;height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px
+        solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media
+        all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline
+        !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf
+        .gb4{color:#900 !important}\n</style><script></script><script async=\"\" defer=\"\"
+        src=\"//www.google.com/insights/consumersurveys/async_survey?site=xusttduenzseze54mcajwbd6sq\"></script><!--
+        Start GPT Async Tag --><script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script><script>\n
+        \   var gptadslots = [];\n    var googletag = googletag || {cmd:[]};\n  </script><script>\n
+        \ googletag.cmd.push(function() {\n    //Adslot 1 declaration\n    gptadslots.push(googletag.defineSlot('/60656358/com.gf.company',
+        [[300,250]], 'div-gpt-ad-4209476-1')\n                             .setForceSafeFrame(true)\n
+        \                            .addService(googletag.pubads()));\n    //Adslot
+        2 declaration\n    gptadslots.push(googletag.defineSlot('/60656358/com.gf.home',
+        [[300,250]], 'div-gpt-ad-4209476-2')\n                             .setForceSafeFrame(true)\n
+        \                            .addService(googletag.pubads()));\n    //Adslot
+        3 declaration\n    gptadslots.push(googletag.defineSlot('/60656358/com.gf.portfolio',
+        [[300,250]], 'div-gpt-ad-4209476-3')\n                             .setForceSafeFrame(true)\n
+        \                            .addService(googletag.pubads()));\n\n    googletag.pubads().enableSingleRequest();\n
+        \   googletag.enableServices();\n  });\n  </script><!-- End GPT Async Tag
+        --><script>\n      function _rpt() {}\n      function _tck() {}\n    </script><script>\n
+        \   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n
+        \   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n
+        \   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n
+        \   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\n
+        \   ga('create', 'UA-40765809-1', {\n      'allowLinker': true,\n      'cookiePath':
+        '/finance'\n    });\n    ga('send', 'pageview');\n    </script></head><body><div
+        class=fjfe&#45;bodywrapper><div id=fjfe&#45;real&#45;body class=g-doc><input
+        type=\"text\" name=\"hist_state\" id=\"hist_state\" style=\"display:none;\"><iframe
+        id=\"hist_frame\" name=\"hist_frame\" class=invfr tabindex=\"-1\"></iframe><iframe
+        src=\"/_/scs/finance-static/_/js/k=finance.a.en_US.Upzqnh5ra8Q.O/m=b/rt=h/d=0/rs=AGHGApEK7U1PJ67cp--3Ay1lYGnaQQb8fg\"
+        class=invfr tabindex=\"-1\"></iframe><div id=gbar><nobr><a class=gb1 href=\"https://www.google.com/webhp?tab=ew\">Search</a>
+        <a class=gb1 href=\"http://www.google.com/imghp?hl=en&tab=ei\">Images</a>
+        <a class=gb1 href=\"https://maps.google.com/maps?hl=en&tab=el\">Maps</a> <a
+        class=gb1 href=\"https://play.google.com/?hl=en&tab=e8\">Play</a> <a class=gb1
+        href=\"https://www.youtube.com/?gl=US&tab=e1\">YouTube</a> <a class=gb1 href=\"https://news.google.com/nwshp?hl=en&tab=en\">News</a>
+        <a class=gb1 href=\"https://mail.google.com/mail/?tab=em\">Gmail</a> <a class=gb1
+        href=\"https://drive.google.com/?tab=eo\">Drive</a> <a class=gb1 style=\"text-decoration:none\"
+        href=\"https://www.google.com/intl/en/options/\"><u>More</u> &raquo;</a></nobr></div><div
+        id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span
+        id=gbe></span><a  href=\"http://www.google.com/support/finance?hl=en\" class=gb4>Help</a>
+        | <a target=_top id=gb_70 href=\"https://accounts.google.com/ServiceLogin?service=finance&passive=1209600&continue=https://finance.google.com/finance?q%3DMSFT;AABA&followup=https://finance.google.com/finance?q%3DMSFT;AABA\"
+        class=gb4>Sign in</a></nobr></div><div class=gbh style=left:0></div><div class=gbh
+        style=right:0></div><div id=flash&#45;disclaimer style=\"display:none;\">Adobe
+        Flash Player is required for interactive charts.&nbsp;<a href=\"http://www.adobe.com/go/getflashplayer/\">Allow</a></div><div
+        id=fjfe&#45;click&#45;wrapper><script>\n(function() {\n  var l = window.location;\n
+        \ var q = l.search ? l.search.substr(1) : '';\n  var h = l.hash ? l.hash.substr(1)
+        : '';\n  var p = '/finance';\n  var ss = 'stockscreener';\n  var conn = window.history
+        && window.history.pushState ? '/' : '#';\n  if (l.pathname == p + '/' + ss)
+        {\n    if (h) l.href = p + conn + ss + '?' + q + '&' + h;\n  } else if (l.pathname
+        != p && h) {\n    l.href = p + l.hash;\n  }\n  if (h) {\ndocument.getElementById('fjfe-click-wrapper').style.display
+        = 'none';\n  }\n})();\n</script><div id=gf-head class=\"g-section g-tpl-75-25
+        g-split\"><div class=\"g-unit g-first\"><div class=fjfe&#45;logo><a href=\"/finance/?ei=nQD9WfHgGc65eqqviIAF\"><img
+        src=\"/finance/f/logo_material-4224265490.png\" alt=\"Google Finance\"></a></div><div
+        id=gf-search class=fjfe&#45;search><form method=\"get\" action=\"/finance\"
+        autocomplete=\"off\"><input class=fjfe&#45;searchbox&#45;input name=q type=text
+        tabindex=1 value=\"MSFT;AABA\"><span class=fjfe&#45;searchbox&#45;button&#45;wrapper><span
+        class=fjfe&#45;searchbox&#45;button&#45;wrapper2><input class=fjfe&#45;searchbox&#45;button
+        type=submit tabindex=2 value=\"Get quotes\"></span></span><input type=hidden
+        name=\"ei\" value=\"nQD9WfHgGc65eqqviIAF\"></form></div></div><div class=\"g-unit
+        fjfe-promo\"><div id=\"ad2-target\" class=\"id-ad2-target\"></div></div></div><div
+        class=elastic><div id=app class=\"g-section g-tpl-left-11p4em\"><div class=\"g-unit
+        g-first\"><div id=gf-nav><div class=fjfe&#45;nav&#45;nav><ul class=fjfe&#45;nav
+        id=navmenu><li class=fjfe&#45;nav&#45;item><a href=\"/finance?ei=nQD9WfHgGc65eqqviIAF\"><div>Markets</div></a><li
+        class=fjfe&#45;nav&#45;item><a href=\"/finance/market_news?ei=nQD9WfHgGc65eqqviIAF\"><div>News</div></a><li
+        class=fjfe&#45;nav&#45;item><a href=\"/finance/portfolio?action=view&amp;ei=nQD9WfHgGc65eqqviIAF\"><div>Portfolios</div></a><li
+        class=fjfe&#45;nav&#45;item><a href=\"/finance/stockscreener?ei=nQD9WfHgGc65eqqviIAF\"><div>Stock
+        screener</div></a><li class=fjfe&#45;nav&#45;item><a href=\"/finance/domestic_trends?ei=nQD9WfHgGc65eqqviIAF\"><div>Google
+        Domestic Trends</div></a></ul></div><div class=\"fjfe-recentquotes fjfe-recentquotes-noquote\"><h4>Recent
+        Quotes <span class=\"fjfe-recentquotes-duration\">(<a href=\"//www.google.com/history/optout?hl=en\">30
+        days</a>)</span></h4><div class=fjfe&#45;recentquotes&#45;noquote&#45;notification>You
+        have no recent quotes</div><div class=fjfe&#45;recentquotes&#45;quotes><div
+        class=\"fjfe-toggle fjfe-toggle-button\"><span class=fjfe&#45;chg&#45;toggle>chg</span>
+        | <span class=fjfe&#45;perc&#45;toggle>%</span></div><div class=fjfe&#45;table&#45;div><table
+        class=fjfe&#45;recentquotes&#45;table id=rq width=100%></table></div></div></div></div><script>var
+        _cleardot = 'data:image\\/gif;base64,R0lGODlhAQABAIAAAP\\/\\/\\/\\/\\/\\/\\/yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw\\x3d\\x3d';\n
+        \   var google = google || {};\n    google.finance = google.finance || {};\n
+        \   google.finance.gce = false ;</script><script src=\"/finance/f/sfe-opt-4109386599.js\"></script><script>\n
+        \     _regOnLoad = function(f) {\n        if (document.readyState == 'complete')
+        {\n          f && f();\n        } else {\n          // Window.attachEvent()
+        for IE8 and below compatability.\n          var addEventFunction = window.attachEvent
+        ||\n              window.addEventListener || function(ignored, f) { f(); };\n
+        \         var event = window.attachEvent ? 'onload' : 'load';\n          f
+        && addEventFunction(event, f);\n        }\n      };\n    \n      google.finance.renderRecentQuotes
+        = function() {};\n    </script></div><div class=g&#45;unit id=gf-viewc><div
+        class=fjfe&#45;content>\n<div class=g-wrap>\n<div class=\"g-section sfe-break-bottom-8\">\n<div
+        id=\"comparisonheader\" class=\"g-tpl-67-33 g-split hdg top appbar-hide\">\n<div
+        class=\"g-unit g-first\">\n<h3 class=pagetitle>Compare companies\n</h3>&nbsp;&nbsp;\n<a
+        href=\"/finance/portfolio?action=add&amp;addticker=NASDAQ%3AMSFT%2CNASDAQ%3AAABA&ei=nQD9WfHgGc65eqqviIAF\"
+        class=norm>Watch these stocks</a>\n</div>\n<div class=\"g-unit norm\">Find
+        more results for<b>\n<a href=\"?noIL=1&q=MSFT%3BAABA&ei=nQD9WfHgGc65eqqviIAF\"
+        id=searchmore>MSFT;AABA</a></b>\n</div>\n</div>\n<div id=compare-bar-wrapper\n
+        \            class=\"id-compare-bar-wrapper cc-compare-bar\">\n<div id=compare-bar
+        class=\"id-compare-bar g-section\"></div>\n</div>\n<div class=\"g-section
+        g-tpl-right-1 sfe-break-top-5\">\n<div class=\"g-unit g-first\">\n<div class=g-c>\n<div>\n<div
+        id=newstabsgroup>\n<div class=\"g-section g-tpl-25-75 g-split hdg\">\n<div
+        class=\"g-unit g-first\">\n<h3>News</h3>\n</div>\n<div class=g-unit>\n<div
+        id=news-panel-tabs class=\"id-news-tabs\" style=\"display:none;\">\n<div class=\"goog-tab
+        goog-tab-selected\">\n<a id=news_tab_title class=t>\n<b class=t><b class=t>Relevance</b></b></a>\n</div>\n<div
+        class=goog-tab>\n<a id=news_by_date_tab_title class=t>\n<b class=t><b class=t>Date</b></b></a>\n</div>\n</div>\n</div>\n</div>\n<div
+        id=tabs-clear class=\"id-tabs-clear goog-tab-bar-clear hide\"></div>\n<div
+        id=news_div_cont class=id-news_div_cont style=\"display:none;\"></div>\n<div
+        id=news_by_date_div_cont class=id-news_by_date_div_cont style=\"display:none;\"></div>\n</div>\n</div>\n</div>\n</div>\n<div
+        class=g-unit>\n<div id=top-section class=\"g-c sfe-break-right\">\n<div id=chart-section>\n<div
+        id=chart_anchor class=id-chart_anchor></div>\n<div class=id-chart-footer>\n<div
+        class=\"g-section g-tpl-67-33 g-split sfe-break-bottom-8 overflow-floatfix\">\n<div
+        class=\"g-unit g-first\"><div class=\"id-chart-footer-links hide\">\n<span
+        style=\"white-space:nowrap;\">\n<img width=\"16\" hight=\"9\" alt=\"Link to
+        chart icon.\"\n            class=\"linktochart-img SP_link\"\n            src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"
+        />\n<span class=linktochart-link>\nLink to this view</span>\n</span>\n</div></div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div
+        class=\"g-section\">\n<div class=\"hdg\">\n<div class=\"g-section g-tpl-50-50
+        g-split gf-control\">\n<div class=\"g-unit g-first\">\nShow:\n<select id=related-select
+        class=id-related-select>\n<option value=mrq >\nMost Recent Quarter\n</option>\n<option
+        value=mra selected>\nMost Recent Annual\n</option>\n</select>\n</div>\n<div
+        class=g-unit>\n<span class=\"id-related-edit-col linkbtn\">Add or remove columns</span>\n<button
+        class=id-related-save style=\"display:none\">Save changes</button>\n<button
+        class=id-related-cancel style=\"display:none\">Cancel</button>\n</div>\n</div>\n</div>\n<div
+        class=\"id-related-table gf-table-scroll-x jfk-scrollbar\"\n       style=\"padding-bottom:15px;\">\n</div>\n</div>\n</div>\n</div></div></div></div></div><div
+        id=gf-foot><div id=fjfe&#45;edition&#45;links class=fjfe&#45;footer&#45;links>Google
+        Finance Beta available in: <a href=\"http://www.google.com.hk/finance?ei=nQD9WfHgGc65eqqviIAF\"
+        class=\"fjfe-edition-link\">Hong Kong</a> - <a href=\"http://www.google.ca/finance?ei=nQD9WfHgGc65eqqviIAF\"
+        class=\"fjfe-edition-link\">Canada</a> - <a href=\"http://www.google.com/finance?ei=nQD9WfHgGc65eqqviIAF\"
+        class=\"fjfe-edition-link\">U.S.</a> - <a href=\"http://www.google.com.hk/finance?hl=zh-CN&ei=nQD9WfHgGc65eqqviIAF\"
+        class=\"fjfe-edition-link\">China</a> - <a href=\"http://www.google.co.uk/finance?ei=nQD9WfHgGc65eqqviIAF\"
+        class=\"fjfe-edition-link\">U.K.</a></div><p class=fjfe&#45;footer&#45;disclaimer>Information
+        is provided \"as is\" and solely for informational purposes, not for trading
+        purposes or advice, and may be delayed.<br>To see all exchange delays, please
+        <a href=\"http://www.google.com/intl/en/googlefinance/disclaimer/?ei=nQD9WfHgGc65eqqviIAF\"
+        class=\"fjfe-secondary-link fjfe-no-sticky-params\"> see disclaimer</a>.</p><div
+        class=fjfe&#45;footer&#45;links>&copy;2017 Google - <a href=\"http://www.google.com?hl=en&ei=nQD9WfHgGc65eqqviIAF\">Google
+        Home</a> - <a href=\"http://googlefinanceblog.blogspot.com?ei=nQD9WfHgGc65eqqviIAF\">Blog</a>
+        - <a href=\"http://support.google.com/finance?hl=en&ei=nQD9WfHgGc65eqqviIAF\">Help</a>
+        - <a href=\"http://support.google.com/finance?ctx=report&hl=en&ei=nQD9WfHgGc65eqqviIAF\">Report
+        a Problem</a> - <a href=\"http://www.google.com/intl/en/policies/privacy/?ei=nQD9WfHgGc65eqqviIAF\">Privacy
+        Policy</a> - <a href=\"http://www.google.com/intl/en/policies/terms/?ei=nQD9WfHgGc65eqqviIAF\">Terms
+        of Service</a></div></div>\n<script>\nvar _ticker = 'NASDAQ:MSFT';\nsetCompanyId(358464);\nvar
+        _slHeight = 302;\nvar _external_target = \"\";\nvar _prefs=_prefs||{};_prefs.hash=\"\";\n_prefs.cc_compare=_prefs.cc_compare||{};\n_s_Store._numToDisplay
+        = 4;\n_comparison_charts_Store._numToDisplay = 7;\nfunction initComparisonPage()
+        {\n_chartConfigObject = {};\n_minZoomDays = 1;\n_chartConfigObject.hasNews
+        = true;\n_chartConfigObject.displayName = 'MSFT';\n_chartConfigObject.minZoomDaysNormal
+        = _minZoomDays;\n_chartConfigObject.volume = false;\n_chartConfigObject.defaultZoomDays
+        = 3;\n_chartConfigObject.hasExtendedHours = 'false';\n_chartConfigObject.enableIndicator
+        = true;\n_chartConfigObject.displayNewsPins = 'true';\n_chartConfigObject.inComparisonPage
+        = true;\n_chartConfigObject.enableChartTypeButtons = false;\nvar separator
+        = '';\n_chartConfigObject.compareTo = '';\n_chartConfigObject.compareToDisplayName
+        = '';\n_chartConfigObject.compareToDiffMarketSessions = '';\nvar relatedTickers
+        = [];\nrelatedTickers.push({\nid: '358464',\nticker: 'NASDAQ:MSFT',\nname:
+        'MSFT',\ntimezone_offset: -18000,\ndifferent_market_session: false,\nchecked:
+        true\n});\n_chartConfigObject.compareTo += separator + 'NASDAQ:MSFT';\n_chartConfigObject.compareToDisplayName
+        += separator + 'MSFT';\n_chartConfigObject.compareToDiffMarketSessions +=
+        separator + '0';\nseparator = ';'\nrelatedTickers.push({\nid: '658890',\nticker:
+        'NASDAQ:AABA',\nname: 'AABA',\ntimezone_offset: -18000,\ndifferent_market_session:
+        false,\nchecked: true\n});\n_chartConfigObject.compareTo += separator + 'NASDAQ:AABA';\n_chartConfigObject.compareToDisplayName
+        += separator + 'AABA';\n_chartConfigObject.compareToDiffMarketSessions +=
+        separator + '0';\nseparator = ';'\n_emitFlashChart(\"/finance/s/n-VxNKK74DU/chart9.swf?hl=en&gl=us\",\n_ticker,
+        _chartConfigObject,\"http:\\x2F\\x2Ffinance.google.com:80\",\"chart_anchor\",
+        false, \"MSFT\\x3BAABA\", relatedTickers);\ngoogle.finance.onComparisonLoad();\n_initAutoFocus();\n_ac_register(function
+        (input, event) {\nif (input.id == 'add_comparison_symbol') {\n_comparison_charts_Store.baseTicker
+        = _ticker;\nreturn _comparison_charts_Store;\n}\n});\n}\nvar _chartConfigObject;\nvar
+        _cleardot;\nvar _companyName;\nvar _eventid = 'nQD9WfHgGc65eqqviIAF';\nvar
+        _expid;\nvar _external_target;\nvar _localDomain = 'www.google.com';\nvar
+        _minZoomDays;\nvar _minZoomDaysNoIntraDay;\nvar _prefs;\nvar _ticker;\nvar
+        _urlSuffix;\nvar google = google || {};\ngoogle.finance = google.finance ||
+        {};\ngoogle.finance.data = {\"common\":{\"rq\":{\"ct\":\"\"},\"up\":\"chg\",\"down\":\"chr\",\"linktargetInternal\":\"\",\"hash\":\"\"},\"company\":{\"news\":{\"clusters\":[{\"nrel\":4,\"idx\":0,\"id\":\"52779661091540\",\"lead_story_url\":\"https://investorplace.com/2017/11/7-tech-etfs-that-will-soar-microsoft-corporation-msft-blockbuster-earnings-beat-ggsyn/\",\"a\":[{\"t\":\"7
+        Tech ETFs That Will Soar on Microsoft Corporation (MSFT) Blockbuster ...\",\"u\":\"https://investorplace.com/2017/11/7-tech-etfs-that-will-soar-microsoft-corporation-msft-blockbuster-earnings-beat-ggsyn/\",\"s\":\"Investorplace.com\",\"sp\":\"After
+        the closing bell on Thursday, Microsoft Corporation (NASDAQ:MSFT) the world\\u0026#39;s
+        largest software maker, delighted investors with stellar fiscal first-quarter
+        2018 results on strong performance in its fast-growing cloud business.\",\"d\":\"12
+        hours ago\",\"tt\":\"1509709050\",\"usg\":\"AFQjCNF4zGHzf1E4Dnk_k_CyOexg49Mwtw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://investorplace.com/2017/11/7-tech-etfs-that-will-soar-microsoft-corporation-msft-blockbuster-earnings-beat-ggsyn/\\u0026cid=52779661091540\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNG_3P3_6vSBw7GzSgGobBzMJNo31w\"}],\"lead_story_doc_id\":\"8163846207052040325\"},{\"nrel\":214,\"idx\":1,\"id\":\"52779652066678\",\"lead_story_url\":\"https://money.usnews.com/investing/stock-market-news/articles/2017-10-27/theres-more-upside-ahead-for-microsoft-corporation-msft\",\"a\":[{\"t\":\"There\\u0026#39;s
+        More Upside Ahead For Microsoft Corporation (MSFT)\",\"u\":\"https://money.usnews.com/investing/stock-market-news/articles/2017-10-27/theres-more-upside-ahead-for-microsoft-corporation-msft\",\"s\":\"U.S.
+        News \\u0026 World Report\",\"sp\":\"Microsoft reached its goal of $20 billion
+        in annualized cloud revenue on the quarter. (Getty Images). Microsoft Corporation
+        (Nasdaq: MSFT) was to open up 4 percent Friday from the previous day\\u0026#39;s
+        close, thanks to bullish investor sentiment and an ...\",\"d\":\"Oct 27, 2017\",\"tt\":\"1509098175\",\"usg\":\"AFQjCNHpIGR8oAGoUb48BdxrQXimGN1NJQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://money.usnews.com/investing/stock-market-news/articles/2017-10-27/theres-more-upside-ahead-for-microsoft-corporation-msft\\u0026cid=52779652066678\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNE7EtsoV0S7PXI6GIBWx3MrLrXxxQ\"},{\"t\":\"Microsoft
+        Corporation (MSFT) Q1 2018 Earnings Top Expectations\",\"u\":\"https://investorplace.com/2017/10/microsoft-corporation/\",\"s\":\"Investorplace.com\",\"sp\":\"The
+        tech giant kicked off its fiscal 2018 with an impressive three months, including
+        earnings of 84 cents per share on an adjusted basis.\",\"d\":\"Oct 26, 2017\",\"tt\":\"1509052950\",\"usg\":\"AFQjCNEvPrYrj4gc04nUlFi6XP_SQqr08A\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://investorplace.com/2017/10/microsoft-corporation/\\u0026cid=52779652066678\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNE33ByqszjqtnkkD0zGZ1VMK1GfrQ\"},{\"t\":\"Microsoft
+        Corporation FQ1 2018 Earnings Boosts Shares\",\"u\":\"http://www.valuewalk.com/2017/10/microsoft-corporation-fq1-2018-earnings-boosts-shares/\",\"s\":\"ValueWalk\",\"sp\":\"Microsoft
+        Corporation (NASDAQ:MSFT) FQ1 2018 earnings were released after closing bell
+        tonight, and the company posted earnings of 84 cents per share, a 17% increase
+        from last year, on $24.5 billion in sales, a 12% year-over-year increase.\",\"d\":\"Oct
+        26, 2017\",\"tt\":\"1509050250\",\"usg\":\"AFQjCNGbQFdGa82KbptAtVWXI59SUZtIJw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.valuewalk.com/2017/10/microsoft-corporation-fq1-2018-earnings-boosts-shares/\\u0026cid=52779652066678\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNEmiRqJkqEyDQ6YHNAeKSYTzLfZnw\"}],\"lead_story_doc_id\":\"13608090844847642229\"},{\"nrel\":270,\"idx\":2,\"id\":\"52779657373198\",\"lead_story_url\":\"https://investorplace.com/2017/11/microsoft-corporation-msft-stock-cloud/\",\"a\":[{\"t\":\"Microsoft
+        Corporation Stock Reinvents Itself With the Cloud\",\"u\":\"https://investorplace.com/2017/11/microsoft-corporation-msft-stock-cloud/\",\"s\":\"Investorplace.com\",\"sp\":\"Just
+        when I thought that Microsoft Corporation (NASDAQ:MSFT) might become obsolete
+        - a few years ago, anyway - it launched several new initiatives.\",\"d\":\"Nov
+        1, 2017\",\"tt\":\"1509549075\",\"usg\":\"AFQjCNE8N_HyPmp3kj2QMzDrNsFveSbX-w\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://investorplace.com/2017/11/microsoft-corporation-msft-stock-cloud/\\u0026cid=52779657373198\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNHFe72Hm1kbdQEMk3wgXvKt54v6gw\"},{\"t\":\"Microsoft:
+        Still Not Overvalued At This Price\",\"u\":\"https://seekingalpha.com/article/4119145-microsoft-still-overvalued-price\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"Moreover, indications suggest that it is quite likely we
+        will see further earnings growth ahead. I continue to remain bullish on Microsoft.\",\"d\":\"Nov
+        1, 2017\",\"tt\":\"1509560550\",\"usg\":\"AFQjCNFIgKPV0RUxM1hYHuzY6G4ycRjqsw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4119145-microsoft-still-overvalued-price\\u0026cid=52779657373198\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNFbw9OtQI0BWbgfU-IRC9tsg1VZTg\"}],\"lead_story_doc_id\":\"17881844415154482415\"},{\"nrel\":57,\"idx\":3,\"id\":\"52779659820075\",\"lead_story_url\":\"https://www.investorplace.com/2017/11/msft-stock-bear-case/\",\"a\":[{\"t\":\"How
+        Microsoft Corporation Stock Earnings Destroy the Bear Case\",\"u\":\"https://www.investorplace.com/2017/11/msft-stock-bear-case/\",\"s\":\"Investorplace.com\",\"sp\":\"I
+        admit it. I was wrong. I\\u0026#39;ve spent most of the year arguing against
+        Microsoft Corporation (NASDAQ:MSFT) stock, seeing the MSFT stock price as
+        pricing in growth the company simply couldn\\u0026#39;t drive.\",\"d\":\"11
+        hours ago\",\"tt\":\"1509713100\",\"usg\":\"AFQjCNHVECIpu-Dgb5aZkJ7MImhUrgkdxg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.investorplace.com/2017/11/msft-stock-bear-case/\\u0026cid=52779659820075\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNGPprZXY5XiUUxDY35jg0bRyYHtrw\"},{\"t\":\"3
+        Takeaways From Microsoft Corporation\\u0026#39;s First-Quarter Earnings Call\",\"u\":\"https://www.fool.com/investing/2017/11/01/3-takeaways-from-microsoft-corporations-first-quar.aspx\",\"s\":\"Motley
+        Fool\",\"sp\":\"Microsoft (NASDAQ:MSFT) impressed investors last week with
+        revenue for its first fiscal quarter of 2018 coming in about $1 billion higher
+        than estimates.\",\"d\":\"Nov 2, 2017\",\"tt\":\"1509580800\",\"usg\":\"AFQjCNGprHUhMdwKHn9hwkmkFHoo7opprA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.fool.com/investing/2017/11/01/3-takeaways-from-microsoft-corporations-first-quar.aspx\\u0026cid=52779659820075\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNGM0s3niBNSWO60OULp2tifgLbkpw\"}],\"lead_story_doc_id\":\"8663791017464837083\"},{\"nrel\":81,\"idx\":4,\"id\":\"52779659592248\",\"lead_story_url\":\"https://stocknewsjournal.com/2017/11/03/traders-secrets-on-twenty-first-century-fox-inc-foxa-altaba-inc-aaba/\",\"a\":[{\"t\":\"Traders
+        Secrets on Twenty-First Century Fox, Inc. (FOXA), Altaba Inc. (AABA)\",\"u\":\"https://stocknewsjournal.com/2017/11/03/traders-secrets-on-twenty-first-century-fox-inc-foxa-altaba-inc-aaba/\",\"s\":\"StockNewsJournal\",\"sp\":\"Twenty-First
+        Century Fox, Inc. (NASDAQ:FOXA) plunged -0.65% with the closing price of $25.81.
+        The overall volume in the last trading session was 10.08 million shares.\",\"d\":\"7
+        hours ago\",\"tt\":\"1509724575\",\"usg\":\"AFQjCNHeuI185C1S8Fbu57dKCidMXgJB8w\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://stocknewsjournal.com/2017/11/03/traders-secrets-on-twenty-first-century-fox-inc-foxa-altaba-inc-aaba/\\u0026cid=52779659592248\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNFDGFbEGrajGo3ZJyFjl8x2OZto8A\"}],\"lead_story_doc_id\":\"17884582937019496412\"},{\"nrel\":125,\"idx\":5,\"id\":\"52779660556107\",\"lead_story_url\":\"https://www.equities.com/news/microsoft-corporation-msft-closes-0-11-up-on-the-day-for-november-03\",\"a\":[{\"t\":\"Microsoft
+        Corporation (MSFT) Closes 0.11% Up on the Day for November 03\",\"u\":\"https://www.equities.com/news/microsoft-corporation-msft-closes-0-11-up-on-the-day-for-november-03\",\"s\":\"Equities.com\",\"sp\":\"Shares
+        of Microsoft Corporation (MSFT) ended the trading day Friday at $84.14, representing
+        a move of 0.11%, or $0.09 per share, on volume of 17.61 million shares.\",\"d\":\"2
+        hours ago\",\"tt\":\"1509744150\",\"usg\":\"AFQjCNHdBbbv0styzvCS3agkPSXvHFysTg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.equities.com/news/microsoft-corporation-msft-closes-0-11-up-on-the-day-for-november-03\\u0026cid=52779660556107\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNGaDAdUPZN3pODtawTGzolA525ccQ\"},{\"t\":\"Earnings
+        Clues on Microsoft Corporation (MSFT), Marathon Oil Corporation (MRO ...\",\"u\":\"https://stocknewsjournal.com/2017/11/03/earnings-clues-on-microsoft-corporation-msft-marathon-oil-corporation-mro-analysts-predictions/\",\"s\":\"StockNewsJournal\",\"sp\":\"Microsoft
+        Corporation (NASDAQ:MSFT) gained 1.05% with the closing price of $84.05. The
+        overall volume in the last trading session was 23.97 million shares.\",\"d\":\"6
+        hours ago\",\"tt\":\"1509727950\",\"usg\":\"AFQjCNEBEEaw_gpREkbiLPP9JgXXCEGcmg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://stocknewsjournal.com/2017/11/03/earnings-clues-on-microsoft-corporation-msft-marathon-oil-corporation-mro-analysts-predictions/\\u0026cid=52779660556107\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNGQPkC6TXQuTz5it39LvMzl28jEmw\"},{\"t\":\"Revisit
+        the buy and-hold case for Microsoft Corporation (MSFT)\",\"u\":\"https://stocknewsgazette.com/2017/11/03/revisit-the-buy-and-hold-case-for-microsoft-corporation-msft/\",\"s\":\"StockNewsGazette\",\"sp\":\"Microsoft
+        Corporation (NASDAQ:MSFT) showed no change in yesterday\\u0026#39;s session.
+        The stock price went upward in 7 of the last 10 days and has generated 7.18%
+        during the last two weeks.\",\"d\":\"4 hours ago\",\"tt\":\"1509736050\",\"usg\":\"AFQjCNHdRcPow38OoXnai2haV44y3T3deg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://stocknewsgazette.com/2017/11/03/revisit-the-buy-and-hold-case-for-microsoft-corporation-msft/\\u0026cid=52779660556107\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNGtLJpHqJ1TOOhU6t5bVN-H4OMYJQ\"}],\"lead_story_doc_id\":\"11476427934635234980\"},{\"nrel\":18,\"idx\":6,\"id\":\"52779629555642\",\"lead_story_url\":\"https://www.fool.com/investing/2017/10/07/why-i-love-microsoft-corporation.aspx\",\"a\":[{\"t\":\"Why
+        I Love Microsoft Corporation\",\"u\":\"https://www.fool.com/investing/2017/10/07/why-i-love-microsoft-corporation.aspx\",\"s\":\"Motley
+        Fool\",\"sp\":\"Before Satya Nadella took over as CEO, Microsoft (NASDAQ:MSFT)
+        had become a slowly dying relic trapped in the past. The company was not in
+        any danger of going out of business, but it was no longer an innovator.\",\"d\":\"Oct
+        7, 2017\",\"tt\":\"1507389750\",\"usg\":\"AFQjCNEB6fqEraB5F6G_Dut4rWCqCOlUKQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.fool.com/investing/2017/10/07/why-i-love-microsoft-corporation.aspx\\u0026cid=52779629555642\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNGQEfLFij37P4oTMKURCOIAN3HY9g\"},{\"t\":\"Microsoft:
+        Azure fuels Dividend Growth\",\"u\":\"https://seekingalpha.com/article/4112236-microsoft-azure-fuels-dividend-growth\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"Microsoft\\u0026#39;s stock has been one of the best performers
+        in recent years easily outperforming the S\\u0026amp;P 500. Satya Nadella,
+        Microsoft\\u0026#39;s CEO, has reignited the company\\u0026#39;s growth engine,
+        benefiting income and growth investors alike.\",\"d\":\"Oct 7, 2017\",\"tt\":\"1507379625\",\"usg\":\"AFQjCNFIVHRnsRNsF7YCgYxcXJNvjHeGOQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4112236-microsoft-azure-fuels-dividend-growth\\u0026cid=52779629555642\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNFqqeXQT2zX3G1hVNJbsK78OwVh6g\"}],\"lead_story_doc_id\":\"5625810628276148614\"},{\"nrel\":239,\"idx\":7,\"id\":\"52779642766566\",\"lead_story_url\":\"https://investorplace.com/2017/10/microsoft-corporation-stock-bulls-should-continue-celebration/\",\"a\":[{\"t\":\"Why
+        Microsoft Corporation Stock Bulls Should Continue Their Celebration\",\"u\":\"https://investorplace.com/2017/10/microsoft-corporation-stock-bulls-should-continue-celebration/\",\"s\":\"Investorplace.com\",\"sp\":\"It\\u0026#39;s
+        still not too late to buy into a very friendly-looking trend off and on the
+        price chart of Microsoft Corporation (NASDAQ:MSFT).\",\"d\":\"Oct 20, 2017\",\"tt\":\"1508510925\",\"usg\":\"AFQjCNHAmbq5GRTQpNxVMbxyCLZvFPuWuw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://investorplace.com/2017/10/microsoft-corporation-stock-bulls-should-continue-celebration/\\u0026cid=52779642766566\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNE9qunt56hG5ZRP-2nR4CQW8ojzKg\"},{\"t\":\"Microsoft
+        Corporation (MSFT) Closes 1.16% Up on the Day for October 20\",\"u\":\"https://www.equities.com/news/microsoft-corporation-msft-closes-1-16-up-on-the-day-for-october-20\",\"s\":\"Equities.com\",\"sp\":\"Shares
+        of Microsoft Corporation (MSFT) ended the trading day Friday at $78.81, representing
+        a move of 1.16%, or $0.9 per share, on volume of 22.8 million shares.\",\"d\":\"Oct
+        20, 2017\",\"tt\":\"1508535006\",\"usg\":\"AFQjCNF_gtYALxgibvtRImbl6VXy72-jQg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.equities.com/news/microsoft-corporation-msft-closes-1-16-up-on-the-day-for-october-20\\u0026cid=52779642766566\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNGuoxiszDSXQNsHNIfWfyRhXmR79g\"},{\"t\":\"Is
+        It Time to go for Quanta Services, Inc. (PWR), Microsoft Corporation (MSFT)?\",\"u\":\"https://stocknewsjournal.com/2017/10/19/is-it-time-to-go-for-quanta-services-inc-pwr-microsoft-corporation-msft/\",\"s\":\"StockNewsJournal\",\"sp\":\"Quanta
+        Services, Inc. (NYSE:PWR) plunged -0.13% with the closing price of $37.40.
+        The overall volume in the last trading session was 1.03 million shares.\",\"d\":\"Oct
+        19, 2017\",\"tt\":\"1508436000\",\"usg\":\"AFQjCNFLZhnUQQC5DiIz3DCfwgBSEnDAfA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://stocknewsjournal.com/2017/10/19/is-it-time-to-go-for-quanta-services-inc-pwr-microsoft-corporation-msft/\\u0026cid=52779642766566\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNFP7hFOYUg4wOYp5IW3WKhoz3rSJw\"}],\"lead_story_doc_id\":\"9246946420817463084\"},{\"idx\":8,\"id\":\"0\",\"lead_story_url\":\"https://seekingalpha.com/news/3306413-microsoft-working-ai-chips\",\"a\":[{\"t\":\"Microsoft
+        is working on AI chips\",\"u\":\"https://seekingalpha.com/news/3306413-microsoft-working-ai-chips\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"Marking its first foray into AI chips, Microsoft (NASDAQ:MSFT)
+        is working on a prototype for its next generation HoloLens headset, allowing
+        it to do things like recognize objects in its line of sight.\",\"d\":\"Nov
+        1, 2017\",\"tt\":\"1509526125\",\"usg\":\"AFQjCNHyduYxAnNjNZ_bFylsnKES9zgioA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/news/3306413-microsoft-working-ai-chips\\u0026cid=0\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNF-E3Dk7koptt9GaaR7ZVjIXYJGqA\"}],\"lead_story_doc_id\":\"9349455404937406274\"},{\"nrel\":85,\"idx\":9,\"id\":\"52779654918171\",\"lead_story_url\":\"https://seekingalpha.com/article/4118106-2-important-signals-microsofts-earnings\",\"a\":[{\"t\":\"2
+        Important Signals From Microsoft\\u0026#39;s Earnings\",\"u\":\"https://seekingalpha.com/article/4118106-2-important-signals-microsofts-earnings\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"As Microsoft (MSFT) comes out of its first quarter 2018 earnings
+        call after market close on Thursday, October 26, there are a couple of things
+        I\\u0026#39;d like to cover.\",\"d\":\"Oct 30, 2017\",\"tt\":\"1509380325\",\"usg\":\"AFQjCNE9LQr8WdVKpK5a_A3TXPd0_ueUFA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4118106-2-important-signals-microsofts-earnings\\u0026cid=52779654918171\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNGSgE3RHdGfNlRRQ1zQc8xD1m021Q\"},{\"t\":\"Microsoft
+        Corporation (NASDAQ:MSFT) Azure Is Growing Twice as Fast as Its ...\",\"u\":\"https://www.libraryforsmartinvestors.com/2017/10/microsoft-corporation-nasdaqmsft-azure-growing-twice-fast-rival-amazon-com-inc-nasdaqamzn-web-services/41372429.htm\",\"s\":\"Library
+        For Smart Investors\",\"sp\":\"Amazon.com, Inc., NASDAQ:AMZN, AWS, Microsoft
+        Corporation, By Benajmin P. Griner, Philip J. Butler (We are the original
+        owners of this file.\",\"d\":\"Oct 30, 2017\",\"tt\":\"1509365552\",\"usg\":\"AFQjCNEKIco_mDHfZ9BeqA_QOmHUxmfzKA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.libraryforsmartinvestors.com/2017/10/microsoft-corporation-nasdaqmsft-azure-growing-twice-fast-rival-amazon-com-inc-nasdaqamzn-web-services/41372429.htm\\u0026cid=52779654918171\\u0026ei=bAD9WaiHFdHBeMzdjoAL\\u0026usg=AFQjCNFfc9LUDTLjRIVdMKq_GwxZ6Kg0IQ\"}],\"lead_story_doc_id\":\"7314834607550734181\"},{\"idx\":10,\"id\":\"-1\"}],\"results_per_page\":10,\"result_start_num\":1,\"result_end_num\":10,\"result_total_articles\":244},\"related\":{\"cols\":[0,1,4,30,34,31,32,5,2,33,3],\"rows\":[{\"id\":\"358464\",\"values\":[\"MSFT\",\"Microsoft
+        Corporation\",\"84.14\",\"+0.09\",\"chg\",\"0.11\",\"\",\"649.11B\",\"NASDAQ\",\"358464\",\"MSFT\"]},{\"id\":\"658890\",\"values\":[\"AABA\",\"Altaba
+        Inc\",\"70.23\",\"-0.28\",\"chr\",\"-0.40\",\"\",\"62.29B\",\"NASDAQ\",\"658890\",\"AABA\"]}],\"visible_cols\":[0,1,4,30,34,31,32,5]}},\"stickyUrlArgs\":\"\\u0026ei=nQD9WfHgGc65eqqviIAF\",\"chart\":{\"_5d\":\"EXCHANGE%3DNASDAQ\\nMARKET_OPEN_MINUTE=570\\nMARKET_CLOSE_MINUTE=960\\nINTERVAL=120\\nCOLUMNS=DATE,CLOSE,VOLUME\\nDATA=\\nTIMEZONE_OFFSET=-240\\na1509370200,83.77,514425\\n1,83.64,474825\\n2,83.21,267091\\n3,83.32,244292\\n4,83.19,209540\\n5,83.4,273542\\n6,83.33,262006\\n7,83.39,177375\\n8,83.56,200411\\n9,83.68,191627\\n10,83.815,287231\\n11,84.07,202087\\n12,84.065,209089\\n13,84.125,210520\\n14,84.18,179139\\n15,84.1853,175582\\n16,83.97,235904\\n17,84.045,117173\\n18,84.12,139404\\n19,84.06,126088\\n20,84.06,201080\\n21,84.12,222040\\n22,84.2,278802\\n23,84.28,318082\\n24,84.3,164258\\n25,84.28,157732\\n26,84.2462,205026\\n27,84.085,194227\\n28,84.11,278700\\n29,84.19,243158\\n30,84.25,193814\\n31,84.2152,210537\\n32,84.13,240051\\n33,84.11,115516\\n34,83.96,182562\\n35,83.88,94143\\n36,83.83,123701\\n37,83.8949,64560\\n38,83.88,139400\\n39,83.83,83687\\n40,83.85,75818\\n41,83.835,82492\\n42,83.865,100250\\n43,83.92,101169\\n44,83.895,51866\\n45,83.86,107232\\n46,83.8466,50176\\n47,83.86,66085\\n48,83.7153,164767\\n49,83.755,58257\\n50,83.73,57342\\n51,83.69,106067\\n52,83.69,66273\\n53,83.77,62522\\n54,83.775,40477\\n55,83.795,86411\\n56,83.76,85548\\n57,83.8,107996\\n58,83.88,126142\\n59,83.85,91877\\n60,83.84,111804\\n61,83.91,156291\\n62,84.0199,310724\\n63,83.98,143449\\n64,83.98,115374\\n65,83.995,116957\\n66,84.1,139584\\n67,84.07,126100\\n68,84.085,112725\\n69,84.1,117593\\n70,84.1741,126211\\n71,84.101,149344\\n72,84.09,96923\\n73,84.09,99508\\n74,84.02,81947\\n75,84.015,76503\\n76,83.99,115232\\n77,83.99,75708\\n78,84,148546\\n79,83.9999,104370\\n80,83.995,63409\\n81,83.9,234974\\n82,83.885,88111\\n83,83.92,144899\\n84,83.79,154186\\n85,83.71,159552\\n86,83.61,130305\\n87,83.63,163195\\n88,83.68,131281\\n89,83.66,65458\\n90,83.695,71158\\n91,83.845,146054\\n92,83.88,51371\\n93,83.89,37751\\n94,83.89,58592\\n95,83.94,75524\\n96,83.895,71354\\n97,83.885,56383\\n98,83.8842,78580\\n99,83.85,28678\\n100,83.84,55655\\n101,83.825,45763\\n102,83.83,54459\\n103,83.84,100798\\n104,83.8372,47434\\n105,83.79,31563\\n106,83.76,131243\\n107,83.8,54569\\n108,83.83,40862\\n109,83.7846,36220\\n110,83.775,37150\\n111,83.69,96044\\n112,83.7,54232\\n113,83.6387,68181\\n114,83.655,84713\\n115,83.67,92665\\n116,83.66,50283\\n117,83.6633,48461\\n118,83.68,57725\\n119,83.6844,39626\\n120,83.6775,47977\\n121,83.66,38745\\n122,83.585,101581\\n123,83.52,87881\\n124,83.56,86928\\n125,83.6233,59937\\n126,83.57,68142\\n127,83.53,81214\\n128,83.56,57632\\n129,83.57,45872\\n130,83.56,51914\\n131,83.53,90576\\n132,83.45,120131\\n133,83.47,111342\\n134,83.43,61071\\n135,83.4299,67862\\n136,83.47,70221\\n137,83.44,61687\\n138,83.46,79291\\n139,83.4,143829\\n140,83.35,140305\\n141,83.38,113839\\n142,83.37,65204\\n143,83.52,108109\\n144,83.55,111526\\n145,83.555,48682\\n146,83.515,113735\\n147,83.62,149898\\n148,83.6,116017\\n149,83.62,95050\\n150,83.58,53762\\n151,83.56,64178\\n152,83.6,65750\\n153,83.61,41012\\n154,83.6164,31609\\n155,83.595,49888\\n156,83.6,58279\\n157,83.61,73320\\n158,83.6,30266\\n159,83.595,89176\\n160,83.62,83106\\n161,83.64,66989\\n162,83.605,55106\\n163,83.5801,64545\\n164,83.63,98383\\n165,83.655,64131\\n166,83.58,87510\\n167,83.63,85316\\n168,83.585,62824\\n169,83.58,69002\\n170,83.6341,101909\\n171,83.655,79980\\n172,83.605,98491\\n173,83.615,70363\\n174,83.59,92982\\n175,83.55,101947\\n176,83.565,65501\\n177,83.5347,78978\\n178,83.51,82250\\n179,83.58,98369\\n180,83.585,92553\\n181,83.55,95878\\n182,83.55,69562\\n183,83.54,111371\\n184,83.59,80494\\n185,83.655,90900\\n186,83.715,136876\\n187,83.73,108771\\n188,83.74,90097\\n189,83.7333,132851\\n190,83.79,215842\\n191,83.88,300753\\n192,83.9,209382\\n193,83.91,240891\\n194,83.92,386862\\n195,83.89,3113092\\n720,84.28,367226\\n721,84.06,232898\\n722,84.03,171456\\n723,83.99,270885\\n724,83.955,74047\\n725,83.89,135154\\n726,84.04,115303\\n727,84.05,183834\\n728,84.035,181131\\n729,83.99,160832\\n730,83.89,68435\\n731,83.84,110218\\n732,83.71,145048\\n733,83.595,149371\\n734,83.595,128235\\n735,83.575,98659\\n736,83.54,155981\\n737,83.65,329143\\n738,83.74,147613\\n739,83.695,209006\\n740,83.75,125624\\n741,83.79,92579\\n742,83.755,65438\\n743,83.79,82082\\n744,83.815,123028\\n745,83.84,86877\\n746,83.835,74993\\n747,83.87,207072\\n748,83.85,99886\\n749,83.81,96563\\n750,83.74,96420\\n751,83.74,157326\\n752,83.7253,60828\\n753,83.73,80341\\n754,83.6985,66322\\n755,83.71,81127\\n756,83.695,141287\\n757,83.675,67839\\n758,83.715,93777\\n759,83.69,94575\\n760,83.6825,69745\\n761,83.75,114525\\n762,83.8,72194\\n763,83.7753,89344\\n764,83.77,91407\\n765,83.755,46475\\n766,83.74,78818\\n767,83.76,151127\\n768,83.78,123989\\n769,83.775,57632\\n770,83.76,73505\\n771,83.745,72553\\n772,83.69,75749\\n773,83.655,77294\\n774,83.67,68366\\n775,83.675,63260\\n776,83.68,71074\\n777,83.63,104021\\n778,83.63,100442\\n779,83.645,51310\\n780,83.63,109683\\n781,83.63,70600\\n782,83.61,90953\\n783,83.61,106203\\n784,83.625,92054\\n785,83.64,81295\\n786,83.7,83398\\n787,83.7097,61694\\n788,83.67,75195\\n789,83.6399,55368\\n790,83.61,73334\\n791,83.63,92935\\n792,83.715,186710\\n793,83.785,99734\\n794,83.75,91317\\n795,83.76,56666\\n796,83.7,86124\\n797,83.7,36675\\n798,83.6075,189737\\n799,83.46,292838\\n800,83.525,257888\\n801,83.53,84268\\n802,83.4949,145187\\n803,83.45,75214\\n804,83.3999,159358\\n805,83.3642,72501\\n806,83.36,70222\\n807,83.335,108466\\n808,83.357,78378\\n809,83.3199,62396\\n810,83.41,102777\\n811,83.5356,131405\\n812,83.52,108055\\n813,83.49,67695\\n814,83.504,48344\\n815,83.5,47467\\n816,83.55,57682\\n817,83.51,63840\\n818,83.49,65225\\n819,83.47,52154\\n820,83.4549,61819\\n821,83.455,40487\\n822,83.44,36713\\n823,83.47,46368\\n824,83.495,43526\\n825,83.47,47130\\n826,83.5,96611\\n827,83.5289,55982\\n828,83.53,54107\\n829,83.57,66437\\n830,83.58,60614\\n831,83.5863,73054\\n832,83.5285,63699\\n833,83.5242,38443\\n834,83.515,50703\\n835,83.465,81968\\n836,83.4854,63886\\n837,83.48,55790\\n838,83.485,36151\\n839,83.42,81452\\n840,83.39,60929\\n841,83.39,70457\\n842,83.375,51933\\n843,83.405,66056\\n844,83.4,84829\\n845,83.325,84439\\n846,83.3201,77143\\n847,83.32,54274\\n848,83.2847,153423\\n849,83.275,38882\\n850,83.313,68727\\n851,83.345,58568\\n852,83.365,135844\\n853,83.34,51212\\n854,83.375,88011\\n855,83.43,83959\\n856,83.5,147807\\n857,83.545,78612\\n858,83.4901,59359\\n859,83.505,87165\\n860,83.495,79564\\n861,83.475,90039\\n862,83.47,78650\\n863,83.475,66343\\n864,83.5,67758\\n865,83.44,94730\\n866,83.43,25013\\n867,83.42,69521\\n868,83.425,59984\\n869,83.385,121792\\n870,83.38,16374\\n871,83.365,106385\\n872,83.36,118299\\n873,83.36,182697\\n874,83.4,93705\\n875,83.37,91990\\n876,83.3646,72050\\n877,83.34,158070\\n878,83.35,103292\\n879,83.345,113392\\n880,83.3486,92596\\n881,83.345,91873\\n882,83.35,66470\\n883,83.335,78993\\n884,83.3055,123860\\n885,83.305,86488\\n886,83.31,75054\\n887,83.29,168188\\n888,83.3,128489\\n889,83.295,127218\\n890,83.27,77746\\n891,83.28,103805\\n892,83.2831,144286\\n893,83.295,169155\\n894,83.23,161903\\n895,83.21,97095\\n896,83.23,96823\\n897,83.23,91450\\n898,83.25,100950\\n899,83.28,115476\\n900,83.32,171231\\n901,83.32,141032\\n902,83.33,92363\\n903,83.375,105653\\n904,83.42,88620\\n905,83.38,107340\\n906,83.34,152848\\n907,83.375,98330\\n908,83.325,148596\\n909,83.305,158359\\n910,83.19,463260\\n911,83.2,326683\\n912,83.165,311148\\n913,83.185,340456\\n914,83.16,333953\\n915,83.18,3840197\\na1509543000,83.64,321419\\n1,83.49,188100\\n2,83.68,117840\\n3,83.63,197588\\n4,83.5938,113237\\n5,83.655,124289\\n6,83.52,174383\\n7,83.53,83662\\n8,83.55,84965\\n9,83.61,57509\\n10,83.61,70934\\n11,83.56,74321\\n12,83.602,74325\\n13,83.57,80135\\n14,83.63,63390\\n15,83.675,78540\\n16,83.51,198308\\n17,83.58,107558\\n18,83.675,79680\\n19,83.64,96797\\n20,83.6575,135438\\n21,83.66,334028\\n22,83.65,132762\\n23,83.63,104190\\n24,83.64,106488\\n25,83.58,99491\\n26,83.62,169712\\n27,83.645,66551\\n28,83.68,79461\\n29,83.66,124717\\n30,83.55,115788\\n31,83.55,78872\\n32,83.49,84299\\n33,83.43,205425\\n34,83.41,78582\\n35,83.37,100780\\n36,83.34,113159\\n37,83.37,76157\\n38,83.36,87763\\n39,83.295,128642\\n40,83.2735,65904\\n41,83.285,101400\\n42,83.26,74812\\n43,83.25,45957\\n44,83.26,78523\\n45,83.18,192109\\n46,83.24,41618\\n47,83.205,126355\\n48,83.27,87256\\n49,83.2658,116283\\n50,83.26,60339\\n51,83.245,75473\\n52,83.255,59604\\n53,83.3,71114\\n54,83.295,85332\\n55,83.24,74577\\n56,83.23,58314\\n57,83.239,49270\\n58,83.21,42236\\n59,83.18,54470\\n60,83.16,64961\\n61,83.18,58672\\n62,83.1624,57482\\n63,83.11,100834\\n64,83.1,60926\\n65,83.15,85750\\n66,83.13,54304\\n67,83.09,147734\\n68,83.05,124414\\n69,83.125,83269\\n70,83.09,110136\\n71,83.07,139657\\n72,83.035,118302\\n73,82.98,171240\\n74,82.96,199804\\n75,82.96,89042\\n76,83.005,59163\\n77,83.03,85111\\n78,83.03,66317\\n79,83.06,51382\\n80,83.09,63704\\n81,83.177,33554\\n82,83.24,74542\\n83,83.25,50600\\n84,83.25,77104\\n85,83.255,52843\\n86,83.255,50702\\n87,83.22,36641\\n88,83.2675,29591\\n89,83.25,75163\\n90,83.245,43702\\n91,83.24,33794\\n92,83.26,58865\\n93,83.245,51405\\n94,83.26,30024\\n95,83.26,74120\\n96,83.24,25654\\n97,83.27,33722\\n98,83.23,92638\\n99,83.255,90673\\n100,83.2358,50374\\n101,83.24,33901\\n102,83.2559,49484\\n103,83.22,36620\\n104,83.18,74851\\n105,83.22,39262\\n106,83.19,50904\\n107,83.19,54601\\n108,83.11,52260\\n109,83.04,77954\\n110,83.05,73422\\n111,83.08,38069\\n112,83.05,128899\\n113,83.06,111721\\n114,83.11,70698\\n115,83.0353,87318\\n116,83.07,31430\\n117,83.1,43418\\n118,83.09,33118\\n119,83.115,44660\\n120,83.19,105582\\n121,83.18,44388\\n122,83.2,40585\\n123,83.17,57142\\n124,83.17,41348\\n125,83.195,53376\\n126,83.17,53208\\n127,83.17,23882\\n128,83.18,44117\\n129,83.185,65546\\n130,83.19,41620\\n131,83.1953,81168\\n132,83.17,65360\\n133,83.175,48876\\n134,83.0708,89447\\n135,83.155,54408\\n136,83.13,69766\\n137,83.16,131404\\n138,83.175,47914\\n139,83.17,85002\\n140,83.19,111192\\n141,83.18,70403\\n142,83.2,65709\\n143,83.185,99095\\n144,83.169,53914\\n145,83.13,53172\\n146,83.14,35602\\n147,83.105,64106\\n148,83.13,156657\\n149,83.1,71752\\n150,83.095,67530\\n151,83.125,61043\\n152,83.205,83516\\n153,83.2,105181\\n154,83.18,91712\\n155,83.175,67018\\n156,83.14,63689\\n157,83.1044,74234\\n158,83.0544,97836\\n159,83.055,130650\\n160,83.053,107224\\n161,83.01,59075\\n162,83.015,99644\\n163,83,136678\\n164,83.04,115697\\n165,83.07,130091\\n166,83.045,100595\\n167,83.02,113883\\n168,83.03,98906\\n169,83.025,160672\\n170,83.025,81451\\n171,83.045,76503\\n172,83.065,55624\\n173,83.1099,95292\\n174,83.115,123604\\n175,83.075,85164\\n176,83.045,124000\\n177,83.005,95601\\n178,83,125863\\n179,83.025,74015\\n180,83.055,115744\\n181,83.045,71713\\n182,83.02,123449\\n183,83.064,100321\\n184,83.07,74987\\n185,83.055,109864\\n186,83.06,84079\\n187,83.065,237230\\n188,83.165,341106\\n189,83.13,238826\\n190,83.135,157175\\n191,83.17,195551\\n192,83.1951,146711\\n193,83.165,228500\\n194,83.14,209762\\n195,83.18,2123477\\n720,83.29,288201\\n721,83.23,156609\\n722,83.235,131139\\n723,83.3,188383\\n724,83.4,131278\\n725,83.3,86775\\n726,83.22,93445\\n727,83.23,86297\\n728,83.18,155237\\n729,83.23,76111\\n730,83.395,151599\\n731,83.39,122454\\n732,83.33,81716\\n733,83.3462,291175\\n734,83.285,69378\\n735,83.27,66670\\n736,83.18,122859\\n737,83.16,248391\\n738,83.2,245074\\n739,83.25,75154\\n740,83.14,223379\\n741,83.23,146441\\n742,83.22,163821\\n743,83.47,222267\\n744,83.434,163130\\n745,83.44,113209\\n746,83.425,86515\\n747,83.46,151956\\n748,83.57,139602\\n749,83.655,159279\\n750,83.6,74284\\n751,83.62,120086\\n752,83.56,119972\\n753,83.595,178223\\n754,83.6175,104971\\n755,83.67,125903\\n756,83.79,203144\\n757,83.75,193891\\n758,83.83,89555\\n759,83.945,220558\\n760,83.93,192559\\n761,83.935,156075\\n762,83.86,141381\\n763,83.77,108934\\n764,83.82,108551\\n765,83.825,105319\\n766,83.87,97887\\n767,83.9564,112433\\n768,83.925,131877\\n769,83.96,157704\\n770,83.9799,64941\\n771,83.96,26763\\n772,83.99,65716\\n773,83.89,81920\\n774,83.79,75477\\n775,83.675,145474\\n776,83.7862,125022\\n777,83.7752,82692\\n778,83.75,62806\\n779,83.75,83899\\n780,83.73,136692\\n781,83.64,139588\\n782,83.56,120789\\n783,83.61,78052\\n784,83.49,126781\\n785,83.52,49367\\n786,83.54,98784\\n787,83.58,98073\\n788,83.55,87138\\n789,83.56,83490\\n790,83.58,59722\\n791,83.6653,49182\\n792,83.71,51168\\n793,83.73,52198\\n794,83.755,68155\\n795,83.765,57010\\n796,83.7638,43082\\n797,83.77,74118\\n798,83.88,118106\\n799,83.9,94123\\n800,83.89,96502\\n801,83.88,90973\\n802,83.89,70073\\n803,83.895,57385\\n804,83.9,98070\\n805,83.86,65833\\n806,83.83,59345\\n807,83.85,78501\\n808,83.8431,80485\\n809,83.88,82453\\n810,83.9,56360\\n811,83.85,63591\\n812,83.88,58520\\n813,83.86,54899\\n814,83.8857,52750\\n815,83.89,52359\\n816,83.9162,53553\\n817,83.885,74281\\n818,83.89,42127\\n819,83.955,58029\\n820,83.97,31347\\n821,84.0049,75833\\n822,84.09,110759\\n823,84.145,80835\\n824,84.1,53523\\n825,84.02,53889\\n826,84.105,45861\\n827,84.1051,49599\\n828,84.185,69793\\n829,84.195,49272\\n830,84.2,91310\\n831,84.3,104579\\n832,84.3385,66064\\n833,84.33,77871\\n834,84.3459,92124\\n835,84.35,57696\\n836,84.42,109142\\n837,84.37,112887\\n838,84.38,218702\\n839,84.31,85731\\n840,84.34,80605\\n841,84.36,84075\\n842,84.32,62801\\n843,84.297,88567\\n844,84.33,70565\\n845,84.33,51769\\n846,84.315,67998\\n847,84.33,61350\\n848,84.28,52889\\n849,84.21,97146\\n850,84.13,89500\\n851,84.13,47017\\n852,84.1,90925\\n853,84.03,120521\\n854,84.035,93588\\n855,84.02,56684\\n856,84.04,54880\\n857,84.08,50264\\n858,84.17,82710\\n859,84.165,60237\\n860,84.205,62812\\n861,84.215,80926\\n862,84.255,41628\\n863,84.265,106018\\n864,84.215,69135\\n865,84.255,82723\\n866,84.24,51046\\n867,84.2,75842\\n868,84.17,52659\\n869,84.2,38769\\n870,84.24,43272\\n871,84.2257,38571\\n872,84.2256,45847\\n873,84.23,26612\\n874,84.262,50420\\n875,84.285,39439\\n876,84.26,86083\\n877,84.2853,67197\\n878,84.225,48241\\n879,84.235,127544\\n880,84.205,47015\\n881,84.165,72779\\n882,84.14,92143\\n883,84.154,60639\\n884,84.155,71958\\n885,84.11,58270\\n886,84.13,100369\\n887,84.13,61171\\n888,84.1238,89757\\n889,84.135,62713\\n890,84.0507,60815\\n891,84.1,42666\\n892,84.105,75955\\n893,84.0899,82922\\n894,84.05,76934\\n895,84,109177\\n896,83.9799,79346\\n897,83.97,133028\\n898,83.995,92991\\n899,83.9994,68351\\n900,84.035,165917\\n901,84.02,131943\\n902,84.02,78519\\n903,84.075,220233\\n904,84.08,66189\\n905,84.055,99465\\n906,84.11,68403\\n907,84.175,127892\\n908,84.14,92243\\n909,84.1,169681\\n910,84.095,175923\\n911,84.035,219265\\n912,84.005,146860\\n913,84.075,354873\\n914,84.17,418339\\n915,84.05,2399756\\na1509715800,84.135,917376\\n1,83.94,166487\\n2,83.79,159580\\n3,83.645,145889\\n4,83.82,228454\\n5,83.645,160661\\n6,83.7,172476\\n7,83.67,96521\\n8,83.65,97280\\n9,83.665,60266\\n10,83.67,79556\\n11,83.63,134985\\n12,83.53,127163\\n13,83.42,149214\\n14,83.5444,107272\\n15,83.53,86915\\n16,83.585,66700\\n17,83.565,105081\\n18,83.555,69333\\n19,83.54,48004\\n20,83.48,53088\\n21,83.59,114092\\n22,83.59,152678\\n23,83.59,76283\\n24,83.49,83707\\n25,83.575,116610\\n26,83.77,91026\\n27,83.79,74703\\n28,83.8166,43417\\n29,83.76,74606\\n30,83.775,46770\\n31,83.84,79526\\n32,83.805,98038\\n33,83.83,59668\\n34,83.885,34741\\n35,83.895,34379\\n36,83.885,54920\\n37,83.94,279536\\n38,83.915,76870\\n39,83.9,52672\\n40,83.89,112978\\n41,83.8799,70063\\n42,83.8445,86486\\n43,83.8816,52737\\n44,83.92,75889\\n45,83.9701,101947\\n46,83.935,102817\\n47,83.94,60086\\n48,83.9411,55014\\n49,83.8866,25381\\n50,83.88,36514\\n51,83.88,51438\\n52,83.845,28581\\n53,83.9,95094\\n54,83.9,15406\\n55,83.89,42909\\n56,83.91,27130\\n57,83.885,51263\\n58,83.88,20834\\n59,83.91,22254\\n60,83.965,51846\\n61,84.005,103651\\n62,84.01,30298\\n63,83.99,31751\\n64,83.96,37840\\n65,83.9589,44020\\n66,83.975,71759\\n67,84,46965\\n68,84.0499,38467\\n69,84.0393,82863\\n70,84.0753,53025\\n71,84.09,22797\\n72,84.08,19824\\n73,84.125,71367\\n74,84.2262,181501\\n75,84.2701,89067\\n76,84.23,116146\\n77,84.225,91667\\n78,84.23,40338\\n79,84.22,42122\\n80,84.22,36056\\n81,84.25,53842\\n82,84.26,36589\\n83,84.3385,52410\\n84,84.3,44776\\n85,84.323,36151\\n86,84.3246,48466\\n87,84.36,77584\\n88,84.34,41495\\n89,84.33,64422\\n90,84.33,39264\\n91,84.31,47780\\n92,84.29,31646\\n93,84.335,52710\\n94,84.3953,64688\\n95,84.419,68767\\n96,84.46,70499\\n97,84.54,136552\\n98,84.45,75227\\n99,84.425,63566\\n100,84.46,60783\\n101,84.45,35516\\n102,84.45,37671\\n103,84.395,48464\\n104,84.375,50048\\n105,84.37,44250\\n106,84.38,42150\\n107,84.43,70164\\n108,84.4242,40218\\n109,84.355,32411\\n110,84.35,75383\\n111,84.345,19845\\n112,84.315,53498\\n113,84.2664,59149\\n114,84.2443,53187\\n115,84.2,105804\\n116,84.125,44389\\n117,84.1238,72809\\n118,84.135,70752\\n119,84.133,61556\\n120,84.14,26271\\n121,84.125,39474\\n122,84.08,80355\\n123,84.08,30377\\n124,84.1056,48519\\n125,84.1175,99993\\n126,84.1647,100318\\n127,84.11,61454\\n128,84.15,41566\\n129,84.21,79574\\n130,84.2001,12337\\n131,84.229,36110\\n132,84.2268,37851\\n133,84.1965,58731\\n134,84.13,31495\\n135,84.0949,58696\\n136,84.15,58267\\n137,84.09,73460\\n138,84.1001,33071\\n139,84.12,54522\\n140,84.15,37775\\n141,84.18,86451\\n142,84.17,21422\\n143,84.15,23053\\n144,84.155,22045\\n145,84.1472,27913\\n146,84.175,40047\\n147,84.1853,46100\\n148,84.2031,37227\\n149,84.2,65510\\n150,84.18,56863\\n151,84.135,49938\\n152,84.125,16503\\n153,84.145,99901\\n154,84.1349,56972\\n155,84.1101,38446\\n156,84.075,52004\\n157,84.055,86814\\n158,84.05,47874\\n159,84.1,72277\\n160,84.06,63267\\n161,84.035,49998\\n162,84.055,65207\\n163,84.035,60926\\n164,84.024,45078\\n165,84.01,87913\\n166,84.03,65244\\n167,84.065,44992\\n168,84.07,63665\\n169,84.065,27328\\n170,84.05,20047\\n171,84.03,52664\\n172,84.02,49675\\n173,84.01,76617\\n174,84.01,35958\\n175,84.0247,48267\\n176,84.07,35439\\n177,84.09,57212\\n178,84.075,33286\\n179,84.095,38795\\n180,84.075,88940\\n181,84.085,43974\\n182,84.065,49520\\n183,84.045,82069\\n184,84.01,65340\\n185,84.06,64221\\n186,84.065,27148\\n187,84.09,72800\\n188,84.125,140913\\n189,84.12,54256\\n190,84.135,116832\\n191,84.095,152518\\n192,84.07,172959\\n193,84.08,125036\\n194,84.05,260187\\n195,84.14,2004786\\n\",\"_5Y\":\"EXCHANGE%3DNASDAQ\\nMARKET_OPEN_MINUTE=570\\nMARKET_CLOSE_MINUTE=960\\nINTERVAL=604800\\nCOLUMNS=DATE,CLOSE,VOLUME,CDAYS\\nDATA=\\nTIMEZONE_OFFSET=-300\\na1352494800,28.83,232494492,5\\n1,26.5209,383940394,5\\na1353693600,27.7,228455526,4\\na1354309200,26.615,336489890,5\\n1,26.455,256621754,5\\n2,26.81,230450019,5\\n3,27.45,297458344,5\\n4,26.55,120125535,4\\n5,26.74,196482094,5\\n6,26.83,257819873,5\\n7,27.25,241503310,5\\n8,27.88,292636711,5\\n9,27.93,254997470,5\\n10,27.55,199194379,5\\n11,28.01,192276732,5\\n12,27.76,163434872,5\\n13,27.95,205033731,5\\n14,28,197922674,5\\nTIMEZONE_OFFSET=-240\\na1363377600,28.035,253627314,5\\n1,28.25,195140597,5\\na1364500800,28.605,163490157,5\\na1365192000,28.7,188924351,5\\n1,28.79,377425365,5\\n2,29.765,318681562,5\\n3,31.79,446494855,5\\n4,33.49,281482379,5\\n5,32.69,218470715,5\\n6,34.87,259278408,5\\n7,34.269,253070775,5\\n8,34.9,193939367,5\\n9,35.67,241216749,5\\n10,34.4,211489745,5\\n11,33.265,248950782,5\\n12,34.545,243396628,5\\n13,34.21,110778933,5\\n14,35.67,176519256,5\\n15,31.4,405789215,5\\n16,31.62,299530618,5\\n17,31.89,190334235,5\\n18,32.7,191242388,5\\n19,31.8,179710128,5\\n20,34.75,344960959,5\\n21,33.4,263640999,5\\n22,31.152,443912017,5\\n23,33.03,219331197,5\\n24,32.791,348769096,5\\n25,33.27,193270455,5\\n26,33.88,195220646,5\\n27,34.13,184873901,5\\n28,34.96,183148017,5\\n29,35.73,293179232,5\\n30,35.525,189049718,5\\nTIMEZONE_OFFSET=-300\\na1383944400,37.78,265880986,5\\n1,37.841,200270348,5\\n2,37.57,180830994,5\\n3,38.13,113208695,5\\n4,38.36,299814837,5\\n5,36.69,184055108,5\\n6,36.8,237421849,5\\n7,37.29,71550254,5\\n8,36.91,95574785,5\\n9,36.04,216598517,5\\n10,36.38,216795186,5\\n11,36.805,175111177,5\\n12,37.84,261804587,5\\n13,36.56,244199414,5\\n14,37.62,166637451,5\\n15,37.98,128205485,5\\n16,38.31,179189733,5\\n17,37.9,127317506,5\\nTIMEZONE_OFFSET=-240\\na1394827200,37.7,134087566,5\\n1,40.16,260142460,5\\n2,40.3,210116404,5\\n3,39.87,189712501,5\\n4,39.209,181172057,5\\na1397764800,40.01,133291027,5\\na1398456000,39.91,173147680,5\\n1,39.69,187921095,5\\n2,39.54,153093476,5\\n3,39.83,136272179,5\\n4,40.12,106482522,5\\n5,40.94,106342180,5\\n6,41.48,115711492,5\\n7,41.23,104310831,5\\n8,41.68,141424329,5\\n9,42.25,163560109,5\\na1404417600,41.8,93905905,5\\na1405108800,42.09,117561943,5\\n1,44.69,239552029,5\\n2,44.5,190527218,5\\n3,42.86,152089487,5\\n4,43.2,144437060,5\\n5,44.79,125599175,5\\n6,45.15,120385583,5\\n7,45.43,92341867,5\\n8,45.91,120083558,5\\n9,46.695,180807207,5\\n10,47.52,341973307,5\\n11,46.41,158856031,5\\n12,46.09,154785202,5\\n13,44.03,165764217,5\\n14,43.63,225166061,5\\n15,46.13,211077436,5\\n16,46.95,155628209,5\\nTIMEZONE_OFFSET=-300\\na1415394000,48.68,128149243,5\\n1,49.58,137829519,5\\n2,47.98,144887937,5\\n3,47.81,112141541,5\\n4,48.42,138158386,5\\n5,46.95,144735690,5\\n6,47.66,216676750,5\\n7,47.88,74863120,5\\n8,46.76,80290512,5\\n9,47.19,158825163,5\\n10,46.24,157088136,5\\n11,47.18,137352632,5\\n12,40.4,437786778,5\\n13,42.41,215214514,5\\n14,43.87,172847964,5\\n15,43.855,118131959,5\\n16,43.85,150315390,5\\n17,42.36,148863715,5\\nTIMEZONE_OFFSET=-240\\na1426276800,41.38,221483208,5\\n1,42.88,216925266,5\\n2,40.97,167126270,5\\na1428004800,40.29,144289679,5\\na1428696000,41.72,146532368,5\\n1,41.615,146761915,5\\n2,47.87,274379045,5\\n3,48.655,271446305,5\\n4,47.75,205178261,5\\n5,48.295,150345879,5\\n6,46.9,125890515,5\\n7,46.86,112720759,5\\n8,46.14,131521410,5\\n9,45.97,126223826,5\\n10,46.1,185524263,5\\n11,45.26,151556711,5\\na1435867200,44.4,120123050,5\\na1436558400,44.61,157146118,5\\n1,46.62,133426984,5\\n2,45.94,198833485,5\\n3,46.7,185955595,5\\n4,46.74,131020495,5\\n5,47,126616447,5\\n6,43.07,180666605,5\\n7,43.93,299922743,5\\n8,42.61,185669220,5\\n9,43.48,122942332,5\\n10,43.48,167591654,5\\n11,43.94,127786686,5\\n12,45.57,164504767,5\\n13,47.11,149490791,5\\n14,47.51,116214824,5\\n15,52.87,274089241,5\\n16,52.64,233989903,5\\nTIMEZONE_OFFSET=-300\\na1446843600,54.92,163945485,5\\n1,52.84,192376481,5\\n2,54.19,156848231,5\\n3,53.93,82263670,5\\n4,55.91,223570066,5\\n5,54.06,171286323,5\\n6,54.13,250080293,5\\na1450990800,55.67,102418400,5\\n1,55.48,99228262,5\\na1452286800,52.33,231760568,5\\n1,50.99,261327257,5\\n2,52.29,183338985,4\\n3,55.09,241089138,5\\n4,50.16,262842669,5\\n5,50.5,222468705,5\\n6,51.82,135127508,4\\n7,51.3,147886335,5\\n8,52.03,149773385,5\\n9,53.07,170463794,5\\nTIMEZONE_OFFSET=-240\\na1458331200,53.49,171763137,5\\na1458849600,54.21,85466802,5\\na1459540800,55.57,113755963,5\\n1,54.42,99754212,5\\n2,55.65,115760469,5\\n3,51.78,251124833,5\\n4,49.87,200612675,5\\n5,50.39,133396747,5\\n6,51.08,111032990,5\\n7,50.62,119929660,5\\n8,52.32,126498087,5\\n9,51.79,109186979,4\\n10,51.48,106398294,5\\n11,50.13,236451710,5\\n12,49.83,261054437,5\\n13,51.16,169949551,5\\n14,52.3,100950032,4\\n15,53.7,131513504,5\\n16,56.57,239597518,5\\n17,56.68,154126188,5\\n18,57.96,139123963,5\\n19,57.94,91968595,5\\n20,57.62,90149203,5\\n21,58.03,91629582,5\\n22,57.67,99183513,5\\n23,56.21,89031792,4\\n24,57.25,155377027,5\\n25,57.43,19955336,5\\n26,57.6,125664515,5\\n27,57.8,92303431,5\\n28,57.42,119587590,5\\n29,59.66,195345767,5\\n30,59.87,181170290,5\\n31,58.71,123412131,5\\nTIMEZONE_OFFSET=-300\\na1478898000,59.02,200822869,5\\n1,60.35,164384062,5\\na1480096800,60.53,73117824,4\\na1480712400,59.25,137812561,5\\n1,61.97,122838771,5\\n2,62.3,156392554,5\\n3,63.24,112043306,5\\n4,62.14,62247011,4\\n5,62.84,86832957,4\\n6,62.7,100883602,5\\n7,62.74,88999202,4\\n8,65.78,160798071,5\\n9,63.68,172722294,5\\n10,64,98985116,5\\n11,64.62,104828847,5\\n12,64.62,82018448,4\\n13,64.25,108727793,5\\n14,64.93,98167226,5\\nTIMEZONE_OFFSET=-240\\na1489780800,64.87,129108029,5\\n1,64.98,103804886,5\\n2,65.86,88476598,5\\n3,65.68,87058900,5\\na1492113600,64.95,71749271,5\\na1492804800,66.4,113659769,5\\n1,68.46,160723247,5\\n2,69,125666645,5\\n3,68.38,106905867,5\\n4,67.69,149197513,5\\n5,69.96,88012257,5\\n6,71.76,103883064,4\\n7,70.32,160905256,5\\n8,70,172944836,5\\n9,71.21,115784579,5\\n10,68.93,123708085,5\\n11,69.46,75337699,4\\n12,72.78,96363352,5\\n13,73.79,159733532,5\\n14,73.04,114816640,5\\n15,72.68,111716478,5\\n16,72.5,109141814,5\\n17,72.49,99167406,5\\n18,72.82,75737531,5\\n19,73.94,92334870,5\\n20,73.98,70953185,4\\n21,75.31,99998390,5\\n22,74.41,94285686,5\\n23,74.49,89506740,5\\n24,76,75967921,5\\n25,77.49,72932225,5\\n26,78.81,80463967,5\\n27,83.81,161742609,5\\n\"}};\ngoogle.finance.data.numberFormat
+        = [{'threshold':1000000, 'symbol':'M'}, {'threshold':1000000000,'symbol':'B'},
+        {'threshold':1000000000000,'symbol':'T'}] ;\n_setStickyUrlParams(\"ei=nQD9WfHgGc65eqqviIAF\");\nif
+        (_s_Store) {\n_s_Store._allowMatchAdvancedSearch = true;\nvar _fieldToDisplayNameMap
+        = {GrossMargin:\"Gross margin&nbsp;(%)\",Return1Week:\"1w return\",Return156Week:\"156w
+        return\",NextYearEPS:\"Next year EPS\",EarningsAfterTaxes:\"Earnings after
+        taxes\",RevenueGrowthRate5Years:\"5y revenue growth rate\",LTDebtToAssetsYear:\"LT
+        debt/assets (Recent&nbsp;yr)&nbsp;(%)\",DividendPerShare:\"Div per share\",MarketCap:\"Market
+        cap\",NetProfitMarginPercent:\"Net profit margin&nbsp;(%)\",Float:\"Float\",EarningsBeforeTaxes:\"Earnings
+        before taxes\",QuotePercChange:\"Quote change&nbsp;(%)\",TotalDebtToEquityYear:\"Total
+        debt/equity (Recent&nbsp;yr)&nbsp;(%)\",TotalDebtToCapitalQuarter:\"Total
+        debt/capital (Recent&nbsp;qtr)&nbsp;(%)\",LTDebtToCapitalQuarter:\"LT debt/capital
+        (Recent&nbsp;qtr)&nbsp;(%)\",EPSGrowthRate10Years:\"10y EPS growth rate\",Beta:\"Beta\",CapitalGain:\"Capital
+        gain\",ReturnOnAssetsPTM:\"Return on assets (PTM)&nbsp;(%)\",BetaDown:\"Beta
+        down from RAS\",IncomeDividend:\"Income dividend\",RevenueGrowthRate10Years:\"10y
+        revenue growth rate\",MarketCapShareBasis:\"Market cap share basis\",Return4Week:\"4w
+        return\",IAD:\"Div rate indicated annual\",Price150DayAverage:\"150d avg price\",EPSGrowthRate5Years:\"5y
+        EPS growth rate\",ReturnOnAssetsTTM:\"Return on assets (TTM)&nbsp;(%)\",TotalDebtToAssetsYear:\"Total
+        debt/assets (Recent&nbsp;yr)&nbsp;(%)\",Volume:\"Volume\",CurrentRatioYear:\"Current
+        ratio\",DividendRecentQuarter:\"Div recent quarter\",Low52Week:\"52w low\",ExpenseRatio:\"Expense
+        ratio\",Price1DayPercChange:\"1d&nbsp;price change&nbsp;(%)\",Price13WeekPercChange:\"13w&nbsp;price
+        change&nbsp;(%)\",ReturnOnEquity5Years:\"Return on equity (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",TotalDebtToCapitalYear:\"Total
+        debt/capital (Recent&nbsp;yr)&nbsp;(%)\",TotalDebtToAssetsQuarter:\"Total
+        debt/assets (Recent&nbsp;qtr)&nbsp;(%)\",NavChange:\"Nav change\",OperatingMargin:\"Operating
+        margin&nbsp;(%)\",DPSRecentYear:\"Div per share (Recent&nbsp;yr)\",ANI:\"Earnings
+        after taxes (Recent&nbsp;yr)\",High52Week:\"52w high\",AverageVolume:\"Average
+        volume\",Return13Week:\"13w return\",PriceToCashFlowPerShare:\"Price to cash
+        flow per share\",Price26WeekPercChange:\"26w&nbsp;price change&nbsp;(%)\",QuoteChange:\"Quote
+        change\",ATAXRATE:\"Tax rate (Recent&nbsp;yr)\",NetIncomeChangePerc:\"Net
+        income change&nbsp;(%)\",ReturnOnInvestment5Years:\"Return on investment (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",PE:\"P/E
+        ratio\",ReturnOnInvestmentYear:\"Return on investment (Recent&nbsp;yr)&nbsp;(%)\",Price200DayAverage:\"200d
+        avg price\",DividendNextQuarter:\"Div next quarter\",PriceYTDPercChange:\"YTD&nbsp;price
+        change&nbsp;(%)\",EBITD:\"EBITDA\",ReturnOnInvestmentTTM:\"Return on investment
+        (TTM)&nbsp;(%)\",NavChangePercent:\"Nav change&nbsp;(%)\",EBITDMargin:\"EBITDA
+        margin&nbsp;(%)\",LTDebtToEquityQuarter:\"LT debt/equity (Recent&nbsp;qtr)&nbsp;(%)\",BetaRAS:\"Beta
+        from RAS\",PriceSales:\"Price to sales\",NetAssets:\"Net assets\",ReturnOnEquityTTM:\"Return
+        on equity (TTM)&nbsp;(%)\",CashPerShareYear:\"Cash/share\",ReturnDay:\"1d
+        return\",ReturnOnAssets5Years:\"Return on assets (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",Return52Week:\"52w
+        return\",ForwardPE1Year:\"1y fwd P/E\",NetIncomeGrowthRate5Years:\"5y net
+        income growth rate\",DividendYield:\"Div yield&nbsp;(%)\",Dividend:\"Div from
+        cash flow\",BetaUp:\"Beta up from RAS\",nprice:\"Price from RAS\",LTDebtToCapitalYear:\"LT
+        debt/capital (Recent&nbsp;yr)&nbsp;(%)\",Return260Week:\"260w return\",ReturnOnEquityQuarter:\"Return
+        on equity (Recent&nbsp;qtr)&nbsp;(%)\",ACOGS:\"Cost of goods sold\",LTDebtToAssetsQuarter:\"LT
+        debt/assets (Recent&nbsp;qtr)&nbsp;(%)\",PriceToBook:\"Price to book\",LTDebtToEquityYear:\"LT
+        debt/equity (Recent&nbsp;yr)&nbsp;(%)\",ReturnYTD:\"Return YTD\",ReturnOnEquityYear:\"Return
+        on equity (Recent&nbsp;yr)&nbsp;(%)\",ReturnOnAssetsQuarter:\"Return on assets
+        (Recent&nbsp;qtr)&nbsp;(%)\",TotalDebtToEquityQuarter:\"Total debt/equity
+        (Recent&nbsp;qtr)&nbsp;(%)\",NavPrior:\"Nav prior\",AINTCOV:\"Interest coverage\",EPS:\"EPS\",ReturnOnInvestmentQuarter:\"Return
+        on investment (Recent&nbsp;qtr)&nbsp;(%)\",QuoteLast:\"Last price\",Price50DayAverage:\"50d
+        avg price\",Price4WeekPercChange:\"4w&nbsp;price change&nbsp;(%)\",ReturnOnAssetsYear:\"Return
+        on assets (Recent&nbsp;yr)&nbsp;(%)\",MarketCapRAS:\"Mkt cap from RAS\",Price52WeekPercChange:\"52w&nbsp;price
+        change&nbsp;(%)\",InstitutionalPercentHeld:\"Institutional percent held\",ShortInterestRatioPercent:\"Short
+        interest ratio&nbsp;(%)\",BookValuePerShareYear:\"Book value/share\",ReturnOnEquityPTM:\"Return
+        on equity (PTM)&nbsp;(%)\"};\n_s_Store._asStore._addStrings(_fieldToDisplayNameMap);\n}\nif
+        (_s_Store) {\n_s_Store._allowMultipleInBox = true;\n}\n_regOnLoad(initComparisonPage);\ngoogle.finance.renderRecentQuotes();\n</script>\n</div></div><script>var
+        googlefinance = {i: [\"f.b.id\",\"\",null,0,\"\",0,null,[\"f.b.cf\",\"Upzqnh5ra8Q.en_US.\",0],[],1,[],\"nQD9WfHgGc65eqqviIAF\",\"www.google.com\",\"5kfVqyHYL1DXuxALVCxmngm-4Wg:1509752989576\",1]};
+        GF_domReady = 1;</script></body></html>"
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 23:49:41 GMT
+recorded_with: VCR 3.0.3

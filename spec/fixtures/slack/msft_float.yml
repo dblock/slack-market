@@ -2,7 +2,101 @@
 http_interactions:
 - request:
     method: get
-    uri: https://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=MSFT
+    uri: https://google.com/finance?q=MSFT
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Location:
+      - https://www.google.com/finance?q=MSFT
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      Date:
+      - Fri, 03 Nov 2017 23:46:45 GMT
+      Expires:
+      - Sun, 03 Dec 2017 23:46:45 GMT
+      Cache-Control:
+      - public, max-age=2592000
+      Server:
+      - sffe
+      Content-Length:
+      - '234'
+      X-Xss-Protection:
+      - 1; mode=block
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="41,39,38,37,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>301
+        Moved</TITLE></HEAD><BODY>\n<H1>301 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://www.google.com/finance?q=MSFT\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 23:46:37 GMT
+- request:
+    method: get
+    uri: https://www.google.com/finance?q=MSFT
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Location:
+      - https://finance.google.com/finance?q=MSFT
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=UTF-8
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      Date:
+      - Fri, 03 Nov 2017 23:46:45 GMT
+      Server:
+      - gws
+      Content-Length:
+      - '238'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - 1P_JAR=2017-11-03-23; expires=Sun, 03-Dec-2017 23:46:45 GMT; path=/; domain=.google.com
+      - NID=116=BLcMPEi2Sn7xpwcm9Q_9oPB6WAatBjLvRfvAR-eqepwwFI3YSsGt_g6R6J4Tnp1buAHnGcw3u0ewUzxEFMKquzjqSTZ3HlIF2N7T_4liSXtEYD7H0_WpzPPHC5d4q1gd;
+        expires=Sat, 05-May-2018 23:46:45 GMT; path=/; domain=.google.com; HttpOnly
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="41,39,38,37,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://finance.google.com/finance?q=MSFT\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 23:46:37 GMT
+- request:
+    method: get
+    uri: https://finance.google.com/finance?q=MSFT
     body:
       encoding: US-ASCII
       string: ''
@@ -18,35 +112,764 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Thu, 04 Feb 2016 17:32:02 GMT
-      P3p:
-      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
-        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
-        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
-      Cache-Control:
-      - private, no-cache, no-store
-      Content-Length:
-      - '52'
       Content-Type:
-      - application/octet-stream
-      Vary:
-      - X-Media-YTS-Echo-Mode
-      Age:
-      - '0'
-      Via:
-      - http/1.1 media-router-api2.prod.media.bf1.yahoo.com (ApacheTrafficServer [cMsSf
-        ]), http/1.1 r14.ycpi.nyc.yahoo.net (ApacheTrafficServer [cMsSf ])
+      - text/html; charset=utf-8
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      Date:
+      - Fri, 03 Nov 2017 23:46:45 GMT
+      Expires:
+      - Fri, 03 Nov 2017 23:46:45 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
       Server:
-      - ATS
-      Connection:
-      - keep-alive
-      Y-Trace:
-      - BAEAQAAAAACSE.2oao7TIAAAAAAAAAAAEWHvBzy14CoAAAAAAAAAAAAFKvUc0ii2AAUq9RzSo7alrFVJAAAAAA--
+      - GSE
+      Set-Cookie:
+      - NID=116=2DdQSNCh3yJwVgaF7ku2m5wkGWckCyS1t8czySYfDZCE2gizMvwcPN5ky-i7e7VEF3a1bbNdLfMDGnE0FEIUT1gbKGxSkF8jTYF8f6kaR78h1pL27J6Ar-jpIISkAxjn;Domain=.google.com;Path=/;Expires=Sat,
+        05-May-2018 23:46:45 GMT;HttpOnly
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding:
+      - chunked
     body:
-      encoding: UTF-8
-      string: |
-        "Microsoft Corporation","MSFT",52.3503,-0.25,"-0.48%"
-    http_version:
-  recorded_at: Thu, 04 Feb 2016 17:32:02 GMT
-recorded_with: VCR 3.0.1
+      encoding: ASCII-8BIT
+      string: "<!DOCTYPE html><html><head><script>(function(){(function(){function
+        e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void
+        0==b)try{window.console.timeStamp(\"CSI/\"+a)}catch(h){}};this.tick(\"start\",null,a)}var
+        a;if(window.performance)var d=(a=window.performance.timing)&&a.responseStart;var
+        f=0<d?new e(d):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var
+        b=window.jstiming.load;0<c&&d>=c&&(b.tick(\"_wtsrt\",void 0,c),b.tick(\"wtsrt_\",\"_wtsrt\",\nd),b.tick(\"tbsd_\",\"wtsrt_\"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick(\"_tbnd\",void
+        0,window.chrome.csi().startE),b.tick(\"tbnd_\",\"_tbnd\",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick(\"_tbnd\",void
+        0,window.external.startE),b.tick(\"tbnd_\",\"_tbnd\",c))),a&&(window.jstiming.pt=a)}catch(g){}})();}).call(this);\n</script><title>Microsoft
+        Corporation: NASDAQ:MSFT quotes &amp; news - Google Finance</title><meta name=\"Description\"
+        content=\"Get detailed financial information on Microsoft Corporation (NASDAQ:MSFT)
+        including real-time stock quotes, historical charts &amp; financial news,
+        all for free!\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=10\"><link
+        rel=\"canonical\" href=\"https://www.google.com/finance?q=NASDAQ:MSFT\"><link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/finance/f/finance_us-895351966.css\"><link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/_/scs/finance-static/_/ss/k=finance.a.1msu4mph4xh6k.L.X.O/d=0/rs=AGHGApGCzFIkl8UdpAPaXE1FXjt-bEHR6w\"><link
+        rel=\"icon\" type=\"image/vnd.microsoft.icon\" href=\"/finance/favicon.ico\"><style>#gbar,#guser{font-size:13px;padding-right:8px;padding-top:4px
+        !important;}#gbar{padding-left:8px;height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px
+        solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media
+        all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline
+        !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf
+        .gb4{color:#900 !important}\n</style><script></script><script async=\"\" defer=\"\"
+        src=\"//www.google.com/insights/consumersurveys/async_survey?site=xusttduenzseze54mcajwbd6sq\"></script><!--
+        Start GPT Async Tag --><script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script><script>\n
+        \   var gptadslots = [];\n    var googletag = googletag || {cmd:[]};\n  </script><script>\n
+        \ googletag.cmd.push(function() {\n    //Adslot 1 declaration\n    gptadslots.push(googletag.defineSlot('/60656358/com.gf.company',
+        [[300,250]], 'div-gpt-ad-4209476-1')\n                             .setForceSafeFrame(true)\n
+        \                            .addService(googletag.pubads()));\n    //Adslot
+        2 declaration\n    gptadslots.push(googletag.defineSlot('/60656358/com.gf.home',
+        [[300,250]], 'div-gpt-ad-4209476-2')\n                             .setForceSafeFrame(true)\n
+        \                            .addService(googletag.pubads()));\n    //Adslot
+        3 declaration\n    gptadslots.push(googletag.defineSlot('/60656358/com.gf.portfolio',
+        [[300,250]], 'div-gpt-ad-4209476-3')\n                             .setForceSafeFrame(true)\n
+        \                            .addService(googletag.pubads()));\n\n    googletag.pubads().enableSingleRequest();\n
+        \   googletag.enableServices();\n  });\n  </script><!-- End GPT Async Tag
+        --><script>\n      function _rpt() {}\n      function _tck() {}\n    </script><script>\n
+        \   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n
+        \   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n
+        \   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n
+        \   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\n
+        \   ga('create', 'UA-40765809-1', {\n      'allowLinker': true,\n      'cookiePath':
+        '/finance'\n    });\n    ga('send', 'pageview');\n    </script></head><body><div
+        class=fjfe&#45;bodywrapper><div id=fjfe&#45;real&#45;body class=g-doc><input
+        type=\"text\" name=\"hist_state\" id=\"hist_state\" style=\"display:none;\"><iframe
+        id=\"hist_frame\" name=\"hist_frame\" class=invfr tabindex=\"-1\"></iframe><iframe
+        src=\"/_/scs/finance-static/_/js/k=finance.a.en_US.Upzqnh5ra8Q.O/m=b/rt=h/d=0/rs=AGHGApEK7U1PJ67cp--3Ay1lYGnaQQb8fg\"
+        class=invfr tabindex=\"-1\"></iframe><div id=gbar><nobr><a class=gb1 href=\"https://www.google.com/webhp?tab=ew\">Search</a>
+        <a class=gb1 href=\"http://www.google.com/imghp?hl=en&tab=ei\">Images</a>
+        <a class=gb1 href=\"https://maps.google.com/maps?hl=en&tab=el\">Maps</a> <a
+        class=gb1 href=\"https://play.google.com/?hl=en&tab=e8\">Play</a> <a class=gb1
+        href=\"https://www.youtube.com/?gl=US&tab=e1\">YouTube</a> <a class=gb1 href=\"https://news.google.com/nwshp?hl=en&tab=en\">News</a>
+        <a class=gb1 href=\"https://mail.google.com/mail/?tab=em\">Gmail</a> <a class=gb1
+        href=\"https://drive.google.com/?tab=eo\">Drive</a> <a class=gb1 style=\"text-decoration:none\"
+        href=\"https://www.google.com/intl/en/options/\"><u>More</u> &raquo;</a></nobr></div><div
+        id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span
+        id=gbe></span><a  href=\"http://www.google.com/support/finance?hl=en\" class=gb4>Help</a>
+        | <a target=_top id=gb_70 href=\"https://accounts.google.com/ServiceLogin?service=finance&passive=1209600&continue=https://finance.google.com/finance?q%3DMSFT&followup=https://finance.google.com/finance?q%3DMSFT\"
+        class=gb4>Sign in</a></nobr></div><div class=gbh style=left:0></div><div class=gbh
+        style=right:0></div><div id=flash&#45;disclaimer style=\"display:none;\">Adobe
+        Flash Player is required for interactive charts.&nbsp;<a href=\"http://www.adobe.com/go/getflashplayer/\">Allow</a></div><div
+        id=fjfe&#45;click&#45;wrapper><script>\n(function() {\n  var l = window.location;\n
+        \ var q = l.search ? l.search.substr(1) : '';\n  var h = l.hash ? l.hash.substr(1)
+        : '';\n  var p = '/finance';\n  var ss = 'stockscreener';\n  var conn = window.history
+        && window.history.pushState ? '/' : '#';\n  if (l.pathname == p + '/' + ss)
+        {\n    if (h) l.href = p + conn + ss + '?' + q + '&' + h;\n  } else if (l.pathname
+        != p && h) {\n    l.href = p + l.hash;\n  }\n  if (h) {\ndocument.getElementById('fjfe-click-wrapper').style.display
+        = 'none';\n  }\n})();\n</script><div id=gf-head class=\"g-section g-tpl-75-25
+        g-split\"><div class=\"g-unit g-first\"><div class=fjfe&#45;logo><a href=\"/finance/?ei=5f_8WZGpNsSMeIjDvrgM\"><img
+        src=\"/finance/f/logo_material-4224265490.png\" alt=\"Google Finance\"></a></div><div
+        id=gf-search class=fjfe&#45;search><form method=\"get\" action=\"/finance\"
+        autocomplete=\"off\"><input class=fjfe&#45;searchbox&#45;input name=q type=text
+        tabindex=1 value=\"NASDAQ:MSFT\"><span class=fjfe&#45;searchbox&#45;button&#45;wrapper><span
+        class=fjfe&#45;searchbox&#45;button&#45;wrapper2><input class=fjfe&#45;searchbox&#45;button
+        type=submit tabindex=2 value=\"Get quotes\"></span></span><input type=hidden
+        name=\"ei\" value=\"5f_8WZGpNsSMeIjDvrgM\"></form></div></div><div class=\"g-unit
+        fjfe-promo\"><div id=\"ad2-target\" class=\"id-ad2-target\"></div></div></div><div
+        class=elastic><div id=app class=\"g-section g-tpl-left-11p4em\"><div class=\"g-unit
+        g-first\"><div id=gf-nav><div class=fjfe&#45;nav&#45;nav><ul class=fjfe&#45;nav
+        id=navmenu><li class=\"fjfe-nav-expanded fjfe-nav-selected\">Company<li class=fjfe&#45;nav&#45;sub><div>Summary</div><li
+        class=fjfe&#45;nav&#45;sub><a href=\"/finance/company_news?q=NASDAQ:MSFT&amp;ei=5f_8WZGpNsSMeIjDvrgM\">News</a><li
+        class=fjfe&#45;nav&#45;sub><a href=\"/finance/option_chain?q=NASDAQ:MSFT&amp;ei=5f_8WZGpNsSMeIjDvrgM\">Option
+        chain</a><li class=fjfe&#45;nav&#45;sub><a href=\"/finance/related?q=NASDAQ:MSFT&amp;ei=5f_8WZGpNsSMeIjDvrgM\">Related
+        companies</a><li class=fjfe&#45;nav&#45;sub><a href=\"/finance?q=NASDAQ:MSFT&amp;fstype=ii&amp;ei=5f_8WZGpNsSMeIjDvrgM\">Financials</a><li
+        class=fjfe&#45;nav&#45;item><a href=\"/finance?ei=5f_8WZGpNsSMeIjDvrgM\"><div>Markets</div></a><li
+        class=fjfe&#45;nav&#45;item><a href=\"/finance/market_news?ei=5f_8WZGpNsSMeIjDvrgM\"><div>News</div></a><li
+        class=fjfe&#45;nav&#45;item><a href=\"/finance/portfolio?action=view&amp;ei=5f_8WZGpNsSMeIjDvrgM\"><div>Portfolios</div></a><li
+        class=fjfe&#45;nav&#45;item><a href=\"/finance/stockscreener?ei=5f_8WZGpNsSMeIjDvrgM\"><div>Stock
+        screener</div></a><li class=fjfe&#45;nav&#45;item><a href=\"/finance/domestic_trends?ei=5f_8WZGpNsSMeIjDvrgM\"><div>Google
+        Domestic Trends</div></a></ul></div><div class=\"fjfe-recentquotes fjfe-recentquotes-noquote\"><h4>Recent
+        Quotes <span class=\"fjfe-recentquotes-duration\">(<a href=\"//www.google.com/history/optout?hl=en\">30
+        days</a>)</span></h4><div class=fjfe&#45;recentquotes&#45;noquote&#45;notification>You
+        have no recent quotes</div><div class=fjfe&#45;recentquotes&#45;quotes><div
+        class=\"fjfe-toggle fjfe-toggle-button\"><span class=fjfe&#45;chg&#45;toggle>chg</span>
+        | <span class=fjfe&#45;perc&#45;toggle>%</span></div><div class=fjfe&#45;table&#45;div><table
+        class=fjfe&#45;recentquotes&#45;table id=rq width=100%></table></div></div></div></div><script>var
+        _cleardot = 'data:image\\/gif;base64,R0lGODlhAQABAIAAAP\\/\\/\\/\\/\\/\\/\\/yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw\\x3d\\x3d';\n
+        \   var google = google || {};\n    google.finance = google.finance || {};\n
+        \   google.finance.gce = false ;</script><script src=\"/finance/f/sfe-opt-4109386599.js\"></script><script>\n
+        \     _regOnLoad = function(f) {\n        if (document.readyState == 'complete')
+        {\n          f && f();\n        } else {\n          // Window.attachEvent()
+        for IE8 and below compatability.\n          var addEventFunction = window.attachEvent
+        ||\n              window.addEventListener || function(ignored, f) { f(); };\n
+        \         var event = window.attachEvent ? 'onload' : 'load';\n          f
+        && addEventFunction(event, f);\n        }\n      };\n    \n      google.finance.renderRecentQuotes
+        = function() {};\n    </script></div><div class=g&#45;unit id=gf-viewc><div
+        class=fjfe&#45;content>\n<script>\n(function() {\nif (window['_finance_chart'])
+        {\nvar el = document.getElementById('chart_anchor');\nif (el) {\nel.innerHTML
+        = '';\n}\nsetFinanceChart(null);\n}\n})();\nvar _ticker = 'NASDAQ:MSFT';\nvar
+        _slHeight = 221;\nvar _companyName = 'Microsoft Corporation';\nvar _companyPageNewsTab
+        = '0';\nvar _displayVolume = true;\nsetCompanyId(358464);\n_s_Store._numToDisplay
+        = 6;\n_comparison_charts_Store._numToDisplay = 8;\n_comparison_charts_Store._allowMultiTimezoneCompare
+        = true;\nfunction onCompanyLoad() {\n_external_target = \"\";\n_emitFlashChartOnLoad(\n\"/finance/s/n-VxNKK74DU/chart9.swf?hl=en&gl=us\",\n_ticker,
+        \"chart_anchor\", \"market-data-div\",\n_chartConfigObject);\ngoogle.finance.onCompanyLoad();\n_initAutoFocus();\nif
+        (google.finance.initTechnicals) {\ngoogle.finance.initTechnicals(true);\n}\n}\n</script>\n<div
+        class=g-wrap>\n<div class=\"g-section sfe-break-bottom-8\">\n<div class=\"g-tpl-67-33
+        g-split hdg top appbar-hide\" id=companyheader>\n<div class=\"g-unit g-first\"><h3>Microsoft
+        Corporation&nbsp;&nbsp;</h3>(Public, NASDAQ:MSFT)&nbsp;&nbsp;\n<a href=\"/finance/portfolio?action=add&amp;addticker=NASDAQ%3AMSFT&ei=5f_8WZGpNsSMeIjDvrgM\"
+        class=norm>Watch this stock</a>\n&nbsp;\n</div><div class=\"g-unit norm\">Find
+        more results for<b>\n<a href=\"?noIL=1&q=MSFT&ei=5f_8WZGpNsSMeIjDvrgM\" id=searchmore>MSFT</a></b>\n</div>\n</div>\n</div>\n\n<script>\n_ac_register(function
+        (input, event) {\nif (input.id == 'add_comparison_symbol') {\n_comparison_charts_Store.baseTicker
+        = \"NASDAQ:MSFT\";\nreturn _comparison_charts_Store;\n}\n});\nvar _prefs=_prefs||{};_prefs.hash=\"\";\n_prefs.feeds=_prefs.feeds||{};\n_prefs.ch=_prefs.ch||{};\n_prefs.ch_compare=_prefs.ch_compare||{};\nvar
+        _chartConfigObject;\nvar _cleardot;\nvar _companyName;\nvar _eventid = '5f_8WZGpNsSMeIjDvrgM';\nvar
+        _expid;\nvar _external_target;\nvar _localDomain = 'www.google.com';\nvar
+        _minZoomDays;\nvar _minZoomDaysNoIntraDay;\nvar _prefs;\nvar _ticker;\nvar
+        _urlSuffix;\nvar google = google || {};\ngoogle.finance = google.finance ||
+        {};\ngoogle.finance.data = {\"common\":{\"rq\":{\"ct\":\"\"},\"up\":\"chg\",\"down\":\"chr\",\"linktargetInternal\":\"\",\"hash\":\"\",\"dfp\":\"ad-g.doubleclick.net/adi/com.gf.company/technology;fe=nasdaq;ft=msft;fm=large;ssl=1;dcopt=ist;myd=ad;sz=300x250;tile=1\",\"streaming\":[{\"cid\":\"358464\",\"s\":\"MSFT\",\"e\":\"NASDAQ\"},{\"cid\":\"662102\",\"s\":\"SAP\",\"e\":\"NYSE\"},{\"cid\":\"14135\",\"s\":\"GE\",\"e\":\"NYSE\"},{\"cid\":\"4112\",\"s\":\"ADBE\",\"e\":\"NASDAQ\"},{\"cid\":\"17154\",\"s\":\"HPQ\",\"e\":\"NYSE\"},{\"cid\":\"663462\",\"s\":\"RHT\",\"e\":\"NYSE\"},{\"cid\":\"420424055286581\",\"s\":\"DVMT\",\"e\":\"NYSE\"},{\"cid\":\"664887\",\"s\":\"VZ\",\"e\":\"NYSE\"},{\"cid\":\"18241\",\"s\":\"IBM\",\"e\":\"NYSE\"},{\"cid\":\"419344\",\"s\":\"ORCL\",\"e\":\"NYSE\"},{\"cid\":\"531834042473910\",\"s\":\"GPRO\",\"e\":\"NASDAQ\"}],\"dfp_companion\":\"ad-g.doubleclick.net/adi/com.gf.company/technology;fe=nasdaq;ft=msft;fm=large;ssl=1;dcopt=ist;myd=ad2;sz=33x33;tile=2\"},\"company\":{\"news\":{\"clusters\":[{\"nrel\":4,\"idx\":0,\"id\":\"52779661091540\",\"lead_story_url\":\"https://investorplace.com/2017/11/7-tech-etfs-that-will-soar-microsoft-corporation-msft-blockbuster-earnings-beat-ggsyn/\",\"a\":[{\"t\":\"7
+        Tech ETFs That Will Soar on Microsoft Corporation (MSFT) Blockbuster ...\",\"u\":\"https://investorplace.com/2017/11/7-tech-etfs-that-will-soar-microsoft-corporation-msft-blockbuster-earnings-beat-ggsyn/\",\"s\":\"Investorplace.com\",\"sp\":\"After
+        the closing bell on Thursday, Microsoft Corporation (NASDAQ:MSFT) the world\\u0026#39;s
+        largest software maker, delighted investors with stellar fiscal first-quarter
+        2018 results on strong performance in its fast-growing cloud business.\",\"d\":\"12
+        hours ago\",\"tt\":\"1509709050\",\"usg\":\"AFQjCNF4zGHzf1E4Dnk_k_CyOexg49Mwtw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://investorplace.com/2017/11/7-tech-etfs-that-will-soar-microsoft-corporation-msft-blockbuster-earnings-beat-ggsyn/\\u0026cid=52779661091540\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNFGs0K7kcvvoX8v2WBlPj6Czgg5CQ\"}],\"lead_story_doc_id\":\"8163846207052040325\"},{\"nrel\":214,\"idx\":1,\"id\":\"52779652066678\",\"lead_story_url\":\"https://money.usnews.com/investing/stock-market-news/articles/2017-10-27/theres-more-upside-ahead-for-microsoft-corporation-msft\",\"a\":[{\"t\":\"There\\u0026#39;s
+        More Upside Ahead For Microsoft Corporation (MSFT)\",\"u\":\"https://money.usnews.com/investing/stock-market-news/articles/2017-10-27/theres-more-upside-ahead-for-microsoft-corporation-msft\",\"s\":\"U.S.
+        News \\u0026 World Report\",\"sp\":\"\\u0026quot;We have been impressed by
+        solid execution and strong customer adoption of Microsoft\\u0026#39;s cloud
+        applications and platforms,\\u0026quot; KeyBanc analyst Brent Bracelin wrote
+        earlier this week, according to MarketWatch.\",\"d\":\"Oct 27, 2017\",\"tt\":\"1509098175\",\"usg\":\"AFQjCNHpIGR8oAGoUb48BdxrQXimGN1NJQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://money.usnews.com/investing/stock-market-news/articles/2017-10-27/theres-more-upside-ahead-for-microsoft-corporation-msft\\u0026cid=52779652066678\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNFsvGCYNahcTT4-Zvc0F2c11P6Yhg\"},{\"t\":\"Microsoft
+        Corporation (MSFT) Q1 2018 Earnings Top Expectations\",\"u\":\"https://investorplace.com/2017/10/microsoft-corporation/\",\"s\":\"Investorplace.com\",\"sp\":\"The
+        tech giant kicked off its fiscal 2018 with an impressive three months, including
+        earnings of 84 cents per share on an adjusted basis.\",\"d\":\"Oct 26, 2017\",\"tt\":\"1509052950\",\"usg\":\"AFQjCNEvPrYrj4gc04nUlFi6XP_SQqr08A\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://investorplace.com/2017/10/microsoft-corporation/\\u0026cid=52779652066678\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNEc8RtHRsufBgIC7PPSRwGyN-cWKQ\"},{\"t\":\"Microsoft
+        up after Q1 beats, achieves $20B Cloud goal\",\"u\":\"https://seekingalpha.com/news/3304927-microsoft-q1-beats-achieves-20b-cloud-goal\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"Microsoft (NASDAQ:MSFT) shares are up 3.68% aftermarket following
+        Q1 results that beat EPS and revenue estimates, met a Cloud sales goal early,
+        and didn\\u0026#39;t drown in the struggling global PC market.\",\"d\":\"Oct
+        26, 2017\",\"tt\":\"1509051275\",\"usg\":\"AFQjCNH9n-J_wi2nbrHZV0TNI7X4jXXjog\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/news/3304927-microsoft-q1-beats-achieves-20b-cloud-goal\\u0026cid=52779652066678\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNEDt-BFCq26Fk5YdDqQF8JSmJtmkQ\"}],\"lead_story_doc_id\":\"13608090844847642229\"},{\"nrel\":270,\"idx\":2,\"id\":\"52779657373198\",\"lead_story_url\":\"https://seekingalpha.com/article/4119145-microsoft-still-overvalued-price\",\"a\":[{\"t\":\"Microsoft:
+        Still Not Overvalued At This Price\",\"u\":\"https://seekingalpha.com/article/4119145-microsoft-still-overvalued-price\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"Microsoft Corporation has continued to see significant earnings
+        growth for FY 18 Q1. On a P/E basis, this company does not appear to be overvalued.\",\"d\":\"Nov
+        1, 2017\",\"tt\":\"1509560550\",\"usg\":\"AFQjCNFIgKPV0RUxM1hYHuzY6G4ycRjqsw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4119145-microsoft-still-overvalued-price\\u0026cid=52779657373198\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNEgYijwskRNgMCAN0OcjLrC0ZDkUA\"},{\"t\":\"Microsoft
+        Corporation Stock Reinvents Itself With the Cloud\",\"u\":\"https://investorplace.com/2017/11/microsoft-corporation-msft-stock-cloud/\",\"s\":\"Investorplace.com\",\"sp\":\"Just
+        when I thought that Microsoft Corporation (NASDAQ:MSFT) might become obsolete
+        - a few years ago, anyway - it launched several new initiatives.\",\"d\":\"Nov
+        1, 2017\",\"tt\":\"1509549075\",\"usg\":\"AFQjCNE8N_HyPmp3kj2QMzDrNsFveSbX-w\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://investorplace.com/2017/11/microsoft-corporation-msft-stock-cloud/\\u0026cid=52779657373198\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNFNSsgkPhCZTKSMt1uSyQVoC5FqDw\"}],\"lead_story_doc_id\":\"15601825004513833489\"},{\"nrel\":125,\"idx\":3,\"id\":\"52779660556107\",\"lead_story_url\":\"https://www.equities.com/news/microsoft-corporation-msft-closes-0-11-up-on-the-day-for-november-03\",\"a\":[{\"t\":\"Microsoft
+        Corporation (MSFT) Closes 0.11% Up on the Day for November 03\",\"u\":\"https://www.equities.com/news/microsoft-corporation-msft-closes-0-11-up-on-the-day-for-november-03\",\"s\":\"Equities.com\",\"sp\":\"Shares
+        of Microsoft Corporation (MSFT) ended the trading day Friday at $84.14, representing
+        a move of 0.11%, or $0.09 per share, on volume of 17.61 million shares.\",\"d\":\"2
+        hours ago\",\"tt\":\"1509744150\",\"usg\":\"AFQjCNHdBbbv0styzvCS3agkPSXvHFysTg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.equities.com/news/microsoft-corporation-msft-closes-0-11-up-on-the-day-for-november-03\\u0026cid=52779660556107\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNE_oa2OcRUfVyrt1hpD-jAbPxOFTQ\"},{\"t\":\"Earnings
+        Clues on Microsoft Corporation (MSFT), Marathon Oil Corporation (MRO ...\",\"u\":\"https://stocknewsjournal.com/2017/11/03/earnings-clues-on-microsoft-corporation-msft-marathon-oil-corporation-mro-analysts-predictions/\",\"s\":\"StockNewsJournal\",\"sp\":\"Investors
+        who are keeping close eye on the stock of Microsoft Corporation (NASDAQ:MSFT)
+        established that the company was able to keep return on investment at 13.15
+        in the trailing twelve month while Reuters data showed that industry\\u0026#39;s
+        average stands at\\u0026nbsp;...\",\"d\":\"6 hours ago\",\"tt\":\"1509727950\",\"usg\":\"AFQjCNEBEEaw_gpREkbiLPP9JgXXCEGcmg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://stocknewsjournal.com/2017/11/03/earnings-clues-on-microsoft-corporation-msft-marathon-oil-corporation-mro-analysts-predictions/\\u0026cid=52779660556107\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNGIol9jZimMypuOgRZFOR7B6NYTlw\"},{\"t\":\"Microsoft
+        Corporation (MSFT) Making AI Chips For Multiple Devices\",\"u\":\"https://stocknews.com/news/msft-microsoft-corporation-msft-making-a-i-chips-for-multiple-devices/\",\"s\":\"StockNews.com
+        (blog)\",\"sp\":\"Microsoft Corporation shares rose $0.30 (+0.36%) in premarket
+        trading Friday. Year-to-date, MSFT has gained 37.85%, versus a 17.00% rise
+        in the benchmark S\\u0026amp;P 500 index during the same period.\",\"d\":\"10
+        hours ago\",\"tt\":\"1509716475\",\"usg\":\"AFQjCNFeatfENjFKdI6mxEzOU4fxJubiXQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://stocknews.com/news/msft-microsoft-corporation-msft-making-a-i-chips-for-multiple-devices/\\u0026cid=52779660556107\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNFLu2gchMtGqTporG1beWOYh-BlFg\"}],\"lead_story_doc_id\":\"11476427934635234980\"},{\"nrel\":4,\"idx\":4,\"id\":\"52779658999863\",\"lead_story_url\":\"https://seekingalpha.com/article/4119001-jewel-microsofts-earnings-linkedin\",\"a\":[{\"t\":\"The
+        Jewel Of Microsoft\\u0026#39;s Earnings: LinkedIn\",\"u\":\"https://seekingalpha.com/article/4119001-jewel-microsofts-earnings-linkedin\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"Today we have Microsoft (MSFT) earnings in focus. Microsoft
+        reported 24.5bn in revenue and 0.84 EPS, both topping estimates.\",\"d\":\"Nov
+        1, 2017\",\"tt\":\"1509544350\",\"usg\":\"AFQjCNHxe4964CkUKJw01TM0zXCkzhIZbA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4119001-jewel-microsofts-earnings-linkedin\\u0026cid=52779658999863\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNEnZab2X54Ui_sbljKJ2lmqFmbBkQ\"}],\"lead_story_doc_id\":\"18252037875401090545\"},{\"nrel\":85,\"idx\":5,\"id\":\"52779654918171\",\"lead_story_url\":\"https://seekingalpha.com/article/4118106-2-important-signals-microsofts-earnings\",\"a\":[{\"t\":\"2
+        Important Signals From Microsoft\\u0026#39;s Earnings\",\"u\":\"https://seekingalpha.com/article/4118106-2-important-signals-microsofts-earnings\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"As Microsoft (MSFT) comes out of its first quarter 2018 earnings
+        call after market close on Thursday, October 26, there are a couple of things
+        I\\u0026#39;d like to cover.\",\"d\":\"Oct 30, 2017\",\"tt\":\"1509380325\",\"usg\":\"AFQjCNE9LQr8WdVKpK5a_A3TXPd0_ueUFA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4118106-2-important-signals-microsofts-earnings\\u0026cid=52779654918171\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNFC9wxn3W8mc4xVdWBVvdu_GMXxAQ\"},{\"t\":\"Microsoft
+        Corporation (NASDAQ:MSFT) Azure Is Growing Twice as Fast as Its ...\",\"u\":\"https://www.libraryforsmartinvestors.com/2017/10/microsoft-corporation-nasdaqmsft-azure-growing-twice-fast-rival-amazon-com-inc-nasdaqamzn-web-services/41372429.htm\",\"s\":\"Library
+        For Smart Investors\",\"sp\":\"Amazon.com, Inc. (NASDAQ:AMZN) Web Services
+        is still the leading cloud services provider according to recent reports but
+        Microsoft Corporation (NASDAQ:MSFT) Azure platform is growing at a faster
+        pace. Earnings reports released on Thursday showed\\u0026nbsp;...\",\"d\":\"Oct
+        30, 2017\",\"tt\":\"1509365552\",\"usg\":\"AFQjCNEKIco_mDHfZ9BeqA_QOmHUxmfzKA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.libraryforsmartinvestors.com/2017/10/microsoft-corporation-nasdaqmsft-azure-growing-twice-fast-rival-amazon-com-inc-nasdaqamzn-web-services/41372429.htm\\u0026cid=52779654918171\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNH397XIjDURSvbz9fjCGJ9bpazV9w\"}],\"lead_story_doc_id\":\"7314834607550734181\"},{\"nrel\":57,\"idx\":6,\"id\":\"52779659820075\",\"lead_story_url\":\"http://host.madison.com/business/investment/markets-and-stocks/takeaways-from-microsoft-corporation-s-first-quarter-earnings-call/article_eec3777e-663d-5771-91d7-24bea865aea9.html\",\"a\":[{\"t\":\"3
+        Takeaways From Microsoft Corporation\\u0026#39;s First-Quarter Earnings Call\",\"u\":\"http://host.madison.com/business/investment/markets-and-stocks/takeaways-from-microsoft-corporation-s-first-quarter-earnings-call/article_eec3777e-663d-5771-91d7-24bea865aea9.html\",\"s\":\"Madison.com\",\"sp\":\"Microsoft
+        (NASDAQ: MSFT) impressed investors last week with revenue for its first fiscal
+        quarter of 2018 coming in about $1 billion higher than estimates.\",\"d\":\"Nov
+        2, 2017\",\"tt\":\"1509580800\",\"usg\":\"AFQjCNG43QzNh79frtYtCW6omO0AT3MQEg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://host.madison.com/business/investment/markets-and-stocks/takeaways-from-microsoft-corporation-s-first-quarter-earnings-call/article_eec3777e-663d-5771-91d7-24bea865aea9.html\\u0026cid=52779659820075\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNHwQGAoAKFUXCOBVtcEgZFSDZRUeA\"},{\"t\":\"How
+        Microsoft Azure Performed in Fiscal 1Q18\",\"u\":\"http://marketrealist.com/2017/11/microsoft-azure-performed-fiscal-1q18/\",\"s\":\"Market
+        Realist\",\"sp\":\"Symantec (SYMC), Costco, Bank of America (BAC), and Sumitomo
+        Mitsui Banking Corporation are among the companies that chose Azure to fulfill
+        their cloud computing platform needs.\",\"d\":\"18 hours ago\",\"tt\":\"1509686775\",\"usg\":\"AFQjCNGMRDwyDlVGHbshaOg_-EYuP0c25w\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://marketrealist.com/2017/11/microsoft-azure-performed-fiscal-1q18/\\u0026cid=52779659820075\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNGA4Tsr-skzNdkJq5SoiEFcIVoF5A\"},{\"t\":\"How
+        a new breed of techno symbiosis could shape the future of the cloud\",\"u\":\"https://www.itproportal.com/features/how-a-new-breed-of-techno-symbiosis-could-shape-the-future-of-the-cloud/\",\"s\":\"ITProPortal\",\"sp\":\"The
+        recently announced strategic partnership between Microsoft Corporation and
+        Chinese tech giant Huawei is set to bring more of Microsoft\\u0026#39;s enterprise
+        applications to the Huawei cloud.\",\"d\":\"Nov 2, 2017\",\"tt\":\"1509621300\",\"usg\":\"AFQjCNEKAXiqidx8vDYexElY7s5NV6eVHQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.itproportal.com/features/how-a-new-breed-of-techno-symbiosis-could-shape-the-future-of-the-cloud/\\u0026cid=52779659820075\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNF7bTFABs2p1A8ijNpW_EVe0bZsGA\"}],\"lead_story_doc_id\":\"4656185273277732860\"},{\"idx\":7,\"id\":\"0\",\"lead_story_url\":\"http://www.mysanantonio.com/real-estate/article/Microsoft-buys-80-million-data-center-on-far-12330383.php\",\"a\":[{\"t\":\"Microsoft
+        buys $80 million data center on far West Side\",\"u\":\"http://www.mysanantonio.com/real-estate/article/Microsoft-buys-80-million-data-center-on-far-12330383.php\",\"s\":\"mySanAntonio.com\",\"sp\":\"Microsoft
+        Corp. purchased an $80 million data center on the far West Side this week,
+        continuing its 12-year effort to cluster data centers in San Antonio.\",\"d\":\"2
+        hours ago\",\"tt\":\"1509742125\",\"usg\":\"AFQjCNFEj_MYsD1Pdpxm6rq4OgMYjWsJJg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.mysanantonio.com/real-estate/article/Microsoft-buys-80-million-data-center-on-far-12330383.php\\u0026cid=0\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNENxar-0A7S2ZmNBwUxtAPzJZlDPA\"}],\"lead_story_doc_id\":\"17184872481004012662\"},{\"nrel\":4,\"idx\":8,\"id\":\"52779651657495\",\"lead_story_url\":\"https://seekingalpha.com/article/4116245-take-microsoft-pullback\",\"a\":[{\"t\":\"What
+        It Would Take For A Microsoft Pullback\",\"u\":\"https://seekingalpha.com/article/4116245-take-microsoft-pullback\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"What are the risk areas that Microsoft investors should be
+        looking at as the company announces Q1 2018 earnings? Where are the key pulse
+        points that could indicate a possible pullback as Microsoft hits new 52-week
+        highs. What metrics and trends should\\u0026nbsp;...\",\"d\":\"Oct 25, 2017\",\"tt\":\"1508946975\",\"usg\":\"AFQjCNEEDSz9GDS-ljQR5hUQWKFGSZCIPA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4116245-take-microsoft-pullback\\u0026cid=52779651657495\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNEqnqzSbFCU02alppH9S_98N7peHw\"}],\"lead_story_doc_id\":\"5797162863743304830\"},{\"nrel\":22,\"idx\":9,\"id\":\"52779658323224\",\"lead_story_url\":\"https://seekingalpha.com/news/3306216-argus-upgrades-microsoft-cloud-office-365-potential\",\"a\":[{\"t\":\"Argus
+        upgrades Microsoft on cloud, Office 365 potential\",\"u\":\"https://seekingalpha.com/news/3306216-argus-upgrades-microsoft-cloud-office-365-potential\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"Analyst Joseph Bonner cites growths in Azure cloud services,
+        Dynamics CRM, and Office CRM as the man tailwinds that position the company
+        to continue its run.\",\"d\":\"Oct 31, 2017\",\"tt\":\"1509475500\",\"usg\":\"AFQjCNHdFxwUkJUTxAHw7HzUDbV7qbugbA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/news/3306216-argus-upgrades-microsoft-cloud-office-365-potential\\u0026cid=52779658323224\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNHTbhlBNR2WPkx93BIxr_hlNsR24Q\"},{\"t\":\"When
+        Will Microsoft Corporation Stock Price Reach Triple Digits?\",\"u\":\"http://www.valuewalk.com/2017/10/when-will-microsoft-corporation-stock-price-reach-triple-digits/\",\"s\":\"ValueWalk\",\"sp\":\"The
+        Microsoft Corporation (NASDAQ:MSFT) stock price hit a ceiling this week after
+        posting impressive gains on Friday, flying to a fresh high and giving the
+        Dow Jones Industrial Average a much-needed boost.\",\"d\":\"Oct 31, 2017\",\"tt\":\"1509474150\",\"usg\":\"AFQjCNEv9rKJ6ift5Zo7_5-q-OkV6BN1ig\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.valuewalk.com/2017/10/when-will-microsoft-corporation-stock-price-reach-triple-digits/\\u0026cid=52779658323224\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNGZ6DD7z3LukXEokNjyn2siyMGTXA\"},{\"t\":\"Chevron
+        partners with Microsoft to fuel digital transformation\",\"u\":\"http://www.worldoil.com/news/2017/10/31/chevron-partners-with-microsoft-to-fuel-digital-transformation\",\"s\":\"WorldOil\",\"sp\":\"SAN
+        RAMON, California -- Chevron Corporation has announced a seven-year partnership
+        with Microsoft Corp. establishing the company as Chevron\\u0026#39;s primary
+        cloud provider, accelerating the application of advanced technologies including
+        analytics and the\\u0026nbsp;...\",\"d\":\"Oct 31, 2017\",\"tt\":\"1509466725\",\"usg\":\"AFQjCNGYajHMsP2VOludBeKfeLWFEPCLQg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.worldoil.com/news/2017/10/31/chevron-partners-with-microsoft-to-fuel-digital-transformation\\u0026cid=52779658323224\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNG9fk80tVcfMerqEKWuqQvRGRSM9w\"}],\"lead_story_doc_id\":\"171399050382643454\"},{\"nrel\":216,\"idx\":10,\"id\":\"52779655957106\",\"lead_story_url\":\"https://investorplace.com/2017/10/chevron-corporation-also-microsoft-corporation-azure-cvx-msft/\",\"a\":[{\"t\":\"Chevron
+        Corporation (CVX) Signs Cloud Deal With Microsoft\",\"u\":\"https://investorplace.com/2017/10/chevron-corporation-also-microsoft-corporation-azure-cvx-msft/\",\"s\":\"Investorplace.com\",\"sp\":\"Chevron
+        Corporation has announced a seven-year deal with Microsoft Corporation to
+        enhance its business with the tech company\\u0026#39;s Azure platform.\",\"d\":\"Oct
+        30, 2017\",\"tt\":\"1509385050\",\"usg\":\"AFQjCNHz-CRHoy6wmNaafwXNpTkKDn3r3A\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://investorplace.com/2017/10/chevron-corporation-also-microsoft-corporation-azure-cvx-msft/\\u0026cid=52779655957106\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNFXsdBzA-5Sz43LK6oL8NwACwzN4w\"},{\"t\":\"Chevron
+        partners with Microsoft to fuel digital transformation from the ...\",\"u\":\"http://www.pennenergy.com/articles/pennenergy/2017/11/chevron-partners-with-microsoft-to-fuel-digital-transformation-from-the-reservoir-to-the-retail-pump.html\",\"s\":\"PennEnergy\",\"sp\":\"Chevron
+        Corporation has entered into a seven-year partnership with Microsoft Corp.
+        establishing the company as Chevron\\u0026#39;s primary cloud provider, accelerating
+        the application of advanced technologies including analytics and the Internet
+        of Things (IoT ...\",\"d\":\"Oct 30, 2017\",\"tt\":\"1509368175\",\"usg\":\"AFQjCNGGtZq6OYpHijSHgriPAUE6wIn3pA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.pennenergy.com/articles/pennenergy/2017/11/chevron-partners-with-microsoft-to-fuel-digital-transformation-from-the-reservoir-to-the-retail-pump.html\\u0026cid=52779655957106\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNEykugSAfAzJh_jNvihYrmAabvgZQ\"}],\"lead_story_doc_id\":\"1963045437036116047\"},{\"idx\":11,\"id\":\"0\",\"lead_story_url\":\"https://seekingalpha.com/news/3306413-microsoft-working-ai-chips\",\"a\":[{\"t\":\"Microsoft
+        is working on AI chips\",\"u\":\"https://seekingalpha.com/news/3306413-microsoft-working-ai-chips\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"Marking its first foray into AI chips, Microsoft (NASDAQ:MSFT)
+        is working on a prototype for its next generation HoloLens headset, allowing
+        it to do things like recognize objects in its line of sight.\",\"d\":\"Nov
+        1, 2017\",\"tt\":\"1509526125\",\"usg\":\"AFQjCNHyduYxAnNjNZ_bFylsnKES9zgioA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/news/3306413-microsoft-working-ai-chips\\u0026cid=0\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNEzxBh25fY8FkvRJCJn81h_xu5mBg\"}],\"lead_story_doc_id\":\"9349455404937406274\"},{\"nrel\":247,\"idx\":12,\"id\":\"52779654265300\",\"lead_story_url\":\"https://www.equities.com/news/microsoft-corporation-msft-moves-higher-on-volume-spike-for-october-30\",\"a\":[{\"t\":\"Microsoft
+        Corporation (MSFT) Moves Higher on Volume Spike for October 30\",\"u\":\"https://www.equities.com/news/microsoft-corporation-msft-moves-higher-on-volume-spike-for-october-30\",\"s\":\"Equities.com\",\"sp\":\"Microsoft
+        Corporation (MSFT) traded on unusually high volume on Oct. 30, as the stock
+        gained 0.1% to close at $83.89. On the day, Microsoft Corporation saw 31.67
+        million shares trade hands on 184,922 trades. Considering that the stock averages
+        only a\\u0026nbsp;...\",\"d\":\"Oct 30, 2017\",\"tt\":\"1509399005\",\"usg\":\"AFQjCNGJT9jPrx0b2eJzQv_ukrWcTqA3Hw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.equities.com/news/microsoft-corporation-msft-moves-higher-on-volume-spike-for-october-30\\u0026cid=52779654265300\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNF1xadrR2kABxcWZ-tvbXjT5Vm29w\"},{\"t\":\"Microsoft
+        Corporation (MSFT) Surface Devices Return To Prominence\",\"u\":\"https://stocknews.com/news/msft-microsoft-corporation-msft-surface-devices-return-to-prominence/\",\"s\":\"StockNews.com
+        (blog)\",\"sp\":\"Microsoft Corporation (NASDAQ:MSFT) had a nice hit on its
+        hands with its first generation of Surface and Surface Pro hybrid laptops
+        back in 2012-2013.\",\"d\":\"Oct 30, 2017\",\"tt\":\"1509360750\",\"usg\":\"AFQjCNEMtp6PW2PJlYFwLBou5eDUg0fOhQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://stocknews.com/news/msft-microsoft-corporation-msft-surface-devices-return-to-prominence/\\u0026cid=52779654265300\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNG5u_jgXM4yEHvvoXiRxYUhx9c40Q\"},{\"t\":\"Reviewing
+        the Insider Trends for Microsoft Corporation (MSFT)\",\"u\":\"https://stocknewsgazette.com/2017/10/30/reviewing-the-insider-trends-for-microsoft-corporation-msft/\",\"s\":\"StockNewsGazette\",\"sp\":\"Recent
+        insider trends for Microsoft Corporation (NASDAQ:MSFT) have caught the attention
+        of investors. Analysts study insider data to get a sense of sense of what
+        key shareholders think about the outlook for a particular stock.\",\"d\":\"Oct
+        30, 2017\",\"tt\":\"1509366150\",\"usg\":\"AFQjCNEOQR4gn75O2cZXvkAeusAHip66Rw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://stocknewsgazette.com/2017/10/30/reviewing-the-insider-trends-for-microsoft-corporation-msft/\\u0026cid=52779654265300\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNFblU0c44g4Rj3TfgMiekUWodGguw\"}],\"lead_story_doc_id\":\"11792953334818865150\"},{\"idx\":13,\"id\":\"0\",\"lead_story_url\":\"https://seekingalpha.com/article/4119103-microsoft-ventures-joins-30-million-financing-markforged\",\"a\":[{\"t\":\"Microsoft
+        Ventures Joins $30 Million Financing For Markforged\",\"u\":\"https://seekingalpha.com/article/4119103-microsoft-ventures-joins-30-million-financing-markforged\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"Markforged has developed a family of desktop and industrial
+        3D printers combined with a software system to speed printing of parts in
+        a variety of materials.\",\"d\":\"Nov 1, 2017\",\"tt\":\"1509556500\",\"usg\":\"AFQjCNEbWebyDK6ZdLwyzBoaLWPwoRCuFQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4119103-microsoft-ventures-joins-30-million-financing-markforged\\u0026cid=0\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNGvIMtHX9eLX4dDvdTdN0KC01vvsA\"}],\"lead_story_doc_id\":\"3092661142330706477\"},{\"idx\":14,\"id\":\"0\",\"lead_story_url\":\"https://seekingalpha.com/article/4117279-microsoft-chances-price-pullback-market-maker-outlook\",\"a\":[{\"t\":\"Microsoft:
+        Chances For A Price Pullback? The Market-Maker Outlook\",\"u\":\"https://seekingalpha.com/article/4117279-microsoft-chances-price-pullback-market-maker-outlook\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"Microsoft Corporation (MSFT) stock is 75% owned by over 3,200
+        institutions. The bigger ones have capital commitments at the $10-20 billion-dollar
+        scale.\",\"d\":\"Oct 27, 2017\",\"tt\":\"1509113963\",\"usg\":\"AFQjCNHUZrm4rL9Y9CKChJWSL84pkT6Rgg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4117279-microsoft-chances-price-pullback-market-maker-outlook\\u0026cid=0\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNGX_7Kja7JRJuEVQzR0pbqrwzkSzg\"}],\"lead_story_doc_id\":\"17936684794358123500\"},{\"nrel\":304,\"idx\":15,\"id\":\"52779650138936\",\"lead_story_url\":\"https://www.equities.com/news/microsoft-corporation-msft-rises-6-41-for-october-27\",\"a\":[{\"t\":\"Microsoft
+        Corporation (MSFT) Rises 6.41% for October 27\",\"u\":\"https://www.equities.com/news/microsoft-corporation-msft-rises-6-41-for-october-27\",\"s\":\"Equities.com\",\"sp\":\"Among
+        the biggest risers on the S\\u0026amp;P 500 on Friday October 27 was Microsoft
+        Corporation ($MSFT), popping some 6.41% to a price of $83.81 a share with
+        some 71.01 million shares trading hands.\",\"d\":\"Oct 27, 2017\",\"tt\":\"1509139807\",\"usg\":\"AFQjCNEcmWyfH0zumn54SggG_BME55-awQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.equities.com/news/microsoft-corporation-msft-rises-6-41-for-october-27\\u0026cid=52779650138936\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNGuPu-_i6fIETzPWjAW1Lj0SpzLjQ\"},{\"t\":\"Evaluating
+        the datas for Microsoft Corporation (NASDAQ:MSFT)\",\"u\":\"https://news4j.com/2017/10/27/evaluating-the-datas-for-microsoft-corporation-nasdaqmsft-2/\",\"s\":\"The
+        News Journal\",\"sp\":\"Now, since Microsoft Corporation is heavily affected
+        by something outside of their control, potentially, you want to ensure Microsoft
+        Corporation is in good health. The current price of Microsoft Corporation
+        is $78.76, with the 200 day simple moving ...\",\"d\":\"Oct 27, 2017\",\"tt\":\"1509108300\",\"usg\":\"AFQjCNEnFfFslkilbTtiJCJUrwL1Wh5OdQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://news4j.com/2017/10/27/evaluating-the-datas-for-microsoft-corporation-nasdaqmsft-2/\\u0026cid=52779650138936\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNGUOW2Tee7wlPdkUv8k0q8eju8Cpw\"},{\"t\":\"Overview
+        of Different Indicators: Microsoft Corporation (MSFT)\",\"u\":\"https://standardoracle.com/2017/10/26/overview-of-different-indicators-microsoft-corporation-msft-2/\",\"s\":\"StandardOracle\",\"sp\":\"Microsoft
+        Corporation (MSFT) declined -0.29% and closed its last trading session at
+        $78.63. Its opening price on the last trading day was $78.86.\",\"d\":\"Oct
+        26, 2017\",\"tt\":\"1509021900\",\"usg\":\"AFQjCNFBu_FdPqL-_q0OichLQPEpwQamSw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://standardoracle.com/2017/10/26/overview-of-different-indicators-microsoft-corporation-msft-2/\\u0026cid=52779650138936\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNEgaIm8_PbCahl_IRIxIraxC79oXw\"}],\"lead_story_doc_id\":\"1260885170831571363\"},{\"nrel\":4,\"idx\":16,\"id\":\"52779649005374\",\"lead_story_url\":\"https://seekingalpha.com/article/4115966-microsofts-earnings-expectations\",\"a\":[{\"t\":\"Microsoft\\u0026#39;s
+        Earnings Expectations\",\"u\":\"https://seekingalpha.com/article/4115966-microsofts-earnings-expectations\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"Microsoft (MSFT) is a household name and one of the largest
+        companies by market capitalisation in the world. The company is trading at
+        an all-time high of $78.81 on the back of big successes such as Azure and
+        the business model switch towards\\u0026nbsp;...\",\"d\":\"Oct 24, 2017\",\"tt\":\"1508873400\",\"usg\":\"AFQjCNHCYOytGdP_uIS33NT6y50aaNi5dw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4115966-microsofts-earnings-expectations\\u0026cid=52779649005374\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNGalR0rsM-k2sVcppEH9zySzxLzRQ\"}],\"lead_story_doc_id\":\"14757931618367820066\"},{\"nrel\":239,\"idx\":17,\"id\":\"52779642766566\",\"lead_story_url\":\"https://investorplace.com/2017/10/microsoft-corporation-stock-bulls-should-continue-celebration/\",\"a\":[{\"t\":\"Why
+        Microsoft Corporation Stock Bulls Should Continue Their Celebration\",\"u\":\"https://investorplace.com/2017/10/microsoft-corporation-stock-bulls-should-continue-celebration/\",\"s\":\"Investorplace.com\",\"sp\":\"It\\u0026#39;s
+        still not too late to buy into a very friendly-looking trend off and on the
+        price chart of Microsoft Corporation (NASDAQ:MSFT).\",\"d\":\"Oct 20, 2017\",\"tt\":\"1508510925\",\"usg\":\"AFQjCNHAmbq5GRTQpNxVMbxyCLZvFPuWuw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://investorplace.com/2017/10/microsoft-corporation-stock-bulls-should-continue-celebration/\\u0026cid=52779642766566\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNFKEghwmSdVJy_KWGG1E_qcmZXaSw\"},{\"t\":\"Microsoft
+        Corporation (MSFT) Closes 1.16% Up on the Day for October 20\",\"u\":\"https://www.equities.com/news/microsoft-corporation-msft-closes-1-16-up-on-the-day-for-october-20\",\"s\":\"Equities.com\",\"sp\":\"Shares
+        of Microsoft Corporation (MSFT) ended the trading day Friday at $78.81, representing
+        a move of 1.16%, or $0.9 per share, on volume of 22.8 million shares.\",\"d\":\"Oct
+        20, 2017\",\"tt\":\"1508535006\",\"usg\":\"AFQjCNF_gtYALxgibvtRImbl6VXy72-jQg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.equities.com/news/microsoft-corporation-msft-closes-1-16-up-on-the-day-for-october-20\\u0026cid=52779642766566\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNHyhq1IIFM14hxR6UkkiF4lJJiN_w\"},{\"t\":\"Is
+        It Time to go for Quanta Services, Inc. (PWR), Microsoft Corporation (MSFT)?\",\"u\":\"https://stocknewsjournal.com/2017/10/19/is-it-time-to-go-for-quanta-services-inc-pwr-microsoft-corporation-msft/\",\"s\":\"StockNewsJournal\",\"sp\":\"Microsoft
+        Corporation (NASDAQ:MSFT), maintained return on investment for the last twelve
+        months at -, higher than what Reuters data shows regarding industry\\u0026#39;s
+        average.\",\"d\":\"Oct 19, 2017\",\"tt\":\"1508436000\",\"usg\":\"AFQjCNFLZhnUQQC5DiIz3DCfwgBSEnDAfA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://stocknewsjournal.com/2017/10/19/is-it-time-to-go-for-quanta-services-inc-pwr-microsoft-corporation-msft/\\u0026cid=52779642766566\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNFCyQfHZhT2hHeayP63O5ApSQ0a6g\"}],\"lead_story_doc_id\":\"9246946420817463084\"},{\"idx\":18,\"id\":\"0\",\"lead_story_url\":\"https://seekingalpha.com/news/3303165-microsoft-drop-data-request-lawsuit\",\"a\":[{\"t\":\"Microsoft
+        to drop data request lawsuit\",\"u\":\"https://seekingalpha.com/news/3303165-microsoft-drop-data-request-lawsuit\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"Microsoft (NASDAQ:MSFT) is dropping a lawsuit against the
+        U.S. government after the DOJ changed data request rules on alerting internet
+        users about agencies accessing their information.\",\"d\":\"Oct 24, 2017\",\"tt\":\"1508830604\",\"usg\":\"AFQjCNG77O13ZtDT1-wL5RN_a7_WUbD8ww\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/news/3303165-microsoft-drop-data-request-lawsuit\\u0026cid=0\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNHtntfJDT3yfdqdLclUVU77RBFKKA\"}],\"lead_story_doc_id\":\"506206611238470076\"},{\"idx\":19,\"id\":\"0\",\"lead_story_url\":\"https://seekingalpha.com/news/3303887-microsoft-ends-kinect-manufacturing\",\"a\":[{\"t\":\"Microsoft
+        ends Kinect manufacturing\",\"u\":\"https://seekingalpha.com/news/3303887-microsoft-ends-kinect-manufacturing\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"The depth-sensing accessory debuted in November 2010 and
+        went on to sell around 35M units. The Kinect was popular bundled with the
+        Xbox 360 but less so with the Xbox One, which led to Microsoft unbundling
+        the duo, and the integration never took off\\u0026nbsp;...\",\"d\":\"Oct 25,
+        2017\",\"tt\":\"1508941228\",\"usg\":\"AFQjCNEVLmXHwhDWFvzQWYacDmrgoEfzJw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/news/3303887-microsoft-ends-kinect-manufacturing\\u0026cid=0\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNGG3T0gbCnLaEiOYk50OEmnWHWLfg\"}],\"lead_story_doc_id\":\"9657486699355352160\"},{\"nrel\":316,\"idx\":20,\"id\":\"52779651479127\",\"lead_story_url\":\"https://investorplace.com/2017/10/friday-vital-data-twitter-inc-twtr-microsoft-corporation-msft-celgene-corporation-celg/\",\"a\":[{\"t\":\"Friday\\u0026#39;s
+        Vital Data: Twitter Inc (TWTR), Microsoft Corporation (MSFT) and ...\",\"u\":\"https://investorplace.com/2017/10/friday-vital-data-twitter-inc-twtr-microsoft-corporation-msft-celgene-corporation-celg/\",\"s\":\"Investorplace.com\",\"sp\":\"U.S.
+        stock futures are blazing a path higher this morning, as Wall Street cheers
+        a raft better-than-expected quarterly reports in the tech sector.\",\"d\":\"Oct
+        27, 2017\",\"tt\":\"1509107625\",\"usg\":\"AFQjCNHA2BvcPFv0VECsQSt6mM6YFWa7Iw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://investorplace.com/2017/10/friday-vital-data-twitter-inc-twtr-microsoft-corporation-msft-celgene-corporation-celg/\\u0026cid=52779651479127\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNEhVqSeAKXTCZwpxiVxUrMMPP-yiA\"}],\"lead_story_doc_id\":\"16379448508332693248\"},{\"nrel\":18,\"idx\":21,\"id\":\"52779629555642\",\"lead_story_url\":\"https://seekingalpha.com/article/4112236-microsoft-azure-fuels-dividend-growth\",\"a\":[{\"t\":\"Microsoft:
+        Azure fuels Dividend Growth\",\"u\":\"https://seekingalpha.com/article/4112236-microsoft-azure-fuels-dividend-growth\",\"s\":\"Seeking
+        Alpha\",\"sp\":\"Microsoft\\u0026#39;s stock has been one of the best performers
+        in recent years easily outperforming the S\\u0026amp;P 500. Satya Nadella,
+        Microsoft\\u0026#39;s CEO, has reignited the company\\u0026#39;s growth engine,
+        benefiting income and growth investors alike. The cloud market is booming\\u0026nbsp;...\",\"d\":\"Oct
+        7, 2017\",\"tt\":\"1507379625\",\"usg\":\"AFQjCNFIVHRnsRNsF7YCgYxcXJNvjHeGOQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4112236-microsoft-azure-fuels-dividend-growth\\u0026cid=52779629555642\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNFIo052cD2Ou_7d5yX7Ry-GP19s7A\"}],\"lead_story_doc_id\":\"11080222765349537435\"},{\"nrel\":5,\"idx\":22,\"id\":\"52779661519312\",\"lead_story_url\":\"https://www.directorstalkinterviews.com/eod-risers-merck-co-inc-microsoft-corporation-nike-inc-4/412739234\",\"a\":[{\"t\":\"EOD
+        Risers: Merck \\u0026amp; Co., Inc., Microsoft Corporation, Nike Inc\",\"u\":\"https://www.directorstalkinterviews.com/eod-risers-merck-co-inc-microsoft-corporation-nike-inc-4/412739234\",\"s\":\"DirectorsTalk
+        Interviews\",\"sp\":\"Shares in Microsoft Corporation ticker code: (NASDAQ:MSFT)
+        a technology company, increased 1.05% or 0.87 points throughout yesterday\\u0026#39;s
+        trading day.\",\"d\":\"13 hours ago\",\"tt\":\"1509704325\",\"usg\":\"AFQjCNEZWOiWhD28UO5zW4dyQ8zWN0iYcA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.directorstalkinterviews.com/eod-risers-merck-co-inc-microsoft-corporation-nike-inc-4/412739234\\u0026cid=52779661519312\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNFr_6vgAQnfSHG-dLzgVgkvVujCMg\"}],\"lead_story_doc_id\":\"4422850054530233969\"},{\"nrel\":8,\"idx\":23,\"id\":\"52779661963378\",\"lead_story_url\":\"http://www.naacp.org/latest/princeton-microsoft-file-suit-ending-daca/\",\"a\":[{\"t\":\"Princeton,
+        Microsoft File Suit against Ending DACA\",\"u\":\"http://www.naacp.org/latest/princeton-microsoft-file-suit-ending-daca/\",\"s\":\"NAACP
+        (press release)\",\"sp\":\"BALTIMORE (November 3, 2017)&#8212;Today, the Trustees
+        of Princeton University, the Microsoft Corporation, and Plaintiff Maria De
+        La Cruz Perales Sanchez, a Princeton undergraduate, and DACA participant,
+        have filed a lawsuit in the United States District\\u0026nbsp;...\",\"d\":\"2
+        hours ago\",\"tt\":\"1509743475\",\"usg\":\"AFQjCNE53QlgR2ohtTAY2t1UpsGP14WOQg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.naacp.org/latest/princeton-microsoft-file-suit-ending-daca/\\u0026cid=52779661963378\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNHtqnMoruiTkueoWyTLaFccbGfFLg\"},{\"t\":\"Princeton,
+        a student and Microsoft file federal lawsuit to preserve DACA\",\"u\":\"https://www.princeton.edu/news/2017/11/03/princeton-student-and-microsoft-file-federal-lawsuit-preserve-daca\",\"s\":\"Princeton
+        University\",\"sp\":\"On November 1, Microsoft and over 100 companies, including
+        Facebook, Chobani, Levi Strauss \\u0026amp; Co., IBM Corporation, Verizon
+        Communications and others, filed a friend-of-the-court brief in U.S. District
+        Court at San Francisco in five cases challenging ...\",\"d\":\"4 hours ago\",\"tt\":\"1509737400\",\"usg\":\"AFQjCNEEOzjtd4fmPAstv18tsMm-8jtV7g\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.princeton.edu/news/2017/11/03/princeton-student-and-microsoft-file-federal-lawsuit-preserve-daca\\u0026cid=52779661963378\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNFMkTTmxc41oUr2D_DrbvIG32qAXw\"}],\"lead_story_doc_id\":\"15658061363457282307\"},{\"nrel\":105,\"idx\":24,\"id\":\"52779655622457\",\"lead_story_url\":\"https://postanalyst.com/2017/11/03/analysts-shared-their-read-on-2-stocks-macquarie-infrastructure-corporation-mic-microsoft-corporation-msft/\",\"a\":[{\"t\":\"Analysts
+        Shared Their Read on 2 Stocks: Macquarie Infrastructure Corporation ...\",\"u\":\"https://postanalyst.com/2017/11/03/analysts-shared-their-read-on-2-stocks-macquarie-infrastructure-corporation-mic-microsoft-corporation-msft/\",\"s\":\"Post
+        Analyst\",\"sp\":\"The opening price for Macquarie Infrastructure Corporation
+        (NYSE:MIC) was $70.21 and the volume amounted to 2.5 million shares which
+        compares with the average volume of 0.61 million shares.\",\"d\":\"8 hours
+        ago\",\"tt\":\"1509722550\",\"usg\":\"AFQjCNFXwR4HJpvRZesdw1MfMNM8gDcRiQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://postanalyst.com/2017/11/03/analysts-shared-their-read-on-2-stocks-macquarie-infrastructure-corporation-mic-microsoft-corporation-msft/\\u0026cid=52779655622457\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNEZJW7X_RATJSQWjnDxqdovyAyu6Q\"}],\"lead_story_doc_id\":\"9402677413350193201\"},{\"idx\":25,\"id\":\"0\",\"lead_story_url\":\"http://nasdaqtimes.com/microsoft-corporation-msft-stocks-raising-investors-eye-brows/\",\"a\":[{\"t\":\"Microsoft
+        Corporation (MSFT)- Stocks Raising Investors Eye Brows\",\"u\":\"http://nasdaqtimes.com/microsoft-corporation-msft-stocks-raising-investors-eye-brows/\",\"s\":\"NASDAQ
+        Times\",\"sp\":\"Microsoft Corporation (NASDAQ:MSFT) has 20 days moving average
+        price of 6.78% from last close price of 84.05 and act as support or resistance
+        of price limit.\",\"d\":\"10 hours ago\",\"tt\":\"1509715800\",\"usg\":\"AFQjCNF_LhrH-5AzkH2NgE3Ntz4KNHA_Hg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://nasdaqtimes.com/microsoft-corporation-msft-stocks-raising-investors-eye-brows/\\u0026cid=0\\u0026ei=VP_8WbDUMtXJea6amsAL\\u0026usg=AFQjCNHyxsfqVcZNy5aZSetgUmIZesWj_Q\"}],\"lead_story_doc_id\":\"18431796299457030199\"},{\"idx\":26,\"id\":\"-1\"}],\"results_per_page\":10,\"result_start_num\":1,\"result_end_num\":0,\"result_total_articles\":171},\"related\":{\"cols\":[0,1,4,30,34,31,32,5,2,33,3],\"rows\":[{\"id\":\"358464\",\"values\":[\"MSFT\",\"Microsoft
+        Corporation\",\"84.14\",\"+0.09\",\"chg\",\"0.11\",\"\",\"649.11B\",\"NASDAQ\",\"358464\",\"MSFT\"]},{\"id\":\"662102\",\"values\":[\"SAP\",\"SAP
+        SE (ADR)\",\"114.91\",\"-0.61\",\"chr\",\"-0.53\",\"\",\"140.71B\",\"NYSE\",\"662102\",\"SAP\"]},{\"id\":\"14135\",\"values\":[\"GE\",\"General
+        Electric Company\",\"20.14\",\"+0.20\",\"chg\",\"1.00\",\"\",\"174.66B\",\"NYSE\",\"14135\",\"GE\"]},{\"id\":\"4112\",\"values\":[\"ADBE\",\"Adobe
+        Systems Incorporated\",\"182.30\",\"+1.36\",\"chg\",\"0.75\",\"\",\"89.86B\",\"NASDAQ\",\"4112\",\"ADBE\"]},{\"id\":\"17154\",\"values\":[\"HPQ\",\"HP
+        Inc\",\"21.47\",\"+0.03\",\"chg\",\"0.14\",\"\",\"35.86B\",\"NYSE\",\"17154\",\"HPQ\"]},{\"id\":\"663462\",\"values\":[\"RHT\",\"Red
+        Hat Inc\",\"121.64\",\"+0.65\",\"chg\",\"0.54\",\"\",\"21.52B\",\"NYSE\",\"663462\",\"RHT\"]},{\"id\":\"420424055286581\",\"values\":[\"DVMT\",\"Dell
+        Technologies Inc\",\"80.87\",\"-0.99\",\"chr\",\"-1.21\",\"\",\"16.43B\",\"NYSE\",\"420424055286581\",\"DVMT\"]},{\"id\":\"664887\",\"values\":[\"VZ\",\"Verizon
+        Communications Inc.\",\"47.42\",\"-0.04\",\"chr\",\"-0.08\",\"\",\"193.45B\",\"NYSE\",\"664887\",\"VZ\"]},{\"id\":\"18241\",\"values\":[\"IBM\",\"Intl.
+        Business Machines Corp.\",\"151.58\",\"-1.77\",\"chr\",\"-1.15\",\"\",\"140.33B\",\"NYSE\",\"18241\",\"IBM\"]},{\"id\":\"419344\",\"values\":[\"ORCL\",\"Oracle
+        Corporation\",\"50.18\",\"-0.10\",\"chr\",\"-0.20\",\"\",\"209.43B\",\"NYSE\",\"419344\",\"ORCL\"]},{\"id\":\"531834042473910\",\"values\":[\"GPRO\",\"GoPro
+        Inc\",\"9.13\",\"-0.45\",\"chr\",\"-4.70\",\"\",\"1.32B\",\"NASDAQ\",\"531834042473910\",\"GPRO\"]}],\"visible_cols\":[0,1,4,30,34,31,32,5]},\"related_str\":\"358464,662102,14135,4112,17154,663462,420424055286581,664887,18241,419344,531834042473910\",\"perf\":[{\"u\":\"/finance?q=INDEXDJX:.DJI\",\"name\":\"Dow
+        Jones\",\"cp\":\"0.10\",\"p\":\"23,539.19\",\"cid\":\"983582\"},{\"u\":\"/finance?q=INDEXNASDAQ:.IXIC\",\"name\":\"Nasdaq\",\"cp\":\"0.74\",\"p\":\"6,764.44\",\"cid\":\"13756934\"},{\"u\":\"/finance?catid=us-TRBC:57\",\"name\":\"Technology\",\"cp\":\"0.91\",\"cid\":\"0\"},{\"u\":\"/finance?q=NASDAQ:MSFT\",\"name\":\"MSFT\",\"cp\":\"0.11\",\"p\":\"84.14\",\"cid\":\"358464\"}],\"t\":\"NASDAQ:MSFT:
+        {LAST} {CHANGE} ({CHANGE_PCT}%) - Microsoft Corporation\",\"ticker\":\"NASDAQ:MSFT\",\"cid\":\"358464\"},\"stickyUrlArgs\":\"\\u0026ei=5f_8WZGpNsSMeIjDvrgM\",\"chart\":{\"_5d\":\"EXCHANGE%3DNASDAQ\\nMARKET_OPEN_MINUTE=570\\nMARKET_CLOSE_MINUTE=960\\nINTERVAL=120\\nCOLUMNS=DATE,CLOSE,VOLUME\\nDATA=\\nTIMEZONE_OFFSET=-240\\na1509370200,83.77,514425\\n1,83.64,474825\\n2,83.21,267091\\n3,83.32,244292\\n4,83.19,209540\\n5,83.4,273542\\n6,83.33,262006\\n7,83.39,177375\\n8,83.56,200411\\n9,83.68,191627\\n10,83.815,287231\\n11,84.07,202087\\n12,84.065,209089\\n13,84.125,210520\\n14,84.18,179139\\n15,84.1853,175582\\n16,83.97,235904\\n17,84.045,117173\\n18,84.12,139404\\n19,84.06,126088\\n20,84.06,201080\\n21,84.12,222040\\n22,84.2,278802\\n23,84.28,318082\\n24,84.3,164258\\n25,84.28,157732\\n26,84.2462,205026\\n27,84.085,194227\\n28,84.11,278700\\n29,84.19,243158\\n30,84.25,193814\\n31,84.2152,210537\\n32,84.13,240051\\n33,84.11,115516\\n34,83.96,182562\\n35,83.88,94143\\n36,83.83,123701\\n37,83.8949,64560\\n38,83.88,139400\\n39,83.83,83687\\n40,83.85,75818\\n41,83.835,82492\\n42,83.865,100250\\n43,83.92,101169\\n44,83.895,51866\\n45,83.86,107232\\n46,83.8466,50176\\n47,83.86,66085\\n48,83.7153,164767\\n49,83.755,58257\\n50,83.73,57342\\n51,83.69,106067\\n52,83.69,66273\\n53,83.77,62522\\n54,83.775,40477\\n55,83.795,86411\\n56,83.76,85548\\n57,83.8,107996\\n58,83.88,126142\\n59,83.85,91877\\n60,83.84,111804\\n61,83.91,156291\\n62,84.0199,310724\\n63,83.98,143449\\n64,83.98,115374\\n65,83.995,116957\\n66,84.1,139584\\n67,84.07,126100\\n68,84.085,112725\\n69,84.1,117593\\n70,84.1741,126211\\n71,84.101,149344\\n72,84.09,96923\\n73,84.09,99508\\n74,84.02,81947\\n75,84.015,76503\\n76,83.99,115232\\n77,83.99,75708\\n78,84,148546\\n79,83.9999,104370\\n80,83.995,63409\\n81,83.9,234974\\n82,83.885,88111\\n83,83.92,144899\\n84,83.79,154186\\n85,83.71,159552\\n86,83.61,130305\\n87,83.63,163195\\n88,83.68,131281\\n89,83.66,65458\\n90,83.695,71158\\n91,83.845,146054\\n92,83.88,51371\\n93,83.89,37751\\n94,83.89,58592\\n95,83.94,75524\\n96,83.895,71354\\n97,83.885,56383\\n98,83.8842,78580\\n99,83.85,28678\\n100,83.84,55655\\n101,83.825,45763\\n102,83.83,54459\\n103,83.84,100798\\n104,83.8372,47434\\n105,83.79,31563\\n106,83.76,131243\\n107,83.8,54569\\n108,83.83,40862\\n109,83.7846,36220\\n110,83.775,37150\\n111,83.69,96044\\n112,83.7,54232\\n113,83.6387,68181\\n114,83.655,84713\\n115,83.67,92665\\n116,83.66,50283\\n117,83.6633,48461\\n118,83.68,57725\\n119,83.6844,39626\\n120,83.6775,47977\\n121,83.66,38745\\n122,83.585,101581\\n123,83.52,87881\\n124,83.56,86928\\n125,83.6233,59937\\n126,83.57,68142\\n127,83.53,81214\\n128,83.56,57632\\n129,83.57,45872\\n130,83.56,51914\\n131,83.53,90576\\n132,83.45,120131\\n133,83.47,111342\\n134,83.43,61071\\n135,83.4299,67862\\n136,83.47,70221\\n137,83.44,61687\\n138,83.46,79291\\n139,83.4,143829\\n140,83.35,140305\\n141,83.38,113839\\n142,83.37,65204\\n143,83.52,108109\\n144,83.55,111526\\n145,83.555,48682\\n146,83.515,113735\\n147,83.62,149898\\n148,83.6,116017\\n149,83.62,95050\\n150,83.58,53762\\n151,83.56,64178\\n152,83.6,65750\\n153,83.61,41012\\n154,83.6164,31609\\n155,83.595,49888\\n156,83.6,58279\\n157,83.61,73320\\n158,83.6,30266\\n159,83.595,89176\\n160,83.62,83106\\n161,83.64,66989\\n162,83.605,55106\\n163,83.5801,64545\\n164,83.63,98383\\n165,83.655,64131\\n166,83.58,87510\\n167,83.63,85316\\n168,83.585,62824\\n169,83.58,69002\\n170,83.6341,101909\\n171,83.655,79980\\n172,83.605,98491\\n173,83.615,70363\\n174,83.59,92982\\n175,83.55,101947\\n176,83.565,65501\\n177,83.5347,78978\\n178,83.51,82250\\n179,83.58,98369\\n180,83.585,92553\\n181,83.55,95878\\n182,83.55,69562\\n183,83.54,111371\\n184,83.59,80494\\n185,83.655,90900\\n186,83.715,136876\\n187,83.73,108771\\n188,83.74,90097\\n189,83.7333,132851\\n190,83.79,215842\\n191,83.88,300753\\n192,83.9,209382\\n193,83.91,240891\\n194,83.92,386862\\n195,83.89,3113092\\n720,84.28,367226\\n721,84.06,232898\\n722,84.03,171456\\n723,83.99,270885\\n724,83.955,74047\\n725,83.89,135154\\n726,84.04,115303\\n727,84.05,183834\\n728,84.035,181131\\n729,83.99,160832\\n730,83.89,68435\\n731,83.84,110218\\n732,83.71,145048\\n733,83.595,149371\\n734,83.595,128235\\n735,83.575,98659\\n736,83.54,155981\\n737,83.65,329143\\n738,83.74,147613\\n739,83.695,209006\\n740,83.75,125624\\n741,83.79,92579\\n742,83.755,65438\\n743,83.79,82082\\n744,83.815,123028\\n745,83.84,86877\\n746,83.835,74993\\n747,83.87,207072\\n748,83.85,99886\\n749,83.81,96563\\n750,83.74,96420\\n751,83.74,157326\\n752,83.7253,60828\\n753,83.73,80341\\n754,83.6985,66322\\n755,83.71,81127\\n756,83.695,141287\\n757,83.675,67839\\n758,83.715,93777\\n759,83.69,94575\\n760,83.6825,69745\\n761,83.75,114525\\n762,83.8,72194\\n763,83.7753,89344\\n764,83.77,91407\\n765,83.755,46475\\n766,83.74,78818\\n767,83.76,151127\\n768,83.78,123989\\n769,83.775,57632\\n770,83.76,73505\\n771,83.745,72553\\n772,83.69,75749\\n773,83.655,77294\\n774,83.67,68366\\n775,83.675,63260\\n776,83.68,71074\\n777,83.63,104021\\n778,83.63,100442\\n779,83.645,51310\\n780,83.63,109683\\n781,83.63,70600\\n782,83.61,90953\\n783,83.61,106203\\n784,83.625,92054\\n785,83.64,81295\\n786,83.7,83398\\n787,83.7097,61694\\n788,83.67,75195\\n789,83.6399,55368\\n790,83.61,73334\\n791,83.63,92935\\n792,83.715,186710\\n793,83.785,99734\\n794,83.75,91317\\n795,83.76,56666\\n796,83.7,86124\\n797,83.7,36675\\n798,83.6075,189737\\n799,83.46,292838\\n800,83.525,257888\\n801,83.53,84268\\n802,83.4949,145187\\n803,83.45,75214\\n804,83.3999,159358\\n805,83.3642,72501\\n806,83.36,70222\\n807,83.335,108466\\n808,83.357,78378\\n809,83.3199,62396\\n810,83.41,102777\\n811,83.5356,131405\\n812,83.52,108055\\n813,83.49,67695\\n814,83.504,48344\\n815,83.5,47467\\n816,83.55,57682\\n817,83.51,63840\\n818,83.49,65225\\n819,83.47,52154\\n820,83.4549,61819\\n821,83.455,40487\\n822,83.44,36713\\n823,83.47,46368\\n824,83.495,43526\\n825,83.47,47130\\n826,83.5,96611\\n827,83.5289,55982\\n828,83.53,54107\\n829,83.57,66437\\n830,83.58,60614\\n831,83.5863,73054\\n832,83.5285,63699\\n833,83.5242,38443\\n834,83.515,50703\\n835,83.465,81968\\n836,83.4854,63886\\n837,83.48,55790\\n838,83.485,36151\\n839,83.42,81452\\n840,83.39,60929\\n841,83.39,70457\\n842,83.375,51933\\n843,83.405,66056\\n844,83.4,84829\\n845,83.325,84439\\n846,83.3201,77143\\n847,83.32,54274\\n848,83.2847,153423\\n849,83.275,38882\\n850,83.313,68727\\n851,83.345,58568\\n852,83.365,135844\\n853,83.34,51212\\n854,83.375,88011\\n855,83.43,83959\\n856,83.5,147807\\n857,83.545,78612\\n858,83.4901,59359\\n859,83.505,87165\\n860,83.495,79564\\n861,83.475,90039\\n862,83.47,78650\\n863,83.475,66343\\n864,83.5,67758\\n865,83.44,94730\\n866,83.43,25013\\n867,83.42,69521\\n868,83.425,59984\\n869,83.385,121792\\n870,83.38,16374\\n871,83.365,106385\\n872,83.36,118299\\n873,83.36,182697\\n874,83.4,93705\\n875,83.37,91990\\n876,83.3646,72050\\n877,83.34,158070\\n878,83.35,103292\\n879,83.345,113392\\n880,83.3486,92596\\n881,83.345,91873\\n882,83.35,66470\\n883,83.335,78993\\n884,83.3055,123860\\n885,83.305,86488\\n886,83.31,75054\\n887,83.29,168188\\n888,83.3,128489\\n889,83.295,127218\\n890,83.27,77746\\n891,83.28,103805\\n892,83.2831,144286\\n893,83.295,169155\\n894,83.23,161903\\n895,83.21,97095\\n896,83.23,96823\\n897,83.23,91450\\n898,83.25,100950\\n899,83.28,115476\\n900,83.32,171231\\n901,83.32,141032\\n902,83.33,92363\\n903,83.375,105653\\n904,83.42,88620\\n905,83.38,107340\\n906,83.34,152848\\n907,83.375,98330\\n908,83.325,148596\\n909,83.305,158359\\n910,83.19,463260\\n911,83.2,326683\\n912,83.165,311148\\n913,83.185,340456\\n914,83.16,333953\\n915,83.18,3840197\\na1509543000,83.64,321419\\n1,83.49,188100\\n2,83.68,117840\\n3,83.63,197588\\n4,83.5938,113237\\n5,83.655,124289\\n6,83.52,174383\\n7,83.53,83662\\n8,83.55,84965\\n9,83.61,57509\\n10,83.61,70934\\n11,83.56,74321\\n12,83.602,74325\\n13,83.57,80135\\n14,83.63,63390\\n15,83.675,78540\\n16,83.51,198308\\n17,83.58,107558\\n18,83.675,79680\\n19,83.64,96797\\n20,83.6575,135438\\n21,83.66,334028\\n22,83.65,132762\\n23,83.63,104190\\n24,83.64,106488\\n25,83.58,99491\\n26,83.62,169712\\n27,83.645,66551\\n28,83.68,79461\\n29,83.66,124717\\n30,83.55,115788\\n31,83.55,78872\\n32,83.49,84299\\n33,83.43,205425\\n34,83.41,78582\\n35,83.37,100780\\n36,83.34,113159\\n37,83.37,76157\\n38,83.36,87763\\n39,83.295,128642\\n40,83.2735,65904\\n41,83.285,101400\\n42,83.26,74812\\n43,83.25,45957\\n44,83.26,78523\\n45,83.18,192109\\n46,83.24,41618\\n47,83.205,126355\\n48,83.27,87256\\n49,83.2658,116283\\n50,83.26,60339\\n51,83.245,75473\\n52,83.255,59604\\n53,83.3,71114\\n54,83.295,85332\\n55,83.24,74577\\n56,83.23,58314\\n57,83.239,49270\\n58,83.21,42236\\n59,83.18,54470\\n60,83.16,64961\\n61,83.18,58672\\n62,83.1624,57482\\n63,83.11,100834\\n64,83.1,60926\\n65,83.15,85750\\n66,83.13,54304\\n67,83.09,147734\\n68,83.05,124414\\n69,83.125,83269\\n70,83.09,110136\\n71,83.07,139657\\n72,83.035,118302\\n73,82.98,171240\\n74,82.96,199804\\n75,82.96,89042\\n76,83.005,59163\\n77,83.03,85111\\n78,83.03,66317\\n79,83.06,51382\\n80,83.09,63704\\n81,83.177,33554\\n82,83.24,74542\\n83,83.25,50600\\n84,83.25,77104\\n85,83.255,52843\\n86,83.255,50702\\n87,83.22,36641\\n88,83.2675,29591\\n89,83.25,75163\\n90,83.245,43702\\n91,83.24,33794\\n92,83.26,58865\\n93,83.245,51405\\n94,83.26,30024\\n95,83.26,74120\\n96,83.24,25654\\n97,83.27,33722\\n98,83.23,92638\\n99,83.255,90673\\n100,83.2358,50374\\n101,83.24,33901\\n102,83.2559,49484\\n103,83.22,36620\\n104,83.18,74851\\n105,83.22,39262\\n106,83.19,50904\\n107,83.19,54601\\n108,83.11,52260\\n109,83.04,77954\\n110,83.05,73422\\n111,83.08,38069\\n112,83.05,128899\\n113,83.06,111721\\n114,83.11,70698\\n115,83.0353,87318\\n116,83.07,31430\\n117,83.1,43418\\n118,83.09,33118\\n119,83.115,44660\\n120,83.19,105582\\n121,83.18,44388\\n122,83.2,40585\\n123,83.17,57142\\n124,83.17,41348\\n125,83.195,53376\\n126,83.17,53208\\n127,83.17,23882\\n128,83.18,44117\\n129,83.185,65546\\n130,83.19,41620\\n131,83.1953,81168\\n132,83.17,65360\\n133,83.175,48876\\n134,83.0708,89447\\n135,83.155,54408\\n136,83.13,69766\\n137,83.16,131404\\n138,83.175,47914\\n139,83.17,85002\\n140,83.19,111192\\n141,83.18,70403\\n142,83.2,65709\\n143,83.185,99095\\n144,83.169,53914\\n145,83.13,53172\\n146,83.14,35602\\n147,83.105,64106\\n148,83.13,156657\\n149,83.1,71752\\n150,83.095,67530\\n151,83.125,61043\\n152,83.205,83516\\n153,83.2,105181\\n154,83.18,91712\\n155,83.175,67018\\n156,83.14,63689\\n157,83.1044,74234\\n158,83.0544,97836\\n159,83.055,130650\\n160,83.053,107224\\n161,83.01,59075\\n162,83.015,99644\\n163,83,136678\\n164,83.04,115697\\n165,83.07,130091\\n166,83.045,100595\\n167,83.02,113883\\n168,83.03,98906\\n169,83.025,160672\\n170,83.025,81451\\n171,83.045,76503\\n172,83.065,55624\\n173,83.1099,95292\\n174,83.115,123604\\n175,83.075,85164\\n176,83.045,124000\\n177,83.005,95601\\n178,83,125863\\n179,83.025,74015\\n180,83.055,115744\\n181,83.045,71713\\n182,83.02,123449\\n183,83.064,100321\\n184,83.07,74987\\n185,83.055,109864\\n186,83.06,84079\\n187,83.065,237230\\n188,83.165,341106\\n189,83.13,238826\\n190,83.135,157175\\n191,83.17,195551\\n192,83.1951,146711\\n193,83.165,228500\\n194,83.14,209762\\n195,83.18,2123477\\n720,83.29,288201\\n721,83.23,156609\\n722,83.235,131139\\n723,83.3,188383\\n724,83.4,131278\\n725,83.3,86775\\n726,83.22,93445\\n727,83.23,86297\\n728,83.18,155237\\n729,83.23,76111\\n730,83.395,151599\\n731,83.39,122454\\n732,83.33,81716\\n733,83.3462,291175\\n734,83.285,69378\\n735,83.27,66670\\n736,83.18,122859\\n737,83.16,248391\\n738,83.2,245074\\n739,83.25,75154\\n740,83.14,223379\\n741,83.23,146441\\n742,83.22,163821\\n743,83.47,222267\\n744,83.434,163130\\n745,83.44,113209\\n746,83.425,86515\\n747,83.46,151956\\n748,83.57,139602\\n749,83.655,159279\\n750,83.6,74284\\n751,83.62,120086\\n752,83.56,119972\\n753,83.595,178223\\n754,83.6175,104971\\n755,83.67,125903\\n756,83.79,203144\\n757,83.75,193891\\n758,83.83,89555\\n759,83.945,220558\\n760,83.93,192559\\n761,83.935,156075\\n762,83.86,141381\\n763,83.77,108934\\n764,83.82,108551\\n765,83.825,105319\\n766,83.87,97887\\n767,83.9564,112433\\n768,83.925,131877\\n769,83.96,157704\\n770,83.9799,64941\\n771,83.96,26763\\n772,83.99,65716\\n773,83.89,81920\\n774,83.79,75477\\n775,83.675,145474\\n776,83.7862,125022\\n777,83.7752,82692\\n778,83.75,62806\\n779,83.75,83899\\n780,83.73,136692\\n781,83.64,139588\\n782,83.56,120789\\n783,83.61,78052\\n784,83.49,126781\\n785,83.52,49367\\n786,83.54,98784\\n787,83.58,98073\\n788,83.55,87138\\n789,83.56,83490\\n790,83.58,59722\\n791,83.6653,49182\\n792,83.71,51168\\n793,83.73,52198\\n794,83.755,68155\\n795,83.765,57010\\n796,83.7638,43082\\n797,83.77,74118\\n798,83.88,118106\\n799,83.9,94123\\n800,83.89,96502\\n801,83.88,90973\\n802,83.89,70073\\n803,83.895,57385\\n804,83.9,98070\\n805,83.86,65833\\n806,83.83,59345\\n807,83.85,78501\\n808,83.8431,80485\\n809,83.88,82453\\n810,83.9,56360\\n811,83.85,63591\\n812,83.88,58520\\n813,83.86,54899\\n814,83.8857,52750\\n815,83.89,52359\\n816,83.9162,53553\\n817,83.885,74281\\n818,83.89,42127\\n819,83.955,58029\\n820,83.97,31347\\n821,84.0049,75833\\n822,84.09,110759\\n823,84.145,80835\\n824,84.1,53523\\n825,84.02,53889\\n826,84.105,45861\\n827,84.1051,49599\\n828,84.185,69793\\n829,84.195,49272\\n830,84.2,91310\\n831,84.3,104579\\n832,84.3385,66064\\n833,84.33,77871\\n834,84.3459,92124\\n835,84.35,57696\\n836,84.42,109142\\n837,84.37,112887\\n838,84.38,218702\\n839,84.31,85731\\n840,84.34,80605\\n841,84.36,84075\\n842,84.32,62801\\n843,84.297,88567\\n844,84.33,70565\\n845,84.33,51769\\n846,84.315,67998\\n847,84.33,61350\\n848,84.28,52889\\n849,84.21,97146\\n850,84.13,89500\\n851,84.13,47017\\n852,84.1,90925\\n853,84.03,120521\\n854,84.035,93588\\n855,84.02,56684\\n856,84.04,54880\\n857,84.08,50264\\n858,84.17,82710\\n859,84.165,60237\\n860,84.205,62812\\n861,84.215,80926\\n862,84.255,41628\\n863,84.265,106018\\n864,84.215,69135\\n865,84.255,82723\\n866,84.24,51046\\n867,84.2,75842\\n868,84.17,52659\\n869,84.2,38769\\n870,84.24,43272\\n871,84.2257,38571\\n872,84.2256,45847\\n873,84.23,26612\\n874,84.262,50420\\n875,84.285,39439\\n876,84.26,86083\\n877,84.2853,67197\\n878,84.225,48241\\n879,84.235,127544\\n880,84.205,47015\\n881,84.165,72779\\n882,84.14,92143\\n883,84.154,60639\\n884,84.155,71958\\n885,84.11,58270\\n886,84.13,100369\\n887,84.13,61171\\n888,84.1238,89757\\n889,84.135,62713\\n890,84.0507,60815\\n891,84.1,42666\\n892,84.105,75955\\n893,84.0899,82922\\n894,84.05,76934\\n895,84,109177\\n896,83.9799,79346\\n897,83.97,133028\\n898,83.995,92991\\n899,83.9994,68351\\n900,84.035,165917\\n901,84.02,131943\\n902,84.02,78519\\n903,84.075,220233\\n904,84.08,66189\\n905,84.055,99465\\n906,84.11,68403\\n907,84.175,127892\\n908,84.14,92243\\n909,84.1,169681\\n910,84.095,175923\\n911,84.035,219265\\n912,84.005,146860\\n913,84.075,354873\\n914,84.17,418339\\n915,84.05,2399756\\na1509715800,84.135,917376\\n1,83.94,166487\\n2,83.79,159580\\n3,83.645,145889\\n4,83.82,228454\\n5,83.645,160661\\n6,83.7,172476\\n7,83.67,96521\\n8,83.65,97280\\n9,83.665,60266\\n10,83.67,79556\\n11,83.63,134985\\n12,83.53,127163\\n13,83.42,149214\\n14,83.5444,107272\\n15,83.53,86915\\n16,83.585,66700\\n17,83.565,105081\\n18,83.555,69333\\n19,83.54,48004\\n20,83.48,53088\\n21,83.59,114092\\n22,83.59,152678\\n23,83.59,76283\\n24,83.49,83707\\n25,83.575,116610\\n26,83.77,91026\\n27,83.79,74703\\n28,83.8166,43417\\n29,83.76,74606\\n30,83.775,46770\\n31,83.84,79526\\n32,83.805,98038\\n33,83.83,59668\\n34,83.885,34741\\n35,83.895,34379\\n36,83.885,54920\\n37,83.94,279536\\n38,83.915,76870\\n39,83.9,52672\\n40,83.89,112978\\n41,83.8799,70063\\n42,83.8445,86486\\n43,83.8816,52737\\n44,83.92,75889\\n45,83.9701,101947\\n46,83.935,102817\\n47,83.94,60086\\n48,83.9411,55014\\n49,83.8866,25381\\n50,83.88,36514\\n51,83.88,51438\\n52,83.845,28581\\n53,83.9,95094\\n54,83.9,15406\\n55,83.89,42909\\n56,83.91,27130\\n57,83.885,51263\\n58,83.88,20834\\n59,83.91,22254\\n60,83.965,51846\\n61,84.005,103651\\n62,84.01,30298\\n63,83.99,31751\\n64,83.96,37840\\n65,83.9589,44020\\n66,83.975,71759\\n67,84,46965\\n68,84.0499,38467\\n69,84.0393,82863\\n70,84.0753,53025\\n71,84.09,22797\\n72,84.08,19824\\n73,84.125,71367\\n74,84.2262,181501\\n75,84.2701,89067\\n76,84.23,116146\\n77,84.225,91667\\n78,84.23,40338\\n79,84.22,42122\\n80,84.22,36056\\n81,84.25,53842\\n82,84.26,36589\\n83,84.3385,52410\\n84,84.3,44776\\n85,84.323,36151\\n86,84.3246,48466\\n87,84.36,77584\\n88,84.34,41495\\n89,84.33,64422\\n90,84.33,39264\\n91,84.31,47780\\n92,84.29,31646\\n93,84.335,52710\\n94,84.3953,64688\\n95,84.419,68767\\n96,84.46,70499\\n97,84.54,136552\\n98,84.45,75227\\n99,84.425,63566\\n100,84.46,60783\\n101,84.45,35516\\n102,84.45,37671\\n103,84.395,48464\\n104,84.375,50048\\n105,84.37,44250\\n106,84.38,42150\\n107,84.43,70164\\n108,84.4242,40218\\n109,84.355,32411\\n110,84.35,75383\\n111,84.345,19845\\n112,84.315,53498\\n113,84.2664,59149\\n114,84.2443,53187\\n115,84.2,105804\\n116,84.125,44389\\n117,84.1238,72809\\n118,84.135,70752\\n119,84.133,61556\\n120,84.14,26271\\n121,84.125,39474\\n122,84.08,80355\\n123,84.08,30377\\n124,84.1056,48519\\n125,84.1175,99993\\n126,84.1647,100318\\n127,84.11,61454\\n128,84.15,41566\\n129,84.21,79574\\n130,84.2001,12337\\n131,84.229,36110\\n132,84.2268,37851\\n133,84.1965,58731\\n134,84.13,31495\\n135,84.0949,58696\\n136,84.15,58267\\n137,84.09,73460\\n138,84.1001,33071\\n139,84.12,54522\\n140,84.15,37775\\n141,84.18,86451\\n142,84.17,21422\\n143,84.15,23053\\n144,84.155,22045\\n145,84.1472,27913\\n146,84.175,40047\\n147,84.1853,46100\\n148,84.2031,37227\\n149,84.2,65510\\n150,84.18,56863\\n151,84.135,49938\\n152,84.125,16503\\n153,84.145,99901\\n154,84.1349,56972\\n155,84.1101,38446\\n156,84.075,52004\\n157,84.055,86814\\n158,84.05,47874\\n159,84.1,72277\\n160,84.06,63267\\n161,84.035,49998\\n162,84.055,65207\\n163,84.035,60926\\n164,84.024,45078\\n165,84.01,87913\\n166,84.03,65244\\n167,84.065,44992\\n168,84.07,63665\\n169,84.065,27328\\n170,84.05,20047\\n171,84.03,52664\\n172,84.02,49675\\n173,84.01,76617\\n174,84.01,35958\\n175,84.0247,48267\\n176,84.07,35439\\n177,84.09,57212\\n178,84.075,33286\\n179,84.095,38795\\n180,84.075,88940\\n181,84.085,43974\\n182,84.065,49520\\n183,84.045,82069\\n184,84.01,65340\\n185,84.06,64221\\n186,84.065,27148\\n187,84.09,72800\\n188,84.125,140913\\n189,84.12,54256\\n190,84.135,116832\\n191,84.095,152518\\n192,84.07,172959\\n193,84.08,125036\\n194,84.05,260187\\n195,84.14,2004786\\n\",\"_5Y\":\"EXCHANGE%3DNASDAQ\\nMARKET_OPEN_MINUTE=570\\nMARKET_CLOSE_MINUTE=960\\nINTERVAL=604800\\nCOLUMNS=DATE,CLOSE,VOLUME,CDAYS\\nDATA=\\nTIMEZONE_OFFSET=-300\\na1352494800,28.83,232494492,5\\n1,26.5209,383940394,5\\na1353693600,27.7,228455526,4\\na1354309200,26.615,336489890,5\\n1,26.455,256621754,5\\n2,26.81,230450019,5\\n3,27.45,297458344,5\\n4,26.55,120125535,4\\n5,26.74,196482094,5\\n6,26.83,257819873,5\\n7,27.25,241503310,5\\n8,27.88,292636711,5\\n9,27.93,254997470,5\\n10,27.55,199194379,5\\n11,28.01,192276732,5\\n12,27.76,163434872,5\\n13,27.95,205033731,5\\n14,28,197922674,5\\nTIMEZONE_OFFSET=-240\\na1363377600,28.035,253627314,5\\n1,28.25,195140597,5\\na1364500800,28.605,163490157,5\\na1365192000,28.7,188924351,5\\n1,28.79,377425365,5\\n2,29.765,318681562,5\\n3,31.79,446494855,5\\n4,33.49,281482379,5\\n5,32.69,218470715,5\\n6,34.87,259278408,5\\n7,34.269,253070775,5\\n8,34.9,193939367,5\\n9,35.67,241216749,5\\n10,34.4,211489745,5\\n11,33.265,248950782,5\\n12,34.545,243396628,5\\n13,34.21,110778933,5\\n14,35.67,176519256,5\\n15,31.4,405789215,5\\n16,31.62,299530618,5\\n17,31.89,190334235,5\\n18,32.7,191242388,5\\n19,31.8,179710128,5\\n20,34.75,344960959,5\\n21,33.4,263640999,5\\n22,31.152,443912017,5\\n23,33.03,219331197,5\\n24,32.791,348769096,5\\n25,33.27,193270455,5\\n26,33.88,195220646,5\\n27,34.13,184873901,5\\n28,34.96,183148017,5\\n29,35.73,293179232,5\\n30,35.525,189049718,5\\nTIMEZONE_OFFSET=-300\\na1383944400,37.78,265880986,5\\n1,37.841,200270348,5\\n2,37.57,180830994,5\\n3,38.13,113208695,5\\n4,38.36,299814837,5\\n5,36.69,184055108,5\\n6,36.8,237421849,5\\n7,37.29,71550254,5\\n8,36.91,95574785,5\\n9,36.04,216598517,5\\n10,36.38,216795186,5\\n11,36.805,175111177,5\\n12,37.84,261804587,5\\n13,36.56,244199414,5\\n14,37.62,166637451,5\\n15,37.98,128205485,5\\n16,38.31,179189733,5\\n17,37.9,127317506,5\\nTIMEZONE_OFFSET=-240\\na1394827200,37.7,134087566,5\\n1,40.16,260142460,5\\n2,40.3,210116404,5\\n3,39.87,189712501,5\\n4,39.209,181172057,5\\na1397764800,40.01,133291027,5\\na1398456000,39.91,173147680,5\\n1,39.69,187921095,5\\n2,39.54,153093476,5\\n3,39.83,136272179,5\\n4,40.12,106482522,5\\n5,40.94,106342180,5\\n6,41.48,115711492,5\\n7,41.23,104310831,5\\n8,41.68,141424329,5\\n9,42.25,163560109,5\\na1404417600,41.8,93905905,5\\na1405108800,42.09,117561943,5\\n1,44.69,239552029,5\\n2,44.5,190527218,5\\n3,42.86,152089487,5\\n4,43.2,144437060,5\\n5,44.79,125599175,5\\n6,45.15,120385583,5\\n7,45.43,92341867,5\\n8,45.91,120083558,5\\n9,46.695,180807207,5\\n10,47.52,341973307,5\\n11,46.41,158856031,5\\n12,46.09,154785202,5\\n13,44.03,165764217,5\\n14,43.63,225166061,5\\n15,46.13,211077436,5\\n16,46.95,155628209,5\\nTIMEZONE_OFFSET=-300\\na1415394000,48.68,128149243,5\\n1,49.58,137829519,5\\n2,47.98,144887937,5\\n3,47.81,112141541,5\\n4,48.42,138158386,5\\n5,46.95,144735690,5\\n6,47.66,216676750,5\\n7,47.88,74863120,5\\n8,46.76,80290512,5\\n9,47.19,158825163,5\\n10,46.24,157088136,5\\n11,47.18,137352632,5\\n12,40.4,437786778,5\\n13,42.41,215214514,5\\n14,43.87,172847964,5\\n15,43.855,118131959,5\\n16,43.85,150315390,5\\n17,42.36,148863715,5\\nTIMEZONE_OFFSET=-240\\na1426276800,41.38,221483208,5\\n1,42.88,216925266,5\\n2,40.97,167126270,5\\na1428004800,40.29,144289679,5\\na1428696000,41.72,146532368,5\\n1,41.615,146761915,5\\n2,47.87,274379045,5\\n3,48.655,271446305,5\\n4,47.75,205178261,5\\n5,48.295,150345879,5\\n6,46.9,125890515,5\\n7,46.86,112720759,5\\n8,46.14,131521410,5\\n9,45.97,126223826,5\\n10,46.1,185524263,5\\n11,45.26,151556711,5\\na1435867200,44.4,120123050,5\\na1436558400,44.61,157146118,5\\n1,46.62,133426984,5\\n2,45.94,198833485,5\\n3,46.7,185955595,5\\n4,46.74,131020495,5\\n5,47,126616447,5\\n6,43.07,180666605,5\\n7,43.93,299922743,5\\n8,42.61,185669220,5\\n9,43.48,122942332,5\\n10,43.48,167591654,5\\n11,43.94,127786686,5\\n12,45.57,164504767,5\\n13,47.11,149490791,5\\n14,47.51,116214824,5\\n15,52.87,274089241,5\\n16,52.64,233989903,5\\nTIMEZONE_OFFSET=-300\\na1446843600,54.92,163945485,5\\n1,52.84,192376481,5\\n2,54.19,156848231,5\\n3,53.93,82263670,5\\n4,55.91,223570066,5\\n5,54.06,171286323,5\\n6,54.13,250080293,5\\na1450990800,55.67,102418400,5\\n1,55.48,99228262,5\\na1452286800,52.33,231760568,5\\n1,50.99,261327257,5\\n2,52.29,183338985,4\\n3,55.09,241089138,5\\n4,50.16,262842669,5\\n5,50.5,222468705,5\\n6,51.82,135127508,4\\n7,51.3,147886335,5\\n8,52.03,149773385,5\\n9,53.07,170463794,5\\nTIMEZONE_OFFSET=-240\\na1458331200,53.49,171763137,5\\na1458849600,54.21,85466802,5\\na1459540800,55.57,113755963,5\\n1,54.42,99754212,5\\n2,55.65,115760469,5\\n3,51.78,251124833,5\\n4,49.87,200612675,5\\n5,50.39,133396747,5\\n6,51.08,111032990,5\\n7,50.62,119929660,5\\n8,52.32,126498087,5\\n9,51.79,109186979,4\\n10,51.48,106398294,5\\n11,50.13,236451710,5\\n12,49.83,261054437,5\\n13,51.16,169949551,5\\n14,52.3,100950032,4\\n15,53.7,131513504,5\\n16,56.57,239597518,5\\n17,56.68,154126188,5\\n18,57.96,139123963,5\\n19,57.94,91968595,5\\n20,57.62,90149203,5\\n21,58.03,91629582,5\\n22,57.67,99183513,5\\n23,56.21,89031792,4\\n24,57.25,155377027,5\\n25,57.43,19955336,5\\n26,57.6,125664515,5\\n27,57.8,92303431,5\\n28,57.42,119587590,5\\n29,59.66,195345767,5\\n30,59.87,181170290,5\\n31,58.71,123412131,5\\nTIMEZONE_OFFSET=-300\\na1478898000,59.02,200822869,5\\n1,60.35,164384062,5\\na1480096800,60.53,73117824,4\\na1480712400,59.25,137812561,5\\n1,61.97,122838771,5\\n2,62.3,156392554,5\\n3,63.24,112043306,5\\n4,62.14,62247011,4\\n5,62.84,86832957,4\\n6,62.7,100883602,5\\n7,62.74,88999202,4\\n8,65.78,160798071,5\\n9,63.68,172722294,5\\n10,64,98985116,5\\n11,64.62,104828847,5\\n12,64.62,82018448,4\\n13,64.25,108727793,5\\n14,64.93,98167226,5\\nTIMEZONE_OFFSET=-240\\na1489780800,64.87,129108029,5\\n1,64.98,103804886,5\\n2,65.86,88476598,5\\n3,65.68,87058900,5\\na1492113600,64.95,71749271,5\\na1492804800,66.4,113659769,5\\n1,68.46,160723247,5\\n2,69,125666645,5\\n3,68.38,106905867,5\\n4,67.69,149197513,5\\n5,69.96,88012257,5\\n6,71.76,103883064,4\\n7,70.32,160905256,5\\n8,70,172944836,5\\n9,71.21,115784579,5\\n10,68.93,123708085,5\\n11,69.46,75337699,4\\n12,72.78,96363352,5\\n13,73.79,159733532,5\\n14,73.04,114816640,5\\n15,72.68,111716478,5\\n16,72.5,109141814,5\\n17,72.49,99167406,5\\n18,72.82,75737531,5\\n19,73.94,92334870,5\\n20,73.98,70953185,4\\n21,75.31,99998390,5\\n22,74.41,94285686,5\\n23,74.49,89506740,5\\n24,76,75967921,5\\n25,77.49,72932225,5\\n26,78.81,80463967,5\\n27,83.81,161742609,5\\n\",\"corp_actions\":\"[{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"split\\\",\\\"_date\\\":\\\"559229400\\\",\\\"_old_shares\\\":\\\"1\\\",\\\"_new_shares\\\":\\\"2\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"split\\\",\\\"_date\\\":\\\"640272600\\\",\\\"_old_shares\\\":\\\"1\\\",\\\"_new_shares\\\":\\\"2\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"split\\\",\\\"_date\\\":\\\"678029400\\\",\\\"_old_shares\\\":\\\"2\\\",\\\"_new_shares\\\":\\\"3\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"split\\\",\\\"_date\\\":\\\"708615000\\\",\\\"_old_shares\\\":\\\"2\\\",\\\"_new_shares\\\":\\\"3\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"split\\\",\\\"_date\\\":\\\"769699800\\\",\\\"_old_shares\\\":\\\"1\\\",\\\"_new_shares\\\":\\\"2\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"split\\\",\\\"_date\\\":\\\"850141800\\\",\\\"_old_shares\\\":\\\"1\\\",\\\"_new_shares\\\":\\\"2\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"split\\\",\\\"_date\\\":\\\"888244200\\\",\\\"_old_shares\\\":\\\"1\\\",\\\"_new_shares\\\":\\\"2\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"split\\\",\\\"_date\\\":\\\"922717800\\\",\\\"_old_shares\\\":\\\"1\\\",\\\"_new_shares\\\":\\\"2\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"split\\\",\\\"_date\\\":\\\"1045578600\\\",\\\"_old_shares\\\":\\\"1\\\",\\\"_new_shares\\\":\\\"2\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1045665000\\\",\\\"_amount\\\":\\\"0.08000\\\",\\\"_payable_date\\\":\\\"1047047400\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1066224600\\\",\\\"_amount\\\":\\\"0.1600\\\",\\\"_payable_date\\\":\\\"1068215400\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1093267800\\\",\\\"_amount\\\":\\\"0.08\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1095168600\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1100529000\\\",\\\"_amount\\\":\\\"3.08\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1101997800\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1108477800\\\",\\\"_amount\\\":\\\"0.08\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1110465000\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1116250200\\\",\\\"_amount\\\":\\\"0.08\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1118323800\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1124112600\\\",\\\"_amount\\\":\\\"0.08\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1126186200\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1132065000\\\",\\\"_amount\\\":\\\"0.08\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1134052200\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1140013800\\\",\\\"_amount\\\":\\\"0.09\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1141914600\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1147699800\\\",\\\"_amount\\\":\\\"0.09\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1149773400\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1155648600\\\",\\\"_amount\\\":\\\"0.09\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1158240600\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1163514600\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1166106600\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1171377000\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1173364200\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1179235800\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1181827800\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1187098200\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1189690200\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1194964200\\\",\\\"_amount\\\":\\\"0.11\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1197556200\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1203431400\\\",\\\"_amount\\\":\\\"0.11\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1205415000\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1210685400\\\",\\\"_amount\\\":\\\"0.11\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1213277400\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1219152600\\\",\\\"_amount\\\":\\\"0.11\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1221139800\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1227018600\\\",\\\"_amount\\\":\\\"0.13\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1229005800\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1234881000\\\",\\\"_amount\\\":\\\"0.13\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1236864600\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1242739800\\\",\\\"_amount\\\":\\\"0.13\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1245331800\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1250602200\\\",\\\"_amount\\\":\\\"0.13\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1252589400\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1258468200\\\",\\\"_amount\\\":\\\"0.13\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1260455400\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1266330600\\\",\\\"_amount\\\":\\\"0.13\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1268317800\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1274189400\\\",\\\"_amount\\\":\\\"0.13\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1276176600\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1282051800\\\",\\\"_amount\\\":\\\"0.13\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1284039000\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1289917800\\\",\\\"_amount\\\":\\\"0.16\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1291905000\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1297780200\\\",\\\"_amount\\\":\\\"0.16\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1299767400\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1305639000\\\",\\\"_amount\\\":\\\"0.16\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1307626200\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1313501400\\\",\\\"_amount\\\":\\\"0.16\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1315488600\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1321367400\\\",\\\"_amount\\\":\\\"0.2\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1323354600\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1329229800\\\",\\\"_amount\\\":\\\"0.2\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1331217000\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1337088600\\\",\\\"_amount\\\":\\\"0.2\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1339680600\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1344951000\\\",\\\"_amount\\\":\\\"0.2\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1347543000\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1352817000\\\",\\\"_amount\\\":\\\"0.23\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1355409000\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1361284200\\\",\\\"_amount\\\":\\\"0.23\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1363267800\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1368538200\\\",\\\"_amount\\\":\\\"0.23\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1371130200\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1376400600\\\",\\\"_amount\\\":\\\"0.23\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1378992600\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1384871400\\\",\\\"_amount\\\":\\\"0.28\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1386858600\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1392733800\\\",\\\"_amount\\\":\\\"0.28\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1394717400\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1399987800\\\",\\\"_amount\\\":\\\"0.28\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1402579800\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1408455000\\\",\\\"_amount\\\":\\\"0.28\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1410442200\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1416321000\\\",\\\"_amount\\\":\\\"0.31\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1418308200\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1424183400\\\",\\\"_amount\\\":\\\"0.31\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1426167000\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1432042200\\\",\\\"_amount\\\":\\\"0.31\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1434029400\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1439904600\\\",\\\"_amount\\\":\\\"0.31\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1441891800\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1447770600\\\",\\\"_amount\\\":\\\"0.36\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1449757800\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1455633000\\\",\\\"_amount\\\":\\\"0.36\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1457620200\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1463491800\\\",\\\"_amount\\\":\\\"0.36\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1465479000\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1471354200\\\",\\\"_amount\\\":\\\"0.36\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1473341400\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1479220200\\\",\\\"_amount\\\":\\\"0.39\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1481207400\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1487082600\\\",\\\"_amount\\\":\\\"0.39\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1489069800\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1494941400\\\",\\\"_amount\\\":\\\"0.39\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1496928600\\\"},{\\\"_quote\\\":\\\"NASD:MSFT\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1502803800\\\",\\\"_amount\\\":\\\"0.39\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1505395800\\\"}]\",\"related_items\":[{\"ticker\":\"INDEXDJX:.DJI\",\"name\":\"Dow
+        Jones\",\"timezone_offset\":-18000,\"is_index\":true,\"different_market_session\":false},{\"ticker\":\"INDEXNASDAQ:.IXIC\",\"name\":\"Nasdaq\",\"timezone_offset\":-18000,\"is_index\":true,\"different_market_session\":false},{\"ticker\":\"NYSE:SAP\",\"name\":\"SAP\",\"timezone_offset\":-18000,\"is_index\":false},{\"ticker\":\"NYSE:GE\",\"name\":\"GE\",\"timezone_offset\":-18000,\"is_index\":false},{\"ticker\":\"NASDAQ:ADBE\",\"name\":\"ADBE\",\"timezone_offset\":-18000,\"is_index\":false},{\"ticker\":\"NYSE:HPQ\",\"name\":\"HPQ\",\"timezone_offset\":-18000,\"is_index\":false},{\"ticker\":\"NYSE:RHT\",\"name\":\"RHT\",\"timezone_offset\":-18000,\"is_index\":false},{\"ticker\":\"NYSE:DVMT\",\"name\":\"DVMT\",\"timezone_offset\":-18000,\"is_index\":false},{\"ticker\":\"NYSE:VZ\",\"name\":\"VZ\",\"timezone_offset\":-18000,\"is_index\":false}]}};\ngoogle.finance.data.numberFormat
+        = [{'threshold':1000000, 'symbol':'M'}, {'threshold':1000000000,'symbol':'B'},
+        {'threshold':1000000000000,'symbol':'T'}] ;\n_setStickyUrlParams(\"ei=5f_8WZGpNsSMeIjDvrgM\");\nif
+        (_s_Store) {\n_s_Store._allowMatchAdvancedSearch = true;\nvar _fieldToDisplayNameMap
+        = {GrossMargin:\"Gross margin&nbsp;(%)\",Return1Week:\"1w return\",Return156Week:\"156w
+        return\",NextYearEPS:\"Next year EPS\",EarningsAfterTaxes:\"Earnings after
+        taxes\",RevenueGrowthRate5Years:\"5y revenue growth rate\",LTDebtToAssetsYear:\"LT
+        debt/assets (Recent&nbsp;yr)&nbsp;(%)\",DividendPerShare:\"Div per share\",MarketCap:\"Market
+        cap\",NetProfitMarginPercent:\"Net profit margin&nbsp;(%)\",Float:\"Float\",EarningsBeforeTaxes:\"Earnings
+        before taxes\",QuotePercChange:\"Quote change&nbsp;(%)\",TotalDebtToEquityYear:\"Total
+        debt/equity (Recent&nbsp;yr)&nbsp;(%)\",TotalDebtToCapitalQuarter:\"Total
+        debt/capital (Recent&nbsp;qtr)&nbsp;(%)\",LTDebtToCapitalQuarter:\"LT debt/capital
+        (Recent&nbsp;qtr)&nbsp;(%)\",EPSGrowthRate10Years:\"10y EPS growth rate\",Beta:\"Beta\",CapitalGain:\"Capital
+        gain\",ReturnOnAssetsPTM:\"Return on assets (PTM)&nbsp;(%)\",BetaDown:\"Beta
+        down from RAS\",IncomeDividend:\"Income dividend\",RevenueGrowthRate10Years:\"10y
+        revenue growth rate\",MarketCapShareBasis:\"Market cap share basis\",Return4Week:\"4w
+        return\",IAD:\"Div rate indicated annual\",Price150DayAverage:\"150d avg price\",EPSGrowthRate5Years:\"5y
+        EPS growth rate\",ReturnOnAssetsTTM:\"Return on assets (TTM)&nbsp;(%)\",TotalDebtToAssetsYear:\"Total
+        debt/assets (Recent&nbsp;yr)&nbsp;(%)\",Volume:\"Volume\",CurrentRatioYear:\"Current
+        ratio\",DividendRecentQuarter:\"Div recent quarter\",Low52Week:\"52w low\",ExpenseRatio:\"Expense
+        ratio\",Price1DayPercChange:\"1d&nbsp;price change&nbsp;(%)\",Price13WeekPercChange:\"13w&nbsp;price
+        change&nbsp;(%)\",ReturnOnEquity5Years:\"Return on equity (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",TotalDebtToCapitalYear:\"Total
+        debt/capital (Recent&nbsp;yr)&nbsp;(%)\",TotalDebtToAssetsQuarter:\"Total
+        debt/assets (Recent&nbsp;qtr)&nbsp;(%)\",NavChange:\"Nav change\",OperatingMargin:\"Operating
+        margin&nbsp;(%)\",DPSRecentYear:\"Div per share (Recent&nbsp;yr)\",ANI:\"Earnings
+        after taxes (Recent&nbsp;yr)\",High52Week:\"52w high\",AverageVolume:\"Average
+        volume\",Return13Week:\"13w return\",PriceToCashFlowPerShare:\"Price to cash
+        flow per share\",Price26WeekPercChange:\"26w&nbsp;price change&nbsp;(%)\",QuoteChange:\"Quote
+        change\",ATAXRATE:\"Tax rate (Recent&nbsp;yr)\",NetIncomeChangePerc:\"Net
+        income change&nbsp;(%)\",ReturnOnInvestment5Years:\"Return on investment (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",PE:\"P/E
+        ratio\",ReturnOnInvestmentYear:\"Return on investment (Recent&nbsp;yr)&nbsp;(%)\",Price200DayAverage:\"200d
+        avg price\",DividendNextQuarter:\"Div next quarter\",PriceYTDPercChange:\"YTD&nbsp;price
+        change&nbsp;(%)\",EBITD:\"EBITDA\",ReturnOnInvestmentTTM:\"Return on investment
+        (TTM)&nbsp;(%)\",NavChangePercent:\"Nav change&nbsp;(%)\",EBITDMargin:\"EBITDA
+        margin&nbsp;(%)\",LTDebtToEquityQuarter:\"LT debt/equity (Recent&nbsp;qtr)&nbsp;(%)\",BetaRAS:\"Beta
+        from RAS\",PriceSales:\"Price to sales\",NetAssets:\"Net assets\",ReturnOnEquityTTM:\"Return
+        on equity (TTM)&nbsp;(%)\",CashPerShareYear:\"Cash/share\",ReturnDay:\"1d
+        return\",ReturnOnAssets5Years:\"Return on assets (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",Return52Week:\"52w
+        return\",ForwardPE1Year:\"1y fwd P/E\",NetIncomeGrowthRate5Years:\"5y net
+        income growth rate\",DividendYield:\"Div yield&nbsp;(%)\",Dividend:\"Div from
+        cash flow\",BetaUp:\"Beta up from RAS\",nprice:\"Price from RAS\",LTDebtToCapitalYear:\"LT
+        debt/capital (Recent&nbsp;yr)&nbsp;(%)\",Return260Week:\"260w return\",ReturnOnEquityQuarter:\"Return
+        on equity (Recent&nbsp;qtr)&nbsp;(%)\",ACOGS:\"Cost of goods sold\",LTDebtToAssetsQuarter:\"LT
+        debt/assets (Recent&nbsp;qtr)&nbsp;(%)\",PriceToBook:\"Price to book\",LTDebtToEquityYear:\"LT
+        debt/equity (Recent&nbsp;yr)&nbsp;(%)\",ReturnYTD:\"Return YTD\",ReturnOnEquityYear:\"Return
+        on equity (Recent&nbsp;yr)&nbsp;(%)\",ReturnOnAssetsQuarter:\"Return on assets
+        (Recent&nbsp;qtr)&nbsp;(%)\",TotalDebtToEquityQuarter:\"Total debt/equity
+        (Recent&nbsp;qtr)&nbsp;(%)\",NavPrior:\"Nav prior\",AINTCOV:\"Interest coverage\",EPS:\"EPS\",ReturnOnInvestmentQuarter:\"Return
+        on investment (Recent&nbsp;qtr)&nbsp;(%)\",QuoteLast:\"Last price\",Price50DayAverage:\"50d
+        avg price\",Price4WeekPercChange:\"4w&nbsp;price change&nbsp;(%)\",ReturnOnAssetsYear:\"Return
+        on assets (Recent&nbsp;yr)&nbsp;(%)\",MarketCapRAS:\"Mkt cap from RAS\",Price52WeekPercChange:\"52w&nbsp;price
+        change&nbsp;(%)\",InstitutionalPercentHeld:\"Institutional percent held\",ShortInterestRatioPercent:\"Short
+        interest ratio&nbsp;(%)\",BookValuePerShareYear:\"Book value/share\",ReturnOnEquityPTM:\"Return
+        on equity (PTM)&nbsp;(%)\"};\n_s_Store._asStore._addStrings(_fieldToDisplayNameMap);\n}\nif
+        (_s_Store) {\n_s_Store._allowMultipleInBox = true;\n}\ngoogle.finance.renderRecentQuotes();\n</script>\n<div
+        class=\"g-section g-tpl-right-1\">\n<div class=\"g-unit g-first\">\n<div class=g-c>\n<div
+        id=r-perf class=\"g-section g-tpl-67-33 g-split nwp\">\n<div id=r-perf-quotes
+        class=\"id-r-perf-quotes g-unit g-first\"></div>\n<div id=r-perf-charts class=\"id-r-perf-charts
+        g-unit\"></div>\n</div>\n<script>google.finance.renderRelativePerformance();</script>\n</div>\n</div>\n<div
+        class=g-unit>\n<div id=market-data-div class=\"id-market-data-div nwp g-floatfix\">\n<div
+        id=price-panel class=\"id-price-panel goog-inline-block\">\n<div>\n<span class=\"pr\">\n<span
+        id=\"ref_358464_l\">84.14</span>\n</span>\n<div class=\"id-price-change nwp\">\n<span
+        class=\"ch bld\"><span class=\"chg\" id=\"ref_358464_c\">+0.09</span>\n<span
+        class=\"chg\" id=\"ref_358464_cp\">(0.11%)</span>\n</span>\n</div>\n</div>\n<div>After
+        Hours:&nbsp;<span class=bld id=\"ref_358464_el\">84.02</span>\n<span id=\"ref_358464_ec\"
+        class=\"chr\">-0.12</span>\n<span id=\"ref_358464_ecp\" class=\"chr\">(-0.14%)</span>\n<div
+        id=\"ref_358464_elt\">Nov 3, 6:30PM EDT&nbsp;&nbsp;<div class=mdata-dis>\n<span
+        class=dis-large><nobr>NASDAQ\nreal-time data -\n<a href=\"//www.google.com/help/stock_disclaimer.html#realtime\"
+        \ class=dis-large>Disclaimer</a>\n</nobr></span>\n<div>Currency in USD</div>\n</div>\n</div>\n</div>\n</div>\n<div
+        class=\"snap-panel-and-plusone\">\n<div class=\"snap-panel\">\n<table class=\"snap-data\">\n<tr>\n<td
+        class=\"key\"\n          data-snapfield=\"range\">Range\n</td>\n<td class=\"val\">83.40
+        - 84.54\n</td>\n</tr>\n<tr>\n<td class=\"key\"\n          data-snapfield=\"range_52week\">52
+        week\n</td>\n<td class=\"val\">57.28 - 86.20\n</td>\n</tr>\n<tr>\n<td class=\"key\"\n
+        \         data-snapfield=\"open\">Open\n</td>\n<td class=\"val\">84.08\n</td>\n</tr>\n<tr>\n<td
+        class=\"key\"\n          data-snapfield=\"vol_and_avg\">Vol / Avg.\n</td>\n<td
+        class=\"val\">17.63M/20.00M\n</td>\n</tr>\n<tr>\n<td class=\"key\"\n          data-snapfield=\"market_cap\">Mkt
+        cap\n</td>\n<td class=\"val\">649.11B\n</td>\n</tr>\n<tr>\n<td class=\"key\"\n
+        \         data-snapfield=\"pe_ratio\">P/E\n</td>\n<td class=\"val\">28.46\n</td>\n</tr></table><table
+        class=\"snap-data\">\n<tr>\n<td class=\"key\"\n          data-snapfield=\"latest_dividend-dividend_yield\">Div/yield\n</td>\n<td
+        class=\"val\">0.42/2.00\n</td>\n</tr>\n<tr>\n<td class=\"key\"\n          data-snapfield=\"eps\">EPS\n</td>\n<td
+        class=\"val\">2.96\n</td>\n</tr>\n<tr>\n<td class=\"key\"\n          data-snapfield=\"shares\">Shares\n</td>\n<td
+        class=\"val\">7.71B\n</td>\n</tr>\n<tr>\n<td class=\"key\"\n          data-snapfield=\"beta\">Beta\n</td>\n<td
+        class=\"val\">1.01\n</td>\n</tr>\n<tr>\n<td class=\"key\"\n          data-snapfield=\"inst_own\">Inst.
+        own\n</td>\n<td class=\"val\">75%\n</td>\n</tr>\n</table>\n</div>\n<div class=\"plusone-box\"
+        id=\"plusone-box\">\n<g:plusone size=\"standard\" source=\"google:FINANCE\"></g:plusone></div>\n</div>\n</div>\n<script>google.finance.renderMarketData();</script>\n<div
+        id=\"sharebox-data\"\n     itemscope=\"itemscope\"\n     itemtype=\"http://schema.org/Intangible/FinancialQuote\">\n<meta
+        itemprop=\"name\"\n        content=\"Microsoft Corporation\" />\n<meta itemprop=\"url\"\n
+        \       content=\"https://www.google.com/finance?cid=358464\" />\n<meta itemprop=\"imageUrl\"\n
+        \       content=\"https://www.google.com/finance/chart?cht=g&q=NASDAQ:MSFT&tkr=1&p=1d&enddatetime=2017-11-03T16:00:01Z\"
+        />\n<meta itemprop=\"tickerSymbol\"\n        content=\"MSFT\" />\n<meta itemprop=\"exchange\"\n
+        \       content=\"NASDAQ\" />\n<meta itemprop=\"exchangeTimezone\"\n        content=\"America/New_York\"
+        />\n<meta itemprop=\"price\"\n        content=\"84.14\" />\n<meta itemprop=\"priceChange\"\n
+        \       content=\"+0.09\" />\n<meta itemprop=\"priceChangePercent\"\n        content=\"0.11\"
+        />\n<meta itemprop=\"isAfterHours\"\n        content=\"true\">\n<meta itemprop=\"afterHoursPrice\"\n
+        \       content=\"84.02\">\n<meta itemprop=\"afterHoursPriceChange\"\n        content=\"-0.12\">\n<meta
+        itemprop=\"afterHoursPriceChangePercent\"\n        content=\"-0.14\">\n<meta
+        itemprop=\"afterHoursQuoteTime\"\n        content=\"2017-11-03T22:30:55Z\">\n<meta
+        itemprop=\"quoteTime\"\n        content=\"2017-11-03T16:00:01Z\" />\n<meta
+        itemprop=\"dataSource\"\n        content=\"NASDAQ real-time data\" />\n<meta
+        itemprop=\"dataSourceDisclaimerUrl\"\n        content=\"//www.google.com/help/stock_disclaimer.html#realtime\"
+        />\n<meta itemprop=\"priceCurrency\"\n        content=\"USD\" />\n</div>\n</div>\n</div>\n<div
+        class=\"g-section g-tpl-right-1 sfe-break-top-5\">\n<div class=\"g-unit g-first\">\n<div
+        class=g-c><div>\n<div id=newstabsgroup>\n<div class=\"g-section g-tpl-25-75
+        g-split hdg\">\n<div class=\"g-unit g-first\">\n<h3>News</h3>\n</div>\n<div
+        class=g-unit>\n<div id=news-panel-tabs class=\"id-news-tabs\" style=\"display:none;\">\n<div
+        class=\"goog-tab goog-tab-selected\">\n<a id=news_tab_title class=t>\n<b class=t><b
+        class=t>Relevance</b></b></a>\n</div>\n<div class=goog-tab>\n<a id=news_by_date_tab_title
+        class=t>\n<b class=t><b class=t>Date</b></b></a>\n</div>\n</div>\n</div>\n</div>\n<div
+        id=tabs-clear class=\"id-tabs-clear goog-tab-bar-clear hide\"></div>\n<div
+        id=news_div_cont class=id-news_div_cont style=\"display:none;\"></div>\n<div
+        id=news_by_date_div_cont class=id-news_by_date_div_cont style=\"display:none;\"></div>\n</div>\n<div
+        class=\"sfe-section clf\" id=news-footer>\n<div id=news-sidebar-footer class=\"g-section
+        g-tpl-67-33 g-split\">\n<div class=\"g-unit g-first\">\n<a href=\"/finance/company_news?q=NASDAQ:MSFT&amp;ei=5f_8WZGpNsSMeIjDvrgM\"
+        >All news for Microsoft Corporation &raquo;</a>\n</div><div class=g-unit>\n<a
+        href=\"/finance/company_news?q=NASDAQ:MSFT&amp;ei=5f_8WZGpNsSMeIjDvrgM&output=rss\">Subscribe</a>\n<a
+        href=\"/finance/company_news?q=NASDAQ:MSFT&amp;ei=5f_8WZGpNsSMeIjDvrgM&output=rss\"><img
+        class=SP_subscribe src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\" alt=\"Subscribe.\"
+        id=rss\n        width=15 height=15 /></a>\n</div>\n</div>\n</div>\n</div>\n<div
+        id=ad class=\"sfe-break-top sfe-break-bottom-16\">\n<div id=ad-label class=\"id-ad-label\">Advertisement</div>\n<!--
+        Async AdSlot 1 for Ad unit 'com.gf.company' ### Size: [[300,250]] -->\n<!--
+        Adslot's refresh function: googletag.pubads().refresh([gptadslots[0]]) -->\n<div
+        id='div-gpt-ad-4209476-1'>\n<script>\ngoogletag.cmd.push(function() { googletag.display('div-gpt-ad-4209476-1');
+        });\n</script>\n</div>\n<!-- End AdSlot 1 -->\n</div>\n<div class=\"g-section
+        g-tpl-25-75 g-split hdg\">\n<div class=\"g-unit g-first\">\n<h3>Events</h3>\n</div>\n<div
+        class=\"g-unit\">\n<div class=sfe-break-right-em>\n<img src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"\n
+        \              width=16 height=16 class=SP_calendar id=calendar alt=\"\">\n<a
+        onclick=\"_GF_click('', 'add_ical', 'MSFT', '')\" href=\"//www.google.com/calendar/render?ei=5f_8WZGpNsSMeIjDvrgM&hl=en&cid=http://finance.google.com:80%2Ffinance%2Fevents%3Fq%3DNASDAQ%3AMSFT%26output%3Dical\"
+        >Add MSFT to my calendars</a>\n</div>\n</div>\n</div>\n<div class=\"events
+        sfe-section\">\n<div class=event>\n<div class=\"bld date\">Jan 24, 2018</div>\n<div>Q2
+        2018 Microsoft Corp Earnings Release (Estimated)\n- <span class=time>4:00PM
+        EST</span> -\n<a onclick=\"_GF_click('', 'add_cal_evnt', 'MSFT', '')\" href=
+        \"\n  //www.google.com/calendar/event?ei=5f_8WZGpNsSMeIjDvrgM&hl=en&action=TEMPLATE&text=Q2+2018+Microsoft+Corp+Earnings+Release+(Estimated)&dates=20180124T210000Z/20180124T220000Z&sprop=finance\"
+        \ class=time>\n<img alt=\"Add to calendar\" src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"\n
+        \               width=16 height=16 class=SP_calendar id=calendar>\n</a>\n</div>\n</div>\n<div
+        class=event>\n<div class=\"bld date\">Nov 30, 2017</div>\n<div>Microsoft Corp
+        Annual Shareholders Meeting (Estimated)\n- <span class=time>11:00AM EST</span>
+        -\n<a onclick=\"_GF_click('', 'add_cal_evnt', 'MSFT', '')\" href= \"\n  //www.google.com/calendar/event?ei=5f_8WZGpNsSMeIjDvrgM&hl=en&action=TEMPLATE&text=Microsoft+Corp+Annual+Shareholders+Meeting+(Estimated)&dates=20171130T160000Z/20171130T170000Z&sprop=finance\"
+        \ class=time>\n<img alt=\"Add to calendar\" src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"\n
+        \               width=16 height=16 class=SP_calendar id=calendar>\n</a>\n</div>\n</div>\n<div
+        class=event>\n<div class=\"bld date\">Nov 29, 2017</div>\n<div>Microsoft Corp
+        Annual Shareholders Meeting\n- <span class=time>11:00AM EST</span> -\n<a onclick=\"_GF_click('',
+        'add_cal_evnt', 'MSFT', '')\" href= \"\n  //www.google.com/calendar/event?ei=5f_8WZGpNsSMeIjDvrgM&hl=en&action=TEMPLATE&text=Microsoft+Corp+Annual+Shareholders+Meeting&dates=20171129T160000Z/20171129T170000Z&sprop=finance\"
+        \ class=time>\n<img alt=\"Add to calendar\" src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"\n
+        \               width=16 height=16 class=SP_calendar id=calendar>\n</a>\n</div>\n</div>\n<div
+        class=event>\n<div class=\"bld date\">Oct 26, 2017</div>\n<div>Q1 2018 Microsoft
+        Corp Earnings Call -\n<a onclick=\"_GF_click('', 'webcast', 'MSFT', '')\"
+        href=//www.google.com/url?source=finance&q=http%3A%2F%2Fedge.media-server.com%2Fm%2Fp%2Fkwchh349&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNGdLRVFxOFJ4Bnv0ASgVxiLQ8MICg
+        \ class=time>\n<img alt=\"Webcast\" src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"\n
+        \               width=19 height=16 class=SP_webcast id=webcast>\n</a>\n</div>\n</div>\n<div
+        class=event>\n<div class=\"bld date\">Oct 26, 2017</div>\n<div>Q1 2018 Microsoft
+        Corp Earnings Release\n</div>\n</div>\n<div class=event>\n<div class=\"bld
+        date\">Sep 12, 2017</div>\n<div>Microsoft Corp at Deutsche Bank Technology
+        Conference -\n<a onclick=\"_GF_click('', 'webcast', 'MSFT', '')\" href=//www.google.com/url?source=finance&q=https%3A%2F%2Fedge.media-server.com%2Fm6%2Fp%2F9dbzr86w&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNECFeK0mAspeco64FANJEBshLFSoQ
+        \ class=time>\n<img alt=\"Webcast\" src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"\n
+        \               width=19 height=16 class=SP_webcast id=webcast>\n</a>\n</div>\n</div>\n<table><tr>\n<td>\n<a
+        href=\"//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.dailyfinance.com%2Fevent%2FMSFT%2Fusa&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNHhnt0I_WsVdf--qxblB1aOkig9Rg\"
+        >\nMore events from DailyFinance &raquo;</a>&nbsp;\n&nbsp;&nbsp;<nobr>\n</td>\n</tr></table>\n</div>\n<div
+        class=hdg><h3>Key stats and ratios</h3></div>\n<div class=sfe-section>\n<table
+        class=\"quotes rgt nwp\" width=\"100%\">\n<thead><tr>\n<td width=50%>\n<td
+        class=colHeader>Q3 (Sep &#39;17)\n<td class=colHeader>2017\n</tr></thead>\n<tr>\n<td
+        class=\"lft name\">Net profit margin\n<td class=period>26.80%\n<td class=period>23.57%\n<tr>\n<td
+        class=\"lft name\">Operating margin\n<td class=period>31.39%\n<td class=period>24.76%\n<tr>\n<td
+        class=\"lft name\">EBITD margin\n<td class=period>-\n<td class=period>34.92%\n<tr>\n<td
+        class=\"lft name\">Return on average assets\n<td class=period>10.56%\n<td
+        class=period>9.56%\n<tr>\n<td class=\"lft name\">Return on average equity\n<td
+        class=period>29.74%\n<td class=period>26.55%\n<tr>\n<td class=\"lft name\">Employees\n<td
+        class=period>124,000\n<td class=period>-\n<tr>\n<td class=\"lft name\">CDP
+        Score\n<td class=period>-\n<td class=period>\n<a id=m-cdi href=//www.google.com/url?source=finance&q=https%3A%2F%2Fwww.cdp.net%2Fen%2Fresponses%2F11930&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNFqyn1IJJJg2LaKpbYGdAjeIZ0IDg>A</a>\n</table>\n<div
+        class=sfe-break-top>\n<a id=\"similar\" href=\"/finance/similar?q=NASDAQ:MSFT&amp;ei=5f_8WZGpNsSMeIjDvrgM\"
+        >Screen stocks with similar metrics &raquo;</a></div>\n</div>\n<div class=hdg><h3>Address</h3></div>\n<div
+        class=sfe-section>1 Microsoft Way<br/>REDMOND, WA 98052-6399<br/>United States\n-
+        <a href=\"http://maps.google.com/maps?ei=5f_8WZGpNsSMeIjDvrgM&q=1+Microsoft+Way+REDMOND+98052-6399+United+States%20(Microsoft+Corporation)\"
+        >Map</a><br/>+1-425-8828080 (Phone)<br>+1-425-7067329 (Fax)<br>\n</div>\n<div
+        class=hdg><h3>Website links</h3></div>\n<div class=sfe-section><div class=item>\n<a
+        id=fs-chome href=\"//www.google.com/url?source=finance&q=https%3A%2F%2Fwww.microsoft.com%2Fen-us%2F&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNGmToOnLcVaP-MkjrmujMdDzP6h1Q\"
+        >\nhttps://www.microsoft.com/en-us/\n</a>\n</div>\n<a id=fs- class=item href=\"//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.microsoft.com%2Fcommunities%2Fblogs%2FPortalHome.mspx&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNHowe2NsSCDTFDVBYBhdXo4qANc-Q\"
+        >Official Blog</a>\n</div>\n<div class=hdg><h3>External links</h3></div>\n<div
+        class=sfe-section>\n<div class=item><a id=m-analyst\n                 href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.marketwatch.com%2Finvesting%2Fstock%2FMSFT%2Fanalystestimates&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNFqf7HabEUNPubG0rEwFmr2LPE9ig
+        >Analyst Estimates</a> - <font color=\"#6F6F6F\">MarketWatch</font></div>\n<div
+        class=item><a id=m-sec\n                 href=//www.google.com/url?source=finance&q=http%3A%2F%2Fgoogle.brand.edgar-online.com%3Fsym%3DMSFT&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNFwk-nnPvzBrFcOoUo_BzpcHWr3QQ
+        >SEC Filings</a> - <font color=\"#6F6F6F\">EDGAR Online</font></div>\n<div
+        class=item><a id=m-hold\n                 href=//www.google.com/url?source=finance&q=http%3A%2F%2Finvesting.money.msn.com%2Finvestments%2Finstitutional-ownership%3Fsymbol%3DMSFT&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNHN0xfwxVjKlvvpKRdukTL0_7hI7g
+        >Major Holders</a> - <font color=\"#6F6F6F\">MSN Money</font></div>\n<div
+        class=item><a id=m-research\n                 href=//www.google.com/url?source=finance&q=https%3A%2F%2Fcommerce.us.reuters.com%2Fpurchase%2FadvancedSearch.do%3Fsymbol%3DMSFT.O%26rpc%3D68&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNFcQ5RB_267t4cogtbb_eoZXr9tgg
+        >Research Reports</a> - <font color=\"#6F6F6F\">Reuters</font></div>\n<div
+        class=item><a id=m-transcripts\n                 href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.seekingalpha.com%2Ftranscripts%2Ffor%2FMSFT&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNGx-5bnCB2Jh20q3ky2pibV-l3ngA
+        >Transcripts</a> - <font color=\"#6F6F6F\">SeekingAlpha</font></div>\n<div
+        class=item><a id=m-wiki\n                 href=//www.google.com/url?source=finance&q=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMicrosoft&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNE--uLcFgE-YwPhIeHe1DbLbCfkGQ
+        >About Company</a> - <font color=\"#6F6F6F\">Wikipedia</font></div>\n</div>\n</div>\n</div>\n<div
+        class=g-unit>\n<div id=top-section class=\"g-c sfe-break-right\">\n<div id=chart-section>\n<div>\n<div
+        id=compare-bar-wrapper class=id-compare-bar-wrapper>\n<div id=compare-bar
+        class=\"id-compare-bar g-section\">\n</div>\n</div>\n<div id=chart_anchor
+        class=id-chart_anchor></div>\n<div class=id-chart-footer>\n<div class=\"g-section
+        g-tpl-67-33 g-split sfe-break-bottom-8 overflow-floatfix\">\n<div class=\"g-unit
+        g-first\"><div class=\"id-chart-footer-links hide\">\n<span class=settings-link>Settings</span>
+        |\n<span class=technicals-link>Technicals</span> |\n<span style=\"white-space:nowrap;\">\n<img
+        width=\"16\" hight=\"9\" alt=\"Link to chart icon.\"\n            class=\"linktochart-img
+        SP_link\"\n            src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"
+        />\n<span class=linktochart-link>\nLink to this view</span>\n</span>\n</div></div>\n<div
+        class=\"g-unit\">\n<span class=\"chart-dis\">Volume delayed by 15 mins.<br>Prices
+        are not from all markets.<br>\n<a href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.six-financial-information.com%2Fen%2Fhome%2Fprofile.html%3Futm_source%3Dgooglefinance%26utm_medium%3Dorganic%26utm_campaign%3DGoogle%2520Finance&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNFXhGl5PYesevH5jqNLPttBUQwdNA>\nSources
+        include SIX.</a><br>\n</span>\n</div>\n</div>\n</div>\n<script>\nvar _minZoomDays
+        = 1;\nvar _minZoomDaysNoIntraDay = _minZoomDays;\nvar _timeZoneOffset = '-18000';\n_chartConfigObject
+        = {};\n_chartConfigObject.hasVolume = _displayVolume;\n_chartConfigObject.hasNews
+        = true;\n_chartConfigObject.hasExtendedHours = true;\n_chartConfigObject.hasDefaultZoomSetting
+        = true;\n_chartConfigObject.hasVerticalScaleSetting = true;\n_chartConfigObject.displayVolume
+        = 'true';\n_chartConfigObject.displayNewsPins = 'true';\n_chartConfigObject.displayDividends
+        = 'true';\n_chartConfigObject.displaySplits = 'true';\n_chartConfigObject.displayExtendedHours
+        = 'false';\n_chartConfigObject.enableCustomDateEntry = true\n_chartConfigObject.defaultZoomDays
+        = '3';\n_chartConfigObject.snapping = false;\n_chartConfigObject.verticalScaling
+        = 'maximized';\n_chartConfigObject.sparklineType = 'dynamic';\n// set _minZoomDays
+        and _minZoomDaysNoIntraDay in each page before emit the\n// chart to passing
+        the value to chart, otherwise default value will be use.\n_chartConfigObject.minZoomDaysNormal
+        = _minZoomDays;\n_chartConfigObject.minZoomDaysNoIntraDay = _minZoomDaysNoIntraDay;\n_chartConfigObject.enableIndicator
+        = true;\n_chartConfigObject.companyId = '358464';\n_chartConfigObject.enableRealtimeChart
+        = true;\n_chartConfigObject.isMarketOpenState = 0;\n_chartConfigObject.stateRemainingMinutes
+        = 824;\n_chartConfigObject.delayedMinutes = 0;\n_chartConfigObject.delayedMinutes
+        = Math.max(\n_chartConfigObject.delayedMinutes,\n15);\n_chartConfigObject.enableChartTypeSetting
+        = true;\n_chartConfigObject.lineStyle = 'IntervalBasedLine';\n_chartConfigObject.defaultInterval
+        = '86400';\n_chartConfigObject.enableIndicatorSetting = true;\n_chartConfigObject.biasSetting
+        = '';\n_chartConfigObject.emaSetting = '';\n_chartConfigObject.kdjSetting
+        = '';\n_chartConfigObject.macdSetting = '';\n_chartConfigObject.rsiSetting
+        = '';\n_chartConfigObject.smaSetting = '';\n_chartConfigObject.vmaSetting
+        = '';\n_chartConfigObject.cciSetting = '';\n_chartConfigObject.williamsPercentRSetting
+        = '';\n_chartConfigObject.bollingerBandsSetting = '';\n_chartConfigObject.fastStochasticSetting
+        = '';\n_chartConfigObject.slowStochasticSetting = '';\n_chartConfigObject.expandButtonEnabled
+        = true;\n_chartConfigObject.companyCurrency = 'USD';\n_chartConfigObject.displayDividendsUnits
+        = 'true';\n_external_target = \"\";\n_emitFlashChart(\n\"/finance/s/n-VxNKK74DU/chart9.swf?hl=en&gl=us\",\n_ticker,
+        _chartConfigObject,\"http:\\x2F\\x2Ffinance.google.com:80\");\n</script>\n<noscript>\n<div
+        id=image_chart style=\"display:block;\">\n<table>\n<tr><td class=itxt align=left>\n</td></tr>\n<tr><td>\n<img
+        alt=\"Chart.\" src=\"/finance/getchart?q=MSFT&x=NASD&p=3d&i=240&ei=5f_8WZGpNsSMeIjDvrgM\"
+        width=\"500\" height=\"322\">\n</td></tr>\n</table>\n</div>\n</noscript>\n<div
+        style=\"height:1em;\"></div>\n</div>\n</div>\n</div>\n<div class=\"g-c sfe-break-right\">\n<div
+        id=related class=\"id-related hide\">\n<div class=hdg>\n<div class=float>\n<h3>Related
+        companies</h3>\n</div>\n</div>\n<div>\n<div class=\"g-section g-tpl-50-50
+        g-split gf-control\">\n<div class=\"g-unit g-first\">\nShow:\n<select id=related-select
+        class=id-related-select>\n<option value=mrq >\nMost Recent Quarter\n</option>\n<option
+        value=mra selected>\nMost Recent Annual\n</option>\n</select>\n</div>\n<div
+        class=g-unit>\n<span class=\"id-related-edit-col linkbtn\">Add or remove columns</span>\n<button
+        class=id-related-save style=\"display:none\">Save changes</button>\n<button
+        class=id-related-cancel style=\"display:none\">Cancel</button>\n</div>\n</div>\n</div>\n<div
+        class=\"id-related-table gf-table-scroll-x jfk-scrollbar\"\n       style=\"padding-bottom:15px;\">\n</div>\n<div
+        class=sfe-section>\n<div class=\"g-section g-tpl-50-50 g-split\">\n<div class=\"g-unit
+        g-first\">Sector: <a id=sector href=\"?catid=us-TRBC:57&amp;ei=5f_8WZGpNsSMeIjDvrgM\"
+        >Technology</a> &gt; Industry: <a href=\"?catid=us-TRBC:5720102010&amp;ei=5f_8WZGpNsSMeIjDvrgM\"
+        >Software - NEC</a>\n</div><div class=g-unit>\n<a href=\"//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.factset.com%2Fdata%2Ffactset_data%2Findustry-and-sector&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNEm1E1-5Zsl6EBkkkAo6wctvHsBOg\"
+        >More from FactSet &raquo;</a>\n</div>\n</div>\n</div>\n</div>\n<div id=reorder
+        class=id-reorder><div class=mid-reorder>\n<div id=blogs-section\n>\n</div>\n<div
+        id=summary-section\n>\n<div id=summary>\n<div class=hdg><div class=float>\n<h3>Description</h3></div>\n<div
+        class=\"gf-reorder-btn SP_menu_button\"></div>\n</div>\n<div class=sfe-section>\n<div
+        class=companySummary>\nMicrosoft Corporation is a technology company. The
+        Company develops, licenses, and supports a range of software products, services
+        and devices. The Company's segments include Productivity and Business Processes,
+        Intelligent Cloud and More Personal Computing. The Company's products include
+        operating systems; cross-device productivity applications; server applications;
+        business solution applications; desktop and server management tools; software
+        development tools; video games, and training and certification of computer
+        system integrators and developers. It also designs, manufactures, and sells
+        devices, including personal computers (PCs), tablets, gaming and entertainment
+        consoles, phones, other intelligent devices, and related accessories, that
+        integrate with its cloud-based offerings. It offers an array of services,
+        including cloud-based solutions that provide customers with software, services,
+        platforms, and content, and it provides solution support and consulting services.\n<div
+        class=sfe-break-top>\n<a id=m-rprofile href=//www.google.com/url?source=finance&q=http%3A%2F%2Fstocks.us.reuters.com%2Fstocks%2FfullDescription.asp%3Frpc%3D66%26symbol%3DMSFT.O&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNFls24pdGQgu59yOIO_iNgcOfvHGQ
+        >\nMore from Reuters &raquo;\n</a></div>\n</div>\n</div>\n</div>\n</div><script>_tck('aft');</script>\n<div
+        id=mgmt-section\n>\n<div id=management style=\"margin-bottom:1.5em;\">\n<div
+        class=hdg><div class=float>\n<h3>Officers and directors</h3></div>\n<div class=\"gf-reorder-btn
+        SP_menu_button\"></div>\n</div>\n<div class=sfe-section>\n<table class=id-mgmt-table
+        width=100%><tbody>\n<tr >\n<td class=\"p linkbtn\">Bradford Lee Smith\n<td
+        class=i>\n<td class=t>President, Chief Legal Officer\n</tr>\n<tr style=\"display:none;\">\n<td><img
+        width=1 height=1 border=0 align=right>\n<td class=i>\n<td class=t>\nAge: 58<br>\n<a
+        class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DMSFT.O%26officerId%3D199715&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNEAWCCqRdLttC60FIV_6bt7gPCWWg
+        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
+        class=grey-top>\n<td class=\"p linkbtn\">Satya Nadella\n<td class=i>\n<td
+        class=t>Chief Executive Officer, Director\n</tr>\n<tr style=\"display:none;\">\n<td><img
+        width=1 height=1 border=0 align=right>\n<td class=i>\n<td class=t>\nAge: 50<br>\n<a
+        class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DMSFT.O%26officerId%3D1550690&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNF9Ety5YnIpxC7pvRyABPlym2Sb6A
+        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
+        class=grey-top>\n<td class=\"p linkbtn\">William Henry Gates III\n<td class=i>\n<td
+        class=t>Co-Founder and Technology Advisor, Director\n</tr>\n<tr style=\"display:none;\">\n<td><img
+        width=1 height=1 border=0 align=right>\n<td class=i>\n<td class=t>\nAge: 61<br>\n<a
+        class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DMSFT.O%26officerId%3D28066&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNFxD_ATE5QB_VxgVkQBEPr-_G3rDA
+        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
+        class=grey-top>\n<td class=\"p linkbtn\">Amy E. Hood\n<td class=i>\n<td class=t>Chief
+        Financial Officer, Executive Vice President\n</tr>\n<tr style=\"display:none;\">\n<td><img
+        width=1 height=1 border=0 align=right>\n<td class=i>\n<td class=t>\nAge: 45<br>\n<a
+        class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DMSFT.O%26officerId%3D2390373&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNGZKFSnDQT1F8dPX7qgijzbzkI1ew
+        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
+        class=grey-top>\n<td class=\"p linkbtn\">Christopher C. Capossela\n<td class=i>\n<td
+        class=t>Executive Vice President, Marketing and Consumer Business, and Chief
+        Marketing Officer\n</tr>\n<tr style=\"display:none;\">\n<td><img width=1 height=1
+        border=0 align=right>\n<td class=i>\n<td class=t>\nAge: 47<br>\n<a class=e-p
+        href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DMSFT.O%26officerId%3D2661554&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNE0LinK1j3CJ2FmFMiNx8d2F0pFGQ
+        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
+        class=grey-top>\n<td class=\"p linkbtn\">Kathleen T. Hogan\n<td class=i>\n<td
+        class=t>Executive Vice President - Human Resources\n</tr>\n<tr style=\"display:none;\">\n<td><img
+        width=1 height=1 border=0 align=right>\n<td class=i>\n<td class=t>\nAge: 51<br>\n<a
+        class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DMSFT.O%26officerId%3D2661559&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNHqLMDlXo2f1GWKI1abk4s2q_jRgg
+        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
+        class=grey-top>\n<td class=\"p linkbtn\">Jean-Philippe Courtois\n<td class=i>\n<td
+        class=t>Executive Vice President and President - Microsoft Global Sales, Marketing
+        and Operations\n</tr>\n<tr style=\"display:none;\">\n<td><img width=1 height=1
+        border=0 align=right>\n<td class=i>\n<td class=t>\nAge: 56<br>\n<a class=e-p
+        href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DMSFT.O%26officerId%3D162234&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNFPv9thR8C6B2nECjvSj9Or9BAzQg
+        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
+        class=grey-top>\n<td class=\"p linkbtn\">Margaret L. Johnson\n<td class=i>\n<td
+        class=t>Executive Vice President - Business Development\n</tr>\n<tr style=\"display:none;\">\n<td><img
+        width=1 height=1 border=0 align=right>\n<td class=i>\n<td class=t>\nAge: 55<br>\n<a
+        class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DMSFT.O%26officerId%3D2661567&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNEcBmHLyHyqfgCKAHAtyyYbnYehQQ
+        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
+        class=grey-top>\n<td class=\"p linkbtn\">Kevin Scott\n<td class=i>\n<td class=t>Chief
+        Technology Officer\n</tr>\n<tr style=\"display:none;\">\n<td><img width=1
+        height=1 border=0 align=right>\n<td class=i>\n<td class=t>\n<a class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DMSFT.O%26officerId%3D2794052&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNGrQ5GKZN62KCMt-1ga9ip_CJtkCw
+        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
+        class=grey-top>\n<td class=\"p linkbtn\">John Wendell Thompson\n<td class=i>\n<td
+        class=t>Independent Non-Executive Chairman of the Board\n</tr>\n<tr style=\"display:none;\">\n<td><img
+        width=1 height=1 border=0 align=right>\n<td class=i>\n<td class=t>\nAge: 68<br>\n<a
+        class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DMSFT.O%26officerId%3D1691716&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNGIsX9vvRJtOSeeYaZ4i9Xdf9pDoA
+        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n</table>\n<div
+        class=gb>\n<a href=\"//www.google.com/url?source=finance&q=http%3A%2F%2Fstocks.us.reuters.com%2Fstocks%2FofficersDirectors.asp%3Fsymbol%3DMSFT.O%26WTmodLOC%3DC4-Officers-5&ei=5f_8WZGpNsSMeIjDvrgM&usg=AFQjCNH7MFIqkZpreoVJR8fudZbZm2SUdw\"
+        >\nFull list on Reuters &raquo;</a></div>\n</div>\n</div>\n</div>\n</div></div>\n</div>\n</div>\n</div>\n</div>\n</div></div></div></div></div><div
+        id=gf-foot><div id=fjfe&#45;edition&#45;links class=fjfe&#45;footer&#45;links>Google
+        Finance Beta available in: <a href=\"http://www.google.com.hk/finance?ei=5f_8WZGpNsSMeIjDvrgM\"
+        class=\"fjfe-edition-link\">Hong Kong</a> - <a href=\"http://www.google.ca/finance?ei=5f_8WZGpNsSMeIjDvrgM\"
+        class=\"fjfe-edition-link\">Canada</a> - <a href=\"http://www.google.com/finance?ei=5f_8WZGpNsSMeIjDvrgM\"
+        class=\"fjfe-edition-link\">U.S.</a> - <a href=\"http://www.google.com.hk/finance?hl=zh-CN&ei=5f_8WZGpNsSMeIjDvrgM\"
+        class=\"fjfe-edition-link\">China</a> - <a href=\"http://www.google.co.uk/finance?ei=5f_8WZGpNsSMeIjDvrgM\"
+        class=\"fjfe-edition-link\">U.K.</a></div><p class=fjfe&#45;footer&#45;disclaimer>Information
+        is provided \"as is\" and solely for informational purposes, not for trading
+        purposes or advice, and may be delayed.<br>To see all exchange delays, please
+        <a href=\"http://www.google.com/intl/en/googlefinance/disclaimer/?ei=5f_8WZGpNsSMeIjDvrgM\"
+        class=\"fjfe-secondary-link fjfe-no-sticky-params\"> see disclaimer</a>.</p><div
+        class=fjfe&#45;footer&#45;links>&copy;2017 Google - <a href=\"http://www.google.com?hl=en&ei=5f_8WZGpNsSMeIjDvrgM\">Google
+        Home</a> - <a href=\"http://googlefinanceblog.blogspot.com?ei=5f_8WZGpNsSMeIjDvrgM\">Blog</a>
+        - <a href=\"http://support.google.com/finance?hl=en&ei=5f_8WZGpNsSMeIjDvrgM\">Help</a>
+        - <a href=\"http://support.google.com/finance?ctx=report&hl=en&ei=5f_8WZGpNsSMeIjDvrgM&exch=NASDAQ&sym=MSFT\">Report
+        a Problem</a> - <a href=\"http://www.google.com/intl/en/policies/privacy/?ei=5f_8WZGpNsSMeIjDvrgM\">Privacy
+        Policy</a> - <a href=\"http://www.google.com/intl/en/policies/terms/?ei=5f_8WZGpNsSMeIjDvrgM\">Terms
+        of Service</a></div></div>\n<script>\nvar _chartConfigObject;\nvar _cleardot;\nvar
+        _companyName;\nvar _eventid = '5f_8WZGpNsSMeIjDvrgM';\nvar _expid;\nvar _external_target;\nvar
+        _localDomain = 'www.google.com';\nvar _minZoomDays;\nvar _minZoomDaysNoIntraDay;\nvar
+        _prefs;\nvar _ticker;\nvar _urlSuffix;\n_setStickyUrlParams(\"ei=5f_8WZGpNsSMeIjDvrgM\");\nif
+        (_s_Store) {\n_s_Store._allowMatchAdvancedSearch = true;\nvar _fieldToDisplayNameMap
+        = {GrossMargin:\"Gross margin&nbsp;(%)\",Return1Week:\"1w return\",Return156Week:\"156w
+        return\",NextYearEPS:\"Next year EPS\",EarningsAfterTaxes:\"Earnings after
+        taxes\",RevenueGrowthRate5Years:\"5y revenue growth rate\",LTDebtToAssetsYear:\"LT
+        debt/assets (Recent&nbsp;yr)&nbsp;(%)\",DividendPerShare:\"Div per share\",MarketCap:\"Market
+        cap\",NetProfitMarginPercent:\"Net profit margin&nbsp;(%)\",Float:\"Float\",EarningsBeforeTaxes:\"Earnings
+        before taxes\",QuotePercChange:\"Quote change&nbsp;(%)\",TotalDebtToEquityYear:\"Total
+        debt/equity (Recent&nbsp;yr)&nbsp;(%)\",TotalDebtToCapitalQuarter:\"Total
+        debt/capital (Recent&nbsp;qtr)&nbsp;(%)\",LTDebtToCapitalQuarter:\"LT debt/capital
+        (Recent&nbsp;qtr)&nbsp;(%)\",EPSGrowthRate10Years:\"10y EPS growth rate\",Beta:\"Beta\",CapitalGain:\"Capital
+        gain\",ReturnOnAssetsPTM:\"Return on assets (PTM)&nbsp;(%)\",BetaDown:\"Beta
+        down from RAS\",IncomeDividend:\"Income dividend\",RevenueGrowthRate10Years:\"10y
+        revenue growth rate\",MarketCapShareBasis:\"Market cap share basis\",Return4Week:\"4w
+        return\",IAD:\"Div rate indicated annual\",Price150DayAverage:\"150d avg price\",EPSGrowthRate5Years:\"5y
+        EPS growth rate\",ReturnOnAssetsTTM:\"Return on assets (TTM)&nbsp;(%)\",TotalDebtToAssetsYear:\"Total
+        debt/assets (Recent&nbsp;yr)&nbsp;(%)\",Volume:\"Volume\",CurrentRatioYear:\"Current
+        ratio\",DividendRecentQuarter:\"Div recent quarter\",Low52Week:\"52w low\",ExpenseRatio:\"Expense
+        ratio\",Price1DayPercChange:\"1d&nbsp;price change&nbsp;(%)\",Price13WeekPercChange:\"13w&nbsp;price
+        change&nbsp;(%)\",ReturnOnEquity5Years:\"Return on equity (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",TotalDebtToCapitalYear:\"Total
+        debt/capital (Recent&nbsp;yr)&nbsp;(%)\",TotalDebtToAssetsQuarter:\"Total
+        debt/assets (Recent&nbsp;qtr)&nbsp;(%)\",NavChange:\"Nav change\",OperatingMargin:\"Operating
+        margin&nbsp;(%)\",DPSRecentYear:\"Div per share (Recent&nbsp;yr)\",ANI:\"Earnings
+        after taxes (Recent&nbsp;yr)\",High52Week:\"52w high\",AverageVolume:\"Average
+        volume\",Return13Week:\"13w return\",PriceToCashFlowPerShare:\"Price to cash
+        flow per share\",Price26WeekPercChange:\"26w&nbsp;price change&nbsp;(%)\",QuoteChange:\"Quote
+        change\",ATAXRATE:\"Tax rate (Recent&nbsp;yr)\",NetIncomeChangePerc:\"Net
+        income change&nbsp;(%)\",ReturnOnInvestment5Years:\"Return on investment (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",PE:\"P/E
+        ratio\",ReturnOnInvestmentYear:\"Return on investment (Recent&nbsp;yr)&nbsp;(%)\",Price200DayAverage:\"200d
+        avg price\",DividendNextQuarter:\"Div next quarter\",PriceYTDPercChange:\"YTD&nbsp;price
+        change&nbsp;(%)\",EBITD:\"EBITDA\",ReturnOnInvestmentTTM:\"Return on investment
+        (TTM)&nbsp;(%)\",NavChangePercent:\"Nav change&nbsp;(%)\",EBITDMargin:\"EBITDA
+        margin&nbsp;(%)\",LTDebtToEquityQuarter:\"LT debt/equity (Recent&nbsp;qtr)&nbsp;(%)\",BetaRAS:\"Beta
+        from RAS\",PriceSales:\"Price to sales\",NetAssets:\"Net assets\",ReturnOnEquityTTM:\"Return
+        on equity (TTM)&nbsp;(%)\",CashPerShareYear:\"Cash/share\",ReturnDay:\"1d
+        return\",ReturnOnAssets5Years:\"Return on assets (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",Return52Week:\"52w
+        return\",ForwardPE1Year:\"1y fwd P/E\",NetIncomeGrowthRate5Years:\"5y net
+        income growth rate\",DividendYield:\"Div yield&nbsp;(%)\",Dividend:\"Div from
+        cash flow\",BetaUp:\"Beta up from RAS\",nprice:\"Price from RAS\",LTDebtToCapitalYear:\"LT
+        debt/capital (Recent&nbsp;yr)&nbsp;(%)\",Return260Week:\"260w return\",ReturnOnEquityQuarter:\"Return
+        on equity (Recent&nbsp;qtr)&nbsp;(%)\",ACOGS:\"Cost of goods sold\",LTDebtToAssetsQuarter:\"LT
+        debt/assets (Recent&nbsp;qtr)&nbsp;(%)\",PriceToBook:\"Price to book\",LTDebtToEquityYear:\"LT
+        debt/equity (Recent&nbsp;yr)&nbsp;(%)\",ReturnYTD:\"Return YTD\",ReturnOnEquityYear:\"Return
+        on equity (Recent&nbsp;yr)&nbsp;(%)\",ReturnOnAssetsQuarter:\"Return on assets
+        (Recent&nbsp;qtr)&nbsp;(%)\",TotalDebtToEquityQuarter:\"Total debt/equity
+        (Recent&nbsp;qtr)&nbsp;(%)\",NavPrior:\"Nav prior\",AINTCOV:\"Interest coverage\",EPS:\"EPS\",ReturnOnInvestmentQuarter:\"Return
+        on investment (Recent&nbsp;qtr)&nbsp;(%)\",QuoteLast:\"Last price\",Price50DayAverage:\"50d
+        avg price\",Price4WeekPercChange:\"4w&nbsp;price change&nbsp;(%)\",ReturnOnAssetsYear:\"Return
+        on assets (Recent&nbsp;yr)&nbsp;(%)\",MarketCapRAS:\"Mkt cap from RAS\",Price52WeekPercChange:\"52w&nbsp;price
+        change&nbsp;(%)\",InstitutionalPercentHeld:\"Institutional percent held\",ShortInterestRatioPercent:\"Short
+        interest ratio&nbsp;(%)\",BookValuePerShareYear:\"Book value/share\",ReturnOnEquityPTM:\"Return
+        on equity (PTM)&nbsp;(%)\"};\n_s_Store._asStore._addStrings(_fieldToDisplayNameMap);\n}\nif
+        (_s_Store) {\n_s_Store._allowMultipleInBox = true;\n}\n_regOnLoad(onCompanyLoad);\n</script>\n</div></div><script>var
+        googlefinance = {i: [\"f.b.id\",\"\",null,0,\"\",0,null,[\"f.b.cf\",\"Upzqnh5ra8Q.en_US.\",0],[],1,[],\"5f_8WZGpNsSMeIjDvrgM\",\"www.google.com\",\"EnJtDvvXKW1j3yPQOObMmJDT89k:1509752806072\",1]};
+        GF_domReady = 1;</script></body></html>"
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 23:46:37 GMT
+recorded_with: VCR 3.0.3

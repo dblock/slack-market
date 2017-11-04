@@ -10,11 +10,8 @@ class Market
     end
 
     # return stock quotes
-    def quotes(stocks, fields = %i[name symbol last_trade_price change change_in_percent])
-      YahooFinance::Client.new.quotes(stocks, fields).reject do |quote|
-        quote.name = quote.name != 'N/A' ? quote.name : quote.symbol
-        quote.last_trade_price == 'N/A'
-      end
+    def quotes(stocks)
+      Tickers.new(stocks)
     end
 
     # render the correct chart
@@ -57,9 +54,9 @@ class Market
     def to_slack_attachment(quote, opts = { charts: false, button: nil })
       attachment = {
         fallback: "#{quote.name} (#{quote.symbol}): $#{quote.last_trade_price}",
-        title_link: "http://finance.yahoo.com/q?s=#{quote.symbol}",
+        title_link: "http://finance.google.com/q=#{quote.symbol}",
         title: "#{quote.name} (#{quote.symbol})",
-        text: "$#{quote.last_trade_price} (#{quote.change_in_percent})",
+        text: "$#{quote.last_trade_price} (#{quote.change_in_percent_s})",
         color: quote.change.to_f > 0 ? '#00FF00' : '#FF0000'
       }
 

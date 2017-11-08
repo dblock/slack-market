@@ -17,7 +17,7 @@ Invite *@market* to a channel with `/invite @market`.
 
 ### Quotes from Yahoo Finance
 
-Mention a stock ticker and get a quote. Single-character stocks should include a $ sign, eg. `$F`.
+Mention a stock ticker and get a quote. Works for crypto-currencies. Single-character stocks should include a $ sign, eg. `$F`.
 
 ![](public/img/market.gif)
 

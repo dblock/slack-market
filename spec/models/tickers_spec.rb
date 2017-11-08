@@ -26,4 +26,11 @@ describe Tickers do
       expect(tickers.count).to eq 0
     end
   end
+  context 'currency', vcr: { cassette_name: 'btc' } do
+    let(:tickers) { Tickers.new(%w[BTC]) }
+    it 'retrieves BTC ticker' do
+      expect(tickers.count).to eq 1
+      expect(tickers.map(&:symbol)).to eq %w[BTCUSD]
+    end
+  end
 end

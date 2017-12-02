@@ -12,13 +12,13 @@ module Api
           optional :p, type: String, default: '1d'
         end
         get ':q' do
-          interval = params[:p] == '1d' ? 360 : 86_400
-
           period = case params[:p]
                    when '1m', '1M' then '30d'
                    when '1y', '1Y' then '1Y'
                    else '1d'
           end
+
+          interval = period == '1d' ? 360 : 86_400
 
           url = "https://finance.google.com/finance/getprices?i=#{interval}&p=#{period}&f=d,c&df=cpct&auto=0&q=#{params[:q]}"
 

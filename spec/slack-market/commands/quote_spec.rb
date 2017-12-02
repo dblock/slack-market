@@ -26,10 +26,10 @@ describe SlackMarket::Commands::Quote do
           as_user: true,
           attachments: [
             {
-              fallback: 'Microsoft Corporation (MSFT): $51.91',
+              fallback: 'Microsoft Corporation (MSFT): $84.26',
               title_link: 'http://finance.google.com/q=MSFT',
               title: 'Microsoft Corporation (MSFT)',
-              text: '$51.91 (+0.11%)',
+              text: '$84.26 (+0.11%)',
               color: '#00FF00',
               callback_id: 'Microsoft Corporation',
               actions: [
@@ -69,10 +69,10 @@ describe SlackMarket::Commands::Quote do
           as_user: true,
           attachments: [
             {
-              fallback: 'Microsoft Corporation (MSFT): $51.91',
+              fallback: 'Microsoft Corporation (MSFT): $84.26',
               title_link: 'http://finance.google.com/q=MSFT',
               title: 'Microsoft Corporation (MSFT)',
-              text: '$51.91 (+0.11%)',
+              text: '$84.26 (+0.11%)',
               color: '#00FF00',
               callback_id: 'Microsoft Corporation',
               actions: [
@@ -109,11 +109,11 @@ describe SlackMarket::Commands::Quote do
           as_user: true,
           attachments: [
             {
-              fallback: 'Roche Holding Ltd. (ROG): $232.7',
+              fallback: 'Roche Holding Ltd. (ROG): $248.1',
               title_link: 'http://finance.google.com/q=ROG',
               title: 'Roche Holding Ltd. (ROG)',
-              text: '$232.7 (+0.34%)',
-              color: '#00FF00',
+              text: '$248.1 (-0.04%)',
+              color: '#FF0000',
               callback_id: 'Roche Holding Ltd.',
               actions: [
                 {
@@ -152,11 +152,11 @@ describe SlackMarket::Commands::Quote do
           as_user: true,
           attachments: [
             {
-              fallback: 'China Mobile Ltd. (0941): $78.85',
+              fallback: 'China Mobile Ltd. (0941): $78.8',
               title_link: 'http://finance.google.com/q=0941',
               title: 'China Mobile Ltd. (0941)',
-              text: '$78.85 (+0.32%)',
-              color: '#00FF00',
+              text: '$78.8 (-0.57%)',
+              color: '#FF0000',
               callback_id: 'China Mobile Ltd.',
               actions: [
                 {
@@ -194,12 +194,12 @@ describe SlackMarket::Commands::Quote do
           as_user: true,
           attachments: [
             {
-              fallback: 'Singapore Telecommunications Ltd. (Z74): $3.77',
+              fallback: 'Singapore Telecommunications Limited (Z74): $3.74',
               title_link: 'http://finance.google.com/q=Z74',
-              title: 'Singapore Telecommunications Ltd. (Z74)',
-              text: '$3.77 (+0.53%)',
+              title: 'Singapore Telecommunications Limited (Z74)',
+              text: '$3.74 (+0.27%)',
               color: '#00FF00',
-              callback_id: 'Singapore Telecommunications Ltd.',
+              callback_id: 'Singapore Telecommunications Limited',
               actions: [
                 {
                   name: '1D',
@@ -237,11 +237,11 @@ describe SlackMarket::Commands::Quote do
           as_user: true,
           attachments: [
             {
-              fallback: 'Siasun Robot&Automation Co Ltd (300024): $20.16',
+              fallback: 'Siasun Robot&Automation Co Ltd (300024): $19.71',
               title_link: 'http://finance.google.com/q=300024',
               title: 'Siasun Robot&Automation Co Ltd (300024)',
-              text: '$20.16 (-0.05%)',
-              color: '#FF0000',
+              text: '$19.71 (+1.13%)',
+              color: '#00FF00',
               callback_id: 'Siasun Robot&Automation Co Ltd',
               actions: [
                 {
@@ -275,10 +275,10 @@ describe SlackMarket::Commands::Quote do
           as_user: true,
           attachments: [
             {
-              fallback: 'Microsoft Corporation (MSFT): $84.14',
+              fallback: 'Microsoft Corporation (MSFT): $84.26',
               title_link: 'http://finance.google.com/q=MSFT',
               title: 'Microsoft Corporation (MSFT)',
-              text: '$84.14 (+0.11%)',
+              text: '$84.26 (+0.11%)',
               color: '#00FF00',
               callback_id: 'Microsoft Corporation',
               actions: [
@@ -304,11 +304,11 @@ describe SlackMarket::Commands::Quote do
               image_url: 'https://www.google.com/finance/getchart?q=MSFT&i=360'
             },
             {
-              fallback: 'Altaba Inc (AABA): $70.23',
+              fallback: 'Altaba Inc (AABA): $70.1',
               title_link: 'http://finance.google.com/q=AABA',
               title: 'Altaba Inc (AABA)',
-              text: '$70.23 (-0.40%)',
-              color: '#FF0000',
+              text: '$70.1 (+0.06%)',
+              color: '#00FF00',
               callback_id: 'Altaba Inc',
               actions: [
                 {
@@ -354,11 +354,11 @@ describe SlackMarket::Commands::Quote do
           as_user: true,
           attachments: [
             {
-              fallback: 'Ford Motor Company (F): $12.36',
+              fallback: 'Ford Motor Company (F): $12.58',
               title_link: 'http://finance.google.com/q=F',
               title: 'Ford Motor Company (F)',
-              text: '$12.36 (-0.48%)',
-              color: '#FF0000',
+              text: '$12.58 (+0.48%)',
+              color: '#00FF00',
               callback_id: 'Ford Motor Company',
               actions: [
                 {
@@ -395,11 +395,11 @@ describe SlackMarket::Commands::Quote do
           as_user: true,
           attachments: [
             {
-              fallback: 'Ford Motor Company (F): $12.36',
+              fallback: 'Ford Motor Company (F): $12.58',
               title_link: 'http://finance.google.com/q=F',
               title: 'Ford Motor Company (F)',
-              text: '$12.36 (-0.48%)',
-              color: '#FF0000',
+              text: '$12.58 (+0.48%)',
+              color: '#00FF00',
               callback_id: 'Ford Motor Company',
               actions: [
                 {
@@ -441,10 +441,10 @@ describe SlackMarket::Commands::Quote do
             as_user: true,
             attachments: [
               {
-                fallback: 'Microsoft Corporation (MSFT): $51.91',
+                fallback: 'Microsoft Corporation (MSFT): $84.26',
                 title_link: 'http://finance.google.com/q=MSFT',
                 title: 'Microsoft Corporation (MSFT)',
-                text: '$51.91 (+0.11%)',
+                text: '$84.26 (+0.11%)',
                 color: '#00FF00',
                 callback_id: 'Microsoft Corporation',
                 actions: [
@@ -484,10 +484,10 @@ describe SlackMarket::Commands::Quote do
             as_user: true,
             attachments: [
               {
-                fallback: 'Microsoft Corporation (MSFT): $51.91',
+                fallback: 'Microsoft Corporation (MSFT): $84.26',
                 title_link: 'http://finance.google.com/q=MSFT',
                 title: 'Microsoft Corporation (MSFT)',
-                text: '$51.91 (+0.11%)',
+                text: '$84.26 (+0.11%)',
                 color: '#00FF00'
               }
             ]

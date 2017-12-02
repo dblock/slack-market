@@ -2,961 +2,1013 @@
 http_interactions:
 - request:
     method: get
-    uri: https://download.finance.yahoo.com/d/quotes.csv?f=nsl1c1p2&s=F
+    uri: https://finance.google.com/finance?output=json&q=F
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+      Accept: "*/*"
+      Accept-Encoding: gzip, deflate
+      User-Agent: rest-client/2.0.2 (darwin16.4.0 x86_64) ruby/2.3.1p112
+      Host: finance.google.com
   response:
-    status:
-      code: 200
-      message: OK
+    status: {code: 200, message: OK}
     headers:
-      Date:
-      - Fri, 05 Feb 2016 22:47:46 GMT
-      P3p:
-      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
-        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
-        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
-      Cache-Control:
-      - private, no-cache, no-store
-      Content-Length:
-      - '59'
-      Content-Type:
-      - application/octet-stream
-      Vary:
-      - X-Media-YTS-Echo-Mode
-      Age:
-      - '0'
-      Via:
-      - http/1.1 media-router-api18.prod.media.bf1.yahoo.com (ApacheTrafficServer
-        [cMsSf ]), http/1.1 r7.ycpi.nyc.yahoo.net (ApacheTrafficServer [cMsSf ])
-      Server:
-      - ATS
-      Connection:
-      - keep-alive
-      Y-Trace:
-      - BAEAQAAAAADiZGgMTF6NTQAAAAAAAAAAJcgtFJnR5FYAAAAAAAAAAAAFKw2j1S2lAAUrDaPVZ8yooziKAAAAAA--
+      Content-Type: application/json; charset=UTF-8
+      Date: Sat, 02 Dec 2017 00:51:25 GMT
+      Expires: Sat, 02 Dec 2017 00:51:25 GMT
+      Cache-Control: private, max-age=0
+      X-Content-Type-Options: nosniff
+      Content-Disposition: attachment; filename="f.txt"
+      P3p: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      X-Frame-Options: SAMEORIGIN
+      X-Xss-Protection: 1; mode=block
+      Server: GSE
+      Set-Cookie:
+      - NID=118=C_cqiuiLOZ-9XF7Io-81nGcwhHFcweRDb4S1Ol9Qc7UfNyHs5h61gUUxodmk3A63LuAzgXkx4QoR8veMkJpMdYvk-Gci8UNTwPrY6UtDyWVc0uVlW-J0WzImSlH5nFxe;Domain=.google.com;Path=/;Expires=Sun,
+        03-Jun-2018 00:51:25 GMT;HttpOnly
+      - SC=RV=13606:ED=us; expires=Sun, 03-Jun-2018 00:51:25 GMT; path=/finance; domain=.google.com
+      Alt-Svc: hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338;
+        quic=51303337; quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding: chunked
     body:
       encoding: UTF-8
-      string: '"Ford Motor Company Common Stock","F",11.45,0.08,"0.69%"
+      string: |2
 
-'
+        // [
+        {
+        "symbol" : "F",
+        "exchange" : "NYSE",
+        "id": "13606",
+        "t" : "F",
+        "e" : "NYSE",
+        "name" : "Ford Motor Company"
+        , "f_reuters_url" : "http:\u002F\u002Fstocks.us.reuters.com\u002Fstocks\u002Fratios.asp?rpc=66\u0026symbol=F",
+        "f_recent_quarter_date" : "Q3 (Sep \u002717)",
+        "f_annual_date" : "2016",
+        "f_ttm_date" : "2015",
+        "financials" :
+        [{
+        "f_type" : "Income\u0026nbsp\u003BStatement"
+        ,"url" : "http://www.google.com/finance?fstype=ii&q=NYSE:F"
+        ,"f_figures" :
+        [
+        {
+        "title" : ""
+        ,"recent_quarter" : "36,451.00"
+        ,"annual" : "151,800.00"
+        ,"ttm" : "149,558.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "36,451.00"
+        ,"annual" : "151,800.00"
+        ,"ttm" : "149,558.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "32,561.00"
+        ,"annual" : "122,092.00"
+        ,"ttm" : "126,495.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "3,890.00"
+        ,"annual" : "29,708.00"
+        ,"ttm" : "23,063.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "2,919.00"
+        ,"annual" : "12,196.00"
+        ,"ttm" : "14,999.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "7,300.00"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "0.00"
+        ,"ttm" : "-1.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "6,096.00"
+        ,"ttm" : "417.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "35,480.00"
+        ,"annual" : "147,684.00"
+        ,"ttm" : "141,910.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "971.00"
+        ,"annual" : "4,116.00"
+        ,"ttm" : "7,648.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "650.00"
+        ,"annual" : "1,370.00"
+        ,"ttm" : "1,159.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "1,757.00"
+        ,"annual" : "6,796.00"
+        ,"ttm" : "10,252.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "1,571.00"
+        ,"annual" : "4,607.00"
+        ,"ttm" : "7,371.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-7.00"
+        ,"annual" : "-11.00"
+        ,"ttm" : "2.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "1,564.00"
+        ,"annual" : "4,596.00"
+        ,"ttm" : "7,373.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "1,564.00"
+        ,"annual" : "4,596.00"
+        ,"ttm" : "7,373.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "1,564.00"
+        ,"annual" : "4,596.00"
+        ,"ttm" : "7,373.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "1,564.00"
+        ,"annual" : "4,596.00"
+        ,"ttm" : "7,373.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "0.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "3,996.00"
+        ,"annual" : "3,999.00"
+        ,"ttm" : "4,002.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "0.39"
+        ,"annual" : "1.15"
+        ,"ttm" : "1.84"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "0.15"
+        ,"annual" : "0.60"
+        ,"ttm" : "0.60"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "0.34"
+        ,"annual" : "1.72"
+        ,"ttm" : "1.93"
+        }
+        ]
+        },
+        {
+        "f_type" : "Balance\u0026nbsp\u003BSheet"
+        ,"url" : "http://www.google.com/finance?fstype=bi&q=NYSE:F"
+        ,"f_figures" :
+        [
+        {
+        "title" : ""
+        ,"recent_quarter" : "17,589.00"
+        ,"annual" : "15,905.00"
+        ,"ttm" : "14,272.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "20,492.00"
+        ,"annual" : "22,922.00"
+        ,"ttm" : "20,904.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "38,081.00"
+        ,"annual" : "38,827.00"
+        ,"ttm" : "35,176.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "59,818.00"
+        ,"annual" : "57,368.00"
+        ,"ttm" : "97,878.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "59,818.00"
+        ,"annual" : "57,368.00"
+        ,"ttm" : "97,878.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "11,263.00"
+        ,"annual" : "8,898.00"
+        ,"ttm" : "8,319.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "3,570.00"
+        ,"annual" : "3,368.00"
+        ,"ttm" : "1,851.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "112,732.00"
+        ,"annual" : "108,461.00"
+        ,"ttm" : "143,224.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "59,876.00"
+        ,"ttm" : "57,629.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-27,804.00"
+        ,"ttm" : "-27,466.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "50.00"
+        ,"ttm" : "6.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "198.00"
+        ,"ttm" : "124.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "32,058.00"
+        ,"annual" : "3,304.00"
+        ,"ttm" : "3,224.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "17,400.00"
+        ,"annual" : "15,113.00"
+        ,"ttm" : "16,994.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "251,273.00"
+        ,"annual" : "237,951.00"
+        ,"ttm" : "224,925.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "23,566.00"
+        ,"annual" : "21,296.00"
+        ,"ttm" : "19,399.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "1,093.00"
+        ,"annual" : "3,039.00"
+        ,"ttm" : "2,137.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "49,189.00"
+        ,"annual" : "46,984.00"
+        ,"ttm" : "12,941.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "1,985.00"
+        ,"annual" : "2,685.00"
+        ,"ttm" : "30,057.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "18,519.00"
+        ,"annual" : "16,277.00"
+        ,"ttm" : "16,480.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "94,352.00"
+        ,"annual" : "90,281.00"
+        ,"ttm" : "81,014.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "97,938.00"
+        ,"annual" : "93,301.00"
+        ,"ttm" : "89,856.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "97,938.00"
+        ,"annual" : "93,301.00"
+        ,"ttm" : "89,856.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "149,112.00"
+        ,"annual" : "142,970.00"
+        ,"ttm" : "132,854.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "804.00"
+        ,"annual" : "691.00"
+        ,"ttm" : "502.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "122.00"
+        ,"annual" : "113.00"
+        ,"ttm" : "109.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "24,819.00"
+        ,"annual" : "24,395.00"
+        ,"ttm" : "24,802.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "218,035.00"
+        ,"annual" : "208,781.00"
+        ,"ttm" : "196,283.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "41.00"
+        ,"annual" : "41.00"
+        ,"ttm" : "41.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "21,804.00"
+        ,"annual" : "21,630.00"
+        ,"ttm" : "21,421.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "19,405.00"
+        ,"annual" : "15,634.00"
+        ,"ttm" : "14,414.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-1,253.00"
+        ,"annual" : "-1,122.00"
+        ,"ttm" : "-977.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-6,747.00"
+        ,"annual" : "-6,999.00"
+        ,"ttm" : "-6,251.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "33,238.00"
+        ,"annual" : "29,170.00"
+        ,"ttm" : "28,642.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "251,273.00"
+        ,"annual" : "237,951.00"
+        ,"ttm" : "224,925.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "4,057.00"
+        ,"annual" : "4,047.00"
+        ,"ttm" : "4,031.00"
+        }
+        ]
+        },
+        {
+        "f_type" : "Cash\u0026nbsp\u003BFlow"
+        ,"url" : "http://www.google.com/finance?fstype=ci&q=NYSE:F"
+        ,"f_figures" :
+        [
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "4,607.00"
+        ,"ttm" : "7,371.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "9,023.00"
+        ,"ttm" : "7,993.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "1,478.00"
+        ,"ttm" : "2,120.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "1,760.00"
+        ,"ttm" : "-3,654.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "14,949.00"
+        ,"annual" : "2,924.00"
+        ,"ttm" : "2,340.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "14,949.00"
+        ,"annual" : "19,792.00"
+        ,"ttm" : "16,170.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-4,936.00"
+        ,"annual" : "-6,992.00"
+        ,"ttm" : "-7,196.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-7,606.00"
+        ,"annual" : "-18,360.00"
+        ,"ttm" : "-18,966.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-12,542.00"
+        ,"annual" : "-25,352.00"
+        ,"ttm" : "-26,162.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-124.00"
+        ,"annual" : "-49.00"
+        ,"ttm" : "-317.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-1,988.00"
+        ,"annual" : "-3,376.00"
+        ,"ttm" : "-2,380.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-131.00"
+        ,"annual" : "-145.00"
+        ,"ttm" : "-129.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "1,078.00"
+        ,"annual" : "11,028.00"
+        ,"ttm" : "17,148.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-1,165.00"
+        ,"annual" : "7,458.00"
+        ,"ttm" : "14,322.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "442.00"
+        ,"annual" : "-265.00"
+        ,"ttm" : "-815.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "1,684.00"
+        ,"annual" : "1,633.00"
+        ,"ttm" : "3,515.00"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "-"
+        ,"ttm" : "-"
+        },
+        {
+        "title" : ""
+        ,"recent_quarter" : "-"
+        ,"annual" : "467.00"
+        ,"ttm" : "585.00"
+        }
+        ]
+        }],
+        "kr_recent_quarter_date" : "Q3 (Sep \u002717)",
+        "kr_annual_date" : "2016",
+        "kr_ttm_date" : "TTM",
+        "keyratios" :
+        [
+        {
+        "title" : "Net profit margin",
+        "recent_quarter" : "4.31%",
+        "annual" : "3.03%",
+        "ttm" : "2.88%"
+        },
+        {
+        "title" : "Operating margin",
+        "recent_quarter" : "2.66%",
+        "annual" : "2.71%",
+        "ttm" : "1.47%"
+        },
+        {
+        "title" : "EBITD margin",
+        "recent_quarter" : "",
+        "annual" : "10.91%",
+        "ttm" : "7.30%"
+        },
+        {
+        "title" : "Return on average assets",
+        "recent_quarter" : "2.53%",
+        "annual" : "1.99%",
+        "ttm" : "1.82%"
+        },
+        {
+        "title" : "Return on average equity",
+        "recent_quarter" : "19.16%",
+        "annual" : "15.90%",
+        "ttm" : "13.63%"
+        },
+        {
+        "title" : "Employees",
+        "recent_quarter" : "201,000",
+        "annual" : "-",
+        "ttm" : "-"
+        }
+        ]
+        , "c" : "+0.06",
+        "l" : "12.58",
+        "cp" : "0.48",
+        "ccol" : "chg",
+        "op" : "12.62",
+        "hi" : "12.70",
+        "lo" : "12.35",
+        "vo" : "52.45M",
+        "avvo" : "34.16M",
+        "hi52" : "13.27",
+        "lo52" : "10.47",
+        "mc" : "49.97B",
+        "pe" : "11.41",
+        "fwpe" : "",
+        "beta" : "1.25",
+        "eps" : "1.10",
+        "dy" : "4.77",
+        "ldiv" : "0.15",
+        "shares" : "3.99B",
+        "instown" : "55%",
+        "eo":""
+        , "sid" : "us-TRBC:53",
+        "sname" : "Cyclical Consumer Goods \u0026 Services",
+        "iid" : "us-TRBC:5310101010",
+        "iname" : "Auto \u0026 Truck Manufacturers - NEC"
+        , "related" : [
+        {
+        "id" : "13606",
+        "name" : "Ford Motor Company",
+        "t" : "F",
+        "e" : "NYSE",
+        "l" : "12.58",
+        "c" : "+0.06",
+        "mc" : "49.97B",
+        "cp" : "0.48",
+        "ccol" : "chg"
+        }
+        ,
+        {
+        "id" : "655880",
+        "name" : "Toyota Motor Corp (ADR)",
+        "t" : "TM",
+        "e" : "NYSE",
+        "l" : "124.36",
+        "c" : "-1.97",
+        "mc" : "202.15B",
+        "cp" : "-1.56",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "662830",
+        "name" : "Daimler AG",
+        "t" : "DDAIF",
+        "e" : "OTCMKTS",
+        "l" : "81.92",
+        "c" : "-1.16",
+        "mc" : "86.88B",
+        "cp" : "-1.40",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "661748",
+        "name" : "Volkswagen AG (ADR)",
+        "t" : "VLKAY",
+        "e" : "OTCMKTS",
+        "l" : "40.60",
+        "c" : "-0.92",
+        "mc" : "102.01B",
+        "cp" : "-2.22",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "14676476",
+        "name" : "General Motors Company",
+        "t" : "GM",
+        "e" : "NYSE",
+        "l" : "42.79",
+        "c" : "-0.28",
+        "mc" : "60.78B",
+        "cp" : "-0.65",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "855759344984560",
+        "name" : "AUDI AG",
+        "t" : "AUDVF",
+        "e" : "OTCMKTS",
+        "l" : "840.00",
+        "c" : "0.00",
+        "mc" : "36.12B",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "6620805",
+        "name" : "RENAULT SA",
+        "t" : "RNSDF",
+        "e" : "OTCMKTS",
+        "l" : "103.75",
+        "c" : "0.00",
+        "mc" : "30.68B",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "660787",
+        "name" : "Penske Automotive Group, Inc.",
+        "t" : "PAG",
+        "e" : "NYSE",
+        "l" : "48.69",
+        "c" : "+0.33",
+        "mc" : "4.18B",
+        "cp" : "0.68",
+        "ccol" : "chg"
+        }
+        ,
+        {
+        "id" : "12607212",
+        "name" : "Tesla Inc",
+        "t" : "TSLA",
+        "e" : "NASDAQ",
+        "l" : "306.53",
+        "c" : "-2.32",
+        "mc" : "51.52B",
+        "cp" : "-0.75",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "406677",
+        "name" : "Nissan Motor Co Ltd (ADR)",
+        "t" : "NSANY",
+        "e" : "OTCMKTS",
+        "l" : "19.26",
+        "c" : "-0.19",
+        "mc" : "40.62B",
+        "cp" : "-1.00",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "17412",
+        "name" : "Honda Motor Co Ltd (ADR)",
+        "t" : "HMC",
+        "e" : "NYSE",
+        "l" : "33.38",
+        "c" : "+0.05",
+        "mc" : "60.67B",
+        "cp" : "0.13",
+        "ccol" : "chg"
+        }
+        ]
+        , "summary" : [{
+        "reuters_url" : "http:\u002F\u002Fstocks.us.reuters.com\u002Fstocks\u002FfullDescription.asp?rpc=66\u0026symbol=F",
+        "address": "1 American Rd, DEARBORN, MI 48126-2701, United States",
+        "phone": "+1-313-3223000",
+        "fax": "+1-302-6555049",
+        "url": "http:\u002F\u002Fcorporate.ford.com",
+        "overview" : "Ford Motor Company is a global automotive and mobility company. The Company\u0027s business includes designing, manufacturing, marketing, and servicing a full line of Ford cars, trucks, and sport utility vehicles (SUVs), as well as Lincoln luxury vehicles. The Company operates in four segments: Automotive, Financial Services, Ford Smart Mobility LLC, and Central Treasury Operations. The Automotive segment primarily includes the sale of Ford and Lincoln brand vehicles, service parts, and accessories across the world. The Financial Services segment primarily includes its vehicle-related financing and leasing activities at Ford Motor Credit Company LLC. Ford Smart Mobility LLC is a subsidiary formed to design, build, grow, and invest in emerging mobility services. The Central Treasury Operations segment is primarily engaged in decision making for investments, risk management activities, and providing financing for the Automotive segment."
+        } ]
+        , "management" : [
+        {
+        "name" : "William Clay Ford Jr.",
+        "age" : "59",
+        "title" : "Executive Chairman of the Board"
+        }
+        ,
+        {
+        "name" : "James P. Hackett",
+        "age" : "62",
+        "title" : "President, Chief Executive Officer, Director"
+        }
+        ,
+        {
+        "name" : "Robert L. Shanks",
+        "age" : "64",
+        "title" : "Chief Financial Officer, Executive Vice President"
+        }
+        ,
+        {
+        "name" : "James D. Farley Jr.",
+        "age" : "54",
+        "title" : "Executive Vice President and President - Global Markets"
+        }
+        ,
+        {
+        "name" : "Joseph R. Hinrichs",
+        "age" : "50",
+        "title" : "Executive Vice President and President - Global Operations"
+        }
+        ,
+        {
+        "name" : "Marcy Klevorn",
+        "age" : "57",
+        "title" : "Executive Vice President and President, Mobility"
+        }
+        ,
+        {
+        "name" : "Raj Nair",
+        "age" : "52",
+        "title" : "Executive Vice President, President - North America"
+        }
+        ,
+        {
+        "name" : "Hau Thai-Tang",
+        "age" : "50",
+        "title" : "Executive Vice President - Product Development and Purchasing"
+        }
+        ,
+        {
+        "name" : "Ken Washington",
+        "age" : "56",
+        "title" : "Chief Technology Officer, Vice President - Research and Advanced Engineering"
+        }
+        ,
+        {
+        "name" : "Bradley Michael Gayton",
+        "age" : "53",
+        "title" : "Chief Administrative Officer, Group Vice President, General Counsel"
+        }
+        ]
+        ,"moreresources" : [
+        { "name" : "Estimates" , "url" : "http:\u002F\u002Fwww.marketwatch.com\u002Ftools\u002Fquotes\u002Fsnapshot.asp?symb=F\u0026pg=analyst"},
+        { "name" : "SEC Filings" , "url" : "http:\u002F\u002Fgoogle.brand.edgar-online.com\u002F?sym=F"},
+        { "name" : "Major Holders" , "url" : "http:\u002F\u002Finvesting.money.msn.com\u002Finvestments\u002Finstitutional-ownership?symbol=F"}
+        ,
+        { "name" : "Options" , "url" : "http:\u002F\u002Fwww.marketwatch.com\u002Ftools\u002Fquotes\u002Foptions1.asp?symb=F"},
+        { "name" : "Research" , "url" : "http:\u002F\u002Ffinance.yahoo.com\u002Fq\u002Frr?s=F"}
+        ]
+        , "events" : [
+        ]
+        }]
     http_version: 
-  recorded_at: Fri, 05 Feb 2016 22:47:46 GMT
-- request:
-    method: get
-    uri: https://google.com/finance?q=F
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 301
-      message: Moved Permanently
-    headers:
-      Location:
-      - https://www.google.com/finance?q=F
-      Content-Type:
-      - text/html; charset=UTF-8
-      X-Content-Type-Options:
-      - nosniff
-      Date:
-      - Fri, 03 Nov 2017 23:46:37 GMT
-      Expires:
-      - Sun, 03 Dec 2017 23:46:37 GMT
-      Cache-Control:
-      - public, max-age=2592000
-      Server:
-      - sffe
-      Content-Length:
-      - '231'
-      X-Xss-Protection:
-      - 1; mode=block
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="41,39,38,37,35"
-    body:
-      encoding: UTF-8
-      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>301
-        Moved</TITLE></HEAD><BODY>\n<H1>301 Moved</H1>\nThe document has moved\n<A
-        HREF=\"https://www.google.com/finance?q=F\">here</A>.\r\n</BODY></HTML>\r\n"
-    http_version: 
-  recorded_at: Fri, 03 Nov 2017 23:46:29 GMT
-- request:
-    method: get
-    uri: https://www.google.com/finance?q=F
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 302
-      message: Found
-    headers:
-      Location:
-      - https://finance.google.com/finance?q=F
-      Cache-Control:
-      - private
-      Content-Type:
-      - text/html; charset=UTF-8
-      P3p:
-      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
-      Date:
-      - Fri, 03 Nov 2017 23:46:38 GMT
-      Server:
-      - gws
-      Content-Length:
-      - '235'
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Frame-Options:
-      - SAMEORIGIN
-      Set-Cookie:
-      - 1P_JAR=2017-11-03-23; expires=Sun, 03-Dec-2017 23:46:38 GMT; path=/; domain=.google.com
-      - NID=116=PFj2lWOZ27i-kCrEXcda1sVMy4r-Px6_T5sDZPykUoTrv61o3-CNDBOARnXUMlLlnOKdh4EPXmItL7ljFBBIiDtK485HJ2PiLZeQuKZ4DlFLNrHkpD0Za4nNQzYGgyGj;
-        expires=Sat, 05-May-2018 23:46:38 GMT; path=/; domain=.google.com; HttpOnly
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="41,39,38,37,35"
-    body:
-      encoding: UTF-8
-      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
-        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
-        HREF=\"https://finance.google.com/finance?q=F\">here</A>.\r\n</BODY></HTML>\r\n"
-    http_version: 
-  recorded_at: Fri, 03 Nov 2017 23:46:29 GMT
-- request:
-    method: get
-    uri: https://finance.google.com/finance?q=F
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - text/html; charset=utf-8
-      P3p:
-      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
-      Date:
-      - Fri, 03 Nov 2017 23:46:38 GMT
-      Expires:
-      - Fri, 03 Nov 2017 23:46:38 GMT
-      Cache-Control:
-      - private, max-age=0
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      Server:
-      - GSE
-      Set-Cookie:
-      - NID=116=clgUSOFs9iz8l7ansjALc2lfh6ts6-De10YG7NEaKCRx5a3Pcrsg3bbnsKhBXoKXoaJXI8lVwCi2QeS0rWaz5PTccXgS0d22HfYHnElfB2V-3DvN2qz467_cmNVTVyL0;Domain=.google.com;Path=/;Expires=Sat,
-        05-May-2018 23:46:38 GMT;HttpOnly
-      Alt-Svc:
-      - quic=":443"; ma=2592000; v="41,39,38,37,35"
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: "<!DOCTYPE html><html><head><script>(function(){(function(){function
-        e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void
-        0==b)try{window.console.timeStamp(\"CSI/\"+a)}catch(h){}};this.tick(\"start\",null,a)}var
-        a;if(window.performance)var d=(a=window.performance.timing)&&a.responseStart;var
-        f=0<d?new e(d):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var
-        b=window.jstiming.load;0<c&&d>=c&&(b.tick(\"_wtsrt\",void 0,c),b.tick(\"wtsrt_\",\"_wtsrt\",\nd),b.tick(\"tbsd_\",\"wtsrt_\"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick(\"_tbnd\",void
-        0,window.chrome.csi().startE),b.tick(\"tbnd_\",\"_tbnd\",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick(\"_tbnd\",void
-        0,window.external.startE),b.tick(\"tbnd_\",\"_tbnd\",c))),a&&(window.jstiming.pt=a)}catch(g){}})();}).call(this);\n</script><title>Ford
-        Motor Company: NYSE:F quotes &amp; news - Google Finance</title><meta name=\"Description\"
-        content=\"Get detailed financial information on Ford Motor Company (NYSE:F)
-        including real-time stock quotes, historical charts &amp; financial news,
-        all for free!\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=10\"><link
-        rel=\"canonical\" href=\"https://www.google.com/finance?q=NYSE:F\"><link rel=\"stylesheet\"
-        type=\"text/css\" href=\"/finance/f/finance_us-895351966.css\"><link rel=\"stylesheet\"
-        type=\"text/css\" href=\"/_/scs/finance-static/_/ss/k=finance.a.1msu4mph4xh6k.L.X.O/d=0/rs=AGHGApGCzFIkl8UdpAPaXE1FXjt-bEHR6w\"><link
-        rel=\"icon\" type=\"image/vnd.microsoft.icon\" href=\"/finance/favicon.ico\"><style>#gbar,#guser{font-size:13px;padding-right:8px;padding-top:4px
-        !important;}#gbar{padding-left:8px;height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px
-        solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media
-        all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline
-        !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf
-        .gb4{color:#900 !important}\n</style><script></script><script async=\"\" defer=\"\"
-        src=\"//www.google.com/insights/consumersurveys/async_survey?site=xusttduenzseze54mcajwbd6sq\"></script><!--
-        Start GPT Async Tag --><script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script><script>\n
-        \   var gptadslots = [];\n    var googletag = googletag || {cmd:[]};\n  </script><script>\n
-        \ googletag.cmd.push(function() {\n    //Adslot 1 declaration\n    gptadslots.push(googletag.defineSlot('/60656358/com.gf.company',
-        [[300,250]], 'div-gpt-ad-4209476-1')\n                             .setForceSafeFrame(true)\n
-        \                            .addService(googletag.pubads()));\n    //Adslot
-        2 declaration\n    gptadslots.push(googletag.defineSlot('/60656358/com.gf.home',
-        [[300,250]], 'div-gpt-ad-4209476-2')\n                             .setForceSafeFrame(true)\n
-        \                            .addService(googletag.pubads()));\n    //Adslot
-        3 declaration\n    gptadslots.push(googletag.defineSlot('/60656358/com.gf.portfolio',
-        [[300,250]], 'div-gpt-ad-4209476-3')\n                             .setForceSafeFrame(true)\n
-        \                            .addService(googletag.pubads()));\n\n    googletag.pubads().enableSingleRequest();\n
-        \   googletag.enableServices();\n  });\n  </script><!-- End GPT Async Tag
-        --><script>\n      function _rpt() {}\n      function _tck() {}\n    </script><script>\n
-        \   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n
-        \   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n
-        \   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n
-        \   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\n
-        \   ga('create', 'UA-40765809-1', {\n      'allowLinker': true,\n      'cookiePath':
-        '/finance'\n    });\n    ga('send', 'pageview');\n    </script></head><body><div
-        class=fjfe&#45;bodywrapper><div id=fjfe&#45;real&#45;body class=g-doc><input
-        type=\"text\" name=\"hist_state\" id=\"hist_state\" style=\"display:none;\"><iframe
-        id=\"hist_frame\" name=\"hist_frame\" class=invfr tabindex=\"-1\"></iframe><iframe
-        src=\"/_/scs/finance-static/_/js/k=finance.a.en_US.Upzqnh5ra8Q.O/m=b/rt=h/d=0/rs=AGHGApEK7U1PJ67cp--3Ay1lYGnaQQb8fg\"
-        class=invfr tabindex=\"-1\"></iframe><div id=gbar><nobr><a class=gb1 href=\"https://www.google.com/webhp?tab=ew\">Search</a>
-        <a class=gb1 href=\"http://www.google.com/imghp?hl=en&tab=ei\">Images</a>
-        <a class=gb1 href=\"https://maps.google.com/maps?hl=en&tab=el\">Maps</a> <a
-        class=gb1 href=\"https://play.google.com/?hl=en&tab=e8\">Play</a> <a class=gb1
-        href=\"https://www.youtube.com/?gl=US&tab=e1\">YouTube</a> <a class=gb1 href=\"https://news.google.com/nwshp?hl=en&tab=en\">News</a>
-        <a class=gb1 href=\"https://mail.google.com/mail/?tab=em\">Gmail</a> <a class=gb1
-        href=\"https://drive.google.com/?tab=eo\">Drive</a> <a class=gb1 style=\"text-decoration:none\"
-        href=\"https://www.google.com/intl/en/options/\"><u>More</u> &raquo;</a></nobr></div><div
-        id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span
-        id=gbe></span><a  href=\"http://www.google.com/support/finance?hl=en\" class=gb4>Help</a>
-        | <a target=_top id=gb_70 href=\"https://accounts.google.com/ServiceLogin?service=finance&passive=1209600&continue=https://finance.google.com/finance?q%3DF&followup=https://finance.google.com/finance?q%3DF\"
-        class=gb4>Sign in</a></nobr></div><div class=gbh style=left:0></div><div class=gbh
-        style=right:0></div><div id=flash&#45;disclaimer style=\"display:none;\">Adobe
-        Flash Player is required for interactive charts.&nbsp;<a href=\"http://www.adobe.com/go/getflashplayer/\">Allow</a></div><div
-        id=fjfe&#45;click&#45;wrapper><script>\n(function() {\n  var l = window.location;\n
-        \ var q = l.search ? l.search.substr(1) : '';\n  var h = l.hash ? l.hash.substr(1)
-        : '';\n  var p = '/finance';\n  var ss = 'stockscreener';\n  var conn = window.history
-        && window.history.pushState ? '/' : '#';\n  if (l.pathname == p + '/' + ss)
-        {\n    if (h) l.href = p + conn + ss + '?' + q + '&' + h;\n  } else if (l.pathname
-        != p && h) {\n    l.href = p + l.hash;\n  }\n  if (h) {\ndocument.getElementById('fjfe-click-wrapper').style.display
-        = 'none';\n  }\n})();\n</script><div id=gf-head class=\"g-section g-tpl-75-25
-        g-split\"><div class=\"g-unit g-first\"><div class=fjfe&#45;logo><a href=\"/finance/?ei=3v_8WZjXCsWAepqjieAE\"><img
-        src=\"/finance/f/logo_material-4224265490.png\" alt=\"Google Finance\"></a></div><div
-        id=gf-search class=fjfe&#45;search><form method=\"get\" action=\"/finance\"
-        autocomplete=\"off\"><input class=fjfe&#45;searchbox&#45;input name=q type=text
-        tabindex=1 value=\"NYSE:F\"><span class=fjfe&#45;searchbox&#45;button&#45;wrapper><span
-        class=fjfe&#45;searchbox&#45;button&#45;wrapper2><input class=fjfe&#45;searchbox&#45;button
-        type=submit tabindex=2 value=\"Get quotes\"></span></span><input type=hidden
-        name=\"ei\" value=\"3v_8WZjXCsWAepqjieAE\"></form></div></div><div class=\"g-unit
-        fjfe-promo\"><div id=\"ad2-target\" class=\"id-ad2-target\"></div></div></div><div
-        class=elastic><div id=app class=\"g-section g-tpl-left-11p4em\"><div class=\"g-unit
-        g-first\"><div id=gf-nav><div class=fjfe&#45;nav&#45;nav><ul class=fjfe&#45;nav
-        id=navmenu><li class=\"fjfe-nav-expanded fjfe-nav-selected\">Company<li class=fjfe&#45;nav&#45;sub><div>Summary</div><li
-        class=fjfe&#45;nav&#45;sub><a href=\"/finance/company_news?q=NYSE:F&amp;ei=3v_8WZjXCsWAepqjieAE\">News</a><li
-        class=fjfe&#45;nav&#45;sub><a href=\"/finance/option_chain?q=NYSE:F&amp;ei=3v_8WZjXCsWAepqjieAE\">Option
-        chain</a><li class=fjfe&#45;nav&#45;sub><a href=\"/finance/related?q=NYSE:F&amp;ei=3v_8WZjXCsWAepqjieAE\">Related
-        companies</a><li class=fjfe&#45;nav&#45;sub><a href=\"/finance?q=NYSE:F&amp;fstype=ii&amp;ei=3v_8WZjXCsWAepqjieAE\">Financials</a><li
-        class=fjfe&#45;nav&#45;item><a href=\"/finance?ei=3v_8WZjXCsWAepqjieAE\"><div>Markets</div></a><li
-        class=fjfe&#45;nav&#45;item><a href=\"/finance/market_news?ei=3v_8WZjXCsWAepqjieAE\"><div>News</div></a><li
-        class=fjfe&#45;nav&#45;item><a href=\"/finance/portfolio?action=view&amp;ei=3v_8WZjXCsWAepqjieAE\"><div>Portfolios</div></a><li
-        class=fjfe&#45;nav&#45;item><a href=\"/finance/stockscreener?ei=3v_8WZjXCsWAepqjieAE\"><div>Stock
-        screener</div></a><li class=fjfe&#45;nav&#45;item><a href=\"/finance/domestic_trends?ei=3v_8WZjXCsWAepqjieAE\"><div>Google
-        Domestic Trends</div></a></ul></div><div class=\"fjfe-recentquotes fjfe-recentquotes-noquote\"><h4>Recent
-        Quotes <span class=\"fjfe-recentquotes-duration\">(<a href=\"//www.google.com/history/optout?hl=en\">30
-        days</a>)</span></h4><div class=fjfe&#45;recentquotes&#45;noquote&#45;notification>You
-        have no recent quotes</div><div class=fjfe&#45;recentquotes&#45;quotes><div
-        class=\"fjfe-toggle fjfe-toggle-button\"><span class=fjfe&#45;chg&#45;toggle>chg</span>
-        | <span class=fjfe&#45;perc&#45;toggle>%</span></div><div class=fjfe&#45;table&#45;div><table
-        class=fjfe&#45;recentquotes&#45;table id=rq width=100%></table></div></div></div></div><script>var
-        _cleardot = 'data:image\\/gif;base64,R0lGODlhAQABAIAAAP\\/\\/\\/\\/\\/\\/\\/yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw\\x3d\\x3d';\n
-        \   var google = google || {};\n    google.finance = google.finance || {};\n
-        \   google.finance.gce = false ;</script><script src=\"/finance/f/sfe-opt-4109386599.js\"></script><script>\n
-        \     _regOnLoad = function(f) {\n        if (document.readyState == 'complete')
-        {\n          f && f();\n        } else {\n          // Window.attachEvent()
-        for IE8 and below compatability.\n          var addEventFunction = window.attachEvent
-        ||\n              window.addEventListener || function(ignored, f) { f(); };\n
-        \         var event = window.attachEvent ? 'onload' : 'load';\n          f
-        && addEventFunction(event, f);\n        }\n      };\n    \n      google.finance.renderRecentQuotes
-        = function() {};\n    </script></div><div class=g&#45;unit id=gf-viewc><div
-        class=fjfe&#45;content>\n<script>\n(function() {\nif (window['_finance_chart'])
-        {\nvar el = document.getElementById('chart_anchor');\nif (el) {\nel.innerHTML
-        = '';\n}\nsetFinanceChart(null);\n}\n})();\nvar _ticker = 'NYSE:F';\nvar _slHeight
-        = 221;\nvar _companyName = 'Ford Motor Company';\nvar _companyPageNewsTab
-        = '0';\nvar _displayVolume = true;\nsetCompanyId(13606);\n_s_Store._numToDisplay
-        = 6;\n_comparison_charts_Store._numToDisplay = 8;\n_comparison_charts_Store._allowMultiTimezoneCompare
-        = true;\nfunction onCompanyLoad() {\n_external_target = \"\";\n_emitFlashChartOnLoad(\n\"/finance/s/n-VxNKK74DU/chart9.swf?hl=en&gl=us\",\n_ticker,
-        \"chart_anchor\", \"market-data-div\",\n_chartConfigObject);\ngoogle.finance.onCompanyLoad();\n_initAutoFocus();\nif
-        (google.finance.initTechnicals) {\ngoogle.finance.initTechnicals(true);\n}\n}\n</script>\n<div
-        class=g-wrap>\n<div class=\"g-section sfe-break-bottom-8\">\n<div class=\"g-tpl-67-33
-        g-split hdg top appbar-hide\" id=companyheader>\n<div class=\"g-unit g-first\"><h3>Ford
-        Motor Company&nbsp;&nbsp;</h3>(Public, NYSE:F)&nbsp;&nbsp;\n<a href=\"/finance/portfolio?action=add&amp;addticker=NYSE%3AF&ei=3v_8WZjXCsWAepqjieAE\"
-        class=norm>Watch this stock</a>\n&nbsp;\n</div><div class=\"g-unit norm\">Find
-        more results for<b>\n<a href=\"?noIL=1&q=F&ei=3v_8WZjXCsWAepqjieAE\" id=searchmore>F</a></b>\n</div>\n</div>\n</div>\n\n<script>\n_ac_register(function
-        (input, event) {\nif (input.id == 'add_comparison_symbol') {\n_comparison_charts_Store.baseTicker
-        = \"NYSE:F\";\nreturn _comparison_charts_Store;\n}\n});\nvar _prefs=_prefs||{};_prefs.hash=\"\";\n_prefs.feeds=_prefs.feeds||{};\n_prefs.ch=_prefs.ch||{};\n_prefs.ch_compare=_prefs.ch_compare||{};\nvar
-        _chartConfigObject;\nvar _cleardot;\nvar _companyName;\nvar _eventid = '3v_8WZjXCsWAepqjieAE';\nvar
-        _expid;\nvar _external_target;\nvar _localDomain = 'www.google.com';\nvar
-        _minZoomDays;\nvar _minZoomDaysNoIntraDay;\nvar _prefs;\nvar _ticker;\nvar
-        _urlSuffix;\nvar google = google || {};\ngoogle.finance = google.finance ||
-        {};\ngoogle.finance.data = {\"common\":{\"rq\":{\"ct\":\"\"},\"up\":\"chg\",\"down\":\"chr\",\"linktargetInternal\":\"\",\"hash\":\"\",\"dfp\":\"ad-g.doubleclick.net/adi/com.gf.company/cyclical_consumer_goods_\\u0026_services;fe=nyse;ft=f;fm=large;ssl=1;dcopt=ist;myd=ad;sz=300x250;tile=1\",\"streaming\":[{\"cid\":\"13606\",\"s\":\"F\",\"e\":\"NYSE\"},{\"cid\":\"655880\",\"s\":\"TM\",\"e\":\"NYSE\"},{\"cid\":\"662830\",\"s\":\"DDAIF\",\"e\":\"OTCMKTS\"},{\"cid\":\"661748\",\"s\":\"VLKAY\",\"e\":\"OTCMKTS\"},{\"cid\":\"14676476\",\"s\":\"GM\",\"e\":\"NYSE\"},{\"cid\":\"855759344984560\",\"s\":\"AUDVF\",\"e\":\"OTCMKTS\"},{\"cid\":\"6620805\",\"s\":\"RNSDF\",\"e\":\"OTCMKTS\"},{\"cid\":\"660787\",\"s\":\"PAG\",\"e\":\"NYSE\"},{\"cid\":\"12607212\",\"s\":\"TSLA\",\"e\":\"NASDAQ\"},{\"cid\":\"406677\",\"s\":\"NSANY\",\"e\":\"OTCMKTS\"},{\"cid\":\"17412\",\"s\":\"HMC\",\"e\":\"NYSE\"}],\"dfp_companion\":\"ad-g.doubleclick.net/adi/com.gf.company/cyclical_consumer_goods_\\u0026_services;fe=nyse;ft=f;fm=large;ssl=1;dcopt=ist;myd=ad2;sz=33x33;tile=2\"},\"company\":{\"news\":{\"clusters\":[{\"nrel\":162,\"idx\":0,\"id\":\"52779659384014\",\"lead_story_url\":\"https://www.fool.com/investing/2017/11/02/truck-sales-help-ford-motor-company-outpace-the-ma.aspx\",\"a\":[{\"t\":\"Truck
-        Sales Help Ford Motor Company Outpace the Market Again\",\"u\":\"https://www.fool.com/investing/2017/11/02/truck-sales-help-ford-motor-company-outpace-the-ma.aspx\",\"s\":\"Motley
-        Fool\",\"sp\":\"Ford Motor Company (NYSE:F) said its U.S. sales increased
-        6.2% in October from a year ago, outpacing a 1.3% decline for the overall
-        U.S.\",\"d\":\"Nov 2, 2017\",\"tt\":\"1509632775\",\"usg\":\"AFQjCNH2oP7dTIpwzL2UBpXTkas9Mz2GsQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.fool.com/investing/2017/11/02/truck-sales-help-ford-motor-company-outpace-the-ma.aspx\\u0026cid=52779659384014\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNHM_vVPUnyXLLlEdz-pPtga3MXKhQ\"},{\"t\":\"Ford
-        and General Motors Just Proved (Again) America Really Loves Trucks\",\"u\":\"https://www.thestreet.com/story/14370191/1/october-car-sales-ford-fiatchrysler-gm.html\",\"s\":\"TheStreet.com\",\"sp\":\"Ford
-        Motor Co. (F) reported its October sales pushed higher 6.1%, which topped
-        analysts\\u0026#39; expectations of a 5.1% gain for the month.\",\"d\":\"Nov
-        1, 2017\",\"tt\":\"1509543722\",\"usg\":\"AFQjCNEf_EWLFzEwojWZYefLgLejXcsN4g\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.thestreet.com/story/14370191/1/october-car-sales-ford-fiatchrysler-gm.html\\u0026cid=52779659384014\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNHFMDBKw3hW4xI849XCpBDXt4QkRQ\"},{\"t\":\"Ford
-        Motor Company: Soundbites: October 2017 Sales\",\"u\":\"https://www.twst.com/update/ford-motor-company-soundbites-october-2017-sales/\",\"s\":\"The
-        Wall Street Transcript\",\"sp\":\"DEARBORN, Mich., Nov. 1, 2017 -- Ford sales
-        increased 6.2 percent last month, with 200,436 vehicles sold. According to
-        Eric Merkle, Ford Sales analyst, retail performance was up 3.5 percent versus
-        a year ago, with trucks and SUVs leading the way.\",\"d\":\"Nov 1, 2017\",\"tt\":\"1509561225\",\"usg\":\"AFQjCNGVMCkveqG_bpxM_aFa0KI2xHYa4A\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.twst.com/update/ford-motor-company-soundbites-october-2017-sales/\\u0026cid=52779659384014\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNHVLfanFXQSEDTBVAcxuXCFlxSEQA\"}],\"lead_story_doc_id\":\"15327321678838811387\"},{\"nrel\":58,\"idx\":1,\"id\":\"52779661616639\",\"lead_story_url\":\"https://investorplace.com/2017/11/ford-motor-company-f-stock-is-revved-for-gains/\",\"a\":[{\"t\":\"Why
-        Ford Motor Company Stock Is Revved Up for More Gains\",\"u\":\"https://investorplace.com/2017/11/ford-motor-company-f-stock-is-revved-for-gains/\",\"s\":\"Investorplace.com\",\"sp\":\"What\\u0026#39;s
-        driving the bullish price action in Ford shares right as competitors like
-        General Motors Company (NYSE:GM) and Tesla Inc (NASDAQ:TSLA) have reversed
-        on those investors with less-friendly technical U-turns? It\\u0026#39;s not
-        possible to know 100% for sure\\u0026nbsp;...\",\"d\":\"5 hours ago\",\"tt\":\"1509732000\",\"usg\":\"AFQjCNFvVZ85qieKIqe7O6F5yhAX2qLOiQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://investorplace.com/2017/11/ford-motor-company-f-stock-is-revved-for-gains/\\u0026cid=52779661616639\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNGObPkV-KBaNzQ44cgghBHldBiYKg\"},{\"t\":\"Today
-        Analysts Focus on Ford Motor Company (F), Apple Inc. (AAPL)\",\"u\":\"https://stocknewsjournal.com/2017/11/03/today-analysts-focus-on-ford-motor-company-f-apple-inc-aapl/\",\"s\":\"StockNewsJournal\",\"sp\":\"Ford
-        Motor Company (F) have shown a high EPS growth of -25.30% in the last 5 years
-        and has earnings decline of -37.60% yoy.\",\"d\":\"6 hours ago\",\"tt\":\"1509727950\",\"usg\":\"AFQjCNE5yquy4ZjF1zV8Jex7UpgiqkLreQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://stocknewsjournal.com/2017/11/03/today-analysts-focus-on-ford-motor-company-f-apple-inc-aapl/\\u0026cid=52779661616639\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNEGjCn8PwlgYDD_xcjRj5R2T1aNqQ\"},{\"t\":\"Denali
-        Advisors LLC Has $816000 Holdings in Ford Motor Company (NYSE:F)\",\"u\":\"https://www.truebluetribune.com/2017/11/03/denali-advisors-llc-sells-303377-shares-of-ford-motor-company-f.html\",\"s\":\"TrueBlueTribune\",\"sp\":\"Ford
-        Motor logo Denali Advisors LLC trimmed its position in Ford Motor Company
-        (NYSE:F) by 81.6% in the third quarter, according to its most recent filing
-        with the SEC.\",\"d\":\"5 hours ago\",\"tt\":\"1509734025\",\"usg\":\"AFQjCNEh3eop1753N-hGTl3zJibOIcaooQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.truebluetribune.com/2017/11/03/denali-advisors-llc-sells-303377-shares-of-ford-motor-company-f.html\\u0026cid=52779661616639\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNEAvePZgwFvkTmTM5eQjoV1r-lA4A\"}],\"lead_story_doc_id\":\"5728671770737877063\"},{\"idx\":2,\"id\":\"0\",\"lead_story_url\":\"https://seekingalpha.com/article/4118541-ford-love-right\",\"a\":[{\"t\":\"Ford:
-        I Love Being Right\",\"u\":\"https://seekingalpha.com/article/4118541-ford-love-right\",\"s\":\"Seeking
-        Alpha\",\"sp\":\"The company\\u0026#39;s third quarter results had revenue
-        as well as net income gains year over year. Moving forward ... I\\u0026#39;ve
-        been following Ford\\u0026#39;s (F) monthly sales trends closely, and had
-        asserted that Ford\\u0026#39;s third quarter would produce strong results.
-        Today ...\",\"d\":\"Oct 31, 2017\",\"tt\":\"1509469703\",\"usg\":\"AFQjCNEPFwf8NKQ8ZxeZ56Kw0Sn3T14KUw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4118541-ford-love-right\\u0026cid=0\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNFCLieGZnedvNfwUjNuJ3bBtVSD-g\"}],\"lead_story_doc_id\":\"10776726045226446892\"},{\"idx\":3,\"id\":\"0\",\"lead_story_url\":\"https://seekingalpha.com/article/4118253-fords-shift-electric\",\"a\":[{\"t\":\"Ford\\u0026#39;s
-        Shift To Electric\",\"u\":\"https://seekingalpha.com/article/4118253-fords-shift-electric\",\"s\":\"Seeking
-        Alpha\",\"sp\":\"The Ford Motor Company (F) has been an innovator and vehicle
-        industry leader for 114 years. In 1903 it started mass producing vehicles.\",\"d\":\"Oct
-        30, 2017\",\"tt\":\"1509396525\",\"usg\":\"AFQjCNFE3ETdzfyyxqUN6TtLSKJRCdGSrA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4118253-fords-shift-electric\\u0026cid=0\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNGsjHpLuHaJbB81e_NYBQlCsYfMFQ\"}],\"lead_story_doc_id\":\"18053975486356787738\"},{\"nrel\":363,\"idx\":4,\"id\":\"52779651523105\",\"lead_story_url\":\"https://finance.yahoo.com/news/ford-motor-company-f-stock-110953221.html\",\"a\":[{\"t\":\"Ford
-        Motor Company (F) Stock Isn\\u0026#39;t Going Anywhere Anytime Soon\",\"u\":\"https://finance.yahoo.com/news/ford-motor-company-f-stock-110953221.html\",\"s\":\"Yahoo
-        Finance\",\"sp\":\"Technology provides some serious long-term headwinds to
-        that demand coming back. And Tesla Inc (NASDAQ:TSLA) looks more likely than
-        ever to steal huge market share over the next several years.\",\"d\":\"Oct
-        25, 2017\",\"tt\":\"1508933475\",\"usg\":\"AFQjCNHdyGnfTEyYlzBhuSkmsryQ2z-lUA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://finance.yahoo.com/news/ford-motor-company-f-stock-110953221.html\\u0026cid=52779651523105\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNFjSY6OXmH0rHXtZVPNjkDkvPyOow\"},{\"t\":\"Ford
-        Motor (F) Q3 2017 Results - Earnings Call Transcript\",\"u\":\"https://seekingalpha.com/article/4117020-ford-motor-f-q3-2017-results-earnings-call-transcript\",\"s\":\"Seeking
-        Alpha\",\"sp\":\"Good morning. My name is Dorothy, and I will be your conference
-        operator today. At this time, I would like to welcome everyone to the Ford
-        Motor Company Fiscal 2017 Third Quarter Earnings Conference Call. All lines
-        have been placed on mute to prevent\\u0026nbsp;...\",\"d\":\"Oct 26, 2017\",\"tt\":\"1509052104\",\"usg\":\"AFQjCNHiWUmuCKBofiZwV-z0AmfuIZSpIA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4117020-ford-motor-f-q3-2017-results-earnings-call-transcript\\u0026cid=52779651523105\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNHTywKbpmOma9f4AyYbnse4dI_Bjg\"},{\"t\":\"Ford
-        truck sales soar as customers spring for luxury amenities\",\"u\":\"http://www.chicagotribune.com/business/ct-ford-earnings-truck-sales-20171026-story.html\",\"s\":\"Chicago
-        Tribune\",\"sp\":\"Pickup trucks helped Ford Motor Co. to a strong finish
-        in the third quarter despite lower global sales. The Dearborn-based automaker
-        said its net income rose 63 percent to $1.6 billion in the July-September
-        period.\",\"d\":\"Oct 26, 2017\",\"tt\":\"1509025910\",\"usg\":\"AFQjCNEFJEw5FjcuFIxmpDwYIF-JF-QoHg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.chicagotribune.com/business/ct-ford-earnings-truck-sales-20171026-story.html\\u0026cid=52779651523105\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNG8C5JumHiclcyOs9kmUviJl-YvPQ\"}],\"lead_story_doc_id\":\"12607166043081756224\"},{\"nrel\":36,\"idx\":5,\"id\":\"52779661093085\",\"lead_story_url\":\"https://seekingalpha.com/article/4119460-ford-looks-really-good\",\"a\":[{\"t\":\"Ford
-        - This Looks Really Good\",\"u\":\"https://seekingalpha.com/article/4119460-ford-looks-really-good\",\"s\":\"Seeking
-        Alpha\",\"sp\":\"... 36.9% increase of Ford Edge sales. Normally, I am not
-        a big fan of comparing sales of models with relatively \\u0026#39;low\\u0026#39;
-        sales but since both have sold more than 10,000 units in October, I think
-        it is fair to say that Ford has two SUV models that are ...\",\"d\":\"Nov
-        2, 2017\",\"tt\":\"1509627375\",\"usg\":\"AFQjCNFX1_I1qJHNtyYVR5TX9jDguboJWw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4119460-ford-looks-really-good\\u0026cid=52779661093085\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNFjFle_DfGU2xm2CoAOT3Y0SpEUyA\"},{\"t\":\"Crossover
-        SUVs Gave General Motors Another Sales Boost\",\"u\":\"http://host.madison.com/business/investment/markets-and-stocks/crossover-suvs-gave-general-motors-another-sales-boost/article_1baa6427-e7fe-5524-a913-e098d9fd2c1c.html\",\"s\":\"Madison.com\",\"sp\":\"Sales
-        of GM\\u0026#39;s full-size Chevrolet Silverado and GMC Sierra pickups rose
-        11.2% last month, nearly keeping pace with the 15.9% gain posted by archrival
-        Ford Motor Company\\u0026#39;s F-Series truck line. (Sales of the third big
-        player in the U.S. pickup market ...\",\"d\":\"22 hours ago\",\"tt\":\"1509672600\",\"usg\":\"AFQjCNF7_MOcixcwCs1-zk6yIOftDuSd6g\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://host.madison.com/business/investment/markets-and-stocks/crossover-suvs-gave-general-motors-another-sales-boost/article_1baa6427-e7fe-5524-a913-e098d9fd2c1c.html\\u0026cid=52779661093085\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNEiVY80QY00xEq5DcSHl27btbr_xw\"}],\"lead_story_doc_id\":\"4110918695977421239\"},{\"idx\":6,\"id\":\"0\",\"lead_story_url\":\"https://seekingalpha.com/article/4117335-ford-now-buy\",\"a\":[{\"t\":\"Is
-        Ford Now A Buy?\",\"u\":\"https://seekingalpha.com/article/4117335-ford-now-buy\",\"s\":\"Seeking
-        Alpha\",\"sp\":\"Jim Hackett\\u0026#39;s October 3rd presentation on the company
-        is a must-read for all potential Ford investors.\",\"d\":\"Oct 27, 2017\",\"tt\":\"1509124500\",\"usg\":\"AFQjCNHMzpIXuH1I9BGKviP6CdRgRlfHgA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4117335-ford-now-buy\\u0026cid=0\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNHIyOcGVmpo8dMGDnlY6Ja6RUqulA\"}],\"lead_story_doc_id\":\"11385638340266652660\"},{\"nrel\":1,\"idx\":7,\"id\":\"52779647791367\",\"lead_story_url\":\"https://www.fool.com/investing/2017/10/23/ford-motor-company-earnings-3-things-to-watch-2.aspx\",\"a\":[{\"t\":\"Three
-        things to watch\",\"u\":\"https://www.fool.com/investing/2017/10/23/ford-motor-company-earnings-3-things-to-watch-2.aspx\",\"s\":\"Motley
-        Fool\",\"sp\":\"Kuo is reportedly laying the groundwork for a shift in strategy,
-        but Ford hasn\\u0026#39;t officially shared any details. Watch to see whether
-        CEO Jim Hackett outlines Ford\\u0026#39;s revamped China strategy during his
-        earnings call presentation. If he doesn\\u0026#39;t, watch to ...\",\"d\":\"Oct
-        23, 2017\",\"tt\":\"1508752575\",\"usg\":\"AFQjCNEaayadtVVnjpUKAO3YUUJOIKa0SA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.fool.com/investing/2017/10/23/ford-motor-company-earnings-3-things-to-watch-2.aspx\\u0026cid=52779647791367\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNH9FjTVb7BklHGqGVRKua-K8OwcVg\"}],\"lead_story_doc_id\":\"17568052305411372895\"},{\"nrel\":137,\"idx\":8,\"id\":\"52779628158516\",\"lead_story_url\":\"https://www.fool.com/investing/2017/10/06/ford-motor-company-records-a-strong-september-driv.aspx\",\"a\":[{\"t\":\"Ford
-        Motor Company Records a Strong September Driven by Spectacular F-Series ...\",\"u\":\"https://www.fool.com/investing/2017/10/06/ford-motor-company-records-a-strong-september-driv.aspx\",\"s\":\"Motley
-        Fool\",\"sp\":\"Ford Motor Company (NYSE:F) delivered positive sales results
-        to investors Tuesday when it bucked a three-month sales slide thanks to a
-        recovery in the Houston market, as well as unusually strong sales of Ford\\u0026#39;s
-        F-Series throughout September.\",\"d\":\"Oct 6, 2017\",\"tt\":\"1507292550\",\"usg\":\"AFQjCNFB1uS3aXOosHhad5V09QXmmgKGRg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.fool.com/investing/2017/10/06/ford-motor-company-records-a-strong-september-driv.aspx\\u0026cid=52779628158516\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNG5DaGf_bnsUF6X4OQmdnayt72-8Q\"},{\"t\":\"Want
-        Income And Growth? Buy Ford\",\"u\":\"https://seekingalpha.com/article/4112156-want-income-growth-buy-ford\",\"s\":\"Seeking
-        Alpha\",\"sp\":\"Sometimes good opportunities are simply staring you in the
-        face. Ford Motor Company (NYSE: F) is just such an opportunity. This legend
-        of American manufacturing is something your are probably reminded of each
-        and every day, as you commute to and from\\u0026nbsp;...\",\"d\":\"Oct 6,
-        2017\",\"tt\":\"1507314150\",\"usg\":\"AFQjCNF5AwKj4N4tVv384SXBx0DHYmNQ6g\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4112156-want-income-growth-buy-ford\\u0026cid=52779628158516\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNFsA8P_vJtvSG_wwTp9RebNMvIKfQ\"},{\"t\":\"Should
-        Value Investors Pick Ford Motor Company (F) Stock?\",\"u\":\"http://www.nasdaq.com/article/should-value-investors-pick-ford-motor-company-f-stock-cm856227\",\"s\":\"Nasdaq\",\"sp\":\"For
-        example, the PEG ratio for Ford Motor Company is just 0.6, a level that is
-        somewhat lower than the industry average of 1.3.\",\"d\":\"Oct 6, 2017\",\"tt\":\"1507301262\",\"usg\":\"AFQjCNEUc70L089Azgu7Rqyc5buDTgcIkQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.nasdaq.com/article/should-value-investors-pick-ford-motor-company-f-stock-cm856227\\u0026cid=52779628158516\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNFfXGvCj634rGjLBKZRlhqQ5E1cCQ\"}],\"lead_story_doc_id\":\"5059541921148070191\"},{\"nrel\":180,\"idx\":9,\"id\":\"52779640593193\",\"lead_story_url\":\"https://www.fool.com/investing/2017/10/18/how-can-ford-motor-company-stoke-growth-in-china.aspx\",\"a\":[{\"t\":\"How
-        Can Ford Motor Company Stoke Growth in China?\",\"u\":\"https://www.fool.com/investing/2017/10/18/how-can-ford-motor-company-stoke-growth-in-china.aspx\",\"s\":\"Motley
-        Fool\",\"sp\":\"China has been a critical component of Ford Motor Company\\u0026#39;s
-        (NYSE:F) growth story following the past recession, and it will hopefully
-        become a second pillar of revenue strength next to North America.\",\"d\":\"Oct
-        18, 2017\",\"tt\":\"1508321925\",\"usg\":\"AFQjCNFHGQTj5-MbEBqwTvkDLcmXD-KyXg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.fool.com/investing/2017/10/18/how-can-ford-motor-company-stoke-growth-in-china.aspx\\u0026cid=52779640593193\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNGVEmrWuIF6A938pK7-b24yOZZKbg\"},{\"t\":\"Ford
-        Motor Company (F) Moves Higher on Volume Spike for October 17\",\"u\":\"https://www.equities.com/news/ford-motor-company-f-moves-higher-on-volume-spike-for-october-17\",\"s\":\"Equities.com
-        (blog)\",\"sp\":\"Ford Motor Company (F) traded on unusually high volume on
-        Oct. 17, as the stock gained 1.24% to close at $12.27. On the day, Ford Motor
-        Company saw 54.21 million shares trade hands on 70,529 trades. Considering
-        that the stock averages only a daily\\u0026nbsp;...\",\"d\":\"Oct 17, 2017\",\"tt\":\"1508275806\",\"usg\":\"AFQjCNFiJCj8PYr517Bdx-GAFbT3bn96pw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.equities.com/news/ford-motor-company-f-moves-higher-on-volume-spike-for-october-17\\u0026cid=52779640593193\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNEhP6vAHNefBx4ve024gevO4zGq9g\"},{\"t\":\"Why
-        to Keeping Eye on Ford Motor Company (F), First Republic Bank (FRC)?\",\"u\":\"https://www.stocknewsjournal.com/2017/10/17/why-to-keeping-eye-on-ford-motor-company-f-first-republic-bank-frc/\",\"s\":\"StockNewsJournal\",\"sp\":\"ROI
-        deals with the invested cash in the company and the return the investor realize
-        on that money based on the net profit of the business.\",\"d\":\"Oct 17, 2017\",\"tt\":\"1508238900\",\"usg\":\"AFQjCNEVWXVd5i4ovr51JXVtK_x14pdKJg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.stocknewsjournal.com/2017/10/17/why-to-keeping-eye-on-ford-motor-company-f-first-republic-bank-frc/\\u0026cid=52779640593193\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNFwXR1EBoJ4rJ5MRIVMeTRwRw7ylA\"}],\"lead_story_doc_id\":\"4185605470871793710\"},{\"nrel\":3,\"idx\":10,\"id\":\"52779656551564\",\"lead_story_url\":\"https://seekingalpha.com/article/4118182-fords-argo-ai-collaboration-acquires-princeton-lightwave\",\"a\":[{\"t\":\"Ford\\u0026#39;s
-        Argo AI Collaboration Acquires Princeton Lightwave\",\"u\":\"https://seekingalpha.com/article/4118182-fords-argo-ai-collaboration-acquires-princeton-lightwave\",\"s\":\"Seeking
-        Alpha\",\"sp\":\"Argo and Ford hope to combine Princeton\\u0026#39;s imaging
-        sensing and processing technologies with Argo\\u0026#39;s A.I. and robotics
-        capabilities to develop Level 4 and 5 autonomous vehicles in the near future.\",\"d\":\"Oct
-        30, 2017\",\"tt\":\"1509385050\",\"usg\":\"AFQjCNGZOyMRQ_EWiKVZsErIowgTHw24JA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4118182-fords-argo-ai-collaboration-acquires-princeton-lightwave\\u0026cid=52779656551564\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNEB5M2HXZoEAqj64b6dh6-DgokZkg\"}],\"lead_story_doc_id\":\"4026660531091529726\"},{\"nrel\":5,\"idx\":11,\"id\":\"52779632191492\",\"lead_story_url\":\"https://www.fool.com/investing/2017/10/10/1-major-takeaway-ford-motor-company-strategic-upda.aspx\",\"a\":[{\"t\":\"1
-        Major Takeaway From Ford Motor Company\\u0026#39;s Strategic Update\",\"u\":\"https://www.fool.com/investing/2017/10/10/1-major-takeaway-ford-motor-company-strategic-upda.aspx\",\"s\":\"Motley
-        Fool\",\"sp\":\"Investors had waited anxiously to hear what Ford Motor Company\\u0026#39;s
-        (NYSE:F) newly appointed CEO, Jim Hackett, would lay out in his strategic
-        plan after 100 days on the job.\",\"d\":\"Oct 10, 2017\",\"tt\":\"1507653000\",\"usg\":\"AFQjCNEaGzz9I5kPCIJK8jPYeYgCXdbSXQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.fool.com/investing/2017/10/10/1-major-takeaway-ford-motor-company-strategic-upda.aspx\\u0026cid=52779632191492\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNFwgHWuJTWNHAHa8NMsz1H-wKkwdg\"},{\"t\":\"How
-        Cost-Cutting Plans Make Owning Ford Motor Company (F) Stock Uncomfortable\",\"u\":\"https://investorplace.com/2017/10/cost-cutting-plans-ford-motor-company-f-stock-uncomfortable/\",\"s\":\"Investorplace.com\",\"sp\":\"Earlier
-        this month, iconic automaker Ford Motor Company (NYSE:F) unveiled an ambitious
-        cost-cutting plan in addition to laying out its plan to at least partially
-        pivot to more SUVs and more electric vehicles.\",\"d\":\"Oct 10, 2017\",\"tt\":\"1507657725\",\"usg\":\"AFQjCNETvxHimfFrvjfruMT2FELIdc9wcw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://investorplace.com/2017/10/cost-cutting-plans-ford-motor-company-f-stock-uncomfortable/\\u0026cid=52779632191492\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNHOjuHafhkHpKV7sr1RYR1Tqkh3_w\"},{\"t\":\"Ford
-        Stock Began October on a Positive Note\",\"u\":\"http://marketrealist.com/2017/10/ford-stock-began-october-on-a-positive-note/\",\"s\":\"Market
-        Realist\",\"sp\":\"In the week ended October 6, Ford Motor Company (F) stock
-        settled at $12.31, registering weekly gains of 2.8%. This was the seventh
-        consecutive week that the company\\u0026#39;s stock inched up on Wall Street.\",\"d\":\"Oct
-        10, 2017\",\"tt\":\"1507641804\",\"usg\":\"AFQjCNHKGgNYnGHQW7RL7vzOXHGSnAU-BA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://marketrealist.com/2017/10/ford-stock-began-october-on-a-positive-note/\\u0026cid=52779632191492\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNEOKudWieCtQckKisj2BeiHicVpJQ\"}],\"lead_story_doc_id\":\"12141462904955007320\"},{\"nrel\":10,\"idx\":12,\"id\":\"52779640556074\",\"lead_story_url\":\"https://www.fool.com/investing/2017/10/18/how-to-buy-ford-motor-company-stock-and-why-you-sh.aspx\",\"a\":[{\"t\":\"Ford
-        Motor Company in 2017: Change is in the air\",\"u\":\"https://www.fool.com/investing/2017/10/18/how-to-buy-ford-motor-company-stock-and-why-you-sh.aspx\",\"s\":\"Motley
-        Fool\",\"sp\":\"In the future, Ford\\u0026#39;s customers might purchase \\u0026quot;mobility\\u0026quot;
-        -- access to Ford-owned shuttle services and city bicycles, as well as traditional
-        cars and trucks.\",\"d\":\"Oct 18, 2017\",\"tt\":\"1508322600\",\"usg\":\"AFQjCNGozk3lMsaoZhdzdOhOpsZqZbJo0w\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.fool.com/investing/2017/10/18/how-to-buy-ford-motor-company-stock-and-why-you-sh.aspx\\u0026cid=52779640556074\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNFhwPF7JlVgUWq-vmyE_TAArBM36g\"},{\"t\":\"TPG
-        Capital Hires Former Ford Motor CEO\",\"u\":\"https://www.wsj.com/articles/tpg-capital-hires-former-ford-motor-ceo-1508280198\",\"s\":\"Wall
-        Street Journal\",\"sp\":\"Private-equity giant TPG Capital said Tuesday it
-        hired Ford Motor Co.\\u0026#39;s recently ousted chief executive as a senior
-        adviser, adding an automobile industry veteran to its industrials practice
-        as it seeks to expand supply chain-related investments.\",\"d\":\"Oct 17,
-        2017\",\"tt\":\"1508280075\",\"usg\":\"AFQjCNFnrTqC2RfFnTWLx7IzPov5D7w_pg\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.wsj.com/articles/tpg-capital-hires-former-ford-motor-ceo-1508280198\\u0026cid=52779640556074\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNGufokOqFXl1IHDo8wREXxP-cgvBA\"}],\"lead_story_doc_id\":\"7039013866012681696\"},{\"idx\":13,\"id\":\"0\",\"lead_story_url\":\"https://seekingalpha.com/article/4119469-ford-truck-sales-surge-16-percent\",\"a\":[{\"t\":\"Ford
-        Truck Sales Surge 16%\",\"u\":\"https://seekingalpha.com/article/4119469-ford-truck-sales-surge-16-percent\",\"s\":\"Seeking
-        Alpha\",\"sp\":\"We like to track sales of pickup trucks (specifically at
-        Ford (NYSE:F)), as they are often a sign of strength or weakness in the small
-        business and construction sectors, and based on these numbers from Ford, the
-        small business sector looks strong. For ...\",\"d\":\"Nov 1, 2017\",\"tt\":\"1509551100\",\"usg\":\"AFQjCNFuVTrKLAsfrIJIlWUJTYO-OXuvag\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/article/4119469-ford-truck-sales-surge-16-percent\\u0026cid=0\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNFogdiOAC8c0Vm05qWpLZWIMnlgvA\"}],\"lead_story_doc_id\":\"14845093777735748664\"},{\"idx\":14,\"id\":\"0\",\"lead_story_url\":\"https://www.bizjournals.com/louisville/news/2017/11/01/former-ford-contractor-will-pay-out-21-6-million.html\",\"a\":[{\"t\":\"Former
-        Ford contractor will pay out $21.6 million after a union dispute in ...\",\"u\":\"https://www.bizjournals.com/louisville/news/2017/11/01/former-ford-contractor-will-pay-out-21-6-million.html\",\"s\":\"Louisville
-        Business First\",\"sp\":\"The Louisville Assembly Plant on Fern Valley Road
-        is one of two operated by Ford Motor Co. in Louisville. The company also operates
-        the Kentucky Truck Plant on Chamberlain Lane.\",\"d\":\"Nov 1, 2017\",\"tt\":\"1509562575\",\"usg\":\"AFQjCNETLDWeLsO5LqaUbZYTYE8VRCOqKA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.bizjournals.com/louisville/news/2017/11/01/former-ford-contractor-will-pay-out-21-6-million.html\\u0026cid=0\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNFaiEgm6q7FnvfFHc0dr_tEiYoJlw\"}],\"lead_story_doc_id\":\"18288380307745088128\"},{\"nrel\":7,\"idx\":15,\"id\":\"52779657968514\",\"lead_story_url\":\"http://www.crainsdetroit.com/article/20171031/news/643731/ford-on-auto-industry-mobility-every-single-thing-is-changing\",\"a\":[{\"t\":\"Ford
-        on auto industry, mobility: \\u0026#39;Every single thing is changing\\u0026#39;\",\"u\":\"http://www.crainsdetroit.com/article/20171031/news/643731/ford-on-auto-industry-mobility-every-single-thing-is-changing\",\"s\":\"Crain's
-        Detroit Business\",\"sp\":\"Bill Ford Jr. said he believes Southeast Michigan
-        is going to be the greatest beneficiary of new advancements in mobility. &#8220;We\\u0026#39;re
-        in in the early days of a relaunching of Southeast Michigan, economically,&#8221;
-        the Ford Motor Co. executive chairman said ...\",\"d\":\"Oct 31, 2017\",\"tt\":\"1509478200\",\"usg\":\"AFQjCNGtBpC3LfIxT85MjbQAV5P9DgDgCA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.crainsdetroit.com/article/20171031/news/643731/ford-on-auto-industry-mobility-every-single-thing-is-changing\\u0026cid=52779657968514\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNGGOxulPRczUb7ICjLi8x9khpgqoA\"},{\"t\":\"Bill
-        Ford at Detroit Economic Club: On change in auto industry, yoga and 2 ...\",\"u\":\"http://www.freep.com/story/money/cars/2017/10/31/bill-ford-talks-future-fears-detroit-economic-club-top-10-quotes/818576001/\",\"s\":\"Detroit
-        Free Press\",\"sp\":\"Unscripted and animated, Bill Ford discussed a wide
-        range of issues Tuesday before the Detroit Economic Club in the atrium of
-        Ford Field.\",\"d\":\"Oct 31, 2017\",\"tt\":\"1509483713\",\"usg\":\"AFQjCNF-CBK73Bu9CBNpU80rEwQl1-CXsA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.freep.com/story/money/cars/2017/10/31/bill-ford-talks-future-fears-detroit-economic-club-top-10-quotes/818576001/\\u0026cid=52779657968514\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNFUNNWzpeoA736H_iTiNjGz1-HDqQ\"},{\"t\":\"Bill
-        Ford says automakers can\\u0026#39;t rush robotic cars\",\"u\":\"http://www.detroitnews.com/story/business/autos/ford/2017/10/31/bill-ford-econ-club/107211584/\",\"s\":\"The
-        Detroit News\",\"sp\":\"Executive Chairman Bill Ford Jr. doesn\\u0026#39;t
-        want to say too much yet about the future, despite pressure from Wall Street.
-        That could hurt Ford Motor Co. more than help it. &#8220;There\\u0026#39;s
-        a very delicate balance between what you want to telegraph publicly, and I
-        ...\",\"d\":\"Oct 31, 2017\",\"tt\":\"1509488943\",\"usg\":\"AFQjCNHZBn_rg7nUfcNMdIetzwfFmkBOQw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.detroitnews.com/story/business/autos/ford/2017/10/31/bill-ford-econ-club/107211584/\\u0026cid=52779657968514\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNH9Cy-LGOjwMt1PMoHkPI-kRuZHkg\"}],\"lead_story_doc_id\":\"9238859528729467255\"},{\"nrel\":7,\"idx\":16,\"id\":\"52779661370737\",\"lead_story_url\":\"http://www.reuters.com/article/us-uaw-probe/u-s-probe-into-uaw-training-center-funds-extends-to-gm-ford-idUSKBN1D22UJ\",\"a\":[{\"t\":\"US
-        probe into UAW training center funds extends to GM, Ford\",\"u\":\"http://www.reuters.com/article/us-uaw-probe/u-s-probe-into-uaw-training-center-funds-extends-to-gm-ford-idUSKBN1D22UJ\",\"s\":\"Reuters\",\"sp\":\"WASHINGTON
-        (Reuters) - General Motors Co (GM.N) and Ford Motor Co (F.N) confirmed Thursday
-        they are cooperating with an expanded Justice Department probe into alleged
-        misspending at United Auto Workers union training centers funded by U.S.\",\"d\":\"Nov
-        2, 2017\",\"tt\":\"1509657073\",\"usg\":\"AFQjCNEBTEuuHGuAbAPSLsQByDop2cwRyQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.reuters.com/article/us-uaw-probe/u-s-probe-into-uaw-training-center-funds-extends-to-gm-ford-idUSKBN1D22UJ\\u0026cid=52779661370737\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNFJkkVfIwrO3NIfOPodRlfkYgvO6Q\"},{\"t\":\"GM,
-        Ford \\u0026#39;cooperating\\u0026#39; with feds as investgation into UAW
-        training centers widens\",\"u\":\"http://www.crainsdetroit.com/article/20171102/news/643956/gm-ford-cooperating-with-feds-as-investgation-into-uaw-training-centers\",\"s\":\"Crain's
-        Detroit Business\",\"sp\":\"General Motors Co. and Ford Motor Co. said they
-        are \\u0026quot;cooperating\\u0026quot; with federal investigators who have
-        subpoenaed information about jointly operated training centers with the UAW.\",\"d\":\"Nov
-        2, 2017\",\"tt\":\"1509652350\",\"usg\":\"AFQjCNFidTuUGk2Z9-07nA9nRE-LeMKZvw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.crainsdetroit.com/article/20171102/news/643956/gm-ford-cooperating-with-feds-as-investgation-into-uaw-training-centers\\u0026cid=52779661370737\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNFHNatUO8STGnF0DIrowcGndWhcSQ\"}],\"lead_story_doc_id\":\"4782013022482964154\"},{\"idx\":17,\"id\":\"0\",\"lead_story_url\":\"http://www.blackpressusa.com/ford-motor-company-empowers-african-americans-in-steam-careers-at-hbcus/\",\"a\":[{\"t\":\"Ford
-        Motor Company Empowers African Americans in STEAM Careers at HBCUs\",\"u\":\"http://www.blackpressusa.com/ford-motor-company-empowers-african-americans-in-steam-careers-at-hbcus/\",\"s\":\"Black
-        Press USA\",\"sp\":\"The Ford Motor Company has had a long track record of
-        contributing to HBCUs that spans more than 30 years. Thus, it was noteworthy
-        when Ford recently launched its &#8220;Drive2Greatness&#8221; initiative to
-        support science, technology, engineering, the arts, and\\u0026nbsp;...\",\"d\":\"Oct
-        30, 2017\",\"tt\":\"1509378975\",\"usg\":\"AFQjCNFvO2DxYF4NBQRJWYhNoi2PXzRLfw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.blackpressusa.com/ford-motor-company-empowers-african-americans-in-steam-careers-at-hbcus/\\u0026cid=0\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNEXX0iSIQKd9zlQT477A_4P4yS1Mg\"}],\"lead_story_doc_id\":\"157289966127024231\"},{\"nrel\":287,\"idx\":18,\"id\":\"52779648870930\",\"lead_story_url\":\"http://www.businesswire.com/news/home/20171025005129/en/Media-Advisory-Details-Ford-Motor-Company%E2%80%99s-October\",\"a\":[{\"t\":\"Media
-        Advisory: Details of Ford Motor Company\\u0026#39;s October 2017 US Sales
-        ...\",\"u\":\"http://www.businesswire.com/news/home/20171025005129/en/Media-Advisory-Details-Ford-Motor-Company%E2%80%99s-October\",\"s\":\"Business
-        Wire (press release)\",\"sp\":\"DEARBORN, Mich.--(BUSINESS WIRE)--Ford Motor
-        Company (NYSE:F) will release its October 2017 U.S. sales results at approximately
-        9:15 a.m.\",\"d\":\"Oct 25, 2017\",\"tt\":\"1508936425\",\"usg\":\"AFQjCNFGbo4KpyZSV8CGt5NPS2EG-6kkxA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.businesswire.com/news/home/20171025005129/en/Media-Advisory-Details-Ford-Motor-Company%25E2%2580%2599s-October\\u0026cid=52779648870930\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNEuEfGXywnVco3w7WikcSQjnAcwXQ\"},{\"t\":\"Ford
-        Motor (F) Set to Report Q3 Earnings: What\\u0026#39;s in Store?\",\"u\":\"http://www.nasdaq.com/article/ford-motor-f-set-to-report-q3-earnings-whats-in-store-cm864359\",\"s\":\"Nasdaq\",\"sp\":\"Our
-        proven model does not conclusively show an earnings beat for Ford this quarter.
-        This is because a stock needs to have both a positive Earnings ESP and a Zacks
-        Rank #1 (Strong Buy), 2 (Buy) or 3 (Hold) for this to happen.\",\"d\":\"Oct
-        24, 2017\",\"tt\":\"1508857880\",\"usg\":\"AFQjCNE2vZuVXr5NDdTKuR0LYWN-FGJ5Lw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.nasdaq.com/article/ford-motor-f-set-to-report-q3-earnings-whats-in-store-cm864359\\u0026cid=52779648870930\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNFed-XFI5idfYhZJjgvD5N6BIBIlA\"}],\"lead_story_doc_id\":\"5911171270404481610\"},{\"nrel\":11,\"idx\":19,\"id\":\"52779657599558\",\"lead_story_url\":\"https://seekingalpha.com/news/3306102-ford-qualcomm-begin-connected-car-road-tests\",\"a\":[{\"t\":\"Ford
-        and Qualcomm to begin connected car road tests\",\"u\":\"https://seekingalpha.com/news/3306102-ford-qualcomm-begin-connected-car-road-tests\",\"s\":\"Seeking
-        Alpha\",\"sp\":\"Ford (NYSE:F) and Qulacomm (NASDAQ:QCOM) are set to begin
-        road tests of new connected car technology, reports The Wall Street Journal.\",\"d\":\"Oct
-        31, 2017\",\"tt\":\"1509456600\",\"usg\":\"AFQjCNE5yrY9x7s8plyOuJ0mKXCnJCHQOQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://seekingalpha.com/news/3306102-ford-qualcomm-begin-connected-car-road-tests\\u0026cid=52779657599558\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNGman-ubuijtBHMj-BtxElcLoRNzA\"}],\"lead_story_doc_id\":\"1391467101419850212\"},{\"nrel\":73,\"idx\":20,\"id\":\"52779661351264\",\"lead_story_url\":\"https://techcrunch.com/2017/11/03/bmw-daimler-ford-and-volkswagen-team-up-on-high-power-charging-network/\",\"a\":[{\"t\":\"BMW,
-        Daimler, Ford and Volkswagen team up on high-power charging network\",\"u\":\"https://techcrunch.com/2017/11/03/bmw-daimler-ford-and-volkswagen-team-up-on-high-power-charging-network/\",\"s\":\"TechCrunch\",\"sp\":\"BMW
-        Group, Daimler, Ford Motor Company, and the Volkswagen Group (with subsidiaries
-        Audi and Porsche) will join up to create a high-power charging network for
-        electric vehicles called &#8220;Ionity,&#8221; which will build and operate
-        around 400 charging stations\\u0026nbsp;...\",\"d\":\"12 hours ago\",\"tt\":\"1509707677\",\"usg\":\"AFQjCNH05gEYnTCP_-SleBoa1LjAhIILag\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://techcrunch.com/2017/11/03/bmw-daimler-ford-and-volkswagen-team-up-on-high-power-charging-network/\\u0026cid=52779661351264\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNHL0k6WtaVXw_CyuDG7_iXy7Waobg\"},{\"t\":\"BMW
-        Group, Daimler AG, Ford Motor Company and the Volkswagen Group with Audi ...\",\"u\":\"https://www.automotiveworld.com/news-releases/bmw-group-daimler-ag-ford-motor-company-volkswagen-group-audi-porsche-form-joint-venture/\",\"s\":\"Automotive
-        World (press release)\",\"sp\":\"Launching approximately 400 HPC stations
-        by 2020, IONITY will make long-distance journeys easier and marks an important
-        step for electric vehicles.\",\"d\":\"14 hours ago\",\"tt\":\"1509701625\",\"usg\":\"AFQjCNH2B1qKlh0TdMZDlEeWKqhG5jHyRQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.automotiveworld.com/news-releases/bmw-group-daimler-ag-ford-motor-company-volkswagen-group-audi-porsche-form-joint-venture/\\u0026cid=52779661351264\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNGHZW4yIuZ7zU15nowBX83quIk-AQ\"},{\"t\":\"Four
-        automakers team up to create an electric car charging network across Europe\",\"u\":\"https://www.theverge.com/2017/11/3/16603616/bmw-daimler-ford-vw-electric-charging-europe\",\"s\":\"The
-        Verge\",\"sp\":\"Ionity, announced Friday by BMW Group, Daimler AG, Ford Motor
-        Company and the Volkswagen Group, will install a network of 400 high-power
-        EV chargers across Europe by 2020.\",\"d\":\"4 hours ago\",\"tt\":\"1509738075\",\"usg\":\"AFQjCNFQK_UiSYm_sBDjqBS3vfZM3MAyjA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.theverge.com/2017/11/3/16603616/bmw-daimler-ford-vw-electric-charging-europe\\u0026cid=52779661351264\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNFiwe0ljrSzRbxnCkp00u_92uZjQg\"}],\"lead_story_doc_id\":\"7376119213592790657\"},{\"nrel\":183,\"idx\":21,\"id\":\"52779658240571\",\"lead_story_url\":\"https://www.stocknewsjournal.com/2017/11/01/the-case-for-and-against-ford-motor-company-f-4/\",\"a\":[{\"t\":\"The
-        Case for and Against Ford Motor Company (F)\",\"u\":\"https://www.stocknewsjournal.com/2017/11/01/the-case-for-and-against-ford-motor-company-f-4/\",\"s\":\"StockNewsJournal\",\"sp\":\"Ford
-        Motor Company (F) is an interesting player in the Consumer Goods space, with
-        a focus on Auto Manufacturers - Major. The stock has been active on the tape,
-        currently trading at $12.27, up from yesterday\\u0026#39;s close by 1.40%.\",\"d\":\"Nov
-        1, 2017\",\"tt\":\"1509565275\",\"usg\":\"AFQjCNGfgSQcBnjaleqDVlFqfSJRQJEcmA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.stocknewsjournal.com/2017/11/01/the-case-for-and-against-ford-motor-company-f-4/\\u0026cid=52779658240571\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNH479zCRRm1O8lxkEMMLNVrIbeMyQ\"},{\"t\":\"Paul
-        Miller Motors CEO to serve as Ford Motor\\u0026#39;s &#8220;voice of the dealer&#8221;\",\"u\":\"https://www.wtvq.com/2017/11/02/paul-miller-motors-ceo-serve-ford-motors-voice-dealer/\",\"s\":\"WTVQ\",\"sp\":\"LEXINGTON,
-        Ky. (WTVQ) - JP Miller, Jr., the CEO and Dealer Principle of the Lexington-based
-        Paul Miller Motor Company, has been elected as 2018 Vice Chairman of the Ford
-        National Dealer Council, according to Paul Miller Ford. Paul Miller Ford explains\\u0026nbsp;...\",\"d\":\"Nov
-        2, 2017\",\"tt\":\"1509658425\",\"usg\":\"AFQjCNEY-sbTkU0yVRvC555dcsCAD9LbDQ\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.wtvq.com/2017/11/02/paul-miller-motors-ceo-serve-ford-motors-voice-dealer/\\u0026cid=52779658240571\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNFS5voNTQ3nk58vR5fzEJ-CFeZNNg\"},{\"t\":\"There
-        Are Mixed Technical Signals in Ford Motor Company (F)\",\"u\":\"https://stocknewsgazette.com/2017/11/02/there-are-mixed-technical-signals-in-ford-motor-company-f/\",\"s\":\"StockNewsGazette\",\"sp\":\"Ford
-        Motor Company (NYSE:F) gained 1.40% in first day of the new month, going up
-        from its prior closing price of $12.10 to $12.27, and has now recorded rally
-        in 3 consecutive sessions.\",\"d\":\"Nov 2, 2017\",\"tt\":\"1509648975\",\"usg\":\"AFQjCNHXTkBZwMDqI8SpMNxp2yfsns9wqw\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://stocknewsgazette.com/2017/11/02/there-are-mixed-technical-signals-in-ford-motor-company-f/\\u0026cid=52779658240571\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNGaxfYk58QwhNyiHxtiD1rW32hAXw\"}],\"lead_story_doc_id\":\"12631229760028709530\"},{\"nrel\":85,\"idx\":22,\"id\":\"52779659977467\",\"lead_story_url\":\"https://allstocknews.com/2017/11/03/whats-real-worth-of-ford-motor-company-f-pfizer-inc-pfe/\",\"a\":[{\"t\":\"What\\u0026#39;s
-        Real Worth Of Ford Motor Company (F), Pfizer Inc. (PFE)\",\"u\":\"https://allstocknews.com/2017/11/03/whats-real-worth-of-ford-motor-company-f-pfizer-inc-pfe/\",\"s\":\"AllStockNews\",\"sp\":\"Ford
-        Motor Company (NYSE:F) shares were trading higher by 0.57 percent ($0.07)
-        at $12.42 a piece in Thursday\\u0026#39;s session.\",\"d\":\"11 hours ago\",\"tt\":\"1509713100\",\"usg\":\"AFQjCNENj6dFS4UmJdjYfhThUjcz-Mbj-g\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://allstocknews.com/2017/11/03/whats-real-worth-of-ford-motor-company-f-pfizer-inc-pfe/\\u0026cid=52779659977467\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNE408Po72Q_uNyyiHg49HkZKVl5iA\"}],\"lead_story_doc_id\":\"331753034546132088\"},{\"nrel\":26,\"idx\":23,\"id\":\"52779662217296\",\"lead_story_url\":\"http://www.crainsdetroit.com/article/20171102/blog012/643971/move-to-cut-corporate-tax-rate-doesnt-come-without-some-wrinkles\",\"a\":[{\"t\":\"Move
-        to cut corporate tax rate doesn\\u0026#39;t come without some wrinkles\",\"u\":\"http://www.crainsdetroit.com/article/20171102/blog012/643971/move-to-cut-corporate-tax-rate-doesnt-come-without-some-wrinkles\",\"s\":\"Crain's
-        Detroit Business (blog)\",\"sp\":\"Ford Motor Co., which according to corporate
-        filings has the most offshore cash of any local company, had $5.7 billion
-        held overseas at the close of 2016.\",\"d\":\"Nov 2, 2017\",\"tt\":\"1509656654\",\"usg\":\"AFQjCNEHNPRzNEUgxJaUqO6Ab9KURIRlqA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=http://www.crainsdetroit.com/article/20171102/blog012/643971/move-to-cut-corporate-tax-rate-doesnt-come-without-some-wrinkles\\u0026cid=52779662217296\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNEsQP13B26ySBkYf6R6NIsu9z-7-w\"}],\"lead_story_doc_id\":\"13130736644003658916\"},{\"nrel\":31,\"idx\":24,\"id\":\"52779658101791\",\"lead_story_url\":\"https://stocknewsjournal.com/2017/11/02/investors-are-upbeat-on-the-prospect-of-these-stocks-ford-motor-company-f-best-buy-co-inc-bby/\",\"a\":[{\"t\":\"Investors
-        are upbeat on the prospect of these stock\\u0026#39;s: Ford Motor Company
-        (F ...\",\"u\":\"https://stocknewsjournal.com/2017/11/02/investors-are-upbeat-on-the-prospect-of-these-stocks-ford-motor-company-f-best-buy-co-inc-bby/\",\"s\":\"StockNewsJournal\",\"sp\":\"Ford
-        Motor Company (NYSE:F) market capitalization at present is $49.91B at the
-        rate of $12.35 a share. The firm\\u0026#39;s price-to-sales ratio was noted
-        0.32 in contrast with an overall industry average of 1.67.\",\"d\":\"Nov 2,
-        2017\",\"tt\":\"1509639525\",\"usg\":\"AFQjCNEtY-mt20DrBV5gB8AhQIijMTnYng\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://stocknewsjournal.com/2017/11/02/investors-are-upbeat-on-the-prospect-of-these-stocks-ford-motor-company-f-best-buy-co-inc-bby/\\u0026cid=52779658101791\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNEH8hpUjaDKsCrqDGRWt8SDnD1NQw\"}],\"lead_story_doc_id\":\"13196221255200192477\"},{\"nrel\":1,\"idx\":25,\"id\":\"52779661765092\",\"lead_story_url\":\"https://www.prnewswire.com/news-releases/southwestern-christian-college-named-grand-prize-winner-of-first-ford-hbcu-drive2greatness-national-contest-300549299.html\",\"a\":[{\"t\":\"Southwestern
-        Christian College Named Grand Prize Winner of First Ford HBCU ...\",\"u\":\"https://www.prnewswire.com/news-releases/southwestern-christian-college-named-grand-prize-winner-of-first-ford-hbcu-drive2greatness-national-contest-300549299.html\",\"s\":\"PR
-        Newswire (press release)\",\"sp\":\"Ford Motor Company is a global company
-        based in Dearborn, Michigan. The company designs, manufactures, markets and
-        services a full line of Ford cars, trucks, SUVs, electrified vehicles and
-        Lincoln luxury vehicles, provides financial services through ...\",\"d\":\"9
-        hours ago\",\"tt\":\"1509717150\",\"usg\":\"AFQjCNFQBd2qyhmtRsrkoCe_9fwfPjecGA\",\"sru\":\"http://news.google.com/news/url?sa=T\\u0026ct2=us\\u0026fd=S\\u0026url=https://www.prnewswire.com/news-releases/southwestern-christian-college-named-grand-prize-winner-of-first-ford-hbcu-drive2greatness-national-contest-300549299.html\\u0026cid=52779661765092\\u0026ei=Xf_8WcGdC8almAH0lLqACw\\u0026usg=AFQjCNGleSQQjhoEgxQO0dNOkrk7e1XoCQ\"}],\"lead_story_doc_id\":\"2387119997994526515\"},{\"idx\":26,\"id\":\"-1\"}],\"results_per_page\":10,\"result_start_num\":1,\"result_end_num\":0,\"result_total_articles\":162},\"related\":{\"cols\":[0,1,4,30,34,31,32,5,2,33,3],\"rows\":[{\"id\":\"13606\",\"values\":[\"F\",\"Ford
-        Motor Company\",\"12.36\",\"-0.06\",\"chr\",\"-0.48\",\"\",\"49.10B\",\"NYSE\",\"13606\",\"F\"]},{\"id\":\"655880\",\"values\":[\"TM\",\"Toyota
-        Motor Corp (ADR)\",\"125.62\",\"+0.31\",\"chg\",\"0.25\",\"\",\"205.03B\",\"NYSE\",\"655880\",\"TM\"]},{\"id\":\"662830\",\"values\":[\"DDAIF\",\"Daimler
-        AG\",\"85.08\",\"-0.22\",\"chr\",\"-0.26\",\"\",\"90.60B\",\"OTCMKTS\",\"662830\",\"DDAIF\"]},{\"id\":\"661748\",\"values\":[\"VLKAY\",\"Volkswagen
-        AG (ADR)\",\"38.40\",\"-0.40\",\"chr\",\"-1.03\",\"\",\"95.15B\",\"OTCMKTS\",\"661748\",\"VLKAY\"]},{\"id\":\"14676476\",\"values\":[\"GM\",\"General
-        Motors Company\",\"42.34\",\"-0.26\",\"chr\",\"-0.61\",\"\",\"60.14B\",\"NYSE\",\"14676476\",\"GM\"]},{\"id\":\"855759344984560\",\"values\":[\"AUDVF\",\"AUDI
-        AG\",\"815.15\",\"0.00\",\"chb\",\"0.00\",\"\",\"35.05B\",\"OTCMKTS\",\"855759344984560\",\"AUDVF\"]},{\"id\":\"6620805\",\"values\":[\"RNSDF\",\"RENAULT
-        SA\",\"103.75\",\"0.00\",\"chb\",\"0.00\",\"\",\"30.68B\",\"OTCMKTS\",\"6620805\",\"RNSDF\"]},{\"id\":\"660787\",\"values\":[\"PAG\",\"Penske
-        Automotive Group, Inc.\",\"48.04\",\"-0.61\",\"chr\",\"-1.25\",\"\",\"4.12B\",\"NYSE\",\"660787\",\"PAG\"]},{\"id\":\"12607212\",\"values\":[\"TSLA\",\"Tesla
-        Inc\",\"306.09\",\"+6.83\",\"chg\",\"2.28\",\"\",\"51.08B\",\"NASDAQ\",\"12607212\",\"TSLA\"]},{\"id\":\"406677\",\"values\":[\"NSANY\",\"Nissan
-        Motor Co Ltd (ADR)\",\"19.58\",\"+0.03\",\"chg\",\"0.15\",\"\",\"41.16B\",\"OTCMKTS\",\"406677\",\"NSANY\"]},{\"id\":\"17412\",\"values\":[\"HMC\",\"Honda
-        Motor Co Ltd (ADR)\",\"32.87\",\"+0.07\",\"chg\",\"0.21\",\"\",\"59.83B\",\"NYSE\",\"17412\",\"HMC\"]}],\"visible_cols\":[0,1,4,30,34,31,32,5]},\"related_str\":\"13606,655880,662830,661748,14676476,855759344984560,6620805,660787,12607212,406677,17412\",\"perf\":[{\"u\":\"/finance?q=INDEXDJX:.DJI\",\"name\":\"Dow
-        Jones\",\"cp\":\"0.10\",\"p\":\"23,539.19\",\"cid\":\"983582\"},{\"u\":\"/finance?q=INDEXSP:.INX\",\"name\":\"S\\u0026P
-        500\",\"cp\":\"0.31\",\"p\":\"2,587.84\",\"cid\":\"626307\"},{\"u\":\"/finance?catid=us-TRBC:53\",\"name\":\"Cyclical
-        Consumer Goods \\u0026 Services\",\"cp\":\"0.11\",\"cid\":\"0\"},{\"u\":\"/finance?q=NYSE:F\",\"name\":\"F\",\"cp\":\"-0.48\",\"p\":\"12.36\",\"cid\":\"13606\"}],\"t\":\"NYSE:F:
-        {LAST} {CHANGE} ({CHANGE_PCT}%) - Ford Motor Company\",\"ticker\":\"NYSE:F\",\"cid\":\"13606\"},\"stickyUrlArgs\":\"\\u0026ei=3v_8WZjXCsWAepqjieAE\",\"chart\":{\"_5d\":\"EXCHANGE%3DNYSE\\nMARKET_OPEN_MINUTE=570\\nMARKET_CLOSE_MINUTE=960\\nINTERVAL=120\\nCOLUMNS=DATE,CLOSE,VOLUME\\nDATA=\\nTIMEZONE_OFFSET=-240\\na1509370320,11.99,721071\\n1,11.99,686301\\n2,11.9793,806276\\n3,11.98,522521\\n4,11.96,537667\\n5,11.975,339789\\n6,11.9842,269871\\n7,11.9734,193950\\n8,11.9685,206521\\n9,11.96,336179\\n10,11.955,198997\\n11,11.98,185492\\n12,11.99,448212\\n13,11.97,667534\\n14,11.98,199557\\n15,11.985,109562\\n16,11.9807,184345\\n17,11.975,165161\\n18,11.98,119764\\n19,11.98,84882\\n20,11.98,81823\\n21,11.975,67698\\n22,11.985,476675\\n23,11.98,141611\\n24,11.985,41513\\n25,11.9829,82179\\n26,11.99,60770\\n27,11.985,58369\\n28,11.99,46736\\n29,11.99,50547\\n30,11.99,131832\\n31,11.9822,397252\\n32,11.995,127624\\n33,11.995,55355\\n34,12.01,157953\\n35,12.02,89347\\n36,12.02,51774\\n37,12.02,132177\\n38,12.04,263971\\n39,12.05,113044\\n40,12.05,89831\\n41,12.05,86856\\n42,12.06,183856\\n43,12.06,82761\\n44,12.07,151451\\n45,12.0711,303448\\n46,12.0776,240393\\n47,12.08,133775\\n48,12.09,348247\\n49,12.09,70049\\n50,12.1,136903\\n51,12.1,77691\\n52,12.11,95454\\n53,12.12,328676\\n54,12.11,513778\\n55,12.115,64946\\n56,12.121,161526\\n57,12.125,83554\\n58,12.129,58881\\n59,12.12,67975\\n60,12.1269,53610\\n61,12.1248,37005\\n62,12.105,347104\\n63,12.105,45367\\n64,12.09,254290\\n65,12.085,145640\\n66,12.085,32627\\n67,12.06,271225\\n68,12.075,334331\\n69,12.075,56058\\n70,12.08,115511\\n71,12.09,114574\\n72,12.095,271178\\n73,12.115,381500\\n74,12.125,178522\\n75,12.135,531282\\n76,12.135,100930\\n77,12.115,446749\\n78,12.1242,179866\\n79,12.13,52293\\n80,12.13,47004\\n81,12.125,32614\\n82,12.125,61622\\n83,12.125,60060\\n84,12.11,359936\\n85,12.11,36491\\n86,12.1143,29573\\n87,12.115,200645\\n88,12.105,326304\\n89,12.1044,112635\\n90,12.1,32958\\n91,12.09,549851\\n92,12.09,131125\\n93,12.095,90036\\n94,12.095,58815\\n95,12.0928,98098\\n96,12.09,232279\\n97,12.09,13978\\n98,12.09,31575\\n99,12.085,19879\\n100,12.09,42203\\n101,12.085,33099\\n102,12.085,44197\\n103,12.0841,37820\\n104,12.09,40280\\n105,12.08,103423\\n106,12.085,15235\\n107,12.08,65919\\n108,12.085,20028\\n109,12.09,11623\\n110,12.09,64036\\n111,12.085,72593\\n112,12.08,42192\\n113,12.085,45116\\n114,12.0848,19124\\n115,12.085,52706\\n116,12.087,25073\\n117,12.09,44102\\n118,12.105,312949\\n119,12.105,73250\\n120,12.11,127276\\n121,12.1,20583\\n122,12.11,120780\\n123,12.1,18347\\n124,12.105,11240\\n125,12.11,20199\\n126,12.105,34542\\n127,12.105,42729\\n128,12.1,201180\\n129,12.1,55208\\n130,12.1,21626\\n131,12.096,67735\\n132,12.1,20960\\n133,12.075,287815\\n134,12.08,71211\\n135,12.08,18902\\n136,12.08,68734\\n137,12.085,430309\\n138,12.09,48590\\n139,12.075,299447\\n140,12.07,44246\\n141,12.085,180823\\n142,12.0835,31172\\n143,12.085,51265\\n144,12.09,69679\\n145,12.09,50816\\n146,12.09,32843\\n147,12.1,142943\\n148,12.1,56378\\n149,12.1,107478\\n150,12.1,49442\\n151,12.1,109780\\n152,12.1,170413\\n153,12.1,88520\\n154,12.105,691494\\n155,12.11,36282\\n156,12.12,329381\\n157,12.115,146444\\n158,12.115,33051\\n159,12.13,177045\\n160,12.13,109802\\n161,12.13,59408\\n162,12.115,232959\\n163,12.12,178539\\n164,12.115,174706\\n165,12.11,43679\\n166,12.11,212931\\n167,12.11,73626\\n168,12.105,352862\\n169,12.09,393668\\n170,12.08,403226\\n171,12.0853,215321\\n172,12.08,35578\\n173,12.095,695077\\n174,12.0848,263309\\n175,12.08,58585\\n176,12.0846,44986\\n177,12.09,40087\\n178,12.09,65683\\n179,12.08,36809\\n180,12.08,57195\\n181,12.0899,54927\\n182,12.085,50231\\n183,12.08,95057\\n184,12.08,89541\\n185,12.09,262322\\n186,12.09,126265\\n187,12.09,116299\\n188,12.085,616570\\n189,12.09,206320\\n190,12.085,194461\\n191,12.095,437244\\n192,12.1,409290\\n193,12.1,1094756\\n194,12.09,1320894\\n720,12.16,616151\\n721,12.14,288584\\n722,12.165,367942\\n723,12.17,211663\\n724,12.155,328778\\n725,12.18,321260\\n726,12.185,258213\\n727,12.18,190225\\n728,12.185,145388\\n729,12.18,84324\\n730,12.185,116865\\n731,12.18,96311\\n732,12.19,123704\\n733,12.195,299353\\n734,12.195,148053\\n735,12.2,222043\\n736,12.193,231727\\n737,12.18,187274\\n738,12.165,163035\\n739,12.17,41339\\n740,12.1756,91594\\n741,12.185,84226\\n742,12.19,40834\\n743,12.185,78368\\n744,12.185,41949\\n745,12.19,33157\\n746,12.185,72876\\n747,12.19,32872\\n748,12.19,39880\\n749,12.19,65067\\n750,12.2,382040\\n751,12.18,280205\\n752,12.19,35287\\n753,12.195,175866\\n754,12.185,272520\\n755,12.1947,99882\\n756,12.233,1129365\\n757,12.24,685027\\n758,12.24,286163\\n759,12.24,95083\\n760,12.24,124096\\n761,12.245,168135\\n762,12.255,907743\\n763,12.27,203690\\n764,12.269,74311\\n765,12.265,178899\\n766,12.265,542864\\n767,12.255,275176\\n768,12.22,357369\\n769,12.22,54740\\n770,12.223,68473\\n771,12.235,180674\\n772,12.235,152017\\n773,12.25,176903\\n774,12.25,48872\\n775,12.235,238859\\n776,12.235,54701\\n777,12.25,193947\\n778,12.2591,230078\\n779,12.25,160788\\n780,12.2563,96171\\n781,12.255,81076\\n782,12.247,320494\\n783,12.245,43009\\n784,12.25,274618\\n785,12.25,66856\\n786,12.255,69228\\n787,12.255,74611\\n788,12.2705,305958\\n789,12.2769,55579\\n790,12.275,110143\\n791,12.275,406446\\n792,12.2642,222168\\n793,12.265,18053\\n794,12.275,483799\\n795,12.275,28262\\n796,12.285,327274\\n797,12.29,73763\\n798,12.285,74667\\n799,12.29,22120\\n800,12.29,76495\\n801,12.285,33053\\n802,12.295,275659\\n803,12.2856,274675\\n804,12.285,31581\\n805,12.28,52126\\n806,12.2801,145603\\n807,12.285,24987\\n808,12.2701,225679\\n809,12.27,90296\\n810,12.2748,52196\\n811,12.27,48535\\n812,12.265,146419\\n813,12.26,34059\\n814,12.265,30980\\n815,12.28,184492\\n816,12.275,54634\\n817,12.275,46120\\n818,12.28,54864\\n819,12.28,67144\\n820,12.28,74363\\n821,12.27,26057\\n822,12.275,45874\\n823,12.28,16544\\n824,12.27,156526\\n825,12.275,45542\\n826,12.27,141393\\n827,12.255,294885\\n828,12.255,58989\\n829,12.255,26228\\n830,12.26,57890\\n831,12.253,144255\\n832,12.26,62421\\n833,12.26,28390\\n834,12.26,31633\\n835,12.25,25730\\n836,12.26,22722\\n837,12.26,30443\\n838,12.253,94394\\n839,12.255,55723\\n840,12.26,80496\\n841,12.25,23406\\n842,12.255,59847\\n843,12.255,49341\\n844,12.255,42801\\n845,12.26,88006\\n846,12.255,30213\\n847,12.26,87586\\n848,12.255,27501\\n849,12.27,300525\\n850,12.28,281456\\n851,12.275,74752\\n852,12.275,49703\\n853,12.28,61026\\n854,12.285,282459\\n855,12.29,175765\\n856,12.29,62750\\n857,12.295,421547\\n858,12.295,54942\\n859,12.29,305952\\n860,12.29,62120\\n861,12.28,1754797\\n862,12.28,53923\\n863,12.26,226402\\n864,12.265,43354\\n865,12.28,237534\\n866,12.27,791776\\n867,12.265,67916\\n868,12.27,58575\\n869,12.27,58577\\n870,12.265,57384\\n871,12.27,69423\\n872,12.2648,56574\\n873,12.265,174626\\n874,12.265,83608\\n875,12.27,84274\\n876,12.27,176792\\n877,12.27,106765\\n878,12.26,152775\\n879,12.27,51085\\n880,12.265,42946\\n881,12.27,159297\\n882,12.265,42187\\n883,12.27,60799\\n884,12.28,466890\\n885,12.28,160265\\n886,12.28,140106\\n887,12.28,90763\\n888,12.28,87605\\n889,12.275,411175\\n890,12.28,101797\\n891,12.27,51126\\n892,12.28,119692\\n893,12.28,170596\\n894,12.28,93924\\n895,12.28,130823\\n896,12.28,326457\\n897,12.275,58886\\n898,12.28,249295\\n899,12.27,178490\\n900,12.255,574487\\n901,12.26,241713\\n902,12.265,427166\\n903,12.26,114187\\n904,12.2699,138682\\n905,12.27,202729\\n906,12.26,170024\\n907,12.255,613425\\n908,12.26,418579\\n909,12.26,437824\\n910,12.255,457126\\n911,12.265,548344\\n912,12.275,1130338\\n913,12.275,680549\\n914,12.27,1397923\\na1509543000,12.39,1100\\n1,12.394,2121796\\n2,12.37,372327\\n3,12.305,701887\\n4,12.365,360450\\n5,12.34,485788\\n6,12.39,343971\\n7,12.4015,363814\\n8,12.36,298133\\n9,12.39,163903\\n10,12.415,268498\\n11,12.42,394306\\n12,12.44,541612\\n13,12.44,278060\\n14,12.45,486381\\n15,12.445,829201\\n16,12.42,424469\\n17,12.4042,336219\\n18,12.4001,196040\\n19,12.43,250182\\n20,12.43,106736\\n21,12.43,171078\\n22,12.41,213637\\n23,12.38,410585\\n24,12.4,274190\\n25,12.41,223366\\n26,12.415,172354\\n27,12.415,154148\\n28,12.41,151766\\n29,12.38,226176\\n30,12.38,132163\\n31,12.3688,233951\\n32,12.34,257444\\n33,12.345,371833\\n34,12.34,193992\\n35,12.3342,189087\\n36,12.36,311918\\n37,12.375,142834\\n38,12.38,82397\\n39,12.38,113484\\n40,12.395,202119\\n41,12.405,205735\\n42,12.395,177097\\n43,12.39,114525\\n44,12.385,135390\\n45,12.375,200694\\n46,12.375,70394\\n47,12.365,456836\\n48,12.37,225874\\n49,12.375,283899\\n50,12.3558,271321\\n51,12.365,354749\\n52,12.355,244966\\n53,12.36,59444\\n54,12.365,198828\\n55,12.37,168346\\n56,12.37,125687\\n57,12.38,100825\\n58,12.38,82035\\n59,12.385,165929\\n60,12.38,66412\\n61,12.37,58127\\n62,12.375,59463\\n63,12.375,254092\\n64,12.375,81415\\n65,12.375,96590\\n66,12.365,336173\\n67,12.3659,34097\\n68,12.37,39364\\n69,12.365,130171\\n70,12.37,54991\\n71,12.37,93518\\n72,12.37,287105\\n73,12.38,335619\\n74,12.3866,135259\\n75,12.395,118333\\n76,12.405,260809\\n77,12.405,412678\\n78,12.39,394856\\n79,12.39,133234\\n80,12.39,65654\\n81,12.39,40471\\n82,12.385,71861\\n83,12.3927,128403\\n84,12.395,128781\\n85,12.4,132776\\n86,12.385,237945\\n87,12.38,96788\\n88,12.375,146232\\n89,12.38,61814\\n90,12.37,64049\\n91,12.38,47281\\n92,12.39,133463\\n93,12.385,48771\\n94,12.39,55151\\n95,12.3831,52487\\n96,12.38,65066\\n97,12.39,29162\\n98,12.385,48262\\n99,12.39,73846\\n100,12.4,142705\\n101,12.4,49456\\n102,12.39,61219\\n103,12.4,71460\\n104,12.385,104857\\n105,12.385,48358\\n106,12.38,40171\\n107,12.385,33963\\n108,12.37,81263\\n109,12.365,152370\\n110,12.37,81804\\n111,12.37,46367\\n112,12.365,59220\\n113,12.365,39928\\n114,12.38,282558\\n115,12.375,625505\\n116,12.365,685392\\n117,12.36,53348\\n118,12.375,266535\\n119,12.38,138653\\n120,12.375,50121\\n121,12.36,195620\\n122,12.36,57717\\n123,12.37,52009\\n124,12.37,37389\\n125,12.37,45371\\n126,12.365,177326\\n127,12.361,39923\\n128,12.325,988472\\n129,12.31,380381\\n130,12.325,257185\\n131,12.32,136499\\n132,12.32,233584\\n133,12.32,51556\\n134,12.33,52110\\n135,12.33,93824\\n136,12.33,353845\\n137,12.345,98146\\n138,12.35,162090\\n139,12.335,69302\\n140,12.335,127658\\n141,12.3331,52625\\n142,12.34,82384\\n143,12.335,136948\\n144,12.33,43250\\n145,12.33,58012\\n146,12.333,60915\\n147,12.335,70032\\n148,12.345,637235\\n149,12.36,241658\\n150,12.35,304509\\n151,12.3575,114017\\n152,12.36,88873\\n153,12.37,111759\\n154,12.38,143529\\n155,12.38,50853\\n156,12.36,180504\\n157,12.37,65828\\n158,12.38,130702\\n159,12.38,100021\\n160,12.38,169821\\n161,12.385,123843\\n162,12.37,143574\\n163,12.38,145237\\n164,12.38,104493\\n165,12.38,63986\\n166,12.375,79661\\n167,12.36,203078\\n168,12.38,167503\\n169,12.38,57648\\n170,12.38,121817\\n171,12.38,70438\\n172,12.375,78130\\n173,12.38,86053\\n174,12.38,73114\\n175,12.365,290047\\n176,12.36,122753\\n177,12.36,75961\\n178,12.36,81044\\n179,12.36,127448\\n180,12.355,88391\\n181,12.37,330037\\n182,12.375,645269\\n183,12.375,205245\\n184,12.375,81665\\n185,12.38,114056\\n186,12.39,258927\\n187,12.39,547155\\n188,12.37,1693504\\n189,12.36,209916\\n190,12.36,242971\\n191,12.36,152552\\n192,12.36,201561\\n193,12.365,266216\\n194,12.355,529314\\n195,12.35,828811\\n721,12.3,671752\\n722,12.3248,203246\\n723,12.36,302210\\n724,12.38,363645\\n725,12.3656,304890\\n726,12.335,182841\\n727,12.345,262138\\n728,12.33,252747\\n729,12.325,120478\\n730,12.325,63254\\n731,12.345,206431\\n732,12.36,244597\\n733,12.3767,113872\\n734,12.375,155363\\n735,12.355,134596\\n736,12.335,250352\\n737,12.305,230452\\n738,12.29,270820\\n739,12.31,175870\\n740,12.315,395093\\n741,12.33,364655\\n742,12.295,481825\\n743,12.29,141625\\n744,12.27,160153\\n745,12.27,203131\\n746,12.275,138052\\n747,12.2797,41565\\n748,12.2608,210366\\n749,12.26,71055\\n750,12.28,324226\\n751,12.28,28177\\n752,12.28,27158\\n753,12.285,79027\\n754,12.27,91336\\n755,12.2806,182444\\n756,12.295,260238\\n757,12.295,166276\\n758,12.299,213115\\n759,12.29,23375\\n760,12.28,177046\\n761,12.28,61093\\n762,12.28,38193\\n763,12.285,77315\\n764,12.27,124119\\n765,12.285,70806\\n766,12.3,151135\\n767,12.323,444670\\n768,12.32,142488\\n769,12.32,314966\\n770,12.3222,33716\\n771,12.315,103579\\n772,12.335,555451\\n773,12.3482,414429\\n774,12.355,157434\\n775,12.359,345672\\n776,12.353,186837\\n777,12.36,44209\\n778,12.35,86260\\n779,12.37,317802\\n780,12.37,115407\\n781,12.355,302205\\n782,12.35,122365\\n783,12.365,120643\\n784,12.36,156568\\n785,12.375,531516\\n786,12.3752,73408\\n787,12.38,69524\\n788,12.37,83735\\n789,12.39,222896\\n790,12.39,60596\\n791,12.385,28412\\n792,12.395,336819\\n793,12.3923,191832\\n794,12.3938,229996\\n795,12.395,102038\\n796,12.3992,332477\\n797,12.395,17081\\n798,12.41,256539\\n799,12.415,334823\\n800,12.4137,99120\\n801,12.425,210634\\n802,12.415,244619\\n803,12.4117,37486\\n804,12.42,159273\\n805,12.42,34721\\n806,12.415,22462\\n807,12.415,92525\\n808,12.41,45919\\n809,12.4138,37220\\n810,12.42,256852\\n811,12.42,134659\\n812,12.419,36843\\n813,12.42,163438\\n814,12.4133,230807\\n815,12.41,60350\\n816,12.42,163424\\n817,12.42,247199\\n818,12.41,46048\\n819,12.405,109104\\n820,12.4,20225\\n821,12.39,137699\\n822,12.39,300054\\n823,12.39,401049\\n824,12.41,417762\\n825,12.405,36813\\n826,12.405,68112\\n827,12.395,101602\\n828,12.395,40198\\n829,12.39,160892\\n830,12.3899,56610\\n831,12.38,59044\\n832,12.4,128074\\n833,12.3999,12750\\n834,12.41,190271\\n835,12.4,16005\\n836,12.401,37618\\n837,12.41,37472\\n838,12.405,169044\\n839,12.405,21695\\n840,12.405,229472\\n841,12.4071,75007\\n842,12.41,88692\\n843,12.41,28098\\n844,12.4127,171224\\n845,12.41,115661\\n846,12.42,118153\\n847,12.42,86090\\n848,12.42,66662\\n849,12.41,31591\\n850,12.42,517478\\n851,12.415,195037\\n852,12.43,101581\\n853,12.41,140167\\n854,12.417,228249\\n855,12.42,95252\\n856,12.42,34683\\n857,12.417,24158\\n858,12.415,36026\\n859,12.415,26224\\n860,12.415,28397\\n861,12.41,33905\\n862,12.415,40192\\n863,12.415,116695\\n864,12.42,26515\\n865,12.405,128419\\n866,12.405,125980\\n867,12.405,30505\\n868,12.405,39660\\n869,12.405,41692\\n870,12.405,25807\\n871,12.4043,56960\\n872,12.405,49163\\n873,12.4,45126\\n874,12.405,62746\\n875,12.405,60050\\n876,12.4,40269\\n877,12.39,329748\\n878,12.395,530736\\n879,12.4075,546327\\n880,12.395,290161\\n881,12.39,104867\\n882,12.3857,156073\\n883,12.38,37754\\n884,12.39,790733\\n885,12.381,28613\\n886,12.38,49456\\n887,12.38,96543\\n888,12.3799,234190\\n889,12.3799,108453\\n890,12.365,143817\\n891,12.385,277785\\n892,12.385,39861\\n893,12.39,166772\\n894,12.39,215855\\n895,12.39,91543\\n896,12.39,169427\\n897,12.4,118699\\n898,12.41,207294\\n899,12.405,115364\\n900,12.405,75039\\n901,12.4,79394\\n902,12.395,177160\\n903,12.4069,308572\\n904,12.4091,87409\\n905,12.41,65356\\n906,12.405,322426\\n907,12.405,44367\\n908,12.405,351392\\n909,12.4,80910\\n910,12.405,212351\\n911,12.4,206113\\n912,12.4,285275\\n913,12.415,1412546\\n914,12.42,573904\\n915,12.42,874644\\na1509715800,12.41,700\\n1,12.415,329083\\n2,12.4,126685\\n3,12.4095,303030\\n4,12.395,98931\\n5,12.435,299853\\n6,12.44,226132\\n7,12.435,181157\\n8,12.43,185468\\n9,12.419,35175\\n10,12.425,156965\\n11,12.4,68497\\n12,12.44,661092\\n13,12.419,845065\\n14,12.38,153800\\n15,12.4,113883\\n16,12.4157,352128\\n17,12.415,148741\\n18,12.4238,623993\\n19,12.425,825431\\n20,12.4,347501\\n21,12.385,73711\\n22,12.385,26464\\n23,12.3952,90503\\n24,12.385,98793\\n25,12.38,220345\\n26,12.4,612169\\n27,12.386,331959\\n28,12.38,704823\\n29,12.36,80718\\n30,12.355,71005\\n31,12.355,92629\\n32,12.355,187641\\n33,12.35,90129\\n34,12.35,79103\\n35,12.34,59490\\n36,12.3276,121681\\n37,12.33,98307\\n38,12.3328,91242\\n39,12.335,17996\\n40,12.33,42227\\n41,12.3331,40915\\n42,12.32,103531\\n43,12.325,24478\\n44,12.34,103045\\n45,12.37,566444\\n46,12.355,324040\\n47,12.35,102424\\n48,12.355,124584\\n49,12.35,23254\\n50,12.36,145108\\n51,12.36,13755\\n52,12.36,48081\\n53,12.355,16989\\n54,12.355,16005\\n55,12.365,285556\\n56,12.37,262224\\n57,12.38,237289\\n58,12.3752,78236\\n59,12.37,21479\\n60,12.38,31298\\n61,12.385,147455\\n62,12.3899,19439\\n63,12.3855,268531\\n64,12.3801,25311\\n65,12.37,99121\\n66,12.38,82238\\n67,12.41,529956\\n68,12.405,839527\\n69,12.4,418456\\n70,12.3942,130728\\n71,12.39,355309\\n72,12.39,225682\\n73,12.385,22755\\n74,12.38,102764\\n75,12.39,117729\\n76,12.3863,10692\\n77,12.385,11958\\n78,12.38,21814\\n79,12.385,21144\\n80,12.405,260928\\n81,12.39,366343\\n82,12.395,14900\\n83,12.39,18500\\n84,12.39,95888\\n85,12.3844,46287\\n86,12.385,41904\\n87,12.395,152155\\n88,12.3959,34306\\n89,12.395,30324\\n90,12.395,55378\\n91,12.395,221443\\n92,12.395,24808\\n93,12.395,44440\\n94,12.375,1176981\\n95,12.375,123784\\n96,12.371,227181\\n97,12.37,206276\\n98,12.3727,187326\\n99,12.38,35359\\n100,12.37,230355\\n101,12.37,33318\\n102,12.3737,16954\\n103,12.374,24665\\n104,12.365,59318\\n105,12.365,18523\\n106,12.365,193681\\n107,12.37,24839\\n108,12.365,18453\\n109,12.365,54740\\n110,12.365,19803\\n111,12.37,53812\\n112,12.37,22845\\n113,12.365,23972\\n114,12.365,53309\\n115,12.36,21055\\n116,12.365,22800\\n117,12.36,20800\\n118,12.36,24480\\n119,12.37,128945\\n120,12.355,309211\\n121,12.35,29709\\n122,12.355,29375\\n123,12.36,215949\\n124,12.355,121613\\n125,12.36,63932\\n126,12.355,37228\\n127,12.3584,8793\\n128,12.355,485233\\n129,12.344,424074\\n130,12.345,27058\\n131,12.34,171798\\n132,12.3463,19138\\n133,12.3438,266005\\n134,12.345,104898\\n135,12.34,19585\\n136,12.3477,38831\\n137,12.34,24886\\n138,12.34,28156\\n139,12.345,40492\\n140,12.353,109776\\n141,12.355,10752\\n142,12.355,46921\\n143,12.355,17652\\n144,12.35,24746\\n145,12.36,24350\\n146,12.34,301674\\n147,12.34,23951\\n148,12.343,31424\\n149,12.345,29656\\n150,12.33,118112\\n151,12.345,323390\\n152,12.345,26306\\n153,12.335,60384\\n154,12.33,45054\\n155,12.3374,39037\\n156,12.335,19930\\n157,12.335,32444\\n158,12.335,27259\\n159,12.33,26931\\n160,12.3465,215555\\n161,12.345,10115\\n162,12.345,28909\\n163,12.355,309375\\n164,12.3466,671118\\n165,12.34,47604\\n166,12.347,385191\\n167,12.34,250476\\n168,12.345,56538\\n169,12.345,53763\\n170,12.345,43185\\n171,12.33,141289\\n172,12.33,31586\\n173,12.33,25953\\n174,12.335,22005\\n175,12.3249,314187\\n176,12.325,20654\\n177,12.33,23809\\n178,12.33,29987\\n179,12.33,196865\\n180,12.3399,23067\\n181,12.34,47023\\n182,12.335,62324\\n183,12.335,146898\\n184,12.335,53018\\n185,12.34,51776\\n186,12.34,128779\\n187,12.34,49690\\n188,12.34,272203\\n189,12.345,30067\\n190,12.35,86257\\n191,12.3338,334257\\n192,12.335,84853\\n193,12.34,143973\\n194,12.335,976600\\n195,12.36,1199057\\n\",\"_5Y\":\"EXCHANGE%3DNYSE\\nMARKET_OPEN_MINUTE=570\\nMARKET_CLOSE_MINUTE=960\\nINTERVAL=604800\\nCOLUMNS=DATE,CLOSE,VOLUME,CDAYS\\nDATA=\\nTIMEZONE_OFFSET=-300\\na1352494800,10.93,232571230,5\\n1,10.5,198977807,5\\na1353693600,11.1,111320925,4\\na1354309200,11.45,201569587,5\\n1,11.48,188152748,5\\n2,11.1,165844594,5\\n3,11.86,305976038,5\\n4,12.87,436050281,4\\n5,13.57,358170953,5\\n6,14,279331936,5\\n7,14.11,243129489,5\\n8,13.68,189538645,5\\n9,13.02,353086442,5\\n10,13.1,157962726,5\\n11,13.02,134394381,5\\n12,12.48,149084343,5\\n13,12.61,195910572,5\\n14,12.98,132602402,5\\nTIMEZONE_OFFSET=-240\\na1363377600,13.45,215891039,5\\n1,13.26,158375691,5\\na1364500800,13.15,103201082,5\\na1365192000,12.44,185774240,5\\n1,13.53,174262210,5\\n2,12.93,198673274,5\\n3,13.67,198051159,5\\n4,13.83,164807292,5\\n5,14.11,190702762,5\\n6,15.08,212712606,5\\n7,14.79,238023827,5\\n8,15.68,238341586,5\\n9,15.73,266087102,5\\n10,15.37,162618775,5\\n11,15,198877506,5\\n12,15.47,213176637,5\\n13,16.7,189136583,5\\n14,17.11,175863646,5\\n15,16.76,172034291,5\\n16,17.02,224328311,5\\n17,17.5,167632820,5\\n18,17.02,168151755,5\\n19,16.3,161180659,5\\n20,16.45,143559097,5\\n21,16.19,193851302,5\\n22,17,220724390,5\\n23,17.35,165681007,5\\n24,17.39,174142547,5\\n25,17.05,174552385,5\\n26,17.09,169481623,5\\n27,17.11,204438991,5\\n28,17.53,153533582,5\\n29,17.6,216800651,5\\n30,16.89,205388762,5\\nTIMEZONE_OFFSET=-300\\na1383944400,16.85,201065117,5\\n1,17.07,168818648,5\\n2,17.01,152006669,5\\n3,17.08,98048650,5\\n4,16.7,220777511,5\\n5,16.59,182232642,5\\n6,15.42,445088486,5\\n7,15.3,128672716,5\\n8,15.51,138347450,5\\n9,16.07,259147089,5\\n10,16.52,241815515,5\\n11,15.83,168794093,5\\n12,14.96,258512094,5\\n13,14.97,279784506,5\\n14,15.24,172014074,5\\n15,15.16,109412926,5\\n16,15.39,153590606,5\\n17,15.62,159419204,5\\nTIMEZONE_OFFSET=-240\\na1394827200,15.08,157777254,5\\n1,15.47,132593991,5\\n2,15.45,140994132,5\\n3,16.13,208553814,5\\n4,15.63,162424288,5\\na1397764800,16,88600013,5\\na1398456000,15.78,144964742,5\\n1,15.9,139623676,5\\n2,15.77,142565447,5\\n3,15.76,101645341,5\\n4,16.02,97381635,5\\n5,16.44,110174005,5\\n6,17.08,157665735,5\\n7,16.56,115401568,5\\n8,16.67,109640674,5\\n9,17.28,151929895,5\\na1404417600,17.32,90855636,5\\na1405108800,17.47,110955946,5\\n1,17.72,151278148,5\\n2,17.62,163017989,5\\n3,16.81,160653453,5\\n4,17.09,120963485,5\\n5,17.31,110200618,5\\n6,17.17,82627642,5\\n7,17.41,73388357,5\\n8,17.14,94797575,5\\n9,16.59,122049001,5\\n10,16.65,127292017,5\\n11,16.33,113593995,5\\n12,14.59,329909459,5\\n13,13.79,189992285,5\\n14,14.02,200516117,5\\n15,13.78,195546987,5\\n16,14.09,192341677,5\\nTIMEZONE_OFFSET=-300\\na1415394000,14.17,144014905,5\\n1,15.14,195365472,5\\n2,15.43,159574299,5\\n3,15.73,103682092,5\\n4,15.7,152965467,5\\n5,14.99,126563672,5\\n6,15.03,197245838,5\\n7,15.45,64990682,5\\n8,15.36,76640594,5\\n9,15.21,160490849,5\\n10,15.02,142899649,5\\n11,14.91,97124966,5\\n12,14.71,171596841,5\\n13,15.86,183787583,5\\n14,16.3,126193955,5\\n15,16.4,113562584,5\\n16,16.34,101146388,5\\n17,15.93,130658157,5\\nTIMEZONE_OFFSET=-240\\na1426276800,16.2,128508756,5\\n1,16.48,152515701,5\\n2,15.98,155965260,5\\na1428004800,16.03,85621533,5\\na1428696000,16.03,111405417,5\\n1,15.76,125413921,5\\n2,15.77,102823675,5\\n3,15.81,177457507,5\\n4,15.67,122042150,5\\n5,15.48,103542638,5\\n6,15.27,105786484,5\\n7,15.17,76786161,5\\n8,14.78,154136872,5\\n9,15.23,118690682,5\\n10,15.11,119062623,5\\n11,15.4,119865146,5\\na1435867200,14.87,116853559,5\\na1436558400,14.48,142793948,5\\n1,14.69,128243707,5\\n2,14.39,131163822,5\\n3,14.83,220015858,5\\n4,14.8,109127974,5\\n5,14.78,103845517,5\\n6,13.86,121256338,5\\n7,13.74,220404353,5\\n8,13.56,175422476,5\\n9,13.71,121657095,5\\n10,14.28,191529694,5\\n11,13.53,163921701,5\\n12,13.99,187350314,5\\n13,14.97,152918599,5\\n14,15.28,118472613,5\\n15,15.67,132930128,5\\n16,14.81,196448011,5\\nTIMEZONE_OFFSET=-300\\na1446843600,14.52,128968555,5\\n1,13.92,109117257,5\\n2,14.6,116104596,5\\n3,14.53,59760795,5\\n4,14.2,135890244,5\\n5,13.64,121700128,5\\n6,13.8,177752626,5\\na1450990800,14.31,113417027,5\\n1,14.09,66246634,5\\na1452286800,12.54,254124901,5\\n1,11.97,324836866,5\\n2,12.14,193786299,4\\n3,11.94,253835084,5\\n4,11.45,235459315,5\\n5,11.55,205264632,5\\n6,12.1,133281963,4\\n7,12.47,186229114,5\\n8,13.59,216914981,5\\n9,13.29,161487842,5\\nTIMEZONE_OFFSET=-240\\na1458331200,13.64,158862307,5\\na1458849600,13.06,114507637,5\\na1459540800,13.1,160761744,5\\n1,12.55,154552305,5\\n2,12.94,125320251,5\\n3,13.61,157929358,5\\n4,13.56,238449570,5\\n5,13.44,179196543,5\\n6,13.22,117323306,5\\n7,13.19,121976951,5\\n8,13.45,97638431,5\\n9,13.04,165780877,4\\n10,13.1,118586854,5\\n11,13.26,141067399,5\\n12,12.52,208522209,5\\n13,12.72,215450772,5\\n14,13.09,144752645,4\\n15,13.57,138075467,5\\n16,13.84,137230986,5\\n17,12.66,291263846,5\\n18,12.19,270574057,5\\n19,12.33,131768270,5\\n20,12.39,105776650,5\\n21,12.38,144451708,5\\n22,12.5,135849790,5\\n23,12.38,128729554,4\\n24,12.11,245335376,5\\n25,12.17,18993510,5\\n26,12.07,143367132,5\\n27,12.29,148134928,5\\n28,11.91,151311759,5\\n29,12.02,128360436,5\\n30,11.72,197983871,5\\n31,11.34,167145198,5\\nTIMEZONE_OFFSET=-300\\na1478898000,12.28,246260138,5\\n1,11.76,181968462,5\\na1480096800,12.04,77641246,4\\na1480712400,12.24,229577660,5\\n1,13.17,205459961,5\\n2,12.63,174117169,5\\n3,12.46,102223363,5\\n4,12.13,93567638,4\\n5,12.76,234093226,4\\n6,12.63,213551026,5\\n7,12.36,142305784,4\\n8,12.49,203330395,5\\n9,12.56,197906098,5\\n10,12.51,152163687,5\\n11,12.58,127248089,5\\n12,12.47,117281595,4\\n13,12.65,177720114,5\\n14,12.53,146003539,5\\nTIMEZONE_OFFSET=-240\\na1489780800,12.48,167762495,5\\n1,11.62,332979092,5\\n2,11.64,205897723,5\\n3,11.23,214095619,5\\na1492113600,11.11,151601754,5\\na1492804800,11.34,193982546,5\\n1,11.47,220238501,5\\n2,11.14,252489433,5\\n3,10.92,178234445,5\\n4,10.87,194482319,5\\n5,10.93,235330077,5\\n6,11.35,195113428,4\\n7,11.13,195489845,5\\n8,11.22,195197356,5\\n9,11.04,171677895,5\\n10,11.19,165620385,5\\n11,11.26,136169653,4\\n12,11.68,151326787,5\\n13,11.53,133191037,5\\n14,11.17,236801110,5\\n15,10.95,185156068,5\\n16,10.77,157694940,5\\n17,10.56,163513658,5\\n18,10.82,163745585,5\\n19,11.35,194513148,5\\n20,11.36,144326329,4\\n21,11.62,170625584,5\\n22,11.84,148746424,5\\n23,11.97,153185372,5\\n24,12.31,237809090,5\\n25,12.05,161571340,5\\n26,12.1,176256405,5\\n27,12.06,186759331,5\\n\",\"corp_actions\":\"[{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"split\\\",\\\"_date\\\":\\\"439223400\\\",\\\"_old_shares\\\":\\\"2\\\",\\\"_new_shares\\\":\\\"3\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"split\\\",\\\"_date\\\":\\\"518189400\\\",\\\"_old_shares\\\":\\\"2\\\",\\\"_new_shares\\\":\\\"3\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"split\\\",\\\"_date\\\":\\\"569082600\\\",\\\"_old_shares\\\":\\\"1\\\",\\\"_new_shares\\\":\\\"2\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"split\\\",\\\"_date\\\":\\\"773501400\\\",\\\"_old_shares\\\":\\\"1\\\",\\\"_new_shares\\\":\\\"2\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"split\\\",\\\"_date\\\":\\\"965309400\\\",\\\"_old_shares\\\":\\\"1000\\\",\\\"_new_shares\\\":\\\"1748\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"546528600\\\",\\\"_amount\\\":\\\"0.1073\\\",\\\"_payable_date\\\":\\\"549552600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"554477400\\\",\\\"_amount\\\":\\\"0.1073\\\",\\\"_payable_date\\\":\\\"557501400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"562343400\\\",\\\"_amount\\\":\\\"0.14302\\\",\\\"_payable_date\\\":\\\"565367400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"570119400\\\",\\\"_amount\\\":\\\"0.1430\\\",\\\"_payable_date\\\":\\\"573229800\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"578064600\\\",\\\"_amount\\\":\\\"0.1716\\\",\\\"_payable_date\\\":\\\"581175000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"586013400\\\",\\\"_amount\\\":\\\"0.1716\\\",\\\"_payable_date\\\":\\\"589123800\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"593875800\\\",\\\"_amount\\\":\\\"0.1716\\\",\\\"_payable_date\\\":\\\"596989800\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"601655400\\\",\\\"_amount\\\":\\\"0.2145\\\",\\\"_payable_date\\\":\\\"604765800\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"609600600\\\",\\\"_amount\\\":\\\"0.2145\\\",\\\"_payable_date\\\":\\\"612711000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"617635800\\\",\\\"_amount\\\":\\\"0.2145\\\",\\\"_payable_date\\\":\\\"620659800\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"625411800\\\",\\\"_amount\\\":\\\"0.2145\\\",\\\"_payable_date\\\":\\\"628525800\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"633191400\\\",\\\"_amount\\\":\\\"0.2145\\\",\\\"_payable_date\\\":\\\"636301800\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"641136600\\\",\\\"_amount\\\":\\\"0.2145\\\",\\\"_payable_date\\\":\\\"644247000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"649085400\\\",\\\"_amount\\\":\\\"0.2145\\\",\\\"_payable_date\\\":\\\"652161660\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"656947800\\\",\\\"_amount\\\":\\\"0.2145\\\",\\\"_payable_date\\\":\\\"660027660\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"664727400\\\",\\\"_amount\\\":\\\"0.2145\\\",\\\"_payable_date\\\":\\\"667837800\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"672672600\\\",\\\"_amount\\\":\\\"0.1144\\\",\\\"_payable_date\\\":\\\"675748860\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"680794200\\\",\\\"_amount\\\":\\\"0.1144\\\",\\\"_payable_date\\\":\\\"683904600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"688660200\\\",\\\"_amount\\\":\\\"0.1144\\\",\\\"_payable_date\\\":\\\"691684200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"696522600\\\",\\\"_amount\\\":\\\"0.1144\\\",\\\"_payable_date\\\":\\\"699546600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"704381400\\\",\\\"_amount\\\":\\\"0.1144\\\",\\\"_payable_date\\\":\\\"707405400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"712243800\\\",\\\"_amount\\\":\\\"0.1144\\\",\\\"_payable_date\\\":\\\"715354200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"720109800\\\",\\\"_amount\\\":\\\"0.1144\\\",\\\"_payable_date\\\":\\\"723220200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"727972200\\\",\\\"_amount\\\":\\\"0.1144\\\",\\\"_payable_date\\\":\\\"730996200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"735831000\\\",\\\"_amount\\\":\\\"0.1144\\\",\\\"_payable_date\\\":\\\"738941400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"743779800\\\",\\\"_amount\\\":\\\"0.1144\\\",\\\"_payable_date\\\":\\\"746890200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"751642200\\\",\\\"_amount\\\":\\\"0.1144\\\",\\\"_payable_date\\\":\\\"754756200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"759421800\\\",\\\"_amount\\\":\\\"0.1144\\\",\\\"_payable_date\\\":\\\"762532200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"767367000\\\",\\\"_amount\\\":\\\"0.1287\\\",\\\"_payable_date\\\":\\\"770477400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"775315800\\\",\\\"_amount\\\":\\\"0.1287\\\",\\\"_payable_date\\\":\\\"778426200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"783178200\\\",\\\"_amount\\\":\\\"0.1487\\\",\\\"_payable_date\\\":\\\"786292200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"790957800\\\",\\\"_amount\\\":\\\"0.1487\\\",\\\"_payable_date\\\":\\\"794068200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"798903000\\\",\\\"_amount\\\":\\\"0.1773\\\",\\\"_payable_date\\\":\\\"802013400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"807197400\\\",\\\"_amount\\\":\\\"0.1773\\\",\\\"_payable_date\\\":\\\"809962200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"815063400\\\",\\\"_amount\\\":\\\"0.2002\\\",\\\"_payable_date\\\":\\\"817828200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"822925800\\\",\\\"_amount\\\":\\\"0.2002\\\",\\\"_payable_date\\\":\\\"825690600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"830871000\\\",\\\"_amount\\\":\\\"0.2002\\\",\\\"_payable_date\\\":\\\"833601660\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"838819800\\\",\\\"_amount\\\":\\\"0.2203\\\",\\\"_payable_date\\\":\\\"841757400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"846685800\\\",\\\"_amount\\\":\\\"0.2203\\\",\\\"_payable_date\\\":\\\"849537000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"854461800\\\",\\\"_amount\\\":\\\"0.2203\\\",\\\"_payable_date\\\":\\\"857192460\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"862407000\\\",\\\"_amount\\\":\\\"0.2403\\\",\\\"_payable_date\\\":\\\"865258200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"870269400\\\",\\\"_amount\\\":\\\"0.2403\\\",\\\"_payable_date\\\":\\\"873207000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"878135400\\\",\\\"_amount\\\":\\\"0.2403\\\",\\\"_payable_date\\\":\\\"880986600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"885997800\\\",\\\"_amount\\\":\\\"0.2403\\\",\\\"_payable_date\\\":\\\"888849000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"893856600\\\",\\\"_amount\\\":\\\"0.2403\\\",\\\"_payable_date\\\":\\\"896707800\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"901719000\\\",\\\"_amount\\\":\\\"0.2403\\\",\\\"_payable_date\\\":\\\"904656600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"909585000\\\",\\\"_amount\\\":\\\"0.2632\\\",\\\"_payable_date\\\":\\\"912522600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"917447400\\\",\\\"_amount\\\":\\\"0.2632\\\",\\\"_payable_date\\\":\\\"920298600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"925392600\\\",\\\"_amount\\\":\\\"0.2632\\\",\\\"_payable_date\\\":\\\"928243800\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"933255000\\\",\\\"_amount\\\":\\\"0.2632\\\",\\\"_payable_date\\\":\\\"936192600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"941117400\\\",\\\"_amount\\\":\\\"0.2860\\\",\\\"_payable_date\\\":\\\"944058600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"949069800\\\",\\\"_amount\\\":\\\"0.2860\\\",\\\"_payable_date\\\":\\\"951921000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"956928600\\\",\\\"_amount\\\":\\\"0.2860\\\",\\\"_payable_date\\\":\\\"959866200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"964445400\\\",\\\"_amount\\\":\\\"0.2860\\\",\\\"_payable_date\\\":\\\"967815000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"972916200\\\",\\\"_amount\\\":\\\"0.3000\\\",\\\"_payable_date\\\":\\\"975681000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"980519400\\\",\\\"_amount\\\":\\\"0.3000\\\",\\\"_payable_date\\\":\\\"983457000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"988637400\\\",\\\"_amount\\\":\\\"0.3000\\\",\\\"_payable_date\\\":\\\"991402200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"996672600\\\",\\\"_amount\\\":\\\"0.3000\\\",\\\"_payable_date\\\":\\\"999610200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1004538600\\\",\\\"_amount\\\":\\\"0.1500\\\",\\\"_payable_date\\\":\\\"1007389800\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1012228200\\\",\\\"_amount\\\":\\\"0.1000\\\",\\\"_payable_date\\\":\\\"1014993000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1020259800\\\",\\\"_amount\\\":\\\"0.1000\\\",\\\"_payable_date\\\":\\\"1023111000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1028122200\\\",\\\"_amount\\\":\\\"0.1000\\\",\\\"_payable_date\\\":\\\"1031059800\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1035988200\\\",\\\"_amount\\\":\\\"0.1000\\\",\\\"_payable_date\\\":\\\"1038839400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1043850600\\\",\\\"_amount\\\":\\\"0.1000\\\",\\\"_payable_date\\\":\\\"1046701800\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1051709400\\\",\\\"_amount\\\":\\\"0.1000\\\",\\\"_payable_date\\\":\\\"1054560600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1059571800\\\",\\\"_amount\\\":\\\"0.1000\\\",\\\"_payable_date\\\":\\\"1062509400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1067437800\\\",\\\"_amount\\\":\\\"0.1000\\\",\\\"_payable_date\\\":\\\"1070289000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1075300200\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1078151400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1083159000\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1086096600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1091021400\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1094045400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1098970200\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1101911400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1106749800\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1109687400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1114695000\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1117632600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1122643800\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1125581400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1130506200\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1133447400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1138285800\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1141223400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1146231000\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1149168600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1154352600\\\",\\\"_amount\\\":\\\"0.05\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1157117400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1327674600\\\",\\\"_amount\\\":\\\"0.05\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1330612200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1333027800\\\",\\\"_amount\\\":\\\"0.05000\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1338557400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1335792600\\\",\\\"_amount\\\":\\\"0.05\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1338557400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1343827800\\\",\\\"_amount\\\":\\\"0.05\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1346765400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1351690200\\\",\\\"_amount\\\":\\\"0.05\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1354545000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1359383400\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1362148200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1367415000\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1370266200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1375277400\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1378215000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1383139800\\\",\\\"_amount\\\":\\\"0.1\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1385994600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1391005800\\\",\\\"_amount\\\":\\\"0.125\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1393857000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1398778200\\\",\\\"_amount\\\":\\\"0.125\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1401975000\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1398864600\\\",\\\"_amount\\\":\\\"0.125\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1401715800\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1406727000\\\",\\\"_amount\\\":\\\"0.125\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1409664600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1414589400\\\",\\\"_amount\\\":\\\"0.125\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1417444200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1422455400\\\",\\\"_amount\\\":\\\"0.15\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1425306600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1430314200\\\",\\\"_amount\\\":\\\"0.15\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1433165400\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1438176600\\\",\\\"_amount\\\":\\\"0.15\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1441114200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1446039000\\\",\\\"_amount\\\":\\\"0.15\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1448980200\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1452781800\\\",\\\"_amount\\\":\\\"0.40\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1456842600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1453905000\\\",\\\"_amount\\\":\\\"0.40\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1456842600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1461763800\\\",\\\"_amount\\\":\\\"0.15\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1464787800\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1469539800\\\",\\\"_amount\\\":\\\"0.15\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1472736600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1477402200\\\",\\\"_amount\\\":\\\"0.15\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1480602600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1484749800\\\",\\\"_amount\\\":\\\"0.20\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1488378600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1492522200\\\",\\\"_amount\\\":\\\"0.15\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1496323800\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1500557400\\\",\\\"_amount\\\":\\\"0.15\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1504272600\\\"},{\\\"_quote\\\":\\\"NYSE:F\\\",\\\"_type\\\":\\\"dividend\\\",\\\"_date\\\":\\\"1508506200\\\",\\\"_amount\\\":\\\"0.15\\\",\\\"_amount_currency\\\":\\\"USD\\\",\\\"_payable_date\\\":\\\"1512138600\\\"}]\",\"related_items\":[{\"ticker\":\"INDEXDJX:.DJI\",\"name\":\"Dow
-        Jones\",\"timezone_offset\":-18000,\"is_index\":true,\"different_market_session\":false},{\"ticker\":\"INDEXSP:.INX\",\"name\":\"S\\u0026P
-        500\",\"timezone_offset\":-18000,\"is_index\":true,\"different_market_session\":false},{\"ticker\":\"NYSE:TM\",\"name\":\"TM\",\"timezone_offset\":-18000,\"is_index\":false},{\"ticker\":\"OTCMKTS:DDAIF\",\"name\":\"DDAIF\",\"timezone_offset\":-18000,\"is_index\":false},{\"ticker\":\"OTCMKTS:VLKAY\",\"name\":\"VLKAY\",\"timezone_offset\":-18000,\"is_index\":false},{\"ticker\":\"NYSE:GM\",\"name\":\"GM\",\"timezone_offset\":-18000,\"is_index\":false},{\"ticker\":\"OTCMKTS:AUDVF\",\"name\":\"AUDVF\",\"timezone_offset\":-18000,\"is_index\":false},{\"ticker\":\"OTCMKTS:RNSDF\",\"name\":\"RNSDF\",\"timezone_offset\":-18000,\"is_index\":false},{\"ticker\":\"NYSE:PAG\",\"name\":\"PAG\",\"timezone_offset\":-18000,\"is_index\":false}]}};\ngoogle.finance.data.numberFormat
-        = [{'threshold':1000000, 'symbol':'M'}, {'threshold':1000000000,'symbol':'B'},
-        {'threshold':1000000000000,'symbol':'T'}] ;\n_setStickyUrlParams(\"ei=3v_8WZjXCsWAepqjieAE\");\nif
-        (_s_Store) {\n_s_Store._allowMatchAdvancedSearch = true;\nvar _fieldToDisplayNameMap
-        = {GrossMargin:\"Gross margin&nbsp;(%)\",Return1Week:\"1w return\",Return156Week:\"156w
-        return\",NextYearEPS:\"Next year EPS\",EarningsAfterTaxes:\"Earnings after
-        taxes\",RevenueGrowthRate5Years:\"5y revenue growth rate\",LTDebtToAssetsYear:\"LT
-        debt/assets (Recent&nbsp;yr)&nbsp;(%)\",DividendPerShare:\"Div per share\",MarketCap:\"Market
-        cap\",NetProfitMarginPercent:\"Net profit margin&nbsp;(%)\",Float:\"Float\",EarningsBeforeTaxes:\"Earnings
-        before taxes\",QuotePercChange:\"Quote change&nbsp;(%)\",TotalDebtToEquityYear:\"Total
-        debt/equity (Recent&nbsp;yr)&nbsp;(%)\",TotalDebtToCapitalQuarter:\"Total
-        debt/capital (Recent&nbsp;qtr)&nbsp;(%)\",LTDebtToCapitalQuarter:\"LT debt/capital
-        (Recent&nbsp;qtr)&nbsp;(%)\",EPSGrowthRate10Years:\"10y EPS growth rate\",Beta:\"Beta\",CapitalGain:\"Capital
-        gain\",ReturnOnAssetsPTM:\"Return on assets (PTM)&nbsp;(%)\",BetaDown:\"Beta
-        down from RAS\",IncomeDividend:\"Income dividend\",RevenueGrowthRate10Years:\"10y
-        revenue growth rate\",MarketCapShareBasis:\"Market cap share basis\",Return4Week:\"4w
-        return\",IAD:\"Div rate indicated annual\",Price150DayAverage:\"150d avg price\",EPSGrowthRate5Years:\"5y
-        EPS growth rate\",ReturnOnAssetsTTM:\"Return on assets (TTM)&nbsp;(%)\",TotalDebtToAssetsYear:\"Total
-        debt/assets (Recent&nbsp;yr)&nbsp;(%)\",Volume:\"Volume\",CurrentRatioYear:\"Current
-        ratio\",DividendRecentQuarter:\"Div recent quarter\",Low52Week:\"52w low\",ExpenseRatio:\"Expense
-        ratio\",Price1DayPercChange:\"1d&nbsp;price change&nbsp;(%)\",Price13WeekPercChange:\"13w&nbsp;price
-        change&nbsp;(%)\",ReturnOnEquity5Years:\"Return on equity (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",TotalDebtToCapitalYear:\"Total
-        debt/capital (Recent&nbsp;yr)&nbsp;(%)\",TotalDebtToAssetsQuarter:\"Total
-        debt/assets (Recent&nbsp;qtr)&nbsp;(%)\",NavChange:\"Nav change\",OperatingMargin:\"Operating
-        margin&nbsp;(%)\",DPSRecentYear:\"Div per share (Recent&nbsp;yr)\",ANI:\"Earnings
-        after taxes (Recent&nbsp;yr)\",High52Week:\"52w high\",AverageVolume:\"Average
-        volume\",Return13Week:\"13w return\",PriceToCashFlowPerShare:\"Price to cash
-        flow per share\",Price26WeekPercChange:\"26w&nbsp;price change&nbsp;(%)\",QuoteChange:\"Quote
-        change\",ATAXRATE:\"Tax rate (Recent&nbsp;yr)\",NetIncomeChangePerc:\"Net
-        income change&nbsp;(%)\",ReturnOnInvestment5Years:\"Return on investment (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",PE:\"P/E
-        ratio\",ReturnOnInvestmentYear:\"Return on investment (Recent&nbsp;yr)&nbsp;(%)\",Price200DayAverage:\"200d
-        avg price\",DividendNextQuarter:\"Div next quarter\",PriceYTDPercChange:\"YTD&nbsp;price
-        change&nbsp;(%)\",EBITD:\"EBITDA\",ReturnOnInvestmentTTM:\"Return on investment
-        (TTM)&nbsp;(%)\",NavChangePercent:\"Nav change&nbsp;(%)\",EBITDMargin:\"EBITDA
-        margin&nbsp;(%)\",LTDebtToEquityQuarter:\"LT debt/equity (Recent&nbsp;qtr)&nbsp;(%)\",BetaRAS:\"Beta
-        from RAS\",PriceSales:\"Price to sales\",NetAssets:\"Net assets\",ReturnOnEquityTTM:\"Return
-        on equity (TTM)&nbsp;(%)\",CashPerShareYear:\"Cash/share\",ReturnDay:\"1d
-        return\",ReturnOnAssets5Years:\"Return on assets (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",Return52Week:\"52w
-        return\",ForwardPE1Year:\"1y fwd P/E\",NetIncomeGrowthRate5Years:\"5y net
-        income growth rate\",DividendYield:\"Div yield&nbsp;(%)\",Dividend:\"Div from
-        cash flow\",BetaUp:\"Beta up from RAS\",nprice:\"Price from RAS\",LTDebtToCapitalYear:\"LT
-        debt/capital (Recent&nbsp;yr)&nbsp;(%)\",Return260Week:\"260w return\",ReturnOnEquityQuarter:\"Return
-        on equity (Recent&nbsp;qtr)&nbsp;(%)\",ACOGS:\"Cost of goods sold\",LTDebtToAssetsQuarter:\"LT
-        debt/assets (Recent&nbsp;qtr)&nbsp;(%)\",PriceToBook:\"Price to book\",LTDebtToEquityYear:\"LT
-        debt/equity (Recent&nbsp;yr)&nbsp;(%)\",ReturnYTD:\"Return YTD\",ReturnOnEquityYear:\"Return
-        on equity (Recent&nbsp;yr)&nbsp;(%)\",ReturnOnAssetsQuarter:\"Return on assets
-        (Recent&nbsp;qtr)&nbsp;(%)\",TotalDebtToEquityQuarter:\"Total debt/equity
-        (Recent&nbsp;qtr)&nbsp;(%)\",NavPrior:\"Nav prior\",AINTCOV:\"Interest coverage\",EPS:\"EPS\",ReturnOnInvestmentQuarter:\"Return
-        on investment (Recent&nbsp;qtr)&nbsp;(%)\",QuoteLast:\"Last price\",Price50DayAverage:\"50d
-        avg price\",Price4WeekPercChange:\"4w&nbsp;price change&nbsp;(%)\",ReturnOnAssetsYear:\"Return
-        on assets (Recent&nbsp;yr)&nbsp;(%)\",MarketCapRAS:\"Mkt cap from RAS\",Price52WeekPercChange:\"52w&nbsp;price
-        change&nbsp;(%)\",InstitutionalPercentHeld:\"Institutional percent held\",ShortInterestRatioPercent:\"Short
-        interest ratio&nbsp;(%)\",BookValuePerShareYear:\"Book value/share\",ReturnOnEquityPTM:\"Return
-        on equity (PTM)&nbsp;(%)\"};\n_s_Store._asStore._addStrings(_fieldToDisplayNameMap);\n}\nif
-        (_s_Store) {\n_s_Store._allowMultipleInBox = true;\n}\ngoogle.finance.renderRecentQuotes();\n</script>\n<div
-        class=\"g-section g-tpl-right-1\">\n<div class=\"g-unit g-first\">\n<div class=g-c>\n<div
-        id=r-perf class=\"g-section g-tpl-67-33 g-split nwp\">\n<div id=r-perf-quotes
-        class=\"id-r-perf-quotes g-unit g-first\"></div>\n<div id=r-perf-charts class=\"id-r-perf-charts
-        g-unit\"></div>\n</div>\n<script>google.finance.renderRelativePerformance();</script>\n</div>\n</div>\n<div
-        class=g-unit>\n<div id=market-data-div class=\"id-market-data-div nwp g-floatfix\">\n<div
-        id=price-panel class=\"id-price-panel goog-inline-block\">\n<div>\n<span class=\"pr\">\n<span
-        id=\"ref_13606_l\">12.36</span>\n</span>\n<div class=\"id-price-change nwp\">\n<span
-        class=\"ch bld\"><span class=\"chr\" id=\"ref_13606_c\">-0.06</span>\n<span
-        class=\"chr\" id=\"ref_13606_cp\">(-0.48%)</span>\n</span>\n</div>\n</div>\n<div>After
-        Hours:&nbsp;<span class=bld id=\"ref_13606_el\">12.33</span>\n<span id=\"ref_13606_ec\"
-        class=\"chr\">-0.03</span>\n<span id=\"ref_13606_ecp\" class=\"chr\">(-0.24%)</span>\n<div
-        id=\"ref_13606_elt\">Nov 3, 7:00PM EDT&nbsp;&nbsp;<div class=mdata-dis>\n<span
-        class=dis-large><nobr>NYSE\nreal-time data -\n<a href=\"//www.google.com/help/stock_disclaimer.html#realtime\"
-        \ class=dis-large>Disclaimer</a>\n</nobr></span>\n<div>Currency in USD</div>\n</div>\n</div>\n</div>\n</div>\n<div
-        class=\"snap-panel-and-plusone\">\n<div class=\"snap-panel\">\n<table class=\"snap-data\">\n<tr>\n<td
-        class=\"key\"\n          data-snapfield=\"range\">Range\n</td>\n<td class=\"val\">12.32
-        - 12.46\n</td>\n</tr>\n<tr>\n<td class=\"key\"\n          data-snapfield=\"range_52week\">52
-        week\n</td>\n<td class=\"val\">10.47 - 13.27\n</td>\n</tr>\n<tr>\n<td class=\"key\"\n
-        \         data-snapfield=\"open\">Open\n</td>\n<td class=\"val\">12.41\n</td>\n</tr>\n<tr>\n<td
-        class=\"key\"\n          data-snapfield=\"vol_and_avg\">Vol / Avg.\n</td>\n<td
-        class=\"val\">33.22M/38.10M\n</td>\n</tr>\n<tr>\n<td class=\"key\"\n          data-snapfield=\"market_cap\">Mkt
-        cap\n</td>\n<td class=\"val\">49.10B\n</td>\n</tr>\n<tr>\n<td class=\"key\"\n
-        \         data-snapfield=\"pe_ratio\">P/E\n</td>\n<td class=\"val\">11.21\n</td>\n</tr></table><table
-        class=\"snap-data\">\n<tr>\n<td class=\"key\"\n          data-snapfield=\"latest_dividend-dividend_yield\">Div/yield\n</td>\n<td
-        class=\"val\">0.15/4.85\n</td>\n</tr>\n<tr>\n<td class=\"key\"\n          data-snapfield=\"eps\">EPS\n</td>\n<td
-        class=\"val\">1.10\n</td>\n</tr>\n<tr>\n<td class=\"key\"\n          data-snapfield=\"shares\">Shares\n</td>\n<td
-        class=\"val\">3.99B\n</td>\n</tr>\n<tr>\n<td class=\"key\"\n          data-snapfield=\"beta\">Beta\n</td>\n<td
-        class=\"val\">1.25\n</td>\n</tr>\n<tr>\n<td class=\"key\"\n          data-snapfield=\"inst_own\">Inst.
-        own\n</td>\n<td class=\"val\">55%\n</td>\n</tr>\n</table>\n</div>\n<div class=\"plusone-box\"
-        id=\"plusone-box\">\n<g:plusone size=\"standard\" source=\"google:FINANCE\"></g:plusone></div>\n</div>\n</div>\n<script>google.finance.renderMarketData();</script>\n<div
-        id=\"sharebox-data\"\n     itemscope=\"itemscope\"\n     itemtype=\"http://schema.org/Intangible/FinancialQuote\">\n<meta
-        itemprop=\"name\"\n        content=\"Ford Motor Company\" />\n<meta itemprop=\"url\"\n
-        \       content=\"https://www.google.com/finance?cid=13606\" />\n<meta itemprop=\"imageUrl\"\n
-        \       content=\"https://www.google.com/finance/chart?cht=g&q=NYSE:F&tkr=1&p=1d&enddatetime=2017-11-03T16:01:24Z\"
-        />\n<meta itemprop=\"tickerSymbol\"\n        content=\"F\" />\n<meta itemprop=\"exchange\"\n
-        \       content=\"NYSE\" />\n<meta itemprop=\"exchangeTimezone\"\n        content=\"America/New_York\"
-        />\n<meta itemprop=\"price\"\n        content=\"12.36\" />\n<meta itemprop=\"priceChange\"\n
-        \       content=\"-0.06\" />\n<meta itemprop=\"priceChangePercent\"\n        content=\"-0.48\"
-        />\n<meta itemprop=\"isAfterHours\"\n        content=\"true\">\n<meta itemprop=\"afterHoursPrice\"\n
-        \       content=\"12.33\">\n<meta itemprop=\"afterHoursPriceChange\"\n        content=\"-0.03\">\n<meta
-        itemprop=\"afterHoursPriceChangePercent\"\n        content=\"-0.24\">\n<meta
-        itemprop=\"afterHoursQuoteTime\"\n        content=\"2017-11-03T23:00:52Z\">\n<meta
-        itemprop=\"quoteTime\"\n        content=\"2017-11-03T16:01:24Z\" />\n<meta
-        itemprop=\"dataSource\"\n        content=\"NYSE real-time data\" />\n<meta
-        itemprop=\"dataSourceDisclaimerUrl\"\n        content=\"//www.google.com/help/stock_disclaimer.html#realtime\"
-        />\n<meta itemprop=\"priceCurrency\"\n        content=\"USD\" />\n</div>\n</div>\n</div>\n<div
-        class=\"g-section g-tpl-right-1 sfe-break-top-5\">\n<div class=\"g-unit g-first\">\n<div
-        class=g-c><div>\n<div id=newstabsgroup>\n<div class=\"g-section g-tpl-25-75
-        g-split hdg\">\n<div class=\"g-unit g-first\">\n<h3>News</h3>\n</div>\n<div
-        class=g-unit>\n<div id=news-panel-tabs class=\"id-news-tabs\" style=\"display:none;\">\n<div
-        class=\"goog-tab goog-tab-selected\">\n<a id=news_tab_title class=t>\n<b class=t><b
-        class=t>Relevance</b></b></a>\n</div>\n<div class=goog-tab>\n<a id=news_by_date_tab_title
-        class=t>\n<b class=t><b class=t>Date</b></b></a>\n</div>\n</div>\n</div>\n</div>\n<div
-        id=tabs-clear class=\"id-tabs-clear goog-tab-bar-clear hide\"></div>\n<div
-        id=news_div_cont class=id-news_div_cont style=\"display:none;\"></div>\n<div
-        id=news_by_date_div_cont class=id-news_by_date_div_cont style=\"display:none;\"></div>\n</div>\n<div
-        class=\"sfe-section clf\" id=news-footer>\n<div id=news-sidebar-footer class=\"g-section
-        g-tpl-67-33 g-split\">\n<div class=\"g-unit g-first\">\n<a href=\"/finance/company_news?q=NYSE:F&amp;ei=3v_8WZjXCsWAepqjieAE\"
-        >All news for Ford Motor Company &raquo;</a>\n</div><div class=g-unit>\n<a
-        href=\"/finance/company_news?q=NYSE:F&amp;ei=3v_8WZjXCsWAepqjieAE&output=rss\">Subscribe</a>\n<a
-        href=\"/finance/company_news?q=NYSE:F&amp;ei=3v_8WZjXCsWAepqjieAE&output=rss\"><img
-        class=SP_subscribe src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\" alt=\"Subscribe.\"
-        id=rss\n        width=15 height=15 /></a>\n</div>\n</div>\n</div>\n</div>\n<div
-        id=ad class=\"sfe-break-top sfe-break-bottom-16\">\n<div id=ad-label class=\"id-ad-label\">Advertisement</div>\n<!--
-        Async AdSlot 1 for Ad unit 'com.gf.company' ### Size: [[300,250]] -->\n<!--
-        Adslot's refresh function: googletag.pubads().refresh([gptadslots[0]]) -->\n<div
-        id='div-gpt-ad-4209476-1'>\n<script>\ngoogletag.cmd.push(function() { googletag.display('div-gpt-ad-4209476-1');
-        });\n</script>\n</div>\n<!-- End AdSlot 1 -->\n</div>\n<div class=\"g-section
-        g-tpl-25-75 g-split hdg\">\n<div class=\"g-unit g-first\">\n<h3>Events</h3>\n</div>\n<div
-        class=\"g-unit\">\n<div class=sfe-break-right-em>\n<img src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"\n
-        \              width=16 height=16 class=SP_calendar id=calendar alt=\"\">\n<a
-        onclick=\"_GF_click('', 'add_ical', 'F', '')\" href=\"//www.google.com/calendar/render?ei=3v_8WZjXCsWAepqjieAE&hl=en&cid=http://finance.google.com:80%2Ffinance%2Fevents%3Fq%3DNYSE%3AF%26output%3Dical\"
-        >Add F to my calendars</a>\n</div>\n</div>\n</div>\n<div class=\"events sfe-section\">\n<div
-        class=event>\n<div class=\"bld date\">Jan 24, 2018</div>\n<div>Q4 2017 Ford
-        Motor Co Earnings Release (Estimated)\n- <span class=time>9:30AM EST</span>
-        -\n<a onclick=\"_GF_click('', 'add_cal_evnt', 'F', '')\" href= \"\n  //www.google.com/calendar/event?ei=3v_8WZjXCsWAepqjieAE&hl=en&action=TEMPLATE&text=Q4+2017+Ford+Motor+Co+Earnings+Release+(Estimated)&dates=20180124T143000Z/20180124T153000Z&sprop=finance\"
-        \ class=time>\n<img alt=\"Add to calendar\" src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"\n
-        \               width=16 height=16 class=SP_calendar id=calendar>\n</a>\n</div>\n</div>\n<div
-        class=event>\n<div class=\"bld date\">Nov 1, 2017</div>\n<div>October 2017
-        Ford Motor Co US Sales Call -\n<a onclick=\"_GF_click('', 'webcast', 'F',
-        '')\" href=//www.google.com/url?source=finance&q=https%3A%2F%2Fservices.choruscall.com%2Flinks%2Ff171101SnVDK8VA.html&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNFipOH1uSNrBn_ZEp-EC2SNvj6Jhg
-        \ class=time>\n<img alt=\"Webcast\" src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"\n
-        \               width=19 height=16 class=SP_webcast id=webcast>\n</a>\n</div>\n</div>\n<div
-        class=event>\n<div class=\"bld date\">Nov 1, 2017</div>\n<div>October 2017
-        Ford Motor Co US Sales Release\n</div>\n</div>\n<div class=event>\n<div class=\"bld
-        date\">Oct 26, 2017</div>\n<div>Q3 2017 Ford Motor Co Earnings Release\n</div>\n</div>\n<div
-        class=event>\n<div class=\"bld date\">Oct 26, 2017</div>\n<div>Q3 2017 Ford
-        Motor Co Earnings Call -\n<a onclick=\"_GF_click('', 'webcast', 'F', '')\"
-        href=//www.google.com/url?source=finance&q=http%3A%2F%2Fservices.choruscall.com%2Flinks%2Ff171026SnVDK8VA.html&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNG3-UPIKi2nb2seQx0Tpv7BxAqKow
-        \ class=time>\n<img alt=\"Webcast\" src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"\n
-        \               width=19 height=16 class=SP_webcast id=webcast>\n</a>\n</div>\n</div>\n<div
-        class=event>\n<div class=\"bld date\">Oct 3, 2017</div>\n<div>Ford Motor Co
-        CEO Strategic Update -\n<a onclick=\"_GF_click('', 'webcast', 'F', '')\" href=//www.google.com/url?source=finance&q=http%3A%2F%2Fservices.choruscall.com%2Flinks%2Ff171003SnVDK8VA.html&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNE9jm-GAdmJ8F0OT9FDx6wjmwEC8Q
-        \ class=time>\n<img alt=\"Webcast\" src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"\n
-        \               width=19 height=16 class=SP_webcast id=webcast>\n</a>\n</div>\n</div>\n<div
-        class=event>\n<div class=\"bld date\">Oct 3, 2017</div>\n<div>September 2017
-        Ford Motor Co US Sales Call -\n<a onclick=\"_GF_click('', 'webcast', 'F',
-        '')\" href=//www.google.com/url?source=finance&q=http%3A%2F%2Fservices.choruscall.com%2Flinks%2Ff171003AMSnVDK8VA.html&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNGw2Fr1NtT1UwGHS7LFpz5XkWifEw
-        \ class=time>\n<img alt=\"Webcast\" src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"\n
-        \               width=19 height=16 class=SP_webcast id=webcast>\n</a>\n</div>\n</div>\n<div
-        class=event>\n<div class=\"bld date\">Oct 3, 2017</div>\n<div>September 2017
-        Ford Motor Co US Sales Release\n</div>\n</div>\n<div class=event>\n<div class=\"bld
-        date\">Sep 1, 2017</div>\n<div>August 2017 Ford Motor Co Corporate Sales Call
-        -\n<a onclick=\"_GF_click('', 'webcast', 'F', '')\" href=//www.google.com/url?source=finance&q=http%3A%2F%2Fservices.choruscall.com%2Flinks%2Ff170901SnVDK8VA.html&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNGCzylXrXvysZalIhrGZAqVaVBcZA
-        \ class=time>\n<img alt=\"Webcast\" src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"\n
-        \               width=19 height=16 class=SP_webcast id=webcast>\n</a>\n</div>\n</div>\n<div
-        class=event>\n<div class=\"bld date\">Sep 1, 2017</div>\n<div>August 2017
-        Ford Motor Co Corporate Sales Release\n</div>\n</div>\n<table><tr>\n<td>\n<a
-        href=\"//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.dailyfinance.com%2Fevent%2FF%2Fusa&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNGTpbseFGxqCRLZS7h7ldTwDpxRlw\"
-        >\nMore events from DailyFinance &raquo;</a>&nbsp;\n&nbsp;&nbsp;<nobr>\n</td>\n</tr></table>\n</div>\n<div
-        class=hdg><h3>Key stats and ratios</h3></div>\n<div class=sfe-section>\n<table
-        class=\"quotes rgt nwp\" width=\"100%\">\n<thead><tr>\n<td width=50%>\n<td
-        class=colHeader>Q3 (Sep &#39;17)\n<td class=colHeader>2016\n</tr></thead>\n<tr>\n<td
-        class=\"lft name\">Net profit margin\n<td class=period>4.31%\n<td class=period>3.03%\n<tr>\n<td
-        class=\"lft name\">Operating margin\n<td class=period>2.66%\n<td class=period>2.71%\n<tr>\n<td
-        class=\"lft name\">EBITD margin\n<td class=period>-\n<td class=period>10.91%\n<tr>\n<td
-        class=\"lft name\">Return on average assets\n<td class=period>2.53%\n<td class=period>1.99%\n<tr>\n<td
-        class=\"lft name\">Return on average equity\n<td class=period>19.16%\n<td
-        class=period>15.90%\n<tr>\n<td class=\"lft name\">Employees\n<td class=period>201,000\n<td
-        class=period>-\n<tr>\n<td class=\"lft name\">CDP Score\n<td class=period>-\n<td
-        class=period>\n<a id=m-cdi href=//www.google.com/url?source=finance&q=https%3A%2F%2Fwww.cdp.net%2Fen%2Fresponses%2F6595&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNHZ8w-1mUCx_Xs5SadafBzV1IONSg>A-</a>\n</table>\n<div
-        class=sfe-break-top>\n<a id=\"similar\" href=\"/finance/similar?q=NYSE:F&amp;ei=3v_8WZjXCsWAepqjieAE\"
-        >Screen stocks with similar metrics &raquo;</a></div>\n</div>\n<div class=hdg><h3>Address</h3></div>\n<div
-        class=sfe-section>1 American Rd<br/>DEARBORN, MI 48126-2701<br/>United States\n-
-        <a href=\"http://maps.google.com/maps?ei=3v_8WZjXCsWAepqjieAE&q=1+American+Rd+DEARBORN+48126-2701+United+States%20(Ford+Motor+Company)\"
-        >Map</a><br/>+1-313-3223000 (Phone)<br>+1-302-6555049 (Fax)<br>\n</div>\n<div
-        class=hdg><h3>Website links</h3></div>\n<div class=sfe-section><div class=item>\n<a
-        id=fs-chome href=\"//www.google.com/url?source=finance&q=http%3A%2F%2Fcorporate.ford.com&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNFRqLZSZivTPNri70eKUZCFjUkvWA\"
-        >\nhttp://corporate.ford.com\n</a>\n</div>\n<a id=fs- class=item href=\"//www.google.com/url?source=finance&q=http%3A%2F%2Fmedia.ford.com%2Fnewsroom%2Ffeature_display.cfm%3Frelease%3D17691+http%3A%2F%2Fblog.ford.com%2FBLOG.CFM&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNFQNjjaXYYZv8oqp_lbRMe0PDYObw\"
-        >Official Blog</a>\n</div>\n<div class=hdg><h3>External links</h3></div>\n<div
-        class=sfe-section>\n<div class=item><a id=m-analyst\n                 href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.marketwatch.com%2Finvesting%2Fstock%2FF%2Fanalystestimates&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNE8JqeT-oKpbFxjIDoFwdjruQVaFQ
-        >Analyst Estimates</a> - <font color=\"#6F6F6F\">MarketWatch</font></div>\n<div
-        class=item><a id=m-sec\n                 href=//www.google.com/url?source=finance&q=http%3A%2F%2Fgoogle.brand.edgar-online.com%3Fsym%3DF&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNHlPzLaJ6cu5bgHmvtT_BfZZSR5hg
-        >SEC Filings</a> - <font color=\"#6F6F6F\">EDGAR Online</font></div>\n<div
-        class=item><a id=m-hold\n                 href=//www.google.com/url?source=finance&q=http%3A%2F%2Finvesting.money.msn.com%2Finvestments%2Finstitutional-ownership%3Fsymbol%3DF&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNFldy7Ixwj9UOFGFr_SpWID7yPMog
-        >Major Holders</a> - <font color=\"#6F6F6F\">MSN Money</font></div>\n<div
-        class=item><a id=m-research\n                 href=//www.google.com/url?source=finance&q=https%3A%2F%2Fcommerce.us.reuters.com%2Fpurchase%2FadvancedSearch.do%3Fsymbol%3DF%26rpc%3D68&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNEETXyTFc5C0TqCP1aocKkS4e10Ig
-        >Research Reports</a> - <font color=\"#6F6F6F\">Reuters</font></div>\n<div
-        class=item><a id=m-wiki\n                 href=//www.google.com/url?source=finance&q=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFord_Motor_Company&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNHqlZLZKztWSSum8fTwUnCW-YiTMQ
-        >About Company</a> - <font color=\"#6F6F6F\">Wikipedia</font></div>\n</div>\n</div>\n</div>\n<div
-        class=g-unit>\n<div id=top-section class=\"g-c sfe-break-right\">\n<div id=chart-section>\n<div>\n<div
-        id=compare-bar-wrapper class=id-compare-bar-wrapper>\n<div id=compare-bar
-        class=\"id-compare-bar g-section\">\n</div>\n</div>\n<div id=chart_anchor
-        class=id-chart_anchor></div>\n<div class=id-chart-footer>\n<div class=\"g-section
-        g-tpl-67-33 g-split sfe-break-bottom-8 overflow-floatfix\">\n<div class=\"g-unit
-        g-first\"><div class=\"id-chart-footer-links hide\">\n<span class=settings-link>Settings</span>
-        |\n<span class=technicals-link>Technicals</span> |\n<span style=\"white-space:nowrap;\">\n<img
-        width=\"16\" hight=\"9\" alt=\"Link to chart icon.\"\n            class=\"linktochart-img
-        SP_link\"\n            src=\"/finance/s/m4C5KaofCbA/images/cleardot.gif\"
-        />\n<span class=linktochart-link>\nLink to this view</span>\n</span>\n</div></div>\n<div
-        class=\"g-unit\">\n<span class=\"chart-dis\">Volume delayed by 15 mins.<br>Prices
-        are not from all markets.<br>\n<a href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.six-financial-information.com%2Fen%2Fhome%2Fprofile.html%3Futm_source%3Dgooglefinance%26utm_medium%3Dorganic%26utm_campaign%3DGoogle%2520Finance&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNEsxWFJKKSbYSBu4DBn16ZNPNPrTg>\nSources
-        include SIX.</a><br>\n</span>\n</div>\n</div>\n</div>\n<script>\nvar _minZoomDays
-        = 1;\nvar _minZoomDaysNoIntraDay = _minZoomDays;\nvar _timeZoneOffset = '-18000';\n_chartConfigObject
-        = {};\n_chartConfigObject.hasVolume = _displayVolume;\n_chartConfigObject.hasNews
-        = true;\n_chartConfigObject.hasExtendedHours = true;\n_chartConfigObject.hasDefaultZoomSetting
-        = true;\n_chartConfigObject.hasVerticalScaleSetting = true;\n_chartConfigObject.displayVolume
-        = 'true';\n_chartConfigObject.displayNewsPins = 'true';\n_chartConfigObject.displayDividends
-        = 'true';\n_chartConfigObject.displaySplits = 'true';\n_chartConfigObject.displayExtendedHours
-        = 'false';\n_chartConfigObject.enableCustomDateEntry = true\n_chartConfigObject.defaultZoomDays
-        = '3';\n_chartConfigObject.snapping = false;\n_chartConfigObject.verticalScaling
-        = 'maximized';\n_chartConfigObject.sparklineType = 'dynamic';\n// set _minZoomDays
-        and _minZoomDaysNoIntraDay in each page before emit the\n// chart to passing
-        the value to chart, otherwise default value will be use.\n_chartConfigObject.minZoomDaysNormal
-        = _minZoomDays;\n_chartConfigObject.minZoomDaysNoIntraDay = _minZoomDaysNoIntraDay;\n_chartConfigObject.enableIndicator
-        = true;\n_chartConfigObject.companyId = '13606';\n_chartConfigObject.enableRealtimeChart
-        = true;\n_chartConfigObject.isMarketOpenState = 0;\n_chartConfigObject.stateRemainingMinutes
-        = 824;\n_chartConfigObject.delayedMinutes = 0;\n_chartConfigObject.delayedMinutes
-        = Math.max(\n_chartConfigObject.delayedMinutes,\n15);\n_chartConfigObject.enableChartTypeSetting
-        = true;\n_chartConfigObject.lineStyle = 'IntervalBasedLine';\n_chartConfigObject.defaultInterval
-        = '86400';\n_chartConfigObject.enableIndicatorSetting = true;\n_chartConfigObject.biasSetting
-        = '';\n_chartConfigObject.emaSetting = '';\n_chartConfigObject.kdjSetting
-        = '';\n_chartConfigObject.macdSetting = '';\n_chartConfigObject.rsiSetting
-        = '';\n_chartConfigObject.smaSetting = '';\n_chartConfigObject.vmaSetting
-        = '';\n_chartConfigObject.cciSetting = '';\n_chartConfigObject.williamsPercentRSetting
-        = '';\n_chartConfigObject.bollingerBandsSetting = '';\n_chartConfigObject.fastStochasticSetting
-        = '';\n_chartConfigObject.slowStochasticSetting = '';\n_chartConfigObject.expandButtonEnabled
-        = true;\n_chartConfigObject.companyCurrency = 'USD';\n_chartConfigObject.displayDividendsUnits
-        = 'true';\n_external_target = \"\";\n_emitFlashChart(\n\"/finance/s/n-VxNKK74DU/chart9.swf?hl=en&gl=us\",\n_ticker,
-        _chartConfigObject,\"http:\\x2F\\x2Ffinance.google.com:80\");\n</script>\n<noscript>\n<div
-        id=image_chart style=\"display:block;\">\n<table>\n<tr><td class=itxt align=left>\n</td></tr>\n<tr><td>\n<img
-        alt=\"Chart.\" src=\"/finance/getchart?q=F&x=NYSE&p=3d&i=240&ei=3v_8WZjXCsWAepqjieAE\"
-        width=\"500\" height=\"322\">\n</td></tr>\n</table>\n</div>\n</noscript>\n<div
-        style=\"height:1em;\"></div>\n</div>\n</div>\n</div>\n<div class=\"g-c sfe-break-right\">\n<div
-        id=related class=\"id-related hide\">\n<div class=hdg>\n<div class=float>\n<h3>Related
-        companies</h3>\n</div>\n</div>\n<div>\n<div class=\"g-section g-tpl-50-50
-        g-split gf-control\">\n<div class=\"g-unit g-first\">\nShow:\n<select id=related-select
-        class=id-related-select>\n<option value=mrq >\nMost Recent Quarter\n</option>\n<option
-        value=mra selected>\nMost Recent Annual\n</option>\n</select>\n</div>\n<div
-        class=g-unit>\n<span class=\"id-related-edit-col linkbtn\">Add or remove columns</span>\n<button
-        class=id-related-save style=\"display:none\">Save changes</button>\n<button
-        class=id-related-cancel style=\"display:none\">Cancel</button>\n</div>\n</div>\n</div>\n<div
-        class=\"id-related-table gf-table-scroll-x jfk-scrollbar\"\n       style=\"padding-bottom:15px;\">\n</div>\n<div
-        class=sfe-section>\n<div class=\"g-section g-tpl-50-50 g-split\">\n<div class=\"g-unit
-        g-first\">Sector: <a id=sector href=\"?catid=us-TRBC:53&amp;ei=3v_8WZjXCsWAepqjieAE\"
-        >Cyclical Consumer Goods &amp; Services</a> &gt; Industry: <a href=\"?catid=us-TRBC:5310101010&amp;ei=3v_8WZjXCsWAepqjieAE\"
-        >Auto &amp; Truck Manufacturers - NEC</a>\n</div><div class=g-unit>\n<a href=\"//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.factset.com%2Fdata%2Ffactset_data%2Findustry-and-sector&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNFs--trlRc-eYGjDDnHwlyJw6M6KQ\"
-        >More from FactSet &raquo;</a>\n</div>\n</div>\n</div>\n</div>\n<div id=reorder
-        class=id-reorder><div class=mid-reorder>\n<div id=blogs-section\n>\n</div>\n<div
-        id=summary-section\n>\n<div id=summary>\n<div class=hdg><div class=float>\n<h3>Description</h3></div>\n<div
-        class=\"gf-reorder-btn SP_menu_button\"></div>\n</div>\n<div class=sfe-section>\n<div
-        class=companySummary>\nFord Motor Company is a global automotive and mobility
-        company. The Company's business includes designing, manufacturing, marketing,
-        and servicing a full line of Ford cars, trucks, and sport utility vehicles
-        (SUVs), as well as Lincoln luxury vehicles. The Company operates in four segments:
-        Automotive, Financial Services, Ford Smart Mobility LLC, and Central Treasury
-        Operations. The Automotive segment primarily includes the sale of Ford and
-        Lincoln brand vehicles, service parts, and accessories across the world. The
-        Financial Services segment primarily includes its vehicle-related financing
-        and leasing activities at Ford Motor Credit Company LLC. Ford Smart Mobility
-        LLC is a subsidiary formed to design, build, grow, and invest in emerging
-        mobility services. The Central Treasury Operations segment is primarily engaged
-        in decision making for investments, risk management activities, and providing
-        financing for the Automotive segment.\n<div class=sfe-break-top>\n<a id=m-rprofile
-        href=//www.google.com/url?source=finance&q=http%3A%2F%2Fstocks.us.reuters.com%2Fstocks%2FfullDescription.asp%3Frpc%3D66%26symbol%3DF&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNH0MxoVydieT2vtIJDqocOLw0u2TA
-        >\nMore from Reuters &raquo;\n</a></div>\n</div>\n</div>\n</div>\n</div><script>_tck('aft');</script>\n<div
-        id=mgmt-section\n>\n<div id=management style=\"margin-bottom:1.5em;\">\n<div
-        class=hdg><div class=float>\n<h3>Officers and directors</h3></div>\n<div class=\"gf-reorder-btn
-        SP_menu_button\"></div>\n</div>\n<div class=sfe-section>\n<table class=id-mgmt-table
-        width=100%><tbody>\n<tr >\n<td class=\"p linkbtn\">William Clay Ford Jr.\n<td
-        class=i>\n<td class=t>Executive Chairman of the Board\n</tr>\n<tr style=\"display:none;\">\n<td><img
-        width=1 height=1 border=0 align=right>\n<td class=i>\n<td class=t>\nAge: 59<br>\n<a
-        class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DF%26officerId%3D55699&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNFD2-t-mYc7C-yH4m6vNh_9kvuW_Q
-        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
-        class=grey-top>\n<td class=\"p linkbtn\">James P. Hackett\n<td class=i>\n<td
-        class=t>President, Chief Executive Officer, Director\n</tr>\n<tr style=\"display:none;\">\n<td><img
-        width=1 height=1 border=0 align=right>\n<td class=i>\n<td class=t>\nAge: 62<br>\n<a
-        class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DF%26officerId%3D2437754&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNHPXz_MJcmm8ZoBoHsh4RL_-t-VGw
-        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
-        class=grey-top>\n<td class=\"p linkbtn\">Robert L. Shanks\n<td class=i>\n<td
-        class=t>Chief Financial Officer, Executive Vice President\n</tr>\n<tr style=\"display:none;\">\n<td><img
-        width=1 height=1 border=0 align=right>\n<td class=i>\n<td class=t>\nAge: 64<br>\n<a
-        class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DF%26officerId%3D1373970&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNEhVF_35DjEErCKhU3EBqQ5UZXeJA
-        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
-        class=grey-top>\n<td class=\"p linkbtn\">Stephen T. Odell\n<td class=i>\n<td
-        class=t>Executive Vice President - Global Marketing, Sales and Service\n</tr>\n<tr
-        style=\"display:none;\">\n<td><img width=1 height=1 border=0 align=right>\n<td
-        class=i>\n<td class=t>\nAge: 62<br>\n<a class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DF%26officerId%3D1555792&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNHFGCm-oAzfq2qpvtmagJcQnpGYWg
-        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
-        class=grey-top>\n<td class=\"p linkbtn\">James D. Farley Jr.\n<td class=i>\n<td
-        class=t>Executive Vice President and President - Global Markets\n</tr>\n<tr
-        style=\"display:none;\">\n<td><img width=1 height=1 border=0 align=right>\n<td
-        class=i>\n<td class=t>\nAge: 54<br>\n<a class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DF%26officerId%3D1056801&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNF0PaSwiHzX3BcMSkqL3G_E9sztGQ
-        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
-        class=grey-top>\n<td class=\"p linkbtn\">Joseph R. Hinrichs\n<td class=i>\n<td
-        class=t>Executive Vice President and President - Global Operations\n</tr>\n<tr
-        style=\"display:none;\">\n<td><img width=1 height=1 border=0 align=right>\n<td
-        class=i>\n<td class=t>\nAge: 50<br>\n<a class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DF%26officerId%3D1093419&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNEa3qAAgtixt6VrMK9JHRMYgkeBQw
-        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
-        class=grey-top>\n<td class=\"p linkbtn\">Marcy Klevorn\n<td class=i>\n<td
-        class=t>Executive Vice President and President, Mobility\n</tr>\n<tr style=\"display:none;\">\n<td><img
-        width=1 height=1 border=0 align=right>\n<td class=i>\n<td class=t>\nAge: 57<br>\n<a
-        class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DF%26officerId%3D2559473&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNENvB9FEI7J6-J8zV4MMl-7XwuxSw
-        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
-        class=grey-top>\n<td class=\"p linkbtn\">Raj Nair\n<td class=i>\n<td class=t>Executive
-        Vice President, President - North America\n</tr>\n<tr style=\"display:none;\">\n<td><img
-        width=1 height=1 border=0 align=right>\n<td class=i>\n<td class=t>\nAge: 52<br>\n<a
-        class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DF%26officerId%3D1687662&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNGfWq_A9OsYpevzhmlI87_Qf5mLIg
-        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
-        class=grey-top>\n<td class=\"p linkbtn\">Hau Thai-Tang\n<td class=i>\n<td
-        class=t>Executive Vice President - Product Development and Purchasing\n</tr>\n<tr
-        style=\"display:none;\">\n<td><img width=1 height=1 border=0 align=right>\n<td
-        class=i>\n<td class=t>\nAge: 50<br>\n<a class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DF%26officerId%3D2415396&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNH4VA1MLqsOrWAxrYqr-5mpSrpeXA
-        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n<tr
-        class=grey-top>\n<td class=\"p linkbtn\">Ken Washington\n<td class=i>\n<td
-        class=t>Chief Technology Officer, Vice President - Research and Advanced Engineering\n</tr>\n<tr
-        style=\"display:none;\">\n<td><img width=1 height=1 border=0 align=right>\n<td
-        class=i>\n<td class=t>\nAge: 56<br>\n<a class=e-p href=//www.google.com/url?source=finance&q=http%3A%2F%2Fwww.reuters.com%2Ffinance%2Fstocks%2FofficerProfile%3Fsymbol%3DF%26officerId%3D2532182&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNHztL_JPYwLpMxr-BOjQw_RkPZgVw
-        >\nBio&nbsp;&amp;&nbsp;Compensation\n</a>&nbsp;-&nbsp;<font color=\"#606060\">Reuters</font><br>\n</table>\n<div
-        class=gb>\n<a href=\"//www.google.com/url?source=finance&q=http%3A%2F%2Fstocks.us.reuters.com%2Fstocks%2FofficersDirectors.asp%3Fsymbol%3DF%26WTmodLOC%3DC4-Officers-5&ei=3v_8WZjXCsWAepqjieAE&usg=AFQjCNGx9QTv7RTkIjoWaO71q91N_FTh3g\"
-        >\nFull list on Reuters &raquo;</a></div>\n</div>\n</div>\n</div>\n</div></div>\n</div>\n</div>\n</div>\n</div>\n</div></div></div></div></div><div
-        id=gf-foot><div id=fjfe&#45;edition&#45;links class=fjfe&#45;footer&#45;links>Google
-        Finance Beta available in: <a href=\"http://www.google.com.hk/finance?ei=3v_8WZjXCsWAepqjieAE\"
-        class=\"fjfe-edition-link\">Hong Kong</a> - <a href=\"http://www.google.ca/finance?ei=3v_8WZjXCsWAepqjieAE\"
-        class=\"fjfe-edition-link\">Canada</a> - <a href=\"http://www.google.com/finance?ei=3v_8WZjXCsWAepqjieAE\"
-        class=\"fjfe-edition-link\">U.S.</a> - <a href=\"http://www.google.com.hk/finance?hl=zh-CN&ei=3v_8WZjXCsWAepqjieAE\"
-        class=\"fjfe-edition-link\">China</a> - <a href=\"http://www.google.co.uk/finance?ei=3v_8WZjXCsWAepqjieAE\"
-        class=\"fjfe-edition-link\">U.K.</a></div><p class=fjfe&#45;footer&#45;disclaimer>Information
-        is provided \"as is\" and solely for informational purposes, not for trading
-        purposes or advice, and may be delayed.<br>To see all exchange delays, please
-        <a href=\"http://www.google.com/intl/en/googlefinance/disclaimer/?ei=3v_8WZjXCsWAepqjieAE\"
-        class=\"fjfe-secondary-link fjfe-no-sticky-params\"> see disclaimer</a>.</p><div
-        class=fjfe&#45;footer&#45;links>&copy;2017 Google - <a href=\"http://www.google.com?hl=en&ei=3v_8WZjXCsWAepqjieAE\">Google
-        Home</a> - <a href=\"http://googlefinanceblog.blogspot.com?ei=3v_8WZjXCsWAepqjieAE\">Blog</a>
-        - <a href=\"http://support.google.com/finance?hl=en&ei=3v_8WZjXCsWAepqjieAE\">Help</a>
-        - <a href=\"http://support.google.com/finance?ctx=report&hl=en&ei=3v_8WZjXCsWAepqjieAE&exch=NYSE&sym=F\">Report
-        a Problem</a> - <a href=\"http://www.google.com/intl/en/policies/privacy/?ei=3v_8WZjXCsWAepqjieAE\">Privacy
-        Policy</a> - <a href=\"http://www.google.com/intl/en/policies/terms/?ei=3v_8WZjXCsWAepqjieAE\">Terms
-        of Service</a></div></div>\n<script>\nvar _chartConfigObject;\nvar _cleardot;\nvar
-        _companyName;\nvar _eventid = '3v_8WZjXCsWAepqjieAE';\nvar _expid;\nvar _external_target;\nvar
-        _localDomain = 'www.google.com';\nvar _minZoomDays;\nvar _minZoomDaysNoIntraDay;\nvar
-        _prefs;\nvar _ticker;\nvar _urlSuffix;\n_setStickyUrlParams(\"ei=3v_8WZjXCsWAepqjieAE\");\nif
-        (_s_Store) {\n_s_Store._allowMatchAdvancedSearch = true;\nvar _fieldToDisplayNameMap
-        = {GrossMargin:\"Gross margin&nbsp;(%)\",Return1Week:\"1w return\",Return156Week:\"156w
-        return\",NextYearEPS:\"Next year EPS\",EarningsAfterTaxes:\"Earnings after
-        taxes\",RevenueGrowthRate5Years:\"5y revenue growth rate\",LTDebtToAssetsYear:\"LT
-        debt/assets (Recent&nbsp;yr)&nbsp;(%)\",DividendPerShare:\"Div per share\",MarketCap:\"Market
-        cap\",NetProfitMarginPercent:\"Net profit margin&nbsp;(%)\",Float:\"Float\",EarningsBeforeTaxes:\"Earnings
-        before taxes\",QuotePercChange:\"Quote change&nbsp;(%)\",TotalDebtToEquityYear:\"Total
-        debt/equity (Recent&nbsp;yr)&nbsp;(%)\",TotalDebtToCapitalQuarter:\"Total
-        debt/capital (Recent&nbsp;qtr)&nbsp;(%)\",LTDebtToCapitalQuarter:\"LT debt/capital
-        (Recent&nbsp;qtr)&nbsp;(%)\",EPSGrowthRate10Years:\"10y EPS growth rate\",Beta:\"Beta\",CapitalGain:\"Capital
-        gain\",ReturnOnAssetsPTM:\"Return on assets (PTM)&nbsp;(%)\",BetaDown:\"Beta
-        down from RAS\",IncomeDividend:\"Income dividend\",RevenueGrowthRate10Years:\"10y
-        revenue growth rate\",MarketCapShareBasis:\"Market cap share basis\",Return4Week:\"4w
-        return\",IAD:\"Div rate indicated annual\",Price150DayAverage:\"150d avg price\",EPSGrowthRate5Years:\"5y
-        EPS growth rate\",ReturnOnAssetsTTM:\"Return on assets (TTM)&nbsp;(%)\",TotalDebtToAssetsYear:\"Total
-        debt/assets (Recent&nbsp;yr)&nbsp;(%)\",Volume:\"Volume\",CurrentRatioYear:\"Current
-        ratio\",DividendRecentQuarter:\"Div recent quarter\",Low52Week:\"52w low\",ExpenseRatio:\"Expense
-        ratio\",Price1DayPercChange:\"1d&nbsp;price change&nbsp;(%)\",Price13WeekPercChange:\"13w&nbsp;price
-        change&nbsp;(%)\",ReturnOnEquity5Years:\"Return on equity (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",TotalDebtToCapitalYear:\"Total
-        debt/capital (Recent&nbsp;yr)&nbsp;(%)\",TotalDebtToAssetsQuarter:\"Total
-        debt/assets (Recent&nbsp;qtr)&nbsp;(%)\",NavChange:\"Nav change\",OperatingMargin:\"Operating
-        margin&nbsp;(%)\",DPSRecentYear:\"Div per share (Recent&nbsp;yr)\",ANI:\"Earnings
-        after taxes (Recent&nbsp;yr)\",High52Week:\"52w high\",AverageVolume:\"Average
-        volume\",Return13Week:\"13w return\",PriceToCashFlowPerShare:\"Price to cash
-        flow per share\",Price26WeekPercChange:\"26w&nbsp;price change&nbsp;(%)\",QuoteChange:\"Quote
-        change\",ATAXRATE:\"Tax rate (Recent&nbsp;yr)\",NetIncomeChangePerc:\"Net
-        income change&nbsp;(%)\",ReturnOnInvestment5Years:\"Return on investment (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",PE:\"P/E
-        ratio\",ReturnOnInvestmentYear:\"Return on investment (Recent&nbsp;yr)&nbsp;(%)\",Price200DayAverage:\"200d
-        avg price\",DividendNextQuarter:\"Div next quarter\",PriceYTDPercChange:\"YTD&nbsp;price
-        change&nbsp;(%)\",EBITD:\"EBITDA\",ReturnOnInvestmentTTM:\"Return on investment
-        (TTM)&nbsp;(%)\",NavChangePercent:\"Nav change&nbsp;(%)\",EBITDMargin:\"EBITDA
-        margin&nbsp;(%)\",LTDebtToEquityQuarter:\"LT debt/equity (Recent&nbsp;qtr)&nbsp;(%)\",BetaRAS:\"Beta
-        from RAS\",PriceSales:\"Price to sales\",NetAssets:\"Net assets\",ReturnOnEquityTTM:\"Return
-        on equity (TTM)&nbsp;(%)\",CashPerShareYear:\"Cash/share\",ReturnDay:\"1d
-        return\",ReturnOnAssets5Years:\"Return on assets (5&nbsp;yr&nbsp;avg)&nbsp;(%)\",Return52Week:\"52w
-        return\",ForwardPE1Year:\"1y fwd P/E\",NetIncomeGrowthRate5Years:\"5y net
-        income growth rate\",DividendYield:\"Div yield&nbsp;(%)\",Dividend:\"Div from
-        cash flow\",BetaUp:\"Beta up from RAS\",nprice:\"Price from RAS\",LTDebtToCapitalYear:\"LT
-        debt/capital (Recent&nbsp;yr)&nbsp;(%)\",Return260Week:\"260w return\",ReturnOnEquityQuarter:\"Return
-        on equity (Recent&nbsp;qtr)&nbsp;(%)\",ACOGS:\"Cost of goods sold\",LTDebtToAssetsQuarter:\"LT
-        debt/assets (Recent&nbsp;qtr)&nbsp;(%)\",PriceToBook:\"Price to book\",LTDebtToEquityYear:\"LT
-        debt/equity (Recent&nbsp;yr)&nbsp;(%)\",ReturnYTD:\"Return YTD\",ReturnOnEquityYear:\"Return
-        on equity (Recent&nbsp;yr)&nbsp;(%)\",ReturnOnAssetsQuarter:\"Return on assets
-        (Recent&nbsp;qtr)&nbsp;(%)\",TotalDebtToEquityQuarter:\"Total debt/equity
-        (Recent&nbsp;qtr)&nbsp;(%)\",NavPrior:\"Nav prior\",AINTCOV:\"Interest coverage\",EPS:\"EPS\",ReturnOnInvestmentQuarter:\"Return
-        on investment (Recent&nbsp;qtr)&nbsp;(%)\",QuoteLast:\"Last price\",Price50DayAverage:\"50d
-        avg price\",Price4WeekPercChange:\"4w&nbsp;price change&nbsp;(%)\",ReturnOnAssetsYear:\"Return
-        on assets (Recent&nbsp;yr)&nbsp;(%)\",MarketCapRAS:\"Mkt cap from RAS\",Price52WeekPercChange:\"52w&nbsp;price
-        change&nbsp;(%)\",InstitutionalPercentHeld:\"Institutional percent held\",ShortInterestRatioPercent:\"Short
-        interest ratio&nbsp;(%)\",BookValuePerShareYear:\"Book value/share\",ReturnOnEquityPTM:\"Return
-        on equity (PTM)&nbsp;(%)\"};\n_s_Store._asStore._addStrings(_fieldToDisplayNameMap);\n}\nif
-        (_s_Store) {\n_s_Store._allowMultipleInBox = true;\n}\n_regOnLoad(onCompanyLoad);\n</script>\n</div></div><script>var
-        googlefinance = {i: [\"f.b.id\",\"\",null,0,\"\",0,null,[\"f.b.cf\",\"Upzqnh5ra8Q.en_US.\",0],[],1,[],\"3v_8WZjXCsWAepqjieAE\",\"www.google.com\",\"_4q_r4nCYi8KM7Rs6zgDOaeWIrs:1509752798427\",1]};
-        GF_domReady = 1;</script></body></html>"
-    http_version: 
-  recorded_at: Fri, 03 Nov 2017 23:46:29 GMT
+  recorded_at: Sat, 02 Dec 2017 00:51:25 GMT
 recorded_with: VCR 3.0.3

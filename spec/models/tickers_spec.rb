@@ -8,7 +8,7 @@ describe Tickers do
       expect(tickers.count).to eq 1
       expect(ticker.symbol).to eq 'MSFT'
       expect(ticker.name).to eq 'Microsoft Corporation'
-      expect(ticker.last_trade_price).to eq 51.91
+      expect(ticker.last_trade_price).to eq 84.26
       expect(ticker.change).to eq 0.09
       expect(ticker.change_in_percent).to eq 0.11
     end

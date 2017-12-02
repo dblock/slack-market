@@ -245,6 +245,9 @@ GEM
       hashie
       json
       websocket-driver
+    stock_quote (1.5.2)
+      json
+      rest-client (~> 2.0.2)
     stripe (1.58.0)
       rest-client (>= 1.4, < 4.0)
     stripe-ruby-mock (2.4.1)
@@ -310,6 +313,7 @@ DEPENDENCIES
   selenium-webdriver
   slack-ruby-bot-server
   slack-ruby-client
+  stock_quote
   stripe (~> 1.58.0)
   stripe-ruby-mock (~> 2.4.1)
   vcr

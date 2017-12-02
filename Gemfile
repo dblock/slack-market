@@ -13,6 +13,7 @@ gem 'rack-robotz'
 gem 'rack-server-pages'
 gem 'slack-ruby-bot-server'
 gem 'slack-ruby-client'
+gem 'stock_quote'
 gem 'stripe', '~> 1.58.0'
 gem 'wannabe_bool'
 

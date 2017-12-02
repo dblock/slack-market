@@ -14,72 +14,39 @@ class Tickers
   end
 
   def tickers
-    r = related_tickers
-    return r if r && r.any?
-    m = meta_ticker
-    return [m] if m
-    []
+    @tickers ||= get_tickers
   end
 
   private
 
-  def data
-    @data ||= begin
-      url = "https://google.com/finance?q=#{symbols.join(';')}"
-      open(url).read
-    end
-  end
-
-  def rows
-    @rows ||= begin
-      related_data = data[/\"related\"\:(.*?)\]\}\]/]
-      related_data = related_data[10..-1] + '}' if related_data
-      related_data ? JSON.parse(related_data)['rows'] : []
-    end
-  end
-
-  def meta_ticker
-    @meta_ticker ||= begin
-      title = data[/\<div class=\"g-unit g-first\"\>\<h3\>(.*?)\<\/div\>/m]
-      title = Nokogiri::XML(title) if title
-      sharebox_data = data[/\<div id=\"sharebox-data\"(.*?)\<\/div\>/m]
-      sharebox_data = Nokogiri::XML(sharebox_data) if sharebox_data
-      if title && sharebox_data
-        Ticker.new(
-          name: title.xpath('//h3').text,
-          symbol: sharebox_data.xpath('//meta[@itemprop="name"]').first['content'],
-          last_trade_price: sharebox_data.xpath('//meta[@itemprop="price"]').first['content'].delete(',').to_f,
-          change: sharebox_data.xpath('//meta[@itemprop="priceChange"]').first['content'].delete(',').to_f,
-          change_in_percent: sharebox_data.xpath('//meta[@itemprop="priceChangePercent"]').first['content'].delete(',').to_f
-        )
-      end
-    end
-  end
-
-  def related_tickers
-    @related_tickers ||= related_values.map do |value|
-      next unless symbols.map { |s| s.split('.').first }.include?(value[0])
+  def get_tickers
+    Array(StockQuote::Stock.quote(symbols.join(','))).map do |s|
       Ticker.new(
-        symbol: value[0],
-        name: value[1],
-        last_trade_price: value[2].delete(',').to_f,
-        change: value[3].delete(',').to_f,
-        change_in_percent: value[5].delete(',').to_f
+        symbol: s.symbol,
+        name: s.name,
+        last_trade_price: s.l.to_f,
+        change: s.c.to_f,
+        change_in_percent: s.cp.to_f
       )
     end.compact
+  rescue JSON::ParserError
+    symbols.count > 1 ? get_tickers_one_by_one : []
   end
 
-  def related_values
-    @related_values ||= begin
-      if rows.any? || symbols.count <= 1
-        rows.map { |row| row['values'] }
-      else
-        values = []
-        symbols.each do |symbol|
-          values.concat(Tickers.new([symbol]).send(:related_values))
-        end
-        values
+  def get_tickers_one_by_one
+    symbols.map do |symbol|
+      begin
+        s = StockQuote::Stock.quote(symbol)
+        Ticker.new(
+          symbol: s.symbol,
+          name: s.name,
+          last_trade_price: s.l.to_f,
+          change: s.c.to_f,
+          change_in_percent: s.cp.to_f
+        )
+      rescue JSON::ParserError
+        nil
       end
-    end
+    end.compact
   end
 end

@@ -23,11 +23,11 @@ class Position
 
   def percent_from(last_trade_price)
     return unless last_trade_price
-    100 - (purchased_price_cents * 100 / last_trade_price.to_f).to_f.round(2)
+    100 - (purchased_price_cents * 100 / last_trade_price.to_f).to_f
   end
 
   def display(last_trade_price)
-    pc = percent_from(last_trade_price)
+    pc = percent_from(last_trade_price).round(2)
     [
       "*#{symbol}*",
       if pc.nil?

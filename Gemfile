@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 ruby '2.3.1'
 
 gem 'giphy'
+gem 'gruff'
 gem 'money'
 gem 'money_helper'
 gem 'mongoid', '~> 5.1.4'

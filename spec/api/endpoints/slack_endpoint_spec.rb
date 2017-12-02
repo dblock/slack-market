@@ -15,7 +15,7 @@ describe Api::Endpoints::SlackEndpoint do
       }.to_json
       expect(last_response.status).to eq 201
       payload = JSON.parse(last_response.body)
-      expect(payload['attachments'][0]['image_url']).to eq 'https://www.google.com/finance/getchart?q=MSFT&p=1M&i=360'
+      expect(payload['attachments'][0]['image_url']).to eq '/api/charts/MSFT.png?p=1M'
     end
     it 'returns an error with a non-matching verification token', vcr: { cassette_name: 'msft' } do
       post '/api/slack/action', payload: {

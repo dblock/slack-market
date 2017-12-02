@@ -16,7 +16,7 @@ describe SlackMarket::Commands::Sucks do
             title_link: 'http://finance.google.com/q=%5EDJI',
             title: 'Dow Jones Industrial Average (^DJI)',
             color: '#00FF00',
-            image_url: 'https://www.google.com/finance/getchart?q=DJI'
+            image_url: '/api/charts/DJI'
           }
         ]
       )
@@ -32,7 +32,7 @@ describe SlackMarket::Commands::Sucks do
             title_link: 'http://finance.google.com/q=%5EDJI',
             title: 'Dow Jones Industrial Average (^DJI)',
             color: '#FF0000',
-            image_url: 'https://www.google.com/finance/getchart?q=DJI'
+            image_url: '/api/charts/DJI'
           }
         ]
       )

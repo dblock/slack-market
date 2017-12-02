@@ -52,7 +52,7 @@ describe SlackMarket::Commands::Quote do
                   value: 'MSFT- 1y'
                 }
               ],
-              image_url: 'https://www.google.com/finance/getchart?q=MSFT&i=360'
+              image_url: '/api/charts/MSFT.png'
             }
           ]
         ).twice
@@ -95,7 +95,7 @@ describe SlackMarket::Commands::Quote do
                   value: 'MSFT- 1y'
                 }
               ],
-              image_url: 'https://www.google.com/finance/getchart?q=MSFT&i=360'
+              image_url: '/api/charts/MSFT.png'
             }
           ]
         ).exactly(3).times
@@ -135,7 +135,7 @@ describe SlackMarket::Commands::Quote do
                   value: 'ROG- 1y'
                 }
               ],
-              image_url: 'https://www.google.com/finance/getchart?q=ROG&i=360'
+              image_url: '/api/charts/ROG.png'
             }
           ]
         ).exactly(6).times
@@ -178,7 +178,7 @@ describe SlackMarket::Commands::Quote do
                   value: '0941- 1y'
                 }
               ],
-              image_url: 'https://www.google.com/finance/getchart?q=0941&i=360'
+              image_url: '/api/charts/0941.png'
             }
           ]
         ).exactly(5).times
@@ -220,7 +220,7 @@ describe SlackMarket::Commands::Quote do
                   value: 'Z74- 1y'
                 }
               ],
-              image_url: 'https://www.google.com/finance/getchart?q=Z74&i=360'
+              image_url: '/api/charts/Z74.png'
             }
           ]
         ).exactly(6).times
@@ -263,7 +263,7 @@ describe SlackMarket::Commands::Quote do
                   value: '300024- 1y'
                 }
               ],
-              image_url: 'https://www.google.com/finance/getchart?q=300024&i=360'
+              image_url: '/api/charts/300024.png'
             }
           ]
         ).exactly(1).times
@@ -301,7 +301,7 @@ describe SlackMarket::Commands::Quote do
                   value: 'MSFT- 1y'
                 }
               ],
-              image_url: 'https://www.google.com/finance/getchart?q=MSFT&i=360'
+              image_url: '/api/charts/MSFT.png'
             },
             {
               fallback: 'Altaba Inc (AABA): $70.1',
@@ -330,7 +330,7 @@ describe SlackMarket::Commands::Quote do
                   value: 'AABA- 1y'
                 }
               ],
-              image_url: 'https://www.google.com/finance/getchart?q=AABA&i=360'
+              image_url: '/api/charts/AABA.png'
             }
           ]
         )
@@ -380,7 +380,7 @@ describe SlackMarket::Commands::Quote do
                   value: 'F- 1y'
                 }
               ],
-              image_url: 'https://www.google.com/finance/getchart?q=F&i=360'
+              image_url: '/api/charts/F.png'
             }
           ]
         ).exactly(4).times
@@ -421,7 +421,7 @@ describe SlackMarket::Commands::Quote do
                   value: 'F- 1y'
                 }
               ],
-              image_url: 'https://www.google.com/finance/getchart?q=F&i=360'
+              image_url: '/api/charts/F.png'
             }
           ]
         )
@@ -467,7 +467,7 @@ describe SlackMarket::Commands::Quote do
                     value: 'MSFT- 1y'
                   }
                 ],
-                image_url: 'https://www.google.com/finance/getchart?q=MSFT&i=360'
+                image_url: '/api/charts/MSFT.png'
               }
             ]
           )

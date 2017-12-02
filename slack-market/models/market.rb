@@ -40,11 +40,11 @@ class Market
 
       chart_symbol = quote.symbol.tr('=', '-')
       if charts && !button
-        slack_attachment[:image_url] = "https://www.google.com/finance/getchart?q=#{chart_symbol}&i=360"
+        slack_attachment[:image_url] = "#{ENV['DOKKU_APP_URL']}/api/charts/#{chart_symbol}.png"
         slack_attachment[:actions] = actions
         slack_attachment[:callback_id] = quote.name.to_s
       elsif charts && button
-        slack_attachment[:image_url] = "https://www.google.com/finance/getchart?q=#{chart_symbol}&p=#{button}&i=360"
+        slack_attachment[:image_url] = "#{ENV['DOKKU_APP_URL']}/api/charts/#{chart_symbol}.png?p=#{button}"
         slack_attachment[:actions] = actions
         slack_attachment[:callback_id] = quote.name.to_s
       end

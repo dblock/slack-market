@@ -2,38 +2,146 @@
 http_interactions:
 - request:
     method: get
+    uri: https://finance.google.com/finance?output=json&q=MSFT,AABA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 03 Dec 2017 01:24:07 GMT
+      Expires:
+      - Sun, 03 Dec 2017 01:24:07 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - attachment; filename="f.txt"
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Set-Cookie:
+      - NID=118=aeIfIaXNXbpqeBAxJZEr-weAm84bT2TfuWdU1zg8t_yXchFh9S3Xn9mdUAUGicLCN03gO8KGm3dkzGvW0qYk2ZB5PJ83zut3LBuysn_aiN9lWCs4ktOq-GhZVQSaxZ-i;Domain=.google.com;Path=/;Expires=Mon,
+        04-Jun-2018 01:24:07 GMT;HttpOnly
+      - SC=RV=:ED=us; expires=Mon, 04-Jun-2018 01:24:07 GMT; path=/finance; domain=.google.com
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |2
+
+        {
+        "start" : "",
+        "num" : "",
+        "num_company_results" : "",
+        "num_mf_results" : "",
+        "num_all_results" : "",
+        "original_query" : "MSFT,AABA",
+        "query_for_display" : "MSFT,AABA",
+        "results_type" : "",
+        "searchresults" :
+        [
+        {
+        "title" : "Microsoft Corporation",
+        "id" : "358464",
+        "is_active" : "",
+        "ticker" : "MSFT",
+        "exchange" : "NASDAQ",
+        "is_supported_exchange" : "",
+        "local_currency_symbol" : "$",
+        "columns" : [
+        ]
+        }
+        , {
+        "title" : "Altaba Inc",
+        "id" : "658890",
+        "is_active" : "",
+        "ticker" : "AABA",
+        "exchange" : "NASDAQ",
+        "is_supported_exchange" : "",
+        "local_currency_symbol" : "$",
+        "columns" : [
+        ]
+        }
+        ]
+        ,
+        "mf_searchresults" :
+        [
+        ]
+        }
+    http_version: 
+  recorded_at: Sun, 03 Dec 2017 01:24:07 GMT
+- request:
+    method: get
     uri: https://finance.google.com/finance?output=json&q=MSFT
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept: "*/*"
-      Accept-Encoding: gzip, deflate
-      User-Agent: rest-client/2.0.2 (darwin16.4.0 x86_64) ruby/2.3.1p112
-      Host: finance.google.com
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
-    status: {code: 200, message: OK}
+    status:
+      code: 200
+      message: OK
     headers:
-      Content-Type: application/json; charset=UTF-8
-      Date: Sat, 02 Dec 2017 00:51:19 GMT
-      Expires: Sat, 02 Dec 2017 00:51:19 GMT
-      Cache-Control: private, max-age=0
-      X-Content-Type-Options: nosniff
-      Content-Disposition: attachment; filename="f.txt"
-      P3p: CP="This is not a P3P policy! See g.co/p3phelp for more info."
-      X-Frame-Options: SAMEORIGIN
-      X-Xss-Protection: 1; mode=block
-      Server: GSE
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 03 Dec 2017 01:24:07 GMT
+      Expires:
+      - Sun, 03 Dec 2017 01:24:07 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - attachment; filename="f.txt"
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
       Set-Cookie:
-      - NID=118=lyTHt9kN-PdnKSRBon0A21Y_VsxwMGSOPzEG2kfy0yH5A-dHwlZ8MTJB78Cmeqzh41eM4erwcb_fj03TaIvnPHtgC8frUcJ55X71-JW2UEdoxgPnJDnc_7s2ucJSirQd;Domain=.google.com;Path=/;Expires=Sun,
-        03-Jun-2018 00:51:19 GMT;HttpOnly
-      - SC=RV=358464:ED=us; expires=Sun, 03-Jun-2018 00:51:19 GMT; path=/finance;
+      - NID=118=FFPlabuusbdJXtHF9tjhRAFISnqLMFnAE09gW3lYun704yqdwzNS7ySVf6_NvvkR7awazsEajA4_-ME1cRGVLYmw487Om3X9lktH0z_bY-uTc3uoBeAT6qRiCfF0a_9q;Domain=.google.com;Path=/;Expires=Mon,
+        04-Jun-2018 01:24:07 GMT;HttpOnly
+      - SC=RV=358464:ED=us; expires=Mon, 04-Jun-2018 01:24:07 GMT; path=/finance;
         domain=.google.com
-      Alt-Svc: hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338;
-        quic=51303337; quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
-      Transfer-Encoding: chunked
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding:
+      - chunked
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: |2
 
         // [
@@ -783,7 +891,7 @@ http_interactions:
         "avvo" : "22.68M",
         "hi52" : "86.20",
         "lo52" : "58.80",
-        "mc" : "650.03B",
+        "mc" : "650.73B",
         "pe" : "28.51",
         "fwpe" : "",
         "beta" : "1.01",
@@ -805,7 +913,7 @@ http_interactions:
         "e" : "NASDAQ",
         "l" : "84.26",
         "c" : "+0.09",
-        "mc" : "650.03B",
+        "mc" : "650.73B",
         "cp" : "0.11",
         "ccol" : "chg"
         }
@@ -816,9 +924,9 @@ http_interactions:
         "t" : "SAP",
         "e" : "NYSE",
         "l" : "111.78",
-        "c" : "-1.61",
+        "c" : "-1.57",
         "mc" : "136.48B",
-        "cp" : "-1.42",
+        "cp" : "-1.39",
         "ccol" : "chr"
         }
         ,
@@ -829,7 +937,7 @@ http_interactions:
         "e" : "NYSE",
         "l" : "17.88",
         "c" : "-0.41",
-        "mc" : "155.06B",
+        "mc" : "151.58B",
         "cp" : "-2.24",
         "ccol" : "chr"
         }
@@ -841,7 +949,7 @@ http_interactions:
         "e" : "NASDAQ",
         "l" : "179.52",
         "c" : "-1.95",
-        "mc" : "88.49B",
+        "mc" : "87.54B",
         "cp" : "-1.07",
         "ccol" : "chr"
         }
@@ -853,7 +961,7 @@ http_interactions:
         "e" : "NYSE",
         "l" : "21.41",
         "c" : "-0.04",
-        "mc" : "35.76B",
+        "mc" : "35.69B",
         "cp" : "-0.19",
         "ccol" : "chr"
         }
@@ -864,9 +972,9 @@ http_interactions:
         "t" : "RHT",
         "e" : "NYSE",
         "l" : "125.26",
-        "c" : "-1.56",
+        "c" : "-1.50",
         "mc" : "22.16B",
-        "cp" : "-1.23",
+        "cp" : "-1.18",
         "ccol" : "chr"
         }
         ,
@@ -888,9 +996,9 @@ http_interactions:
         "t" : "VZ",
         "e" : "NYSE",
         "l" : "51.25",
-        "c" : "+0.38",
+        "c" : "+0.36",
         "mc" : "209.07B",
-        "cp" : "0.75",
+        "cp" : "0.71",
         "ccol" : "chg"
         }
         ,
@@ -900,9 +1008,9 @@ http_interactions:
         "t" : "IBM",
         "e" : "NYSE",
         "l" : "154.76",
-        "c" : "+0.87",
-        "mc" : "143.28B",
-        "cp" : "0.57",
+        "c" : "+0.79",
+        "mc" : "144.01B",
+        "cp" : "0.51",
         "ccol" : "chg"
         }
         ,
@@ -912,9 +1020,9 @@ http_interactions:
         "t" : "ORCL",
         "e" : "NYSE",
         "l" : "49.61",
-        "c" : "+0.54",
-        "mc" : "207.05B",
-        "cp" : "1.10",
+        "c" : "+0.55",
+        "mc" : "209.37B",
+        "cp" : "1.12",
         "ccol" : "chg"
         }
         ,
@@ -1010,7 +1118,7 @@ http_interactions:
         ]
         }]
     http_version: 
-  recorded_at: Sat, 02 Dec 2017 00:51:19 GMT
+  recorded_at: Sun, 03 Dec 2017 01:24:07 GMT
 - request:
     method: get
     uri: https://finance.google.com/finance?output=json&q=AABA
@@ -1018,994 +1126,378 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept: "*/*"
-      Accept-Encoding: gzip, deflate
-      User-Agent: rest-client/2.0.2 (darwin16.4.0 x86_64) ruby/2.3.1p112
-      Host: finance.google.com
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
-    status: {code: 200, message: OK}
+    status:
+      code: 200
+      message: OK
     headers:
-      Content-Type: application/json; charset=UTF-8
-      Date: Sat, 02 Dec 2017 00:51:20 GMT
-      Expires: Sat, 02 Dec 2017 00:51:20 GMT
-      Cache-Control: private, max-age=0
-      X-Content-Type-Options: nosniff
-      Content-Disposition: attachment; filename="f.txt"
-      P3p: CP="This is not a P3P policy! See g.co/p3phelp for more info."
-      X-Frame-Options: SAMEORIGIN
-      X-Xss-Protection: 1; mode=block
-      Server: GSE
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 03 Dec 2017 01:24:08 GMT
+      Expires:
+      - Sun, 03 Dec 2017 01:24:08 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - attachment; filename="f.txt"
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
       Set-Cookie:
-      - NID=118=nf2EODLBTmVcUscds5BRdki6DZ5RyYL5W8Fu_sQDzG6qT2SKZa7HmY6JtxV7GiX5-rpkekeqRqc0JXL491fLwvKZlHnJCp1t5IV8VwA-KrB96uQWtZQ_BvZRuaarrLaA;Domain=.google.com;Path=/;Expires=Sun,
-        03-Jun-2018 00:51:20 GMT;HttpOnly
-      - SC=RV=658890:ED=us; expires=Sun, 03-Jun-2018 00:51:19 GMT; path=/finance;
+      - NID=118=jSKbF6OBEystOZZ-5-IDnVnYQ1ak1VoODuz6xW7cn1fZvlWMkAD7JH1mC3rJvxXJzFSiFYFmWD3dt98DBySryGdeBy4JPvXA67wHYcA_GivkN4FFcVCNMFuMxcOHLiEs;Domain=.google.com;Path=/;Expires=Mon,
+        04-Jun-2018 01:24:08 GMT;HttpOnly
+      - SC=RV=658890:ED=us; expires=Mon, 04-Jun-2018 01:24:08 GMT; path=/finance;
         domain=.google.com
-      Alt-Svc: hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338;
-        quic=51303337; quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
-      Transfer-Encoding: chunked
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding:
+      - chunked
     body:
-      encoding: UTF-8
-      string: |2
-
-        // [
-        {
-        "symbol" : "AABA",
-        "exchange" : "NASDAQ",
-        "id": "658890",
-        "t" : "AABA",
-        "e" : "NASDAQ",
-        "name" : "Altaba Inc"
-        , "f_reuters_url" : "http:\u002F\u002Fstocks.us.reuters.com\u002Fstocks\u002Fratios.asp?rpc=66\u0026symbol=AABA.O",
-        "f_recent_quarter_date" : "Q3 (Sep \u002717)",
-        "f_annual_date" : "2016",
-        "f_ttm_date" : "2015",
-        "financials" :
-        [{
-        "f_type" : "Income\u0026nbsp\u003BStatement"
-        ,"url" : "http://www.google.com/finance?fstype=ii&q=NASDAQ:AABA"
-        ,"f_figures" :
-        [
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "5,169.14"
-        ,"ttm" : "4,968.30"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "5,169.14"
-        ,"ttm" : "4,968.30"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "2,718.89"
-        ,"ttm" : "2,077.75"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "2,450.24"
-        ,"ttm" : "2,890.55"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "1,532.23"
-        ,"ttm" : "1,768.52"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "1,055.46"
-        ,"ttm" : "1,177.92"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "58.30"
-        ,"ttm" : "79.04"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "449.31"
-        ,"ttm" : "4,613.56"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "5,814.19"
-        ,"ttm" : "9,716.80"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-645.06"
-        ,"ttm" : "-4,748.49"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-45.35"
-        ,"ttm" : "-16.07"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-698.97"
-        ,"ttm" : "-4,824.28"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-572.75"
-        ,"ttm" : "-4,734.68"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-4.86"
-        ,"ttm" : "-7.97"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "363.28"
-        ,"ttm" : "383.57"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-214.32"
-        ,"ttm" : "-4,359.08"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-214.32"
-        ,"ttm" : "-4,359.08"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-214.32"
-        ,"ttm" : "-4,359.08"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-214.32"
-        ,"ttm" : "-4,359.08"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "0.00"
-        ,"annual" : "0.00"
-        ,"ttm" : "0.00"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "949.84"
-        ,"ttm" : "939.14"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-0.23"
-        ,"ttm" : "-4.64"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "0.08"
-        ,"ttm" : "-1.45"
-        }
-        ]
-        },
-        {
-        "f_type" : "Balance\u0026nbsp\u003BSheet"
-        ,"url" : "http://www.google.com/finance?fstype=bi&q=NASDAQ:AABA"
-        ,"f_figures" :
-        [
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "1,119.47"
-        ,"ttm" : "1,631.91"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "0.36"
-        ,"annual" : "1,119.47"
-        ,"ttm" : "1,631.91"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "1,084.27"
-        ,"ttm" : "1,047.50"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "55.00"
-        ,"annual" : "1,152.85"
-        ,"ttm" : "1,435.70"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "73.67"
-        ,"ttm" : "87.84"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "3,946.72"
-        ,"ttm" : "4,265.56"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-2,736.79"
-        ,"ttm" : "-2,718.24"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "415.81"
-        ,"ttm" : "808.11"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "161.64"
-        ,"ttm" : "347.27"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "84,812.58"
-        ,"annual" : "43,747.18"
-        ,"ttm" : "38,959.27"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "73.40"
-        ,"ttm" : "51.42"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "85,036.35"
-        ,"annual" : "48,083.08"
-        ,"ttm" : "45,203.97"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "171.52"
-        ,"ttm" : "208.69"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "814.33"
-        ,"ttm" : "684.80"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "0.00"
-        ,"ttm" : "0.00"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "115.27"
-        ,"ttm" : "138.21"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "1,352.13"
-        ,"annual" : "1,299.94"
-        ,"ttm" : "1,233.48"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "1,352.13"
-        ,"annual" : "1,299.94"
-        ,"ttm" : "1,233.48"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "1,352.13"
-        ,"annual" : "1,299.94"
-        ,"ttm" : "1,233.48"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "28,163.79"
-        ,"annual" : "14,276.45"
-        ,"ttm" : "13,467.19"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "34.79"
-        ,"ttm" : "35.88"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "381.81"
-        ,"annual" : "321.49"
-        ,"ttm" : "392.17"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "29,897.74"
-        ,"annual" : "17,033.80"
-        ,"ttm" : "16,160.43"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "0.00"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "0.97"
-        ,"ttm" : "0.96"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "9,125.46"
-        ,"ttm" : "8,807.27"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "4,353.96"
-        ,"ttm" : "4,570.81"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-909.00"
-        ,"ttm" : "-911.53"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "55,138.61"
-        ,"annual" : "100.95"
-        ,"ttm" : "-342.99"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "55,138.61"
-        ,"annual" : "31,049.28"
-        ,"ttm" : "29,043.54"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "85,036.35"
-        ,"annual" : "48,083.08"
-        ,"ttm" : "45,203.97"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "-"
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : "873.38"
-        ,"annual" : "955.31"
-        ,"ttm" : "945.85"
-        }
-        ]
-        },
-        {
-        "f_type" : "Cash\u0026nbsp\u003BFlow"
-        ,"url" : "http://www.google.com/finance?fstype=ci&q=NASDAQ:AABA"
-        ,"f_figures" :
-        [
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "-209.46"
-        ,"ttm" : "-4,351.11"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "407.34"
-        ,"ttm" : "472.89"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "100.21"
-        ,"ttm" : "136.72"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "-224.74"
-        ,"ttm" : "-42.34"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "597.19"
-        ,"ttm" : "4,703.40"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "578.32"
-        ,"ttm" : "-3,302.99"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "1,248.86"
-        ,"ttm" : "-2,383.42"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "-241.15"
-        ,"ttm" : "-558.97"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "-1,333.11"
-        ,"ttm" : "2,311.09"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "-1,574.27"
-        ,"ttm" : "1,752.11"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "-211.20"
-        ,"ttm" : "-232.62"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "17.52"
-        ,"ttm" : "-144.64"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "-193.68"
-        ,"ttm" : "-377.26"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "6.64"
-        ,"ttm" : "-23.62"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "-512.44"
-        ,"ttm" : "-1,032.19"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "-"
-        ,"ttm" : "-"
-        },
-        {
-        "title" : ""
-        ,"recent_quarter" : ""
-        ,"annual" : "151.00"
-        ,"ttm" : "3,000.00"
-        }
-        ]
-        }],
-        "kr_recent_quarter_date" : "Q3 (Sep \u002717)",
-        "kr_annual_date" : "2016",
-        "kr_ttm_date" : "TTM",
-        "keyratios" :
-        [
-        {
-        "title" : "Net profit margin",
-        "recent_quarter" : "",
-        "annual" : "-11.08%",
-        "ttm" : "106.76%"
-        },
-        {
-        "title" : "Operating margin",
-        "recent_quarter" : "",
-        "annual" : "-12.48%",
-        "ttm" : "4.35%"
-        },
-        {
-        "title" : "EBITD margin",
-        "recent_quarter" : "",
-        "annual" : "6.03%",
-        "ttm" : "20.41%"
-        },
-        {
-        "title" : "Return on average assets",
-        "recent_quarter" : "",
-        "annual" : "-1.23%",
-        "ttm" : "2.25%"
-        },
-        {
-        "title" : "Return on average equity",
-        "recent_quarter" : "",
-        "annual" : "-0.71%",
-        "ttm" : "3.75%"
-        },
-        {
-        "title" : "Employees",
-        "recent_quarter" : "8,600",
-        "annual" : "-",
-        "ttm" : "-"
-        }
-        ]
-        , "c" : "+0.04",
-        "l" : "70.10",
-        "cp" : "0.06",
-        "ccol" : "chg",
-        "op" : "69.80",
-        "hi" : "71.25",
-        "lo" : "69.47",
-        "vo" : "19.71M",
-        "avvo" : "8.32M",
-        "hi52" : "73.25",
-        "lo52" : "38.24",
-        "mc" : "61.22B",
-        "pe" : "37.44",
-        "fwpe" : "",
-        "beta" : "1.88",
-        "eps" : "1.87",
-        "dy" : "",
-        "ldiv" : "",
-        "shares" : "873.38M",
-        "instown" : "84%",
-        "eo":""
-        , "sid" : "us-TRBC:55",
-        "sname" : "Financials",
-        "iid" : "us-TRBC:5550103010",
-        "iname" : "Closed End Funds"
-        , "related" : [
-        {
-        "id" : "658890",
-        "name" : "Altaba Inc",
-        "t" : "AABA",
-        "e" : "NASDAQ",
-        "l" : "70.10",
-        "c" : "+0.04",
-        "mc" : "61.22B",
-        "cp" : "0.06",
-        "ccol" : "chg"
-        }
-        ,
-        {
-        "id" : "23536317556137",
-        "name" : "Alibaba Group Holding Ltd",
-        "t" : "BABA",
-        "e" : "NYSE",
-        "l" : "174.61",
-        "c" : "-2.44",
-        "mc" : "447.20B",
-        "cp" : "-1.38",
-        "ccol" : "chr"
-        }
-        ,
-        {
-        "id" : "10815119",
-        "name" : "YAHOO JAPAN CORP",
-        "t" : "YAHOY",
-        "e" : "OTCMKTS",
-        "l" : "9.07",
-        "c" : "-0.06",
-        "mc" : "26.01B",
-        "cp" : "-0.66",
-        "ccol" : "chr"
-        }
-        ,
-        {
-        "id" : "664110",
-        "name" : "SoftBank Group Corp",
-        "t" : "SFTBF",
-        "e" : "OTCMKTS",
-        "l" : "83.95",
-        "c" : "-1.05",
-        "mc" : "92.13B",
-        "cp" : "-1.24",
-        "ccol" : "chr"
-        }
-        ,
-        {
-        "id" : "13938",
-        "name" : "Tegna Inc",
-        "t" : "TGNA",
-        "e" : "NYSE",
-        "l" : "13.39",
-        "c" : "+0.11",
-        "mc" : "2.88B",
-        "cp" : "0.83",
-        "ccol" : "chg"
-        }
-        ,
-        {
-        "id" : "663477",
-        "name" : "LookSmart, Ltd.",
-        "t" : "LOOK",
-        "e" : "NASDAQ",
-        "l" : "0.0000",
-        "c" : "",
-        "mc" : "",
-        "cp" : "",
-        "ccol" : ""
-        }
-        ,
-        {
-        "id" : "226108333179804",
-        "name" : "Yelp Inc",
-        "t" : "YELP",
-        "e" : "NYSE",
-        "l" : "43.89",
-        "c" : "-0.66",
-        "mc" : "3.64B",
-        "cp" : "-1.48",
-        "ccol" : "chr"
-        }
-        ,
-        {
-        "id" : "8334743",
-        "name" : "AOL, Inc.",
-        "t" : "AOL",
-        "e" : "NYSE",
-        "l" : "49.99",
-        "c" : "",
-        "mc" : "3.92B",
-        "cp" : "",
-        "ccol" : ""
-        }
-        ,
-        {
-        "id" : "661291",
-        "name" : "Timios National Corp",
-        "t" : "HOMS",
-        "e" : "OTCMKTS",
-        "l" : "0.340",
-        "c" : "",
-        "mc" : "2.91M",
-        "cp" : "",
-        "ccol" : ""
-        }
-        ,
-        {
-        "id" : "718471",
-        "name" : "Spectral Capital Corp",
-        "t" : "FCCN",
-        "e" : "OTCMKTS",
-        "l" : "0.00310",
-        "c" : "0.00000",
-        "mc" : "365,360.00",
-        "cp" : "0.00",
-        "ccol" : "chb"
-        }
-        ,
-        {
-        "id" : "660179",
-        "name" : "Earthlink Holdings Corp",
-        "c" : "",
-        "mc" : "",
-        "cp" : "",
-        "ccol" : ""
-        }
-        ]
-        , "summary" : [{
-        "reuters_url" : "http:\u002F\u002Fstocks.us.reuters.com\u002Fstocks\u002FfullDescription.asp?rpc=66\u0026symbol=AABA.O",
-        "address": "140 E 45th St Fl 15, NEW YORK, NY 10017-3144, United States",
-        "phone": "+1-646-6792000",
-        "fax": "+1-302-6555049",
-        "url": "https:\u002F\u002Fwww.altaba.com\u002F",
-        "overview" : "Altaba Inc. (the Fund), formerly Yahoo! Inc., is a non-diversified, closed-end management investment company. The Fund seeks to track the combined investment return of the Alibaba Shares and the Yahoo Japan Shares it owns. Alibaba Shares represent an approximate 15% equity interest in Alibaba Group Holding Limited (Alibaba), and its Yahoo Japan Corporation ((Yahoo Japa) Shares represent an approximate 36% equity interest in Yahoo Japan. In addition to the Alibaba Shares and the Yahoo Japan Shares, the Fund also owns the minority investments, all of the equity interests in Excalibur IP, LLC (which owns the Excalibur IP Assets) and the marketable debt securities portfolio. The Fund’s external investment advisors are BlackRock Advisors, LLC and Morgan Stanley Smith Barney LLC."
-        } ]
-        , "management" : [
-        {
-        "name" : "Eric K. Brandt",
-        "age" : "55",
-        "title" : "Independent Chairman of the Board"
-        }
-        ,
-        {
-        "name" : "Thomas James McInerney",
-        "age" : "52",
-        "title" : "Chief Executive Officer, Independent Director"
-        }
-        ,
-        {
-        "name" : "Alexi A. Wellman",
-        "age" : "46",
-        "title" : "Chief Financial \u0026 Accounting Officer"
-        }
-        ,
-        {
-        "name" : "DeAnn Fairfield Work",
-        "age" : "47",
-        "title" : "Chief Compliance Officer"
-        }
-        ,
-        {
-        "name" : "Arthur Chong",
-        "age" : "63",
-        "title" : "General Counsel, Secretary"
-        }
-        ,
-        {
-        "name" : "Tor R. Braham",
-        "age" : "60",
-        "title" : "Independent Director"
-        }
-        ,
-        {
-        "name" : "Catherine J. Friedman",
-        "age" : "56",
-        "title" : "Independent Director"
-        }
-        ,
-        {
-        "name" : "Richard L. Kauffman",
-        "age" : "56",
-        "title" : "Independent Director"
-        }
-        ]
-        ,"moreresources" : [
-        { "name" : "Estimates" , "url" : "http:\u002F\u002Fwww.marketwatch.com\u002Ftools\u002Fquotes\u002Fsnapshot.asp?symb=AABA\u0026pg=analyst"},
-        { "name" : "SEC Filings" , "url" : "http:\u002F\u002Fgoogle.brand.edgar-online.com\u002F?sym=AABA"},
-        { "name" : "Major Holders" , "url" : "http:\u002F\u002Finvesting.money.msn.com\u002Finvestments\u002Finstitutional-ownership?symbol=AABA"}
-        ,
-        { "name" : "Options" , "url" : "http:\u002F\u002Fwww.marketwatch.com\u002Ftools\u002Fquotes\u002Foptions1.asp?symb=AABA"},
-        { "name" : "Research" , "url" : "http:\u002F\u002Ffinance.yahoo.com\u002Fq\u002Frr?s=AABA"}
-        ]
-        , "events" : [
-        ]
-        }]
+      encoding: ASCII-8BIT
+      string: !binary |-
+        Ci8vIFsKewoic3ltYm9sIiA6ICJBQUJBIiwKImV4Y2hhbmdlIiA6ICJOQVNE
+        QVEiLAoiaWQiOiAiNjU4ODkwIiwKInQiIDogIkFBQkEiLAoiZSIgOiAiTkFT
+        REFRIiwKIm5hbWUiIDogIkFsdGFiYSBJbmMiCiwgImZfcmV1dGVyc191cmwi
+        IDogImh0dHA6XHUwMDJGXHUwMDJGc3RvY2tzLnVzLnJldXRlcnMuY29tXHUw
+        MDJGc3RvY2tzXHUwMDJGcmF0aW9zLmFzcD9ycGM9NjZcdTAwMjZzeW1ib2w9
+        QUFCQS5PIiwKImZfcmVjZW50X3F1YXJ0ZXJfZGF0ZSIgOiAiUTMgKFNlcCBc
+        dTAwMjcxNykiLAoiZl9hbm51YWxfZGF0ZSIgOiAiMjAxNiIsCiJmX3R0bV9k
+        YXRlIiA6ICIyMDE1IiwKImZpbmFuY2lhbHMiIDoKW3sKImZfdHlwZSIgOiAi
+        SW5jb21lXHUwMDI2bmJzcFx1MDAzQlN0YXRlbWVudCIKLCJ1cmwiIDogImh0
+        dHA6Ly93d3cuZ29vZ2xlLmNvbS9maW5hbmNlP2ZzdHlwZT1paSZxPU5BU0RB
+        UTpBQUJBIgosImZfZmlndXJlcyIgOgpbCnsKInRpdGxlIiA6ICIiCiwicmVj
+        ZW50X3F1YXJ0ZXIiIDogIi0iCiwiYW5udWFsIiA6ICI1LDE2OS4xNCIKLCJ0
+        dG0iIDogIjQsOTY4LjMwIgp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9x
+        dWFydGVyIiA6ICItIgosImFubnVhbCIgOiAiLSIKLCJ0dG0iIDogIi0iCn0s
+        CnsKInRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDogIi0iCiwiYW5u
+        dWFsIiA6ICI1LDE2OS4xNCIKLCJ0dG0iIDogIjQsOTY4LjMwIgp9LAp7CiJ0
+        aXRsZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6ICItIgosImFubnVhbCIg
+        OiAiMiw3MTguODkiCiwidHRtIiA6ICIyLDA3Ny43NSIKfSwKewoidGl0bGUi
+        IDogIiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiLSIKLCJhbm51YWwiIDogIjIs
+        NDUwLjI0IgosInR0bSIgOiAiMiw4OTAuNTUiCn0sCnsKInRpdGxlIiA6ICIi
+        CiwicmVjZW50X3F1YXJ0ZXIiIDogIi0iCiwiYW5udWFsIiA6ICIxLDUzMi4y
+        MyIKLCJ0dG0iIDogIjEsNzY4LjUyIgp9LAp7CiJ0aXRsZSIgOiAiIgosInJl
+        Y2VudF9xdWFydGVyIiA6ICItIgosImFubnVhbCIgOiAiMSwwNTUuNDYiCiwi
+        dHRtIiA6ICIxLDE3Ny45MiIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNlbnRf
+        cXVhcnRlciIgOiAiLSIKLCJhbm51YWwiIDogIjU4LjMwIgosInR0bSIgOiAi
+        NzkuMDQiCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDog
+        Ii0iCiwiYW5udWFsIiA6ICItIgosInR0bSIgOiAiLSIKfSwKewoidGl0bGUi
+        IDogIiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiLSIKLCJhbm51YWwiIDogIjQ0
+        OS4zMSIKLCJ0dG0iIDogIjQsNjEzLjU2Igp9LAp7CiJ0aXRsZSIgOiAiIgos
+        InJlY2VudF9xdWFydGVyIiA6ICItIgosImFubnVhbCIgOiAiLSIKLCJ0dG0i
+        IDogIi0iCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDog
+        Ii0iCiwiYW5udWFsIiA6ICI1LDgxNC4xOSIKLCJ0dG0iIDogIjksNzE2Ljgw
+        Igp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6ICItIgos
+        ImFubnVhbCIgOiAiLTY0NS4wNiIKLCJ0dG0iIDogIi00LDc0OC40OSIKfSwK
+        ewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiLSIKLCJhbm51
+        YWwiIDogIi0iCiwidHRtIiA6ICItIgp9LAp7CiJ0aXRsZSIgOiAiIgosInJl
+        Y2VudF9xdWFydGVyIiA6ICItIgosImFubnVhbCIgOiAiLSIKLCJ0dG0iIDog
+        Ii0iCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDogIi0i
+        CiwiYW5udWFsIiA6ICItNDUuMzUiCiwidHRtIiA6ICItMTYuMDciCn0sCnsK
+        InRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDogIi0iCiwiYW5udWFs
+        IiA6ICItNjk4Ljk3IgosInR0bSIgOiAiLTQsODI0LjI4Igp9LAp7CiJ0aXRs
+        ZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6ICItIgosImFubnVhbCIgOiAi
+        LTU3Mi43NSIKLCJ0dG0iIDogIi00LDczNC42OCIKfSwKewoidGl0bGUiIDog
+        IiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiLSIKLCJhbm51YWwiIDogIi00Ljg2
+        IgosInR0bSIgOiAiLTcuOTciCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50
+        X3F1YXJ0ZXIiIDogIi0iCiwiYW5udWFsIiA6ICIzNjMuMjgiCiwidHRtIiA6
+        ICIzODMuNTciCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIi
+        IDogIi0iCiwiYW5udWFsIiA6ICItMjE0LjMyIgosInR0bSIgOiAiLTQsMzU5
+        LjA4Igp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6ICIt
+        IgosImFubnVhbCIgOiAiLSIKLCJ0dG0iIDogIi0iCn0sCnsKInRpdGxlIiA6
+        ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDogIi0iCiwiYW5udWFsIiA6ICItIgos
+        InR0bSIgOiAiLSIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVhcnRl
+        ciIgOiAiLSIKLCJhbm51YWwiIDogIi0iCiwidHRtIiA6ICItIgp9LAp7CiJ0
+        aXRsZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6ICItIgosImFubnVhbCIg
+        OiAiLTIxNC4zMiIKLCJ0dG0iIDogIi00LDM1OS4wOCIKfSwKewoidGl0bGUi
+        IDogIiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiLSIKLCJhbm51YWwiIDogIi0i
+        CiwidHRtIiA6ICItIgp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFy
+        dGVyIiA6ICItIgosImFubnVhbCIgOiAiLTIxNC4zMiIKLCJ0dG0iIDogIi00
+        LDM1OS4wOCIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVhcnRlciIg
+        OiAiLSIKLCJhbm51YWwiIDogIi0yMTQuMzIiCiwidHRtIiA6ICItNCwzNTku
+        MDgiCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDogIi0i
+        CiwiYW5udWFsIiA6ICItIgosInR0bSIgOiAiLSIKfSwKewoidGl0bGUiIDog
+        IiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiLSIKLCJhbm51YWwiIDogIi0iCiwi
+        dHRtIiA6ICItIgp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFydGVy
+        IiA6ICItIgosImFubnVhbCIgOiAiLSIKLCJ0dG0iIDogIi0iCn0sCnsKInRp
+        dGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDogIjAuMDAiCiwiYW5udWFs
+        IiA6ICIwLjAwIgosInR0bSIgOiAiMC4wMCIKfSwKewoidGl0bGUiIDogIiIK
+        LCJyZWNlbnRfcXVhcnRlciIgOiAiLSIKLCJhbm51YWwiIDogIjk0OS44NCIK
+        LCJ0dG0iIDogIjkzOS4xNCIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNlbnRf
+        cXVhcnRlciIgOiAiLSIKLCJhbm51YWwiIDogIi0wLjIzIgosInR0bSIgOiAi
+        LTQuNjQiCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDog
+        Ii0iCiwiYW5udWFsIiA6ICItIgosInR0bSIgOiAiLSIKfSwKewoidGl0bGUi
+        IDogIiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiLSIKLCJhbm51YWwiIDogIi0i
+        CiwidHRtIiA6ICItIgp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFy
+        dGVyIiA6ICItIgosImFubnVhbCIgOiAiLSIKLCJ0dG0iIDogIi0iCn0sCnsK
+        InRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDogIi0iCiwiYW5udWFs
+        IiA6ICItIgosInR0bSIgOiAiLSIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNl
+        bnRfcXVhcnRlciIgOiAiLSIKLCJhbm51YWwiIDogIi0iCiwidHRtIiA6ICIt
+        Igp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6ICItIgos
+        ImFubnVhbCIgOiAiLSIKLCJ0dG0iIDogIi0iCn0sCnsKInRpdGxlIiA6ICIi
+        CiwicmVjZW50X3F1YXJ0ZXIiIDogIi0iCiwiYW5udWFsIiA6ICItIgosInR0
+        bSIgOiAiLSIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVhcnRlciIg
+        OiAiLSIKLCJhbm51YWwiIDogIi0iCiwidHRtIiA6ICItIgp9LAp7CiJ0aXRs
+        ZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6ICItIgosImFubnVhbCIgOiAi
+        LSIKLCJ0dG0iIDogIi0iCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50X3F1
+        YXJ0ZXIiIDogIi0iCiwiYW5udWFsIiA6ICItIgosInR0bSIgOiAiLSIKfSwK
+        ewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiLSIKLCJhbm51
+        YWwiIDogIi0iCiwidHRtIiA6ICItIgp9LAp7CiJ0aXRsZSIgOiAiIgosInJl
+        Y2VudF9xdWFydGVyIiA6ICItIgosImFubnVhbCIgOiAiLSIKLCJ0dG0iIDog
+        Ii0iCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDogIi0i
+        CiwiYW5udWFsIiA6ICItIgosInR0bSIgOiAiLSIKfSwKewoidGl0bGUiIDog
+        IiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiLSIKLCJhbm51YWwiIDogIi0iCiwi
+        dHRtIiA6ICItIgp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFydGVy
+        IiA6ICItIgosImFubnVhbCIgOiAiMC4wOCIKLCJ0dG0iIDogIi0xLjQ1Igp9
+        Cl0KfSwKewoiZl90eXBlIiA6ICJCYWxhbmNlXHUwMDI2bmJzcFx1MDAzQlNo
+        ZWV0IgosInVybCIgOiAiaHR0cDovL3d3dy5nb29nbGUuY29tL2ZpbmFuY2U/
+        ZnN0eXBlPWJpJnE9TkFTREFROkFBQkEiCiwiZl9maWd1cmVzIiA6ClsKewoi
+        dGl0bGUiIDogIiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiLSIKLCJhbm51YWwi
+        IDogIjEsMTE5LjQ3IgosInR0bSIgOiAiMSw2MzEuOTEiCn0sCnsKInRpdGxl
+        IiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDogIi0iCiwiYW5udWFsIiA6ICIt
+        IgosInR0bSIgOiAiLSIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVh
+        cnRlciIgOiAiMC4zNiIKLCJhbm51YWwiIDogIjEsMTE5LjQ3IgosInR0bSIg
+        OiAiMSw2MzEuOTEiCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0
+        ZXIiIDogIi0iCiwiYW5udWFsIiA6ICIxLDA4NC4yNyIKLCJ0dG0iIDogIjEs
+        MDQ3LjUwIgp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6
+        ICItIgosImFubnVhbCIgOiAiLSIKLCJ0dG0iIDogIi0iCn0sCnsKInRpdGxl
+        IiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDogIjU1LjAwIgosImFubnVhbCIg
+        OiAiMSwxNTIuODUiCiwidHRtIiA6ICIxLDQzNS43MCIKfSwKewoidGl0bGUi
+        IDogIiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiLSIKLCJhbm51YWwiIDogIi0i
+        CiwidHRtIiA6ICItIgp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFy
+        dGVyIiA6ICItIgosImFubnVhbCIgOiAiNzMuNjciCiwidHRtIiA6ICI4Ny44
+        NCIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiLSIK
+        LCJhbm51YWwiIDogIi0iCiwidHRtIiA6ICItIgp9LAp7CiJ0aXRsZSIgOiAi
+        IgosInJlY2VudF9xdWFydGVyIiA6ICItIgosImFubnVhbCIgOiAiLSIKLCJ0
+        dG0iIDogIi0iCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIi
+        IDogIi0iCiwiYW5udWFsIiA6ICIzLDk0Ni43MiIKLCJ0dG0iIDogIjQsMjY1
+        LjU2Igp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6ICIt
+        IgosImFubnVhbCIgOiAiLTIsNzM2Ljc5IgosInR0bSIgOiAiLTIsNzE4LjI0
+        Igp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6ICItIgos
+        ImFubnVhbCIgOiAiNDE1LjgxIgosInR0bSIgOiAiODA4LjExIgp9LAp7CiJ0
+        aXRsZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6ICItIgosImFubnVhbCIg
+        OiAiMTYxLjY0IgosInR0bSIgOiAiMzQ3LjI3Igp9LAp7CiJ0aXRsZSIgOiAi
+        IgosInJlY2VudF9xdWFydGVyIiA6ICI4NCw4MTIuNTgiCiwiYW5udWFsIiA6
+        ICI0Myw3NDcuMTgiCiwidHRtIiA6ICIzOCw5NTkuMjciCn0sCnsKInRpdGxl
+        IiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDogIi0iCiwiYW5udWFsIiA6ICI3
+        My40MCIKLCJ0dG0iIDogIjUxLjQyIgp9LAp7CiJ0aXRsZSIgOiAiIgosInJl
+        Y2VudF9xdWFydGVyIiA6ICI4NSwwMzYuMzUiCiwiYW5udWFsIiA6ICI0OCww
+        ODMuMDgiCiwidHRtIiA6ICI0NSwyMDMuOTciCn0sCnsKInRpdGxlIiA6ICIi
+        CiwicmVjZW50X3F1YXJ0ZXIiIDogIi0iCiwiYW5udWFsIiA6ICIxNzEuNTIi
+        CiwidHRtIiA6ICIyMDguNjkiCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50
+        X3F1YXJ0ZXIiIDogIi0iCiwiYW5udWFsIiA6ICI4MTQuMzMiCiwidHRtIiA6
+        ICI2ODQuODAiCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIi
+        IDogIi0iCiwiYW5udWFsIiA6ICIwLjAwIgosInR0bSIgOiAiMC4wMCIKfSwK
+        ewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiLSIKLCJhbm51
+        YWwiIDogIi0iCiwidHRtIiA6ICItIgp9LAp7CiJ0aXRsZSIgOiAiIgosInJl
+        Y2VudF9xdWFydGVyIiA6ICItIgosImFubnVhbCIgOiAiMTE1LjI3IgosInR0
+        bSIgOiAiMTM4LjIxIgp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFy
+        dGVyIiA6ICItIgosImFubnVhbCIgOiAiLSIKLCJ0dG0iIDogIi0iCn0sCnsK
+        InRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDogIjEsMzUyLjEzIgos
+        ImFubnVhbCIgOiAiMSwyOTkuOTQiCiwidHRtIiA6ICIxLDIzMy40OCIKfSwK
+        ewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiLSIKLCJhbm51
+        YWwiIDogIi0iCiwidHRtIiA6ICItIgp9LAp7CiJ0aXRsZSIgOiAiIgosInJl
+        Y2VudF9xdWFydGVyIiA6ICIxLDM1Mi4xMyIKLCJhbm51YWwiIDogIjEsMjk5
+        Ljk0IgosInR0bSIgOiAiMSwyMzMuNDgiCn0sCnsKInRpdGxlIiA6ICIiCiwi
+        cmVjZW50X3F1YXJ0ZXIiIDogIjEsMzUyLjEzIgosImFubnVhbCIgOiAiMSwy
+        OTkuOTQiCiwidHRtIiA6ICIxLDIzMy40OCIKfSwKewoidGl0bGUiIDogIiIK
+        LCJyZWNlbnRfcXVhcnRlciIgOiAiMjgsMTYzLjc5IgosImFubnVhbCIgOiAi
+        MTQsMjc2LjQ1IgosInR0bSIgOiAiMTMsNDY3LjE5Igp9LAp7CiJ0aXRsZSIg
+        OiAiIgosInJlY2VudF9xdWFydGVyIiA6ICItIgosImFubnVhbCIgOiAiMzQu
+        NzkiCiwidHRtIiA6ICIzNS44OCIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNl
+        bnRfcXVhcnRlciIgOiAiMzgxLjgxIgosImFubnVhbCIgOiAiMzIxLjQ5Igos
+        InR0bSIgOiAiMzkyLjE3Igp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9x
+        dWFydGVyIiA6ICIyOSw4OTcuNzQiCiwiYW5udWFsIiA6ICIxNywwMzMuODAi
+        CiwidHRtIiA6ICIxNiwxNjAuNDMiCn0sCnsKInRpdGxlIiA6ICIiCiwicmVj
+        ZW50X3F1YXJ0ZXIiIDogIi0iCiwiYW5udWFsIiA6ICItIgosInR0bSIgOiAi
+        LSIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiLSIK
+        LCJhbm51YWwiIDogIjAuMDAiCiwidHRtIiA6ICItIgp9LAp7CiJ0aXRsZSIg
+        OiAiIgosInJlY2VudF9xdWFydGVyIiA6ICItIgosImFubnVhbCIgOiAiMC45
+        NyIKLCJ0dG0iIDogIjAuOTYiCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50
+        X3F1YXJ0ZXIiIDogIi0iCiwiYW5udWFsIiA6ICI5LDEyNS40NiIKLCJ0dG0i
+        IDogIjgsODA3LjI3Igp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFy
+        dGVyIiA6ICItIgosImFubnVhbCIgOiAiNCwzNTMuOTYiCiwidHRtIiA6ICI0
+        LDU3MC44MSIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVhcnRlciIg
+        OiAiLSIKLCJhbm51YWwiIDogIi05MDkuMDAiCiwidHRtIiA6ICItOTExLjUz
+        Igp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6ICI1NSwx
+        MzguNjEiCiwiYW5udWFsIiA6ICIxMDAuOTUiCiwidHRtIiA6ICItMzQyLjk5
+        Igp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6ICI1NSwx
+        MzguNjEiCiwiYW5udWFsIiA6ICIzMSwwNDkuMjgiCiwidHRtIiA6ICIyOSww
+        NDMuNTQiCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDog
+        Ijg1LDAzNi4zNSIKLCJhbm51YWwiIDogIjQ4LDA4My4wOCIKLCJ0dG0iIDog
+        IjQ1LDIwMy45NyIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVhcnRl
+        ciIgOiAiLSIKLCJhbm51YWwiIDogIi0iCiwidHRtIiA6ICItIgp9LAp7CiJ0
+        aXRsZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6ICI4NzMuMzgiCiwiYW5u
+        dWFsIiA6ICI5NTUuMzEiCiwidHRtIiA6ICI5NDUuODUiCn0KXQp9LAp7CiJm
+        X3R5cGUiIDogIkNhc2hcdTAwMjZuYnNwXHUwMDNCRmxvdyIKLCJ1cmwiIDog
+        Imh0dHA6Ly93d3cuZ29vZ2xlLmNvbS9maW5hbmNlP2ZzdHlwZT1jaSZxPU5B
+        U0RBUTpBQUJBIgosImZfZmlndXJlcyIgOgpbCnsKInRpdGxlIiA6ICIiCiwi
+        cmVjZW50X3F1YXJ0ZXIiIDogIiIKLCJhbm51YWwiIDogIi0yMDkuNDYiCiwi
+        dHRtIiA6ICItNCwzNTEuMTEiCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50
+        X3F1YXJ0ZXIiIDogIiIKLCJhbm51YWwiIDogIjQwNy4zNCIKLCJ0dG0iIDog
+        IjQ3Mi44OSIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVhcnRlciIg
+        OiAiIgosImFubnVhbCIgOiAiMTAwLjIxIgosInR0bSIgOiAiMTM2LjcyIgp9
+        LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6ICIiCiwiYW5u
+        dWFsIiA6ICItMjI0Ljc0IgosInR0bSIgOiAiLTQyLjM0Igp9LAp7CiJ0aXRs
+        ZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6ICIiCiwiYW5udWFsIiA6ICI1
+        OTcuMTkiCiwidHRtIiA6ICI0LDcwMy40MCIKfSwKewoidGl0bGUiIDogIiIK
+        LCJyZWNlbnRfcXVhcnRlciIgOiAiIgosImFubnVhbCIgOiAiNTc4LjMyIgos
+        InR0bSIgOiAiLTMsMzAyLjk5Igp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2Vu
+        dF9xdWFydGVyIiA6ICIiCiwiYW5udWFsIiA6ICIxLDI0OC44NiIKLCJ0dG0i
+        IDogIi0yLDM4My40MiIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVh
+        cnRlciIgOiAiIgosImFubnVhbCIgOiAiLTI0MS4xNSIKLCJ0dG0iIDogIi01
+        NTguOTciCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDog
+        IiIKLCJhbm51YWwiIDogIi0xLDMzMy4xMSIKLCJ0dG0iIDogIjIsMzExLjA5
+        Igp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFydGVyIiA6ICIiCiwi
+        YW5udWFsIiA6ICItMSw1NzQuMjciCiwidHRtIiA6ICIxLDc1Mi4xMSIKfSwK
+        ewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiIgosImFubnVh
+        bCIgOiAiLTIxMS4yMCIKLCJ0dG0iIDogIi0yMzIuNjIiCn0sCnsKInRpdGxl
+        IiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDogIiIKLCJhbm51YWwiIDogIi0i
+        CiwidHRtIiA6ICItIgp9LAp7CiJ0aXRsZSIgOiAiIgosInJlY2VudF9xdWFy
+        dGVyIiA6ICIiCiwiYW5udWFsIiA6ICIxNy41MiIKLCJ0dG0iIDogIi0xNDQu
+        NjQiCn0sCnsKInRpdGxlIiA6ICIiCiwicmVjZW50X3F1YXJ0ZXIiIDogIiIK
+        LCJhbm51YWwiIDogIi0iCiwidHRtIiA6ICItIgp9LAp7CiJ0aXRsZSIgOiAi
+        IgosInJlY2VudF9xdWFydGVyIiA6ICIiCiwiYW5udWFsIiA6ICItMTkzLjY4
+        IgosInR0bSIgOiAiLTM3Ny4yNiIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNl
+        bnRfcXVhcnRlciIgOiAiIgosImFubnVhbCIgOiAiNi42NCIKLCJ0dG0iIDog
+        Ii0yMy42MiIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVhcnRlciIg
+        OiAiIgosImFubnVhbCIgOiAiLTUxMi40NCIKLCJ0dG0iIDogIi0xLDAzMi4x
+        OSIKfSwKewoidGl0bGUiIDogIiIKLCJyZWNlbnRfcXVhcnRlciIgOiAiIgos
+        ImFubnVhbCIgOiAiLSIKLCJ0dG0iIDogIi0iCn0sCnsKInRpdGxlIiA6ICIi
+        CiwicmVjZW50X3F1YXJ0ZXIiIDogIiIKLCJhbm51YWwiIDogIjE1MS4wMCIK
+        LCJ0dG0iIDogIjMsMDAwLjAwIgp9Cl0KfV0sCiJrcl9yZWNlbnRfcXVhcnRl
+        cl9kYXRlIiA6ICJRMyAoU2VwIFx1MDAyNzE3KSIsCiJrcl9hbm51YWxfZGF0
+        ZSIgOiAiMjAxNiIsCiJrcl90dG1fZGF0ZSIgOiAiVFRNIiwKImtleXJhdGlv
+        cyIgOgpbCnsKInRpdGxlIiA6ICJOZXQgcHJvZml0IG1hcmdpbiIsCiJyZWNl
+        bnRfcXVhcnRlciIgOiAiIiwKImFubnVhbCIgOiAiLTExLjA4JSIsCiJ0dG0i
+        IDogIjEwNi43NiUiCn0sCnsKInRpdGxlIiA6ICJPcGVyYXRpbmcgbWFyZ2lu
+        IiwKInJlY2VudF9xdWFydGVyIiA6ICIiLAoiYW5udWFsIiA6ICItMTIuNDgl
+        IiwKInR0bSIgOiAiNC4zNSUiCn0sCnsKInRpdGxlIiA6ICJFQklURCBtYXJn
+        aW4iLAoicmVjZW50X3F1YXJ0ZXIiIDogIiIsCiJhbm51YWwiIDogIjYuMDMl
+        IiwKInR0bSIgOiAiMjAuNDElIgp9LAp7CiJ0aXRsZSIgOiAiUmV0dXJuIG9u
+        IGF2ZXJhZ2UgYXNzZXRzIiwKInJlY2VudF9xdWFydGVyIiA6ICIiLAoiYW5u
+        dWFsIiA6ICItMS4yMyUiLAoidHRtIiA6ICIyLjI1JSIKfSwKewoidGl0bGUi
+        IDogIlJldHVybiBvbiBhdmVyYWdlIGVxdWl0eSIsCiJyZWNlbnRfcXVhcnRl
+        ciIgOiAiIiwKImFubnVhbCIgOiAiLTAuNzElIiwKInR0bSIgOiAiMy43NSUi
+        Cn0sCnsKInRpdGxlIiA6ICJFbXBsb3llZXMiLAoicmVjZW50X3F1YXJ0ZXIi
+        IDogIjgsNjAwIiwKImFubnVhbCIgOiAiLSIsCiJ0dG0iIDogIi0iCn0KXQos
+        ICJjIiA6ICIrMC4wNCIsCiJsIiA6ICI3MC4xMCIsCiJjcCIgOiAiMC4wNiIs
+        CiJjY29sIiA6ICJjaGciLAoib3AiIDogIjY5LjgwIiwKImhpIiA6ICI3MS4y
+        NSIsCiJsbyIgOiAiNjkuNDciLAoidm8iIDogIjE5LjcxTSIsCiJhdnZvIiA6
+        ICI4LjMyTSIsCiJoaTUyIiA6ICI3My4yNSIsCiJsbzUyIiA6ICIzOC4yNCIs
+        CiJtYyIgOiAiNjEuMjJCIiwKInBlIiA6ICIzNy40NCIsCiJmd3BlIiA6ICIi
+        LAoiYmV0YSIgOiAiMS44OCIsCiJlcHMiIDogIjEuODciLAoiZHkiIDogIiIs
+        CiJsZGl2IiA6ICIiLAoic2hhcmVzIiA6ICI4NzMuMzhNIiwKImluc3Rvd24i
+        IDogIjg0JSIsCiJlbyI6IiIKLCAic2lkIiA6ICJ1cy1UUkJDOjU1IiwKInNu
+        YW1lIiA6ICJGaW5hbmNpYWxzIiwKImlpZCIgOiAidXMtVFJCQzo1NTUwMTAz
+        MDEwIiwKImluYW1lIiA6ICJDbG9zZWQgRW5kIEZ1bmRzIgosICJyZWxhdGVk
+        IiA6IFsKewoiaWQiIDogIjY1ODg5MCIsCiJuYW1lIiA6ICJBbHRhYmEgSW5j
+        IiwKInQiIDogIkFBQkEiLAoiZSIgOiAiTkFTREFRIiwKImwiIDogIjcwLjEw
+        IiwKImMiIDogIiswLjA0IiwKIm1jIiA6ICI2MS4yMkIiLAoiY3AiIDogIjAu
+        MDYiLAoiY2NvbCIgOiAiY2hnIgp9CiwKewoiaWQiIDogIjIzNTM2MzE3NTU2
+        MTM3IiwKIm5hbWUiIDogIkFsaWJhYmEgR3JvdXAgSG9sZGluZyBMdGQiLAoi
+        dCIgOiAiQkFCQSIsCiJlIiA6ICJOWVNFIiwKImwiIDogIjE3NC42MSIsCiJj
+        IiA6ICItMi40NCIsCiJtYyIgOiAiNDQ3LjIwQiIsCiJjcCIgOiAiLTEuMzgi
+        LAoiY2NvbCIgOiAiY2hyIgp9CiwKewoiaWQiIDogIjEwODE1MTE5IiwKIm5h
+        bWUiIDogIllBSE9PIEpBUEFOIENPUlAiLAoidCIgOiAiWUFIT1kiLAoiZSIg
+        OiAiT1RDTUtUUyIsCiJsIiA6ICI5LjA3IiwKImMiIDogIi0wLjA2IiwKIm1j
+        IiA6ICIyNi4wMUIiLAoiY3AiIDogIi0wLjY2IiwKImNjb2wiIDogImNociIK
+        fQosCnsKImlkIiA6ICI2NjQxMTAiLAoibmFtZSIgOiAiU29mdEJhbmsgR3Jv
+        dXAgQ29ycCIsCiJ0IiA6ICJTRlRCRiIsCiJlIiA6ICJPVENNS1RTIiwKImwi
+        IDogIjgzLjk1IiwKImMiIDogIi0xLjA1IiwKIm1jIiA6ICI5Mi4xM0IiLAoi
+        Y3AiIDogIi0xLjI0IiwKImNjb2wiIDogImNociIKfQosCnsKImlkIiA6ICIx
+        MzkzOCIsCiJuYW1lIiA6ICJUZWduYSBJbmMiLAoidCIgOiAiVEdOQSIsCiJl
+        IiA6ICJOWVNFIiwKImwiIDogIjEzLjM5IiwKImMiIDogIiswLjExIiwKIm1j
+        IiA6ICIyLjkxQiIsCiJjcCIgOiAiMC44MyIsCiJjY29sIiA6ICJjaGciCn0K
+        LAp7CiJpZCIgOiAiNjYzNDc3IiwKIm5hbWUiIDogIkxvb2tTbWFydCwgTHRk
+        LiIsCiJ0IiA6ICJMT09LIiwKImUiIDogIk5BU0RBUSIsCiJsIiA6ICIwLjAw
+        MDAiLAoiYyIgOiAiIiwKIm1jIiA6ICIiLAoiY3AiIDogIiIsCiJjY29sIiA6
+        ICIiCn0KLAp7CiJpZCIgOiAiMjI2MTA4MzMzMTc5ODA0IiwKIm5hbWUiIDog
+        IlllbHAgSW5jIiwKInQiIDogIllFTFAiLAoiZSIgOiAiTllTRSIsCiJsIiA6
+        ICI0My44OSIsCiJjIiA6ICItMC42NiIsCiJtYyIgOiAiMy42NEIiLAoiY3Ai
+        IDogIi0xLjQ4IiwKImNjb2wiIDogImNociIKfQosCnsKImlkIiA6ICI4MzM0
+        NzQzIiwKIm5hbWUiIDogIkFPTCwgSW5jLiIsCiJ0IiA6ICJBT0wiLAoiZSIg
+        OiAiTllTRSIsCiJsIiA6ICI0OS45OSIsCiJjIiA6ICIiLAoibWMiIDogIjMu
+        OTJCIiwKImNwIiA6ICIiLAoiY2NvbCIgOiAiIgp9CiwKewoiaWQiIDogIjY2
+        MTI5MSIsCiJuYW1lIiA6ICJUaW1pb3MgTmF0aW9uYWwgQ29ycCIsCiJ0IiA6
+        ICJIT01TIiwKImUiIDogIk9UQ01LVFMiLAoibCIgOiAiMC4zNDAiLAoiYyIg
+        OiAiIiwKIm1jIiA6ICIyLjkxTSIsCiJjcCIgOiAiIiwKImNjb2wiIDogIiIK
+        fQosCnsKImlkIiA6ICI2NjAxNzkiLAoibmFtZSIgOiAiRWFydGhsaW5rIEhv
+        bGRpbmdzIENvcnAiLAoiYyIgOiAiIiwKIm1jIiA6ICIiLAoiY3AiIDogIiIs
+        CiJjY29sIiA6ICIiCn0KLAp7CiJpZCIgOiAiMzEyOTYzNiIsCiJuYW1lIiA6
+        ICJVQ1AgSG9sZGluZ3MgSW5jIiwKImMiIDogIiIsCiJtYyIgOiAiIiwKImNw
+        IiA6ICIiLAoiY2NvbCIgOiAiIgp9Cl0KLCAic3VtbWFyeSIgOiBbewoicmV1
+        dGVyc191cmwiIDogImh0dHA6XHUwMDJGXHUwMDJGc3RvY2tzLnVzLnJldXRl
+        cnMuY29tXHUwMDJGc3RvY2tzXHUwMDJGZnVsbERlc2NyaXB0aW9uLmFzcD9y
+        cGM9NjZcdTAwMjZzeW1ib2w9QUFCQS5PIiwKImFkZHJlc3MiOiAiMTQwIEUg
+        NDV0aCBTdCBGbCAxNSwgTkVXIFlPUkssIE5ZIDEwMDE3LTMxNDQsIFVuaXRl
+        ZCBTdGF0ZXMiLAoicGhvbmUiOiAiKzEtNjQ2LTY3OTIwMDAiLAoiZmF4Ijog
+        IisxLTMwMi02NTU1MDQ5IiwKInVybCI6ICJodHRwczpcdTAwMkZcdTAwMkZ3
+        d3cuYWx0YWJhLmNvbVx1MDAyRiIsCiJvdmVydmlldyIgOiAiQWx0YWJhIElu
+        Yy4gKHRoZSBGdW5kKSwgZm9ybWVybHkgWWFob28hIEluYy4sIGlzIGEgbm9u
+        LWRpdmVyc2lmaWVkLCBjbG9zZWQtZW5kIG1hbmFnZW1lbnQgaW52ZXN0bWVu
+        dCBjb21wYW55LiBUaGUgRnVuZCBzZWVrcyB0byB0cmFjayB0aGUgY29tYmlu
+        ZWQgaW52ZXN0bWVudCByZXR1cm4gb2YgdGhlIEFsaWJhYmEgU2hhcmVzIGFu
+        ZCB0aGUgWWFob28gSmFwYW4gU2hhcmVzIGl0IG93bnMuIEFsaWJhYmEgU2hh
+        cmVzIHJlcHJlc2VudCBhbiBhcHByb3hpbWF0ZSAxNSUgZXF1aXR5IGludGVy
+        ZXN0IGluIEFsaWJhYmEgR3JvdXAgSG9sZGluZyBMaW1pdGVkIChBbGliYWJh
+        KSwgYW5kIGl0cyBZYWhvbyBKYXBhbiBDb3Jwb3JhdGlvbiAoKFlhaG9vIEph
+        cGEpIFNoYXJlcyByZXByZXNlbnQgYW4gYXBwcm94aW1hdGUgMzYlIGVxdWl0
+        eSBpbnRlcmVzdCBpbiBZYWhvbyBKYXBhbi4gSW4gYWRkaXRpb24gdG8gdGhl
+        IEFsaWJhYmEgU2hhcmVzIGFuZCB0aGUgWWFob28gSmFwYW4gU2hhcmVzLCB0
+        aGUgRnVuZCBhbHNvIG93bnMgdGhlIG1pbm9yaXR5IGludmVzdG1lbnRzLCBh
+        bGwgb2YgdGhlIGVxdWl0eSBpbnRlcmVzdHMgaW4gRXhjYWxpYnVyIElQLCBM
+        TEMgKHdoaWNoIG93bnMgdGhlIEV4Y2FsaWJ1ciBJUCBBc3NldHMpIGFuZCB0
+        aGUgbWFya2V0YWJsZSBkZWJ0IHNlY3VyaXRpZXMgcG9ydGZvbGlvLiBUaGUg
+        RnVuZOKAmXMgZXh0ZXJuYWwgaW52ZXN0bWVudCBhZHZpc29ycyBhcmUgQmxh
+        Y2tSb2NrIEFkdmlzb3JzLCBMTEMgYW5kIE1vcmdhbiBTdGFubGV5IFNtaXRo
+        IEJhcm5leSBMTEMuIgp9IF0KLCAibWFuYWdlbWVudCIgOiBbCnsKIm5hbWUi
+        IDogIkVyaWMgSy4gQnJhbmR0IiwKImFnZSIgOiAiNTUiLAoidGl0bGUiIDog
+        IkluZGVwZW5kZW50IENoYWlybWFuIG9mIHRoZSBCb2FyZCIKfQosCnsKIm5h
+        bWUiIDogIlRob21hcyBKYW1lcyBNY0luZXJuZXkiLAoiYWdlIiA6ICI1MiIs
+        CiJ0aXRsZSIgOiAiQ2hpZWYgRXhlY3V0aXZlIE9mZmljZXIsIEluZGVwZW5k
+        ZW50IERpcmVjdG9yIgp9CiwKewoibmFtZSIgOiAiQWxleGkgQS4gV2VsbG1h
+        biIsCiJhZ2UiIDogIjQ2IiwKInRpdGxlIiA6ICJDaGllZiBGaW5hbmNpYWwg
+        XHUwMDI2IEFjY291bnRpbmcgT2ZmaWNlciIKfQosCnsKIm5hbWUiIDogIkRl
+        QW5uIEZhaXJmaWVsZCBXb3JrIiwKImFnZSIgOiAiNDciLAoidGl0bGUiIDog
+        IkNoaWVmIENvbXBsaWFuY2UgT2ZmaWNlciIKfQosCnsKIm5hbWUiIDogIkFy
+        dGh1ciBDaG9uZyIsCiJhZ2UiIDogIjYzIiwKInRpdGxlIiA6ICJHZW5lcmFs
+        IENvdW5zZWwsIFNlY3JldGFyeSIKfQosCnsKIm5hbWUiIDogIlRvciBSLiBC
+        cmFoYW0iLAoiYWdlIiA6ICI2MCIsCiJ0aXRsZSIgOiAiSW5kZXBlbmRlbnQg
+        RGlyZWN0b3IiCn0KLAp7CiJuYW1lIiA6ICJDYXRoZXJpbmUgSi4gRnJpZWRt
+        YW4iLAoiYWdlIiA6ICI1NiIsCiJ0aXRsZSIgOiAiSW5kZXBlbmRlbnQgRGly
+        ZWN0b3IiCn0KLAp7CiJuYW1lIiA6ICJSaWNoYXJkIEwuIEthdWZmbWFuIiwK
+        ImFnZSIgOiAiNTYiLAoidGl0bGUiIDogIkluZGVwZW5kZW50IERpcmVjdG9y
+        Igp9Cl0KLCJtb3JlcmVzb3VyY2VzIiA6IFsKeyAibmFtZSIgOiAiRXN0aW1h
+        dGVzIiAsICJ1cmwiIDogImh0dHA6XHUwMDJGXHUwMDJGd3d3Lm1hcmtldHdh
+        dGNoLmNvbVx1MDAyRnRvb2xzXHUwMDJGcXVvdGVzXHUwMDJGc25hcHNob3Qu
+        YXNwP3N5bWI9QUFCQVx1MDAyNnBnPWFuYWx5c3QifSwKeyAibmFtZSIgOiAi
+        U0VDIEZpbGluZ3MiICwgInVybCIgOiAiaHR0cDpcdTAwMkZcdTAwMkZnb29n
+        bGUuYnJhbmQuZWRnYXItb25saW5lLmNvbVx1MDAyRj9zeW09QUFCQSJ9LAp7
+        ICJuYW1lIiA6ICJNYWpvciBIb2xkZXJzIiAsICJ1cmwiIDogImh0dHA6XHUw
+        MDJGXHUwMDJGaW52ZXN0aW5nLm1vbmV5Lm1zbi5jb21cdTAwMkZpbnZlc3Rt
+        ZW50c1x1MDAyRmluc3RpdHV0aW9uYWwtb3duZXJzaGlwP3N5bWJvbD1BQUJB
+        In0KLAp7ICJuYW1lIiA6ICJPcHRpb25zIiAsICJ1cmwiIDogImh0dHA6XHUw
+        MDJGXHUwMDJGd3d3Lm1hcmtldHdhdGNoLmNvbVx1MDAyRnRvb2xzXHUwMDJG
+        cXVvdGVzXHUwMDJGb3B0aW9uczEuYXNwP3N5bWI9QUFCQSJ9LAp7ICJuYW1l
+        IiA6ICJSZXNlYXJjaCIgLCAidXJsIiA6ICJodHRwOlx1MDAyRlx1MDAyRmZp
+        bmFuY2UueWFob28uY29tXHUwMDJGcVx1MDAyRnJyP3M9QUFCQSJ9Cl0KLCAi
+        ZXZlbnRzIiA6IFsKXQp9XQo=
     http_version: 
-  recorded_at: Sat, 02 Dec 2017 00:51:20 GMT
+  recorded_at: Sun, 03 Dec 2017 01:24:08 GMT
 recorded_with: VCR 3.0.3

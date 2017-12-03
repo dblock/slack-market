@@ -7,33 +7,49 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept: "*/*"
-      Accept-Encoding: gzip, deflate
-      User-Agent: rest-client/2.0.2 (darwin16.4.0 x86_64) ruby/2.3.1p112
-      Host: finance.google.com
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
-    status: {code: 200, message: OK}
+    status:
+      code: 200
+      message: OK
     headers:
-      Content-Type: application/json; charset=UTF-8
-      Date: Sat, 02 Dec 2017 00:51:23 GMT
-      Expires: Sat, 02 Dec 2017 00:51:23 GMT
-      Cache-Control: private, max-age=0
-      X-Content-Type-Options: nosniff
-      Content-Disposition: attachment; filename="f.txt"
-      P3p: CP="This is not a P3P policy! See g.co/p3phelp for more info."
-      X-Frame-Options: SAMEORIGIN
-      X-Xss-Protection: 1; mode=block
-      Server: GSE
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 03 Dec 2017 01:24:09 GMT
+      Expires:
+      - Sun, 03 Dec 2017 01:24:09 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - attachment; filename="f.txt"
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
       Set-Cookie:
-      - NID=118=MJU5GeqPqAK5g759rnK49LG924xiGdiArbMpvdiCOvsXg3aXbJE4rEDMP0JjJj1c-UFfz0fSgW2Arft31GI8bLepNSVwnssyBQ3wiQLOkaivC6chOK_0enBe7V-tS3Bd;Domain=.google.com;Path=/;Expires=Sun,
-        03-Jun-2018 00:51:23 GMT;HttpOnly
-      - SC=RV=218997080481826:ED=us; expires=Sun, 03-Jun-2018 00:51:23 GMT; path=/finance;
+      - NID=118=B19gU1gVcdXkeJOy57OtSusIS6nkHzY0pWrMeAecvxLiVMJLeEqCJ1ts5o_dy1mCrqy7N45lt6F4B51muvT9jHRkPqIR-U5xFIl4PDpWi1p0LlmiUm3JkQ7EVYOwcmpj;Domain=.google.com;Path=/;Expires=Mon,
+        04-Jun-2018 01:24:09 GMT;HttpOnly
+      - SC=RV=218997080481826:ED=us; expires=Mon, 04-Jun-2018 01:24:09 GMT; path=/finance;
         domain=.google.com
-      Alt-Svc: hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338;
-        quic=51303337; quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
-      Transfer-Encoding: chunked
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding:
+      - chunked
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: |2
 
         // [
@@ -337,5 +353,1775 @@ http_interactions:
         ]
         }]
     http_version: 
-  recorded_at: Sat, 02 Dec 2017 00:51:23 GMT
+  recorded_at: Sun, 03 Dec 2017 01:24:09 GMT
+- request:
+    method: get
+    uri: https://finance.google.com/finance?output=json&q=ROG.VX
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 03 Dec 2017 01:24:10 GMT
+      Expires:
+      - Sun, 03 Dec 2017 01:24:10 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - attachment; filename="f.txt"
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Set-Cookie:
+      - NID=118=jyIOTHx2pipJn2CB0U26j-BWQplLJEZDj_yeLHUP982JFzEnFSoym3VFV46A9b1GD93tMhEHq_enEy8i6sZ2R0ld89R5GLrHJ09EtOh6bmh1qNN_LV5H0YYCxGTMdjJE;Domain=.google.com;Path=/;Expires=Mon,
+        04-Jun-2018 01:24:10 GMT;HttpOnly
+      - SC=RV=218997080481826:ED=us; expires=Mon, 04-Jun-2018 01:24:10 GMT; path=/finance;
+        domain=.google.com
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |2
+
+        // [
+        {
+        "symbol" : "ROG",
+        "exchange" : "VTX",
+        "id": "218997080481826",
+        "t" : "ROG",
+        "e" : "VTX",
+        "name" : "Roche Holding Ltd."
+        , "f_reuters_url" : "http:\u002F\u002Fstocks.us.reuters.com\u002Fstocks\u002Fratios.asp?rpc=66\u0026symbol=ROG.S",
+        "f_recent_quarter_date" : "",
+        "f_annual_date" : "",
+        "f_ttm_date" : "",
+        "financials" :
+        [{
+        "f_type" : "Income\u0026nbsp\u003BStatement"
+        ,"url" : "http://www.google.com/finance?fstype=ii&q=VTX:ROG"
+        ,"f_figures" :
+        [
+        ]
+        },
+        {
+        "f_type" : "Balance\u0026nbsp\u003BSheet"
+        ,"url" : "http://www.google.com/finance?fstype=bi&q=VTX:ROG"
+        ,"f_figures" :
+        [
+        ]
+        },
+        {
+        "f_type" : "Cash\u0026nbsp\u003BFlow"
+        ,"url" : "http://www.google.com/finance?fstype=ci&q=VTX:ROG"
+        ,"f_figures" :
+        [
+        ]
+        }],
+        "kr_recent_quarter_date" : "Q2 (Jun \u002717)",
+        "kr_annual_date" : "2016",
+        "kr_ttm_date" : "TTM",
+        "keyratios" :
+        [
+        {
+        "title" : "Net profit margin",
+        "recent_quarter" : "21.17%",
+        "annual" : "19.24%",
+        "ttm" : "18.97%"
+        },
+        {
+        "title" : "Operating margin",
+        "recent_quarter" : "29.54%",
+        "annual" : "27.80%",
+        "ttm" : "26.41%"
+        },
+        {
+        "title" : "EBITD margin",
+        "recent_quarter" : "",
+        "annual" : "41.26%",
+        "ttm" : "40.93%"
+        },
+        {
+        "title" : "Return on average assets",
+        "recent_quarter" : "14.96%",
+        "annual" : "12.76%",
+        "ttm" : "13.45%"
+        },
+        {
+        "title" : "Return on average equity",
+        "recent_quarter" : "46.76%",
+        "annual" : "42.66%",
+        "ttm" : "46.88%"
+        },
+        {
+        "title" : "Employees",
+        "recent_quarter" : "94,052",
+        "annual" : "-",
+        "ttm" : "-"
+        }
+        ]
+        , "c" : "-0.10",
+        "l" : "248.10",
+        "cp" : "-0.04",
+        "ccol" : "chr",
+        "op" : "247.60",
+        "hi" : "249.30",
+        "lo" : "246.60",
+        "vo" : "1.50M",
+        "avvo" : "1.84M",
+        "hi52" : "273.00",
+        "lo52" : "218.30",
+        "mc" : "214.06B",
+        "pe" : "22.04",
+        "fwpe" : "",
+        "beta" : "",
+        "eps" : "11.25",
+        "dy" : "3.31",
+        "ldiv" : "8.20",
+        "shares" : "693.30M",
+        "instown" : "",
+        "eo":""
+        , "related" : [
+        {
+        "id" : "218997080481826",
+        "name" : "Roche Holding Ltd.",
+        "t" : "ROG",
+        "e" : "VTX",
+        "l" : "248.10",
+        "c" : "-0.10",
+        "mc" : "214.06B",
+        "cp" : "-0.04",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "110153627552734",
+        "name" : "Novartis AG",
+        "t" : "NOVN",
+        "e" : "VTX",
+        "l" : "83.80",
+        "c" : "-0.40",
+        "mc" : "219.07B",
+        "cp" : "-0.48",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "700228012178613",
+        "name" : "ABBVIE N",
+        "t" : "ABBV",
+        "e" : "SWX",
+        "l" : "91.50",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "611386521560139",
+        "name" : "PFIZER",
+        "t" : "PFE",
+        "e" : "SWX",
+        "l" : "0.0000",
+        "c" : "",
+        "mc" : "",
+        "cp" : "",
+        "ccol" : ""
+        }
+        ,
+        {
+        "id" : "852653325383964",
+        "name" : "Nestle SA",
+        "t" : "NESN",
+        "e" : "VTX",
+        "l" : "83.75",
+        "c" : "-0.50",
+        "mc" : "260.64B",
+        "cp" : "-0.59",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "158052213936674",
+        "name" : "Johnson \u0026 Johnson",
+        "t" : "JNJ",
+        "e" : "SWX",
+        "l" : "136.40",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "157240192392383",
+        "name" : "Sanofi",
+        "t" : "SAN",
+        "e" : "SWX",
+        "l" : "90.10",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "1104813183320646",
+        "name" : "Qiagen",
+        "t" : "QGEN",
+        "e" : "SWX",
+        "l" : "32.62",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "128408725146624",
+        "name" : "ABBOTT LABOR",
+        "t" : "ABT",
+        "e" : "SWX",
+        "l" : "52.55",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "730554104297842",
+        "name" : "Lonza Group AG",
+        "t" : "LONN",
+        "e" : "VTX",
+        "l" : "255.80",
+        "c" : "-1.30",
+        "mc" : "19.05B",
+        "cp" : "-0.51",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "1011966714520114",
+        "name" : "IONIS Pharmaceuticals",
+        "t" : "IONS",
+        "e" : "SWX",
+        "l" : "53.25",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ]
+        , "summary" : [{
+        "address": "Grenzacherstr. 124, BASEL, 4058, Switzerland",
+        "phone": "+41-9-732354295",
+        "url": "http:\u002F\u002Fwww.roche.com",
+        "overview" : "Roche Holding AG (Roche) is a research-based healthcare company. The Company\u0027s operating businesses are organized into two divisions: Pharmaceuticals and Diagnostics. The Pharmaceuticals Division consists of two business segments: Roche Pharmaceuticals and Chugai. The Diagnostics Division consists of four business areas: Diabetes Care, Molecular Diagnostics, Professional Diagnostics and Tissue Diagnostics. The Company develops medicines for various disease areas, including oncology, immunology, infectious diseases, ophthalmology and neuroscience. Its pharmaceutical products include Anaprox, Avastin, Bactrim, Bondronat, CellCept, Cotellic, Dilatrend, Dormicum, Invirase, Kadcyla, Kytril (Kevatril), Lariam, MabThera, Madopar, Neupogen, Pegasys, Perjeta, Pulmozyme, Rocaltrol, Rocephin and Roferon-A. The Company offers products for researchers, including cell analysis, gene expression, genome sequencing and nucleic acid purification."
+        } ]
+        , "management" : [
+        {
+        "name" : "Severin Schwan",
+        "age" : "50",
+        "title" : "Chairman of the Corporate Executive Committee, Chief Executive Officer, Executive Director"
+        }
+        ,
+        {
+        "name" : "Alan Hippe",
+        "age" : "50",
+        "title" : "Member of the Corporate Executive Committee, Chief Financial Officer, Information Technology Officer"
+        }
+        ,
+        {
+        "name" : "Stephan Feldhaus",
+        "age" : "55",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head Group Communications"
+        }
+        ,
+        {
+        "name" : "Sophie Kornowski-Bonnet",
+        "age" : "54",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head Roche Partnering"
+        }
+        ,
+        {
+        "name" : "Osamu Nagayama",
+        "age" : "70",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Chairman and Chief Executive Officer Chugai"
+        }
+        ,
+        {
+        "name" : "John C. Reed M.D., Ph.D.",
+        "age" : "59",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head of Roche Pharma Research \u0026 Early Development"
+        }
+        ,
+        {
+        "name" : "Michael David Varney",
+        "age" : "59",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head Genetech Research and Early Development"
+        }
+        ,
+        {
+        "name" : "Cristina A. Wilbur",
+        "age" : "50",
+        "title" : "Member of the Executive Committee, Head Group Human Resources"
+        }
+        ,
+        {
+        "name" : "Urs Jaisli",
+        "age" : "61",
+        "title" : "Chief Compliance Officer"
+        }
+        ,
+        {
+        "name" : "Gottlieb A. Keller",
+        "age" : "63",
+        "title" : "Member of the Group Executive Committee, General Counsel, Secretary to the Board of Directors"
+        }
+        ]
+        ,"moreresources" : [
+        ]
+        }]
+    http_version: 
+  recorded_at: Sun, 03 Dec 2017 01:24:10 GMT
+- request:
+    method: get
+    uri: https://finance.google.com/finance?output=json&q=ROG.VX
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 03 Dec 2017 01:24:10 GMT
+      Expires:
+      - Sun, 03 Dec 2017 01:24:10 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - attachment; filename="f.txt"
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Set-Cookie:
+      - NID=118=Y6kUkLkK-fv_YBdBjIlzovJd85jCFWbYodMIHvwZQ_WoHBQObQSu_FBUHHEG9B6k2EGley-vWOwplh7_tHhS3h2FFV5mBP3WoCuZ1OcOKvbza9ucNAskBziyNpSCF-uN;Domain=.google.com;Path=/;Expires=Mon,
+        04-Jun-2018 01:24:10 GMT;HttpOnly
+      - SC=RV=218997080481826:ED=us; expires=Mon, 04-Jun-2018 01:24:10 GMT; path=/finance;
+        domain=.google.com
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |2
+
+        // [
+        {
+        "symbol" : "ROG",
+        "exchange" : "VTX",
+        "id": "218997080481826",
+        "t" : "ROG",
+        "e" : "VTX",
+        "name" : "Roche Holding Ltd."
+        , "f_reuters_url" : "http:\u002F\u002Fstocks.us.reuters.com\u002Fstocks\u002Fratios.asp?rpc=66\u0026symbol=ROG.S",
+        "f_recent_quarter_date" : "",
+        "f_annual_date" : "",
+        "f_ttm_date" : "",
+        "financials" :
+        [{
+        "f_type" : "Income\u0026nbsp\u003BStatement"
+        ,"url" : "http://www.google.com/finance?fstype=ii&q=VTX:ROG"
+        ,"f_figures" :
+        [
+        ]
+        },
+        {
+        "f_type" : "Balance\u0026nbsp\u003BSheet"
+        ,"url" : "http://www.google.com/finance?fstype=bi&q=VTX:ROG"
+        ,"f_figures" :
+        [
+        ]
+        },
+        {
+        "f_type" : "Cash\u0026nbsp\u003BFlow"
+        ,"url" : "http://www.google.com/finance?fstype=ci&q=VTX:ROG"
+        ,"f_figures" :
+        [
+        ]
+        }],
+        "kr_recent_quarter_date" : "Q2 (Jun \u002717)",
+        "kr_annual_date" : "2016",
+        "kr_ttm_date" : "TTM",
+        "keyratios" :
+        [
+        {
+        "title" : "Net profit margin",
+        "recent_quarter" : "21.17%",
+        "annual" : "19.24%",
+        "ttm" : "18.97%"
+        },
+        {
+        "title" : "Operating margin",
+        "recent_quarter" : "29.54%",
+        "annual" : "27.80%",
+        "ttm" : "26.41%"
+        },
+        {
+        "title" : "EBITD margin",
+        "recent_quarter" : "",
+        "annual" : "41.26%",
+        "ttm" : "40.93%"
+        },
+        {
+        "title" : "Return on average assets",
+        "recent_quarter" : "14.96%",
+        "annual" : "12.76%",
+        "ttm" : "13.45%"
+        },
+        {
+        "title" : "Return on average equity",
+        "recent_quarter" : "46.76%",
+        "annual" : "42.66%",
+        "ttm" : "46.88%"
+        },
+        {
+        "title" : "Employees",
+        "recent_quarter" : "94,052",
+        "annual" : "-",
+        "ttm" : "-"
+        }
+        ]
+        , "c" : "-0.10",
+        "l" : "248.10",
+        "cp" : "-0.04",
+        "ccol" : "chr",
+        "op" : "247.60",
+        "hi" : "249.30",
+        "lo" : "246.60",
+        "vo" : "1.50M",
+        "avvo" : "1.84M",
+        "hi52" : "273.00",
+        "lo52" : "218.30",
+        "mc" : "214.06B",
+        "pe" : "22.04",
+        "fwpe" : "",
+        "beta" : "",
+        "eps" : "11.25",
+        "dy" : "3.31",
+        "ldiv" : "8.20",
+        "shares" : "693.30M",
+        "instown" : "",
+        "eo":""
+        , "related" : [
+        {
+        "id" : "218997080481826",
+        "name" : "Roche Holding Ltd.",
+        "t" : "ROG",
+        "e" : "VTX",
+        "l" : "248.10",
+        "c" : "-0.10",
+        "mc" : "214.06B",
+        "cp" : "-0.04",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "110153627552734",
+        "name" : "Novartis AG",
+        "t" : "NOVN",
+        "e" : "VTX",
+        "l" : "83.80",
+        "c" : "-0.40",
+        "mc" : "219.07B",
+        "cp" : "-0.48",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "700228012178613",
+        "name" : "ABBVIE N",
+        "t" : "ABBV",
+        "e" : "SWX",
+        "l" : "91.50",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "611386521560139",
+        "name" : "PFIZER",
+        "t" : "PFE",
+        "e" : "SWX",
+        "l" : "0.0000",
+        "c" : "",
+        "mc" : "",
+        "cp" : "",
+        "ccol" : ""
+        }
+        ,
+        {
+        "id" : "852653325383964",
+        "name" : "Nestle SA",
+        "t" : "NESN",
+        "e" : "VTX",
+        "l" : "83.75",
+        "c" : "-0.50",
+        "mc" : "260.64B",
+        "cp" : "-0.59",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "158052213936674",
+        "name" : "Johnson \u0026 Johnson",
+        "t" : "JNJ",
+        "e" : "SWX",
+        "l" : "136.40",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "157240192392383",
+        "name" : "Sanofi",
+        "t" : "SAN",
+        "e" : "SWX",
+        "l" : "90.10",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "1104813183320646",
+        "name" : "Qiagen",
+        "t" : "QGEN",
+        "e" : "SWX",
+        "l" : "32.62",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "128408725146624",
+        "name" : "ABBOTT LABOR",
+        "t" : "ABT",
+        "e" : "SWX",
+        "l" : "52.55",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "730554104297842",
+        "name" : "Lonza Group AG",
+        "t" : "LONN",
+        "e" : "VTX",
+        "l" : "255.80",
+        "c" : "-1.30",
+        "mc" : "19.05B",
+        "cp" : "-0.51",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "1011966714520114",
+        "name" : "IONIS Pharmaceuticals",
+        "t" : "IONS",
+        "e" : "SWX",
+        "l" : "53.25",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ]
+        , "summary" : [{
+        "address": "Grenzacherstr. 124, BASEL, 4058, Switzerland",
+        "phone": "+41-9-732354295",
+        "url": "http:\u002F\u002Fwww.roche.com",
+        "overview" : "Roche Holding AG (Roche) is a research-based healthcare company. The Company\u0027s operating businesses are organized into two divisions: Pharmaceuticals and Diagnostics. The Pharmaceuticals Division consists of two business segments: Roche Pharmaceuticals and Chugai. The Diagnostics Division consists of four business areas: Diabetes Care, Molecular Diagnostics, Professional Diagnostics and Tissue Diagnostics. The Company develops medicines for various disease areas, including oncology, immunology, infectious diseases, ophthalmology and neuroscience. Its pharmaceutical products include Anaprox, Avastin, Bactrim, Bondronat, CellCept, Cotellic, Dilatrend, Dormicum, Invirase, Kadcyla, Kytril (Kevatril), Lariam, MabThera, Madopar, Neupogen, Pegasys, Perjeta, Pulmozyme, Rocaltrol, Rocephin and Roferon-A. The Company offers products for researchers, including cell analysis, gene expression, genome sequencing and nucleic acid purification."
+        } ]
+        , "management" : [
+        {
+        "name" : "Severin Schwan",
+        "age" : "50",
+        "title" : "Chairman of the Corporate Executive Committee, Chief Executive Officer, Executive Director"
+        }
+        ,
+        {
+        "name" : "Alan Hippe",
+        "age" : "50",
+        "title" : "Member of the Corporate Executive Committee, Chief Financial Officer, Information Technology Officer"
+        }
+        ,
+        {
+        "name" : "Stephan Feldhaus",
+        "age" : "55",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head Group Communications"
+        }
+        ,
+        {
+        "name" : "Sophie Kornowski-Bonnet",
+        "age" : "54",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head Roche Partnering"
+        }
+        ,
+        {
+        "name" : "Osamu Nagayama",
+        "age" : "70",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Chairman and Chief Executive Officer Chugai"
+        }
+        ,
+        {
+        "name" : "John C. Reed M.D., Ph.D.",
+        "age" : "59",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head of Roche Pharma Research \u0026 Early Development"
+        }
+        ,
+        {
+        "name" : "Michael David Varney",
+        "age" : "59",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head Genetech Research and Early Development"
+        }
+        ,
+        {
+        "name" : "Cristina A. Wilbur",
+        "age" : "50",
+        "title" : "Member of the Executive Committee, Head Group Human Resources"
+        }
+        ,
+        {
+        "name" : "Urs Jaisli",
+        "age" : "61",
+        "title" : "Chief Compliance Officer"
+        }
+        ,
+        {
+        "name" : "Gottlieb A. Keller",
+        "age" : "63",
+        "title" : "Member of the Group Executive Committee, General Counsel, Secretary to the Board of Directors"
+        }
+        ]
+        ,"moreresources" : [
+        ]
+        }]
+    http_version: 
+  recorded_at: Sun, 03 Dec 2017 01:24:10 GMT
+- request:
+    method: get
+    uri: https://finance.google.com/finance?output=json&q=ROG.VX
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 03 Dec 2017 01:24:10 GMT
+      Expires:
+      - Sun, 03 Dec 2017 01:24:10 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - attachment; filename="f.txt"
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Set-Cookie:
+      - NID=118=HlIYKtCTYFKiIP1D8rup_GrxHIzuLiVGJmvvaLa1l519ci5GcDeXFnNljna6qqXiWk2WoZCReJ2xZ2jvvzvYHoTkjcAq_lzEu-GDlGg65F6IBLkoyQcGbHHkfrO4tR4C;Domain=.google.com;Path=/;Expires=Mon,
+        04-Jun-2018 01:24:10 GMT;HttpOnly
+      - SC=RV=218997080481826:ED=us; expires=Mon, 04-Jun-2018 01:24:10 GMT; path=/finance;
+        domain=.google.com
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |2
+
+        // [
+        {
+        "symbol" : "ROG",
+        "exchange" : "VTX",
+        "id": "218997080481826",
+        "t" : "ROG",
+        "e" : "VTX",
+        "name" : "Roche Holding Ltd."
+        , "f_reuters_url" : "http:\u002F\u002Fstocks.us.reuters.com\u002Fstocks\u002Fratios.asp?rpc=66\u0026symbol=ROG.S",
+        "f_recent_quarter_date" : "",
+        "f_annual_date" : "",
+        "f_ttm_date" : "",
+        "financials" :
+        [{
+        "f_type" : "Income\u0026nbsp\u003BStatement"
+        ,"url" : "http://www.google.com/finance?fstype=ii&q=VTX:ROG"
+        ,"f_figures" :
+        [
+        ]
+        },
+        {
+        "f_type" : "Balance\u0026nbsp\u003BSheet"
+        ,"url" : "http://www.google.com/finance?fstype=bi&q=VTX:ROG"
+        ,"f_figures" :
+        [
+        ]
+        },
+        {
+        "f_type" : "Cash\u0026nbsp\u003BFlow"
+        ,"url" : "http://www.google.com/finance?fstype=ci&q=VTX:ROG"
+        ,"f_figures" :
+        [
+        ]
+        }],
+        "kr_recent_quarter_date" : "Q2 (Jun \u002717)",
+        "kr_annual_date" : "2016",
+        "kr_ttm_date" : "TTM",
+        "keyratios" :
+        [
+        {
+        "title" : "Net profit margin",
+        "recent_quarter" : "21.17%",
+        "annual" : "19.24%",
+        "ttm" : "18.97%"
+        },
+        {
+        "title" : "Operating margin",
+        "recent_quarter" : "29.54%",
+        "annual" : "27.80%",
+        "ttm" : "26.41%"
+        },
+        {
+        "title" : "EBITD margin",
+        "recent_quarter" : "",
+        "annual" : "41.26%",
+        "ttm" : "40.93%"
+        },
+        {
+        "title" : "Return on average assets",
+        "recent_quarter" : "14.96%",
+        "annual" : "12.76%",
+        "ttm" : "13.45%"
+        },
+        {
+        "title" : "Return on average equity",
+        "recent_quarter" : "46.76%",
+        "annual" : "42.66%",
+        "ttm" : "46.88%"
+        },
+        {
+        "title" : "Employees",
+        "recent_quarter" : "94,052",
+        "annual" : "-",
+        "ttm" : "-"
+        }
+        ]
+        , "c" : "-0.10",
+        "l" : "248.10",
+        "cp" : "-0.04",
+        "ccol" : "chr",
+        "op" : "247.60",
+        "hi" : "249.30",
+        "lo" : "246.60",
+        "vo" : "1.50M",
+        "avvo" : "1.84M",
+        "hi52" : "273.00",
+        "lo52" : "218.30",
+        "mc" : "214.06B",
+        "pe" : "22.04",
+        "fwpe" : "",
+        "beta" : "",
+        "eps" : "11.25",
+        "dy" : "3.31",
+        "ldiv" : "8.20",
+        "shares" : "693.30M",
+        "instown" : "",
+        "eo":""
+        , "related" : [
+        {
+        "id" : "218997080481826",
+        "name" : "Roche Holding Ltd.",
+        "t" : "ROG",
+        "e" : "VTX",
+        "l" : "248.10",
+        "c" : "-0.10",
+        "mc" : "214.06B",
+        "cp" : "-0.04",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "110153627552734",
+        "name" : "Novartis AG",
+        "t" : "NOVN",
+        "e" : "VTX",
+        "l" : "83.80",
+        "c" : "-0.40",
+        "mc" : "219.07B",
+        "cp" : "-0.48",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "700228012178613",
+        "name" : "ABBVIE N",
+        "t" : "ABBV",
+        "e" : "SWX",
+        "l" : "91.50",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "611386521560139",
+        "name" : "PFIZER",
+        "t" : "PFE",
+        "e" : "SWX",
+        "l" : "0.0000",
+        "c" : "",
+        "mc" : "",
+        "cp" : "",
+        "ccol" : ""
+        }
+        ,
+        {
+        "id" : "852653325383964",
+        "name" : "Nestle SA",
+        "t" : "NESN",
+        "e" : "VTX",
+        "l" : "83.75",
+        "c" : "-0.50",
+        "mc" : "260.64B",
+        "cp" : "-0.59",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "158052213936674",
+        "name" : "Johnson \u0026 Johnson",
+        "t" : "JNJ",
+        "e" : "SWX",
+        "l" : "136.40",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "157240192392383",
+        "name" : "Sanofi",
+        "t" : "SAN",
+        "e" : "SWX",
+        "l" : "90.10",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "1104813183320646",
+        "name" : "Qiagen",
+        "t" : "QGEN",
+        "e" : "SWX",
+        "l" : "32.62",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "128408725146624",
+        "name" : "ABBOTT LABOR",
+        "t" : "ABT",
+        "e" : "SWX",
+        "l" : "52.55",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "730554104297842",
+        "name" : "Lonza Group AG",
+        "t" : "LONN",
+        "e" : "VTX",
+        "l" : "255.80",
+        "c" : "-1.30",
+        "mc" : "19.05B",
+        "cp" : "-0.51",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "1011966714520114",
+        "name" : "IONIS Pharmaceuticals",
+        "t" : "IONS",
+        "e" : "SWX",
+        "l" : "53.25",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ]
+        , "summary" : [{
+        "address": "Grenzacherstr. 124, BASEL, 4058, Switzerland",
+        "phone": "+41-9-732354295",
+        "url": "http:\u002F\u002Fwww.roche.com",
+        "overview" : "Roche Holding AG (Roche) is a research-based healthcare company. The Company\u0027s operating businesses are organized into two divisions: Pharmaceuticals and Diagnostics. The Pharmaceuticals Division consists of two business segments: Roche Pharmaceuticals and Chugai. The Diagnostics Division consists of four business areas: Diabetes Care, Molecular Diagnostics, Professional Diagnostics and Tissue Diagnostics. The Company develops medicines for various disease areas, including oncology, immunology, infectious diseases, ophthalmology and neuroscience. Its pharmaceutical products include Anaprox, Avastin, Bactrim, Bondronat, CellCept, Cotellic, Dilatrend, Dormicum, Invirase, Kadcyla, Kytril (Kevatril), Lariam, MabThera, Madopar, Neupogen, Pegasys, Perjeta, Pulmozyme, Rocaltrol, Rocephin and Roferon-A. The Company offers products for researchers, including cell analysis, gene expression, genome sequencing and nucleic acid purification."
+        } ]
+        , "management" : [
+        {
+        "name" : "Severin Schwan",
+        "age" : "50",
+        "title" : "Chairman of the Corporate Executive Committee, Chief Executive Officer, Executive Director"
+        }
+        ,
+        {
+        "name" : "Alan Hippe",
+        "age" : "50",
+        "title" : "Member of the Corporate Executive Committee, Chief Financial Officer, Information Technology Officer"
+        }
+        ,
+        {
+        "name" : "Stephan Feldhaus",
+        "age" : "55",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head Group Communications"
+        }
+        ,
+        {
+        "name" : "Sophie Kornowski-Bonnet",
+        "age" : "54",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head Roche Partnering"
+        }
+        ,
+        {
+        "name" : "Osamu Nagayama",
+        "age" : "70",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Chairman and Chief Executive Officer Chugai"
+        }
+        ,
+        {
+        "name" : "John C. Reed M.D., Ph.D.",
+        "age" : "59",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head of Roche Pharma Research \u0026 Early Development"
+        }
+        ,
+        {
+        "name" : "Michael David Varney",
+        "age" : "59",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head Genetech Research and Early Development"
+        }
+        ,
+        {
+        "name" : "Cristina A. Wilbur",
+        "age" : "50",
+        "title" : "Member of the Executive Committee, Head Group Human Resources"
+        }
+        ,
+        {
+        "name" : "Urs Jaisli",
+        "age" : "61",
+        "title" : "Chief Compliance Officer"
+        }
+        ,
+        {
+        "name" : "Gottlieb A. Keller",
+        "age" : "63",
+        "title" : "Member of the Group Executive Committee, General Counsel, Secretary to the Board of Directors"
+        }
+        ]
+        ,"moreresources" : [
+        ]
+        }]
+    http_version: 
+  recorded_at: Sun, 03 Dec 2017 01:24:11 GMT
+- request:
+    method: get
+    uri: https://finance.google.com/finance?output=json&q=ROG.VX
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 03 Dec 2017 01:24:11 GMT
+      Expires:
+      - Sun, 03 Dec 2017 01:24:11 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - attachment; filename="f.txt"
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Set-Cookie:
+      - NID=118=AegM0LoC0yqUIFg4zvi85dSbuq58x2Z0tUGEFS1VxnkxEKwFoM5J04oD4MRfWOSMSYKG77HF6R565C9-2o7ZqsCtPvwGsxhXTGGjwOLuSJAeFg7Axa68WFOGi7OaDjto;Domain=.google.com;Path=/;Expires=Mon,
+        04-Jun-2018 01:24:11 GMT;HttpOnly
+      - SC=RV=218997080481826:ED=us; expires=Mon, 04-Jun-2018 01:24:11 GMT; path=/finance;
+        domain=.google.com
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |2
+
+        // [
+        {
+        "symbol" : "ROG",
+        "exchange" : "VTX",
+        "id": "218997080481826",
+        "t" : "ROG",
+        "e" : "VTX",
+        "name" : "Roche Holding Ltd."
+        , "f_reuters_url" : "http:\u002F\u002Fstocks.us.reuters.com\u002Fstocks\u002Fratios.asp?rpc=66\u0026symbol=ROG.S",
+        "f_recent_quarter_date" : "",
+        "f_annual_date" : "",
+        "f_ttm_date" : "",
+        "financials" :
+        [{
+        "f_type" : "Income\u0026nbsp\u003BStatement"
+        ,"url" : "http://www.google.com/finance?fstype=ii&q=VTX:ROG"
+        ,"f_figures" :
+        [
+        ]
+        },
+        {
+        "f_type" : "Balance\u0026nbsp\u003BSheet"
+        ,"url" : "http://www.google.com/finance?fstype=bi&q=VTX:ROG"
+        ,"f_figures" :
+        [
+        ]
+        },
+        {
+        "f_type" : "Cash\u0026nbsp\u003BFlow"
+        ,"url" : "http://www.google.com/finance?fstype=ci&q=VTX:ROG"
+        ,"f_figures" :
+        [
+        ]
+        }],
+        "kr_recent_quarter_date" : "Q2 (Jun \u002717)",
+        "kr_annual_date" : "2016",
+        "kr_ttm_date" : "TTM",
+        "keyratios" :
+        [
+        {
+        "title" : "Net profit margin",
+        "recent_quarter" : "21.17%",
+        "annual" : "19.24%",
+        "ttm" : "18.97%"
+        },
+        {
+        "title" : "Operating margin",
+        "recent_quarter" : "29.54%",
+        "annual" : "27.80%",
+        "ttm" : "26.41%"
+        },
+        {
+        "title" : "EBITD margin",
+        "recent_quarter" : "",
+        "annual" : "41.26%",
+        "ttm" : "40.93%"
+        },
+        {
+        "title" : "Return on average assets",
+        "recent_quarter" : "14.96%",
+        "annual" : "12.76%",
+        "ttm" : "13.45%"
+        },
+        {
+        "title" : "Return on average equity",
+        "recent_quarter" : "46.76%",
+        "annual" : "42.66%",
+        "ttm" : "46.88%"
+        },
+        {
+        "title" : "Employees",
+        "recent_quarter" : "94,052",
+        "annual" : "-",
+        "ttm" : "-"
+        }
+        ]
+        , "c" : "-0.10",
+        "l" : "248.10",
+        "cp" : "-0.04",
+        "ccol" : "chr",
+        "op" : "247.60",
+        "hi" : "249.30",
+        "lo" : "246.60",
+        "vo" : "1.50M",
+        "avvo" : "1.84M",
+        "hi52" : "273.00",
+        "lo52" : "218.30",
+        "mc" : "214.06B",
+        "pe" : "22.04",
+        "fwpe" : "",
+        "beta" : "",
+        "eps" : "11.25",
+        "dy" : "3.31",
+        "ldiv" : "8.20",
+        "shares" : "693.30M",
+        "instown" : "",
+        "eo":""
+        , "related" : [
+        {
+        "id" : "218997080481826",
+        "name" : "Roche Holding Ltd.",
+        "t" : "ROG",
+        "e" : "VTX",
+        "l" : "248.10",
+        "c" : "-0.10",
+        "mc" : "214.06B",
+        "cp" : "-0.04",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "110153627552734",
+        "name" : "Novartis AG",
+        "t" : "NOVN",
+        "e" : "VTX",
+        "l" : "83.80",
+        "c" : "-0.40",
+        "mc" : "219.07B",
+        "cp" : "-0.48",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "700228012178613",
+        "name" : "ABBVIE N",
+        "t" : "ABBV",
+        "e" : "SWX",
+        "l" : "91.50",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "611386521560139",
+        "name" : "PFIZER",
+        "t" : "PFE",
+        "e" : "SWX",
+        "l" : "0.0000",
+        "c" : "",
+        "mc" : "",
+        "cp" : "",
+        "ccol" : ""
+        }
+        ,
+        {
+        "id" : "852653325383964",
+        "name" : "Nestle SA",
+        "t" : "NESN",
+        "e" : "VTX",
+        "l" : "83.75",
+        "c" : "-0.50",
+        "mc" : "260.64B",
+        "cp" : "-0.59",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "158052213936674",
+        "name" : "Johnson \u0026 Johnson",
+        "t" : "JNJ",
+        "e" : "SWX",
+        "l" : "136.40",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "157240192392383",
+        "name" : "Sanofi",
+        "t" : "SAN",
+        "e" : "SWX",
+        "l" : "90.10",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "1104813183320646",
+        "name" : "Qiagen",
+        "t" : "QGEN",
+        "e" : "SWX",
+        "l" : "32.62",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "128408725146624",
+        "name" : "ABBOTT LABOR",
+        "t" : "ABT",
+        "e" : "SWX",
+        "l" : "52.55",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "730554104297842",
+        "name" : "Lonza Group AG",
+        "t" : "LONN",
+        "e" : "VTX",
+        "l" : "255.80",
+        "c" : "-1.30",
+        "mc" : "19.05B",
+        "cp" : "-0.51",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "1011966714520114",
+        "name" : "IONIS Pharmaceuticals",
+        "t" : "IONS",
+        "e" : "SWX",
+        "l" : "53.25",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ]
+        , "summary" : [{
+        "address": "Grenzacherstr. 124, BASEL, 4058, Switzerland",
+        "phone": "+41-9-732354295",
+        "url": "http:\u002F\u002Fwww.roche.com",
+        "overview" : "Roche Holding AG (Roche) is a research-based healthcare company. The Company\u0027s operating businesses are organized into two divisions: Pharmaceuticals and Diagnostics. The Pharmaceuticals Division consists of two business segments: Roche Pharmaceuticals and Chugai. The Diagnostics Division consists of four business areas: Diabetes Care, Molecular Diagnostics, Professional Diagnostics and Tissue Diagnostics. The Company develops medicines for various disease areas, including oncology, immunology, infectious diseases, ophthalmology and neuroscience. Its pharmaceutical products include Anaprox, Avastin, Bactrim, Bondronat, CellCept, Cotellic, Dilatrend, Dormicum, Invirase, Kadcyla, Kytril (Kevatril), Lariam, MabThera, Madopar, Neupogen, Pegasys, Perjeta, Pulmozyme, Rocaltrol, Rocephin and Roferon-A. The Company offers products for researchers, including cell analysis, gene expression, genome sequencing and nucleic acid purification."
+        } ]
+        , "management" : [
+        {
+        "name" : "Severin Schwan",
+        "age" : "50",
+        "title" : "Chairman of the Corporate Executive Committee, Chief Executive Officer, Executive Director"
+        }
+        ,
+        {
+        "name" : "Alan Hippe",
+        "age" : "50",
+        "title" : "Member of the Corporate Executive Committee, Chief Financial Officer, Information Technology Officer"
+        }
+        ,
+        {
+        "name" : "Stephan Feldhaus",
+        "age" : "55",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head Group Communications"
+        }
+        ,
+        {
+        "name" : "Sophie Kornowski-Bonnet",
+        "age" : "54",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head Roche Partnering"
+        }
+        ,
+        {
+        "name" : "Osamu Nagayama",
+        "age" : "70",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Chairman and Chief Executive Officer Chugai"
+        }
+        ,
+        {
+        "name" : "John C. Reed M.D., Ph.D.",
+        "age" : "59",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head of Roche Pharma Research \u0026 Early Development"
+        }
+        ,
+        {
+        "name" : "Michael David Varney",
+        "age" : "59",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head Genetech Research and Early Development"
+        }
+        ,
+        {
+        "name" : "Cristina A. Wilbur",
+        "age" : "50",
+        "title" : "Member of the Executive Committee, Head Group Human Resources"
+        }
+        ,
+        {
+        "name" : "Urs Jaisli",
+        "age" : "61",
+        "title" : "Chief Compliance Officer"
+        }
+        ,
+        {
+        "name" : "Gottlieb A. Keller",
+        "age" : "63",
+        "title" : "Member of the Group Executive Committee, General Counsel, Secretary to the Board of Directors"
+        }
+        ]
+        ,"moreresources" : [
+        ]
+        }]
+    http_version: 
+  recorded_at: Sun, 03 Dec 2017 01:24:11 GMT
+- request:
+    method: get
+    uri: https://finance.google.com/finance?output=json&q=ROG.VX
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 03 Dec 2017 01:24:11 GMT
+      Expires:
+      - Sun, 03 Dec 2017 01:24:11 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      Content-Disposition:
+      - attachment; filename="f.txt"
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Set-Cookie:
+      - NID=118=C5TIRu0BE8gy64FY8VkO7ftQRTns9ixyDDf0Ql2Mqf0yEm2B7pFLfYyW8ryrrfnB5EtGHBEJljuF7PY4BnGA9xwgyQbuukBCL2h_Yj6l0_9v2pERXY6c_y60LAX-w1LA;Domain=.google.com;Path=/;Expires=Mon,
+        04-Jun-2018 01:24:11 GMT;HttpOnly
+      - SC=RV=218997080481826:ED=us; expires=Mon, 04-Jun-2018 01:24:11 GMT; path=/finance;
+        domain=.google.com
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |2
+
+        // [
+        {
+        "symbol" : "ROG",
+        "exchange" : "VTX",
+        "id": "218997080481826",
+        "t" : "ROG",
+        "e" : "VTX",
+        "name" : "Roche Holding Ltd."
+        , "f_reuters_url" : "http:\u002F\u002Fstocks.us.reuters.com\u002Fstocks\u002Fratios.asp?rpc=66\u0026symbol=ROG.S",
+        "f_recent_quarter_date" : "",
+        "f_annual_date" : "",
+        "f_ttm_date" : "",
+        "financials" :
+        [{
+        "f_type" : "Income\u0026nbsp\u003BStatement"
+        ,"url" : "http://www.google.com/finance?fstype=ii&q=VTX:ROG"
+        ,"f_figures" :
+        [
+        ]
+        },
+        {
+        "f_type" : "Balance\u0026nbsp\u003BSheet"
+        ,"url" : "http://www.google.com/finance?fstype=bi&q=VTX:ROG"
+        ,"f_figures" :
+        [
+        ]
+        },
+        {
+        "f_type" : "Cash\u0026nbsp\u003BFlow"
+        ,"url" : "http://www.google.com/finance?fstype=ci&q=VTX:ROG"
+        ,"f_figures" :
+        [
+        ]
+        }],
+        "kr_recent_quarter_date" : "Q2 (Jun \u002717)",
+        "kr_annual_date" : "2016",
+        "kr_ttm_date" : "TTM",
+        "keyratios" :
+        [
+        {
+        "title" : "Net profit margin",
+        "recent_quarter" : "21.17%",
+        "annual" : "19.24%",
+        "ttm" : "18.97%"
+        },
+        {
+        "title" : "Operating margin",
+        "recent_quarter" : "29.54%",
+        "annual" : "27.80%",
+        "ttm" : "26.41%"
+        },
+        {
+        "title" : "EBITD margin",
+        "recent_quarter" : "",
+        "annual" : "41.26%",
+        "ttm" : "40.93%"
+        },
+        {
+        "title" : "Return on average assets",
+        "recent_quarter" : "14.96%",
+        "annual" : "12.76%",
+        "ttm" : "13.45%"
+        },
+        {
+        "title" : "Return on average equity",
+        "recent_quarter" : "46.76%",
+        "annual" : "42.66%",
+        "ttm" : "46.88%"
+        },
+        {
+        "title" : "Employees",
+        "recent_quarter" : "94,052",
+        "annual" : "-",
+        "ttm" : "-"
+        }
+        ]
+        , "c" : "-0.10",
+        "l" : "248.10",
+        "cp" : "-0.04",
+        "ccol" : "chr",
+        "op" : "247.60",
+        "hi" : "249.30",
+        "lo" : "246.60",
+        "vo" : "1.50M",
+        "avvo" : "1.84M",
+        "hi52" : "273.00",
+        "lo52" : "218.30",
+        "mc" : "214.06B",
+        "pe" : "22.04",
+        "fwpe" : "",
+        "beta" : "",
+        "eps" : "11.25",
+        "dy" : "3.31",
+        "ldiv" : "8.20",
+        "shares" : "693.30M",
+        "instown" : "",
+        "eo":""
+        , "related" : [
+        {
+        "id" : "218997080481826",
+        "name" : "Roche Holding Ltd.",
+        "t" : "ROG",
+        "e" : "VTX",
+        "l" : "248.10",
+        "c" : "-0.10",
+        "mc" : "214.06B",
+        "cp" : "-0.04",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "110153627552734",
+        "name" : "Novartis AG",
+        "t" : "NOVN",
+        "e" : "VTX",
+        "l" : "83.80",
+        "c" : "-0.40",
+        "mc" : "219.07B",
+        "cp" : "-0.48",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "700228012178613",
+        "name" : "ABBVIE N",
+        "t" : "ABBV",
+        "e" : "SWX",
+        "l" : "91.50",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "611386521560139",
+        "name" : "PFIZER",
+        "t" : "PFE",
+        "e" : "SWX",
+        "l" : "0.0000",
+        "c" : "",
+        "mc" : "",
+        "cp" : "",
+        "ccol" : ""
+        }
+        ,
+        {
+        "id" : "852653325383964",
+        "name" : "Nestle SA",
+        "t" : "NESN",
+        "e" : "VTX",
+        "l" : "83.75",
+        "c" : "-0.50",
+        "mc" : "260.64B",
+        "cp" : "-0.59",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "158052213936674",
+        "name" : "Johnson \u0026 Johnson",
+        "t" : "JNJ",
+        "e" : "SWX",
+        "l" : "136.40",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "157240192392383",
+        "name" : "Sanofi",
+        "t" : "SAN",
+        "e" : "SWX",
+        "l" : "90.10",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "1104813183320646",
+        "name" : "Qiagen",
+        "t" : "QGEN",
+        "e" : "SWX",
+        "l" : "32.62",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "128408725146624",
+        "name" : "ABBOTT LABOR",
+        "t" : "ABT",
+        "e" : "SWX",
+        "l" : "52.55",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ,
+        {
+        "id" : "730554104297842",
+        "name" : "Lonza Group AG",
+        "t" : "LONN",
+        "e" : "VTX",
+        "l" : "255.80",
+        "c" : "-1.30",
+        "mc" : "19.05B",
+        "cp" : "-0.51",
+        "ccol" : "chr"
+        }
+        ,
+        {
+        "id" : "1011966714520114",
+        "name" : "IONIS Pharmaceuticals",
+        "t" : "IONS",
+        "e" : "SWX",
+        "l" : "53.25",
+        "c" : "0.00",
+        "mc" : "",
+        "cp" : "0.00",
+        "ccol" : "chb"
+        }
+        ]
+        , "summary" : [{
+        "address": "Grenzacherstr. 124, BASEL, 4058, Switzerland",
+        "phone": "+41-9-732354295",
+        "url": "http:\u002F\u002Fwww.roche.com",
+        "overview" : "Roche Holding AG (Roche) is a research-based healthcare company. The Company\u0027s operating businesses are organized into two divisions: Pharmaceuticals and Diagnostics. The Pharmaceuticals Division consists of two business segments: Roche Pharmaceuticals and Chugai. The Diagnostics Division consists of four business areas: Diabetes Care, Molecular Diagnostics, Professional Diagnostics and Tissue Diagnostics. The Company develops medicines for various disease areas, including oncology, immunology, infectious diseases, ophthalmology and neuroscience. Its pharmaceutical products include Anaprox, Avastin, Bactrim, Bondronat, CellCept, Cotellic, Dilatrend, Dormicum, Invirase, Kadcyla, Kytril (Kevatril), Lariam, MabThera, Madopar, Neupogen, Pegasys, Perjeta, Pulmozyme, Rocaltrol, Rocephin and Roferon-A. The Company offers products for researchers, including cell analysis, gene expression, genome sequencing and nucleic acid purification."
+        } ]
+        , "management" : [
+        {
+        "name" : "Severin Schwan",
+        "age" : "50",
+        "title" : "Chairman of the Corporate Executive Committee, Chief Executive Officer, Executive Director"
+        }
+        ,
+        {
+        "name" : "Alan Hippe",
+        "age" : "50",
+        "title" : "Member of the Corporate Executive Committee, Chief Financial Officer, Information Technology Officer"
+        }
+        ,
+        {
+        "name" : "Stephan Feldhaus",
+        "age" : "55",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head Group Communications"
+        }
+        ,
+        {
+        "name" : "Sophie Kornowski-Bonnet",
+        "age" : "54",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head Roche Partnering"
+        }
+        ,
+        {
+        "name" : "Osamu Nagayama",
+        "age" : "70",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Chairman and Chief Executive Officer Chugai"
+        }
+        ,
+        {
+        "name" : "John C. Reed M.D., Ph.D.",
+        "age" : "59",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head of Roche Pharma Research \u0026 Early Development"
+        }
+        ,
+        {
+        "name" : "Michael David Varney",
+        "age" : "59",
+        "title" : "Member of the Enlarged Corporate Executive Committee, Head Genetech Research and Early Development"
+        }
+        ,
+        {
+        "name" : "Cristina A. Wilbur",
+        "age" : "50",
+        "title" : "Member of the Executive Committee, Head Group Human Resources"
+        }
+        ,
+        {
+        "name" : "Urs Jaisli",
+        "age" : "61",
+        "title" : "Chief Compliance Officer"
+        }
+        ,
+        {
+        "name" : "Gottlieb A. Keller",
+        "age" : "63",
+        "title" : "Member of the Group Executive Committee, General Counsel, Secretary to the Board of Directors"
+        }
+        ]
+        ,"moreresources" : [
+        ]
+        }]
+    http_version: 
+  recorded_at: Sun, 03 Dec 2017 01:24:11 GMT
 recorded_with: VCR 3.0.3

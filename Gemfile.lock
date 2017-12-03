@@ -88,6 +88,10 @@ GEM
       faraday_middleware-parse_oj (~> 0.3)
       launchy (~> 2.4)
     gli (2.16.1)
+    google-finance-ruby-client (0.1.0)
+      faraday (>= 0.9)
+      faraday_middleware
+      hashie
     grape (1.0.0)
       activesupport
       builder
@@ -248,9 +252,6 @@ GEM
       hashie
       json
       websocket-driver
-    stock_quote (1.5.2)
-      json
-      rest-client (~> 2.0.2)
     stripe (1.58.0)
       rest-client (>= 1.4, < 4.0)
     stripe-ruby-mock (2.4.1)
@@ -299,6 +300,7 @@ DEPENDENCIES
   faker
   foreman
   giphy
+  google-finance-ruby-client
   gruff
   hyperclient
   money
@@ -317,7 +319,6 @@ DEPENDENCIES
   selenium-webdriver
   slack-ruby-bot-server
   slack-ruby-client
-  stock_quote
   stripe (~> 1.58.0)
   stripe-ruby-mock (~> 2.4.1)
   vcr

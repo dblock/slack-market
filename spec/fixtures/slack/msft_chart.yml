@@ -7,104 +7,61 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept: "*/*"
-      Accept-Encoding: gzip, deflate
-      User-Agent: rest-client/2.0.2 (darwin16.4.0 x86_64) ruby/2.3.1p112
-      Host: finance.google.com
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin16.4.0 x86_64) ruby/2.3.1p112
+      Host:
+      - finance.google.com
   response:
-    status: {code: 200, message: OK}
+    status:
+      code: 200
+      message: OK
     headers:
-      Content-Type: text/plain; charset=ISO-8859-1
-      Cache-Control: private,max-age=60
-      Vary: Accept-Encoding
-      X-Content-Type-Options: nosniff
-      P3p: CP="This is not a P3P policy! See g.co/p3phelp for more info."
-      Date: Sat, 02 Dec 2017 05:19:17 GMT
-      X-Frame-Options: SAMEORIGIN
-      X-Xss-Protection: 1; mode=block
-      Server: GSE
-      Set-Cookie: NID=118=ZbFQzMj2RWfSfWWAsQzvCTwueczWjHrhuSCoZDnXTcfd-8aSANPlyaU1gm4u5zRMLH4CBQVlyB26txc1cBITY1uWqDX3eHzhqUPjJqOH6NL5nUQSm1C7Kev0spUezOA1;Domain=.google.com;Path=/;Expires=Sun,
-        03-Jun-2018 05:19:17 GMT;HttpOnly
-      Alt-Svc: hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338;
-        quic=51303337; quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
-      Expires: Sat, 02 Dec 2017 05:19:17 GMT
-      Transfer-Encoding: chunked
+      Content-Type:
+      - text/plain; charset=ISO-8859-1
+      Cache-Control:
+      - private,max-age=60
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      Content-Encoding:
+      - gzip
+      Date:
+      - Sun, 03 Dec 2017 03:19:23 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Set-Cookie:
+      - NID=118=WdTcPgOLTn-KgTZGV8Iw-flSxE8Tu0e5Wcfq5PpPVDsybwLmDH9RdLeJUuq3T90bbqY_3IMccv4uvRUqOtAf5ymSsDv8cQtmsZCLXYKjm8ahjXHd7XLSDzz9EbaOWSiw;Domain=.google.com;Path=/;Expires=Mon,
+        04-Jun-2018 03:19:23 GMT;HttpOnly
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Expires:
+      - Sun, 03 Dec 2017 03:19:23 GMT
+      Transfer-Encoding:
+      - chunked
     body:
-      encoding: ISO-8859-1
-      string: |
-        EXCHANGE%3DNASDAQ
-        MARKET_OPEN_MINUTE=570
-        MARKET_CLOSE_MINUTE=960
-        INTERVAL=360
-        COLUMNS=DATE,CLOSE
-        DATA=
-        TIMEZONE_OFFSET=-300
-        a1512138600,83.55
-        1,84.18
-        2,84.28
-        3,84.22
-        4,84.34
-        5,84.31
-        6,84.43
-        7,84.47
-        8,84.71
-        9,84.46
-        10,84.45
-        11,84.385
-        12,84.29
-        13,84.34
-        14,84.44
-        15,84.39
-        16,84.565
-        17,84.44
-        18,83.9
-        19,83.87
-        20,83.625
-        21,83.85
-        22,84.2092
-        23,83.89
-        24,83.72
-        25,83.95
-        26,83.78
-        27,83.69
-        28,83.57
-        29,83.44
-        30,83.49
-        31,83.44
-        32,83.385
-        33,83.73
-        34,83.8
-        35,83.86
-        36,83.86
-        37,83.935
-        38,83.79
-        39,83.8
-        40,83.76
-        41,83.845
-        42,83.88
-        43,83.845
-        44,83.88
-        45,83.94
-        46,83.9169
-        47,83.95
-        48,84
-        49,84.06
-        50,84.0875
-        51,84.095
-        52,83.98
-        53,83.91
-        54,83.895
-        55,83.92
-        56,83.9
-        57,83.98
-        58,83.9831
-        59,84.02
-        60,84.06
-        61,84.19
-        62,84.32
-        63,84.185
-        64,84.24
-        65,84.2
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAADySzVLDMAyE7/se3ApjW5J/DjlkWhc6tAk0KcNw6fD+L4Es
+        N5xWWWk+y+vU7/3bOL3WJzpM43IYP3EZr+91vc8fdbpfTtNtrYMkt9n787zU
+        zS/R4TSt9fo1ngfSj/18vl2mZTiMa93ZKLQcB6ynS/2Zp3qfj8elrsMzOYdf
+        Lz54ytG5XaYXEfhd5hefEZqGDDIN4KbEEFOP2JQJyTQhN00exb4jvLNCgUak
+        rFVnFnh6wLxRWYuO1ZZxJep02nq5raat0jQnBNs1BkHwZmnR0a4EBDKvIHAr
+        kjpiAJ2K5ujlkhF0xtiiTIPraWRwLiC/OaEV7QJk6EQgQ2s4Rs4RFLfCyIV0
+        2NBJQX1vsJFTBPetNRs2dNYe/Vu8WX1rBhu7eF2X0+Mm3OIGW9guQixsl5NA
+        LG6nM2LwkiHUAZDObr0OD5AOh6RtuKed9Yml4wOie5wT+99REC1v0hb1/0UQ
+        7S0DI9pbBvwBAAD//wMAVdZueNgCAAA=
     http_version: 
-  recorded_at: Sat, 02 Dec 2017 05:19:17 GMT
+  recorded_at: Sun, 03 Dec 2017 03:19:23 GMT
 recorded_with: VCR 3.0.3

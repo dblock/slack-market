@@ -1,3 +1,5 @@
+require 'csv'
+
 module Api
   module Endpoints
     class ChartsEndpoint < Grape::API

@@ -20,18 +20,16 @@ class Tickers
   private
 
   def get_tickers
-    Array(StockQuote::Stock.quote(symbols.join(','))).map do |quote|
-      Ticker.from_quote(quote)
-    end.compact
-  rescue JSON::ParserError
+    GoogleFinance::Quotes.search(symbols)
+  rescue GoogleFinance::Errors::SymbolsNotFoundError
     symbols.count > 1 ? get_tickers_one_by_one : []
   end
 
   def get_tickers_one_by_one
     symbols.map do |symbol|
       begin
-        Ticker.from_symbol(symbol)
-      rescue JSON::ParserError
+        GoogleFinance::Quote.get(symbol)
+      rescue GoogleFinance::Errors::SymbolNotFoundError
         nil
       end
     end.compact

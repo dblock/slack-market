@@ -14,7 +14,7 @@ describe SlackMarket::Commands::Quote do
     end
     it 'requires a subscription for MSFT and AABA and INVALID', vcr: { cassette_name: 'msft_yahoo_invalid' } do
       expect(message: 'MSFT and AABA or INVALID').to respond_with_slack_message([
-        'Not showing quotes for Microsoft Corporation (MSFT) or Altaba Inc (AABA).',
+        'Not showing quotes for Microsoft Corporation (MSFT) or Altaba Inc. (AABA).',
         team.subscribe_text
       ].join(' '))
     end
@@ -26,11 +26,11 @@ describe SlackMarket::Commands::Quote do
           as_user: true,
           attachments: [
             {
-              fallback: 'Microsoft Corporation (MSFT): $84.26',
+              fallback: 'Microsoft Corporation (MSFT): $89.24',
               title_link: 'http://finance.google.com/q=MSFT',
               title: 'Microsoft Corporation (MSFT)',
-              text: '$84.26 (+0.11%)',
-              color: '#00FF00',
+              text: '$89.24 (-0.61%)',
+              color: '#FF0000',
               callback_id: 'Microsoft Corporation',
               actions: [
                 {
@@ -69,11 +69,11 @@ describe SlackMarket::Commands::Quote do
           as_user: true,
           attachments: [
             {
-              fallback: 'Microsoft Corporation (MSFT): $84.26',
+              fallback: 'Microsoft Corporation (MSFT): $89.24',
               title_link: 'http://finance.google.com/q=MSFT',
               title: 'Microsoft Corporation (MSFT)',
-              text: '$84.26 (+0.11%)',
-              color: '#00FF00',
+              text: '$89.24 (-0.61%)',
+              color: '#FF0000',
               callback_id: 'Microsoft Corporation',
               actions: [
                 {
@@ -103,183 +103,17 @@ describe SlackMarket::Commands::Quote do
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $MSFT?"))
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $msft?"))
       end
-      it 'returns a quote for ROG.VX', vcr: { cassette_name: 'rog.vx', allow_playback_repeats: true } do
-        expect(client.web_client).to receive(:chat_postMessage).with(
-          channel: 'channel',
-          as_user: true,
-          attachments: [
-            {
-              fallback: 'Roche Holding Ltd. (ROG): $248.1',
-              title_link: 'http://finance.google.com/q=ROG',
-              title: 'Roche Holding Ltd. (ROG)',
-              text: '$248.1 (-0.04%)',
-              color: '#FF0000',
-              callback_id: 'Roche Holding Ltd.',
-              actions: [
-                {
-                  name: '1D',
-                  text: '1d',
-                  type: 'button',
-                  value: 'ROG- 1d'
-                },
-                {
-                  name: '1M',
-                  text: '1m',
-                  type: 'button',
-                  value: 'ROG- 1m'
-                },
-                {
-                  name: '1Y',
-                  text: '1y',
-                  type: 'button',
-                  value: 'ROG- 1y'
-                }
-              ],
-              image_url: '/api/charts/ROG.png'
-            }
-          ]
-        ).exactly(6).times
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'ROG.VX'))
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's ROG.VX?"))
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$ROG.VX?'))
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $ROG.VX?"))
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$rog.vx?'))
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $rog.VX?"))
-      end
-      it 'returns a quote for 0941.HK', vcr: { cassette_name: '0941.hk', allow_playback_repeats: true } do
-        expect(client.web_client).to receive(:chat_postMessage).with(
-          channel: 'channel',
-          as_user: true,
-          attachments: [
-            {
-              fallback: 'China Mobile Ltd. (0941): $78.8',
-              title_link: 'http://finance.google.com/q=0941',
-              title: 'China Mobile Ltd. (0941)',
-              text: '$78.8 (-0.57%)',
-              color: '#FF0000',
-              callback_id: 'China Mobile Ltd.',
-              actions: [
-                {
-                  name: '1D',
-                  text: '1d',
-                  type: 'button',
-                  value: '0941- 1d'
-                },
-                {
-                  name: '1M',
-                  text: '1m',
-                  type: 'button',
-                  value: '0941- 1m'
-                },
-                {
-                  name: '1Y',
-                  text: '1y',
-                  type: 'button',
-                  value: '0941- 1y'
-                }
-              ],
-              image_url: '/api/charts/0941.png'
-            }
-          ]
-        ).exactly(5).times
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '0941.HK'))
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's 0941.HK?"))
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$0941.HK?'))
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $0941.HK?"))
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$0941.hk?'))
-      end
-      it 'returns a quote for Z74.SI', vcr: { cassette_name: 'z74.si', allow_playback_repeats: true } do
-        expect(client.web_client).to receive(:chat_postMessage).with(
-          channel: 'channel',
-          as_user: true,
-          attachments: [
-            {
-              fallback: 'Singapore Telecommunications Limited (Z74): $3.74',
-              title_link: 'http://finance.google.com/q=Z74',
-              title: 'Singapore Telecommunications Limited (Z74)',
-              text: '$3.74 (+0.27%)',
-              color: '#00FF00',
-              callback_id: 'Singapore Telecommunications Limited',
-              actions: [
-                {
-                  name: '1D',
-                  text: '1d',
-                  type: 'button',
-                  value: 'Z74- 1d'
-                },
-                {
-                  name: '1M',
-                  text: '1m',
-                  type: 'button',
-                  value: 'Z74- 1m'
-                },
-                {
-                  name: '1Y',
-                  text: '1y',
-                  type: 'button',
-                  value: 'Z74- 1y'
-                }
-              ],
-              image_url: '/api/charts/Z74.png'
-            }
-          ]
-        ).exactly(6).times
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'Z74.SI'))
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's Z74.SI?"))
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$Z74.SI?'))
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $Z74.SI?"))
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$z74.si?'))
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: "How's $z74.SI?"))
-      end
-      it 'returns a quote for 300024.SZ (no name)', vcr: { cassette_name: '300024.sz', allow_playback_repeats: true } do
-        expect(client.web_client).to receive(:chat_postMessage).with(
-          channel: 'channel',
-          as_user: true,
-          attachments: [
-            {
-              fallback: 'Siasun Robot&Automation Co Ltd (300024): $19.71',
-              title_link: 'http://finance.google.com/q=300024',
-              title: 'Siasun Robot&Automation Co Ltd (300024)',
-              text: '$19.71 (+1.13%)',
-              color: '#00FF00',
-              callback_id: 'Siasun Robot&Automation Co Ltd',
-              actions: [
-                {
-                  name: '1D',
-                  text: '1d',
-                  type: 'button',
-                  value: '300024- 1d'
-                },
-                {
-                  name: '1M',
-                  text: '1m',
-                  type: 'button',
-                  value: '300024- 1m'
-                },
-                {
-                  name: '1Y',
-                  text: '1y',
-                  type: 'button',
-                  value: '300024- 1y'
-                }
-              ],
-              image_url: '/api/charts/300024.png'
-            }
-          ]
-        ).exactly(1).times
-        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$300024.SZ?'))
-      end
       it 'returns a quote for MSFT and AABA', vcr: { cassette_name: 'msft_yahoo_invalid' } do
         expect(client.web_client).to receive(:chat_postMessage).with(
           channel: 'channel',
           as_user: true,
           attachments: [
             {
-              fallback: 'Microsoft Corporation (MSFT): $84.26',
+              fallback: 'Microsoft Corporation (MSFT): $89.565',
               title_link: 'http://finance.google.com/q=MSFT',
               title: 'Microsoft Corporation (MSFT)',
-              text: '$84.26 (+0.11%)',
-              color: '#00FF00',
+              text: '$89.565 (-0.25%)',
+              color: '#FF0000',
               callback_id: 'Microsoft Corporation',
               actions: [
                 {
@@ -304,12 +138,12 @@ describe SlackMarket::Commands::Quote do
               image_url: '/api/charts/MSFT.png'
             },
             {
-              fallback: 'Altaba Inc (AABA): $70.1',
+              fallback: 'Altaba Inc. (AABA): $73.75',
               title_link: 'http://finance.google.com/q=AABA',
-              title: 'Altaba Inc (AABA)',
-              text: '$70.1 (+0.06%)',
-              color: '#00FF00',
-              callback_id: 'Altaba Inc',
+              title: 'Altaba Inc. (AABA)',
+              text: '$73.75 (-1.10%)',
+              color: '#FF0000',
+              callback_id: 'Altaba Inc.',
               actions: [
                 {
                   name: '1D',
@@ -354,11 +188,11 @@ describe SlackMarket::Commands::Quote do
           as_user: true,
           attachments: [
             {
-              fallback: 'Ford Motor Company (F): $12.58',
+              fallback: 'Ford Motor Company (F): $10.645',
               title_link: 'http://finance.google.com/q=F',
               title: 'Ford Motor Company (F)',
-              text: '$12.58 (+0.48%)',
-              color: '#00FF00',
+              text: '$10.645 (-0.98%)',
+              color: '#FF0000',
               callback_id: 'Ford Motor Company',
               actions: [
                 {
@@ -395,11 +229,11 @@ describe SlackMarket::Commands::Quote do
           as_user: true,
           attachments: [
             {
-              fallback: 'Ford Motor Company (F): $12.58',
+              fallback: 'Ford Motor Company (F): $10.645',
               title_link: 'http://finance.google.com/q=F',
               title: 'Ford Motor Company (F)',
-              text: '$12.58 (+0.48%)',
-              color: '#00FF00',
+              text: '$10.645 (-0.98%)',
+              color: '#FF0000',
               callback_id: 'Ford Motor Company',
               actions: [
                 {
@@ -441,11 +275,11 @@ describe SlackMarket::Commands::Quote do
             as_user: true,
             attachments: [
               {
-                fallback: 'Microsoft Corporation (MSFT): $84.26',
+                fallback: 'Microsoft Corporation (MSFT): $89.24',
                 title_link: 'http://finance.google.com/q=MSFT',
                 title: 'Microsoft Corporation (MSFT)',
-                text: '$84.26 (+0.11%)',
-                color: '#00FF00',
+                text: '$89.24 (-0.61%)',
+                color: '#FF0000',
                 callback_id: 'Microsoft Corporation',
                 actions: [
                   {
@@ -484,11 +318,11 @@ describe SlackMarket::Commands::Quote do
             as_user: true,
             attachments: [
               {
-                fallback: 'Microsoft Corporation (MSFT): $84.26',
+                fallback: 'Microsoft Corporation (MSFT): $89.24',
                 title_link: 'http://finance.google.com/q=MSFT',
                 title: 'Microsoft Corporation (MSFT)',
-                text: '$84.26 (+0.11%)',
-                color: '#00FF00'
+                text: '$89.24 (-0.61%)',
+                color: '#FF0000'
               }
             ]
           )

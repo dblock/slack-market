@@ -7,10 +7,10 @@ describe Tickers do
     it 'retrieves the MSFT ticker' do
       expect(tickers.count).to eq 1
       expect(ticker.symbol).to eq 'MSFT'
-      expect(ticker.name).to eq 'Microsoft Corporation'
-      expect(ticker.last_trade_price).to eq 84.26
-      expect(ticker.change).to eq 0.09
-      expect(ticker.change_in_percent).to eq 0.11
+      expect(ticker.company_name).to eq 'Microsoft Corporation'
+      expect(ticker.latest_price).to eq 89.24
+      expect(ticker.change).to eq -0.545
+      expect(ticker.change_percent).to eq -0.00607
     end
   end
   context 'multiple tickers', vcr: { cassette_name: 'msft_goog' } do
@@ -28,7 +28,7 @@ describe Tickers do
   end
   context 'currency', vcr: { cassette_name: 'btc' } do
     let(:tickers) { Tickers.new(%w[BTC]) }
-    it 'retrieves BTC ticker' do
+    pending 'retrieves BTC ticker' do
       expect(tickers.count).to eq 1
       expect(tickers.map(&:symbol)).to eq %w[BTCUSD]
     end

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://finance.google.com/finance?output=json&q=INVALID
+    uri: https://api.iextrading.com/1.0/stock/INVALID/quote
     body:
       encoding: US-ASCII
       string: ''
@@ -15,59 +15,47 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Sun, 03 Dec 2017 01:24:06 GMT
-      Expires:
-      - Sun, 03 Dec 2017 01:24:06 GMT
-      Cache-Control:
-      - private, max-age=0
-      X-Content-Type-Options:
-      - nosniff
-      Content-Disposition:
-      - attachment; filename="f.txt"
-      P3p:
-      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
       Server:
-      - GSE
-      Set-Cookie:
-      - NID=118=CqgdzOqofdF4AbPCmZ_IA14w8j_I6mpchIlBzFva8-u3_oJ5GCm-b4FbwsLilaFIlS6qGAJQxodWkS8MbDJ9fHpXVOd0XBCLkyBgQP-gIStxQeSmUvyptnGUfoM1Rww8;Domain=.google.com;Path=/;Expires=Mon,
-        04-Jun-2018 01:24:06 GMT;HttpOnly
-      - SC=RV=:ED=us; expires=Mon, 04-Jun-2018 01:24:06 GMT; path=/finance; domain=.google.com
-      Alt-Svc:
-      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
-        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      - nginx
+      Date:
+      - Fri, 23 Mar 2018 16:24:28 GMT
+      Content-Type:
+      - text/html; charset=utf-8
       Transfer-Encoding:
       - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - ctoken=4ffb781293c141158e2712a941da9cb5; Domain=.iextrading.com; Path=/; Expires=Sat,
+        24 Mar 2018 04:24:28 GMT; Secure
+      Content-Security-Policy:
+      - default-src 'self'; child-src 'none'; object-src 'none'; style-src 'self'
+        'unsafe-inline'; font-src data:; connect-src 'self' https://auth.iextrading.com
+        wss://iextrading.com wss://tops.iextrading.com; script-src 'self';
+      X-Content-Security-Policy:
+      - default-src 'self'; child-src 'none'; object-src 'none'; style-src 'self'
+        'unsafe-inline'; font-src data:; connect-src 'self' https://auth.iextrading.com
+        wss://iextrading.com wss://tops.iextrading.com; script-src 'self';
+      Frame-Options:
+      - deny
+      X-Frame-Options:
+      - deny
+      Strict-Transport-Security:
+      - max-age=15768000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: ASCII-8BIT
-      string: |2
-
-        {
-        "start" : "",
-        "num" : "",
-        "num_company_results" : "0",
-        "num_mf_results" : "0",
-        "num_all_results" : "",
-        "original_query" : "INVALID",
-        "query_for_display" : "INVALID",
-        "results_type" : "DEFAULT",
-        "searchresults" :
-        [
-        ]
-        ,
-        "mf_searchresults" :
-        [
-        ]
-        }
+      string: Unknown symbol
     http_version: 
-  recorded_at: Sun, 03 Dec 2017 01:24:06 GMT
+  recorded_at: Fri, 23 Mar 2018 16:24:28 GMT
 recorded_with: VCR 3.0.3

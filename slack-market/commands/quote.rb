@@ -14,7 +14,7 @@ module SlackMarket
         next unless quotes.any?
 
         if Stripe.api_key && client.owner.reload.subscription_expired?
-          names = quotes.map { |quote| "#{quote.name} (#{quote.symbol})" }
+          names = quotes.map { |quote| "#{quote.company_name} (#{quote.symbol})" }
           message = "Not showing quotes for #{names.or}. #{client.owner.subscribe_text}"
           client.say channel: data.channel, text: message
           logger.info "#{client.owner}, user=#{data.user}, text=#{data.text}, subscription expired"
@@ -26,7 +26,7 @@ module SlackMarket
           }
 
           quotes.each do |quote|
-            logger.info "#{client.owner}, user=#{data.user} - #{quote.name} (#{quote.symbol}): $#{quote.last_trade_price}"
+            logger.info "#{client.owner}, user=#{data.user} - #{quote.company_name} (#{quote.symbol}): $#{quote.latest_price}"
             message[:attachments] << Market.to_slack_attachment(quote, charts: client.owner.charts?)
           end
 

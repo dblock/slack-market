@@ -1,5 +1,6 @@
 ### Changelog
 
+* 23/3/2018: Using IEX, lost support for `BTC` and quotes such as `ROG.VX` - [@dblock](https://github.com/dblock).
 * 11/8/2017: Added support for currencies, eg. `BTC` - [@dblock](https://github.com/dblock).
 * 8/15/2017: Teams can check on their subscription status with `subscription` and update the credit card on file - [@dblock](https://github.com/dblock).
 * 5/22/2017: [#44](https://github.com/dblock/slack-market/issues/44): Replace Yahoo charts with Google charts - [@dblock](https://github.com/dblock).

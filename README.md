@@ -5,7 +5,7 @@ Slack Market
 [![Dependency Status](https://gemnasium.com/dblock/slack-market.svg)](https://gemnasium.com/dblock/slack-market)
 [![Code Climate](https://codeclimate.com/github/dblock/slack-market.svg)](https://codeclimate.com/github/dblock/slack-market)
 
-A stock market and crypto currencies bot for Slack.
+A stock market bot for Slack.
 
 ## Install
 
@@ -15,9 +15,9 @@ Invite *@market* to a channel with `/invite @market`.
 
 ## Usage
 
-### Quotes from Google Finance
+### Quotes from IEX Trading
 
-Mention a stock ticker, eg. `MSFT`, and get a quote. Works for some crypto-currencies, eg. `BTC`. Single-character stocks should include a $ sign, eg. `$F`.
+Mention a stock ticker, eg. `MSFT`, and get a quote. Single-character stocks should include a $ sign, eg. `$F`.
 
 ![](public/img/market.gif)
 
@@ -68,3 +68,5 @@ Provides subscription info and a link to update the credit card on file.
 Copyright [Daniel Doubrovkine](http://code.dblock.org), 2016-2017
 
 [MIT License](LICENSE)
+
+Data provided by [IEX](https://iextrading.com), see [terms](https://iextrading.com/api-exhibit-a/).

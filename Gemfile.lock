@@ -88,10 +88,6 @@ GEM
       faraday_middleware-parse_oj (~> 0.3)
       launchy (~> 2.4)
     gli (2.16.1)
-    google-finance-ruby-client (0.1.0)
-      faraday (>= 0.9)
-      faraday_middleware
-      hashie
     grape (1.0.0)
       activesupport
       builder
@@ -122,6 +118,10 @@ GEM
       uri_template
     i18n (0.8.6)
     ice_nine (0.11.2)
+    iex-ruby-client (0.1.0)
+      faraday (>= 0.9)
+      faraday_middleware
+      hashie
     json (2.1.0)
     kaminari-core (1.0.1)
     kaminari-grape (1.0.1)
@@ -300,9 +300,9 @@ DEPENDENCIES
   faker
   foreman
   giphy
-  google-finance-ruby-client
   gruff
   hyperclient
+  iex-ruby-client
   money
   money_helper
   mongoid (~> 5.1.4)

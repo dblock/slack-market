@@ -20,16 +20,14 @@ class Tickers
   private
 
   def get_tickers
-    GoogleFinance::Quotes.search(symbols)
-  rescue GoogleFinance::Errors::SymbolsNotFoundError
-    symbols.count > 1 ? get_tickers_one_by_one : []
+    get_tickers_one_by_one
   end
 
   def get_tickers_one_by_one
     symbols.map do |symbol|
       begin
-        GoogleFinance::Quote.get(symbol)
-      rescue GoogleFinance::Errors::SymbolNotFoundError
+        IEX::Quote.get(symbol)
+      rescue IEX::Errors::SymbolNotFoundError
         nil
       end
     end.compact

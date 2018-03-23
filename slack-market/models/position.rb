@@ -21,13 +21,13 @@ class Position
     "#{user}: #{symbol}, purchased_price_cents=~#{purchased_price_cents}, purchased=#{purchased_at}, sold_price_cents=#{sold_price_cents}, sold=#{sold_at}"
   end
 
-  def percent_from(last_trade_price)
-    return unless last_trade_price
-    100 - (purchased_price_cents * 100 / last_trade_price.to_f).to_f
+  def percent_from(latest_price)
+    return unless latest_price
+    100 - (purchased_price_cents * 100 / latest_price.to_f).to_f
   end
 
-  def display(last_trade_price)
-    pc = percent_from(last_trade_price).round(2)
+  def display(latest_price)
+    pc = percent_from(latest_price).round(2)
     [
       "*#{symbol}*",
       if pc.nil?

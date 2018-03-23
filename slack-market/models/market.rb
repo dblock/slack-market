@@ -42,21 +42,21 @@ class Market
       if charts && !button
         slack_attachment[:image_url] = "#{ENV['DOKKU_APP_URL']}/api/charts/#{chart_symbol}.png"
         slack_attachment[:actions] = actions
-        slack_attachment[:callback_id] = quote.name.to_s
+        slack_attachment[:callback_id] = quote.company_name.to_s
       elsif charts && button
         slack_attachment[:image_url] = "#{ENV['DOKKU_APP_URL']}/api/charts/#{chart_symbol}.png?p=#{button}"
         slack_attachment[:actions] = actions
-        slack_attachment[:callback_id] = quote.name.to_s
+        slack_attachment[:callback_id] = quote.company_name.to_s
       end
     end
 
     # returns a stock formatted as a Slack message
     def to_slack_attachment(quote, opts = { charts: false, button: nil })
       attachment = {
-        fallback: "#{quote.name} (#{quote.symbol}): $#{quote.last_trade_price}",
+        fallback: "#{quote.company_name} (#{quote.symbol}): $#{quote.latest_price}",
         title_link: "http://finance.google.com/q=#{quote.symbol}",
-        title: "#{quote.name} (#{quote.symbol})",
-        text: "$#{quote.last_trade_price} (#{quote.change_in_percent_s})",
+        title: "#{quote.company_name} (#{quote.symbol})",
+        text: "$#{quote.latest_price} (#{quote.change_percent_s})",
         color: quote.change.to_f > 0 ? '#00FF00' : '#FF0000'
       }
 

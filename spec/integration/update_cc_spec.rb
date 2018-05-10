@@ -28,7 +28,7 @@ describe 'Update cc', js: true, type: :feature do
           find('button[type="submit"]').click
         end
         sleep 5
-        expect(find('#messages')).to have_text("Successfully updated team #{team.name} credit card. Thank you for your support!")
+        expect(find('#messages')).to have_text("Successfully updated team #{team.name} credit card.\n\nThank you for your support!")
       end
     end
     context 'a team without a stripe customer ID' do

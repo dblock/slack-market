@@ -26,7 +26,7 @@ class Tickers
   def get_tickers_one_by_one
     symbols.map do |symbol|
       begin
-        IEX::Quote.get(symbol)
+        IEX::Resources::Quote.get(symbol)
       rescue IEX::Errors::SymbolNotFoundError
         nil
       end

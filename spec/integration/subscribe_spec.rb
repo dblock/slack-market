@@ -51,7 +51,7 @@ describe 'Subscribe', js: true, type: :feature do
       sleep 5
 
       find('#subscribe', visible: false)
-      expect(find('#messages')).to have_text("Team #{team.name} successfully subscribed. Thank you for your support!")
+      expect(find('#messages')).to have_text("Team #{team.name} successfully subscribed.\n\nThank you for your support!")
 
       team.reload
       expect(team.subscribed).to be true

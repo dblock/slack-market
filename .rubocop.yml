@@ -1,4 +1,4 @@
-Style/FrozenStringLiteralComment:
+Style:
   Enabled: false
 
 inherit_from: .rubocop_todo.yml

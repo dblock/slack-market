@@ -3,13 +3,14 @@ module SlackMarket
     class Help < SlackRubyBot::Commands::Base
       HELP = <<~EOS.freeze
         ```
-        I am your friendly market bot, providing Yahoo Finance data.
+        I am your friendly market bot, providing quotes from IEX Trading.
         Try "What is the price of MSFT?" or "Tell me about AABA, AAPL and $I, please."
 
         General
         -------
 
         help                - get this helpful message
+        info                - show bot credits
         subscription        - show subscription info
 
         Buy and Sell
@@ -31,10 +32,9 @@ EOS
       def self.call(client, data, _match)
         client.say(channel: data.channel, text: [
           HELP,
-          SlackMarket::INFO,
           client.owner.reload.subscribed? ? nil : client.owner.subscribe_text
         ].compact.join("\n"))
-        client.say(channel: data.channel, gif: 'help')
+        client.say(channel: data.channel)
         logger.info "HELP: #{client.owner}, user=#{data.user}"
       end
     end

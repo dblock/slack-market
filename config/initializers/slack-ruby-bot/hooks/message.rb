@@ -10,6 +10,7 @@ module SlackRubyBot
           SlackMarket::Commands::Set,
           SlackMarket::Commands::Positions,
           SlackMarket::Commands::Help,
+          SlackMarket::Commands::Info,
           SlackMarket::Commands::Quote,
           SlackMarket::Commands::Subscription
         ]

@@ -65,7 +65,7 @@ GEM
     fabrication (2.20.1)
     faker (1.8.7)
       i18n (>= 0.7)
-    faraday (0.15.1)
+    faraday (0.15.2)
       multipart-post (>= 1.2, < 3)
     faraday-digestauth (0.3.0)
       faraday (~> 0.7)
@@ -117,7 +117,7 @@ GEM
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
-    iex-ruby-client (0.3.0)
+    iex-ruby-client (0.3.1)
       faraday (>= 0.9)
       faraday_middleware
       hashie
@@ -324,4 +324,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.16.0
+   1.16.1

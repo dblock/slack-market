@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Api::Endpoints::StatusEndpoint do
+describe Api::Endpoints::StatusEndpoint, vcr: { cassette_name: 'msft' } do
   include Api::Test::EndpointTest
 
   before do
@@ -11,6 +11,7 @@ describe Api::Endpoints::StatusEndpoint do
     it 'returns a status' do
       status = client.status
       expect(status.teams_count).to eq 0
+      expect(status.msft['symbol']).to eq 'MSFT'
     end
 
     context 'with a team' do

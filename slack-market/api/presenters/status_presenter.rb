@@ -12,6 +12,7 @@ module Api
       property :teams_count
       property :active_teams_count
       property :ping
+      property :msft
 
       def ping
         team = Team.asc(:_id).first
@@ -25,6 +26,10 @@ module Api
 
       def active_teams_count
         Team.active.count
+      end
+
+      def msft
+        IEX::Resources::Quote.get('MSFT')
       end
 
       def base_url(opts)

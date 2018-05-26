@@ -9,7 +9,7 @@ describe Api::Endpoints::RootEndpoint do
     links = JSON.parse(last_response.body)['_links']
     expect(links.keys.sort).to eq(%w[self status subscriptions credit_cards team teams].sort)
   end
-  it 'follows all links' do
+  it 'follows all links', vcr: { cassette_name: 'msft' } do
     get '/api'
     expect(last_response.status).to eq 200
     links = JSON.parse(last_response.body)['_links']

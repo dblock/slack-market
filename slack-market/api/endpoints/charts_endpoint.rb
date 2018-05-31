@@ -25,7 +25,8 @@ module Api
           url = "https://finance.google.com/finance/getprices?i=#{interval}&p=#{period}&f=d,c&df=cpct&auto=0&q=#{params[:q]}"
 
           RestClient::Request.execute(url: url, method: :get, verify_ssl: false) do |response|
-            csv = CSV.new(response.body.split[8..-1].join("\n"))
+            raw = response.body.split[8..-1] || []
+            csv = CSV.new(raw.join("\n"))
             data = csv.to_a.map do |row|
               next unless row.count == 2
               row[1].to_f

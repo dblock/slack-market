@@ -4,6 +4,9 @@ describe Api::Endpoints::SlackEndpoint do
   include Api::Test::EndpointTest
 
   context 'graph' do
+    before do
+      ENV['SLACK_VERIFICATION_TOKEN'] = 'token'
+    end
     it 'parses a good payload and returns correct charts', vcr: { cassette_name: 'msft' } do
       post '/api/slack/action', payload: {
         'actions': [{ 'name' => '1M', 'value' => 'MSFT- 1m' }],
@@ -27,6 +30,9 @@ describe Api::Endpoints::SlackEndpoint do
         }
       }.to_json
       expect(last_response.status).to eq 401
+    end
+    after do
+      ENV.delete('SLACK_VERIFICATION_TOKEN')
     end
   end
 end

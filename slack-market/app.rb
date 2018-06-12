@@ -7,6 +7,9 @@ module SlackMarket
         check_subscribed_teams!
         deactivate_asleep_teams!
       end
+      once_and_every 60 * 60 do
+        ping_teams!
+      end
     end
 
     private
@@ -15,6 +18,18 @@ module SlackMarket
       yield
       every tt do
         yield
+      end
+    end
+
+    def ping_teams!
+      Team.active.each do |team|
+        begin
+          ping = team.ping!
+          next if ping[:presence].online
+          logger.warn "DOWN: #{team}"
+        rescue StandardError => e
+          logger.warn "Error pinging team #{team}, #{e.message}."
+        end
       end
     end
 

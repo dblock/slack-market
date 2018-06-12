@@ -1,15 +1,22 @@
 module SlackMarket
   class App < SlackRubyBotServer::App
-    def prepare!
-      super
-      deactivate_asleep_teams!
-    end
+    include Celluloid
 
     def after_start!
-      check_subscribed_teams!
+      once_and_every 60 * 60 * 24 do
+        check_subscribed_teams!
+        deactivate_asleep_teams!
+      end
     end
 
     private
+
+    def once_and_every(tt)
+      yield
+      every tt do
+        yield
+      end
+    end
 
     def deactivate_asleep_teams!
       Team.active.each do |team|

@@ -1,5 +1,11 @@
 Style:
   Enabled: false
 
+Metrics:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 256
+
 inherit_from: .rubocop_todo.yml
 

@@ -14,14 +14,8 @@ module Api
           optional :p, type: String, default: '1d'
         end
         get ':q' do
-          period = case params[:p]
-                   when '1m', '1M' then '30d'
-                   when '1y', '1Y' then '1Y'
-                   else '1d'
-          end
-
-          chart = IEX::Resources::Chart.get(params[:q], period)
-          data = chart.map(&:high)
+          chart = IEX::Resources::Chart.get(params[:q], params[:p])
+          data = chart.map(&:high).compact
           g = Gruff::Line.new
           g.data params[:q], data
           content_type 'image/png'

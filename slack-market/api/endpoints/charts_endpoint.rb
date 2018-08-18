@@ -15,7 +15,7 @@ module Api
         end
         get ':q' do
           chart = IEX::Resources::Chart.get(params[:q], params[:p])
-          data = chart.map(&:high).compact
+          data = chart.map(&:high).select { |v| v >= 0 }
           g = Gruff::Line.new
           g.data params[:q], data
           content_type 'image/png'

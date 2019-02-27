@@ -1,20 +1,22 @@
 module SlackMarket
   class App < SlackRubyBotServer::App
-    include Celluloid
-
     def after_start!
-      once_and_every 60 * 60 * 24 do
-        check_subscribed_teams!
-        deactivate_asleep_teams!
+      ::Async::Reactor.run do
+        once_and_every 60 * 60 * 24 do
+          check_subscribed_teams!
+          deactivate_asleep_teams!
+        end
       end
     end
 
     private
 
     def once_and_every(tt)
-      yield
-      every tt do
-        yield
+      ::Async::Reactor.run do |task|
+        loop do
+          yield
+          task.sleep tt
+        end
       end
     end
 

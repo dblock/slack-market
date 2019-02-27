@@ -44,18 +44,36 @@ module Api
             code: params[:code]
           )
 
+          access_token = rc['access_token']
+          team = Team.where(access_token: access_token).first
+
           token = rc['bot']['bot_access_token']
-          team = Team.where(token: token).first
-          team ||= Team.where(team_id: rc['team_id']).first
+          team ||= Team.where(token: token).first
+
+          team_id = rc['team_id']
+          team ||= Team.where(team_id: team_id).first
+
+          bot_user_id = rc['bot']['bot_user_id']
+          user_id = rc['user_id']
+
           if team && !team.active?
-            team.activate!(token)
+            team.update_attributes!(
+              created_at: Time.now.utc,
+              activated_user_id: user_id,
+              bot_user_id: bot_user_id,
+              active: true,
+              token: token,
+              access_token: access_token
+            )
           elsif team
             raise "Team #{team.name} is already registered."
           else
             team = Team.create!(
               token: token,
               team_id: rc['team_id'],
-              name: rc['team_name']
+              name: rc['team_name'],
+              activated_user_id: user_id,
+              bot_user_id: bot_user_id
             )
           end
 

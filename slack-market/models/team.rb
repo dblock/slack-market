@@ -3,6 +3,10 @@ class Team
   field :dollars, type: Boolean, default: false
   field :charts, type: Boolean, default: true
 
+  field :access_token, type: String
+  field :bot_user_id, type: String
+  field :activated_user_id, type: String
+
   field :stripe_customer_id, type: String
   field :subscribed, type: Boolean, default: false
   field :subscribed_at, type: DateTime

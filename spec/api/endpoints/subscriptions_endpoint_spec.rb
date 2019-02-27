@@ -57,6 +57,7 @@ describe Api::Endpoints::SubscriptionsEndpoint do
             domain: team.domain
           }
         ).and_return('id' => 'customer_id')
+        expect_any_instance_of(Team).to receive(:signup_to_mailing_list!)
         expect_any_instance_of(Team).to receive(:inform!).once
         client.subscriptions._post(
           team_id: team.team_id,

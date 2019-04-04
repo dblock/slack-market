@@ -111,6 +111,7 @@ GEM
       faraday_middleware
       hashie
       money_helper
+    irb (1.0.0)
     kaminari-core (1.1.1)
     kaminari-grape (1.0.1)
       grape
@@ -292,6 +293,7 @@ DEPENDENCIES
   gruff
   hyperclient
   iex-ruby-client
+  irb
   money
   money_helper
   mongoid

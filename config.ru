@@ -19,7 +19,7 @@ SlackMarket::App.instance.prepare!
 Thread.abort_on_exception = true
 
 Thread.new do
-  SlackMarket::Service.instance.start_from_database!
+  SlackRubyBotServer::Service.instance.start_from_database!
   SlackMarket::App.instance.after_start!
 end
 

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SlackMarket::Service do
+describe SlackRubyBotServer::Service do
   context '#url' do
     before do
       @rack_env = ENV['RACK_ENV']
@@ -9,14 +9,14 @@ describe SlackMarket::Service do
       ENV['RACK_ENV'] = @rack_env
     end
     it 'defaults to playplay.io in production' do
-      expect(SlackMarket::Service.url).to eq 'https://market.playplay.io'
+      expect(SlackRubyBotServer::Service.url).to eq 'https://market.playplay.io'
     end
     context 'in development' do
       before do
         ENV['RACK_ENV'] = 'development'
       end
       it 'defaults to localhost' do
-        expect(SlackMarket::Service.url).to eq 'http://localhost:5000'
+        expect(SlackRubyBotServer::Service.url).to eq 'http://localhost:5000'
       end
     end
     context 'when set' do
@@ -27,7 +27,7 @@ describe SlackMarket::Service do
         ENV.delete('URL')
       end
       it 'defaults to ENV' do
-        expect(SlackMarket::Service.url).to eq 'updated'
+        expect(SlackRubyBotServer::Service.url).to eq 'updated'
       end
     end
   end

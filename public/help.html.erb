@@ -1,12 +1,15 @@
 <html>
  <head>
   <title>Stock Market Quotes in Slack: Help</title>
-</head>
- <body style="text-align: center;">
+  <%= partial 'public/partials/_head.html.erb' %>
+ </head>
+ <body style="text-align: center">
   <p style="margin: 50px;">
     <a href="/"><img src='img/icon.png' width="120px"></a>
   </p>
-  <h3>Help</h3>
+  <p>
+    <h3>Stock Market Quotes in Slack: Help</h3>
+  </p>
   <p>
     Invite <b>@market</b> to a channel. Mention a stock ticker and its price will appear in Slack.
   </p>
@@ -36,9 +39,6 @@
     <br>
     To see all positions use <b>@market positions</b>. To see someone else's positions use <b>@market positions @user</b>.
   </p>
-  <p>
-    Want another feature? <a href="https://github.com/dblock/slack-market" target="_blank">Fork me on Github</a>, <a href='https://github.com/dblock/slack-market/issues/new'>open an issue</a>, tweet at <a href='https://twitter.com/dblockdotorg'>@dblockdotorg</a>, or e-mail <a href="mailto:dblock[at]dblock[dot]org">dblock[at]dblock[dot]org</a>.
-  </p>
+  <%= partial 'public/partials/_footer.html.erb' %>
  </body>
 </html>
-

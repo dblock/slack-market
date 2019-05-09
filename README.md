@@ -65,7 +65,7 @@ Provides subscription info and a link to update the credit card on file.
 
 ### Copyright & License
 
-Copyright [Daniel Doubrovkine](http://code.dblock.org), 2016-2017
+Copyright [Daniel Doubrovkine, Vestris LLC](https://www.vestris.com), 2016-2017
 
 [MIT License](LICENSE)
 

@@ -28,7 +28,7 @@ module SlackMarket
         set charts on|off   - display charts below quotes
 
         ```
-EOS
+      EOS
       def self.call(client, data, _match)
         client.say(channel: data.channel, text: [
           HELP,

@@ -112,6 +112,7 @@ GEM
       hashie
       money_helper
     irb (1.0.0)
+    jaro_winkler (1.5.2)
     kaminari-core (1.1.1)
     kaminari-grape (1.0.1)
       grape
@@ -161,9 +162,8 @@ GEM
       mini_portile2 (~> 2.4.0)
     oj (3.7.12)
     parallel (1.17.0)
-    parser (2.6.2.1)
+    parser (2.6.3.0)
       ast (~> 2.4.0)
-    powerpack (0.1.2)
     public_suffix (3.0.3)
     puma (3.12.1)
     rack (2.0.7)
@@ -205,13 +205,13 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
-    rubocop (0.55.0)
+    rubocop (0.68.1)
+      jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
-      parser (>= 2.5)
-      powerpack (~> 0.1)
+      parser (>= 2.5, != 2.5.1.1)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (~> 1.0, >= 1.0.1)
+      unicode-display_width (>= 1.4.0, < 1.6)
     ruby-progressbar (1.10.0)
     rubyzip (1.2.2)
     safe_yaml (1.0.5)
@@ -306,7 +306,7 @@ DEPENDENCIES
   rack-test
   rake (~> 10.4)
   rspec
-  rubocop (= 0.55.0)
+  rubocop (= 0.68.1)
   selenium-webdriver
   slack-ruby-bot-server
   slack-ruby-bot-server-mailchimp

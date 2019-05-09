@@ -23,6 +23,7 @@ class Position
 
   def percent_from(latest_price)
     return unless latest_price
+
     100 - (purchased_price_cents * 100 / latest_price.to_f).to_f
   end
 

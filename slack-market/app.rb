@@ -23,6 +23,7 @@ module SlackMarket
     def deactivate_asleep_teams!
       Team.active.each do |team|
         next unless team.asleep?
+
         begin
           team.deactivate!
           team.inform! "This integration hasn't been used for 2 weeks, deactivating. Reactivate at #{SlackRubyBotServer::Service.url}. Your data will be purged in another 2 weeks."

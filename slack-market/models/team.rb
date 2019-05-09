@@ -13,6 +13,7 @@ class Team
 
   def asleep?(dt = 2.weeks)
     return false unless subscription_expired?
+
     time_limit = Time.now - dt
     created_at <= time_limit
   end
@@ -27,6 +28,7 @@ class Team
   def inform!(message)
     channels = slack_client.channels_list['channels'].select { |channel| channel['is_member'] }
     return unless channels.any?
+
     channel = channels.first
     logger.info "Sending '#{message}' to #{self} on ##{channel['name']}."
     slack_client.chat_postMessage(text: message, channel: channel['id'], as_user: true)
@@ -34,6 +36,7 @@ class Team
 
   def subscription_expired?
     return false if subscribed?
+
     (created_at + 1.week) < Time.now
   end
 
@@ -53,6 +56,7 @@ class Team
 
   def trial_expired_text
     return unless subscription_expired?
+
     'Your trial subscription has expired.'
   end
 
@@ -63,10 +67,11 @@ class Team
   SUBSCRIBED_TEXT = <<~EOS.freeze
     Your team has been subscribed, enjoy all features. Thanks for supporting open-source!
     Follow https://twitter.com/playplayio for news and updates.
-EOS
+  EOS
 
   def subscribed!
     return unless subscribed? && subscribed_changed?
+
     inform! SUBSCRIBED_TEXT
   end
 end

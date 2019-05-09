@@ -21,6 +21,7 @@ class User
     query = user_name =~ /^<@(.*)>$/ ? { user_id: ::Regexp.last_match[1] } : { user_name: ::Regexp.new("^#{user_name}$", 'i') }
     user = User.where(query.merge(team: team)).first
     raise SlackMarket::Error, "I don't know who #{user_name} is!" unless user
+
     user
   end
 

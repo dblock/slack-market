@@ -16,7 +16,7 @@ module Api
         get ':q' do
           client = IEX::Api::Client.new
           chart = client.chart(params[:q], params[:p])
-          data = chart.map(&:market_average).select { |v| v >= 0 }
+          data = chart.map(&:high).select { |v| v && v >= 0 }
           g = Gruff::Line.new
           g.data params[:q], data
           content_type 'image/png'

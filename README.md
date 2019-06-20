@@ -2,7 +2,6 @@ Slack Market
 ============
 
 [![Build Status](https://travis-ci.org/dblock/slack-market.svg?branch=master)](https://travis-ci.org/dblock/slack-market)
-[![Dependency Status](https://gemnasium.com/dblock/slack-market.svg)](https://gemnasium.com/dblock/slack-market)
 [![Code Climate](https://codeclimate.com/github/dblock/slack-market.svg)](https://codeclimate.com/github/dblock/slack-market)
 
 A stock market bot for Slack.

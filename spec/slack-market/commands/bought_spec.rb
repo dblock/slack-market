@@ -15,16 +15,16 @@ describe SlackMarket::Commands::Bought do
     end
     context 'subscribed team' do
       let(:team) { Fabricate(:team, subscribed: true) }
-      it 'records a buy', vcr: { cassette_name: 'msft' } do
+      it 'records a buy', vcr: { cassette_name: 'iex/msft' } do
         expect do
           expect(message: "#{SlackRubyBot.config.user} bought MSFT", user: user.user_id).to respond_with_slack_message(
-            "#{user.slack_mention} bought Microsoft Corporation (MSFT) at ~$89.24"
+            "#{user.slack_mention} bought Microsoft Corp. (MSFT) at ~$135.69"
           )
         end.to change(Position, :count).by(1)
         position = Position.last
         expect(position.symbol).to eq 'MSFT'
-        expect(position.name).to eq 'Microsoft Corporation'
-        expect(position.purchased_price_cents).to eq 8924
+        expect(position.name).to eq 'Microsoft Corp.'
+        expect(position.purchased_price_cents).to eq 13569
         expect(position.purchased_at).to_not be nil
       end
       context 'with an owned position' do

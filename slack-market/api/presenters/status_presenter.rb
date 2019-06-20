@@ -30,7 +30,7 @@ module Api
       end
 
       def msft
-        IEX::Resources::Quote.get('MSFT')
+        IEX::Api::Client.new.quote('MSFT')
       end
 
       def base_url(opts)

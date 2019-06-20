@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cloud.iexapis.com/v1/stock/MSFT/quote?token=access-token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - IEX Ruby Client/1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 20 Jun 2019 00:57:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - ctoken=b5f5743bbaa940c3b86847367abe82c4; Max-Age=43200; Path=/; Expires=Thu,
+        20 Jun 2019 12:57:35 GMT
+      Iexcloud-Messages-Used:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: ASCII-8BIT
+      string: '{"symbol":"MSFT","companyName":"Microsoft Corp.","calculationPrice":"close","open":135.01,"openTime":1560951000443,"close":135.69,"closeTime":1560974400171,"high":135.93,"low":133.81,"latestPrice":135.69,"latestSource":"Close","latestTime":"June
+        19, 2019","latestUpdate":1560974400171,"latestVolume":23720230,"iexRealtimePrice":135.76,"iexRealtimeSize":100,"iexLastUpdated":1560974386015,"delayedPrice":135.94,"delayedPriceTime":1560975312180,"extendedPrice":136.02,"extendedChange":0.33,"extendedChangePercent":0.00243,"extendedPriceTime":1560987850569,"previousClose":135.16,"change":0.53,"changePercent":0.00392,"iexMarketPercent":0.019549599645534634,"iexVolume":463721,"avgTotalVolume":24483035,"iexBidPrice":0,"iexBidSize":0,"iexAskPrice":0,"iexAskSize":0,"marketCap":1039768045800,"peRatio":29.89,"week52High":135.93,"week52Low":93.96,"ytdChange":0.34054999999999996}'
+    http_version: 
+  recorded_at: Thu, 20 Jun 2019 00:57:35 GMT
+- request:
+    method: get
+    uri: https://cloud.iexapis.com/v1/stock/GOOG/quote?token=access-token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - IEX Ruby Client/1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 20 Jun 2019 00:57:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - ctoken=240535dfb42e4a3dbb770d5766839140; Max-Age=43200; Path=/; Expires=Thu,
+        20 Jun 2019 12:57:35 GMT
+      Iexcloud-Messages-Used:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: ASCII-8BIT
+      string: '{"symbol":"GOOG","companyName":"Alphabet, Inc.","calculationPrice":"close","open":1105.6,"openTime":1560951000739,"close":1102.33,"closeTime":1560974400226,"high":1107,"low":1093.48,"latestPrice":1102.33,"latestSource":"Close","latestTime":"June
+        19, 2019","latestUpdate":1560974400226,"latestVolume":1338322,"iexRealtimePrice":1102.93,"iexRealtimeSize":2,"iexLastUpdated":1560974398018,"delayedPrice":1102.33,"delayedPriceTime":1560974400226,"extendedPrice":1105.06,"extendedChange":2.73,"extendedChangePercent":0.00248,"extendedPriceTime":1560987719890,"previousClose":1103.6,"change":-1.27,"changePercent":-0.00115,"iexMarketPercent":0.03435720252674618,"iexVolume":45981,"avgTotalVolume":1576332,"iexBidPrice":0,"iexBidSize":0,"iexAskPrice":0,"iexAskSize":0,"marketCap":765286301582,"peRatio":27.38,"week52High":1289.27,"week52Low":970.11,"ytdChange":0.054068000000000005}'
+    http_version: 
+  recorded_at: Thu, 20 Jun 2019 00:57:36 GMT
+recorded_with: VCR 4.0.0

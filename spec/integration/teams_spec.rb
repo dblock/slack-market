@@ -9,7 +9,7 @@ describe 'Teams', js: true, type: :feature do
     ENV.delete 'SLACK_CLIENT_ID'
     ENV.delete 'SLACK_CLIENT_SECRET'
   end
-  context 'oauth', vcr: { cassette_name: 'auth_test' } do
+  context 'oauth', vcr: { cassette_name: 'iex/auth_test' } do
     it 'registers a team' do
       allow_any_instance_of(Team).to receive(:ping!).and_return(ok: true)
       expect(SlackRubyBotServer::Service.instance).to receive(:start!)

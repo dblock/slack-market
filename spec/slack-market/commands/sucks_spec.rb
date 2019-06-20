@@ -6,7 +6,7 @@ describe SlackMarket::Commands::Sucks do
   let(:client) { app.send(:client) }
   let(:message_command) { SlackRubyBot::Hooks::Message.new }
   context 'sucks' do
-    it 'when the market is up', vcr: { cassette_name: 'dia_up' } do
+    it 'when the market is up', vcr: { cassette_name: 'iex/dia_up' } do
       expect(client.web_client).to receive(:chat_postMessage).with(
         channel: 'channel',
         as_user: true,
@@ -22,7 +22,7 @@ describe SlackMarket::Commands::Sucks do
       )
       message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'market sucks'))
     end
-    it 'when the market is down', vcr: { cassette_name: 'dia_down' } do
+    it 'when the market is down', vcr: { cassette_name: 'iex/dia_down' } do
       expect(client.web_client).to receive(:chat_postMessage).with(
         channel: 'channel',
         as_user: true,

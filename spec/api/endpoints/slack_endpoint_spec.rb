@@ -7,7 +7,7 @@ describe Api::Endpoints::SlackEndpoint do
     before do
       ENV['SLACK_VERIFICATION_TOKEN'] = 'token'
     end
-    it 'parses a good payload and returns correct charts', vcr: { cassette_name: 'msft' } do
+    it 'parses a good payload and returns correct charts', vcr: { cassette_name: 'iex/msft' } do
       post '/api/slack/action', payload: {
         'actions': [{ 'name' => '1M', 'value' => 'MSFT- 1m' }],
         'channel': { 'id' => '424242424', 'name' => 'directmessage' },
@@ -20,7 +20,7 @@ describe Api::Endpoints::SlackEndpoint do
       payload = JSON.parse(last_response.body)
       expect(payload['attachments'][0]['image_url']).to eq '/api/charts/MSFT.png?p=1M'
     end
-    it 'returns an error with a non-matching verification token', vcr: { cassette_name: 'msft' } do
+    it 'returns an error with a non-matching verification token', vcr: { cassette_name: 'iex/msft' } do
       post '/api/slack/action', payload: {
         'actions': [{ 'name' => '1m', 'value' => 'MSFT- 1m' }],
         'channel': { 'id' => '424242424', 'name' => 'directmessage' },

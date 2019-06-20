@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cloud.iexapis.com/v1/stock/DIA/quote?token=access-token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - IEX Ruby Client/1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 20 Jun 2019 00:53:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - ctoken=3c6c2798c8504f2db30098ba6671afc2; Max-Age=43200; Path=/; Expires=Thu,
+        20 Jun 2019 12:53:17 GMT
+      Iexcloud-Messages-Used:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: ASCII-8BIT
+      string: '{"symbol":"DIA","companyName":"SPDR Dow Jones Industrial Average ETF
+        Trust","calculationPrice":"close","open":265.4,"openTime":1560951000062,"close":265.56,"closeTime":1560974400337,"high":266.21,"low":264.63,"latestPrice":265.56,"latestSource":"Close","latestTime":"June
+        19, 2019","latestUpdate":1560974400337,"latestVolume":3913714,"iexRealtimePrice":265.53,"iexRealtimeSize":100,"iexLastUpdated":1560974399990,"delayedPrice":265.7,"delayedPriceTime":1560975000009,"extendedPrice":266.2,"extendedChange":0.64,"extendedChangePercent":0.00241,"extendedPriceTime":1560987571924,"previousClose":265.33,"change":0.23,"changePercent":0.00087,"iexMarketPercent":0.005199153540601076,"iexVolume":20348,"avgTotalVolume":3879116,"iexBidPrice":0,"iexBidSize":0,"iexAskPrice":0,"iexAskSize":0,"marketCap":0,"peRatio":null,"week52High":269.28,"week52Low":216.97,"ytdChange":0.13786900000000002}'
+    http_version: 
+  recorded_at: Thu, 20 Jun 2019 00:53:17 GMT
+recorded_with: VCR 4.0.0

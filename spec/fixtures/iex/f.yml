@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cloud.iexapis.com/v1/stock/F/quote?token=access-token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - IEX Ruby Client/1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 20 Jun 2019 00:50:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - ctoken=67daf8bf496841d68b23350206f5a0f4; Max-Age=43200; Path=/; Expires=Thu,
+        20 Jun 2019 12:50:37 GMT
+      Iexcloud-Messages-Used:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: ASCII-8BIT
+      string: '{"symbol":"F","companyName":"Ford Motor Co.","calculationPrice":"close","open":10.15,"openTime":1560951000253,"close":10.04,"closeTime":1560974473579,"high":10.18,"low":10.03,"latestPrice":10.04,"latestSource":"Close","latestTime":"June
+        19, 2019","latestUpdate":1560974473579,"latestVolume":28971938,"iexRealtimePrice":10.04,"iexRealtimeSize":43,"iexLastUpdated":1560974396636,"delayedPrice":10.04,"delayedPriceTime":1560974473604,"extendedPrice":10.07,"extendedChange":0.03,"extendedChangePercent":0.00299,"extendedPriceTime":1560987291070,"previousClose":10.1,"change":-0.06,"changePercent":-0.00594,"iexMarketPercent":0.012549695501902566,"iexVolume":363589,"avgTotalVolume":33545671,"iexBidPrice":0,"iexBidSize":0,"iexAskPrice":0,"iexAskSize":0,"marketCap":40056487600,"peRatio":12.85,"week52High":12.05,"week52Low":7.41,"ytdChange":0.272541}'
+    http_version: 
+  recorded_at: Thu, 20 Jun 2019 00:50:37 GMT
+recorded_with: VCR 4.0.0

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Api::Endpoints::StatusEndpoint, vcr: { cassette_name: 'msft' } do
+describe Api::Endpoints::StatusEndpoint, vcr: { cassette_name: 'iex/msft' } do
   include Api::Test::EndpointTest
 
   before do

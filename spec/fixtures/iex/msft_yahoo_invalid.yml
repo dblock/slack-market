@@ -1,0 +1,151 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cloud.iexapis.com/v1/stock/MSFT/quote?token=access-token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - IEX Ruby Client/1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 20 Jun 2019 00:47:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - ctoken=8a0689ec22da4115878ba91f931d68a6; Max-Age=43200; Path=/; Expires=Thu,
+        20 Jun 2019 12:47:23 GMT
+      Iexcloud-Messages-Used:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: ASCII-8BIT
+      string: '{"symbol":"MSFT","companyName":"Microsoft Corp.","calculationPrice":"close","open":135.01,"openTime":1560951000443,"close":135.69,"closeTime":1560974400171,"high":135.93,"low":133.81,"latestPrice":135.69,"latestSource":"Close","latestTime":"June
+        19, 2019","latestUpdate":1560974400171,"latestVolume":23720230,"iexRealtimePrice":135.76,"iexRealtimeSize":100,"iexLastUpdated":1560974386015,"delayedPrice":135.94,"delayedPriceTime":1560975312180,"extendedPrice":136.02,"extendedChange":0.33,"extendedChangePercent":0.00243,"extendedPriceTime":1560987850569,"previousClose":135.16,"change":0.53,"changePercent":0.00392,"iexMarketPercent":0.019549599645534634,"iexVolume":463721,"avgTotalVolume":24483035,"iexBidPrice":0,"iexBidSize":0,"iexAskPrice":0,"iexAskSize":0,"marketCap":1039768045800,"peRatio":29.89,"week52High":135.93,"week52Low":93.96,"ytdChange":0.34054999999999996}'
+    http_version: 
+  recorded_at: Thu, 20 Jun 2019 00:47:23 GMT
+- request:
+    method: get
+    uri: https://cloud.iexapis.com/v1/stock/AABA/quote?token=access-token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - IEX Ruby Client/1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 20 Jun 2019 00:47:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - ctoken=f7fda618e50d4777a11934718cb50aa9; Max-Age=43200; Path=/; Expires=Thu,
+        20 Jun 2019 12:47:23 GMT
+      Iexcloud-Messages-Used:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: ASCII-8BIT
+      string: '{"symbol":"AABA","companyName":"Altaba, Inc.","calculationPrice":"close","open":69.12,"openTime":1560951000562,"close":68.48,"closeTime":1560974400428,"high":69.5,"low":68.04,"latestPrice":68.48,"latestSource":"Close","latestTime":"June
+        19, 2019","latestUpdate":1560974400428,"latestVolume":3819710,"iexRealtimePrice":68.49,"iexRealtimeSize":300,"iexLastUpdated":1560974390063,"delayedPrice":68.48,"delayedPriceTime":1560974400428,"extendedPrice":68.5,"extendedChange":0.02,"extendedChangePercent":0.00029,"extendedPriceTime":1560987442625,"previousClose":68.71,"change":-0.23,"changePercent":-0.00335,"iexMarketPercent":0.016713310696361765,"iexVolume":63840,"avgTotalVolume":8289966,"iexBidPrice":0,"iexBidSize":0,"iexAskPrice":0,"iexAskSize":0,"marketCap":41265842560,"peRatio":-4.31,"week52High":81.39,"week52Low":54.75,"ytdChange":0.191814}'
+    http_version: 
+  recorded_at: Thu, 20 Jun 2019 00:47:23 GMT
+- request:
+    method: get
+    uri: https://cloud.iexapis.com/v1/stock/INVALID/quote?token=access-token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - IEX Ruby Client/1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 20 Jun 2019 00:47:23 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - ctoken=6c010efdbb714950a1c5f72a25fcd5f2; Max-Age=43200; Path=/; Expires=Thu,
+        20 Jun 2019 12:47:23 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: ASCII-8BIT
+      string: Unknown symbol
+    http_version: 
+  recorded_at: Thu, 20 Jun 2019 00:47:23 GMT
+recorded_with: VCR 4.0.0

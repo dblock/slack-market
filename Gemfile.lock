@@ -106,7 +106,7 @@ GEM
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
-    iex-ruby-client (0.4.4)
+    iex-ruby-client (1.0.0)
       faraday (>= 0.9)
       faraday_middleware
       hashie
@@ -128,9 +128,9 @@ GEM
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
-    money (6.13.3)
+    money (6.13.4)
       i18n (>= 0.6.4, <= 2)
-    money_helper (1.0.1)
+    money_helper (1.0.2)
       activesupport
       money (~> 6.5)
     mongo (2.8.0)
@@ -150,7 +150,7 @@ GEM
       mongoid (>= 3.0.0)
       mongoid-compatibility
     multi_json (1.13.1)
-    multipart-post (2.0.0)
+    multipart-post (2.1.1)
     mustermann (1.0.3)
     mustermann-grape (1.0.0)
       mustermann (~> 1.0.0)

@@ -19,6 +19,10 @@ class Tickers
 
   private
 
+  def iex_client
+    @iex_client ||= IEX::Api::Client.new
+  end
+
   def get_tickers
     get_tickers_one_by_one
   end
@@ -26,7 +30,7 @@ class Tickers
   def get_tickers_one_by_one
     symbols.map do |symbol|
       begin
-        IEX::Resources::Quote.get(symbol)
+        iex_client.quote(symbol)
       rescue IEX::Errors::SymbolNotFoundError
         nil
       end

@@ -12,7 +12,7 @@ describe SlackMarket::Commands::Positions do
     end
     context 'subscribed team' do
       let(:team) { Fabricate(:team, subscribed: true) }
-      it 'creates a user record', vcr: { cassette_name: 'user_info' } do
+      it 'creates a user record', vcr: { cassette_name: 'slack/user_info' } do
         expect do
           expect(message: "#{SlackRubyBot.config.user} positions").to respond_with_slack_message(
             '<@user> does not have any open positions.'
@@ -26,30 +26,30 @@ describe SlackMarket::Commands::Positions do
         before do
           allow(User).to receive(:find_create_or_update_by_slack_id!).and_return(user)
         end
-        context 'msft', vcr: { cassette_name: 'msft' } do
+        context 'msft', vcr: { cassette_name: 'iex/msft' } do
           it 'up' do
-            Fabricate(:position, user: user, name: 'Microsoft Corporation', symbol: 'MSFT', purchased_price_cents: 28_45)
-            expect(message: "#{SlackRubyBot.config.user} positions").to respond_with_slack_message('*MSFT* +68.12% :green_book:')
+            Fabricate(:position, user: user, name: 'Microsoft Corp.', symbol: 'MSFT', purchased_price_cents: 28_45)
+            expect(message: "#{SlackRubyBot.config.user} positions").to respond_with_slack_message('*MSFT* +79.03% :green_book:')
           end
           it 'down' do
-            Fabricate(:position, user: user, name: 'Microsoft Corporation', symbol: 'MSFT', purchased_price_cents: 128_45)
-            expect(message: "#{SlackRubyBot.config.user} positions").to respond_with_slack_message('*MSFT* -43.94% :closed_book:')
+            Fabricate(:position, user: user, name: 'Microsoft Corp.', symbol: 'MSFT', purchased_price_cents: 228_45)
+            expect(message: "#{SlackRubyBot.config.user} positions").to respond_with_slack_message('*MSFT* -68.36% :closed_book:')
           end
           it 'unchanged' do
-            Fabricate(:position, user: user, name: 'Microsoft Corporation', symbol: 'MSFT', purchased_price_cents: 89_24)
+            Fabricate(:position, user: user, name: 'Microsoft Corp.', symbol: 'MSFT', purchased_price_cents: 13569)
             expect(message: "#{SlackRubyBot.config.user} positions").to respond_with_slack_message('*MSFT* :blue_book:')
           end
           it 'only shows open positions' do
             Fabricate(:closed_position, user: user, symbol: 'ZYX')
-            Fabricate(:position, user: user, name: 'Microsoft Corporation', symbol: 'MSFT', purchased_price_cents: 89_24.5)
+            Fabricate(:position, user: user, name: 'Microsoft Corp.', symbol: 'MSFT', purchased_price_cents: 13569.5)
             expect(message: "#{SlackRubyBot.config.user} positions").to respond_with_slack_message('*MSFT* :blue_book:')
           end
         end
-        context 'msft and yahoo', vcr: { cassette_name: 'msft_yahoo' } do
+        context 'msft and yahoo', vcr: { cassette_name: 'iex/msft_yahoo' } do
           it 'mixed' do
-            Fabricate(:position, user: user, name: 'Microsoft Corporation', symbol: 'MSFT', purchased_price_cents: 28_45)
+            Fabricate(:position, user: user, name: 'Microsoft Corp.', symbol: 'MSFT', purchased_price_cents: 28_45)
             Fabricate(:position, user: user, name: 'Yahoo!', symbol: 'AABA', purchased_price_cents: 138_46)
-            expect(message: "#{SlackRubyBot.config.user} positions").to respond_with_slack_message('*MSFT* +68.23% :green_book:, *AABA* -87.74% :closed_book:')
+            expect(message: "#{SlackRubyBot.config.user} positions").to respond_with_slack_message('*MSFT* +79.03% :green_book:, *AABA* -102.19% :closed_book:')
           end
         end
       end

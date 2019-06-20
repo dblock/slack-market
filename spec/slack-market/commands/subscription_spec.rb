@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SlackMarket::Commands::Subscription, vcr: { cassette_name: 'user_info' } do
+describe SlackMarket::Commands::Subscription, vcr: { cassette_name: 'slack/user_info' } do
   let(:app) { SlackMarket::Server.new(team: team) }
   let(:client) { app.send(:client) }
   context 'team' do

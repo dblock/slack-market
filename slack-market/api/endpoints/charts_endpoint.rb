@@ -15,6 +15,7 @@ module Api
         end
         get ':q' do
           client = IEX::Api::Client.new
+          error!('Currently Disabled', 400) unless params[:p] == '1d'
           chart = client.chart(params[:q], params[:p])
           data = chart.map(&:high).select { |v| v && v >= 0 }
           g = Gruff::Line.new

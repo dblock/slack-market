@@ -23,6 +23,10 @@ module Api
 
         use Rack::Robotz, 'User-Agent' => '*', 'Disallow' => '/api'
 
+        use Rack::ConditionalGet
+        
+        use Rack::ETag
+
         use Rack::ServerPages
 
         run Api::Middleware.new

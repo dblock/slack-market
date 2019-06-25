@@ -60,7 +60,7 @@ class Market
         color: quote.change.to_f > 0 ? '#00FF00' : '#FF0000'
       }
 
-      render_chart(opts[:charts], attachment, opts[:button], quote)
+      # render_chart(opts[:charts], attachment, opts[:button], quote)
 
       attachment
     end

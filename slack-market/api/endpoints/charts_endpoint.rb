@@ -14,7 +14,10 @@ module Api
           optional :p, type: String, default: '1d'
         end
         get ':q' do
-          expire_in = 60 * 60 * 1
+          expire_in = case params[:p]
+                      when '1d' then 60 * 60
+                      else 60 * 60 * 12
+                      end
           header 'Expires', CGI.rfc1123_date(Time.now.utc + expire_in)
           key = "api:charts:#{params[:q]}:#{params[:i]}:#{params[:p]}"
           Api::Middleware.logger.info(key)

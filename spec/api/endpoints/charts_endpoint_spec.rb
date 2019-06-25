@@ -8,6 +8,7 @@ describe Api::Endpoints::ChartsEndpoint do
       get '/api/charts/MSFT.png'
       expect(last_response.status).to eq 200
       expect(last_response.headers['Content-Type']).to eq 'image/png'
+      expect(last_response.headers['Expires']).to_not be_blank
     end
   end
 end

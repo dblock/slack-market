@@ -13,7 +13,7 @@ module Api
           optional :p, type: String, default: '1d'
         end
         get ':q' do
-          error!('Currently Disabled', 400)
+          error!('Currently Disabled', 400) unless params[:p] == '1d'
 
           expire_in = case params[:p]
                       when '1d' then 60 * 60

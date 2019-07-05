@@ -16,36 +16,12 @@ class Market
 
     # render the correct chart
     def render_chart(charts, slack_attachment, button, quote)
-      # the actions array below contains formatted slack buttons
-      actions = [
-        {
-          name: '1D',
-          text: '1d',
-          type: 'button',
-          value: "#{quote.symbol}- 1d"
-        },
-        {
-          name: '1M',
-          text: '1m',
-          type: 'button',
-          value: "#{quote.symbol}- 1m"
-        },
-        {
-          name: '1Y',
-          text: '1y',
-          type: 'button',
-          value: "#{quote.symbol}- 1y"
-        }
-      ]
-
       chart_symbol = quote.symbol.tr('=', '-')
       if charts && !button
         slack_attachment[:image_url] = "#{ENV['DOKKU_APP_URL']}/api/charts/#{chart_symbol}.png"
-        slack_attachment[:actions] = actions
         slack_attachment[:callback_id] = quote.company_name.to_s
       elsif charts && button
         slack_attachment[:image_url] = "#{ENV['DOKKU_APP_URL']}/api/charts/#{chart_symbol}.png?p=#{button}"
-        slack_attachment[:actions] = actions
         slack_attachment[:callback_id] = quote.company_name.to_s
       end
     end
@@ -60,7 +36,7 @@ class Market
         color: quote.change.to_f > 0 ? '#00FF00' : '#FF0000'
       }
 
-      # render_chart(opts[:charts], attachment, opts[:button], quote)
+      render_chart(opts[:charts], attachment, opts[:button], quote)
 
       attachment
     end

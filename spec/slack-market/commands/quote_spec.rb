@@ -32,26 +32,6 @@ describe SlackMarket::Commands::Quote do
               text: '$135.69 (+0.39%)',
               color: '#00FF00',
               callback_id: 'Microsoft Corp.',
-              actions: [
-                {
-                  name: '1D',
-                  text: '1d',
-                  type: 'button',
-                  value: 'MSFT- 1d'
-                },
-                {
-                  name: '1M',
-                  text: '1m',
-                  type: 'button',
-                  value: 'MSFT- 1m'
-                },
-                {
-                  name: '1Y',
-                  text: '1y',
-                  type: 'button',
-                  value: 'MSFT- 1y'
-                }
-              ],
               image_url: '/api/charts/MSFT.png'
             }
           ]
@@ -75,26 +55,6 @@ describe SlackMarket::Commands::Quote do
               text: '$135.69 (+0.39%)',
               color: '#00FF00',
               callback_id: 'Microsoft Corp.',
-              actions: [
-                {
-                  name: '1D',
-                  text: '1d',
-                  type: 'button',
-                  value: 'MSFT- 1d'
-                },
-                {
-                  name: '1M',
-                  text: '1m',
-                  type: 'button',
-                  value: 'MSFT- 1m'
-                },
-                {
-                  name: '1Y',
-                  text: '1y',
-                  type: 'button',
-                  value: 'MSFT- 1y'
-                }
-              ],
               image_url: '/api/charts/MSFT.png'
             }
           ]
@@ -115,26 +75,6 @@ describe SlackMarket::Commands::Quote do
               text: '$135.69 (+0.39%)',
               color: '#00FF00',
               callback_id: 'Microsoft Corp.',
-              actions: [
-                {
-                  name: '1D',
-                  text: '1d',
-                  type: 'button',
-                  value: 'MSFT- 1d'
-                },
-                {
-                  name: '1M',
-                  text: '1m',
-                  type: 'button',
-                  value: 'MSFT- 1m'
-                },
-                {
-                  name: '1Y',
-                  text: '1y',
-                  type: 'button',
-                  value: 'MSFT- 1y'
-                }
-              ],
               image_url: '/api/charts/MSFT.png'
             },
             {
@@ -144,26 +84,6 @@ describe SlackMarket::Commands::Quote do
               text: '$68.48 (-0.34%)',
               color: '#FF0000',
               callback_id: 'Altaba, Inc.',
-              actions: [
-                {
-                  name: '1D',
-                  text: '1d',
-                  type: 'button',
-                  value: 'AABA- 1d'
-                },
-                {
-                  name: '1M',
-                  text: '1m',
-                  type: 'button',
-                  value: 'AABA- 1m'
-                },
-                {
-                  name: '1Y',
-                  text: '1y',
-                  type: 'button',
-                  value: 'AABA- 1y'
-                }
-              ],
               image_url: '/api/charts/AABA.png'
             }
           ]
@@ -194,26 +114,6 @@ describe SlackMarket::Commands::Quote do
               text: '$10.04 (-0.59%)',
               color: '#FF0000',
               callback_id: 'Ford Motor Co.',
-              actions: [
-                {
-                  name: '1D',
-                  text: '1d',
-                  type: 'button',
-                  value: 'F- 1d'
-                },
-                {
-                  name: '1M',
-                  text: '1m',
-                  type: 'button',
-                  value: 'F- 1m'
-                },
-                {
-                  name: '1Y',
-                  text: '1y',
-                  type: 'button',
-                  value: 'F- 1y'
-                }
-              ],
               image_url: '/api/charts/F.png'
             }
           ]
@@ -235,26 +135,6 @@ describe SlackMarket::Commands::Quote do
               text: '$10.04 (-0.59%)',
               color: '#FF0000',
               callback_id: 'Ford Motor Co.',
-              actions: [
-                {
-                  name: '1D',
-                  text: '1d',
-                  type: 'button',
-                  value: 'F- 1d'
-                },
-                {
-                  name: '1M',
-                  text: '1m',
-                  type: 'button',
-                  value: 'F- 1m'
-                },
-                {
-                  name: '1Y',
-                  text: '1y',
-                  type: 'button',
-                  value: 'F- 1y'
-                }
-              ],
               image_url: '/api/charts/F.png'
             }
           ]
@@ -281,26 +161,6 @@ describe SlackMarket::Commands::Quote do
                 text: '$135.69 (+0.39%)',
                 color: '#00FF00',
                 callback_id: 'Microsoft Corp.',
-                actions: [
-                  {
-                    name: '1D',
-                    text: '1d',
-                    type: 'button',
-                    value: 'MSFT- 1d'
-                  },
-                  {
-                    name: '1M',
-                    text: '1m',
-                    type: 'button',
-                    value: 'MSFT- 1m'
-                  },
-                  {
-                    name: '1Y',
-                    text: '1y',
-                    type: 'button',
-                    value: 'MSFT- 1y'
-                  }
-                ],
                 image_url: '/api/charts/MSFT.png'
               }
             ]

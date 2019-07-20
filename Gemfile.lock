@@ -93,7 +93,7 @@ GEM
       grape (>= 0.16.2)
     gruff (0.7.0)
       rmagick (~> 2.13, >= 2.13.4)
-    hashdiff (0.4.0)
+    hashdiff (1.0.0)
     hashie (3.6.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)

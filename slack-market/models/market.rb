@@ -30,7 +30,7 @@ class Market
     def to_slack_attachment(quote, opts = { charts: false, button: nil })
       attachment = {
         fallback: "#{quote.company_name} (#{quote.symbol}): $#{quote.latest_price}",
-        title_link: "http://finance.google.com/q=#{quote.symbol}",
+        title_link: "http://finance.google.com/?q=#{quote.symbol}",
         title: "#{quote.company_name} (#{quote.symbol})",
         text: "$#{quote.latest_price} (#{quote.change_percent_s})",
         color: quote.change.to_f > 0 ? '#00FF00' : '#FF0000'

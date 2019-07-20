@@ -14,7 +14,7 @@ module SlackMarket
             as_user: true,
             text: quote.change.to_f > 0 ? "No <@#{data.user}>, market is up, you suck!" : "Indeed <@#{data.user}>, market sucks!",
             attachments: [{
-              title_link: 'http://finance.google.com/q=%5EDJI',
+              title_link: 'http://finance.google.com/?q=%5EDJI',
               title: 'Dow Jones Industrial Average (^DJI)',
               color: quote.change.to_f > 0 ? '#00FF00' : '#FF0000',
               image_url: '/api/charts/DJI'

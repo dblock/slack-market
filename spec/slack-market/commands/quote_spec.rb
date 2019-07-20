@@ -27,7 +27,7 @@ describe SlackMarket::Commands::Quote do
           attachments: [
             {
               fallback: 'Microsoft Corp. (MSFT): $135.69',
-              title_link: 'http://finance.google.com/q=MSFT',
+              title_link: 'http://finance.google.com/?q=MSFT',
               title: 'Microsoft Corp. (MSFT)',
               text: '$135.69 (+0.39%)',
               color: '#00FF00',
@@ -50,7 +50,7 @@ describe SlackMarket::Commands::Quote do
           attachments: [
             {
               fallback: 'Microsoft Corp. (MSFT): $135.69',
-              title_link: 'http://finance.google.com/q=MSFT',
+              title_link: 'http://finance.google.com/?q=MSFT',
               title: 'Microsoft Corp. (MSFT)',
               text: '$135.69 (+0.39%)',
               color: '#00FF00',
@@ -70,7 +70,7 @@ describe SlackMarket::Commands::Quote do
           attachments: [
             {
               fallback: 'Microsoft Corp. (MSFT): $135.69',
-              title_link: 'http://finance.google.com/q=MSFT',
+              title_link: 'http://finance.google.com/?q=MSFT',
               title: 'Microsoft Corp. (MSFT)',
               text: '$135.69 (+0.39%)',
               color: '#00FF00',
@@ -79,7 +79,7 @@ describe SlackMarket::Commands::Quote do
             },
             {
               fallback: 'Altaba, Inc. (AABA): $68.48',
-              title_link: 'http://finance.google.com/q=AABA',
+              title_link: 'http://finance.google.com/?q=AABA',
               title: 'Altaba, Inc. (AABA)',
               text: '$68.48 (-0.34%)',
               color: '#FF0000',
@@ -109,7 +109,7 @@ describe SlackMarket::Commands::Quote do
           attachments: [
             {
               fallback: 'Ford Motor Co. (F): $10.04',
-              title_link: 'http://finance.google.com/q=F',
+              title_link: 'http://finance.google.com/?q=F',
               title: 'Ford Motor Co. (F)',
               text: '$10.04 (-0.59%)',
               color: '#FF0000',
@@ -130,7 +130,7 @@ describe SlackMarket::Commands::Quote do
           attachments: [
             {
               fallback: 'Ford Motor Co. (F): $10.04',
-              title_link: 'http://finance.google.com/q=F',
+              title_link: 'http://finance.google.com/?q=F',
               title: 'Ford Motor Co. (F)',
               text: '$10.04 (-0.59%)',
               color: '#FF0000',
@@ -156,7 +156,7 @@ describe SlackMarket::Commands::Quote do
             attachments: [
               {
                 fallback: 'Microsoft Corp. (MSFT): $135.69',
-                title_link: 'http://finance.google.com/q=MSFT',
+                title_link: 'http://finance.google.com/?q=MSFT',
                 title: 'Microsoft Corp. (MSFT)',
                 text: '$135.69 (+0.39%)',
                 color: '#00FF00',
@@ -179,7 +179,7 @@ describe SlackMarket::Commands::Quote do
             attachments: [
               {
                 fallback: 'Microsoft Corp. (MSFT): $135.69',
-                title_link: 'http://finance.google.com/q=MSFT',
+                title_link: 'http://finance.google.com/?q=MSFT',
                 title: 'Microsoft Corp. (MSFT)',
                 text: '$135.69 (+0.39%)',
                 color: '#00FF00'

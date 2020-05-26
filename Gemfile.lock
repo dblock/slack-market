@@ -1,14 +1,14 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    activemodel (6.0.2.2)
-      activesupport (= 6.0.2.2)
-    activesupport (6.0.2.2)
+    activemodel (6.0.3.1)
+      activesupport (= 6.0.3.1)
+    activesupport (6.0.3.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-      zeitwerk (~> 2.2)
+      zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.0)
@@ -143,7 +143,7 @@ GEM
     mini_memory_store (1.0.0)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.14.0)
+    minitest (5.14.1)
     money (6.13.7)
       i18n (>= 0.6.4, <= 2)
     money_helper (1.0.2)

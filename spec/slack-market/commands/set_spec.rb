@@ -74,4 +74,39 @@ describe SlackMarket::Commands::Set do
       end
     end
   end
+  context 'bots' do
+    it 'requires a subscription' do
+      expect(message: "#{SlackRubyBot.config.user} set bots on").to respond_with_slack_message(team.subscribe_text)
+    end
+    context 'subscribed team' do
+      let(:team) { Fabricate(:team, subscribed: true) }
+      it 'shows current value of bots off' do
+        team.update_attributes!(bots: false)
+        expect(message: "#{SlackRubyBot.config.user} set bots").to respond_with_slack_message(
+          "Bots for team #{team.name} are not allowed."
+        )
+      end
+      it 'shows default value of bots off' do
+        expect(message: "#{SlackRubyBot.config.user} set bots").to respond_with_slack_message(
+          "Bots for team #{team.name} are not allowed."
+        )
+      end
+      it 'enables bots' do
+        team.update_attributes!(bots: false)
+        expect(message: "#{SlackRubyBot.config.user} set bots on").to respond_with_slack_message(
+          "Bots for team #{team.name} are allowed!"
+        )
+        expect(client.owner.bots).to be true
+        expect(team.reload.bots).to be true
+      end
+      it 'disables bots' do
+        team.update_attributes!(bots: true)
+        expect(message: "#{SlackRubyBot.config.user} set bots off").to respond_with_slack_message(
+          "Bots for team #{team.name} are not allowed."
+        )
+        expect(client.owner.bots).to be false
+        expect(team.reload.bots).to be false
+      end
+    end
+  end
 end

@@ -18,6 +18,10 @@ module SlackMarket
             client.owner.update_attributes!(dollars: v.to_b) unless v.nil?
             client.say(channel: data.channel, text: "Dollar signs for team #{client.owner.name} are #{client.owner.dollars? ? 'on!' : 'off.'}", gif: 'dollars')
             logger.info "SET: #{client.owner} - dollar signs are #{client.owner.dollars? ? 'on' : 'off'}"
+          when 'bots' then
+            client.owner.update_attributes!(bots: v.to_b) unless v.nil?
+            client.say(channel: data.channel, text: "Bots for team #{client.owner.name} are #{client.owner.bots? ? 'allowed!' : 'not allowed.'}", gif: 'bots')
+            logger.info "SET: #{client.owner} - bots are #{client.owner.bots? ? 'on' : 'off'}"
           else
             raise "Invalid setting #{k}, you can _set dollars on|off_."
           end

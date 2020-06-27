@@ -2,6 +2,7 @@ class Team
   field :api, type: Boolean, default: false
   field :dollars, type: Boolean, default: false
   field :charts, type: Boolean, default: true
+  field :bots, type: Boolean, default: false
 
   field :stripe_customer_id, type: String
   field :subscribed, type: Boolean, default: false

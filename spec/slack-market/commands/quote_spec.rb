@@ -189,6 +189,19 @@ describe SlackMarket::Commands::Quote do
           message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'MSFT'))
         end
       end
+      it 'does not respond to bot messages' do
+        expect(client.web_client).to_not receive(:chat_postMessage)
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'MSFT', subtype: 'bot_message'))
+      end
+      context 'with bots on' do
+        before do
+          team.update_attributes!(bots: true)
+        end
+        it 'returns a quote for $MSFT', vcr: { cassette_name: 'iex/msft' } do
+          expect(client.web_client).to receive(:chat_postMessage)
+          message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'MSFT', subtype: 'bot_message'))
+        end
+      end
     end
   end
 end

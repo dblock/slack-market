@@ -15,6 +15,10 @@ module SlackRubyBot
           SlackMarket::Commands::Subscription
         ]
       end
+
+      def bot_message?(client, data)
+        data.subtype == 'bot_message' && !client.owner.reload.bots
+      end
     end
   end
 end

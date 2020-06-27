@@ -123,6 +123,14 @@ describe SlackMarket::Commands::Quote do
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$f'))
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: '$F'))
       end
+      it 'does not returns a quote without attachments', vcr: { cassette_name: 'iex/msft' } do
+        expect(client.web_client).to_not receive(:chat_postMessage)
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', attachments: nil))
+      end
+      it 'returns a quote from attachment fallback for MSFT', vcr: { cassette_name: 'iex/msft' } do
+        expect(client.web_client).to receive(:chat_postMessage)
+        message_command.call(client, Hashie::Mash.new(channel: 'channel', attachments: [fallback: 'MSFT']))
+      end
       it 'returns a quote for a single-character stock$', vcr: { cassette_name: 'iex/f' } do
         expect(client.web_client).to receive(:chat_postMessage).with(
           channel: 'channel',

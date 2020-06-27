@@ -3,7 +3,6 @@ source 'http://rubygems.org'
 ruby '2.6.6'
 
 gem 'cachy'
-gem 'giphy'
 gem 'gruff'
 gem 'iex-ruby-client'
 gem 'irb'

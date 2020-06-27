@@ -62,7 +62,7 @@ class Team
   end
 
   def subscribe_team_text
-    "Subscribe your team for $1.99 a month at #{SlackRubyBotServer::Service.url}/subscribe?team_id=#{team_id}."
+    "Subscribe your team for $9.99 a year at #{SlackRubyBotServer::Service.url}/subscribe?team_id=#{team_id}."
   end
 
   SUBSCRIBED_TEXT = <<~EOS.freeze

@@ -18,7 +18,7 @@ module Api
           error!('Customer Already Registered', 400) if team.stripe_customer_id
           customer = Stripe::Customer.create(
             source: params[:stripe_token],
-            plan: 'slack-market-monthly',
+            plan: 'slack-market-yearly',
             email: params[:stripe_email],
             metadata: {
               id: team._id,

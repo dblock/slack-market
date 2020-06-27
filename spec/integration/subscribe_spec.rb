@@ -30,7 +30,7 @@ describe 'Subscribe', js: true, type: :feature do
     end
     it 'subscribes team' do
       visit "/subscribe?team_id=#{team.team_id}"
-      expect(find('#messages')).to have_text("Subscribe team #{team.name} for $1.99 a month.")
+      expect(find('#messages')).to have_text("Subscribe team #{team.name} for $9.99 a year.")
 
       expect_any_instance_of(Team).to receive(:inform!).with(Team::SUBSCRIBED_TEXT)
 

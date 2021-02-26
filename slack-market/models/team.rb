@@ -27,7 +27,7 @@ class Team
   end
 
   def inform!(message)
-    channels = slack_client.channels_list['channels'].select { |channel| channel['is_member'] }
+    channels = slack_client.conversations_list['channels'].select { |channel| channel['is_member'] }
     return unless channels.any?
 
     channel = channels.first

@@ -30,7 +30,9 @@ module Api
             g = Gruff::Line.new
             g.data params[:q], data
             content_type 'image/png'
-            g.to_blob
+            g.to_image.to_blob do
+              self.format = 'PNG'
+            end
           end
         end
       end

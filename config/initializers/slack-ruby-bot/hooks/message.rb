@@ -22,10 +22,6 @@ module SlackRubyBot
         data.text = data.attachments&.map(&:fallback)&.join("\n") if data.text.blank?
         _call(client, data)
       end
-
-      def bot_message?(client, data)
-        data.subtype == 'bot_message' && !client.owner.reload.bots
-      end
     end
   end
 end

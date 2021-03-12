@@ -1,5 +1,5 @@
 module SlackMarket
-  class Server < SlackRubyBotServer::Server
+  class Server < SlackRubyBotServer::RealTime::Server
     CHANNEL_JOINED_MESSAGE = <<~EOS.freeze
       Thanks for installing Slack Market! Mention a ticker (eg. AABA) and I'll give you a quote and a chart.
       Track stocks with `@market bought` and `@market sold`. Type `@market help` for more commands.

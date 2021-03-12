@@ -8,7 +8,7 @@ Bundler.require :default, ENV['RACK_ENV']
 require 'slack-ruby-bot-server'
 require 'slack-market'
 
-SlackRubyBotServer.configure do |config|
+SlackRubyBotServer::RealTime.configure do |config|
   config.server_class = SlackMarket::Server
 end
 

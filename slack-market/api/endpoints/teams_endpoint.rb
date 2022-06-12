@@ -18,7 +18,7 @@ module Api
 
         desc 'Get all the teams.'
         params do
-          optional :active, type: Boolean, desc: 'Return active teams only.'
+          optional :active, type: ::Grape::API::Boolean, desc: 'Return active teams only.'
           use :pagination
         end
         sort Team::SORT_ORDERS

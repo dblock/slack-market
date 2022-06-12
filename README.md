@@ -1,7 +1,8 @@
 Slack Market
 ============
 
-[![Build Status](https://travis-ci.org/dblock/slack-market.svg?branch=master)](https://travis-ci.org/dblock/slack-market)
+[![rubocop](https://github.com/dblock/slack-market/actions/workflows/rubocop.yml/badge.svg)](https://github.com/dblock/slack-market/actions/workflows/rubocop.yml)
+[![test](https://github.com/dblock/slack-market/actions/workflows/test.yml/badge.svg)](https://github.com/dblock/slack-market/actions/workflows/test.yml)
 [![Code Climate](https://codeclimate.com/github/dblock/slack-market.svg)](https://codeclimate.com/github/dblock/slack-market)
 
 A stock market bot for Slack.

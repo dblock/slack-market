@@ -33,7 +33,7 @@ group :development do
 end
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '~> 2.18.0'
   gem 'database_cleaner-mongoid'
   gem 'fabrication'
   gem 'faker'
@@ -41,7 +41,7 @@ group :test do
   gem 'puma'
   gem 'rack-test'
   gem 'rspec'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '~> 3.142.7'
   gem 'stripe-ruby-mock', '~> 2.4.1', require: 'stripe_mock'
   gem 'vcr'
   gem 'webmock'

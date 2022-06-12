@@ -1,0 +1,32 @@
+name: test
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Firefox
+        uses: browser-actions/setup-firefox@latest
+        with:
+          firefox-version: "70.0"
+      - name: Download geckodriver
+        uses: browser-actions/setup-geckodriver@latest
+        with:
+          geckodriver-version: "0.26.0"
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "2.6.6"
+          bundler-cache: true
+      - name: Start MongoDB
+        uses: supercharge/mongodb-github-action@1.7.0
+        with:
+          mongodb-version: "5"
+          mongodb-db: slack_arena_test
+      - name: Run tests
+        uses: GabrielBB/xvfb-action@v1
+        with:
+          run: bundle exec rake

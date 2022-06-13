@@ -15,9 +15,11 @@ module SlackMarket
             if position
               display = position.display(quote.latest_price.to_f * 100)
               position.update_attributes!(sold_at: Time.now.utc, sold_price_cents: quote.latest_price.to_f * 100)
-              client.say channel: data.channel, text: "#{user.slack_mention} sold #{quote.company_name} at ~$#{quote.latest_price}, #{display}"
+              client.say channel: data.channel,
+                         text: "#{user.slack_mention} sold #{quote.company_name} at ~$#{quote.latest_price}, #{display}"
             else
-              client.say channel: data.channel, text: "#{user.slack_mention} does not hold #{quote.company_name} (#{quote.symbol})"
+              client.say channel: data.channel,
+                         text: "#{user.slack_mention} does not hold #{quote.company_name} (#{quote.symbol})"
             end
           end
         end

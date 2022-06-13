@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '2.6.6'
+ruby '2.7.6'
 
 gem 'cachy'
 gem 'gruff'
@@ -26,7 +26,9 @@ gem 'wannabe_bool'
 group :development, :test do
   gem 'foreman'
   gem 'rake', '~> 12.3'
-  gem 'rubocop', '0.68.1'
+  gem 'rubocop'
+  gem 'rubocop-rake'
+  gem 'rubocop-rspec'
 end
 
 group :development do

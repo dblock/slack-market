@@ -20,7 +20,8 @@ module Api
           ts = payload['original_message']['ts']
           chart = true
 
-          error! 'Message token is not coming from Slack.', 401 if ENV.key?('SLACK_VERIFICATION_TOKEN') && token != ENV['SLACK_VERIFICATION_TOKEN']
+          error! 'Message token is not coming from Slack.',
+                 401 if ENV.key?('SLACK_VERIFICATION_TOKEN') && token != ENV['SLACK_VERIFICATION_TOKEN']
 
           quotes = Market.quotes(Array(stock_symbol))
           slack_attachment = Market.to_slack_attachment(quotes.first, charts: chart, button: button_name)

@@ -11,12 +11,15 @@ describe SlackMarket::Commands::Sold do
   end
   context 'sold' do
     it 'requires a subscription' do
-      expect(message: "#{SlackRubyBot.config.user} sold MSFT", user: user.user_id).to respond_with_slack_message(team.subscribe_text)
+      expect(message: "#{SlackRubyBot.config.user} sold MSFT",
+             user: user.user_id).to respond_with_slack_message(team.subscribe_text)
     end
     context 'subscribed team' do
       let(:team) { Fabricate(:team, subscribed: true) }
       context 'with an owned position' do
-        let!(:position) { Fabricate(:position, purchased_price_cents: 1234, user: user, name: 'Microsoft Corp.', symbol: 'MSFT') }
+        let!(:position) {
+          Fabricate(:position, purchased_price_cents: 1234, user: user, name: 'Microsoft Corp.', symbol: 'MSFT')
+        }
         it 'records a sell', vcr: { cassette_name: 'iex/msft' } do
           expect(message: "#{SlackRubyBot.config.user} sold MSFT", user: user.user_id).to respond_with_slack_message(
             "#{user.slack_mention} sold Microsoft Corp. at ~$135.69, *MSFT* +90.91% :green_book:"
@@ -29,7 +32,9 @@ describe SlackMarket::Commands::Sold do
         end
       end
       context 'with an owned position without changes' do
-        let!(:position) { Fabricate(:position, purchased_price_cents: 13569.5, user: user, name: 'Microsoft Corp.', symbol: 'MSFT') }
+        let!(:position) {
+          Fabricate(:position, purchased_price_cents: 13569.5, user: user, name: 'Microsoft Corp.', symbol: 'MSFT')
+        }
         it 'records a sell without change', vcr: { cassette_name: 'iex/msft_float' } do
           expect(message: "#{SlackRubyBot.config.user} sold MSFT", user: user.user_id).to respond_with_slack_message(
             "#{user.slack_mention} sold Microsoft Corp. at ~$135.69, *MSFT* :blue_book:"

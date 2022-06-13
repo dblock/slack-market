@@ -12,7 +12,8 @@ module SlackMarket
           quotes.each do |quote|
             logger.info "#{client.owner}, user=#{user} - BOUGHT #{quote.company_name} (#{quote.symbol}): $#{quote.latest_price}"
             if user.positions.where(symbol: quote.symbol, sold_at: nil).any?
-              client.say channel: data.channel, text: "#{user.slack_mention} already holds #{quote.company_name} (#{quote.symbol})"
+              client.say channel: data.channel,
+                         text: "#{user.slack_mention} already holds #{quote.company_name} (#{quote.symbol})"
             else
               Position.create!(
                 user: user,
@@ -21,7 +22,8 @@ module SlackMarket
                 symbol: quote.symbol,
                 name: quote.company_name
               )
-              client.say channel: data.channel, text: "#{user.slack_mention} bought #{quote.company_name} (#{quote.symbol}) at ~$#{quote.latest_price}"
+              client.say channel: data.channel,
+                         text: "#{user.slack_mention} bought #{quote.company_name} (#{quote.symbol}) at ~$#{quote.latest_price}"
             end
           end
         end

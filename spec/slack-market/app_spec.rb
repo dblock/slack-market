@@ -35,7 +35,9 @@ describe SlackMarket::App do
   context 'subscribed' do
     include_context :stripe_mock
     let(:plan) { stripe_helper.create_plan(id: 'slack-market-yearly', amount: 2999) }
-    let(:customer) { Stripe::Customer.create(source: stripe_helper.generate_card_token, plan: plan.id, email: 'foo@bar.com') }
+    let(:customer) {
+      Stripe::Customer.create(source: stripe_helper.generate_card_token, plan: plan.id, email: 'foo@bar.com')
+    }
     let!(:team) { Fabricate(:team, subscribed: true, stripe_customer_id: customer.id) }
     context '#check_subscribed_teams!' do
       it 'ignores active subscriptions' do

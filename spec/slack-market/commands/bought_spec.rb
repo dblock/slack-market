@@ -11,7 +11,8 @@ describe SlackMarket::Commands::Bought do
   end
   context 'bought' do
     it 'requires a subscription' do
-      expect(message: "#{SlackRubyBot.config.user} bought MSFT", user: user.user_id).to respond_with_slack_message(team.subscribe_text)
+      expect(message: "#{SlackRubyBot.config.user} bought MSFT",
+             user: user.user_id).to respond_with_slack_message(team.subscribe_text)
     end
     context 'subscribed team' do
       let(:team) { Fabricate(:team, subscribed: true) }
@@ -31,12 +32,15 @@ describe SlackMarket::Commands::Bought do
         let!(:position) { Fabricate(:position, user: user, name: 'XYZ Corporation', symbol: 'XYZ') }
         it 'does not support multiple buys' do
           allow(Market).to receive(:quotes).with([position.symbol]).and_return([
-                                                                                 OpenStruct.new(symbol: position.symbol, company_name: position.name, latest_price: 123)
+                                                                                 OpenStruct.new(
+                                                                                   symbol: position.symbol, company_name: position.name, latest_price: 123
+                                                                                 )
                                                                                ])
           expect do
-            expect(message: "#{SlackRubyBot.config.user} bought #{position.symbol}", user: user.user_id).to respond_with_slack_message(
-              "#{user.slack_mention} already holds XYZ Corporation (XYZ)"
-            )
+            expect(message: "#{SlackRubyBot.config.user} bought #{position.symbol}",
+                   user: user.user_id).to respond_with_slack_message(
+                     "#{user.slack_mention} already holds XYZ Corporation (XYZ)"
+                   )
           end.to_not change(Position, :count)
         end
       end

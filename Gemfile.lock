@@ -135,7 +135,6 @@ GEM
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
-    jaro_winkler (1.5.4)
     kaminari-core (1.2.2)
     kaminari-grape (1.0.1)
       grape
@@ -206,6 +205,7 @@ GEM
     rainbow (3.1.1)
     raindrops (0.20.0)
     rake (12.3.3)
+    regexp_parser (2.5.0)
     reline (0.3.1)
       io-console (~> 0.5)
     representable (3.2.0)
@@ -234,13 +234,21 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
     rspec-support (3.11.0)
-    rubocop (0.68.1)
-      jaro_winkler (~> 1.5.1)
+    rubocop (1.30.1)
       parallel (~> 1.10)
-      parser (>= 2.5, != 2.5.1.1)
+      parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.8, < 3.0)
+      rexml (>= 3.2.5, < 4.0)
+      rubocop-ast (>= 1.18.0, < 2.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 1.6)
+      unicode-display_width (>= 1.4.0, < 3.0)
+    rubocop-ast (1.18.0)
+      parser (>= 3.1.1.0)
+    rubocop-rake (0.6.0)
+      rubocop (~> 1.0)
+    rubocop-rspec (2.11.1)
+      rubocop (~> 1.19)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
@@ -289,7 +297,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
-    unicode-display_width (1.5.0)
+    unicode-display_width (2.1.0)
     unicorn (6.1.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
@@ -334,7 +342,9 @@ DEPENDENCIES
   rack-test
   rake (~> 12.3)
   rspec
-  rubocop (= 0.68.1)
+  rubocop
+  rubocop-rake
+  rubocop-rspec
   selenium-webdriver (~> 3.142.7)
   slack-ruby-bot-server
   slack-ruby-bot-server-mailchimp
@@ -348,7 +358,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 2.6.6p146
+   ruby 2.7.6p219
 
 BUNDLED WITH
-   1.17.2
+   2.3.15

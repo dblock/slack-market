@@ -102,7 +102,8 @@ describe SlackMarket::Commands::Quote do
         expect(client.web_client).to_not receive(:chat_postMessage)
         message_command.call(client, Hashie::Mash.new(channel: 'channel', text: 'have I done'))
       end
-      it 'returns a quote for a single-character $stock', vcr: { cassette_name: 'iex/f', allow_playback_repeats: true } do
+      it 'returns a quote for a single-character $stock',
+         vcr: { cassette_name: 'iex/f', allow_playback_repeats: true } do
         expect(client.web_client).to receive(:chat_postMessage).with(
           channel: 'channel',
           as_user: true,

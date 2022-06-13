@@ -8,7 +8,8 @@ describe SlackMarket::Commands::Positions do
   let(:message_command) { SlackRubyBot::Hooks::Message.new }
   context 'positions' do
     it 'requires a subscription' do
-      expect(message: "#{SlackRubyBot.config.user} positions", user: user.user_id).to respond_with_slack_message(team.subscribe_text)
+      expect(message: "#{SlackRubyBot.config.user} positions",
+             user: user.user_id).to respond_with_slack_message(team.subscribe_text)
     end
     context 'subscribed team' do
       let(:team) { Fabricate(:team, subscribed: true) }

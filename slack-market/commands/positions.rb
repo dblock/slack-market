@@ -17,7 +17,7 @@ module SlackMarket
           quotes = Hash[quotes.map { |quote| [quote.symbol, quote] }]
           message = positions.map do |position|
             quote = quotes[position.symbol]
-            position.display(quote && quote.latest_price && quote.latest_price.to_f * 100)
+            position.display(quote && quote.latest_price && (quote.latest_price.to_f * 100))
           end.compact.join(', ')
           logger.info "#{client.owner}, user=#{user} - POSITIONS #{message}"
           client.say(channel: data.channel, text: message)

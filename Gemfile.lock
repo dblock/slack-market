@@ -155,7 +155,7 @@ GEM
     money_helper (3.0.0)
       activesupport
       money (= 6.16.0)
-    mongo (2.17.1)
+    mongo (2.15.1)
       bson (>= 4.8.2, < 5.0.0)
     mongoid (7.4.0)
       activemodel (>= 5.1, < 7.1, != 7.0.0)
@@ -322,6 +322,7 @@ DEPENDENCIES
   irb
   money
   money_helper
+  mongo (~> 2.15.1)
   mongoid
   mongoid-scroll
   mongoid-shell

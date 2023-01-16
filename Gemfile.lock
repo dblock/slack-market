@@ -147,7 +147,7 @@ GEM
     mime-types-data (3.2022.0105)
     mini_memory_store (1.0.0)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.0)
+    mini_portile2 (2.8.1)
     minitest (5.15.0)
     money (6.16.0)
       i18n (>= 0.6.4, <= 2)
@@ -180,7 +180,7 @@ GEM
     netrc (0.11.0)
     newrelic_rpm (8.8.0)
     nio4r (2.5.8)
-    nokogiri (1.13.10)
+    nokogiri (1.14.0)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     parallel (1.22.1)
@@ -189,7 +189,7 @@ GEM
     public_suffix (4.0.7)
     puma (5.6.4)
       nio4r (~> 2.0)
-    racc (1.6.1)
+    racc (1.6.2)
     rack (2.2.3.1)
     rack-accept (0.4.5)
       rack (>= 0.4)
@@ -358,7 +358,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 2.7.6p219
+   ruby 2.7.7p221
 
 BUNDLED WITH
-   2.3.15
+   2.3.26

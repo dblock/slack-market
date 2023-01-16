@@ -42,10 +42,11 @@ group :test do
   gem 'faker'
   gem 'hyperclient'
   gem 'puma'
-  gem 'rack-test'
+  gem 'rack-test', '~> 1.1.0'
   gem 'rspec'
   gem 'selenium-webdriver', '~> 3.142.7'
   gem 'stripe-ruby-mock', '~> 2.4.1', require: 'stripe_mock'
   gem 'vcr'
   gem 'webmock'
+  gem 'webrick'
 end

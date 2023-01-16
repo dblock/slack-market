@@ -9,8 +9,8 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     async (1.30.2)
       console (~> 1.10)
@@ -98,7 +98,7 @@ GEM
     fiber-local (1.0.0)
     foreman (0.87.2)
     gli (2.21.0)
-    grape (1.6.2)
+    grape (1.7.0)
       activesupport
       builder
       dry-types (>= 1.1)
@@ -186,11 +186,11 @@ GEM
     parallel (1.22.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
-    public_suffix (4.0.7)
+    public_suffix (5.0.1)
     puma (5.6.4)
       nio4r (~> 2.0)
     racc (1.6.2)
-    rack (2.2.3.1)
+    rack (2.2.5)
     rack-accept (0.4.5)
       rack (>= 0.4)
     rack-cors (1.1.1)
@@ -307,6 +307,7 @@ GEM
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
+    webrick (1.7.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -339,7 +340,7 @@ DEPENDENCIES
   puma
   rack-robotz
   rack-server-pages
-  rack-test
+  rack-test (~> 1.1.0)
   rake (~> 12.3)
   rspec
   rubocop
@@ -356,6 +357,7 @@ DEPENDENCIES
   vcr
   wannabe_bool
   webmock
+  webrick
 
 RUBY VERSION
    ruby 2.7.7p221

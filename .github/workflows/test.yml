@@ -11,15 +11,15 @@ jobs:
       - name: Setup Firefox
         uses: browser-actions/setup-firefox@latest
         with:
-          firefox-version: "70.0"
+          firefox-version: "108.0"
       - name: Download geckodriver
         uses: browser-actions/setup-geckodriver@latest
         with:
-          geckodriver-version: "0.26.0"
+          geckodriver-version: "0.32.0"
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "2.7.6"
+          ruby-version: "2.7.7"
           bundler-cache: true
       - name: Start MongoDB
         uses: supercharge/mongodb-github-action@1.7.0
@@ -29,4 +29,4 @@ jobs:
       - name: Run tests
         uses: GabrielBB/xvfb-action@v1
         with:
-          run: bundle exec rake
+          run: bundle exec rake spec

@@ -1,14 +1,13 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    activemodel (6.1.6)
-      activesupport (= 6.1.6)
-    activesupport (6.1.6)
+    activemodel (7.0.4.1)
+      activesupport (= 7.0.4.1)
+    activesupport (7.0.4.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-      zeitwerk (~> 2.3)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
@@ -125,7 +124,7 @@ GEM
       faraday (>= 0.9.0)
       faraday_hal_middleware
       faraday_middleware
-    i18n (1.10.0)
+    i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     iex-ruby-client (1.6.0)
       faraday (>= 0.17)
@@ -148,7 +147,7 @@ GEM
     mini_memory_store (1.0.0)
     mini_mime (1.1.2)
     mini_portile2 (2.8.1)
-    minitest (5.15.0)
+    minitest (5.17.0)
     money (6.16.0)
       i18n (>= 0.6.4, <= 2)
     money_helper (3.0.0)
@@ -156,7 +155,7 @@ GEM
       money (= 6.16.0)
     mongo (2.15.1)
       bson (>= 4.8.2, < 5.0.0)
-    mongoid (7.4.0)
+    mongoid (7.5.2)
       activemodel (>= 5.1, < 7.1, != 7.0.0)
       mongo (>= 2.10.5, < 3.0.0)
       ruby2_keywords (~> 0.0.5)
@@ -291,7 +290,7 @@ GEM
       stripe (>= 1.31.0, <= 1.58.0)
     timers (4.3.3)
     trailblazer-option (0.1.2)
-    tzinfo (2.0.4)
+    tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
     unf (0.1.4)
@@ -313,7 +312,6 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.5.4)
 
 PLATFORMS
   ruby

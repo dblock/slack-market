@@ -1,9 +1,9 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    activemodel (7.0.4.3)
-      activesupport (= 7.0.4.3)
-    activesupport (7.0.4.3)
+    activemodel (7.0.7.2)
+      activesupport (= 7.0.7.2)
+    activesupport (7.0.7.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -124,7 +124,7 @@ GEM
       faraday (>= 0.9.0)
       faraday_hal_middleware
       faraday_middleware
-    i18n (1.12.0)
+    i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     iex-ruby-client (1.6.0)
       faraday (>= 0.17)
@@ -147,7 +147,7 @@ GEM
     mini_memory_store (1.0.0)
     mini_mime (1.1.2)
     mini_portile2 (2.8.1)
-    minitest (5.18.0)
+    minitest (5.19.0)
     money (6.16.0)
       i18n (>= 0.6.4, <= 2)
     money_helper (3.0.0)

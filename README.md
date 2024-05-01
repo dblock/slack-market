@@ -9,7 +9,7 @@ A stock market bot for Slack.
 
 ## Install
 
-[![Add to Slack](https://platform.slack-edge.com/img/add_to_slack.png)](http://market.playplay.io)
+**The service used to be available on http://market.playplay.io, but [IEX significantly increased their price](https://twitter.com/dblockdotorg/status/1785691123987398812) on May 1st, 2024. I decided not to pass this cost down to users, so this service was shutdown.**
 
 Invite *@market* to a channel with `/invite @market`.
 

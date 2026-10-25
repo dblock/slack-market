@@ -7,7 +7,7 @@
   </head>
   <body style='text-align: center'>
     <p style='margin: 50px;'>
-      <a href='/'><img src='img/icon.png' width='120px'></a>
+      <a href='/'><img src='<%= h asset_path("/img/icon.png") %>' width='120px'></a>
     </p>
     <p>
       <h3>Stock Market Quotes in Slack: Subscribe</h3>
@@ -18,7 +18,7 @@
           <span style='display: block; min-height: 30px;'>Pay $9.99 with Card</span>
       </button>
       <p>
-        <img src='/img/stripe.png' width='119' height='26'></img>
+        <img src='<%= h asset_path("/img/stripe.png") %>' width='119' height='26'></img>
       </p>
       <script>
         $(document).ready(function() {
@@ -43,7 +43,7 @@
 
           var handler = StripeCheckout.configure({
             key: '<%= ENV['STRIPE_API_PUBLISHABLE_KEY'] %>',
-            image: '/img/icon.png',
+            image: <%= asset_path("/img/icon.png").to_json %>,
             locale: 'auto',
             token: function(token) {
               $.ajax({

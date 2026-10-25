@@ -5,7 +5,7 @@
  </head>
  <body style="text-align: center">
   <p style="margin: 50px;">
-    <a href="/"><img src='img/icon.png' width="120px"></a>
+    <a href="/"><img src='<%= h asset_path("/img/icon.png") %>' width="120px"></a>
   </p>
   <p>
     <h3>Stock Market Quotes in Slack: Help</h3>
@@ -14,7 +14,7 @@
     Invite <b>@market</b> to a channel. Mention a stock ticker and its price will appear in Slack.
   </p>
   <p>
-    <img src='img/market.gif'>
+    <img src='<%= h asset_path("/img/market.gif") %>'>
   </p>
   <p>
     The bot will try to respond to anything UPPERCASE longer than 2 characters or anything $UPPERCASE, prefixed with a dollar sign.<br>
@@ -23,13 +23,13 @@
     You can <b>set dollars on</b> to always require a dollar sign if you think the bot is too spammy.
   </p>
   <p>
-    <img src='img/dollars.gif'>
+    <img src='<%= h asset_path("/img/dollars.gif") %>'>
   </p>
   <p>
     You can <b>set charts off</b> to prevent charts from being displayed.
   </p>
   <p>
-    <img src='img/charts.gif'>
+    <img src='<%= h asset_path("/img/charts.gif") %>'>
   </p>
   <p>
     You can <b>set bots on</b> to allow interaction with bots, such as IFFTT.

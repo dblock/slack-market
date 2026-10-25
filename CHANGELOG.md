@@ -1,5 +1,6 @@
 ### Changelog
 
+* 2026/10/25: Upgrade framework and content-version local website assets with revalidating pages and stylesheets - [@dblock](https://github.com/dblock), [@Copilot](https://github.com/apps/copilot-swe-agent).
 * 2023/01/16: Upgraded to Ruby 2.7.7 - [@dblock](https://github.com/dblock).
 * 2020/06/26: Allow interactions with bots via `set bots on` - [@dblock](https://github.com/dblock).
 * 2018/03/23: Using IEX, lost support for `BTC` and quotes such as `ROG.VX` - [@dblock](https://github.com/dblock).

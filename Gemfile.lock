@@ -139,6 +139,7 @@ GEM
       grape
       kaminari-core (~> 1.0)
     kgio (2.11.4)
+    logger (1.7.0)
     mailchimp_api_v3 (0.2.18)
       rest-client (~> 2)
     mime-types (3.4.1)
@@ -197,7 +198,7 @@ GEM
     rack-rewrite (1.5.1)
     rack-robotz (0.0.4)
       rack
-    rack-server-pages (0.1.0)
+    rack-server-pages (0.3.0)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -258,13 +259,14 @@ GEM
       activesupport
       hashie
       slack-ruby-client (>= 0.14.0)
-    slack-ruby-bot-server (1.2.1)
+    slack-ruby-bot-server (2.3.0)
       async
       foreman
       grape
       grape-roar (>= 0.4.0)
       grape-swagger
       kaminari-grape
+      logger
       rack-cors
       rack-rewrite
       rack-server-pages
@@ -337,7 +339,7 @@ DEPENDENCIES
   nokogiri
   puma
   rack-robotz
-  rack-server-pages
+  rack-server-pages (~> 0.3.0)
   rack-test (~> 1.1.0)
   rake (~> 12.3)
   rspec
@@ -345,7 +347,7 @@ DEPENDENCIES
   rubocop-rake
   rubocop-rspec
   selenium-webdriver (~> 3.142.7)
-  slack-ruby-bot-server
+  slack-ruby-bot-server (~> 2.3.0)
   slack-ruby-bot-server-mailchimp
   slack-ruby-bot-server-rtm
   slack-ruby-client

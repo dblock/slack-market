@@ -2,11 +2,11 @@
  <head>
   <title>Stock Market Quotes in Slack</title>
   <%= partial 'public/partials/_head.html.erb' %>
-  <script src="/scripts/register.js"></script>
+  <script src="<%= h asset_path("/scripts/register.js") %>"></script>
  </head>
  <body style="text-align: center">
   <p style="margin: 50px;">
-    <a href="/"><img src='img/icon.png' width="120px"></a>
+    <a href="/"><img src='<%= h asset_path("/img/icon.png") %>' width="120px"></a>
   </p>
   <p>
     <h3>Stock Market Quotes in Slack: <a href="https://twitter.com/dblockdotorg/status/1785698136125559008" target="_blank">Discontinued</a></h3>

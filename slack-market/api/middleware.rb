@@ -27,7 +27,9 @@ module Api
 
         use Rack::ETag
 
-        use Rack::ServerPages
+        use Rack::ServerPages do |pages|
+          SlackRubyBotServer.config.server_pages&.call(pages)
+        end
 
         run Api::Middleware.new
       end.to_app
